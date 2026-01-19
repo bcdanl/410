@@ -30,7 +30,7 @@ website:
       - text: 📓 Syllabus
         href: syllabus.qmd
       - text: 🅱 Brightspace
-        href: http://brightspace.geneseo.edu/
+        href: https://mylearning.suny.edu/d2l/home/2534337
         target: _blank
       
       - text: 🚀 Lecture

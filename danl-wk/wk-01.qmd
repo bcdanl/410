@@ -1,6 +1,6 @@
 ---
 title: Week 1
-subtitle: Introduction and Installing PyCharm
+subtitle: Introduction
 date: 2026-01-21
 from: markdown+emoji
 ---

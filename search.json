@@ -35,284 +35,88 @@
     "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#instructor-1",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#instructor-1",
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#course-meeting-info",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#course-meeting-info",
     "title": "Lecture 1",
-    "section": "Instructor",
-    "text": "Instructor\nCurrent Appointment & Education\n\nName: Byeong-Hak Choe.\nAssistant Professor of Data Analytics and Economics, School of Business at SUNY Geneseo.\nPh.D. in Economics from University of Wyoming.\nM.S. in Economics from Arizona State University.\nM.A. in Economics from SUNY Stony Brook.\nB.A. in Economics & B.S. in Applied Mathematics from Hanyang University at Ansan, South Korea.\n\nMinor in Business Administration.\nConcentration in Finance."
+    "section": "Course & Meeting Info",
+    "text": "Course & Meeting Info\n\nCourse: DANL 410-01 — Data Analytics Capstone (3 credits)\n\nSemester: Spring 2026\n\nInstructor: Byeong-Hak Choe\n\nEmail (preferred): bchoe@geneseo.edu\n\nClass time: MW 5:00 P.M. – 6:15 P.M.\n\nClass location: Newton 212\n\nOffice: South 227B\n\nOffice Hours: MWF 9:15 A.M. – 10:15 A.M. (or by appointment)"
   },
   {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#instructor-2",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#instructor-2",
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#course-website-brightspace",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#course-website-brightspace",
     "title": "Lecture 1",
-    "section": "Instructor",
-    "text": "Instructor\nEconomics and Data Science\n\nChoe, B.H., 2021. “Social Media Campaigns, Lobbying and Legislation: Evidence from #climatechange and Energy Lobbies.”\nQuestion: To what extent do social media campaigns compete with fossil fuel lobbying on climate change legislation?\nData include:\n\n5.0 million tweets with #climatechange/#globalwarming around the globe;\n12.0 million retweets/likes to those tweets;\n0.8 million Twitter users who wrote those tweets;\n1.4 million Twitter users who retweeted or liked those tweets;\n0.3 million US Twitter users with their location at a city level;\nFirm-level lobbying data (expenses, targeted bills, etc.)."
+    "section": "Course Website & Brightspace",
+    "text": "Course Website & Brightspace\n\n\nCourse Website (GitHub Pages)\n(https://bcdanl.github.io/410)\n\nLecture slides\n\nClasswork\n\nHomework\n\nProject resources\n\n\nBrightspace\n\nAnnouncements\n\nGrades\n\nAssignment submissions\n\n\nI will post a Brightspace announcement whenever new course materials (e.g., homework) are added to the course website."
   },
   {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#instructor-3",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#instructor-3",
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#what-this-course-is-about",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#what-this-course-is-about",
     "title": "Lecture 1",
-    "section": "Instructor",
-    "text": "Instructor\nEconomics and Data Science\n\nChoe, B.H. and Ore-Monago, T., 2024. “Governance and Climate Finance in the Developing World”\nClimate finance refers to the financial resources allocated for mitigating and adapting to climate change, including support for initiatives that reduce greenhouse gas emissions and enhance resilience to climate impacts.\n\nWe focus on transnational financing that rich countries provide poor countries with financial resources, in order to help them adapt to climate change and mitigate greenhouse gas (GHG) emissions.\nSince the GHG emissions in developing countries are rapidly growing, it is crucial to assess the effectiveness of climate finance.\nPoor governance (e.g., legal system, rule of law, and accountability) can be significant barriers to emissions reductions."
+    "section": "What this course is about",
+    "text": "What this course is about\nDANL 410 is an individualized capstone experience where each student completes an end-to-end analytics project in an area of their interest.\nYour project may focus on:\n\na disciplinary topic (inside or outside the School of Business), or\nan external organization / stakeholder problem"
   },
   {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#instructor-4",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#instructor-4",
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#key-skills-youll-build",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#key-skills-youll-build",
     "title": "Lecture 1",
-    "section": "Instructor",
-    "text": "Instructor\nEconomics and Data Science\n\nChoe, B.H. and Newbold, Steve, “Estimating the Value of Statistical Life (VSL) through Big Data”\nVSL is the monetary value associated with reducing the risk of death.\n\nHow much value would that be? How can we measure it?\nHow do government agencies use the VSL to decide which policies are worth the cost when they reduce the risk of death?"
+    "section": "Key skills you’ll build:",
+    "text": "Key skills you’ll build:\n\nFormulate a focused capstone question grounded in stakeholder needs\n\nDesign and execute a complete analytics pipeline (proposal → final deliverables)\n\nApply appropriate methods (regression, classification, clustering, inference, etc.)\n\nCreate publication-quality visualizations and analytical outputs\n\nUse reproducible workflows (well-documented code, transparent process)\n\nCommunicate results for technical and non-technical audiences"
   },
   {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-1",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-1",
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#prerequisites",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#prerequisites",
     "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nEmail, Class & Office Hours\n\nEmail: bchoe@geneseo.edu\nClass Homepage:\n\nGitHub Course Website\nBrightspace Course Shell\n\nOffice: South Hall 227B\nOffice Hours:\n\nMondays, Wednesdays, and Fridays 9:15 A.M.–10:15 A.M.\nBy appointment via email."
+    "section": "Prerequisites",
+    "text": "Prerequisites\nDANL 300 and DANL 310"
   },
   {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-2",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-2",
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#communication-guidelines",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#communication-guidelines",
     "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nCourse Description\n\nThis course provides an applied overview of the data analytic process and methods.\nThe goal of this course is to help students unlock the potential of data analysis and improve the ability to transform data into a powerful tool in decision making.\nStudents will develop foundational data analytics skills to prepare for a career or future learning that involves more advanced topics in data analytics."
+    "section": "Communication Guidelines",
+    "text": "Communication Guidelines\n\nI check email daily (Mon–Fri)\n\nExpect responses within 12–72 hours"
   },
   {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-3",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-3",
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#course-contents-schedule",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#course-contents-schedule",
     "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nCourse Description\n\nTopics covered include\n\nIntroduction to Data Analytics thinking\nData tools and skills\nData management and preparation techniques\nData storytelling for effective visualization and communication.\n\nDuring the course, students will work hands-on with the R programming and its associated data analysis packages."
+    "section": "Course Contents & Schedule",
+    "text": "Course Contents & Schedule\n\nWeeks 1–2: Portfolio website + project setup (Git/GitHub/Quarto)\n\nWeeks 2–8: Mastering ggplot & dplyr (+ Midterm)\n\nHW 1: Feb 11\nHW 2: Feb 25\nHW 3: Mar 9\nMidterm Exam: March 11 (during class time)\n\n\nWeek 9: Spring Break (March 14–21)"
   },
   {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-4",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-4",
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#course-contents-schedule-1",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#course-contents-schedule-1",
     "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nCourse Learning Outcomes\n\nGrasp the basic principles of data analytics, including data types and data processing.\nGain introductory experience with programming languages commonly used in data analytics, such as R.\nDevelop the ability to create and interpret various types of data visualizations.\nEnhance critical thinking skills by learning to ask relevant questions and draw insights from data.\nApply data analytics techniques to solve real-world problems in various domains."
+    "section": "Course Contents & Schedule",
+    "text": "Course Contents & Schedule\n\nWeeks 1–2: Portfolio website + project setup (Git/GitHub/Quarto)\n\nWeeks 2–8: Research methods + proposal development\n\nResearch Kick-off Report: Feb 25\nMidterm Presentation: March 11\n\nWeek 9: Spring Break (March 14–21)\n\nWeeks 10–16: Progress + synthesis + GREAT Day prep\n\nProgress & Insights Report: Mar 25\nResearch Synthesis Report: Apr 15\nGREAT Day PowerPoint Presentation: April 22\n\nWeek 17: Data Analytics Capstone Report\n\nProject Report Due: May 11"
   },
   {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-5",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-5",
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#grading",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#grading",
     "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nReference Materials - Concepts\n\nCloud Computing Concepts Hub — Amazon Web Services (AWS)\nCo-Intelligence: Living and Working with AI — Ethan Mollick. (ISBN-13: 978-0593716717; ISBN-10: 059371671X)\nStorytelling with Data: A Data Visualization Guide for Business Professionals — Cole Nussbaumer Knaflic. (ISBN-13: 978-1119002253; ISBN-10: 1119002257)\nStorytelling with Data: Before and After - Practical Makeovers for Powerful Data Stories — Cole Nussbaumer Knaflic, Mike Cisneros, and Alex Velez. (ISBN-13: 978-1394289615; ISBN-10: 1394289618)"
+    "section": "Grading",
+    "text": "Grading\n\n\nAttendance — 5%\n\nParticipation — 5%\n\nResearch Kick-off Report — 5%\n\nProgress & Insights Report — 5%\n\nResearch Synthesis Report — 5%\n\nMidterm Presentation — 15%\n\nGREAT Day PowerPoint Presentation — 30%\n\nData Analytics Capstone Report — 30%"
   },
   {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-6",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-6",
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#course-policies",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#course-policies",
     "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nReference Materials - Coding\n\nHands-On Programming with R — Garrett Grolemund. (ISBN-13: 978-1449359010; ISBN-10: 1449359019)\n\nFree online version is available here\n\nR for Data Science (2nd Edition) — Hadley Wickham & Garrett Grolemund. (ISBN-13: 978-1492097402; ISBN-10: 1492097403)\n\nFree online version is available here.\n\nStatistical Inference via Data Science: A ModernDive into R and the Tidyverse — Chester Ismay & Albert Y. Kim. (ISBN-13: 978-0367409821; ISBN-10: 0367409828)\n\nFree online version is available here.\n\n\n:::\n::::"
+    "section": "Course Policies",
+    "text": "Course Policies\n\nLate work: Reports are accepted up to 3 days late with a 30% penalty.\nAttendance: Attendance is taken using a sign-in sheet on days when a lecture is scheduled.\n\nYou are expected to attend class on lecture days.\n\nYou have 3 unexcused absences available during the semester.\n\nBeyond that, your total percentage grade may be reduced.\n\n\nOn days when a lecture is not scheduled, attendance is not required.\n\nHowever, I strongly encourage you to attend and use the class time to work on your project.\n\nYou can also use this time to ask the instructor questions and get feedback."
   },
   {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-7",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-7",
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#academic-integrity-ai-use",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#academic-integrity-ai-use",
     "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nCourse Requirements\n\nHomework: Five assignments.\nQuiz: Two in-class quizzes.\nParticipation: In-person and online participation\nExam: Two short midterm exams and one comprehensive final exam.\nProject: a data storytelling project with a team presentation."
+    "section": "Academic integrity & AI use",
+    "text": "Academic integrity & AI use\n\nCheating and plagiarism violate college policy and may result in serious consequences.\nYou may use AI tools (e.g., ChatGPT, Gemini) to support your learning, but you must:\n\nDisclose AI use when it meaningfully contributes to your work\n\nCite/attribute AI-generated material appropriately\n\nUsing AI without disclosure/citation may be treated as academic dishonesty\n\nThere is no penalty for using AI on Homework and the Data Storytelling Project.\n\nHowever, you are still responsible for understanding, verifying, and being able to explain any AI-assisted work."
   },
   {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-8",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-8",
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#accessibility",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#accessibility",
     "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nData Storytelling Project\n\nEach team will present on data storytelling with visualization.\nData storytelling with visualization is the practice of communicating complex insights in a clear, engaging, and impactful way by combining data analysis, visual design, and narrative techniques.\nIt is more than just presenting charts and graphs; it involves shaping a compelling story that guides the audience through the data, emphasizes key findings, and delivers the intended message effectively."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-9",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-9",
-    "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nCourse Contents"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-10",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-10",
-    "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nCourse Contents"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-11",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-11",
-    "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nCourse Contents"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-12",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-12",
-    "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nGrading\n\\[\n\\begin{align}\n(\\text{Total Percentage Grade}) =&\\quad\\;\\; 0.05\\times(\\text{Attendance}) \\notag\\\\\n&\\,+\\, 0.05\\times(\\text{Quiz & Participation})\\notag\\\\\n& \\,+\\, 0.20\\times(\\text{Homework})\\notag\\\\  \n&\\,+\\, 0.20\\times(\\text{Presentation})\\notag\\\\\n& \\,+\\, 0.50\\times(\\text{Exam}).\\notag\n\\end{align}\n\\]"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-13",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-13",
-    "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nGrading - Attendance & Homework\n\nYou are allowed up to 4 absences in the MW course and 6 absences in the MWF course without penalty.\n\nSend me an email if you have standard excused reasons (illness, family emergency, transportation problems, etc.).\n\nFor each absence beyond the initial four/six, there will be a deduction of 1% point from the Total Percentage Grade.\nThe single lowest homework score will be dropped when calculating the total homework score.\n\nEach homework except for the homework with the lowest score accounts for 25% of the total homework score."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-14",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-14",
-    "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nGrading - Midterm Exam Score\n\\[\n\\begin{align}\n&(\\text{Midterm Exam Score}) \\\\\n=\\, &\\text{max}\\,\\left\\{0.50\\times(\\text{Midterm Exam 1 Score}) \\,+\\, 0.50\\times(\\text{Midterm Exam 2 Score})\\right.,\\notag\\\\\n&\\qquad\\;\\,\\left.0.33\\times(\\text{Midterm Exam 1 Score}) \\,+\\, 0.67\\times(\\text{Midterm Exam 2 Score})\\right\\}.\\notag\n\\end{align}\n\\]\n\nThe Midterm Exam Score is the maximum between\n\nThe simple average of the Midterm Exam 1 Score and the Midterm Exam 2 Score and\nThe weighted average of them with one-third weight on the Midterm Exam 1 Score and two-third weight on the Midterm Exam 2 Score:"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-15",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-15",
-    "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nGrading - Total Exam Score\n\\[\n\\begin{align}\n&(\\text{Total Exam Score}) \\\\\n=\\, &\\text{max}\\,\\left\\{0.50\\times(\\text{Midterm Exam Score}) \\,+\\, 0.50\\times(\\text{Final Exam Score})\\right.,\\notag\\\\\n&\\qquad\\;\\,\\left.0.25\\times(\\text{Midterm Exam Score}) \\,+\\, 0.75\\times(\\text{Final Exam Score})\\right\\}.\\notag\n\\end{align}\n\\]\n\nThe Total Exam score is the maximum between\n\nThe simple average of the Midterm Exam score and the Final Exam score and\nThe weighted average of them with one-fourth weight on the Midterm Exam score and three-fourth weight on the Final Exam score:"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-16",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-16",
-    "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nMake-up Policy\n\nMake-up exams will not be given unless you have either a medically verified excuse or an absence excused by the University.\nIf you cannot take exams because of religious obligations, notify me by email at least two weeks in advance so that an alternative exam time may be set.\nA missed exam without an excused absence earns a grade of zero.\nLate submissions for homework assignment will be accepted with a penalty.\nA zero will be recorded for a missed assignment."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-17",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-17",
-    "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nAcademic Integrity and Plagiarism\n\nAll homework assignments and exams must be the original work by you.\nExamples of academic dishonesty include:\n\nRepresenting the work, thoughts, and ideas of another person as your own\nAllowing others to represent your work, thoughts, or ideas as theirs, and\nBeing complicit in academic dishonesty by suspecting or knowing of it and not taking action.\n\nGeneseo’s Library offers frequent workshops to help you understand how to paraphrase, quote, and cite outside sources properly.\n\nSee https://www.geneseo.edu/library/library-workshops."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-18",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-18",
-    "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nArtificial Intelligence (AI) Policy\n\nUnless AI tools are explicitly permitted for homework, you must complete your work independently.\nThis means you should not use tools like ChatGPT for any aspect of our coursework.\nSuch use is a form of academic dishonesty. Use of such tools is not only cheating, it will also cheat you of the opportunity to learn and develop your own skills.\nWhile AI will undoubtedly play important roles in our future society, you will be better able to utilize AI if you have developed your own critical thinking, writing, and analytical skills by doing your own work.\nIf you have any questions about this, please ask."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-19",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-19",
-    "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nAccessibility\n\nThe Office of Accessibility will coordinate reasonable accommodations for persons with physical, emotional, or cognitive disabilities to ensure equal access to academic programs, activities, and services at Geneseo.\nPlease contact me and the Office of Accessibility Services for questions related to access and accommodations."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-20",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#syllabus-20",
-    "title": "Lecture 1",
-    "section": "Syllabus",
-    "text": "Syllabus\nCareer Design\n\nTo get information about career development, you can visit the Career Development Events Calendar (https://www.geneseo.edu/career_development/events/calendar).\nYou can stop by South 112 to get assistance in completing your Handshake Profile https://app.joinhandshake.com/login.\n\nHandshake is ranked #1 by students as the best place to find full-time jobs.\n50% of the 2018-2020 graduates received a job or internship offer on Handshake.\nHandshake is trusted by all 500 of the Fortune 500."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#why-data-analytics",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#why-data-analytics",
-    "title": "Lecture 1",
-    "section": "Why Data Analytics?",
-    "text": "Why Data Analytics?\n\nFill in the gaps left by traditional business and economics classes.\n\nPractical skills that will benefit your future career.\nNeglected skills like how to actually find datasets in the wild and clean them.\n\nData analytics skills are largely distinct from (and complementary to) the core quantitative works familiar to business undergrads.\n\nData visualization, cleaning and wrangling; databases; machine learning; etc.\n\nIn short, we will cover things that I wish someone had taught me when I was undergraduate."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#you-at-the-end-of-this-course",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#you-at-the-end-of-this-course",
-    "title": "Lecture 1",
-    "section": "You, at the end of this course",
-    "text": "You, at the end of this course"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#why-data-analytics-1",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#why-data-analytics-1",
-    "title": "Lecture 1",
-    "section": "Why Data Analytics?",
-    "text": "Why Data Analytics?\n\nData analysts use analytical tools and techniques to extract meaningful insights from data.\n\nSkills in data analytics are also useful for business analysts, market analysts, financial analysts, human resource analysts, or economists.\n\nBreau of Labor Statistics forecasts that the projected growth rate of the employment in the industry related to data analytics from 2021 to 2031 is 36%.\n\nThe average growth rate for all occupations is 5%."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#why-r-python-and-databases",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#why-r-python-and-databases",
-    "title": "Lecture 1",
-    "section": "Why R, Python, and Databases?",
-    "text": "Why R, Python, and Databases?"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#why-r-python-and-databases-1",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#why-r-python-and-databases-1",
-    "title": "Lecture 1",
-    "section": "Why R, Python, and Databases?",
-    "text": "Why R, Python, and Databases?\nStack Overflow Trends\n\n\nStack Overflow is the most popular Q & A website specifically for programmers and software developers in the world.\nSee how programming languages have trended over time based on use of their tags in Stack Overflow from 2008 to 2023.\n\n\n\n\nMost Popular Languagues\n\n\nData Science and Big Data"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#data-analytics-and-generative-artificial-intelligence-ai",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#data-analytics-and-generative-artificial-intelligence-ai",
-    "title": "Lecture 1",
-    "section": "Data Analytics and Generative Artificial Intelligence (AI)",
-    "text": "Data Analytics and Generative Artificial Intelligence (AI)\n\n\nData Analytics and Big Data Trend\nFrom 2008 to 2025\n\n\nProgrammers in 2025"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#data-analytics-and-generative-ai",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#data-analytics-and-generative-ai",
-    "title": "Lecture 1",
-    "section": "Data Analytics and Generative AI",
-    "text": "Data Analytics and Generative AI\n\nGenerative AI refers to a category of AI that is capable of generating new content, ranging from text, images, and videos to music and code.\n\n\n\nIn the early 2020s, advances in transformer-based deep neural networks enabled a number of generative AI systems notable for accepting natural language prompts as input.\n\nThese include large language model (LLM) chatbots (e.g., ChatGPT, Claude, Gemini, Copilot, Grok).\n\nChatGPT (Chat Generative Pre-trained Transformer) is a chatbot developed by OpenAI and launched on November 30, 2022.\n\nBy January 2023, it had become what was then the fastest-growing consumer software application in history."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#data-analytics-and-generative-ai-1",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#data-analytics-and-generative-ai-1",
-    "title": "Lecture 1",
-    "section": "Data Analytics and Generative AI",
-    "text": "Data Analytics and Generative AI\n\nUsers around the world have explored how to best utilize GPT for writing essays and programming codes.\n\n\n\n\nIs AI a threat to data analytics?\n\nFundamental understanding of the subject matter is still crucial for effectively utilizing AI’s capabilities.\n\n\n\n\n\nIf you use Generative AI such as ChatGPT, please try to understand what ChatGPT gives you.\n\nCopying and pasting it without any understanding harms your learning opportunity."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-r",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-r",
-    "title": "Lecture 1",
-    "section": "What is R?",
-    "text": "What is R?\n\nR is a programming language and software environment designed for statistical computing and graphics.\nR has become a major tool in data analysis, statistical modeling, and visualization.\n\nIt is widely used among statisticians and data scientists for developing statistical software and performing data analysis.\nR is open source and freely available."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-rstudio",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-rstudio",
-    "title": "Lecture 1",
-    "section": "What is RStudio?",
-    "text": "What is RStudio?\n\nRStudio is an integrated development environment (IDE) for R.\n\nAn IDE is a software application that provides comprehensive facilities (e.g., text code editor, graphical user interface (GUI)) to computer programmers for software development.\n\nRStudio is a user-friendly interface that makes using R easier and more interactive.\n\nIt provides a console, syntax-highlighting editor that supports direct code execution, as well as tools for plotting, history, debugging, and workspace management.\n\nWe will use a free cloud version of RStudio, which is Posit Cloud."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-python",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-python",
-    "title": "Lecture 1",
-    "section": "What is Python?",
-    "text": "What is Python?\n\nPython is a versatile programming language known for its simplicity and readability.\nPython has become a dominant tool in various fields including data analysis, machine learning, and web development.\n\nIt is widely used among developers, data scientists, and researchers for building applications and performing data-driven tasks.\nPython is open source and has a vast ecosystem of libraries and frameworks."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-jupyter",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-jupyter",
-    "title": "Lecture 1",
-    "section": "What is Jupyter?",
-    "text": "What is Jupyter?\n\nJupyter is an open-source integrated development environment (IDE) primarily for Python, though it supports many other languages.\n\nJupyter provides a notebook interface that allows users to write and execute code in a more interactive and visual format.\n\nJupyter Notebook is a user-friendly environment that enhances coding, data analysis, and visualization.\n\nIt offers a web-based interface that combines live code, equations, visualizations, and narrative text.\nJupyter is widely used for data science, machine learning, and research, enabling easy sharing and collaboration.\n\nYou can use a free cloud version of Jupyter, which is Google Colab.\n\nGoogle Colab can be used for R as well."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#python-vs.-r",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#python-vs.-r",
-    "title": "Lecture 1",
-    "section": "Python vs. R",
-    "text": "Python vs. R"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-git",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-git",
-    "title": "Lecture 1",
-    "section": "What is Git?",
-    "text": "What is Git?\n\n\n\n\n\\(\\quad\\)\n\nGit is the most popular version control tool for any software development.\n\nIt tracks changes in a series of snapshots of the project, allowing developers to revert to previous versions, compare changes, and merge different versions.\nIt is the industry standard and ubiquitous for coding collaboration."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-github",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-github",
-    "title": "Lecture 1",
-    "section": "What is GitHub?",
-    "text": "What is GitHub?\n\nGitHub is a web-based hosting platform for Git repositories to store, manage, and share code.\nOur course website is hosted on a GitHub repository.\nCourse contents will be posted not only in Brightspace but also in my GitHub repositories (“repos”).\nGithub is useful for many reasons, but the main reason is how user friendly it makes uploading and sharing code."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-github-1",
-    "href": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-github-1",
-    "title": "Lecture 1",
-    "section": "What is GitHub?",
-    "text": "What is GitHub?"
+    "section": "Accessibility",
+    "text": "Accessibility\nSUNY Geneseo is committed to equitable access. If you have approved accommodations, please coordinate through OAS and communicate with me early."
   },
   {
     "objectID": "listing-danl-410-hw-q.html",
