@@ -1,0 +1,316 @@
+---
+title: Syllabus
+subtitle: "DANL 310: Data Visualization and Presentation"
+author: "Byeong-Hak Choe"
+number-sections: false
+toc: true
+toc-depth: 4
+toc-expand: 2
+toc-title: "
+<div style='white-space:nowrap;'>
+  <img src='/img/logo-geneseo.jpg'
+       style='height:48px; display:inline-block; vertical-align:middle; margin-right:0px;'>
+  <span style='display:inline-block; vertical-align:middle; font-family:Arial; font-weight:bold; line-height:1.05;'>
+    Data<br>Analytics
+  </span>
+</div>
+<br>On this page"
+css: [weeks/styles-wk.css]
+---
+
+# DANL 310-01: Data Visualization and Presentation  
+**(3 credits)**
+
+## Course Information
+
+| Item | Details |
+|---|---|
+| Semester | Spring 2026 |
+| Class Location | South 338 |
+| Class Hours | MW 2:00 P.M. – 3:15 P.M. |
+
+## Instructor Information
+
+| Item | Details |
+|---|---|
+| Name | Byeong-Hak Choe |
+| Email (preferred) | <bchoe@geneseo.edu> |
+| Phone (alternative) | (545) 245-5425 |
+| Office Location | South 227B |
+| Office Hours | MWF 9:15 A.M. – 10:15 A.M. |
+
+## Course Access and Orientation
+
+- **Course Website:** <https://bcdanl.github.io/310>  
+- **Brightspace:** Use Brightspace for announcements, grades, and course materials.
+
+## Course Description
+
+This course covers tools and methodologies that visually represent data using well-presented and visually appealing graphics in order to understand data better and perform useful data analytics tasks.
+
+Topics covered in this course include:
+
+1. Visualizing many forms of graphs such as line graphs, scatter plots, bar charts, and more  
+2. Loading data from various sources for data visualization  
+3. Customizing graphics using various formats and styles including colors, fonts, lines, and more  
+4. Visualizing geographical data such as maps  
+5. Showing an overview using dashboards and telling a story using storyboards  
+
+## Prerequisites/Corequisites
+
+DANL 101 and DANL 210
+
+## Communication Guidelines
+
+Instructor checks email daily (Mon–Fri). Expect responses within **24–72 hours**.
+
+## Syllabus Statement
+
+This syllabus is a working document and subject to change. Updates will be communicated in class meetings and/or Brightspace announcements.
+
+# Required Materials
+
+All required materials are **free**:
+
+- *Data Visualization: A Practical Introduction*  
+- *Guide for Quarto*  
+- *R for Data Science (2e)*  
+
+## Optional Readings
+
+- *ggplot2: Elegant Graphics for Data Analysis (3e)*  
+- *Fundamentals of Data Visualization*  
+- *Modern Data Visualization with R*  
+- *Quarto: The Practical Guide*  
+- *Mastering Shiny*  
+
+## Technology Requirements with Privacy Policies
+
+- Brightspace  
+- Microsoft Teams  
+- RStudio  
+- GitHub  
+
+# Bachelor of Arts in Data Analytics Program Competency Goals (CGs)
+
+- **Competency Goal 1:** Our learners will have strong analytical skills.  
+- **Competency Goal 2:** Our learners will have strong quantitative skills.  
+- **Competency Goal 3:** Our learners will have effective communications skills.  
+- **Competency Goal 4:** Our learners will have a thorough understanding of various functional areas of business.  
+- **Competency Goal 5:** Our learners will have a multidimensional understanding of social responsibility.  
+
+# Course Objectives
+
+- Exploring a variety of graph types, including line graphs, scatter plots, and bar charts. (CG1, CG2, CG3)  
+- Preparing and organizing data from diverse sources for visualization. (CG1, CG2, CG3)  
+- Tailoring graphics with a range of formats and styles, such as color schemes, fonts, and line types. (CG1, CG2, CG3)  
+- Mapping geographical data effectively. (CG1, CG2, CG3)  
+- Creating dynamic and interactive visualizations. (CG1, CG2, CG3)  
+- Building and deploying web applications using Shiny for data visualization. (CG1, CG2, CG3)  
+- Utilizing Shiny dashboards to synthesize information and narrate data stories. (CG1, CG2, CG3, CG4, CG5)  
+
+## General Education (GLOBE) Learning Outcomes
+
+N/A
+
+# The SUNY Geneseo School of Business
+
+## School of Business Mission
+
+The School of Business at SUNY Geneseo is committed to exceptional business and economics education within the context of a strong liberal arts tradition. The School is distinguished by a uniquely accomplished and dedicated faculty, motivated and capable students, a robust professional development program, and the engaged support of alumni, employers, and business leaders.
+
+Students acquire strong quantitative, analytical, and communication skills while preparing for professional success as socially conscious contributors. We strive for teaching excellence, and we recognize that high-quality faculty scholarship and professional activities increase our impact on knowledge, practice, and pedagogy.
+
+# Course Schedule
+
+| Week | Module | Assignments | Due Dates |
+| --- | --- | --- | --- |
+| 1–2 | Building and managing a data portfolio website with<br>Git, GitHub, and Quarto | Building and managing a data portfolio website with<br>Git, GitHub, and Quarto |  |
+| 2–8 | Mastering ggplot & dplyr | HW 1 | Feb 11 |
+| 2–8 |  | HW 2 | Feb 25 |
+| 2–8 |  | HW 3 | Mar 9 |
+| 2–8 |  | Midterm Exam | Mar 11 |
+| 9 |  | Spring Break | March 14–21 |
+| 10–13 | Various ggplot charts | HW 4 | Apr 8 |
+| 14 | Interactive & animation charts | HW 5 | Apr 27 |
+| 15 | Shiny and dashboard | HW 6 | May 6 |
+| 16 | Data Storytelling Presentation | Data Storytelling Presentation | May <br>4–6 |
+| 17 | Final Exam | Final Exam | May 11 |
+| 17 | Data Storytelling Project Report | Data Storytelling Project Report | May 14 |
+
+## Key Dates (Summary)
+
+- **Midterm Exam:** March 11 (during class time)  
+- **Spring Break:** March 14–21 (no classes)  
+- **GREAT Day:** April 22 (no class)  
+- **Final Exam:** May 11, 3:30 P.M. – 5:30 P.M.  
+- **Data Storytelling Project Report:** May 14  
+
+# Website
+
+You will build and publish your own course website using **Quarto**, **RStudio**, and **Git/GitHub**. Throughout the semester, you will post reports that include R code, analysis, and visualizations on your Quarto site.
+
+Your website will be hosted on **GitHub Pages**. We will also cover the basics of **Markdown**, and introduce essential concepts in **HTML** and **CSS** for simple customization.
+
+# Group Project
+
+Each project team will consist of **one or two students**. Your group will choose a dataset for the project, and the dataset must be approved by the instructor before you begin.
+
+The final write-up must include:
+
+- Exploratory Data Analysis (EDA), including descriptive statistics, data transformation, and multiple visualizations  
+- An interactive dashboard and Shiny application that allow users to explore the data and key findings (e.g., filters, summary tables, interactive plots)  
+
+All reports must be published on each team member’s website. Any change in group membership or project topic must be approved by the instructor.
+
+# Grading
+
+## Grade Components
+
+- Attendance (5%)  
+- Participation (5%)  
+- Group Project (20%)  
+- Total Homework (20%)  
+- Total Exam (50%)  
+
+## Grading Details
+
+- **Single lowest homework score is dropped** when calculating the Total Homework Grade.  
+- **Total Exam Grade** is the maximum between:  
+  - Simple average of Midterm Exam and Final Exam scores, **and**  
+  - Weighted average of Midterm Exam (33%) and Final Exam (67%)  
+
+## Group Project Grade
+
+- Peer evaluation on group presentation (5%)  
+- Instructor evaluation (95%)  
+  - Descriptive statistics (5%)  
+  - Data transformation (5%)  
+  - Data visualization (20%)  
+  - Data storytelling (20%)  
+  - Presentation slides (10%)  
+  - Presentation (30%)  
+  - Code (10%)  
+
+## Grading Scale
+
+- A = 93–100%  
+- A– = 90–92%  
+- B+ = 87–89%  
+- B = 83–86%  
+- B– = 80–82%  
+- C+ = 77–79%  
+- C = 73–76%  
+- C– = 70–72%  
+- D = 60–69%  
+- E = 0–59%  
+
+# Course Policies
+
+## Late Work
+
+Accepted up to **3 days late** with **30% penalty**.
+
+## Make-up Work
+
+Make-up exams will not be given unless you have either a medically verified excuse or an absence excused by the University.
+
+If you cannot take exams because of religious obligations, notify me by email at least two weeks in advance so that an alternative exam time may be set.
+
+A missed exam without an excused absence earns a grade of zero.
+
+Late submissions for homework assignment will be accepted with a penalty. A zero will be recorded for a missed assignment.
+
+## Attendance & Participation
+
+The knowledge and skills you will gain in this course highly depend on your participation in class learning activities as an in-person class. Because of that, you are expected to attend all class sessions unless you are ill or have a valid reason for missing.
+
+If you are sick or have another valid reason for missing, you must email me before the absence—any notifications after will be disregarded.
+
+Attendance will be taken during class via a sign-up sheet. You must sign in to be credited for attending class. If you attend class and do not sign in, it will be considered the equivalent of an absence.
+
+You are provided with **5 unexcused absences per semester**. Any additional unexcused absences will be subject to reducing **Total Percentage Grade by one percentage point** for each additional absence (6 total absences = 1% point (90 to 89), 7 total absences = 2% points (90 to 88), etc.).
+
+For extended absences (i.e., more than a couple of days of classes), you should contact the Dean of Students, who can assist with contacting your faculty.
+
+## Netiquette Policy
+
+- Before contributing to a discussion board, verify if your question has already been asked and answered. Avoid repeating topics as you would in a real-life conversation.  
+- Remain focused on the topic. Refrain from posting unrelated links, comments, thoughts, or images.  
+- Avoid typing in all caps, as it may appear as if you're shouting.  
+- Steer clear of writing anything that might be interpreted as angry or sarcastic, particularly as tone is hard to convey online.  
+- Always use "Please" and "Thank you" when requesting assistance from peers or instructors.  
+- Respect differing viewpoints. If disagreeing, do so respectfully and acknowledge the merits of your classmates' arguments.  
+- Ensure accuracy when responding to a peer's query. If unsure, especially about deadlines, it's better not to guess to avoid confusion.  
+- Be concise in your responses; lengthy replies to simple questions might not be read fully.  
+- If multiple responses are received to your question, consider summarizing them for the benefit of the entire class.  
+- Avoid derogatory comments or insulting others' intelligence. Disagree with ideas, not individuals.  
+- When referencing a previous discussion, quote only the essential lines to provide context without requiring others to search for the original post.  
+- Practice forgiveness. If a peer makes an error, do not dwell on it; everyone makes mistakes.  
+- Before posting, run a spell and grammar check. This small effort can significantly impact how your message is perceived.  
+
+# Accessibility Statement
+
+SUNY Geneseo is dedicated to providing an equitable and inclusive educational experience for all students, which includes upholding the principles of Title II of the Americans with Disabilities Act (ADA). The Office of Accessibility (OAS) will coordinate reasonable accommodations for persons with disabilities to ensure equal access to academic programs, activities, and services offered by SUNY Geneseo.
+
+Students with approved accommodations may submit a semester request to renew their academic accommodations. More information on the process for requesting academic accommodations is on the OAS website.
+
+As a student in this course, it is important to recognize your role in ensuring that all classmates, including those who use assistive technologies, can fully engage with and comprehend the course content. Any digital materials you create and share, such as assignments, presentations, or shared documents, must be designed to be digitally accessible using the most up to date version of the WCAG 2.1 Level AA guidelines.
+
+Accessible practices include, but are not limited to, providing alternative text for images, using clear heading structures, and ensuring captions for any video or audio you incorporate. Guidance in making your digital content accessible can be found on go.geneseo.edu/titleii.
+
+# Religious Observations and Class Attendance
+
+New York State Education Law 224-a stipulates that “any student in an institution of higher education who is unable, because of [their] religious beliefs, to attend classes on a particular day or days shall, because of such absence on the particular day or days, be excused from any examination or any study or work requirements” (see <https://www.geneseo.edu/apca/classroom-policies>).
+
+SUNY Geneseo has a commitment to inclusion and belonging, and I want to stress my respect for the diverse identities and faith traditions of students in my class. If you anticipate an absence due to religious observations, please contact me as soon as possible in advance to discuss your needs and arrange make up plans.
+
+The New York State Department of Civil Service maintains a calendar of major religious observations found on their website.
+
+# Military Obligations and Class Attendance
+
+Federal and New York State law requires institutions of higher education to provide an excused leave of absence from classes without penalty to students enrolled in the National Guard or armed forces reserves who are called to active duty.
+
+If you are called to active military duty and need to miss classes, please let me know and consult as soon as possible with the Dean of Students.
+
+# Academic Integrity and Plagiarism
+
+Academic dishonesty includes cheating, knowingly providing false information, plagiarizing, and any other form of academic misrepresentation.
+
+The School of Business regards all acts of cheating and/or plagiarism on tests or any other assignments as unprofessional and unethical behavior that violates College policies as stated in the Student Handbook. Students are expected to be aware of and to obey the College policies concerning academic dishonesty.
+
+Any alleged cheating or plagiarism may be dealt with by the School as a disciplinary problem in accordance with College policies:
+
+<https://www.geneseo.edu/handbook/academic-dishonesty-policy>
+
+Plagiarism is the representation of someone else’s words or ideas as one’s own, or the arrangement of someone else’s material(s) as one’s own. In this course, such misrepresentation may be sufficient grounds for a student’s receiving a grade of E for the paper or presentation involved or may result in an E being assigned as the final grade for the course.
+
+Any one of the following constitutes evidence of plagiarism:
+
+- Direct quotation without identifying punctuation and citation of source  
+- Paraphrase of expression or thought without proper attribution  
+- Unacknowledged dependence upon a source in plan, organization, or argument  
+
+# Use of AI in Coursework
+
+This course encourages you to use Generative AI Tools like ChatGPT or Gemini to support your work. To maintain academic integrity, you must disclose and properly attribute any AI-generated material you use, including in-text citations, quotations, and references.
+
+Guidance for citing AI-generated content is available at:
+
+<https://apastyle.apa.org/blog/how-to-cite-chatgpt>
+
+In cases where I discover the use of generative AI without proper citation, these cases will be treated as instances of academic dishonesty and will be subject to the processes outlined in the SUNY Geneseo Academic Dishonesty Policy.
+
+**Generative AI Statement:** Use of generative AI tools (e.g., ChatGPT, Gemini) must be disclosed and cited. Unauthorized use may violate academic integrity.
+
+# Student Success Resources
+
+- Academic Support Services  
+- Library Research Help  
+- Technology Support  
+- SUNY Geneseo Counseling Resources  
+- Knight’s Harvest Food Assistance  
+
+# DEI Statement
+
+This course values diverse perspectives and encourages inclusive dialogue. We aim to create a respectful and equitable learning environment.

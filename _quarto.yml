@@ -1,0 +1,82 @@
+project:
+  type: website 
+  output-dir: "."
+  
+website:
+  title: ""
+  # favicon: img/favicon.ico
+  description: 'A collection of data analytics by Byeong-Hak Choe'
+  reader-mode: false
+  back-to-top-navigation: true
+
+  navbar:
+    background: "#1c4982"
+    logo: img/geneseo-logo-squared.png
+    pinned: true
+    right:
+      - icon: code-slash
+        text: Class Code
+        href: https://github.com/bcdanl/410-code
+        target: _blank
+      - text: " "
+    
+  sidebar:
+    style: docked
+    search: false
+    collapse-level: 0
+    contents:
+      - text: 🏠 Home
+        href: index.qmd
+      - text: 📓 Syllabus
+        href: syllabus.qmd
+      - text: 🅱 Brightspace
+        href: http://brightspace.geneseo.edu/
+        target: _blank
+      
+      - text: 🚀 Lecture
+        href: listing-danl-410-lec.qmd
+      - text: ⌨️ Classwork
+        href: listing-danl-410-cw.qmd
+      - text: 💻 Homework
+        href: listing-danl-410-hw.qmd
+      - text: 📝 Exams
+        href: listing-danl-410-ex.qmd
+        
+      - section: 🗣️️ Project
+        contents:
+                
+      - section: 🗓️ Weeks
+        contents:
+          - text: Week 01
+            href: danl-wk/wk-01.qmd
+      
+        
+  page-footer: 
+    border: false
+    center: "powered with github, quarto, and rstudio<br>byeong-hak choe, 2026"
+    # foreground: dark
+    # background: '#9b4e55' 
+
+
+execute:
+  echo: true
+  eval: true
+  message: false
+  warning: false
+  
+format:
+  html: 
+    grid:
+      margin-width: 400px
+      sidebar-width: 200px
+    link-external-newwindow: true
+    theme:
+      light: [flatly]  # flatly litera sandstone 'assets/scss/light.scss'
+      dark: [darkly, theme-dark.scss] # darkly cyborg slate solra superhero
+    include-in-header: 
+      - text: |
+          <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css"/>
+    css: [styles.css, assets/css/font.css] # , font.css
+    highlight-style: atom-one # espresso   tango
+    mainfont:  sans-serif; serif; ui-sans-serif  # Gill Sans, sans-serif;
+    include-after-body: [sidebar-button-mobile.html]

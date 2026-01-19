@@ -1,0 +1,109 @@
+---
+title: '<font style="font-family:Optima"><b>DANL 410: Data Analytics Capstone, Spring 2026</b></font>'
+subtitle: '<div class=class="box-body buttons-text clearfix"><font size="5"><ul style="list-style-type: none;"><li><b>Instructor: Byeong-Hak Choe</b> <b>(</b><a href="mailto:bchoe@geneseo.edu" class="about-link" rel="" target=""><i class="bi bi-envelope"></i><span class="about-link-text"> Email</span></a></span></a><b>)</b></li></ul></font></div>'
+
+date: ''
+date-modified: "" 
+# page-layout: full
+
+toc: false
+toc-title: ""
+toc-location: right
+comments: false
+# css: danl-wk/styles-wk.css
+from: markdown+emoji
+fig-align: center
+
+listing: 
+  - id: danl-410-lec
+    contents: "danl-lec/danl-410*.qmd"
+    type: table
+    fields: [title, subtitle, date]
+    sort: 
+      - "date"
+      - "subtitle"
+      - "title"
+    sort-ui: false
+    filter-ui: false
+    page-size: 36
+    table-striped: false
+  - id: danl-410-cw
+    contents: "danl-cw/danl-410*.qmd"
+    type: table
+    fields: [title, subtitle, date]
+    sort: 
+      - "date"
+      - "title"
+    sort-ui: false
+    filter-ui: false
+    page-size: 36
+  - id: danl-410-hw
+    contents: "danl-hw/danl-410*.qmd"
+    type: table
+    fields: [title, subtitle, date]
+    sort: 
+      - "title"
+      - "date"
+    sort-ui: false
+    filter-ui: false
+    page-size: 36
+    
+format: 
+  html:
+    include-in-header:
+     text: |
+        <style>
+        #toc-welcome {
+              font-size: 1.67em;
+        }
+        #toc-bullet-lecture {
+              font-size: 1.67em;
+        }
+        #toc-bullet-classwork {
+              font-size: 1.67em;
+        }
+        #toc-bullet-homework {
+              font-size: 1.67em;
+        }
+        a {
+        text-decoration: none; /* This removes the underline */
+        padding: 5px 10px; /* Top & Bottom, Left & Right Padding */
+        border-radius: 5px; /* Rounds the corners */
+        }
+        </style>
+---
+
+
+
+
+<div style="display:block; margin:25px;"></div>
+
+<font size = "5">Welcome! 👋 </font>
+
+<div style="display:block; margin:-10px;"></div>
+
+<font size = "5">$-$ Explore, Learn, and Grow with Data Analytics! 🌟</font>
+
+<div style="display:block; margin:5px;"></div>
+
+
+
+
+
+## :rocket: Lecture
+
+:::{#danl-410-lec}
+:::
+
+
+## :keyboard: Classwork
+
+:::{#danl-410-cw}
+:::
+
+## :computer: Homework
+
+:::{#danl-410-hw}
+:::
+
+

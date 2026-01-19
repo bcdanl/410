@@ -1,0 +1,34 @@
+[
+  {
+    "listing": "/listing-danl-410-cw.html",
+    "items": []
+  },
+  {
+    "listing": "/listing-danl-410-hw.html",
+    "items": []
+  },
+  {
+    "listing": "/listing-danl-410-lec.html",
+    "items": [
+      "/danl-lec/danl-410-lec-01-2026-0121.html"
+    ]
+  },
+  {
+    "listing": "/listing-danl-410-ex.html",
+    "items": []
+  },
+  {
+    "listing": "/listing-danl-410-wk.html",
+    "items": []
+  },
+  {
+    "listing": "/listing-danl-410-hw-q.html",
+    "items": []
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/danl-lec/danl-410-lec-01-2026-0121.html"
+    ]
+  }
+]

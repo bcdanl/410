@@ -1,0 +1,46 @@
+---
+title: Week 1
+subtitle: Introduction and Installing PyCharm
+date: 2026-01-21
+from: markdown+emoji
+---
+
+Welcome to DANL 410, the first step in your data analytics journey! 👋 
+
+In the first week, we will go over what you can expect to learn in this course and review key logistics, including the structure of lectures and class meetings, assessments, and how we will communicate throughout the semester.
+
+## 📓 Syllabus
+
+- Please read the [syllabus](../syllabus.html){target="_blank"}.
+
+
+## 🏫 Lecture Slides  
+
+- **Lecture 1 — Syllabus**  
+  [View Slides](../danl-lec/danl-410-lec-01-2026-0121.html){target="_blank"}  
+
+
+🎥 Looking for lecture recordings? You can only find those on Brightspace.
+
+
+
+## 📚 Recommended Reading
+
+### Machine Learning
+
+
+#### Reference
+
+
+## 💬 Discussion
+
+<font size = "5">Welcome to our Week 1 Discussion Board! 👋 </font>
+
+
+This space is designed for you to engage with your classmates about the material covered in Week 1.
+
+Whether you are looking to delve deeper into the content, share insights, or have questions about the content, this is the perfect place for you.
+
+If you have any specific questions for Byeong-Hak (**@bcdanl**) or peer classmate (@GitHub-Username) regarding the Week 1 materials or need clarification on any points, don't hesitate to ask here. 
+
+Let's collaborate and learn from each other!
