@@ -144,15 +144,6 @@ DANL 300 **and** DANL 310
 - Expect responses within **12–72 hours**
 
 
-## Course Contents & Schedule
-- **Weeks 1–2:** Portfolio website + project setup (Git/GitHub/Quarto)  
-- **Weeks 2–8:** Mastering ggplot & dplyr (+ Midterm)  
-  - **HW 1**: **Feb 11**
-  - **HW 2**: **Feb 25**
-  - **HW 3**: **Mar 9**
-  - **Midterm Exam:** **March 11** (during class time)  
-- **Week 9:** Spring Break (**March 14–21**)  
-
 
 ## Course Contents & Schedule
 
