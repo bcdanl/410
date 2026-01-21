@@ -487,7 +487,7 @@
     "href": "danl-lec/danl-410-lec-01-2026-0121.html#from-answers-to-workflows-agent-ai",
     "title": "Lecture 1",
     "section": "From Answers to Workflows: Agent AI",
-    "text": "From Answers to Workflows: Agent AI\n\nAgent AI: an AI system that can\n\\(\\hspace{.67cm}\\) plan multi-step work\n→ act (edit files, run code, use apps)\n→ check results\n→ iterate toward a goal\nWith external tools + memory, prompts become multi-step workflows.\nExample: a sales-order agent can validate orders, check inventory, generate invoices/shipping labels, and update ERP/CRM.\n\n\n\nNot just “answering questions,” but executing workflows. Goal → Plan → Act → Check → Repeat\n\n\n\nReference: WSJ (Jan 17, 2026), “Claude Is Taking the AI World by Storm, and Even Non-Nerds Are Blown Away”"
+    "text": "From Answers to Workflows: Agent AI\n\nAgent AI: an AI system that can\n\\(\\hspace{.67cm}\\) plan multi-step work\n→ act (edit files, run code, use apps)\n→ check results\n→ iterate toward a goal\nWith external tools + memory, prompts become multi-step workflows.\nExample: a sales-order agent can validate orders, check inventory, generate invoices/shipping labels, and update ERP/CRM.\n\n\n\nNot just “answering questions,” but executing workflows. Goal → Plan → Act → Check → Repeat\n\n\n\nRecommended Reading: WSJ (Jan 17, 2026), “Claude Is Taking the AI World by Storm, and Even Non-Nerds Are Blown Away”"
   },
   {
     "objectID": "danl-cw/danl-410-cw-01.html",
