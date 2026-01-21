@@ -1,0 +1,129 @@
+---
+title: Classwork 1
+subtitle: "Vibe Coding"
+date: 2026-01-21
+code-fold: true
+execute: 
+  echo: true
+  warning: false
+  message: false
+toc: false
+from: markdown+emoji
+---
+```{r}
+#| include: false
+
+library(knitr)
+library(rmarkdown)
+library(tidyverse)
+library(skimr)
+library(ggthemes)
+library(hrbrthemes)
+
+theme_set(theme_ipsum() +
+          theme(strip.background =element_rect(fill="lightgray"),
+                axis.title.x = element_text(size = rel(1.5)),
+                axis.title.y = element_text(size = rel(1.5)),
+                legend.title = element_text(size=rel(1.25))
+                ))
+```
+
+
+
+::: callout-note
+
+## What is *Vibe Coding*?
+
+**Vibe coding** is an artificial intelligence-assisted software development technique popularized by Andrej Karpathy in February 2025. The term was listed in the Merriam-Webster Dictionary the following month as a "slang & trending" term. ([Wikipedia, 2025](https://en.wikipedia.org/wiki/Vibe_coding#:~:text=Vibe%20coding%20is%20an%20artificial,than%20code%20correctness%20or%20structure.))
+
+:::
+
+:::callout-note
+## What are *HTML* and *JS*?
+
+- **HTML (HyperText Markup Language)** is the **standard language** for creating web pages.  
+  - It **defines the structure** of a webpage.  
+  - A webpage is made up of **HTML elements**.  
+  - These elements **instruct the browser** on how to display the content.
+
+- **JavaScript (JS)** is a **programming language** that enhances web interactivity.
+  - It runs **directly in the user's browser**, reducing server load.
+  <!-- - JS is often used with **third-party libraries** to expand website functionality. -->
+  - It enables dynamic content, user interactions, and animations.
+
+
+- **Analogy:**  
+  - **HTML** = The structure of a house (walls, roof, foundation).  
+  - **JS** = The interactive elements (automatic doors, lights, smart devices).  
+  
+:::
+
+
+<br>
+
+
+**Step 1.** Start with this prompt (<span style="color:red">**use exactly**</span>):
+
+> "Create a single-file HTML/JS page to play perfect tic-tac-toe vs. human."
+
+- e.g., [Prof. Choe's Tic-Tac-Toe](../tic-tac-toe.html){target="_blank"}
+
+
+
+**Step 1-1** Prepare your text editor:
+
+---
+
+##### Windows
+1. Press the **Windows key**, type **Notepad**, and press **Enter**.  
+2. Paste the HTML code from your AI.  
+3. Go to **File → Save As**.  
+   - Change **Save as type** to **All Files**.  
+   - Enter a name like `tic-tac-toe.html`.  
+   - Select the location (Desktop, Documents, etc.).  
+   - Set **Encoding** to **UTF-8**.  
+   - Click **Save**.  
+4. Double-click the file to open it in your default browser (Edge, Chrome, etc.). 
+
+---
+
+##### Mac
+
+**_Set up TextEdit (one-time)_**  
+<div style="display:block; margin:-2px;"></div>
+
+1. Press **Command + Space** to open Spotlight.  
+2. Type **TextEdit** and press **Enter**.  
+3. Press **Command + ,** to open **Settings**.  
+   - Under **Format**, select **Plain Text**.  
+4. Quit TextEdit (**Command + Q**).  
+
+**_Re-open TextEdit for coding_**  
+<div style="display:block; margin:-2px;"></div>
+
+5. Press **Command + Space**, type **TextEdit**, and press **Enter**.  
+6. Click **Show Options**.  
+   - Under **Plain Text Encoding**, select **Unicode (UTF-8)**.  
+7. Click **New Document**.  
+8. Paste the HTML code from your generative AI.  
+9. Save the file (**Command + S**):  
+   - Name it `tic-tac-toe.html`.  
+   - Ensure the extension is `.html`.  
+   - Choose a location (Desktop, Documents, etc.).  
+   - Click **Save**, and if prompted, choose **Use .html**.  
+10. Double-click the file to open it in your default browser (Safari, Chrome, etc.).  
+
+---
+
+<br>
+
+**Step 2.** Add an option for two-player mode.
+
+- e.g., [Prof. Choe's Tic-Tac-Toe with the Two-player Mode ](../tic-tac-toe-pvp.html){target="_blank"}
+
+<br>
+
+**Step 3.** Make a 4×4 tic-tac-toe version (if your current build is only 3×3).
+
+- e.g., [Prof. Choe's 4×4 Tic-Tac-Toe](../tic-tac-toe-pvp-4x4.html){target="_blank"}
+

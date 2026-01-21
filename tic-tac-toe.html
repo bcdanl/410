@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unbeatable Tic‑Tac‑Toe</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a33;
+      --accent: #7dd3fc;
+      --accent-2: #a78bfa;
+      --text: #e6ebff;
+      --muted: #b5c0ff99;
+      --win: #10b98155;
+      --lose: #ef444455;
+    }
+    html, body {
+      height: 100%;
+    }
+    body {
+      margin: 0;
+      display: grid;
+      place-items: center;
+      background: radial-gradient(1200px 800px at 10% -10%, #1a244d, #0b1020) fixed;
+      color: var(--text);
+      font: 16px/1.4 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    }
+    .app {
+      width: min(92vw, 880px);
+      padding: 20px clamp(16px, 2vw, 28px);
+      background: color-mix(in oklab, var(--panel) 88%, #000 12%);
+      border: 1px solid #ffffff14;
+      border-radius: 18px;
+      box-shadow: 0 20px 60px #0008, inset 0 1px 0 #fff1;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(18px, 3.6vw, 28px);
+      letter-spacing: 0.3px;
+    }
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px 14px;
+      align-items: center;
+    }
+    .controls label {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    select, button {
+      font: inherit;
+      color: var(--text);
+      background: #202a50;
+      border: 1px solid #ffffff2a;
+      border-radius: 10px;
+      padding: 8px 12px;
+      cursor: pointer;
+      transition: transform .05s ease, background .2s ease, border-color .2s ease;
+    }
+    select:focus, button:focus { outline: 2px solid #7dd3fc66; outline-offset: 2px; }
+    button.primary { background: linear-gradient(180deg, #334679, #263864); border-color: #7dd3fc55; }
+    button.secondary { background: #1b2548; }
+    button:hover { border-color: #fff4; }
+    .status {
+      margin: 12px 0 16px;
+      font-weight: 600;
+      color: var(--accent);
+      min-height: 1.4em;
+    }
+    .board {
+      --cell: min(20vmin, 120px);
+      display: grid;
+      grid-template-columns: repeat(3, var(--cell));
+      grid-template-rows: repeat(3, var(--cell));
+      gap: 10px;
+      justify-content: center;
+      margin: 12px auto 6px;
+      user-select: none;
+    }
+    .cell {
+      display: grid;
+      place-items: center;
+      border: 1px solid #ffffff25;
+      background: #0e1634;
+      border-radius: 16px;
+      font-size: calc(var(--cell) * 0.5);
+      font-weight: 800;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 10px #0008;
+      transition: background .15s ease, transform .05s ease, border-color .2s ease, box-shadow .2s ease;
+    }
+    .cell:not([disabled]):hover { border-color: #ffffff55; box-shadow: inset 0 0 0 1px #ffffff22; }
+    .cell:active { transform: translateY(1px); }
+    .cell[disabled] { cursor: not-allowed; opacity: 0.94; }
+    .cell.win { background: linear-gradient(180deg, #0f2d23, #0e1634); box-shadow: inset 0 0 0 1px #10b98177; }
+    .cell.lose { background: linear-gradient(180deg, #341414, #0e1634); box-shadow: inset 0 0 0 1px #ef444477; }
+    
+    .scores {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-top: 14px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+    .scores .card {
+      background: #0f1840;
+      border: 1px solid #ffffff1f;
+      border-radius: 12px;
+      padding: 10px 12px;
+      text-align: center;
+    }
+    .score { font-size: 20px; font-weight: 800; color: var(--text); }
+    
+    @media (max-width: 500px) {
+      .scores { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="app" role="application" aria-label="Tic‑Tac‑Toe game">
+    <header>
+      <h1>Unbeatable Tic‑Tac‑Toe</h1>
+      <div class="controls">
+        <label> You play as
+          <select id="humanMark" aria-label="Choose your mark">
+            <option value="X" selected>X</option>
+            <option value="O">O</option>
+          </select>
+        </label>
+        <label> First move
+          <select id="firstMove" aria-label="Who goes first">
+            <option value="human" selected>You</option>
+            <option value="ai">Computer</option>
+          </select>
+        </label>
+        <button id="newGame" class="primary" aria-label="Start new game">New Game</button>
+        <button id="resetScores" class="secondary" aria-label="Reset scores">Reset Scores</button>
+      </div>
+    </header>
+
+    <div id="status" class="status" role="status" aria-live="polite">Your move.</div>
+
+    <div id="board" class="board" role="grid" aria-label="Tic‑Tac‑Toe board">
+      <!-- 9 cells -->
+      <button class="cell" data-i="0" role="gridcell" aria-label="Cell 1" aria-live="off"></button>
+      <button class="cell" data-i="1" role="gridcell" aria-label="Cell 2" aria-live="off"></button>
+      <button class="cell" data-i="2" role="gridcell" aria-label="Cell 3" aria-live="off"></button>
+      <button class="cell" data-i="3" role="gridcell" aria-label="Cell 4" aria-live="off"></button>
+      <button class="cell" data-i="4" role="gridcell" aria-label="Cell 5" aria-live="off"></button>
+      <button class="cell" data-i="5" role="gridcell" aria-label="Cell 6" aria-live="off"></button>
+      <button class="cell" data-i="6" role="gridcell" aria-label="Cell 7" aria-live="off"></button>
+      <button class="cell" data-i="7" role="gridcell" aria-label="Cell 8" aria-live="off"></button>
+      <button class="cell" data-i="8" role="gridcell" aria-label="Cell 9" aria-live="off"></button>
+    </div>
+
+    <div class="scores" aria-label="Scoreboard">
+      <div class="card"><div id="labelYou">You (X)</div><div class="score" id="scoreYou">0</div></div>
+      <div class="card"><div id="labelAI">Computer (O)</div><div class="score" id="scoreAI">0</div></div>
+      <div class="card"><div>Draws</div><div class="score" id="scoreDraw">0</div></div>
+    </div>
+  </div>
+
+  <script>
+    (function(){
+      "use strict";
+
+      const combos = [
+        [0,1,2],[3,4,5],[6,7,8], // rows
+        [0,3,6],[1,4,7],[2,5,8], // cols
+        [0,4,8],[2,4,6]          // diags
+      ];
+
+      const els = {
+        board: document.getElementById('board'),
+        cells: Array.from(document.querySelectorAll('.cell')),
+        status: document.getElementById('status'),
+        humanMark: document.getElementById('humanMark'),
+        firstMove: document.getElementById('firstMove'),
+        newGame: document.getElementById('newGame'),
+        resetScores: document.getElementById('resetScores'),
+        labelYou: document.getElementById('labelYou'),
+        labelAI: document.getElementById('labelAI'),
+        scoreYou: document.getElementById('scoreYou'),
+        scoreAI: document.getElementById('scoreAI'),
+        scoreDraw: document.getElementById('scoreDraw'),
+      };
+
+      const state = {
+        board: Array(9).fill(null),
+        human: 'X',
+        ai: 'O',
+        humanStarts: true,
+        gameOver: false,
+        scores: { you: 0, ai: 0, draw: 0 },
+        memo: new Map(),
+      };
+
+      function key(b, player){ return b.map(v => v || '-').join('') + '|' + player; }
+
+      function resetBoard(highlight){
+        state.board = Array(9).fill(null);
+        state.gameOver = false;
+        state.memo.clear();
+        els.cells.forEach(c => { c.textContent = ''; c.disabled = false; c.classList.remove('win','lose'); });
+        updateLabels();
+        updateStatus(state.humanStarts ? 'Your move.' : 'Computer is thinking…');
+        if (!state.humanStarts) {
+          setTimeout(aiTurn, 350);
+        }
+      }
+
+      function updateLabels(){
+        els.labelYou.textContent = `You (${state.human})`;
+        els.labelAI.textContent = `Computer (${state.ai})`;
+        els.scoreYou.textContent = state.scores.you;
+        els.scoreAI.textContent = state.scores.ai;
+        els.scoreDraw.textContent = state.scores.draw;
+      }
+
+      function updateStatus(msg){ els.status.textContent = msg; }
+
+      function availableMoves(b){
+        const m = [];
+        for (let i=0;i<9;i++) if (!b[i]) m.push(i);
+        return m;
+      }
+
+      function getResult(b){
+        for (const [a,b2,c] of combos){
+          if (b[a] && b[a] === b[b2] && b[a] === b[c]) return { winner: b[a], line: [a,b2,c] };
+        }
+        if (!b.includes(null)) return { winner: 'draw', line: null };
+        return null;
+      }
+
+      function place(i, mark){ state.board[i] = mark; els.cells[i].textContent = mark; els.cells[i].disabled = true; }
+
+      function endGame(result){
+        state.gameOver = true;
+        els.cells.forEach(c => c.disabled = true);
+        if (result.winner === 'draw'){
+          state.scores.draw++;
+          updateStatus("It's a draw.");
+        } else if (result.winner === state.human){
+          state.scores.you++;
+          updateStatus('You win!');
+          if (result.line) result.line.forEach(i => els.cells[i].classList.add('win'));
+        } else {
+          state.scores.ai++;
+          updateStatus('Computer wins.');
+          if (result.line) result.line.forEach(i => els.cells[i].classList.add('lose'));
+        }
+        updateLabels();
+      }
+
+      function humanTurn(i){
+        if (state.gameOver || state.board[i]) return;
+        place(i, state.human);
+        const res = getResult(state.board);
+        if (res) return endGame(res);
+        updateStatus('Computer is thinking…');
+        setTimeout(aiTurn, 150);
+      }
+
+      function aiTurn(){
+        if (state.gameOver) return;
+        const i = bestMove(state.board, state.ai);
+        place(i, state.ai);
+        const res = getResult(state.board);
+        if (res) return endGame(res);
+        updateStatus('Your move.');
+      }
+
+      // Minimax with alpha-beta pruning and memoization — perfect play
+      function bestMove(board, player){
+        let bestScore = -Infinity;
+        let choices = [];
+        for (const i of availableMoves(board)){
+          board[i] = player;
+          const score = minimax(board, switchP(player), 1, -Infinity, Infinity);
+          board[i] = null;
+          if (score > bestScore){ bestScore = score; choices = [i]; }
+          else if (score === bestScore){ choices.push(i); }
+        }
+        // Prefer center/corners deterministically if multiple equal best options
+        const pref = [4,0,2,6,8,1,3,5,7];
+        choices.sort((a,b)=> pref.indexOf(a) - pref.indexOf(b));
+        return choices[0];
+      }
+
+      function minimax(board, player, depth, alpha, beta){
+        const res = getResult(board);
+        if (res){
+          if (res.winner === 'draw') return 0;
+          if (res.winner === state.ai) return 10 - depth; // quicker win is better
+          return depth - 10; // slower loss is better
+        }
+        const k = key(board, player);
+        if (state.memo.has(k)) return state.memo.get(k);
+
+        if (player === state.ai){
+          let maxEval = -Infinity;
+          for (const i of availableMoves(board)){
+            board[i] = state.ai;
+            const evalScore = minimax(board, state.human, depth+1, alpha, beta);
+            board[i] = null;
+            if (evalScore > maxEval) maxEval = evalScore;
+            if (evalScore > alpha) alpha = evalScore;
+            if (beta <= alpha) break; // beta cut-off
+          }
+          state.memo.set(k, maxEval);
+          return maxEval;
+        } else {
+          let minEval = Infinity;
+          for (const i of availableMoves(board)){
+            board[i] = state.human;
+            const evalScore = minimax(board, state.ai, depth+1, alpha, beta);
+            board[i] = null;
+            if (evalScore < minEval) minEval = evalScore;
+            if (evalScore < beta) beta = evalScore;
+            if (beta <= alpha) break; // alpha cut-off
+          }
+          state.memo.set(k, minEval);
+          return minEval;
+        }
+      }
+
+      function switchP(p){ return p === 'X' ? 'O' : 'X'; }
+
+      // Event wiring
+      els.cells.forEach(btn => btn.addEventListener('click', e => humanTurn(+e.currentTarget.dataset.i)));
+      els.newGame.addEventListener('click', () => resetBoard());
+      els.resetScores.addEventListener('click', () => { state.scores = { you:0, ai:0, draw:0 }; updateLabels(); });
+
+      els.humanMark.addEventListener('change', (e) => {
+        state.human = e.target.value;
+        state.ai = switchP(state.human);
+        // If the side to start conflicts (e.g., AI starts but human chose O), it's fine — firstMove controls turn order.
+        state.humanStarts = (els.firstMove.value === 'human');
+        resetBoard();
+      });
+
+      els.firstMove.addEventListener('change', (e) => {
+        state.humanStarts = (e.target.value === 'human');
+        resetBoard();
+      });
+
+      // Initialize
+      resetBoard();
+    })();
+  </script>
+</body>
+</html>

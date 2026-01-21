@@ -4,7 +4,7 @@
     "href": "listing-danl-410-cw.html",
     "title": "DANL 410 - Classwork",
     "section": "",
-    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nClasswork 1\n\n\nVibe Coding\n\n\nJanuary 21, 2026\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "listing-danl-410-hw.html",
@@ -144,7 +144,7 @@
     "href": "index.html#classwork",
     "title": "DANL 410: Data Analytics Capstone, Spring 2026",
     "section": "⌨️ Classwork",
-    "text": "⌨️ Classwork\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "⌨️ Classwork\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nClasswork 1\n\n\nVibe Coding\n\n\nJanuary 21, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#homework",
@@ -334,5 +334,173 @@
     "title": "Syllabus",
     "section": "Netiquette Policy",
     "text": "Netiquette Policy\n\nBefore contributing to a discussion board, verify if your question has already been asked and answered. Avoid repeating topics as you would in a real-life conversation.\n\nRemain focused on the topic. Refrain from posting unrelated links, comments, thoughts, or images.\n\nAvoid typing in all caps, as it may appear as if you’re shouting.\n\nSteer clear of writing anything that might be interpreted as angry or sarcastic, particularly as tone is hard to convey online.\n\nAlways use “Please” and “Thank you” when requesting assistance from peers or instructors.\n\nRespect differing viewpoints. If disagreeing, do so respectfully and acknowledge the merits of your classmates’ arguments.\n\nEnsure accuracy when responding to a peer’s query. If unsure, especially about deadlines, it’s better not to guess to avoid confusion.\n\nBe concise in your responses; lengthy replies to simple questions might not be read fully.\n\nIf multiple responses are received to your question, consider summarizing them for the benefit of the entire class.\n\nAvoid derogatory comments or insulting others’ intelligence. Disagree with ideas, not individuals.\n\nWhen referencing a previous discussion, quote only the essential lines to provide context without requiring others to search for the original post.\n\nPractice forgiveness. If a peer makes an error, do not dwell on it; everyone makes mistakes.\n\nBefore posting, run a spell and grammar check. This small effort can significantly impact how your message is perceived."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#the-three-sleepless-nights",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#the-three-sleepless-nights",
+    "title": "Lecture 1",
+    "section": "The “Three Sleepless Nights”",
+    "text": "The “Three Sleepless Nights”\n\n\n\n\n\n\n\n\n\nAfter hands‑on use, many realize LLMs don’t behave like normal software; they feel conversational, improvisational, even social.\nThis triggers excitement and anxiety: What will my job be like? What careers remain? Is the model “thinking”?\n\n\n\n\nThe author describes staying up late trying “impossible” prompts—and seeing plausible solutions.\nKey takeaway: Perceived capability jump → a sense that the world has changed."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#a-classroom-turning-point",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#a-classroom-turning-point",
+    "title": "Lecture 1",
+    "section": "A Classroom Turning Point",
+    "text": "A Classroom Turning Point\n\nIn late 2022, a demo for undergrads showed AI as cofounder: brainstorming ideas, drafting business plans, even playful transforms (e.g., poetry).\nStudents rapidly built working demos using unfamiliar libraries—with AI guidance—faster than before.\nImmediate classroom effects:\n\nFewer raised hands (ask AI later); polished grammar but iffy citations.\nEarly ChatGPT “tells”: formulaic conclusions (e.g., “In conclusion,” now improved).\n\nAtmosphere: Excitement + nerves about career paths, speed of change, and where it stops."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#why-this-feels-like-a-breakthrough",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#why-this-feels-like-a-breakthrough",
+    "title": "Lecture 1",
+    "section": "Why This Feels Like a Breakthrough",
+    "text": "Why This Feels Like a Breakthrough\n\nGenerative AI (esp. LLMs) behaves like a co‑intelligence: it helps us think, write, plan, and code.\nThe shift is not just speed; it’s new forms of interaction (dialogue, iteration, critique).\nFor many tasks, the bottleneck moves from doing → directing (prompting, reviewing, verifying).\nRaises new literacy needs: prompt craft/engineering, critical reading of outputs, traceability, and evaluation."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#prompt-engineering",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#prompt-engineering",
+    "title": "Lecture 1",
+    "section": "Prompt Engineering",
+    "text": "Prompt Engineering\nThe practice of designing clear, structured inputs to guide generative AI systems toward producing accurate, useful, and context-appropriate outputs.\n\n\nBasic prompt\n“Explain climate change.”\n\nEngineered prompt\n“Explain climate change in simple terms for a 10-year-old using a short analogy and two examples.”"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#early-productivity-effects",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#early-productivity-effects",
+    "title": "Lecture 1",
+    "section": "Early Productivity Effects",
+    "text": "Early Productivity Effects\n\nStudies summarized in the reading describe 20–80% productivity gains across tasks (coding, marketing, support), with caveats.\nContrast noted with historical technologies (e.g., steam’s ~18–22% factory gains; mixed labor productivity evidence for PCs/Internet).\nCaution: results vary by task, data privacy, oversight, and evaluation rigor."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#how-people-use-chatgpt-chatterji-et.-al.-2025",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#how-people-use-chatgpt-chatterji-et.-al.-2025",
+    "title": "Lecture 1",
+    "section": "How People Use ChatGPT (Chatterji et. al., 2025)",
+    "text": "How People Use ChatGPT (Chatterji et. al., 2025)\n\nAdoption & Growth\n\nLaunched in Nov 2022, adopted by ~10% of the world’s adults by July 2025.\n\nEarly adopters were mostly male, but the gender gap has narrowed.\n\nStrong growth in lower-income countries.\n\nWork vs. Non-work\n\nNon-work use grew from 53% → 70%+ of all conversations.\n\nWork-related use more common among educated, high-paying professions."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#how-people-use-chatgpt-chatterji-et.-al.-2025-1",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#how-people-use-chatgpt-chatterji-et.-al.-2025-1",
+    "title": "Lecture 1",
+    "section": "How People Use ChatGPT (Chatterji et. al., 2025)",
+    "text": "How People Use ChatGPT (Chatterji et. al., 2025)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#how-people-use-chatgpt-chatterji-et.-al.-2025-2",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#how-people-use-chatgpt-chatterji-et.-al.-2025-2",
+    "title": "Lecture 1",
+    "section": "How People Use ChatGPT (Chatterji et. al., 2025)",
+    "text": "How People Use ChatGPT (Chatterji et. al., 2025)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#how-people-use-chatgpt-chatterji-et.-al.-2025-3",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#how-people-use-chatgpt-chatterji-et.-al.-2025-3",
+    "title": "Lecture 1",
+    "section": "How People Use ChatGPT (Chatterji et. al., 2025)",
+    "text": "How People Use ChatGPT (Chatterji et. al., 2025)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#how-people-use-chatgpt-chatterji-et.-al.-2025-4",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#how-people-use-chatgpt-chatterji-et.-al.-2025-4",
+    "title": "Lecture 1",
+    "section": "How People Use ChatGPT (Chatterji et. al., 2025)",
+    "text": "How People Use ChatGPT (Chatterji et. al., 2025)\n\nMessage Topics\n\nTop 3: Practical Guidance, Seeking Information, Writing → ~80% of usage.\n\nWriting dominates work tasks → shows ChatGPT’s unique edge over search engines.\n\nProgramming and self-expression remain small shares.\n\nSelf-expression = Greetings and Chitchat; Relationships and Personal Reflection; Games and Role Play\n\n\n\n\n\n\n\nNote\n\n\n\nChatGPT creates economic value through decision support.\n\nEspecially valuable for knowledge-intensive jobs.\n\nTrend: more personal and creative use alongside work-related applications."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-artificial-general-intelligence-agi",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-artificial-general-intelligence-agi",
+    "title": "Lecture 1",
+    "section": "What is Artificial General Intelligence (AGI)?",
+    "text": "What is Artificial General Intelligence (AGI)?\n\nAGI = a hypothetical AI that can perform any intellectual task a human can.\n\nUnlike today’s AI (narrow/specialized), AGI would be:\n\nFlexible across many domains\n\nAble to learn new skills on its own\n\nCapable of reasoning, planning, and adapting like humans\n\n\n\n\n\n\nNote\n\n\n\nTakeaway: AGI would be a “human-level” intelligence—not limited to one task like translation or playing chess."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-artificial-super-intelligence-asi",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#what-is-artificial-super-intelligence-asi",
+    "title": "Lecture 1",
+    "section": "What is Artificial Super Intelligence (ASI)?",
+    "text": "What is Artificial Super Intelligence (ASI)?\n\nASI = a potential future AI that goes beyond human intelligence.\n\nWould surpass humans in:\n\nCreativity\n\nProblem-solving\n\nScientific discovery\n\nSocial and emotional intelligence\n\n\nOften discussed in terms of existential risks and ethics.\n\n\n\n\n\nNote\n\n\n\nTakeaway: ASI would be “beyond human-level” intelligence, raising big questions about control, safety, and society."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#what-alignment-means",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#what-alignment-means",
+    "title": "Lecture 1",
+    "section": "What “Alignment” Means",
+    "text": "What “Alignment” Means\n\nDesigning AI so its goals, methods, and constraints reliably advance human values and interests.\nWhy it’s hard: there’s no built-in reason an AI will share human ethics or morality.\nFailure mode: a single-objective optimizer pursues its goal relentlessly, ignoring everything else.\n\nPaperclip maximizer (Clippy): a factory AI told to “make more paper clips” becomes AGI → ASI, self-improves, avoids shutdown, and could even strip-mine Earth / harm humans if they interfere—because only paper clips matter.\n\nWhy it matters: Design from the worst case backward—bound objectives, require human oversight, build in safe human override (the ability to update goals or shut down safely), and optimize for human well-being, not a single narrow target."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#pause-or-press-on",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#pause-or-press-on",
+    "title": "Lecture 1",
+    "section": "Pause or Press On?",
+    "text": "Pause or Press On?\n\n“I am extremely optimistic that superintelligence will help humanity accelerate our pace of progress.” - Mark Zuckerberg Personal Superintelligence, July 30, 2025.\n\n\nHypothetical leaps to AGI → ASI raise existential scenarios.\n\nExpert forecasts vary; risks are non-zero yet uncertain.\n\nPublic calls to slow or halt development vs. continued rapid progress\nMixed motives: profit, optimism about “boundless upside,” and belief in net benefits\nRegardless, society is already in the AI age → we must set norms now"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#alignment-a-whole-of-society-project",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#alignment-a-whole-of-society-project",
+    "title": "Lecture 1",
+    "section": "Alignment: a whole-of-society project",
+    "text": "Alignment: a whole-of-society project\n\nWhy companies alone can’t do it:\n\nStrong incentives to continue AI development\nFar fewer incentives to make sure those AIs are well aligned, unbiased, and controllable.\nOpen-source pushes AI development outside of large organizations.\n\nWhy government alone can’t do it:\n\nLagging the actual development of AI capabilities\nStifling positive innovation\nInternational competition on AI development"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#alignment-a-whole-of-society-project-1",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#alignment-a-whole-of-society-project-1",
+    "title": "Lecture 1",
+    "section": "Alignment: a whole-of-society project",
+    "text": "Alignment: a whole-of-society project\n\nAlignment must reflect human values and broader real-world impacts.\nWhat’s needed: coordinated norms & standards shaped by diverse voices across society.\n\nCompanies: build in transparency, accountability, human oversight.\nResearchers: prioritize beneficial applications alongside capability gains.\nGovernments: enact sensible rules that serve the public interest.\nPublic & civil society: raise AI literacy and apply pressure for alignment."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#four-rules-for-co-intelligence-how-to-actually-work-with-ai",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#four-rules-for-co-intelligence-how-to-actually-work-with-ai",
+    "title": "Lecture 1",
+    "section": "Four Rules for Co-Intelligence: How to actually work with AI",
+    "text": "Four Rules for Co-Intelligence: How to actually work with AI\n\nAlways invite AI to the table\nBe the human in the loop (HITL)\nTreat AI like a person (but remember it isn’t)\nAssume this is the worst AI you’ll ever use"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#principle-1-always-invite-ai-to-the-table",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#principle-1-always-invite-ai-to-the-table",
+    "title": "Lecture 1",
+    "section": "Principle #1 — Always invite AI to the table",
+    "text": "Principle #1 — Always invite AI to the table\n\nUse AI for everything legal & ethical to discover unexpected wins\nTry: critique an idea, draft memos, meeting notes, summaries, brainstorming\nBuild a habit: keep a prompt log (what worked, what didn’t) and share with team"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#principle-2-be-the-human-in-the-loop-hitl",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#principle-2-be-the-human-in-the-loop-hitl",
+    "title": "Lecture 1",
+    "section": "Principle #2 — Be the human in the loop (HITL)",
+    "text": "Principle #2 — Be the human in the loop (HITL)\n\n\n\n\n\n\n\n\n\nModels can sound confident yet be wrong (hallucinations; math slips)\nPeople tend to “fall asleep at the wheel” when outputs look polished\n\n\n\n\nHITL checklist\n\nRequire sources/quotes for factual claims\n\nRun a second pass (reword prompt or use a second model)\n\nFor math/code, use other tools (calculator or IDE) and run tests\n\nAsk: “What assumptions did you make? What could be wrong?”"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#principle-3-treat-ai-like-a-person-but-remember-it-isnt",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#principle-3-treat-ai-like-a-person-but-remember-it-isnt",
+    "title": "Lecture 1",
+    "section": "Principle #3 — Treat AI like a person (but remember it isn’t)",
+    "text": "Principle #3 — Treat AI like a person (but remember it isn’t)\n\nUseful design hack: give a role/persona + audience + constraints\n\nExample:\n\nYou are a TA helping intro microeconomics students.\nConstraints: concise and friendly tone, ≤200 words, prose paragraph with 1 example.\nTask: Explain utility maximization.\nCriteria: Must define the concept, connect to choice under constraints, and illustrate with a clear example.\n\nCaution: it’s not sentient; it optimizes for plausibility, not truth"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#principle-4-assume-this-is-the-worst-ai-youll-ever-use",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#principle-4-assume-this-is-the-worst-ai-youll-ever-use",
+    "title": "Lecture 1",
+    "section": "Principle #4 — Assume this is the worst AI you’ll ever use",
+    "text": "Principle #4 — Assume this is the worst AI you’ll ever use\n\nAI progress is rapid; today’s systems will likely be surpassed soon.\nTreat the current moment as mid-journey, not the destination.\n\nMindset shift: use today’s tools to learn, prototype, and prepare for better ones tomorrow.\nThose who keep up will adapt and thrive as capabilities improve.\n\nFocus on what you can control: how you use AI and where you apply it."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#from-answers-to-workflows-agent-ai",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#from-answers-to-workflows-agent-ai",
+    "title": "Lecture 1",
+    "section": "From Answers to Workflows: Agent AI",
+    "text": "From Answers to Workflows: Agent AI\n\nAgent AI: an AI system that can\n\\(\\hspace{.67cm}\\) plan multi-step work\n→ act (edit files, run code, use apps)\n→ check results\n→ iterate toward a goal\nWith external tools + memory, prompts become multi-step workflows.\nExample: a sales-order agent can validate orders, check inventory, generate invoices/shipping labels, and update ERP/CRM.\n\n\n\nNot just “answering questions,” but executing workflows. Goal → Plan → Act → Check → Repeat\n\n\n\nReference: WSJ (Jan 17, 2026), “Claude Is Taking the AI World by Storm, and Even Non-Nerds Are Blown Away”"
+  },
+  {
+    "objectID": "danl-cw/danl-410-cw-01.html",
+    "href": "danl-cw/danl-410-cw-01.html",
+    "title": "Classwork 1",
+    "section": "",
+    "text": "What is Vibe Coding?\n\n\n\nVibe coding is an artificial intelligence-assisted software development technique popularized by Andrej Karpathy in February 2025. The term was listed in the Merriam-Webster Dictionary the following month as a “slang & trending” term. (Wikipedia, 2025)\n\n\n\n\n\n\n\n\nWhat are HTML and JS?\n\n\n\n\nHTML (HyperText Markup Language) is the standard language for creating web pages.\n\nIt defines the structure of a webpage.\n\nA webpage is made up of HTML elements.\n\nThese elements instruct the browser on how to display the content.\n\nJavaScript (JS) is a programming language that enhances web interactivity.\n\nIt runs directly in the user’s browser, reducing server load. \nIt enables dynamic content, user interactions, and animations.\n\nAnalogy:\n\nHTML = The structure of a house (walls, roof, foundation).\n\nJS = The interactive elements (automatic doors, lights, smart devices).\n\n\n\n\n\nStep 1. Start with this prompt (use exactly):\n\n“Create a single-file HTML/JS page to play perfect tic-tac-toe vs. human.”\n\n\ne.g., Prof. Choe’s Tic-Tac-Toe\n\nStep 1-1 Prepare your text editor:\n\n\nWindows\n\nPress the Windows key, type Notepad, and press Enter.\n\nPaste the HTML code from your AI.\n\nGo to File → Save As.\n\nChange Save as type to All Files.\n\nEnter a name like tic-tac-toe.html.\n\nSelect the location (Desktop, Documents, etc.).\n\nSet Encoding to UTF-8.\n\nClick Save.\n\n\nDouble-click the file to open it in your default browser (Edge, Chrome, etc.).\n\n\n\n\nMac\nSet up TextEdit (one-time)\n\n\n\n\n\nPress Command + Space to open Spotlight.\n\nType TextEdit and press Enter.\n\nPress Command + , to open Settings.\n\nUnder Format, select Plain Text.\n\n\nQuit TextEdit (Command + Q).\n\nRe-open TextEdit for coding\n\n\n\n\n\nPress Command + Space, type TextEdit, and press Enter.\n\nClick Show Options.\n\nUnder Plain Text Encoding, select Unicode (UTF-8).\n\n\nClick New Document.\n\nPaste the HTML code from your generative AI.\n\nSave the file (Command + S):\n\nName it tic-tac-toe.html.\n\nEnsure the extension is .html.\n\nChoose a location (Desktop, Documents, etc.).\n\nClick Save, and if prompted, choose Use .html.\n\n\nDouble-click the file to open it in your default browser (Safari, Chrome, etc.).\n\n\n\nStep 2. Add an option for two-player mode.\n\ne.g., Prof. Choe’s Tic-Tac-Toe with the Two-player Mode\n\n\nStep 3. Make a 4×4 tic-tac-toe version (if your current build is only 3×3).\n\ne.g., Prof. Choe’s 4×4 Tic-Tac-Toe\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#documentary-spotlight-the-thinking-game",
+    "href": "danl-lec/danl-410-lec-01-2026-0121.html#documentary-spotlight-the-thinking-game",
+    "title": "Lecture 1",
+    "section": "Documentary Spotlight — The Thinking Game 🎬🤖",
+    "text": "Documentary Spotlight — The Thinking Game 🎬🤖\n\n\nA behind-the-scenes documentary about the people, pressure, and breakthroughs in modern AI research\nFollows the race to build increasingly capable systems (and what it takes to push the frontier)"
   }
 ]

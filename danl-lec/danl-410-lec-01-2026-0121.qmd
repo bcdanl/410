@@ -210,3 +210,274 @@ DANL 300 **and** DANL 310
 ## Accessibility
 
 SUNY Geneseo is committed to equitable access. If you have approved accommodations, please coordinate through OAS and communicate with me early.
+
+
+# **Co-Intelligence: Living and Working with AI** {background-color="#1c4982"}
+
+
+##  The "Three Sleepless Nights"
+
+
+::::{.columns}
+::: {.column width="50%"}
+
+<div style="text-align: center; width: 100%; margin: auto;">
+  <img src="https://bcdanl.github.io/lec_figs/ethan-mollick-book.png" style="width: 100%; margin-bottom: -20px;">
+  <p style="font-weight: bold;"></p>
+</div>
+
+:::
+
+::: {.column width="50%"}
+- After hands‑on use, many realize **LLMs don’t behave like normal software**; they feel conversational, improvisational, even *social*.
+- This triggers excitement and anxiety: *What will my job be like?* *What careers remain?* *Is the model “thinking”?*
+
+:::
+::::
+
+
+- The author describes staying up late **trying “impossible” prompts**—and seeing plausible solutions.
+- Key takeaway: **Perceived capability jump** → a sense that **the world has changed**.
+
+
+##  A Classroom Turning Point
+
+
+- In late 2022, a demo for undergrads showed AI as **cofounder**: brainstorming ideas, drafting business plans, even playful transforms (e.g., poetry).
+- Students rapidly **built working demos** using unfamiliar libraries—with AI guidance—**faster** than before.
+- Immediate classroom effects:
+  - Fewer raised hands (ask AI later); **polished grammar** but **iffy citations**.
+  - Early ChatGPT “tells”: formulaic conclusions (e.g., *“In conclusion,”* now improved).
+- Atmosphere: **Excitement + nerves** about career paths, speed of change, and where it stops.
+
+##  Why This Feels Like a Breakthrough
+
+
+- **Generative AI** (esp. LLMs) behaves like a **co‑intelligence**: it helps us *think, write, plan, and code*.
+- The shift is not just speed; it’s **new forms of interaction** (dialogue, iteration, critique).
+- For many tasks, **the bottleneck moves from doing → directing** (prompting, reviewing, verifying).
+- Raises **new literacy** needs: prompt craft/engineering, critical reading of outputs, traceability, and evaluation.
+
+
+## Prompt Engineering
+
+The practice of designing clear, structured inputs to guide generative AI systems toward producing accurate, useful, and context-appropriate outputs.  
+
+:::: {.columns}
+::: {.column width="50%"}
+#### **Basic prompt**  
+
+*"Explain climate change."*  
+:::
+
+
+::: {.column width="50%"}
+#### **Engineered prompt**  
+
+*"Explain climate change in simple terms for a 10-year-old using a short analogy and two examples."*  
+:::
+::::
+
+##  Early Productivity Effects
+
+
+- Studies summarized in the reading describe **20–80% productivity gains** across tasks (coding, marketing, support), **with caveats**.
+- Contrast noted with historical technologies (e.g., steam’s ~18–22% factory gains; mixed labor productivity evidence for PCs/Internet).
+- Caution: results **vary by task, data privacy, oversight, and evaluation rigor**.
+
+
+
+## What is Artificial General Intelligence (AGI)?
+
+- **AGI** = a hypothetical AI that can perform **any intellectual task** a human can.  
+- Unlike today’s AI (narrow/specialized), AGI would be:  
+  - Flexible across many domains  
+  - Able to learn new skills on its own  
+  - Capable of reasoning, planning, and adapting like humans  
+
+:::: {.fragment}
+::: callout-note
+- **Takeaway:** AGI would be a **“human-level” intelligence**—not limited to one task like translation or playing chess.
+:::
+::::
+
+
+## What is Artificial Super Intelligence (ASI)?
+
+- **ASI** = a potential future AI that goes **beyond human intelligence**.  
+- Would surpass humans in:  
+  - Creativity  
+  - Problem-solving  
+  - Scientific discovery  
+  - Social and emotional intelligence  
+- Often discussed in terms of **existential risks** and ethics.  
+
+:::: {.fragment}
+::: callout-note
+- **Takeaway:** ASI would be **“beyond human-level” intelligence**, raising big questions about control, safety, and society.
+:::
+::::
+
+## Documentary Spotlight — *The Thinking Game* 🎬🤖
+
+:::{.nonincremental}
+- A behind-the-scenes documentary about the people, pressure, and breakthroughs in modern **AI research**
+- Follows the race to build increasingly capable systems (and what it takes to push the frontier)
+
+:::
+
+<div style="text-align:center;">
+  {{< video https://youtu.be/J5XFYMsczy8?si=hS8QdgGVX2FaLTk- width="600" height="400" >}}
+</div>
+
+
+
+
+## What “Alignment” Means
+
+- Designing AI so its **goals, methods, and constraints** reliably advance **human values and interests**.
+- **Why it’s hard:** there’s no built-in reason an AI will share **human ethics or morality**.
+- **Failure mode:** a single-objective optimizer pursues its goal **relentlessly**, ignoring everything else.
+  - **Paperclip maximizer (Clippy):** a factory AI told to “make more paper clips” becomes **AGI → ASI**, self-improves, avoids shutdown, and could even **strip-mine Earth / harm humans** if they interfere—because only paper clips matter.
+- **Why it matters:** Design from the worst case backward—**bound objectives**, require **human oversight**, build in **safe human override** (the ability to update goals or shut down safely), and optimize for **human well-being**, not a single narrow target.
+
+
+
+<!-- ## From AGI worries to near-term stakes -->
+
+<!-- - Hypothetical leaps to **AGI → ASI** raise existential scenarios -->
+<!-- - Expert forecasts vary; risks are non-zero yet uncertain -->
+<!-- - Book’s stance: focus on **immediate decisions** we control—education, work, civic use—rather than waiting for perfect clarity -->
+
+
+
+## Pause or Press On?
+> "I am extremely optimistic that superintelligence will help humanity accelerate our pace of progress."
+  - Mark Zuckerberg [Personal Superintelligence](https://www.meta.com/superintelligence/?srsltid=AfmBOop_S1adKIrzhCWv9j0OMl13uYJ4WhDFwVUHyeaTCqWv_3ACRrXZ), July 30, 2025.
+
+- Hypothetical leaps to **AGI → ASI** raise existential scenarios.
+  - Expert forecasts vary; risks are non-zero yet uncertain.
+- Public calls to **slow or halt** development vs. continued rapid progress
+- **Mixed motives**: profit, optimism about “**boundless upside**,” and belief in net benefits
+  
+- Regardless, **society is already in the AI age** → we must set norms now
+
+
+
+## Alignment: a whole-of-society project
+
+- **Why companies alone can’t do it:** 
+  - Strong incentives to continue AI development 
+  - Far fewer incentives to make sure those AIs are well aligned, unbiased, and controllable.
+  - Open-source pushes AI development outside of large organizations.
+
+- **Why government alone can’t do it:** 
+  - Lagging the actual development of AI capabilities
+  - Stifling positive innovation
+  - International competition on AI development
+
+## Alignment: a whole-of-society project
+- Alignment must reflect **human values** and broader real-world impacts.
+
+- **What’s needed:** coordinated **norms & standards** shaped by **diverse voices** across society.
+  - **Companies:** build in **transparency, accountability, human oversight**.
+  - **Researchers:** prioritize **beneficial applications** alongside capability gains.
+  - **Governments:** enact **sensible rules** that serve the **public interest**.
+  - **Public & civil society:** raise **AI literacy** and apply pressure for alignment.
+  
+  
+
+
+## Four Rules for Co-Intelligence: How to actually work with AI
+
+1. Always invite AI to the table
+2. Be the human in the loop (HITL)
+3. Treat AI like a person (but remember it isn’t)
+4. Assume this is the worst AI you’ll ever use
+
+
+## Principle #1 — Always invite AI to the table
+
+- Use AI for **everything legal & ethical** to discover unexpected wins
+- **Try**: critique an idea, draft memos, meeting notes, summaries, brainstorming
+- Build a habit: keep a **prompt log** (what worked, what didn’t) and share with team
+
+<!-- **Quick activity** -->
+<!-- Pick a task this week. Ask AI for 3 alternatives + a 2-line rationale for each. Keep the best. -->
+
+
+
+## Principle #2 — Be the human in the loop (HITL)
+
+::::{.columns}
+::: {.column width="40%"}
+
+<div style="text-align: center; width: 100%; margin: auto;">
+  <img src="https://bcdanl.github.io/lec_figs/fall-asleep-at-the-wheel.png" style="width: 100%; margin-bottom: -20px;">
+  <p style="font-weight: bold;"></p>
+</div>
+
+:::
+
+::: {.column width="60%"}
+- Models can sound confident yet be **wrong** (hallucinations; math slips)
+- People tend to **“fall asleep at the wheel”** when outputs look polished
+
+
+:::
+::::
+
+- **HITL checklist**  
+  - Require sources/quotes for factual claims  
+  - Run a **second pass** (reword prompt or use a second model)  
+  - For math/code, use other tools (calculator or IDE) and run **tests**  
+  - Ask: “What assumptions did you make? What could be wrong?”
+  
+  
+## Principle #3 — Treat AI like a person (but remember it isn’t)
+
+- **Useful design hack:** give a **role/persona + audience + constraints**  
+- Example: 
+  - You are a TA helping intro microeconomics students.
+  - Constraints: concise and friendly tone, ≤200 words, prose paragraph with 1 example.
+  - Task: Explain utility maximization.
+  - Criteria: Must define the concept, connect to choice under constraints, and illustrate with a clear example.
+
+- **Caution:** it’s not sentient; it optimizes for **plausibility**, not truth
+
+<!-- **Prompt pattern (copy/paste):**   -->
+
+<!-- > You are a [role] helping [audience]. Constraints: [tone, length, format]. Task: [deliverable]. Criteria: [rubric]. First list assumptions; then produce the draft; end with 3 self-checks. -->
+
+
+
+## Principle #4 — Assume this is the worst AI you’ll ever use
+
+
+- AI progress is **rapid**; today’s systems will likely be **surpassed** soon.
+- Treat the current moment as **mid-journey**, not the destination.  
+- **Mindset shift**: use today’s tools to **learn**, **prototype**, and **prepare** for better ones tomorrow.
+- Those who **keep up** will adapt and **thrive** as capabilities improve.  
+- Focus on what you **can control**: *how* you use AI and *where* you apply it.
+
+
+
+## From Answers to Workflows: Agent AI
+
+- **Agent AI:** an AI system that can  
+  $\hspace{.67cm}$ **plan** multi-step work  
+  → **act** (edit files, run code, use apps)  
+  → **check results**  
+  → **iterate** toward a goal
+- With external tools + memory, prompts become **multi-step workflows**.
+- Example: a **sales-order agent** can validate orders, check inventory, generate invoices/shipping labels, and update ERP/CRM.
+
+<div class="fragment" style="font-size:1.75rem; text-align:center; margin-top:1.5rem;">
+  <blockquote>
+    Not just “answering questions,”<br>
+    but **executing workflows**.<br>
+    **Goal** → **Plan** → **Act** → **Check** → **Repeat**
+  </blockquote>
+</div>
+
+- Reference: WSJ (Jan 17, 2026), ["Claude Is Taking the AI World by Storm, and Even Non-Nerds Are Blown Away"](../doc/wsj-2026-0117-claude-code.pdf)

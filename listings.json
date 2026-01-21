@@ -1,7 +1,9 @@
 [
   {
     "listing": "/listing-danl-410-cw.html",
-    "items": []
+    "items": [
+      "/danl-cw/danl-410-cw-01.html"
+    ]
   },
   {
     "listing": "/listing-danl-410-hw.html",
@@ -28,7 +30,8 @@
   {
     "listing": "/index.html",
     "items": [
-      "/danl-lec/danl-410-lec-01-2026-0121.html"
+      "/danl-lec/danl-410-lec-01-2026-0121.html",
+      "/danl-cw/danl-410-cw-01.html"
     ]
   }
 ]

@@ -100,9 +100,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-subtitle','listing-date',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-subtitle','listing-date',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -346,7 +346,7 @@ Date
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-listing-date-sort="1768971600000" data-listing-file-modified-sort="1768864506170" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="6" data-listing-title-sort="Lecture 1" data-listing-filename-sort="danl-410-lec-01-2026-0121.qmd">
+<tr data-index="0" data-listing-date-sort="1768971600000" data-listing-file-modified-sort="1769018995267" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="13" data-listing-title-sort="Lecture 1" data-listing-filename-sort="danl-410-lec-01-2026-0121.qmd">
 <td>
 <a href="#" onclick="window.open('./danl-lec/danl-410-lec-01-2026-0121.html'); return false;"" class="title listing-title">Lecture 1</a>
 </td>
@@ -384,6 +384,17 @@ Date
 </tr>
 </thead>
 <tbody class="list">
+<tr data-index="0" data-listing-date-sort="1768971600000" data-listing-file-modified-sort="1769017860910" data-listing-date-modified-sort="1769017860000" data-listing-reading-time-sort="3" data-listing-title-sort="Classwork 1" data-listing-filename-sort="danl-410-cw-01.qmd">
+<td>
+<a href="./danl-cw/danl-410-cw-01.html" class="title listing-title">Classwork 1</a>
+</td>
+<td>
+<span class="listing-subtitle">Vibe Coding</span>
+</td>
+<td>
+<span class="listing-date">January 21, 2026</span>
+</td>
+</tr>
 </tbody>
 
 </table>

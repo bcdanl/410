@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unbeatable Tic‑Tac‑Toe + Two‑Player</title>
+  <style>
+    :root { --bg:#0b1020; --panel:#121a33; --text:#e6ebff; --muted:#b5c0ff99; --accent:#7dd3fc; }
+    html,body{height:100%}
+    body{margin:0;display:grid;place-items:center;background:radial-gradient(1200px 800px at 10% -10%, #1a244d, #0b1020) fixed;color:var(--text);font:16px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    .app{width:min(92vw,880px);padding:20px clamp(16px,2vw,28px);background:#121a33;border:1px solid #ffffff14;border-radius:18px;box-shadow:0 20px 60px #0008,inset 0 1px 0 #fff1}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+    h1{margin:0;font-size:clamp(18px,3.6vw,28px)}
+    .controls{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center}
+    .controls label{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted)}
+    select,button{font:inherit;color:var(--text);background:#1b2548;border:1px solid #ffffff2a;border-radius:10px;padding:8px 12px;cursor:pointer}
+    select:focus,button:focus{outline:2px solid #7dd3fc66;outline-offset:2px}
+    button.primary{background:linear-gradient(180deg,#334679,#263864);border-color:#7dd3fc55}
+    .status{min-height:1.4em;margin:10px 0 12px;color:var(--accent);font-weight:700}
+    .board{--cell:min(20vmin,120px);display:grid;grid-template-columns:repeat(3,var(--cell));grid-template-rows:repeat(3,var(--cell));gap:10px;justify-content:center;margin:8px auto}
+    .cell{display:grid;place-items:center;border:1px solid #ffffff25;background:#0e1634;border-radius:16px;font-size:calc(var(--cell)*0.5);font-weight:800;letter-spacing:1px;text-shadow:0 2px 10px #0008;cursor:pointer;touch-action:manipulation}
+    .cell[disabled]{opacity:.9;cursor:not-allowed}
+    .cell.win{box-shadow:inset 0 0 0 2px #10b98199}
+    .cell.lose{box-shadow:inset 0 0 0 2px #ef444499}
+    .scores{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px;font-size:14px;color:var(--muted)}
+    .scores .card{background:#0f1840;border:1px solid #ffffff1f;border-radius:12px;padding:10px 12px;text-align:center}
+    .score{font-size:20px;font-weight:800;color:var(--text)}
+    @media(max-width:500px){.scores{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="app" role="application" aria-label="Tic‑Tac‑Toe game">
+    <header>
+      <h1>Tic‑Tac‑Toe — Unbeatable & Local Two‑Player</h1>
+      <div class="controls">
+        <label>Mode
+          <select id="mode" aria-label="Game mode">
+            <option value="cpu" selected>vs Computer</option>
+            <option value="pvp">Two Players</option>
+          </select>
+        </label>
+        <label id="youPlayLabel"> You play as
+          <select id="humanMark" aria-label="Choose your mark">
+            <option value="X" selected>X</option>
+            <option value="O">O</option>
+          </select>
+        </label>
+        <label id="firstMoveLabel"> First move
+          <select id="firstMove" aria-label="Who goes first">
+            <option value="human" selected>You</option>
+            <option value="ai">Computer</option>
+          </select>
+        </label>
+        <button id="newGame" class="primary" aria-label="Start new game">New Game</button>
+        <button id="resetScores" aria-label="Reset scores">Reset Scores</button>
+      </div>
+    </header>
+
+    <div id="status" class="status" role="status" aria-live="polite">Your move.</div>
+
+    <div id="board" class="board" role="grid" aria-label="Tic‑Tac‑Toe board">
+      <button type="button" class="cell" data-i="0" aria-label="Cell 1"></button>
+      <button type="button" class="cell" data-i="1" aria-label="Cell 2"></button>
+      <button type="button" class="cell" data-i="2" aria-label="Cell 3"></button>
+      <button type="button" class="cell" data-i="3" aria-label="Cell 4"></button>
+      <button type="button" class="cell" data-i="4" aria-label="Cell 5"></button>
+      <button type="button" class="cell" data-i="5" aria-label="Cell 6"></button>
+      <button type="button" class="cell" data-i="6" aria-label="Cell 7"></button>
+      <button type="button" class="cell" data-i="7" aria-label="Cell 8"></button>
+      <button type="button" class="cell" data-i="8" aria-label="Cell 9"></button>
+    </div>
+
+    <div class="scores" aria-label="Scoreboard">
+      <div class="card"><div id="labelP1">You (X)</div><div class="score" id="scoreP1">0</div></div>
+      <div class="card"><div id="labelP2">Computer (O)</div><div class="score" id="scoreP2">0</div></div>
+      <div class="card"><div>Draws</div><div class="score" id="scoreDraw">0</div></div>
+    </div>
+  </div>
+
+  <script>
+  // Wrapped to ensure DOM is ready
+  (function(){
+    'use strict';
+
+    const combos = [ [0,1,2],[3,4,5],[6,7,8], [0,3,6],[1,4,7],[2,5,8], [0,4,8],[2,4,6] ];
+
+    const els = {
+      board: document.getElementById('board'),
+      cells: Array.from(document.querySelectorAll('.cell')),
+      status: document.getElementById('status'),
+      mode: document.getElementById('mode'),
+      humanMark: document.getElementById('humanMark'),
+      firstMove: document.getElementById('firstMove'),
+      youPlayLabel: document.getElementById('youPlayLabel'),
+      firstMoveLabel: document.getElementById('firstMoveLabel'),
+      newGame: document.getElementById('newGame'),
+      resetScores: document.getElementById('resetScores'),
+      labelP1: document.getElementById('labelP1'),
+      labelP2: document.getElementById('labelP2'),
+      scoreP1: document.getElementById('scoreP1'),
+      scoreP2: document.getElementById('scoreP2'),
+      scoreDraw: document.getElementById('scoreDraw'),
+    };
+
+    const state = {
+      board: Array(9).fill(null),
+      mode: 'cpu', // 'cpu' or 'pvp'
+      human: 'X',
+      ai: 'O',
+      humanStarts: true,
+      currentPlayer: 'X', // used in pvp
+      gameOver: false,
+      scores: { p1: 0, p2: 0, draw: 0 },
+      memo: new Map(),
+    };
+
+    function switchP(p){ return p === 'X' ? 'O' : 'X'; }
+
+    function updateLabels(){
+      if (state.mode === 'cpu') {
+        els.labelP1.textContent = `You (${state.human})`;
+        els.labelP2.textContent = `Computer (${state.ai})`;
+      } else {
+        els.labelP1.textContent = 'Player X';
+        els.labelP2.textContent = 'Player O';
+      }
+      els.scoreP1.textContent = state.scores.p1;
+      els.scoreP2.textContent = state.scores.p2;
+      els.scoreDraw.textContent = state.scores.draw;
+
+      // toggle CPU-only controls
+      const cpuControls = state.mode === 'cpu';
+      els.humanMark.disabled = !cpuControls; els.humanMark.parentElement.style.opacity = cpuControls?1:.45;
+      els.firstMove.disabled = !cpuControls; els.firstMove.parentElement.style.opacity = cpuControls?1:.45;
+    }
+
+    function updateStatus(msg){ els.status.textContent = msg; }
+
+    function availableMoves(b){ const m=[]; for(let i=0;i<9;i++) if(!b[i]) m.push(i); return m; }
+
+    function getResult(b){
+      for(const [a,c,d] of combos){ if(b[a] && b[a]===b[c] && b[a]===b[d]) return { winner:b[a], line:[a,c,d] }; }
+      if(!b.includes(null)) return { winner:'draw', line:null };
+      return null;
+    }
+
+    function place(i, mark){ state.board[i] = mark; const btn = els.cells[i]; btn.textContent = mark; btn.disabled = true; }
+
+    function clearBoardVisual(){ els.cells.forEach(c=>{ c.textContent=''; c.disabled=false; c.classList.remove('win','lose'); }); }
+
+    function resetBoard(){
+      state.board = Array(9).fill(null);
+      state.gameOver = false;
+      state.memo.clear();
+      clearBoardVisual();
+      updateLabels();
+      if (state.mode === 'cpu'){
+        updateStatus(state.humanStarts ? 'Your move.' : 'Computer is thinking…');
+        if(!state.humanStarts) setTimeout(aiTurn, 250);
+      } else {
+        state.currentPlayer = 'X';
+        updateStatus('Player X to move.');
+      }
+    }
+
+    function endGame(result){
+      state.gameOver = true;
+      els.cells.forEach(c=>c.disabled=true);
+      if(result.winner==='draw'){ state.scores.draw++; updateStatus("It's a draw."); }
+      else if (state.mode==='cpu'){
+        if(result.winner===state.human){ state.scores.p1++; updateStatus('You win!'); if(result.line) result.line.forEach(i=>els.cells[i].classList.add('win')); }
+        else { state.scores.p2++; updateStatus('Computer wins.'); if(result.line) result.line.forEach(i=>els.cells[i].classList.add('lose')); }
+      } else {
+        if(result.winner==='X'){ state.scores.p1++; updateStatus('Player X wins!'); if(result.line) result.line.forEach(i=>els.cells[i].classList.add('win')); }
+        else { state.scores.p2++; updateStatus('Player O wins!'); if(result.line) result.line.forEach(i=>els.cells[i].classList.add('lose')); }
+      }
+      updateLabels();
+    }
+
+    function humanTurn(i){
+      if (state.gameOver || state.board[i]) return;
+      if (state.mode==='cpu'){
+        place(i, state.human);
+        const res = getResult(state.board); if(res) return endGame(res);
+        updateStatus('Computer is thinking…');
+        setTimeout(aiTurn, 120);
+      } else {
+        place(i, state.currentPlayer);
+        const res = getResult(state.board); if(res) return endGame(res);
+        state.currentPlayer = switchP(state.currentPlayer);
+        updateStatus(`Player ${state.currentPlayer} to move.`);
+      }
+    }
+
+    // Minimax with alpha-beta and memoization
+    function key(b, player){ return b.map(v=>v||'-').join('') + '|' + player; }
+
+    function bestMove(board, player){
+      let bestScore = -Infinity, picks=[];
+      for(const i of availableMoves(board)){
+        board[i] = player;
+        const s = minimax(board, switchP(player), 1, -Infinity, Infinity);
+        board[i] = null;
+        if (s>bestScore){ bestScore=s; picks=[i]; }
+        else if (s===bestScore){ picks.push(i); }
+      }
+      const pref=[4,0,2,6,8,1,3,5,7];
+      picks.sort((a,b)=>pref.indexOf(a)-pref.indexOf(b));
+      return picks[0];
+    }
+
+    function minimax(board, player, depth, alpha, beta){
+      const r = getResult(board);
+      if (r){ if(r.winner==='draw') return 0; if(r.winner===state.ai) return 10-depth; return depth-10; }
+      const k = key(board, player); if(state.memo.has(k)) return state.memo.get(k);
+      if (player===state.ai){
+        let maxEval=-Infinity;
+        for(const i of availableMoves(board)){
+          board[i]=state.ai; const val=minimax(board, state.human, depth+1, alpha, beta); board[i]=null;
+          if(val>maxEval) maxEval=val; if(val>alpha) alpha=val; if(beta<=alpha) break;
+        }
+        state.memo.set(k,maxEval); return maxEval;
+      } else {
+        let minEval=Infinity;
+        for(const i of availableMoves(board)){
+          board[i]=state.human; const val=minimax(board, state.ai, depth+1, alpha, beta); board[i]=null;
+          if(val<minEval) minEval=val; if(val<beta) beta=val; if(beta<=alpha) break;
+        }
+        state.memo.set(k,minEval); return minEval;
+      }
+    }
+
+    function aiTurn(){
+      if (state.gameOver) return;
+      const i = bestMove(state.board, state.ai);
+      place(i, state.ai);
+      const res = getResult(state.board); if(res) return endGame(res);
+      updateStatus('Your move.');
+    }
+
+    // Wire events
+    els.cells.forEach(btn => btn.addEventListener('click', e => humanTurn(+btn.dataset.i)));
+    els.newGame.addEventListener('click', resetBoard);
+    els.resetScores.addEventListener('click', ()=>{ state.scores={p1:0,p2:0,draw:0}; updateLabels(); updateStatus('Scores reset.');});
+
+    els.mode.addEventListener('change', e => { state.mode = e.target.value; updateLabels(); resetBoard(); });
+    els.humanMark.addEventListener('change', e => { state.human = e.target.value; state.ai = switchP(state.human); resetBoard(); });
+    els.firstMove.addEventListener('change', e => { state.humanStarts = (e.target.value==='human'); resetBoard(); });
+
+    // Surface runtime errors in the UI for quick diagnosis
+    window.addEventListener('error', (ev)=>{ try{ updateStatus('Script error: '+ev.message); }catch(_){} });
+
+    // Initial draw
+    resetBoard();
+  })();
+  </script>
+</body>
+</html>

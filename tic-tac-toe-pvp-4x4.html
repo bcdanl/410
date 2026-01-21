@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tic‑Tac‑Toe — 3×3 & 4×4 (Unbeatable CPU)</title>
+  <style>
+    :root { --bg:#0b1020; --panel:#121a33; --text:#e6ebff; --muted:#b5c0ff99; --accent:#7dd3fc; }
+    html,body{height:100%}
+    body{margin:0;display:grid;place-items:center;background:radial-gradient(1200px 800px at 10% -10%, #1a244d, #0b1020) fixed;color:var(--text);font:16px/1.4 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+    .app{width:min(92vw,900px);padding:20px clamp(16px,2vw,28px);background:#121a33;border:1px solid #ffffff14;border-radius:18px;box-shadow:0 20px 60px #0008,inset 0 1px 0 #fff1}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;margin-bottom:12px}
+    h1{margin:0;font-size:clamp(18px,3.6vw,28px)}
+    .controls{display:flex;flex-wrap:wrap;gap:10px 14px;align-items:center}
+    .controls label{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--muted)}
+    select,button{font:inherit;color:var(--text);background:#1b2548;border:1px solid #ffffff2a;border-radius:10px;padding:8px 12px;cursor:pointer}
+    select:focus,button:focus{outline:2px solid #7dd3fc66;outline-offset:2px}
+    button.primary{background:linear-gradient(180deg,#334679,#263864);border-color:#7dd3fc55}
+    .status{min-height:1.4em;margin:10px 0 12px;color:var(--accent);font-weight:700}
+    .board{--cell:min(18vmin,110px);display:grid;gap:10px;justify-content:center;margin:8px auto}
+    .cell{display:grid;place-items:center;border:1px solid #ffffff25;background:#0e1634;border-radius:16px;font-weight:800;letter-spacing:1px;text-shadow:0 2px 10px #0008;cursor:pointer;touch-action:manipulation;user-select:none}
+    .cell[disabled]{opacity:.92;cursor:not-allowed}
+    .cell.win{box-shadow:inset 0 0 0 2px #10b98199}
+    .cell.lose{box-shadow:inset 0 0 0 2px #ef444499}
+    .scores{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px;font-size:14px;color:var(--muted)}
+    .scores .card{background:#0f1840;border:1px solid #ffffff1f;border-radius:12px;padding:10px 12px;text-align:center}
+    .score{font-size:20px;font-weight:800;color:var(--text)}
+    @media(max-width:500px){.scores{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <div class="app" role="application" aria-label="Tic‑Tac‑Toe game">
+    <header>
+      <h1>Tic‑Tac‑Toe — 3×3 & 4×4</h1>
+      <div class="controls">
+        <label>Board
+          <select id="boardSize" aria-label="Board size">
+            <option value="3">3×3</option>
+            <option value="4" selected>4×4</option>
+          </select>
+        </label>
+        <label>Mode
+          <select id="mode" aria-label="Game mode">
+            <option value="cpu" selected>vs Computer</option>
+            <option value="pvp">Two Players</option>
+          </select>
+        </label>
+        <label id="youPlayLabel"> You play as
+          <select id="humanMark" aria-label="Choose your mark">
+            <option value="X" selected>X</option>
+            <option value="O">O</option>
+          </select>
+        </label>
+        <label id="firstMoveLabel"> First move
+          <select id="firstMove" aria-label="Who goes first">
+            <option value="human" selected>You</option>
+            <option value="ai">Computer</option>
+          </select>
+        </label>
+        <button id="newGame" class="primary" aria-label="Start new game">New Game</button>
+        <button id="resetScores" aria-label="Reset scores">Reset Scores</button>
+      </div>
+    </header>
+
+    <div id="status" class="status" role="status" aria-live="polite">Your move.</div>
+
+    <div id="board" class="board" role="grid" aria-label="Board"></div>
+
+    <div class="scores" aria-label="Scoreboard">
+      <div class="card"><div id="labelP1">You (X)</div><div class="score" id="scoreP1">0</div></div>
+      <div class="card"><div id="labelP2">Computer (O)</div><div class="score" id="scoreP2">0</div></div>
+      <div class="card"><div>Draws</div><div class="score" id="scoreDraw">0</div></div>
+    </div>
+  </div>
+
+  <script>
+  (function(){
+    'use strict';
+
+    const els = {
+      board: document.getElementById('board'),
+      status: document.getElementById('status'),
+      boardSize: document.getElementById('boardSize'),
+      mode: document.getElementById('mode'),
+      humanMark: document.getElementById('humanMark'),
+      firstMove: document.getElementById('firstMove'),
+      youPlayLabel: document.getElementById('youPlayLabel'),
+      firstMoveLabel: document.getElementById('firstMoveLabel'),
+      newGame: document.getElementById('newGame'),
+      resetScores: document.getElementById('resetScores'),
+      labelP1: document.getElementById('labelP1'),
+      labelP2: document.getElementById('labelP2'),
+      scoreP1: document.getElementById('scoreP1'),
+      scoreP2: document.getElementById('scoreP2'),
+      scoreDraw: document.getElementById('scoreDraw'),
+    };
+
+    const state = {
+      N: 4,               // board size
+      R: 4,               // in-a-row to win
+      board: [],
+      mode: 'cpu',        // 'cpu' or 'pvp'
+      human: 'X',
+      ai: 'O',
+      humanStarts: true,
+      currentPlayer: 'X',
+      gameOver: false,
+      scores: { p1:0, p2:0, draw:0 },
+      memo: new Map(),    // transposition
+      cells: [],          // live NodeList of cell buttons
+      combos: [],         // winning lines
+      prefOrder: [],      // move ordering
+    };
+
+    function switchP(p){ return p === 'X' ? 'O' : 'X'; }
+
+    function idx(r,c){ return r*state.N + c; }
+
+    function buildCombos(){
+      const N = state.N, R = state.R;
+      const lines = [];
+      // rows
+      for(let r=0;r<N;r++) for(let c=0;c<=N-R;c++){
+        const arr=[]; for(let k=0;k<R;k++) arr.push(idx(r,c+k)); lines.push(arr);
+      }
+      // cols
+      for(let c=0;c<N;c++) for(let r=0;r<=N-R;r++){
+        const arr=[]; for(let k=0;k<R;k++) arr.push(idx(r+k,c)); lines.push(arr);
+      }
+      // diag \ 
+      for(let r=0;r<=N-R;r++) for(let c=0;c<=N-R;c++){
+        const arr=[]; for(let k=0;k<R;k++) arr.push(idx(r+k,c+k)); lines.push(arr);
+      }
+      // diag /
+      for(let r=0;r<=N-R;r++) for(let c=R-1;c<N;c++){
+        const arr=[]; for(let k=0;k<R;k++) arr.push(idx(r+k,c-k)); lines.push(arr);
+      }
+      state.combos = lines;
+    }
+
+    function buildPrefOrder(){
+      const N = state.N; const center = (N-1)/2;
+      const cells = Array.from({length:N*N}, (_,i)=>i);
+      cells.sort((a,b)=>{
+        const ar = Math.floor(a/N), ac = a%N; const br = Math.floor(b/N), bc = b%N;
+        const da = Math.abs(ar-center)+Math.abs(ac-center);
+        const db = Math.abs(br-center)+Math.abs(bc-center);
+        // tie-break: prefer corners, then edges
+        const wa = ((ar===0||ar===N-1)&&(ac===0||ac===N-1))? -1 : (ar===0||ar===N-1||ac===0||ac===N-1? 0 : 1);
+        const wb = ((br===0||br===N-1)&&(bc===0||bc===N-1))? -1 : (br===0||br===N-1||bc===0||bc===N-1? 0 : 1);
+        if (da!==db) return da - db; return wa - wb;
+      });
+      state.prefOrder = cells;
+    }
+
+    function buildBoard(){
+      const N = state.N;
+      els.board.style.gridTemplateColumns = `repeat(${N}, var(--cell))`;
+      els.board.style.gridTemplateRows = `repeat(${N}, var(--cell))`;
+      els.board.innerHTML = '';
+      const frag = document.createDocumentFragment();
+      for(let i=0;i<N*N;i++){
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'cell';
+        btn.setAttribute('role','gridcell');
+        btn.dataset.i = String(i);
+        btn.style.fontSize = `calc(var(--cell) * ${N===3?0.5:0.42})`;
+        btn.addEventListener('click', () => humanTurn(i));
+        frag.appendChild(btn);
+      }
+      els.board.appendChild(frag);
+      state.cells = Array.from(els.board.querySelectorAll('.cell'));
+    }
+
+    function updateLabels(){
+      if (state.mode === 'cpu'){
+        els.labelP1.textContent = `You (${state.human})`;
+        els.labelP2.textContent = `Computer (${state.ai})`;
+      } else {
+        els.labelP1.textContent = 'Player X';
+        els.labelP2.textContent = 'Player O';
+      }
+      els.scoreP1.textContent = state.scores.p1;
+      els.scoreP2.textContent = state.scores.p2;
+      els.scoreDraw.textContent = state.scores.draw;
+      // toggle CPU-only controls
+      const cpuControls = state.mode === 'cpu';
+      els.humanMark.disabled = !cpuControls; els.humanMark.parentElement.style.opacity = cpuControls?1:.45;
+      els.firstMove.disabled = !cpuControls; els.firstMove.parentElement.style.opacity = cpuControls?1:.45;
+    }
+
+    function updateStatus(msg){ els.status.textContent = msg; }
+
+    function clearBoardVisual(){ state.cells.forEach(c=>{ c.textContent=''; c.disabled=false; c.classList.remove('win','lose'); }); }
+
+    function resetBoard(){
+      const N = state.N; state.board = Array(N*N).fill(null);
+      state.gameOver = false; state.memo.clear(); clearBoardVisual(); updateLabels();
+      if (state.mode==='cpu'){
+        updateStatus(state.humanStarts? 'Your move.' : 'Computer is thinking…');
+        if (!state.humanStarts) setTimeout(aiTurn, 120);
+      } else {
+        state.currentPlayer = 'X'; updateStatus('Player X to move.');
+      }
+    }
+
+    function availableMoves(b){ const m=[]; for(let i=0;i<b.length;i++) if(!b[i]) m.push(i); return m; }
+
+    function getResult(b){
+      for(const line of state.combos){
+        const v = b[line[0]]; if(!v) continue; let ok = true;
+        for(let k=1;k<line.length;k++){ if(b[line[k]]!==v){ ok=false; break; } }
+        if (ok) return { winner:v, line };
+      }
+      if (!b.includes(null)) return { winner:'draw', line:null };
+      return null;
+    }
+
+    function place(i, mark){ state.board[i]=mark; const btn = state.cells[i]; btn.textContent = mark; btn.disabled = true; }
+
+    function endGame(result){
+      state.gameOver = true; state.cells.forEach(c=>c.disabled=true);
+      if (result.winner==='draw'){ state.scores.draw++; updateStatus("It's a draw."); }
+      else if (state.mode==='cpu'){
+        if (result.winner===state.human){ state.scores.p1++; updateStatus('You win!'); if(result.line) result.line.forEach(i=>state.cells[i].classList.add('win')); }
+        else { state.scores.p2++; updateStatus('Computer wins.'); if(result.line) result.line.forEach(i=>state.cells[i].classList.add('lose')); }
+      } else {
+        if (result.winner==='X'){ state.scores.p1++; updateStatus('Player X wins!'); if(result.line) result.line.forEach(i=>state.cells[i].classList.add('win')); }
+        else { state.scores.p2++; updateStatus('Player O wins!'); if(result.line) result.line.forEach(i=>state.cells[i].classList.add('lose')); }
+      }
+      updateLabels();
+    }
+
+    function humanTurn(i){
+      if (state.gameOver || state.board[i]) return;
+      if (state.mode==='cpu'){
+        place(i, state.human);
+        const res = getResult(state.board); if(res) return endGame(res);
+        updateStatus('Computer is thinking…'); setTimeout(aiTurn, 60);
+      } else {
+        place(i, state.currentPlayer);
+        const res = getResult(state.board); if(res) return endGame(res);
+        state.currentPlayer = switchP(state.currentPlayer);
+        updateStatus(`Player ${state.currentPlayer} to move.`);
+      }
+    }
+
+    function key(b, player){ return b.map(v=>v||'-').join('') + '|' + player + '|' + state.N; }
+
+    function immediateWinIndex(board, mark){
+      for(const i of availableMoves(board)){
+        board[i] = mark; const r = getResult(board); board[i] = null; if (r && r.winner===mark) return i;
+      }
+      return -1;
+    }
+
+    function bestMove(board, player){
+      // Opening quick-pick to avoid heavy first search on 4×4
+      if (board.every(v=>!v)){
+        if (state.N===4) return idx(1,1); // one of the centers
+        if (state.N===3) return 4;        // center
+      }
+      // Tactical fast paths
+      let i = immediateWinIndex(board, player); if (i!==-1) return i;
+      i = immediateWinIndex(board, switchP(player)); if (i!==-1) return i; // block
+
+      let best = -Infinity, picks=[];
+      for (const mv of state.prefOrder){
+        if (board[mv]) continue;
+        board[mv] = player;
+        const s = minimax(board, switchP(player), 1, -Infinity, Infinity);
+        board[mv] = null;
+        if (s>best){ best=s; picks=[mv]; }
+        else if (s===best){ picks.push(mv); }
+      }
+      return picks[0];
+    }
+
+    function minimax(board, player, depth, alpha, beta){
+      const r = getResult(board);
+      if (r){ if(r.winner==='draw') return 0; if(r.winner===state.ai) return 100 - depth; return depth - 100; }
+      const k = key(board, player); const memo = state.memo.get(k); if (memo!==undefined) return memo;
+
+      if (player===state.ai){
+        let maxEval = -Infinity;
+        for (const mv of state.prefOrder){
+          if (board[mv]) continue;
+          board[mv] = state.ai;
+          const val = minimax(board, state.human, depth+1, alpha, beta);
+          board[mv] = null;
+          if (val>maxEval) maxEval = val;
+          if (val>alpha) alpha = val;
+          if (beta<=alpha) break;
+        }
+        state.memo.set(k, maxEval); return maxEval;
+      } else {
+        let minEval = Infinity;
+        for (const mv of state.prefOrder){
+          if (board[mv]) continue;
+          board[mv] = state.human;
+          const val = minimax(board, state.ai, depth+1, alpha, beta);
+          board[mv] = null;
+          if (val<minEval) minEval = val;
+          if (val<beta) beta = val;
+          if (beta<=alpha) break;
+        }
+        state.memo.set(k, minEval); return minEval;
+      }
+    }
+
+    function aiTurn(){
+      if (state.gameOver) return;
+      const i = bestMove(state.board, state.ai);
+      place(i, state.ai);
+      const res = getResult(state.board); if(res) return endGame(res);
+      updateStatus('Your move.');
+    }
+
+    function reconfigure(N){
+      state.N = N; state.R = N; buildBoard(); buildCombos(); buildPrefOrder(); resetBoard();
+    }
+
+    // Wire events
+    els.newGame.addEventListener('click', resetBoard);
+    els.resetScores.addEventListener('click', ()=>{ state.scores={p1:0,p2:0,draw:0}; updateLabels(); updateStatus('Scores reset.'); });
+    els.mode.addEventListener('change', e=>{ state.mode=e.target.value; updateLabels(); resetBoard(); });
+    els.humanMark.addEventListener('change', e=>{ state.human=e.target.value; state.ai=switchP(state.human); resetBoard(); });
+    els.firstMove.addEventListener('change', e=>{ state.humanStarts=(e.target.value==='human'); resetBoard(); });
+    els.boardSize.addEventListener('change', e=>{ const N=+e.target.value; reconfigure(N); });
+
+    window.addEventListener('error', ev=>{ try{ updateStatus('Script error: '+ev.message); }catch(_){} });
+
+    // Boot
+    reconfigure(4); // default to 4×4 as requested
+  })();
+  </script>
+</body>
+</html>
