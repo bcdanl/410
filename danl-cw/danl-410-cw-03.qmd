@@ -1,7 +1,7 @@
 ---
 title: Classwork 3
 subtitle: "Panel Data Models"
-date: 2026-01-26
+date: 2026-01-28
 code-fold: false
 execute: 
   echo: true

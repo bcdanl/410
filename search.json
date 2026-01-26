@@ -4,7 +4,7 @@
     "href": "listing-danl-410-cw.html",
     "title": "DANL 410 - Classwork",
     "section": "",
-    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nClasswork 1\n\n\nVibe Coding\n\n\nJanuary 21, 2026\n\n\n\n\nClasswork 2\n\n\nOmitted Variable Bias\n\n\nJanuary 26, 2026\n\n\n\n\nClasswork 3\n\n\nPanel Data Models\n\n\nJanuary 26, 2026\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nClasswork 1\n\n\nVibe Coding\n\n\nJanuary 21, 2026\n\n\n\n\nClasswork 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nClasswork 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "listing-danl-410-hw.html",
@@ -18,7 +18,7 @@
     "href": "listing-danl-410-lec.html",
     "title": "DANL 410 - Lecture",
     "section": "",
-    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Panel Data Models\n\n\nJanuary 26, 2026\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nLecture 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "listing-danl-410-ex.html",
@@ -137,14 +137,14 @@
     "href": "index.html#lecture",
     "title": "DANL 410: Data Analytics Capstone, Spring 2026",
     "section": "🚀 Lecture",
-    "text": "🚀 Lecture\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Panel Data Models\n\n\nJanuary 26, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "🚀 Lecture\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nLecture 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#classwork",
     "href": "index.html#classwork",
     "title": "DANL 410: Data Analytics Capstone, Spring 2026",
     "section": "⌨️ Classwork",
-    "text": "⌨️ Classwork\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nClasswork 1\n\n\nVibe Coding\n\n\nJanuary 21, 2026\n\n\n\n\nClasswork 2\n\n\nOmitted Variable Bias\n\n\nJanuary 26, 2026\n\n\n\n\nClasswork 3\n\n\nPanel Data Models\n\n\nJanuary 26, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "⌨️ Classwork\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nClasswork 1\n\n\nVibe Coding\n\n\nJanuary 21, 2026\n\n\n\n\nClasswork 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nClasswork 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#homework",
@@ -1013,5 +1013,299 @@
     "title": "Classwork 3",
     "section": "Results",
     "text": "Results\n# --- Table A: BASE models ---\n# Table (omit intercept so pooled/re match FE models cleanly)\nstargazer(\n  m1_pool, m2_fe, m3_twfe, m4_re,\n  type = \"html\",\n  se = list(se_m1, se_m2, se_m3, se_m4),\n  title = \"Panel Models (OWID CO2): Pooled OLS vs FE vs TWFE vs RE\",\n  column.labels = c(\"Pooled OLS\", \"Country FE\", \"Two-way FE\", \"Random Effects\"),\n  dep.var.labels = \"log(CO2 per capita)\",\n  omit = \"Intercept\",                      # ✅ avoids intercept mismatch across models\n  omit.stat = c(\"f\", \"ser\"),\n  digits = 3,\n  notes = c(\"Standard errors clustered by country (iso_code).\",\n            \"Country FE controls for time-invariant differences across countries.\",\n            \"Two-way FE adds year fixed effects to absorb global shocks.\")\n)\n\n\n\nPanel Models (OWID CO2): Pooled OLS vs FE vs TWFE vs RE\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nlog(CO2 per capita)\n\n\n\n\n\n\nPooled OLS\n\n\nCountry FE\n\n\nTwo-way FE\n\n\nRandom Effects\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n(3)\n\n\n(4)\n\n\n\n\n\n\n\n\nlog_gdppc\n\n\n4.009***\n\n\n3.440***\n\n\n3.453***\n\n\n3.539***\n\n\n\n\n\n\n(0.470)\n\n\n(0.444)\n\n\n(0.445)\n\n\n(0.437)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlog_gdppc2\n\n\n-0.157***\n\n\n-0.168***\n\n\n-0.167***\n\n\n-0.170***\n\n\n\n\n\n\n(0.027)\n\n\n(0.023)\n\n\n(0.023)\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant\n\n\n-22.396***\n\n\n\n\n\n\n-17.176***\n\n\n\n\n\n\n(2.057)\n\n\n\n\n\n\n(2.055)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n5,409\n\n\n5,409\n\n\n5,409\n\n\n5,409\n\n\n\n\nR2\n\n\n0.837\n\n\n0.357\n\n\n0.281\n\n\n0.386\n\n\n\n\nAdjusted R2\n\n\n0.837\n\n\n0.337\n\n\n0.254\n\n\n0.386\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01\n\n\n\n\n\n\nStandard errors clustered by country (iso\n\n\n\n\n\n\nCountry FE controls for time-invariant differences across countries.\n\n\n\n\n\n\nTwo-way FE adds year fixed effects to absorb global shocks.\n\n\n\n\n# --- Table B: EXTENDED models (adds energy control) ---\nstargazer(\n  m1_pool_ext, m2_fe_ext, m3_twfe_ext, m4_re_ext,\n  type = \"html\",\n  se = list(se_m1, se_m2, se_m3, se_m4),\n  title = \"Panel Models (OWID CO2): With Energy Control\",\n  column.labels = c(\"Pooled OLS\", \"Country FE\", \"Two-way FE\", \"Random Effects\"),\n  dep.var.labels = \"log(CO2 per capita)\",\n  omit = \"Intercept\",                      # ✅ avoids intercept mismatch across models\n  omit.stat = c(\"f\", \"ser\"),\n  digits = 3,\n  notes = c(\"Standard errors clustered by country (iso_code).\",\n            \"Adding energy per capita often reduces the GDP effect because energy use is a major driver of CO2.\")\n)\n\n\n\nPanel Models (OWID CO2): With Energy Control\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nlog(CO2 per capita)\n\n\n\n\n\n\nPooled OLS\n\n\nCountry FE\n\n\nTwo-way FE\n\n\nRandom Effects\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n(3)\n\n\n(4)\n\n\n\n\n\n\n\n\nlog_gdppc\n\n\n1.378***\n\n\n1.903***\n\n\n1.919***\n\n\n1.832***\n\n\n\n\n\n\n(0.470)\n\n\n(0.444)\n\n\n(0.445)\n\n\n(0.437)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlog_gdppc2\n\n\n-0.072***\n\n\n-0.100***\n\n\n-0.099***\n\n\n-0.095***\n\n\n\n\n\n\n(0.027)\n\n\n(0.023)\n\n\n(0.023)\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlog_energy_pc\n\n\n0.869\n\n\n0.621\n\n\n0.621\n\n\n0.672\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant\n\n\n-13.726***\n\n\n\n\n\n\n-14.103***\n\n\n\n\n\n\n(2.057)\n\n\n\n\n\n\n(2.055)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n5,358\n\n\n5,358\n\n\n5,358\n\n\n5,358\n\n\n\n\nR2\n\n\n0.948\n\n\n0.628\n\n\n0.582\n\n\n0.695\n\n\n\n\nAdjusted R2\n\n\n0.948\n\n\n0.616\n\n\n0.566\n\n\n0.695\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01\n\n\n\n\n\n\nStandard errors clustered by country (iso\n\n\n\n\n\n\nAdding energy per capita often reduces the GDP effect because energy use is a major driver of CO2."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#panel-data-models-pols-fe-twfe-re",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#panel-data-models-pols-fe-twfe-re",
+    "title": "Lecture 3",
+    "section": "👥📈 Panel Data Models: POLS → FE → TWFE → RE",
+    "text": "👥📈 Panel Data Models: POLS → FE → TWFE → RE\n\n\n\nLearning goals\n\n\n\nUnderstand what panel data is (and why we love it)\nCompare Pooled OLS, Fixed Effects, Two-Way FE, and Random Effects\nLearn what variation each model uses and what it controls for\nUnderstand country-clustered standard errors (and why we need them)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-panel-data",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-panel-data",
+    "title": "Lecture 3",
+    "section": "What is Panel Data?",
+    "text": "What is Panel Data?\nPanel data tracks the same units over multiple time periods:\n\nUnit (\\(i\\)): country (USA, Korea, India, …)\nTime (\\(t\\)): year (1990–2022, …)\n\nExample (CO\\(_2\\) panel): - Outcome: CO\\(_2\\) emissions per capita - Unit ID: iso_code - Time ID: year\n\n\n\nTip\n\n\nPanel data gives us two kinds of variation: - Between variation: differences across countries - Within variation: changes within a country over time"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#why-use-panel-models-not-only-pooled-ols",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#why-use-panel-models-not-only-pooled-ols",
+    "title": "Lecture 3",
+    "section": "Why Use Panel Models (Not Only Pooled OLS)?",
+    "text": "Why Use Panel Models (Not Only Pooled OLS)?\n\n\n\nPooled OLS can be misleading because it ignores unobserved country differences that don’t change much over time, such as:\n\n🌍 geography / climate / natural resources\n🏭 industrial structure and history\n🏛️ institutions and regulation\n⚡ energy infrastructure and technology path\n🧑‍🤝‍🧑 culture and long-run lifestyle patterns\n\n\n\n\nThese factors can affect both\n\nemissions (or other outcomes) and\nGDP per capita (or other regressors)\n\n\n\n\n➡️ That creates omitted variable bias when we use Pooled OLS."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#unobserved-heterogeneity-the-core-issue",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#unobserved-heterogeneity-the-core-issue",
+    "title": "Lecture 3",
+    "section": "🧠 Unobserved Heterogeneity (The Core Issue)",
+    "text": "🧠 Unobserved Heterogeneity (The Core Issue)\nSuppose the true relationship includes an unobserved country component:\n\\[\ny_{it} = \\beta x_{it} + \\underbrace{\\alpha_i}_{\\text{unobserved country trait}} + \\epsilon_{it}\n\\]\nIf we ignore \\(\\alpha_i\\) and estimate Pooled OLS:\n\\[\ny_{it} = \\beta x_{it} + u_{it}\n\\quad \\text{where} \\quad\nu_{it} = \\alpha_i + \\epsilon_{it}\n\\]\n⚠️ If \\(Cov(\\alpha_i, x_{it}) \\neq 0\\), then:\n\n\\(x_{it}\\) is correlated with the error term\nPooled OLS is biased\n\n\n\n\n\nFixed Effects is designed to solve exactly this problem."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#pooled-ols-baseline-model",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#pooled-ols-baseline-model",
+    "title": "Lecture 3",
+    "section": "Pooled OLS: Baseline Model",
+    "text": "Pooled OLS: Baseline Model\nModel \\[\ny_{it} = \\beta_0 + \\beta_1 x_{it} + \\epsilon_{it}\n\\]\nMeaning\n\nWe pretend the dataset is one big cross-section\nWe ignore the panel structure (country identity)\n\nUses all variation\n\nbetween-country variation\nwithin-country variation"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-pols-is-really-doing",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-pols-is-really-doing",
+    "title": "Lecture 3",
+    "section": "What POLS is Really Doing",
+    "text": "What POLS is Really Doing\nWhen you estimate POLS, the slope \\(\\beta_1\\) reflects a combination of:\n\nCross-country differences (rich vs. poor countries)\nWithin-country changes (one country over time)\n\nSo interpretation becomes:\n\n“On average, countries with higher \\(x\\) have higher (or lower) \\(y\\), and/or when \\(x\\) rises over time, \\(y\\) moves…”\n\n⚠️ That can be fine only if unobserved country traits don’t confound the relationship."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#the-big-risk-in-pols-omitted-variable-bias",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#the-big-risk-in-pols-omitted-variable-bias",
+    "title": "Lecture 3",
+    "section": "⚠️ The Big Risk in POLS: Omitted Variable Bias",
+    "text": "⚠️ The Big Risk in POLS: Omitted Variable Bias\nIf richer countries also have different institutions, energy systems, or historical industrialization paths, then:\n\n\\(x_{it}\\) (GDP per capita) is correlated with \\(\\alpha_i\\) (unobserved traits)\nPooled OLS mixes together the effect of \\(x_{it}\\) and the influence of \\(\\alpha_i\\), so the estimated \\(\\beta\\) can be misleading.\n\nPanel methods help because they explicitly control for \\(\\alpha_i\\)."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#country-fixed-effects-fe",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#country-fixed-effects-fe",
+    "title": "Lecture 3",
+    "section": "Country Fixed Effects (FE)",
+    "text": "Country Fixed Effects (FE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\epsilon_{it}\n\\]\n\n\\(\\alpha_i\\) = country fixed effect\ncaptures all time-invariant country characteristics\n\ngeography, long-run institutions, baseline culture, etc.\n\n\nFE answers a within-country question:\n\n“If a country’s \\(x\\) changes over time, how does \\(y\\) change within that same country?”"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-fe-controls-for-automatically",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-fe-controls-for-automatically",
+    "title": "Lecture 3",
+    "section": "🔎 What FE Controls For (Automatically)",
+    "text": "🔎 What FE Controls For (Automatically)\nBecause each country gets its own intercept \\(\\alpha_i\\), FE controls for:\n\nany factor that is constant within a country\neven if you do not observe or measure it\n\nExamples (time-invariant or very slow-moving):\n\ndistance to equator\nlandlocked status\nbaseline political system\ndeep energy infrastructure\n\n\n\n\n📌 FE is powerful because it controls for a lot without measuring those things."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#fe-uses-only-within-country-variation",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#fe-uses-only-within-country-variation",
+    "title": "Lecture 3",
+    "section": "FE Uses Only Within-Country Variation",
+    "text": "FE Uses Only Within-Country Variation\nFE does not use differences between countries:\n\nIt does not compare USA vs India levels\nIt compares USA over time to itself\n\nSo FE is best when:\n\nthe key confounding problem is time-invariant\nwe care about within-country causal interpretation\n\n⚠️ FE cannot estimate effects of variables that do not change over time, e.g.:\n\nlandlocked, continent, distance_to_equator"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#two-way-fixed-effects-country-year-fe",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#two-way-fixed-effects-country-year-fe",
+    "title": "Lecture 3",
+    "section": "Two-Way Fixed Effects (Country + Year FE)",
+    "text": "Two-Way Fixed Effects (Country + Year FE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\gamma_t + \\epsilon_{it}\n\\]\n\n\\(\\alpha_i\\): country FE (time-invariant traits)\n\\(\\gamma_t\\): year FE (global shocks / common trends)\n\nTWFE answers:\n\n“Within a country, how does \\(y\\) change with \\(x\\), after removing global year shocks?”"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#why-add-year-fixed-effects",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#why-add-year-fixed-effects",
+    "title": "Lecture 3",
+    "section": "🌍 Why Add Year Fixed Effects?",
+    "text": "🌍 Why Add Year Fixed Effects?\nYear effects capture shocks that hit many countries at once:\n\n🛢️ oil price spikes\n📉 global recessions (e.g., 2008)\n🦠 pandemics\n💡 global technology trends\n🌐 global climate agreements\n\nIf we don’t include \\(\\gamma_t\\), the regression may mistakenly attribute these common shocks to \\(x_{it}\\).\nYear FE helps remove this confounding."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#random-effects-re-1",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#random-effects-re-1",
+    "title": "Lecture 3",
+    "section": "Random Effects (RE)",
+    "text": "Random Effects (RE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\epsilon_{it}\n\\]\nSame structure as FE… but different assumption:\n\nRE treats \\(\\alpha_i\\) as random\nand assumes it is uncorrelated with regressors:\n\n\\[\nCov(\\alpha_i, x_{it}) = 0\n\\]\nIf that assumption holds:\n\nRE is more efficient than FE (smaller standard errors)\nRE uses both within and between variation"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#when-re-fails-bias-risk",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#when-re-fails-bias-risk",
+    "title": "Lecture 3",
+    "section": "⚠️ When RE Fails (Bias Risk)",
+    "text": "⚠️ When RE Fails (Bias Risk)\nIf \\(Cov(\\alpha_i, x_{it}) \\neq 0\\), then RE is biased.\nIn many economic settings, this correlation is very plausible:\n\nricher countries may also have better institutions (inside \\(\\alpha_i\\))\nenergy system differences affect both GDP and emissions\n\nSo FE is often the safer default in applied work."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#why-we-cluster-standard-errors-country-clustered-se",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#why-we-cluster-standard-errors-country-clustered-se",
+    "title": "Lecture 3",
+    "section": "🧠 Why We Cluster Standard Errors (Country-Clustered SE)",
+    "text": "🧠 Why We Cluster Standard Errors (Country-Clustered SE)\nThe problem: errors are correlated within countries\nIn panel data, observations inside a country are rarely independent:\n\nshocks persist over time\npolicies change gradually\nmeasurement errors repeat\nemissions and GDP move smoothly\n\nThat means residuals may satisfy:\n\\[\nCov(\\epsilon_{it}, \\epsilon_{is}) \\neq 0 \\quad \\text{for } t \\neq s\n\\]\nIf we ignore this, standard errors are often: ❌ too small → false “significance”"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#cluster-robust-standard-errors-by-country",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#cluster-robust-standard-errors-by-country",
+    "title": "Lecture 3",
+    "section": "Cluster-Robust Standard Errors (by Country)",
+    "text": "Cluster-Robust Standard Errors (by Country)\nCountry-clustered SEs allow:\n\narbitrary correlation over time within a country\nheteroskedasticity across countries\n\nInterpretation:\n\n“We allow any kind of serial correlation within each country.”\n\nIn R (plm), this is typically implemented using robust VCOV options, e.g. vcovHC() with clustering by group."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#model-summary-what-each-one-controls-for",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#model-summary-what-each-one-controls-for",
+    "title": "Lecture 3",
+    "section": "Model Summary (What Each One Controls For)",
+    "text": "Model Summary (What Each One Controls For)\n\n\n\n\n\n\n\n\n\nModel\nControls for country traits?\nControls for year shocks?\nUses between-country variation?\n\n\n\n\nPooled OLS\n❌ No\n❌ No\nYes\n\n\nCountry FE\nYes (time-invariant)\n❌ No\n❌ No\n\n\nTwo-way FE\nYes (time-invariant)\nYes\n❌ No\n\n\nRandom Effects\nYes (modeled as random intercept)\nOptional\nYes"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-panel-models",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-panel-models",
+    "title": "Lecture 3",
+    "section": "Final Takeaway (Panel Models)",
+    "text": "Final Takeaway (Panel Models)\nWe use panel data models to estimate relationships within units over time, while controlling for:\n\nhidden country characteristics (\\(\\alpha_i\\))\nglobal year shocks (\\(\\gamma_t\\))\n\nAnd we use clustered SEs because panel residuals are often correlated within each unit."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#environmental-kuznets-curve-ekc-growth-vs.-pollution-1",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#environmental-kuznets-curve-ekc-growth-vs.-pollution-1",
+    "title": "Lecture 3",
+    "section": "🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution",
+    "text": "🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution\n\n\n\nNote\n\n\nNow we add the key EKC idea: a nonlinear relationship between income and pollution."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-the-ekc",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-the-ekc",
+    "title": "Lecture 3",
+    "section": "What is the EKC?",
+    "text": "What is the EKC?\nThe Environmental Kuznets Curve (EKC) hypothesis suggests:\n\nAs a country becomes richer, pollution first increases,\nbut after some income level, pollution decreases.\n\nIt is often described as an inverted-U relationship between: - pollution (e.g., CO\\(_2\\) per capita) - income (GDP per capita)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#draw-the-ekc-curve-inverted-u",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#draw-the-ekc-curve-inverted-u",
+    "title": "Lecture 3",
+    "section": "📉📈 Draw the EKC Curve (Inverted-U)",
+    "text": "📉📈 Draw the EKC Curve (Inverted-U)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-panel-regression-country-year-data",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-panel-regression-country-year-data",
+    "title": "Lecture 3",
+    "section": "EKC Panel Regression (Country-Year Data)",
+    "text": "EKC Panel Regression (Country-Year Data)\nA common EKC specification:\n\\[\n\\log(CO2pc_{it})\n=\n\\beta_1 \\log(GDPpc_{it})\n+\n\\beta_2 \\left[\\log(GDPpc_{it})\\right]^2\n+\n\\alpha_i\n+\n\\gamma_t\n+\n\\epsilon_{it}\n\\]\n\n\\(i\\): country\n\\(t\\): year\n\\(\\alpha_i\\): country fixed effects\n\\(\\gamma_t\\): year fixed effects"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#how-to-interpret-ekc-coefficients",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#how-to-interpret-ekc-coefficients",
+    "title": "Lecture 3",
+    "section": "How to Interpret EKC Coefficients",
+    "text": "How to Interpret EKC Coefficients\n\nIf \\(\\beta_1 &gt; 0\\) and \\(\\beta_2 &lt; 0\\)\nemissions rise at first, then eventually fall\n→ EKC pattern (inverted-U)\nIf \\(\\beta_2 = 0\\)\n→ relationship is linear\nIf \\(\\beta_2 &gt; 0\\)\n→ U-shape (emissions accelerate with income)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-turning-point-income-level",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-turning-point-income-level",
+    "title": "Lecture 3",
+    "section": "EKC Turning Point (Income Level)",
+    "text": "EKC Turning Point (Income Level)\nThe turning point occurs where the slope becomes zero:\n\\[\n\\frac{\\partial \\log(CO2pc)}{\\partial \\log(GDPpc)}\n= \\beta_1 + 2\\beta_2 \\log(GDPpc) = 0\n\\]\nSo the turning point in log income is:\n\\[\n\\log(GDPpc^*) = -\\frac{\\beta_1}{2\\beta_2}\n\\]\nConvert back to the income level:\n\\[\nGDPpc^* = \\exp\\left(-\\frac{\\beta_1}{2\\beta_2}\\right)\n\\]\n\nAt \\(GDPpc^*\\), CO\\(_2\\) per capita stops rising and begins falling (if EKC holds)."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#intuition-why-might-ekc-happen",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#intuition-why-might-ekc-happen",
+    "title": "Lecture 3",
+    "section": "Intuition: Why Might EKC Happen?",
+    "text": "Intuition: Why Might EKC Happen?\nAs income rises, countries often experience:\n\nScale effect 📈: more production → more emissions (early stage)\nComposition effect 🏗️➡️🧑‍💼: shift from industry → services (middle stage)\nTechnique effect 🧪⚡: cleaner technology + regulation (later stage)\n\nEKC is the balance of: - growth pressures that increase emissions - development forces that can reduce emissions"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#important-caveat-for-co_2",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#important-caveat-for-co_2",
+    "title": "Lecture 3",
+    "section": "Important Caveat for CO\\(_2\\)",
+    "text": "Important Caveat for CO\\(_2\\)\nEKC may be weaker for CO\\(_2\\) than for local air pollutants because:\n\nCO\\(_2\\) is deeply tied to energy systems\nbenefits are global, costs are often local\nemissions may shift across borders via trade (carbon leakage)\n\nSo EKC is a hypothesis to test, not a guaranteed pattern."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-ekc",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-ekc",
+    "title": "Lecture 3",
+    "section": "Final Takeaway (EKC)",
+    "text": "Final Takeaway (EKC)\nEKC tests whether pollution follows an inverted-U with income.\nPanel FE/TWFE help make that test more credible by controlling for:\n\ncountry traits (\\(\\alpha_i\\))\nyear shocks (\\(\\gamma_t\\))"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#bad-controls-when-controlling-more-makes-things-worse",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#bad-controls-when-controlling-more-makes-things-worse",
+    "title": "Lecture 2",
+    "section": "🚫 Bad Controls: When “Controlling More” Makes Things Worse",
+    "text": "🚫 Bad Controls: When “Controlling More” Makes Things Worse\nA common mistake in regression is thinking:\n\n✅ “If I add more controls, the model must get better.”\n\nBut some controls are bad controls — they can actually bias your estimate."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#intuition-what-should-a-good-control-look-like",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#intuition-what-should-a-good-control-look-like",
+    "title": "Lecture 2",
+    "section": "🧠 Intuition: What Should a “Good Control” Look Like?",
+    "text": "🧠 Intuition: What Should a “Good Control” Look Like?\nA good control is a variable that:\n✅ helps explain variation in the outcome \\(y\\)\n✅ is related to the explanatory variable \\(x\\)\n✅ is not a consequence of \\(x\\) (it exists “in the background”)\nThat’s the key difference."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#good-controls-vs.-bad-controls-big-picture",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#good-controls-vs.-bad-controls-big-picture",
+    "title": "Lecture 2",
+    "section": "✅ Good Controls vs. Bad Controls (Big Picture)",
+    "text": "✅ Good Controls vs. Bad Controls (Big Picture)\n\n\n\n\n\n\n\n\nType\nExample\nWhy it matters\n\n\n\n\n✅ Good control\nAge, gender, region, baseline ability\nHelps reduce omitted variable bias by holding constant pre-existing differences\n\n\n🚫 Bad control\nOccupation (when studying education → wages)\nCan remove part of the education effect by controlling for something education influences\n\n\n🚫 Bad control\nPlant height (when studying fertilizer → yield)\nCan remove part of the fertilizer effect by controlling for something fertilizer influences"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#example-1-education-and-wages",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#example-1-education-and-wages",
+    "title": "Lecture 2",
+    "section": "🔗 Example 1: Education and Wages 💼",
+    "text": "🔗 Example 1: Education and Wages 💼\nSuppose we want to estimate:\n\nDoes education increase wages?\n\n✅ Good regression idea:\n\\[\nwage_i = \\beta_0 + \\beta_1 education_i + u_i\n\\]\nMaybe add good controls like:\n\nage\ngender\nregion\nparent education (if available)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#example-2-fertilizer-plant-height-and-crop-yield",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#example-2-fertilizer-plant-height-and-crop-yield",
+    "title": "Lecture 2",
+    "section": "🌱 Example 2: Fertilizer, Plant Height, and Crop Yield",
+    "text": "🌱 Example 2: Fertilizer, Plant Height, and Crop Yield\n\n\nWe want to estimate:\n\nDoes fertilizer increase crop yield?\n\nBut fertilizer changes the plant’s growth:\n\\[\nfertilizer \\rightarrow height\n\\]\nAnd height is strongly related to yield:\n\\[\nheight \\rightarrow yield\n\\]\n\nAlso, some plots are simply better than others because of soil quality:\n\\[\n\\begin{align}\n&soil\\ quality \\rightarrow height\\\\\n&soil\\ quality \\rightarrow yield\n\\end{align}\n\\]\nSo soil quality is a hidden factor that affects both height and yield."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#why-bad-controls-are-dangerous",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#why-bad-controls-are-dangerous",
+    "title": "Lecture 2",
+    "section": "🎯 Why Bad Controls Are Dangerous",
+    "text": "🎯 Why Bad Controls Are Dangerous\nBad controls can cause two problems:\n\n\n1) ❌ Block part of the true effect\nYou unintentionally remove the pathway:\n\\[\nx \\rightarrow control \\rightarrow y\n\\]\nSo the estimated \\(\\hat{\\beta}_1\\) becomes too small.\n\n2) ❌ Create new bias\nSometimes the control is influenced by both \\(x\\) and \\(y\\):\n\\[\nx \\rightarrow control \\leftarrow y\n\\]\nThen controlling for it creates a fake association between \\(x\\) and \\(y\\)\neven if none existed before."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#quick-rule-should-we-control-for-it",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#quick-rule-should-we-control-for-it",
+    "title": "Lecture 2",
+    "section": "✅ Quick Rule: Should We Control for It?",
+    "text": "✅ Quick Rule: Should We Control for It?\nBefore adding a variable \\(z\\) as a control, ask:\n\nDoes \\(z\\) exist before \\(x\\) is determined?\n✅ If yes → usually safe to control for\n\n\n\n\n\nDoes \\(z\\) change after \\(x\\) changes?\n🚫 If yes → it may be a bad control\n\n\n\n\n\nIs \\(z\\) a pre-existing characteristic that is related to both \\(x\\) and \\(y\\)?\n✅ If yes → it is often a useful control"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#a-simple-checklist",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#a-simple-checklist",
+    "title": "Lecture 2",
+    "section": "✅ A Simple Checklist ✅",
+    "text": "✅ A Simple Checklist ✅\nBefore adding a control \\(z\\), ask:\n\nIs \\(z\\) caused by \\(x\\)?\n\nIf yes → 🚫 bad control\n\n\nIs \\(z\\) caused by the outcome \\(y\\)?\n\nIf yes → 🚫 bad control\n\n\nIs \\(z\\ \\)a stable pre-existing factor that affects both \\(x\\) and \\(y\\)?\n\nIf yes → ✅ good control"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#summary-more-controls-better",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#summary-more-controls-better",
+    "title": "Lecture 2",
+    "section": "🧾 Summary: “More Controls” ≠ “Better”",
+    "text": "🧾 Summary: “More Controls” ≠ “Better”\n\n✅ Controls are helpful when they fix omitted variable bias\n\n🚫 Controls are harmful when they “control away” the effect you want\n\n\n\n\n\nThe goal is not to control for everything.\n\nThe goal is to control for the right things."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-occupation-or-job-type",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-occupation-or-job-type",
+    "title": "Lecture 2",
+    "section": "🚫 Bad Control: Occupation or Job Type",
+    "text": "🚫 Bad Control: Occupation or Job Type\nBut what if we control for occupation?\n\\[\nwage_i = \\beta_0 + \\beta_1 education_i + \\beta_2 occupation_i + u_i\n\\]\nWhy is that bad?\n\nBecause education affects occupation:\n\\[\neducation \\rightarrow occupation \\rightarrow wage\n\\]\nSo controlling for occupation:\n🚫 blocks part of the education effect\n→ we underestimate the impact of education"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-plant-height",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-plant-height",
+    "title": "Lecture 2",
+    "section": "🚫 Bad Control: Plant Height",
+    "text": "🚫 Bad Control: Plant Height\nBut what if we control for plant height?\n\\[\nyield_i = \\beta_0 + \\beta_1 fertilizer_i + \\beta_2 height_i + u_i\n\\]\nWhy is that bad?\n\nBecause fertilizer affects plant height:\n\\[\nfertilizer \\rightarrow height \\rightarrow yield\n\\]\nSo controlling for height:\n🚫 blocks an important pathway through which fertilizer raises yield\n→ we underestimate the impact of fertilizer"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#what-is-a-bad-control",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#what-is-a-bad-control",
+    "title": "Lecture 2",
+    "section": "🚫 What is a “Bad Control”?",
+    "text": "🚫 What is a “Bad Control”?\nA bad control is a variable that:\n\nis influenced by the explanatory variable \\(x\\), or\nis part of the process that links \\(x\\) to the outcome \\(y\\)\n\nIncluding a bad control can “control away” the variation in \\(y\\) that is connected to \\(x\\), making the estimated relationship look smaller than it really is."
+  },
+  {
+    "objectID": "danl-cw/danl-410-cw-02.html",
+    "href": "danl-cw/danl-410-cw-02.html",
+    "title": "Classwork 2",
+    "section": "",
+    "text": "Code\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(stargazer)\n\noj &lt;- read_csv('https://bcdanl.github.io/data/dominick_oj_ad.csv')\n\nreg_short &lt;- lm(log(sales) ~ log(price),\n                data = oj)\n\nreg_long &lt;- lm(log(sales) ~ log(price) + brand,\n                data = oj)\n\nstargazer(reg_short, reg_long,\n          type = 'html')\n\n\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nlog(sales)\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n\n\n\n\n\n\nlog(price)\n\n\n-1.601***\n\n\n-3.139***\n\n\n\n\n\n\n(0.018)\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\nbrandminute_maid\n\n\n\n\n0.870***\n\n\n\n\n\n\n\n\n(0.013)\n\n\n\n\n\n\n\n\n\n\n\n\nbrandtropicana\n\n\n\n\n1.530***\n\n\n\n\n\n\n\n\n(0.016)\n\n\n\n\n\n\n\n\n\n\n\n\nConstant\n\n\n10.423***\n\n\n10.829***\n\n\n\n\n\n\n(0.015)\n\n\n(0.015)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n28,947\n\n\n28,947\n\n\n\n\nR2\n\n\n0.208\n\n\n0.394\n\n\n\n\nAdjusted R2\n\n\n0.208\n\n\n0.394\n\n\n\n\nResidual Std. Error\n\n\n0.907 (df = 28945)\n\n\n0.794 (df = 28943)\n\n\n\n\nF Statistic\n\n\n7,608.212*** (df = 1; 28945)\n\n\n6,275.074*** (df = 3; 28943)\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01\n\n\n\n\n\nCode\nreg_1st &lt;- lm(log(price) ~ brand,\n              data = oj)\n\naug_m2 &lt;- augment(reg_1st)    # broom::augment()\n\nreg_2nd &lt;- lm(log(sales) ~ aug_m2$.resid,\n              data = oj)\n\nstargazer(reg_long, reg_2nd,\n          type = 'html')\n\n\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nlog(sales)\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n\n\n\n\n\n\nlog(price)\n\n\n-3.139***\n\n\n\n\n\n\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbrandminute_maid\n\n\n0.870***\n\n\n\n\n\n\n\n\n(0.013)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbrandtropicana\n\n\n1.530***\n\n\n\n\n\n\n\n\n(0.016)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.resid\n\n\n\n\n-3.139***\n\n\n\n\n\n\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\nConstant\n\n\n10.829***\n\n\n9.168***\n\n\n\n\n\n\n(0.015)\n\n\n(0.005)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n28,947\n\n\n28,947\n\n\n\n\nR2\n\n\n0.394\n\n\n0.392\n\n\n\n\nAdjusted R2\n\n\n0.394\n\n\n0.392\n\n\n\n\nResidual Std. Error\n\n\n0.794 (df = 28943)\n\n\n0.795 (df = 28945)\n\n\n\n\nF Statistic\n\n\n6,275.074*** (df = 3; 28943)\n\n\n18,683.570*** (df = 1; 28945)\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01"
+  },
+  {
+    "objectID": "danl-cw/danl-410-cw-02.html#education-and-wages",
+    "href": "danl-cw/danl-410-cw-02.html#education-and-wages",
+    "title": "Classwork 2",
+    "section": "Education and Wages",
+    "text": "Education and Wages\n\nCode\nset.seed(1)\n\ntb &lt;- tibble( \n  female = ifelse(runif(10000)&gt;=0.5,1,0), # female indicator variable\n  ability = rnorm(10000), # e.g., talent, usually unobserved.\n  discrimination = female, # gender discrimination variable\n  occupation = 1 + 2*ability + 0*female - 2*discrimination + rnorm(10000), # true data generating process for occupation variable\n  wage = 1 - 1*discrimination + 1*occupation + 2*ability + rnorm(10000) # true data generating process for wage variable\n)\n\nlm_1 &lt;- lm(wage ~ female, tb)\nlm_2 &lt;- lm(wage ~ female + occupation, tb)\nlm_3 &lt;- lm(wage ~ female + occupation + ability, tb)\n\nstargazer::stargazer(lm_1,lm_2,lm_3, \n                     column.labels = c(\"Biased Unconditional\", \n                                       \"Biased\",\n                                       \"Unbiased Conditional\"),\n                     type = 'html')\n\n\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nwage\n\n\n\n\n\n\nBiased Unconditional\n\n\nBiased\n\n\nUnbiased Conditional\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n(3)\n\n\n\n\n\n\n\n\nfemale\n\n\n-3.021***\n\n\n0.557***\n\n\n-1.039***\n\n\n\n\n\n\n(0.084)\n\n\n(0.030)\n\n\n(0.029)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\noccupation\n\n\n\n\n1.789***\n\n\n0.981***\n\n\n\n\n\n\n\n\n(0.006)\n\n\n(0.010)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nability\n\n\n\n\n\n\n2.028***\n\n\n\n\n\n\n\n\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant\n\n\n1.968***\n\n\n0.201***\n\n\n1.021***\n\n\n\n\n\n\n(0.059)\n\n\n(0.020)\n\n\n(0.018)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n10,000\n\n\n10,000\n\n\n10,000\n\n\n\n\nR2\n\n\n0.115\n\n\n0.907\n\n\n0.948\n\n\n\n\nAdjusted R2\n\n\n0.115\n\n\n0.907\n\n\n0.948\n\n\n\n\nResidual Std. Error\n\n\n4.192 (df = 9998)\n\n\n1.357 (df = 9997)\n\n\n1.013 (df = 9996)\n\n\n\n\nF Statistic\n\n\n1,297.822*** (df = 1; 9998)\n\n\n48,922.550*** (df = 2; 9997)\n\n\n61,140.750*** (df = 3; 9996)\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01"
+  },
+  {
+    "objectID": "danl-cw/danl-410-cw-02.html#fertilizer-plant-height-and-crop-yield",
+    "href": "danl-cw/danl-410-cw-02.html#fertilizer-plant-height-and-crop-yield",
+    "title": "Classwork 2",
+    "section": "Fertilizer, Plant Height, and Crop Yield",
+    "text": "Fertilizer, Plant Height, and Crop Yield\n\nCode\nset.seed(2026)\n\n# Simulate 10,000 plots\ntb3 &lt;- tibble(\n  fertilizer    = rbinom(10000, 1, 0.5),       # 0 = no fertilizer, 1 = fertilizer applied\n  soil_quality  = rnorm(10000),                # unobserved “plot fertility”\n  # Height (cm) is boosted by fertilizer *and* by soil quality\n  height        = 50 + 8 * fertilizer + 5 * soil_quality + rnorm(10000),\n  # Yield (bushels) depends on fertilizer, height, and soil quality\n  yield         = 200 \n  + 10 * fertilizer      # direct effect of fertilizer\n  + 3  * height          # return to plant height\n  + 6  * soil_quality    # underlying soil fertility\n  + rnorm(10000)\n)\n\n# 1) Omitting height: picks up both direct and indirect effects\nlm1 &lt;- lm(yield ~ fertilizer,         data = tb3)\n# 2) Controlling for height: \"blocks\" the mediation channel\nlm2 &lt;- lm(yield ~ fertilizer + height, data = tb3)\n# 3) Also control soil_quality to recover the true direct effect\nlm3 &lt;- lm(yield ~ fertilizer + height + soil_quality, data = tb3)\n\nstargazer(\n  lm1, lm2, lm3,\n  column.labels   = c(\"Omit Height (Biased)\", \n                      \"Control Height (More Biased)\",\n                      \"Also Soil (Unbiased)\"),\n  dep.var.labels  = \"yield\",\n  keep            = c(\"fertilizer\", \"height\", \"soil_quality\"),\n  covariate.labels= c(\"Fertilizer\", \"Plant Height\", \"Soil Quality\"),\n  type            = \"html\"\n)\n\n\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nyield\n\n\n\n\n\n\nOmit Height (Biased)\n\n\nControl Height (More Biased)\n\n\nAlso Soil (Unbiased)\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n(3)\n\n\n\n\n\n\n\n\nFertilizer\n\n\n34.657***\n\n\n0.789***\n\n\n10.025***\n\n\n\n\n\n\n(0.426)\n\n\n(0.040)\n\n\n(0.081)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlant Height\n\n\n\n\n4.156***\n\n\n2.999***\n\n\n\n\n\n\n\n\n(0.003)\n\n\n(0.010)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSoil Quality\n\n\n\n\n\n\n6.002***\n\n\n\n\n\n\n\n\n\n\n(0.050)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n10,000\n\n\n10,000\n\n\n10,000\n\n\n\n\nR2\n\n\n0.398\n\n\n0.997\n\n\n0.999\n\n\n\n\nAdjusted R2\n\n\n0.398\n\n\n0.997\n\n\n0.999\n\n\n\n\nResidual Std. Error\n\n\n21.323 (df = 9998)\n\n\n1.551 (df = 9997)\n\n\n0.996 (df = 9996)\n\n\n\n\nF Statistic\n\n\n6,604.218*** (df = 1; 9998)\n\n\n1,563,217.000*** (df = 2; 9997)\n\n\n2,532,263.000*** (df = 3; 9996)\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01"
   }
 ]

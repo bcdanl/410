@@ -11,8 +11,8 @@
   <meta name="generator" content="quarto-1.3.450">
 
   <meta name="author" content="Byeong-Hak Choe">
-  <meta name="dcterms.date" content="2026-01-26">
-  <title>Lecture 2</title>
+  <meta name="dcterms.date" content="2026-01-28">
+  <title>Lecture 3</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -328,8 +328,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Lecture 2</h1>
-  <p class="subtitle">Omitted Variable Bias; Bad Controls</p>
+  <h1 class="title">Lecture 3</h1>
+  <p class="subtitle">Panel Data Models</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -345,335 +345,478 @@ Byeong-Hak Choe
     </div>
 </div>
 
-  <p class="date">January 26, 2026</p>
+  <p class="date">January 28, 2026</p>
 </section>
 <section>
-<section id="omitted-variable-bias" class="title-slide slide level1 center" data-background-color="#1c4982">
-<h1>❌ <strong>Omitted Variable Bias</strong></h1>
+<section id="panel-data-models" class="title-slide slide level1 center" data-background-color="#1c4982">
+<h1>👥📈 Panel Data Models</h1>
 
 </section>
-<section id="omitted-variable-bias-1" class="slide level2">
-<h2>Omitted Variable Bias</h2>
+<section id="panel-data-models-pols-fe-twfe-re" class="slide level2">
+<h2>👥📈 Panel Data Models: POLS → FE → TWFE → RE</h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><strong>Learning goals</strong></strong></p>
+</div>
+<div class="callout-content">
 <ul>
-<li><p><strong>Omitted variable bias (OVB)</strong>: bias in the model because of omitting an important regressor that is correlated with existing regressor(s).</p></li>
-<li><p>Let’s use an orange juice (OJ) example to demonstrate the OVB.</p>
-<ul>
-<li>OJ price elasticity estimates vary with models, whether or not taking into account <code>brand</code> or <code>ad_status</code></li>
-</ul></li>
+<li>Understand what <em>panel data</em> is (and why we love it)</li>
+<li>Compare <strong>Pooled OLS</strong>, <strong>Fixed Effects</strong>, <strong>Two-Way FE</strong>, and <strong>Random Effects</strong></li>
+<li>Learn <em>what variation each model uses</em> and <em>what it controls for</em></li>
+<li>Understand <strong>country-clustered standard errors</strong> (and why we need them)</li>
 </ul>
-<table>
-<thead>
-<tr class="header">
-<th>Variable</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>sales</code></td>
-<td>Quantity of OJ cartons sold</td>
-</tr>
-<tr class="even">
-<td><code>price</code></td>
-<td>Price of OJ</td>
-</tr>
-<tr class="odd">
-<td><code>brand</code></td>
-<td>Brand of OJ</td>
-</tr>
-<tr class="even">
-<td><code>ad</code></td>
-<td>Advertisement status</td>
-</tr>
-</tbody>
-</table>
+</div>
+</div>
+</div>
 </section>
-<section id="short--and-long--regressions" class="slide level2">
-<h2>📏 Short- and Long- Regressions</h2>
+<section id="what-is-panel-data" class="slide level2">
+<h2>What is Panel Data?</h2>
+<p>Panel data tracks <strong>the same units</strong> over <strong>multiple time periods</strong>:</p>
 <ul>
-<li><p>OVB is the difference in beta estimates between short- and long-form regressions.</p></li>
-<li><p><strong>Short regression</strong>: The regression model with less regressors</p></li>
+<li><strong>Unit (<span class="math inline">\(i\)</span>)</strong>: country (USA, Korea, India, …)</li>
+<li><strong>Time (<span class="math inline">\(t\)</span>)</strong>: year (1990–2022, …)</li>
 </ul>
-<div style="display:block; margin:-25px;">
+<p><strong>Example (CO<span class="math inline">\(_2\)</span> panel):</strong> - Outcome: CO<span class="math inline">\(_2\)</span> emissions per capita - Unit ID: <code>iso_code</code> - Time ID: <code>year</code></p>
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Panel data gives us <strong>two kinds of variation</strong>: - <strong>Between variation</strong>: differences <em>across countries</em> - <strong>Within variation</strong>: changes <em>within a country over time</em></p>
+</div>
+</div>
+</div>
+</section>
+<section id="why-use-panel-models-not-only-pooled-ols" class="slide level2">
+<h2>Why Use Panel Models (Not Only Pooled OLS)?</h2>
+<div style="display:block; margin:-20px;">
 
 </div>
-<p><span class="math display">\[
-\begin{align}
-\log(\text{sales}_i) = \beta_0 + \beta_1\log(\text{price}_i) + \epsilon_i
-\end{align}
-\]</span></p>
+<p>Pooled OLS can be misleading because it ignores <strong>unobserved country differences</strong> that don’t change much over time, such as:</p>
 <ul>
-<li><strong>Long regression</strong>: The regression model that adds additional regressor(s) to the short one.</li>
+<li>🌍 geography / climate / natural resources</li>
+<li>🏭 industrial structure and history</li>
+<li>🏛️ institutions and regulation</li>
+<li>⚡ energy infrastructure and technology path</li>
+<li>🧑‍🤝‍🧑 culture and long-run lifestyle patterns</li>
 </ul>
-<div style="display:block; margin:-25px;">
+<div style="display:block; margin:-20px;">
 
 </div>
-<p><span class="math display">\[
-\begin{align}
-\log(\text{sales}_i) =&amp; \beta_0 + \beta_{1}\log(\text{price}_i) \\
-&amp;+ \beta_{2}\text{minute.maid}_i + \beta_{3}\text{tropicana}_i + \epsilon_i
-\end{align}
-\]</span></p>
+<p>These factors can affect <strong>both</strong></p>
 <ul>
-<li>OVB for <span class="math inline">\(\beta_1\)</span> is:</li>
+<li>emissions (or other outcomes) <strong>and</strong></li>
+<li>GDP per capita (or other regressors)</li>
 </ul>
-<div style="display:block; margin:-40px;">
+<div style="display:block; margin:-20px;">
 
 </div>
-<p><span class="math display">\[
-\text{OVB} = \widehat{\beta_{1}^{short}} - \widehat{\beta_{1}^{long}}
-\]</span></p>
+<p>➡️ That creates <strong>omitted variable bias</strong> when we use Pooled OLS.</p>
 </section>
-<section id="ovb-formula" class="slide level2">
-<h2>OVB formula</h2>
+<section id="unobserved-heterogeneity-the-core-issue" class="slide level2">
+<h2>🧠 Unobserved Heterogeneity (The Core Issue)</h2>
+<p>Suppose the true relationship includes an unobserved country component:</p>
+<p><span class="math display">\[
+y_{it} = \beta x_{it} + \underbrace{\alpha_i}_{\text{unobserved country trait}} + \epsilon_{it}
+\]</span></p>
+<p>If we ignore <span class="math inline">\(\alpha_i\)</span> and estimate Pooled OLS:</p>
+<p><span class="math display">\[
+y_{it} = \beta x_{it} + u_{it}
+\quad \text{where} \quad
+u_{it} = \alpha_i + \epsilon_{it}
+\]</span></p>
+<p>⚠️ If <span class="math inline">\(Cov(\alpha_i, x_{it}) \neq 0\)</span>, then:</p>
 <ul>
-<li><p>Consider the following short- and long- regressions:</p>
+<li><span class="math inline">\(x_{it}\)</span> is correlated with the error term</li>
+<li><strong>Pooled OLS is biased</strong></li>
+</ul>
+<div style="display:block; margin:-20px;">
+
+</div>
+<div class="fragment">
+<p>Fixed Effects is designed to solve exactly this problem.</p>
+</div>
+</section></section>
+<section>
+<section id="pooled-ols-pols" class="title-slide slide level1 center" data-background-color="#1c4982">
+<h1>1️⃣ Pooled OLS (POLS)</h1>
+
+</section>
+<section id="pooled-ols-baseline-model" class="slide level2">
+<h2>Pooled OLS: Baseline Model</h2>
+<p><strong>Model</strong> <span class="math display">\[
+y_{it} = \beta_0 + \beta_1 x_{it} + \epsilon_{it}
+\]</span></p>
+<p><strong>Meaning</strong></p>
 <ul>
-<li>Short: <span class="math inline">\(Y_i = \beta_0 + \beta_{1}^{short}X_1 + \epsilon_{short}\)</span><br>
-</li>
-<li>Long: <span class="math inline">\(Y_i = \beta_0 + \beta_{1}^{long}X_1 +\beta_{2}X_2 + \epsilon_{long}\)</span></li>
-</ul></li>
-<li><p>Error in short form can be represented as: <span class="math display">\[
-{\epsilon_{short}} = \beta_{2}X_2 + \epsilon_{long}
-\]</span></p></li>
-<li><p>If variable <span class="math inline">\(X_1\)</span> is <strong>correlated</strong> with <span class="math inline">\(X_2\)</span>, the following assumptions are violated in the <u>short regression</u> model:</p>
+<li>We pretend the dataset is one big cross-section</li>
+<li>We ignore the panel structure (country identity)</li>
+</ul>
+<p>Uses <strong>all variation</strong></p>
 <ul>
-<li>Errors are not correlated with regressors.</li>
-<li>Errors have a mean value of 0.</li>
-</ul></li>
+<li>between-country variation</li>
+<li>within-country variation</li>
 </ul>
 </section>
-<section id="how-does-an-ovb-happen-in-regression" class="slide level2">
-<h2>❓🔍 How does an OVB happen in regression?</h2>
+<section id="what-pols-is-really-doing" class="slide level2">
+<h2>What POLS is Really Doing</h2>
+<p>When you estimate POLS, the slope <span class="math inline">\(\beta_1\)</span> reflects a combination of:</p>
 <ul>
-<li>In the first stage, consider the relationship between <code>price</code> and <code>brand</code>:</li>
+<li><strong>Cross-country differences</strong> (rich vs.&nbsp;poor countries)</li>
+<li><strong>Within-country changes</strong> (one country over time)</li>
 </ul>
-<p><span class="math display">\[
-\log(\text{price}) = \beta_0 + \beta_1\text{minute_maid} + \beta_2\text{tropicana} + \epsilon_{1st}
-\]</span></p>
-<ul>
-<li><p>Then, calculate the residual: <span class="math display">\[
-\widehat{\epsilon_{1st}} = \log(\text{price}) - \widehat{\log(\text{price})}
-\]</span></p></li>
-<li><p>The residual represents the log of OJ price after its correlation with brand has been removed!</p></li>
-<li><p>In the second stage, regress <span class="math inline">\(\log(\text{sales})\)</span> on residual <span class="math inline">\(\widehat{\epsilon_{1st}}\)</span>:</p></li>
-</ul>
-<p><span class="math display">\[
-\log(\text{sales}) = \beta_0 + \beta_1\widehat{\epsilon_{1st}}  + \epsilon_{2nd}
-\]</span></p>
+<p>So interpretation becomes:</p>
+<blockquote>
+<p>“On average, countries with higher <span class="math inline">\(x\)</span> have higher (or lower) <span class="math inline">\(y\)</span>, <em>and/or</em> when <span class="math inline">\(x\)</span> rises over time, <span class="math inline">\(y\)</span> moves…”</p>
+</blockquote>
+<p>⚠️ That can be fine <em>only if</em> unobserved country traits don’t confound the relationship.</p>
 </section>
-<section id="regression-sensitivity-analysis" class="slide level2">
-<h2>Regression Sensitivity Analysis</h2>
+<section id="the-big-risk-in-pols-omitted-variable-bias" class="slide level2">
+<h2>⚠️ The Big Risk in POLS: Omitted Variable Bias</h2>
+<p>If richer countries also have <strong>different institutions</strong>, <strong>energy systems</strong>, or <strong>historical industrialization paths</strong>, then:</p>
 <ul>
-<li><p>Regression finds the coefficients on the part of each regressor that is <strong>independent</strong> from the other regressors.</p></li>
-<li><p>What can we do to deal with OVB problems?</p>
+<li><span class="math inline">\(x_{it}\)</span> (GDP per capita) is correlated with <span class="math inline">\(\alpha_i\)</span> (unobserved traits)</li>
+<li>Pooled OLS mixes together the effect of <span class="math inline">\(x_{it}\)</span> and the influence of <span class="math inline">\(\alpha_i\)</span>, so the estimated <span class="math inline">\(\beta\)</span> can be misleading.</li>
+</ul>
+<p>Panel methods help because they explicitly control for <span class="math inline">\(\alpha_i\)</span>.</p>
+</section></section>
+<section>
+<section id="fixed-effects-fe" class="title-slide slide level1 center" data-background-color="#1c4982">
+<h1>2️⃣ Fixed Effects (FE)</h1>
+
+</section>
+<section id="country-fixed-effects-fe" class="slide level2">
+<h2>Country Fixed Effects (FE)</h2>
+<p><strong>Model</strong> <span class="math display">\[
+y_{it} = \beta x_{it} + \alpha_i + \epsilon_{it}
+\]</span></p>
 <ul>
-<li>Because we can never be sure whether a given set of controls is enough to eliminate OVB, it’s important to ask how sensitive regression results are to changes in the list of controls.</li>
+<li><span class="math inline">\(\alpha_i\)</span> = <strong>country fixed effect</strong></li>
+<li>captures <strong>all time-invariant country characteristics</strong>
+<ul>
+<li>geography, long-run institutions, baseline culture, etc.</li>
 </ul></li>
+</ul>
+<p>FE answers a <strong>within-country</strong> question:</p>
+<blockquote>
+<p>“If a country’s <span class="math inline">\(x\)</span> changes over time, how does <span class="math inline">\(y\)</span> change within that same country?”</p>
+</blockquote>
+</section>
+<section id="what-fe-controls-for-automatically" class="slide level2">
+<h2>🔎 What FE Controls For (Automatically)</h2>
+<p>Because each country gets its own intercept <span class="math inline">\(\alpha_i\)</span>, FE controls for:</p>
+<ul>
+<li>any factor that is <strong>constant within a country</strong></li>
+<li>even if you do <strong>not</strong> observe or measure it</li>
+</ul>
+<p>Examples (time-invariant or very slow-moving):</p>
+<ul>
+<li>distance to equator</li>
+<li>landlocked status</li>
+<li>baseline political system</li>
+<li>deep energy infrastructure</li>
+</ul>
+<div style="display:block; margin:-15px;">
+
+</div>
+<p>📌 FE is powerful because it controls for <em>a lot</em> without measuring those things.</p>
+<!-- ## 🧮 The FE “Within Transformation” (Why It Works) -->
+<!-- FE can be estimated by subtracting each country’s time average: -->
+<!-- Define: -->
+<!-- - $\bar{y}_i = \frac{1}{T_i}\sum_t y_{it}$ -->
+<!-- - $\bar{x}_i = \frac{1}{T_i}\sum_t x_{it}$ -->
+<!-- Subtract the average from each observation: -->
+<!-- $$ -->
+<!-- (y_{it} - \bar{y}_i) = \beta (x_{it} - \bar{x}_i) + (\epsilon_{it} - \bar{\epsilon}_i) -->
+<!-- $$ -->
+<!-- Notice what disappears: -->
+<!-- - $\alpha_i$ drops out completely (because it is constant over time) -->
+<!-- So FE is basically **OLS on demeaned data**. -->
+</section>
+<section id="fe-uses-only-within-country-variation" class="slide level2">
+<h2>FE Uses Only Within-Country Variation</h2>
+<p>FE does <strong>not</strong> use differences between countries:</p>
+<ul>
+<li>It does not compare USA vs India levels</li>
+<li>It compares USA over time <em>to itself</em></li>
+</ul>
+<p>So FE is best when:</p>
+<ul>
+<li>the key confounding problem is <strong>time-invariant</strong></li>
+<li>we care about <strong>within-country causal interpretation</strong></li>
+</ul>
+<p>⚠️ FE cannot estimate effects of variables that <strong>do not change over time</strong>, e.g.:</p>
+<ul>
+<li><code>landlocked</code>, <code>continent</code>, <code>distance_to_equator</code></li>
 </ul>
 </section></section>
 <section>
-<section id="bad-controls" class="title-slide slide level1 center" data-background-color="#1c4982">
-<h1>🚫 <strong>Bad Controls</strong></h1>
+<section id="two-way-fixed-effects-twfe" class="title-slide slide level1 center" data-background-color="#1c4982">
+<h1>3️⃣ Two-Way Fixed Effects (TWFE)</h1>
 
 </section>
-<section id="bad-controls-when-controlling-more-makes-things-worse" class="slide level2">
-<h2>🚫 Bad Controls: When “Controlling More” Makes Things Worse</h2>
-<p>A common mistake in regression is thinking:</p>
-<blockquote>
-<p>✅ <em>“If I add more controls, the model must get better.”</em></p>
-</blockquote>
-<p>But some controls are <strong>bad controls</strong> — they can actually <strong>bias</strong> your estimate.</p>
-</section>
-<section id="what-is-a-bad-control" class="slide level2">
-<h2>🚫 What is a “Bad Control”?</h2>
-<p>A <strong>bad control</strong> is a variable that:</p>
+<section id="two-way-fixed-effects-country-year-fe" class="slide level2">
+<h2>Two-Way Fixed Effects (Country + Year FE)</h2>
+<p><strong>Model</strong> <span class="math display">\[
+y_{it} = \beta x_{it} + \alpha_i + \gamma_t + \epsilon_{it}
+\]</span></p>
 <ul>
-<li>is <strong>influenced by</strong> the explanatory variable <span class="math inline">\(x\)</span>, or</li>
-<li>is part of the <strong>process that links</strong> <span class="math inline">\(x\)</span> to the outcome <span class="math inline">\(y\)</span></li>
+<li><span class="math inline">\(\alpha_i\)</span>: country FE (time-invariant traits)</li>
+<li><span class="math inline">\(\gamma_t\)</span>: year FE (global shocks / common trends)</li>
 </ul>
-<p>Including a bad control can “control away” the variation in <span class="math inline">\(y\)</span> that is connected to <span class="math inline">\(x\)</span>, making the estimated relationship look smaller than it really is.</p>
-</section>
-<section id="intuition-what-should-a-good-control-look-like" class="slide level2">
-<h2>🧠 Intuition: What Should a “Good Control” Look Like?</h2>
-<p>A <strong>good control</strong> is a variable that:</p>
-<p>✅ helps explain variation in the outcome <span class="math inline">\(y\)</span><br>
-✅ is related to the explanatory variable <span class="math inline">\(x\)</span><br>
-✅ is <strong>not a consequence of <span class="math inline">\(x\)</span></strong> (it exists “in the background”)</p>
-<p>That’s the key difference.</p>
-</section>
-<section id="example-1-education-and-wages" class="slide level2">
-<h2>🔗 Example 1: Education and Wages 💼</h2>
-<p>Suppose we want to estimate:</p>
+<p>TWFE answers:</p>
 <blockquote>
-<p>Does education increase wages?</p>
+<p>“Within a country, how does <span class="math inline">\(y\)</span> change with <span class="math inline">\(x\)</span>, <em>after removing global year shocks</em>?”</p>
 </blockquote>
-<h3 id="good-regression-idea">✅ Good regression idea:</h3>
-<p><span class="math display">\[
-wage_i = \beta_0 + \beta_1 education_i + u_i
-\]</span></p>
-<p>Maybe add good controls like:</p>
+</section>
+<section id="why-add-year-fixed-effects" class="slide level2">
+<h2>🌍 Why Add Year Fixed Effects?</h2>
+<p>Year effects capture shocks that hit many countries at once:</p>
 <ul>
-<li>age</li>
-<li>gender</li>
-<li>region</li>
-<li>parent education (if available)</li>
+<li>🛢️ oil price spikes</li>
+<li>📉 global recessions (e.g., 2008)</li>
+<li>🦠 pandemics</li>
+<li>💡 global technology trends</li>
+<li>🌐 global climate agreements</li>
+</ul>
+<p>If we don’t include <span class="math inline">\(\gamma_t\)</span>, the regression may mistakenly attribute these common shocks to <span class="math inline">\(x_{it}\)</span>.</p>
+<p>Year FE helps remove this confounding.</p>
+</section></section>
+<section>
+<section id="random-effects-re" class="title-slide slide level1 center" data-background-color="#1c4982">
+<h1>4️⃣ Random Effects (RE)</h1>
+
+</section>
+<section id="random-effects-re-1" class="slide level2">
+<h2>Random Effects (RE)</h2>
+<p><strong>Model</strong> <span class="math display">\[
+y_{it} = \beta x_{it} + \alpha_i + \epsilon_{it}
+\]</span></p>
+<p>Same structure as FE… but different assumption:</p>
+<ul>
+<li>RE treats <span class="math inline">\(\alpha_i\)</span> as <strong>random</strong></li>
+<li>and assumes it is <strong>uncorrelated</strong> with regressors:</li>
+</ul>
+<p><span class="math display">\[
+Cov(\alpha_i, x_{it}) = 0
+\]</span></p>
+<p>If that assumption holds:</p>
+<ul>
+<li>RE is <strong>more efficient</strong> than FE (smaller standard errors)</li>
+<li>RE uses both within and between variation</li>
 </ul>
 </section>
-<section id="bad-control-occupation-or-job-type" class="slide level2">
-<h2>🚫 Bad Control: Occupation or Job Type</h2>
-<p>But what if we control for <strong>occupation</strong>?</p>
-<p><span class="math display">\[
-wage_i = \beta_0 + \beta_1 education_i + \beta_2 occupation_i + u_i
-\]</span></p>
-<p>Why is that bad?</p>
-<div class="fragment">
-<p>Because education affects occupation:</p>
-<p><span class="math display">\[
-education \rightarrow occupation \rightarrow wage
-\]</span></p>
-<p>So controlling for occupation:</p>
-<p>🚫 blocks part of the education effect<br>
-→ we <strong>underestimate</strong> the impact of education</p>
-</div>
+<section id="when-re-fails-bias-risk" class="slide level2">
+<h2>⚠️ When RE Fails (Bias Risk)</h2>
+<p>If <span class="math inline">\(Cov(\alpha_i, x_{it}) \neq 0\)</span>, then RE is biased.</p>
+<p>In many economic settings, this correlation is very plausible:</p>
+<ul>
+<li>richer countries may also have better institutions (inside <span class="math inline">\(\alpha_i\)</span>)</li>
+<li>energy system differences affect both GDP and emissions</li>
+</ul>
+<p>So FE is often the safer default in applied work.</p>
+</section></section>
+<section>
+<section id="standard-errors-in-panel-data" class="title-slide slide level1 center" data-background-color="#1c4982">
+<h1>🧠 Standard Errors in Panel Data</h1>
+
 </section>
-<section id="example-2-fertilizer-plant-height-and-crop-yield" class="slide level2">
-<h2>🌱 Example 2: Fertilizer, Plant Height, and Crop Yield</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>We want to estimate:</p>
+<section id="why-we-cluster-standard-errors-country-clustered-se" class="slide level2">
+<h2>🧠 Why We Cluster Standard Errors (Country-Clustered SE)</h2>
+<h3 id="the-problem-errors-are-correlated-within-countries">The problem: errors are correlated within countries</h3>
+<p>In panel data, observations inside a country are rarely independent:</p>
+<ul>
+<li>shocks persist over time</li>
+<li>policies change gradually</li>
+<li>measurement errors repeat</li>
+<li>emissions and GDP move smoothly</li>
+</ul>
+<p>That means residuals may satisfy:</p>
+<p><span class="math display">\[
+Cov(\epsilon_{it}, \epsilon_{is}) \neq 0 \quad \text{for } t \neq s
+\]</span></p>
+<p>If we ignore this, standard errors are often: ❌ too small → false “significance”</p>
+</section>
+<section id="cluster-robust-standard-errors-by-country" class="slide level2">
+<h2>Cluster-Robust Standard Errors (by Country)</h2>
+<p>Country-clustered SEs allow:</p>
+<ul>
+<li><strong>arbitrary correlation over time</strong> within a country</li>
+<li><strong>heteroskedasticity</strong> across countries</li>
+</ul>
+<p>Interpretation:</p>
 <blockquote>
-<p><strong>Does fertilizer increase crop yield?</strong></p>
+<p>“We allow any kind of serial correlation within each country.”</p>
 </blockquote>
-<p>But <code>fertilizer</code> changes the plant’s growth:</p>
-<p><span class="math display">\[
-fertilizer \rightarrow height
-\]</span></p>
-<p>And <code>height</code> is strongly related to yield:</p>
-<p><span class="math display">\[
-height \rightarrow yield
-\]</span></p>
-</div><div class="column" style="width:50%;">
-<p>Also, some plots are simply better than others because of <code>soil quality</code>:</p>
-<p><span class="math display">\[
-\begin{align}
-&amp;soil\ quality \rightarrow height\\
-&amp;soil\ quality \rightarrow yield
-\end{align}
-\]</span></p>
-<p>So <strong>soil quality</strong> is a hidden factor that affects both height and yield.</p>
-</div>
-</div>
+<p>In <strong>R (<code>plm</code>)</strong>, this is typically implemented using robust VCOV options, e.g.&nbsp;<code>vcovHC()</code> with clustering by group.</p>
 </section>
-<section id="bad-control-plant-height" class="slide level2">
-<h2>🚫 Bad Control: Plant Height</h2>
-<p>But what if we control for <strong>plant height</strong>?</p>
-<p><span class="math display">\[
-yield_i = \beta_0 + \beta_1 fertilizer_i + \beta_2 height_i + u_i
-\]</span></p>
-<p>Why is that bad?</p>
-<div class="fragment">
-<p>Because fertilizer affects plant height:</p>
-<p><span class="math display">\[
-fertilizer \rightarrow height \rightarrow yield
-\]</span></p>
-<p>So controlling for height:</p>
-<p>🚫 blocks an important pathway through which fertilizer raises yield<br>
-→ we <strong>underestimate</strong> the impact of fertilizer</p>
-</div>
-</section>
-<section id="good-controls-vs.-bad-controls-big-picture" class="slide level2">
-<h2>✅ Good Controls vs.&nbsp;Bad Controls (Big Picture)</h2>
+<section id="model-summary-what-each-one-controls-for" class="slide level2">
+<h2>Model Summary (What Each One Controls For)</h2>
 <table>
 <colgroup>
+<col style="width: 13%">
 <col style="width: 33%">
-<col style="width: 33%">
-<col style="width: 33%">
+<col style="width: 24%">
+<col style="width: 28%">
 </colgroup>
 <thead>
 <tr class="header">
-<th>Type</th>
-<th>Example</th>
-<th>Why it matters</th>
+<th>Model</th>
+<th>Controls for country traits?</th>
+<th>Controls for year shocks?</th>
+<th>Uses between-country variation?</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>✅ Good control</td>
-<td>Age, gender, region, baseline ability</td>
-<td>Helps reduce omitted variable bias by holding constant <strong>pre-existing differences</strong></td>
+<td>Pooled OLS</td>
+<td>❌ No</td>
+<td>❌ No</td>
+<td>Yes</td>
 </tr>
 <tr class="even">
-<td>🚫 Bad control</td>
-<td>Occupation (when studying education → wages)</td>
-<td>Can remove part of the education effect by controlling for something education influences</td>
+<td>Country FE</td>
+<td>Yes (time-invariant)</td>
+<td>❌ No</td>
+<td>❌ No</td>
 </tr>
 <tr class="odd">
-<td>🚫 Bad control</td>
-<td>Plant height (when studying fertilizer → yield)</td>
-<td>Can remove part of the fertilizer effect by controlling for something fertilizer influences</td>
+<td>Two-way FE</td>
+<td>Yes (time-invariant)</td>
+<td>Yes</td>
+<td>❌ No</td>
+</tr>
+<tr class="even">
+<td>Random Effects</td>
+<td>Yes (modeled as random intercept)</td>
+<td>Optional</td>
+<td>Yes</td>
 </tr>
 </tbody>
 </table>
 </section>
-<section id="why-bad-controls-are-dangerous" class="slide level2">
-<h2>🎯 Why Bad Controls Are Dangerous</h2>
-<p>Bad controls can cause two problems:</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<h3 id="block-part-of-the-true-effect">1) ❌ Block part of the true effect</h3>
-<p>You unintentionally remove the pathway:</p>
-<p><span class="math display">\[
-x \rightarrow control \rightarrow y
-\]</span></p>
-<p>So the estimated <span class="math inline">\(\hat{\beta}_1\)</span> becomes <strong>too small</strong>.</p>
-</div><div class="column" style="width:50%;">
-<h3 id="create-new-bias">2) ❌ Create new bias</h3>
-<p>Sometimes the control is influenced by <strong>both</strong> <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>:</p>
-<p><span class="math display">\[
-x \rightarrow control \leftarrow y
-\]</span></p>
-<p>Then controlling for it creates a <strong>fake association</strong> between <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span><br>
-even if none existed before.</p>
+<section id="final-takeaway-panel-models" class="slide level2">
+<h2>Final Takeaway (Panel Models)</h2>
+<p>We use panel data models to estimate relationships <strong>within units over time</strong>, while controlling for:</p>
+<ul>
+<li><strong>hidden country characteristics</strong> (<span class="math inline">\(\alpha_i\)</span>)</li>
+<li><strong>global year shocks</strong> (<span class="math inline">\(\gamma_t\)</span>)</li>
+</ul>
+<p>And we use <strong>clustered SEs</strong> because panel residuals are often correlated within each unit.</p>
+</section></section>
+<section>
+<section id="environmental-kuznets-curve-ekc-growth-vs.-pollution" class="title-slide slide level1 center" data-background-color="#1c4982">
+<h1>🌿 Environmental Kuznets Curve (EKC): Growth vs.&nbsp;Pollution</h1>
+
+</section>
+<section id="environmental-kuznets-curve-ekc-growth-vs.-pollution-1" class="slide level2">
+<h2>🌿 Environmental Kuznets Curve (EKC): Growth vs.&nbsp;Pollution</h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Now we add the key EKC idea: a <strong>nonlinear relationship</strong> between income and pollution.</p>
+</div>
 </div>
 </div>
 </section>
-<section id="quick-rule-should-we-control-for-it" class="slide level2">
-<h2>✅ Quick Rule: Should We Control for It?</h2>
-<p>Before adding a variable <span class="math inline">\(z\)</span> as a control, ask:</p>
-<ul>
-<li><strong>Does <span class="math inline">\(z\)</span> exist <em>before</em> <span class="math inline">\(x\)</span> is determined?</strong><br>
-✅ If yes → usually safe to control for</li>
-</ul>
-<div style="display:block; margin:25px;">
+<section id="what-is-the-ekc" class="slide level2">
+<h2>What is the EKC?</h2>
+<p>The <strong>Environmental Kuznets Curve (EKC)</strong> hypothesis suggests:</p>
+<blockquote>
+<p>As a country becomes richer, pollution first <strong>increases</strong>,<br>
+but after some income level, pollution <strong>decreases</strong>.</p>
+</blockquote>
+<p>It is often described as an <strong>inverted-U</strong> relationship between: - pollution (e.g., CO<span class="math inline">\(_2\)</span> per capita) - income (GDP per capita)</p>
+</section>
+<section id="draw-the-ekc-curve-inverted-u" class="slide level2">
+<h2>📉📈 Draw the EKC Curve (Inverted-U)</h2>
 
-</div>
+<img data-src="danl-410-lec-03-2026-0128_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
+<section id="ekc-panel-regression-country-year-data" class="slide level2">
+<h2>EKC Panel Regression (Country-Year Data)</h2>
+<p>A common EKC specification:</p>
+<p><span class="math display">\[
+\log(CO2pc_{it})
+=
+\beta_1 \log(GDPpc_{it})
++
+\beta_2 \left[\log(GDPpc_{it})\right]^2
++
+\alpha_i
++
+\gamma_t
++
+\epsilon_{it}
+\]</span></p>
 <ul>
-<li><strong>Does <span class="math inline">\(z\)</span> change <em>after</em> <span class="math inline">\(x\)</span> changes?</strong><br>
-🚫 If yes → it may be a <strong>bad control</strong></li>
-</ul>
-<div style="display:block; margin:25px;">
-
-</div>
-<ul>
-<li><strong>Is <span class="math inline">\(z\)</span> a pre-existing characteristic that is related to both <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span>?</strong><br>
-✅ If yes → it is often a <strong>useful control</strong></li>
+<li><span class="math inline">\(i\)</span>: country</li>
+<li><span class="math inline">\(t\)</span>: year</li>
+<li><span class="math inline">\(\alpha_i\)</span>: country fixed effects</li>
+<li><span class="math inline">\(\gamma_t\)</span>: year fixed effects</li>
 </ul>
 </section>
-<section id="summary-more-controls-better" class="slide level2">
-<h2>🧾 Summary: “More Controls” ≠ “Better”</h2>
+<section id="how-to-interpret-ekc-coefficients" class="slide level2">
+<h2>How to Interpret EKC Coefficients</h2>
 <ul>
-<li>✅ Controls are helpful when they fix omitted variable bias<br>
-</li>
-<li>🚫 Controls are harmful when they “control away” the effect you want</li>
+<li><p>If <span class="math inline">\(\beta_1 &gt; 0\)</span> and <span class="math inline">\(\beta_2 &lt; 0\)</span><br>
+emissions rise at first, then eventually fall<br>
+→ <strong>EKC pattern (inverted-U)</strong></p></li>
+<li><p>If <span class="math inline">\(\beta_2 = 0\)</span><br>
+→ relationship is <strong>linear</strong></p></li>
+<li><p>If <span class="math inline">\(\beta_2 &gt; 0\)</span><br>
+→ <strong>U-shape</strong> (emissions accelerate with income)</p></li>
 </ul>
-<div style="display:block; margin:25px;">
-
-</div>
+</section>
+<section id="ekc-turning-point-income-level" class="slide level2">
+<h2>EKC Turning Point (Income Level)</h2>
+<p>The turning point occurs where the slope becomes zero:</p>
+<p><span class="math display">\[
+\frac{\partial \log(CO2pc)}{\partial \log(GDPpc)}
+= \beta_1 + 2\beta_2 \log(GDPpc) = 0
+\]</span></p>
+<p>So the turning point in log income is:</p>
+<p><span class="math display">\[
+\log(GDPpc^*) = -\frac{\beta_1}{2\beta_2}
+\]</span></p>
+<p>Convert back to the income level:</p>
+<p><span class="math display">\[
+GDPpc^* = \exp\left(-\frac{\beta_1}{2\beta_2}\right)
+\]</span></p>
+<!-- Interpretation: -->
+<p>At <span class="math inline">\(GDPpc^*\)</span>, CO<span class="math inline">\(_2\)</span> per capita stops rising and begins falling (if EKC holds).</p>
+</section>
+<section id="intuition-why-might-ekc-happen" class="slide level2">
+<h2>Intuition: Why Might EKC Happen?</h2>
+<p>As income rises, countries often experience:</p>
 <ul>
-<li><strong>The goal is not to control for everything.</strong><br>
-</li>
-<li>The goal is to control for the <strong>right things</strong>.</li>
+<li><strong>Scale effect</strong> 📈: more production → more emissions (early stage)</li>
+<li><strong>Composition effect</strong> 🏗️➡️🧑‍💼: shift from industry → services (middle stage)</li>
+<li><strong>Technique effect</strong> 🧪⚡: cleaner technology + regulation (later stage)</li>
+</ul>
+<p>EKC is the balance of: - growth pressures that increase emissions - development forces that can reduce emissions</p>
+</section>
+<section id="important-caveat-for-co_2" class="slide level2">
+<h2>Important Caveat for CO<span class="math inline">\(_2\)</span></h2>
+<p>EKC may be weaker for CO<span class="math inline">\(_2\)</span> than for local air pollutants because:</p>
+<ul>
+<li>CO<span class="math inline">\(_2\)</span> is deeply tied to <strong>energy systems</strong></li>
+<li>benefits are <strong>global</strong>, costs are often local</li>
+<li>emissions may shift across borders via trade (<strong>carbon leakage</strong>)</li>
+</ul>
+<p>So EKC is a <strong>hypothesis to test</strong>, not a guaranteed pattern.</p>
+</section>
+<section id="final-takeaway-ekc" class="slide level2">
+<h2>Final Takeaway (EKC)</h2>
+<p>EKC tests whether pollution follows an <strong>inverted-U</strong> with income.</p>
+<p>Panel FE/TWFE help make that test more credible by controlling for:</p>
+<ul>
+<li>country traits (<span class="math inline">\(\alpha_i\)</span>)</li>
+<li>year shocks (<span class="math inline">\(\gamma_t\)</span>)</li>
 </ul>
 
 <div class="footer footer-default">

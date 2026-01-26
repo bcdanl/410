@@ -1,6 +1,6 @@
 ---
 title: Lecture 2
-subtitle: Omitted Variable Bias; Panel Data Models
+subtitle: Omitted Variable Bias; Bad Controls
 format:
   clean-revealjs:
     self-contained: false
@@ -168,494 +168,225 @@ $$
 controls is enough to eliminate OVB, it’s important to ask how sensitive regression results are to changes in the list of controls.
 
 
-# 👥📈 Panel Data Models {background-color="#1c4982"}
+# 🚫 **Bad Controls**  {background-color="#1c4982"}
 
-## 👥📈 Panel Data Models: POLS → FE → TWFE → RE
+## 🚫 Bad Controls: When “Controlling More” Makes Things Worse
 
-::: {.callout-note}
-## **Learning goals**
+A common mistake in regression is thinking:
 
-- Understand what *panel data* is (and why we love it)
-- Compare **Pooled OLS**, **Fixed Effects**, **Two-Way FE**, and **Random Effects**
-- Learn *what variation each model uses* and *what it controls for*
-- Understand **country-clustered standard errors** (and why we need them)
-:::
+> ✅ *"If I add more controls, the model must get better."*
+
+But some controls are **bad controls** — they can actually **bias** your estimate.
 
 
+## 🚫 What is a "Bad Control"?
 
-## What is Panel Data?
+A **bad control** is a variable that:
 
-Panel data tracks **the same units** over **multiple time periods**:
+- is **influenced by** the explanatory variable $x$, or
+- is part of the **process that links** $x$ to the outcome $y$
 
-- **Unit ($i$)**: country (USA, Korea, India, …)
-- **Time ($t$)**: year (1990–2022, …)
-
-**Example (CO$_2$ panel):**
-- Outcome: CO$_2$ emissions per capita
-- Unit ID: `iso_code`
-- Time ID: `year`
-
-::: {.callout-tip}
-Panel data gives us **two kinds of variation**:
-- **Between variation**: differences *across countries*
-- **Within variation**: changes *within a country over time*
-:::
+Including a bad control can “control away” the variation in $y$ that is connected to $x$,
+making the estimated relationship look smaller than it really is.
 
 
+## 🧠 Intuition: What Should a "Good Control" Look Like?
 
-## Why Use Panel Models (Not Only Pooled OLS)?
+A **good control** is a variable that:
 
-<div style="display:block; margin:-20px;"></div>
-Pooled OLS can be misleading because it ignores **unobserved country differences** that don’t change much over time, such as:
+✅ helps explain variation in the outcome $y$  
+✅ is related to the explanatory variable $x$  
+✅ is **not a consequence of $x$** (it exists “in the background”)
 
-- 🌍 geography / climate / natural resources
-- 🏭 industrial structure and history
-- 🏛️ institutions and regulation
-- ⚡ energy infrastructure and technology path
-- 🧑‍🤝‍🧑 culture and long-run lifestyle patterns
-
-<div style="display:block; margin:-20px;"></div>
-These factors can affect **both**
-
-- emissions (or other outcomes) **and**
-- GDP per capita (or other regressors)
-
-<div style="display:block; margin:-20px;"></div>
-➡️ That creates **omitted variable bias** when we use Pooled OLS.
+That’s the key difference.
 
 
 
-## 🧠 Unobserved Heterogeneity (The Core Issue)
+## 🔗 Example 1: Education and Wages 💼
 
-Suppose the true relationship includes an unobserved country component:
+Suppose we want to estimate:
 
+> Does education increase wages?
+
+### ✅ Good regression idea:
 $$
-y_{it} = \beta x_{it} + \underbrace{\alpha_i}_{\text{unobserved country trait}} + \epsilon_{it}
+wage_i = \beta_0 + \beta_1 education_i + u_i
 $$
 
-If we ignore $\alpha_i$ and estimate Pooled OLS:
+Maybe add good controls like:
+
+- age
+- gender
+- region
+- parent education (if available)
+
+
+
+## 🚫 Bad Control: Occupation or Job Type
+
+But what if we control for **occupation**?
 
 $$
-y_{it} = \beta x_{it} + u_{it}
-\quad \text{where} \quad
-u_{it} = \alpha_i + \epsilon_{it}
+wage_i = \beta_0 + \beta_1 education_i + \beta_2 occupation_i + u_i
 $$
 
-⚠️ If $Cov(\alpha_i, x_{it}) \neq 0$, then:
-
-- $x_{it}$ is correlated with the error term
-- **Pooled OLS is biased**
-
-<div style="display:block; margin:-20px;"></div>
+Why is that bad?
 
 ::: fragment
-Fixed Effects is designed to solve exactly this problem.
+Because education affects occupation:
+
+$$
+education \rightarrow occupation \rightarrow wage
+$$
+
+So controlling for occupation:
+
+🚫 blocks part of the education effect  
+→ we **underestimate** the impact of education
 
 :::
 
+## 🌱 Example 2: Fertilizer, Plant Height, and Crop Yield
 
-# 1️⃣ Pooled OLS (POLS) {background-color="#1c4982"}
 
-## Pooled OLS: Baseline Model
+:::: {.columns}
 
-**Model**
-$$
-y_{it} = \beta_0 + \beta_1 x_{it} + \epsilon_{it}
-$$
+::: {.column width="50%"}
 
-**Meaning**
+We want to estimate:
 
-- We pretend the dataset is one big cross-section
-- We ignore the panel structure (country identity)
+> **Does fertilizer increase crop yield?**
 
-Uses **all variation**
-
-- between-country variation
-- within-country variation
-
-
-
-## What POLS is Really Doing
-
-When you estimate POLS, the slope $\beta_1$ reflects a combination of:
-
-- **Cross-country differences** (rich vs. poor countries)
-- **Within-country changes** (one country over time)
-
-So interpretation becomes:
-
-> “On average, countries with higher $x$ have higher (or lower) $y$, *and/or* when $x$ rises over time, $y$ moves…”
-
-⚠️ That can be fine *only if* unobserved country traits don’t confound the relationship.
-
-
-
-## ⚠️ The Big Risk in POLS: Omitted Variable Bias
-
-If richer countries also have **different institutions**, **energy systems**, or **historical industrialization paths**, then:
-
-- $x_{it}$ (GDP per capita) is correlated with $\alpha_i$ (unobserved traits)
--	Pooled OLS mixes together the effect of $x_{it}$ and the influence of $\alpha_i$, so the estimated $\beta$ can be misleading.
-
-
-Panel methods help because they explicitly control for $\alpha_i$.
-
-
-
-# 2️⃣ Fixed Effects (FE) {background-color="#1c4982"}
-
-## Country Fixed Effects (FE)
-
-**Model**
-$$
-y_{it} = \beta x_{it} + \alpha_i + \epsilon_{it}
-$$
-
-- $\alpha_i$ = **country fixed effect**
-- captures **all time-invariant country characteristics**
-  - geography, long-run institutions, baseline culture, etc.
-
-FE answers a **within-country** question:
-
-> “If a country’s $x$ changes over time, how does $y$ change within that same country?”
-
-
-
-## 🔎 What FE Controls For (Automatically)
-
-Because each country gets its own intercept $\alpha_i$, FE controls for:
-
-- any factor that is **constant within a country**
-- even if you do **not** observe or measure it
-
-Examples (time-invariant or very slow-moving):
-
-- distance to equator
-- landlocked status
-- baseline political system
-- deep energy infrastructure
-
-<div style="display:block; margin:-15px;"></div>
-
-📌 FE is powerful because it controls for *a lot* without measuring those things.
-
-
-
-<!-- ## 🧮 The FE “Within Transformation” (Why It Works) -->
-
-<!-- FE can be estimated by subtracting each country’s time average: -->
-
-<!-- Define: -->
-
-<!-- - $\bar{y}_i = \frac{1}{T_i}\sum_t y_{it}$ -->
-<!-- - $\bar{x}_i = \frac{1}{T_i}\sum_t x_{it}$ -->
-
-<!-- Subtract the average from each observation: -->
-
-<!-- $$ -->
-<!-- (y_{it} - \bar{y}_i) = \beta (x_{it} - \bar{x}_i) + (\epsilon_{it} - \bar{\epsilon}_i) -->
-<!-- $$ -->
-
-<!-- Notice what disappears: -->
-
-<!-- - $\alpha_i$ drops out completely (because it is constant over time) -->
-
-<!-- So FE is basically **OLS on demeaned data**. -->
-
-
-
-## FE Uses Only Within-Country Variation
-
-FE does **not** use differences between countries:
-
-- It does not compare USA vs India levels
-- It compares USA over time *to itself*
-
-So FE is best when:
-
-- the key confounding problem is **time-invariant**
-- we care about **within-country causal interpretation**
-
-⚠️ FE cannot estimate effects of variables that **do not change over time**, e.g.:
-
-- `landlocked`, `continent`, `distance_to_equator`
-
-
-
-# 3️⃣ Two-Way Fixed Effects (TWFE) {background-color="#1c4982"}
-
-## Two-Way Fixed Effects (Country + Year FE)
-
-**Model**
-$$
-y_{it} = \beta x_{it} + \alpha_i + \gamma_t + \epsilon_{it}
-$$
-
-- $\alpha_i$: country FE (time-invariant traits)
-- $\gamma_t$: year FE (global shocks / common trends)
-
-TWFE answers:
-
-> “Within a country, how does $y$ change with $x$, *after removing global year shocks*?”
-
-
-
-## 🌍 Why Add Year Fixed Effects?
-
-Year effects capture shocks that hit many countries at once:
-
-- 🛢️ oil price spikes
-- 📉 global recessions (e.g., 2008)
-- 🦠 pandemics
-- 💡 global technology trends
-- 🌐 global climate agreements
-
-If we don’t include $\gamma_t$, the regression may mistakenly attribute these common shocks to $x_{it}$.
-
-Year FE helps remove this confounding.
-
-
-
-# 4️⃣ Random Effects (RE) {background-color="#1c4982"}
-
-## Random Effects (RE)
-
-**Model**
-$$
-y_{it} = \beta x_{it} + \alpha_i + \epsilon_{it}
-$$
-
-Same structure as FE… but different assumption:
-
-- RE treats $\alpha_i$ as **random**
-- and assumes it is **uncorrelated** with regressors:
+But `fertilizer` changes the plant’s growth:
 
 $$
-Cov(\alpha_i, x_{it}) = 0
+fertilizer \rightarrow height
 $$
 
-If that assumption holds:
-
-- RE is **more efficient** than FE (smaller standard errors)
-- RE uses both within and between variation
-
-
-
-## ⚠️ When RE Fails (Bias Risk)
-
-If $Cov(\alpha_i, x_{it}) \neq 0$, then RE is biased.
-
-In many economic settings, this correlation is very plausible:
-
-- richer countries may also have better institutions (inside $\alpha_i$)
-- energy system differences affect both GDP and emissions
-
-So FE is often the safer default in applied work.
-
-
-
-
-
-
-# 🧠 Standard Errors in Panel Data  {background-color="#1c4982"}
-
-## 🧠 Why We Cluster Standard Errors (Country-Clustered SE)
-
-### The problem: errors are correlated within countries
-
-In panel data, observations inside a country are rarely independent:
-
-- shocks persist over time
-- policies change gradually
-- measurement errors repeat
-- emissions and GDP move smoothly
-
-That means residuals may satisfy:
+And `height` is strongly related to yield:
 
 $$
-Cov(\epsilon_{it}, \epsilon_{is}) \neq 0 \quad \text{for } t \neq s
+height \rightarrow yield
 $$
 
-If we ignore this, standard errors are often:
-❌ too small → false “significance”
-
-
-
-## Cluster-Robust Standard Errors (by Country)
-
-Country-clustered SEs allow:
-
-- **arbitrary correlation over time** within a country
-- **heteroskedasticity** across countries
-
-Interpretation:
-
-> “We allow any kind of serial correlation within each country.”
-
-In **R (`plm`)**, this is typically implemented using robust VCOV options, e.g. `vcovHC()` with clustering by group.
-
-
-
-## Model Summary (What Each One Controls For)
-
-| Model          | Controls for country traits?        | Controls for year shocks? | Uses between-country variation? |
-|---------------|--------------------------------------|----------------------------|---------------------------------|
-| Pooled OLS     | ❌ No                                | ❌ No                      | Yes                          |
-| Country FE     | Yes (time-invariant)              | ❌ No                      | ❌ No                           |
-| Two-way FE     | Yes (time-invariant)              | Yes                     | ❌ No                           |
-| Random Effects | Yes (modeled as random intercept) | Optional                | Yes                          |
-
-
-## Final Takeaway (Panel Models)
-
-We use panel data models to estimate relationships **within units over time**, while controlling for:
-
-- **hidden country characteristics** ($\alpha_i$)
-- **global year shocks** ($\gamma_t$)
-
-And we use **clustered SEs** because panel residuals are often correlated within each unit.
-
-
-
-# 🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution  {background-color="#1c4982"}
-
-## 🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution
-
-::: {.callout-note}
-Now we add the key EKC idea: a **nonlinear relationship** between income and pollution.
 :::
 
+::: {.column width="50%"}
 
-
-## What is the EKC?
-
-The **Environmental Kuznets Curve (EKC)** hypothesis suggests:
-
-> As a country becomes richer, pollution first **increases**,  
-> but after some income level, pollution **decreases**.
-
-It is often described as an **inverted-U** relationship between:
-- pollution (e.g., CO$_2$ per capita)
-- income (GDP per capita)
-
-
-
-## 📉📈 Draw the EKC Curve (Inverted-U)
-
-```{r}
-# A simple EKC-shaped curve (illustration only)
-x <- seq(1, 10, length.out = 200)          # "log income"
-y <- -0.25 * (x - 6)^2 + 6                 # inverted-U shape
-
-plot(x, y,
-     type = "l",
-     xlab = "Income (e.g., log GDP per capita)",
-     ylab = "Pollution (e.g., CO2 per capita)",
-     main = "Environmental Kuznets Curve (EKC): Inverted-U")
-abline(v = 6, lty = 2)
-text(6, max(y), "Turning point", pos = 4)
-```
-
-
-
-## EKC Panel Regression (Country-Year Data)
-
-A common EKC specification:
+Also, some plots are simply better than others because of `soil quality`:
 
 $$
-\log(CO2pc_{it})
-=
-\beta_1 \log(GDPpc_{it})
-+
-\beta_2 \left[\log(GDPpc_{it})\right]^2
-+
-\alpha_i
-+
-\gamma_t
-+
-\epsilon_{it}
+\begin{align}
+&soil\ quality \rightarrow height\\
+&soil\ quality \rightarrow yield
+\end{align}
 $$
 
-- $i$: country
-- $t$: year
-- $\alpha_i$: country fixed effects
-- $\gamma_t$: year fixed effects
+So **soil quality** is a hidden factor that affects both height and yield.
 
+:::
+::::
 
+## 🚫 Bad Control: Plant Height
 
-## How to Interpret EKC Coefficients
-
-- If $\beta_1 > 0$ and $\beta_2 < 0$  
-  emissions rise at first, then eventually fall  
-  → **EKC pattern (inverted-U)**
-
-- If $\beta_2 = 0$  
-  → relationship is **linear**
-
-- If $\beta_2 > 0$  
-  → **U-shape** (emissions accelerate with income)
-
-
-
-## EKC Turning Point (Income Level)
-
-The turning point occurs where the slope becomes zero:
+But what if we control for **plant height**?
 
 $$
-\frac{\partial \log(CO2pc)}{\partial \log(GDPpc)}
-= \beta_1 + 2\beta_2 \log(GDPpc) = 0
+yield_i = \beta_0 + \beta_1 fertilizer_i + \beta_2 height_i + u_i
 $$
 
-So the turning point in log income is:
+Why is that bad?
+
+::: fragment
+Because fertilizer affects plant height:
 
 $$
-\log(GDPpc^*) = -\frac{\beta_1}{2\beta_2}
+fertilizer \rightarrow height \rightarrow yield
 $$
 
-Convert back to the income level:
+So controlling for height:
+
+🚫 blocks an important pathway through which fertilizer raises yield  
+→ we **underestimate** the impact of fertilizer
+
+:::
+
+## ✅ Good Controls vs. Bad Controls (Big Picture)
+
+| Type | Example | Why it matters |
+|---|---|---|
+| ✅ Good control | Age, gender, region, baseline ability | Helps reduce omitted variable bias by holding constant **pre-existing differences** |
+| 🚫 Bad control | Occupation (when studying education → wages) | Can remove part of the education effect by controlling for something education influences |
+| 🚫 Bad control | Plant height (when studying fertilizer → yield) | Can remove part of the fertilizer effect by controlling for something fertilizer influences |
+
+
+
+## 🎯 Why Bad Controls Are Dangerous
+
+Bad controls can cause two problems:
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### 1) ❌ Block part of the true effect
+You unintentionally remove the pathway:
 
 $$
-GDPpc^* = \exp\left(-\frac{\beta_1}{2\beta_2}\right)
+x \rightarrow control \rightarrow y
 $$
 
-<!-- Interpretation: -->
+So the estimated $\hat{\beta}_1$ becomes **too small**.
 
-At $GDPpc^*$, CO$_2$ per capita stops rising and begins falling (if EKC holds).
+:::
+::: {.column width="50%"}
 
+### 2) ❌ Create new bias 
 
+Sometimes the control is influenced by **both** $x$ and $y$:
 
-## Intuition: Why Might EKC Happen?
+$$
+x \rightarrow control \leftarrow y
+$$
 
-As income rises, countries often experience:
+Then controlling for it creates a **fake association** between $x$ and $y$  
+even if none existed before.
 
-- **Scale effect** 📈: more production → more emissions (early stage)
-- **Composition effect** 🏗️➡️🧑‍💼: shift from industry → services (middle stage)
-- **Technique effect** 🧪⚡: cleaner technology + regulation (later stage)
-
-EKC is the balance of:
-- growth pressures that increase emissions
-- development forces that can reduce emissions
-
-
-
-## Important Caveat for CO$_2$
-
-EKC may be weaker for CO$_2$ than for local air pollutants because:
-
-- CO$_2$ is deeply tied to **energy systems**
-- benefits are **global**, costs are often local
-- emissions may shift across borders via trade (**carbon leakage**)
-
-So EKC is a **hypothesis to test**, not a guaranteed pattern.
+:::
+::::
 
 
 
-## Final Takeaway (EKC)
+## ✅ Quick Rule: Should We Control for It?
 
-EKC tests whether pollution follows an **inverted-U** with income.
+Before adding a variable $z$ as a control, ask:
 
-Panel FE/TWFE help make that test more credible by controlling for:
+- **Does $z$ exist *before* $x$ is determined?**  
+  ✅ If yes → usually safe to control for
 
-- country traits ($\alpha_i$)
-- year shocks ($\gamma_t$)
+<div style="display:block; margin:25px;"></div>
+
+
+- **Does $z$ change *after* $x$ changes?**  
+  🚫 If yes → it may be a **bad control**
+
+<div style="display:block; margin:25px;"></div>
+
+- **Is $z$ a pre-existing characteristic that is related to both $x$ and $y$?**  
+  ✅ If yes → it is often a **useful control**
+
+
+
+## 🧾 Summary: "More Controls" ≠ "Better"
+
+- ✅ Controls are helpful when they fix omitted variable bias  
+- 🚫 Controls are harmful when they “control away” the effect you want
+
+<div style="display:block; margin:25px;"></div>
+
+
+- **The goal is not to control for everything.**  
+- The goal is to control for the **right things**.
+
+
 

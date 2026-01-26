@@ -102,7 +102,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../assets/css/font.css">
 <meta property="og:title" content="Classwork 2 | Byeong-Hak Choe">
-<meta property="og:description" content="Omitted Variable Bias">
+<meta property="og:description" content="Omitted Variable Bias; Bad Controls">
 <meta property="og:image" content="/assets/img/posts.png">
 </head>
 
@@ -229,7 +229,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
 <h1 class="title">Classwork 2</h1>
-<p class="subtitle lead">Omitted Variable Bias</p>
+<p class="subtitle lead">Omitted Variable Bias; Bad Controls</p>
 </div>
 
 
@@ -262,7 +262,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<details>
+<section id="omitted-variable-bias" class="level1">
+<h1>Omitted Variable Bias</h1>
+<details open="">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
@@ -504,7 +506,7 @@ F Statistic
 </tr>
 
 </tbody></table>
-<details>
+<details open="">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>reg_1st <span class="ot">&lt;-</span> <span class="fu">lm</span>(<span class="fu">log</span>(price) <span class="sc">~</span> brand,</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> oj)</span>
@@ -767,8 +769,611 @@ F Statistic
 </tr>
 
 </tbody></table>
+</section>
+<section id="bad-controls" class="level1">
+<h1>Bad Controls</h1>
+<section id="education-and-wages" class="level2">
+<h2 class="anchored" data-anchor-id="education-and-wages">Education and Wages</h2>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>tb <span class="ot">&lt;-</span> <span class="fu">tibble</span>( </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">female =</span> <span class="fu">ifelse</span>(<span class="fu">runif</span>(<span class="dv">10000</span>)<span class="sc">&gt;=</span><span class="fl">0.5</span>,<span class="dv">1</span>,<span class="dv">0</span>), <span class="co"># female indicator variable</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">ability =</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>), <span class="co"># e.g., talent, usually unobserved.</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">discrimination =</span> female, <span class="co"># gender discrimination variable</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">occupation =</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span>ability <span class="sc">+</span> <span class="dv">0</span><span class="sc">*</span>female <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span>discrimination <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>), <span class="co"># true data generating process for occupation variable</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">wage =</span> <span class="dv">1</span> <span class="sc">-</span> <span class="dv">1</span><span class="sc">*</span>discrimination <span class="sc">+</span> <span class="dv">1</span><span class="sc">*</span>occupation <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span>ability <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>) <span class="co"># true data generating process for wage variable</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>lm_1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wage <span class="sc">~</span> female, tb)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>lm_2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wage <span class="sc">~</span> female <span class="sc">+</span> occupation, tb)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>lm_3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wage <span class="sc">~</span> female <span class="sc">+</span> occupation <span class="sc">+</span> ability, tb)</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>stargazer<span class="sc">::</span><span class="fu">stargazer</span>(lm_1,lm_2,lm_3, </span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>                     <span class="at">column.labels =</span> <span class="fu">c</span>(<span class="st">"Biased Unconditional"</span>, </span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"Biased"</span>,</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>                                       <span class="st">"Unbiased Conditional"</span>),</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>                     <span class="at">type =</span> <span class="st">'html'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+<table style="text-align:center">
+<tbody><tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="3">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="3">
+wage
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+Biased Unconditional
+</td>
+<td>
+Biased
+</td>
+<td>
+Unbiased Conditional
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+<td>
+(3)
+</td>
+</tr>
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+female
+</td>
+<td>
+-3.021<sup>***</sup>
+</td>
+<td>
+0.557<sup>***</sup>
+</td>
+<td>
+-1.039<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.084)
+</td>
+<td>
+(0.030)
+</td>
+<td>
+(0.029)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+occupation
+</td>
+<td>
+</td>
+<td>
+1.789<sup>***</sup>
+</td>
+<td>
+0.981<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+(0.006)
+</td>
+<td>
+(0.010)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+ability
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+2.028<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+(0.023)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Constant
+</td>
+<td>
+1.968<sup>***</sup>
+</td>
+<td>
+0.201<sup>***</sup>
+</td>
+<td>
+1.021<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.059)
+</td>
+<td>
+(0.020)
+</td>
+<td>
+(0.018)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+10,000
+</td>
+<td>
+10,000
+</td>
+<td>
+10,000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.115
+</td>
+<td>
+0.907
+</td>
+<td>
+0.948
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+0.115
+</td>
+<td>
+0.907
+</td>
+<td>
+0.948
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+4.192 (df = 9998)
+</td>
+<td>
+1.357 (df = 9997)
+</td>
+<td>
+1.013 (df = 9996)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+F Statistic
+</td>
+<td>
+1,297.822<sup>***</sup> (df = 1; 9998)
+</td>
+<td>
+48,922.550<sup>***</sup> (df = 2; 9997)
+</td>
+<td>
+61,140.750<sup>***</sup> (df = 3; 9996)
+</td>
+</tr>
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="3" style="text-align:right">
+<sup><em></em></sup><em>p&lt;0.1; <sup><strong></strong></sup><strong>p&lt;0.05; <sup></sup></strong></em>p&lt;0.01
+</td>
+</tr>
+
+</tbody></table>
+</section>
+<section id="fertilizer-plant-height-and-crop-yield" class="level2">
+<h2 class="anchored" data-anchor-id="fertilizer-plant-height-and-crop-yield">Fertilizer, Plant Height, and Crop Yield</h2>
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">2026</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Simulate 10,000 plots</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>tb3 <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">fertilizer    =</span> <span class="fu">rbinom</span>(<span class="dv">10000</span>, <span class="dv">1</span>, <span class="fl">0.5</span>),       <span class="co"># 0 = no fertilizer, 1 = fertilizer applied</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">soil_quality  =</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>),                <span class="co"># unobserved “plot fertility”</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Height (cm) is boosted by fertilizer *and* by soil quality</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">height        =</span> <span class="dv">50</span> <span class="sc">+</span> <span class="dv">8</span> <span class="sc">*</span> fertilizer <span class="sc">+</span> <span class="dv">5</span> <span class="sc">*</span> soil_quality <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>),</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Yield (bushels) depends on fertilizer, height, and soil quality</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">yield         =</span> <span class="dv">200</span> </span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> <span class="dv">10</span> <span class="sc">*</span> fertilizer      <span class="co"># direct effect of fertilizer</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> <span class="dv">3</span>  <span class="sc">*</span> height          <span class="co"># return to plant height</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> <span class="dv">6</span>  <span class="sc">*</span> soil_quality    <span class="co"># underlying soil fertility</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>)</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Omitting height: picks up both direct and indirect effects</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>lm1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(yield <span class="sc">~</span> fertilizer,         <span class="at">data =</span> tb3)</span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Controlling for height: "blocks" the mediation channel</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>lm2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(yield <span class="sc">~</span> fertilizer <span class="sc">+</span> height, <span class="at">data =</span> tb3)</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) Also control soil_quality to recover the true direct effect</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>lm3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(yield <span class="sc">~</span> fertilizer <span class="sc">+</span> height <span class="sc">+</span> soil_quality, <span class="at">data =</span> tb3)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a><span class="fu">stargazer</span>(</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>  lm1, lm2, lm3,</span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>  <span class="at">column.labels   =</span> <span class="fu">c</span>(<span class="st">"Omit Height (Biased)"</span>, </span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"Control Height (More Biased)"</span>,</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>                      <span class="st">"Also Soil (Unbiased)"</span>),</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>  <span class="at">dep.var.labels  =</span> <span class="st">"yield"</span>,</span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>  <span class="at">keep            =</span> <span class="fu">c</span>(<span class="st">"fertilizer"</span>, <span class="st">"height"</span>, <span class="st">"soil_quality"</span>),</span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>  <span class="at">covariate.labels=</span> <span class="fu">c</span>(<span class="st">"Fertilizer"</span>, <span class="st">"Plant Height"</span>, <span class="st">"Soil Quality"</span>),</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>  <span class="at">type            =</span> <span class="st">"html"</span></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+<table style="text-align:center">
+<tbody><tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="3">
+<em>Dependent variable:</em>
+</td>
+</tr>
+<tr>
+<td>
+</td>
+<td colspan="3" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td colspan="3">
+yield
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+Omit Height (Biased)
+</td>
+<td>
+Control Height (More Biased)
+</td>
+<td>
+Also Soil (Unbiased)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(1)
+</td>
+<td>
+(2)
+</td>
+<td>
+(3)
+</td>
+</tr>
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Fertilizer
+</td>
+<td>
+34.657<sup>***</sup>
+</td>
+<td>
+0.789<sup>***</sup>
+</td>
+<td>
+10.025<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+(0.426)
+</td>
+<td>
+(0.040)
+</td>
+<td>
+(0.081)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Plant Height
+</td>
+<td>
+</td>
+<td>
+4.156<sup>***</sup>
+</td>
+<td>
+2.999<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+(0.003)
+</td>
+<td>
+(0.010)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Soil Quality
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+6.002<sup>***</sup>
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+(0.050)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>
+</td>
+</tr>
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Observations
+</td>
+<td>
+10,000
+</td>
+<td>
+10,000
+</td>
+<td>
+10,000
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+R<sup>2</sup>
+</td>
+<td>
+0.398
+</td>
+<td>
+0.997
+</td>
+<td>
+0.999
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Adjusted R<sup>2</sup>
+</td>
+<td>
+0.398
+</td>
+<td>
+0.997
+</td>
+<td>
+0.999
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+Residual Std. Error
+</td>
+<td>
+21.323 (df = 9998)
+</td>
+<td>
+1.551 (df = 9997)
+</td>
+<td>
+0.996 (df = 9996)
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+F Statistic
+</td>
+<td>
+6,604.218<sup>***</sup> (df = 1; 9998)
+</td>
+<td>
+1,563,217.000<sup>***</sup> (df = 2; 9997)
+</td>
+<td>
+2,532,263.000<sup>***</sup> (df = 3; 9996)
+</td>
+</tr>
+<tr>
+<td colspan="4" style="border-bottom: 1px solid black">
+</td>
+</tr>
+<tr>
+<td style="text-align:left">
+<em>Note:</em>
+</td>
+<td colspan="3" style="text-align:right">
+<sup><em></em></sup><em>p&lt;0.1; <sup><strong></strong></sup><strong>p&lt;0.05; <sup></sup></strong></em>p&lt;0.01
+</td>
+</tr>
+
+</tbody></table>
 
 
+</section>
+</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script>
