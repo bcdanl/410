@@ -1,0 +1,67 @@
+---
+title: Classwork 2
+subtitle: "Omitted Variable Bias"
+date: 2026-01-26
+code-fold: true
+execute: 
+  echo: true
+  warning: false
+  message: false
+toc: false
+from: markdown+emoji
+---
+```{r}
+#| include: false
+
+library(knitr)
+library(rmarkdown)
+library(tidyverse)
+library(skimr)
+library(ggthemes)
+library(hrbrthemes)
+library(broom)
+library(stargazer)
+
+theme_set(theme_ipsum() +
+          theme(strip.background =element_rect(fill="lightgray"),
+                axis.title.x = element_text(size = rel(1.5)),
+                axis.title.y = element_text(size = rel(1.5)),
+                legend.title = element_text(size=rel(1.25))
+                ))
+```
+
+
+```{r}
+#| results: asis
+
+library(tidyverse)
+library(broom)
+library(stargazer)
+
+oj <- read_csv('https://bcdanl.github.io/data/dominick_oj_ad.csv')
+
+reg_short <- lm(log(sales) ~ log(price),
+                data = oj)
+
+reg_long <- lm(log(sales) ~ log(price) + brand,
+                data = oj)
+
+stargazer(reg_short, reg_long,
+          type = 'html')
+```
+
+
+```{r}
+#| results: asis
+reg_1st <- lm(log(price) ~ brand,
+              data = oj)
+
+aug_m2 <- augment(reg_1st)    # broom::augment()
+
+reg_2nd <- lm(log(sales) ~ aug_m2$.resid,
+              data = oj)
+
+stargazer(reg_long, reg_2nd,
+          type = 'html')
+```
+

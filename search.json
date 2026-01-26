@@ -4,7 +4,7 @@
     "href": "listing-danl-410-cw.html",
     "title": "DANL 410 - Classwork",
     "section": "",
-    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nClasswork 1\n\n\nVibe Coding\n\n\nJanuary 21, 2026\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nClasswork 1\n\n\nVibe Coding\n\n\nJanuary 21, 2026\n\n\n\n\nClasswork 2\n\n\nOmitted Variable Bias\n\n\nJanuary 26, 2026\n\n\n\n\nClasswork 3\n\n\nPanel Data Models\n\n\nJanuary 26, 2026\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "listing-danl-410-hw.html",
@@ -144,7 +144,7 @@
     "href": "index.html#classwork",
     "title": "DANL 410: Data Analytics Capstone, Spring 2026",
     "section": "⌨️ Classwork",
-    "text": "⌨️ Classwork\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nClasswork 1\n\n\nVibe Coding\n\n\nJanuary 21, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "⌨️ Classwork\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nClasswork 1\n\n\nVibe Coding\n\n\nJanuary 21, 2026\n\n\n\n\nClasswork 2\n\n\nOmitted Variable Bias\n\n\nJanuary 26, 2026\n\n\n\n\nClasswork 3\n\n\nPanel Data Models\n\n\nJanuary 26, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#homework",
@@ -943,5 +943,75 @@
     "title": "Lecture 2",
     "section": "Regression Sensitivity Analysis",
     "text": "Regression Sensitivity Analysis\n\nRegression finds the coefficients on the part of each regressor that is independent from the other regressors.\nWhat can we do to deal with OVB problems?\n\nBecause we can never be sure whether a given set of controls is enough to eliminate OVB, it’s important to ask how sensitive regression results are to changes in the list of controls."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#re-vs.-pooled-ols",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#re-vs.-pooled-ols",
+    "title": "Lecture 2",
+    "section": "🧪 RE vs. Pooled OLS",
+    "text": "🧪 RE vs. Pooled OLS\n✅ Goal: Test whether Random Effects is needed (instead of pooled OLS).\n🧠 Intuition\nPooled OLS assumes:\n\nno panel-specific component\nno country-level intercept variation\n\nRandom Effects allows: \\[\ny_{it}=\\beta x_{it}+\\alpha_i+\\epsilon_{it}\n\\]\nIf \\(\\alpha_i\\) matters (variance \\(&gt;0\\)), then pooled OLS is missing structure."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#fe-vs-re",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#fe-vs-re",
+    "title": "Lecture 2",
+    "section": "FE vs RE",
+    "text": "FE vs RE\n✅ Goal: Decide whether RE is valid, or we must use FE.\n🧠 Key difference: correlation assumption\nFE: allows correlation\n\\[\nCov(\\alpha_i, x_{it}) \\neq 0\n\\] ✅ still consistent\nRE: assumes no correlation\n\\[\nCov(\\alpha_i, x_{it}) = 0\n\\] ✅ more efficient if true\n❌ biased if false"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#hausman-test",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#hausman-test",
+    "title": "Lecture 2",
+    "section": "✅ Hausman Test",
+    "text": "✅ Hausman Test\n\n\\(H_0\\): \\(Cov(\\alpha_i, x_{it})=0\\)\n✅ RE is consistent → prefer RE (efficient)\n\\(H_1\\): \\(Cov(\\alpha_i, x_{it})\\neq 0\\)\n✅ RE is inconsistent → prefer FE (safe)\n\n🧪 Decision rule\n\nSmall \\(p\\)-value (e.g., \\(&lt;0.05\\)) → reject \\(H_0\\)\n✅ choose Fixed Effects\nLarge \\(p\\)-value → fail to reject \\(H_0\\)\n✅ choose Random Effects"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#re-vs-pooled-ols-breuschpagan-lm-test",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#re-vs-pooled-ols-breuschpagan-lm-test",
+    "title": "Lecture 2",
+    "section": "RE vs Pooled OLS: Breusch–Pagan LM Test",
+    "text": "RE vs Pooled OLS: Breusch–Pagan LM Test\n\n\\(H_0\\): \\(Var(\\alpha_i)=0\\)\n→ no panel effect → Pooled OLS is fine\n\\(H_1\\): \\(Var(\\alpha_i)&gt;0\\)\n→ panel effect exists → RE is better than POLS\n\n🧪 Decision rule\n\nSmall \\(p\\)-value (e.g., \\(&lt;0.05\\)) → reject \\(H_0\\)\n✅ Use Random Effects instead of pooled OLS\nLarge \\(p\\)-value → fail to reject \\(H_0\\)\n✅ Pooled OLS may be acceptable"
+  },
+  {
+    "objectID": "danl-cw/danl-410-cw-03.html",
+    "href": "danl-cw/danl-410-cw-03.html",
+    "title": "Classwork 3",
+    "section": "",
+    "text": "library(tidyverse)\nlibrary(plm)\nlibrary(lmtest)\nlibrary(sandwich)\nlibrary(stargazer)\n\nco2 &lt;- read_csv(\"https://bcdanl.github.io/data/owid-co2-data.csv\")\ncodebook &lt;- read_csv(\"https://bcdanl.github.io/data/owid-co2-codebook.csv\")"
+  },
+  {
+    "objectID": "danl-cw/danl-410-cw-03.html#build-a-clean-country-year-panel",
+    "href": "danl-cw/danl-410-cw-03.html#build-a-clean-country-year-panel",
+    "title": "Classwork 3",
+    "section": "Build a clean country-year panel",
+    "text": "Build a clean country-year panel\n\ndf &lt;- co2 |&gt;\n  # Keep only country observations (drop regions / aggregates)\n  # OWID country entries typically have a 3-letter ISO code\n  filter(!is.na(iso_code), nchar(iso_code) == 3) |&gt;\n  # Keep useful sample years (adjust as you want)\n  filter(year &gt;= 1990) |&gt;\n  # Select a simple EKC-style set of variables\n  mutate(\n    gdp_per_capita = gdp / population, \n    .after = gdp\n  ) |&gt; \n  select(\n    iso_code, country, year,\n    co2_per_capita,\n    gdp_per_capita,\n    population,\n    energy_per_capita,         # optional control\n    primary_energy_consumption # optional control (can be NA a lot)\n  ) |&gt;\n  # Drop missing core variables\n  filter(!is.na(co2_per_capita), !is.na(gdp_per_capita)) |&gt;\n  # Create logs and squared log GDP per capita\n  mutate(\n    log_co2pc = log(co2_per_capita),\n    log_gdppc = log(gdp_per_capita),\n    log_gdppc2 = log_gdppc^2,\n    log_pop = log(population),\n    log_energy_pc = ifelse(!is.na(energy_per_capita) & energy_per_capita &gt; 0,\n                          log(energy_per_capita), \n                          NA)\n  ) |&gt;\n  # Keep rows with finite log outcomes/predictors\n  filter(is.finite(log_co2pc), \n         is.finite(log_gdppc), \n         is.finite(log_gdppc2), \n         is.finite(log_pop))\n\n# Convert to pdata.frame (panel format for plm)\ndf_panel &lt;- pdata.frame(df, index = c(\"iso_code\", \"year\"))"
+  },
+  {
+    "objectID": "danl-cw/danl-410-cw-03.html#specify-models",
+    "href": "danl-cw/danl-410-cw-03.html#specify-models",
+    "title": "Classwork 3",
+    "section": "Specify models",
+    "text": "Specify models\n\n# Baseline (no optional controls)\nf_base &lt;- log_co2pc ~ log_gdppc + log_gdppc2\n\n# Extended model (adds energy per capita; will drop rows with missing log_energy_pc)\nf_ext  &lt;- log_co2pc ~ log_gdppc + log_gdppc2 + log_energy_pc\n\n# --- Models (BASE) ---\nm1_pool &lt;- plm(f_base, data = df_panel, model = \"pooling\")                 # pooled OLS\nm2_fe   &lt;- plm(f_base, data = df_panel, model = \"within\", effect = \"individual\")  # country FE\nm3_twfe &lt;- plm(f_base, data = df_panel, model = \"within\", effect = \"twoways\")     # country FE + year FE\nm4_re   &lt;- plm(f_base, data = df_panel, model = \"random\", effect = \"individual\") # random effects\n\n# --- Models (EXTENDED) ---\n# (Optional) include energy per capita as a control\nm1_pool_ext &lt;- plm(f_ext, data = df_panel, model = \"pooling\")\nm2_fe_ext   &lt;- plm(f_ext, data = df_panel, model = \"within\", effect = \"individual\")\nm3_twfe_ext &lt;- plm(f_ext, data = df_panel, model = \"within\", effect = \"twoways\")\nm4_re_ext   &lt;- plm(f_ext, data = df_panel, model = \"random\", effect = \"individual\")"
+  },
+  {
+    "objectID": "danl-cw/danl-410-cw-03.html#robust-clustered-standard-errors",
+    "href": "danl-cw/danl-410-cw-03.html#robust-clustered-standard-errors",
+    "title": "Classwork 3",
+    "section": "Robust / clustered standard errors",
+    "text": "Robust / clustered standard errors\n\n# Function to compute clustered SE (country-clustered)\nse_cluster_country_safe &lt;- function(model) {\n  V &lt;- vcovHC(model, type = \"HC1\", cluster = \"group\")\n  se &lt;- sqrt(diag(V))\n  se[is.na(se)] &lt;- 0              # ✅ replace NA SEs so stargazer won't crash\n  return(se)\n}\n\n# Clustered SEs for BASE models\nse_m1 &lt;- se_cluster_country_safe(m1_pool)\nse_m2 &lt;- se_cluster_country_safe(m2_fe)\nse_m3 &lt;- se_cluster_country_safe(m3_twfe)\nse_m4 &lt;- se_cluster_country_safe(m4_re)\n\n# Clustered SEs for EXTENDED models\nse_m1e &lt;- se_cluster_country_safe(m1_pool_ext)\nse_m2e &lt;- se_cluster_country_safe(m2_fe_ext)\nse_m3e &lt;- se_cluster_country_safe(m3_twfe_ext)\nse_m4e &lt;- se_cluster_country_safe(m4_re_ext)"
+  },
+  {
+    "objectID": "danl-cw/danl-410-cw-03.html#panel-diagnostics",
+    "href": "danl-cw/danl-410-cw-03.html#panel-diagnostics",
+    "title": "Classwork 3",
+    "section": "Panel diagnostics",
+    "text": "Panel diagnostics\n\n# FE vs pooled OLS (is panel structure important?)\npFtest(m2_fe, m1_pool)\n\n\n    F test for individual effects\n\ndata:  f_base\nF = 193.79, df1 = 163, df2 = 5243, p-value &lt; 2.2e-16\nalternative hypothesis: significant effects\n\n# RE vs pooled OLS (Breusch-Pagan LM test)\nplmtest(m1_pool, type = \"bp\")\n\n\n    Lagrange Multiplier Test - (Breusch-Pagan)\n\ndata:  f_base\nchisq = 42925, df = 1, p-value &lt; 2.2e-16\nalternative hypothesis: significant effects\n\n# FE vs RE (Hausman test)\nphtest(m2_fe, m4_re)\n\n\n    Hausman Test\n\ndata:  f_base\nchisq = 9819.7, df = 2, p-value &lt; 2.2e-16\nalternative hypothesis: one model is inconsistent"
+  },
+  {
+    "objectID": "danl-cw/danl-410-cw-03.html#results",
+    "href": "danl-cw/danl-410-cw-03.html#results",
+    "title": "Classwork 3",
+    "section": "Results",
+    "text": "Results\n# --- Table A: BASE models ---\n# Table (omit intercept so pooled/re match FE models cleanly)\nstargazer(\n  m1_pool, m2_fe, m3_twfe, m4_re,\n  type = \"html\",\n  se = list(se_m1, se_m2, se_m3, se_m4),\n  title = \"Panel Models (OWID CO2): Pooled OLS vs FE vs TWFE vs RE\",\n  column.labels = c(\"Pooled OLS\", \"Country FE\", \"Two-way FE\", \"Random Effects\"),\n  dep.var.labels = \"log(CO2 per capita)\",\n  omit = \"Intercept\",                      # ✅ avoids intercept mismatch across models\n  omit.stat = c(\"f\", \"ser\"),\n  digits = 3,\n  notes = c(\"Standard errors clustered by country (iso_code).\",\n            \"Country FE controls for time-invariant differences across countries.\",\n            \"Two-way FE adds year fixed effects to absorb global shocks.\")\n)\n\n\n\nPanel Models (OWID CO2): Pooled OLS vs FE vs TWFE vs RE\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nlog(CO2 per capita)\n\n\n\n\n\n\nPooled OLS\n\n\nCountry FE\n\n\nTwo-way FE\n\n\nRandom Effects\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n(3)\n\n\n(4)\n\n\n\n\n\n\n\n\nlog_gdppc\n\n\n4.009***\n\n\n3.440***\n\n\n3.453***\n\n\n3.539***\n\n\n\n\n\n\n(0.470)\n\n\n(0.444)\n\n\n(0.445)\n\n\n(0.437)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlog_gdppc2\n\n\n-0.157***\n\n\n-0.168***\n\n\n-0.167***\n\n\n-0.170***\n\n\n\n\n\n\n(0.027)\n\n\n(0.023)\n\n\n(0.023)\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant\n\n\n-22.396***\n\n\n\n\n\n\n-17.176***\n\n\n\n\n\n\n(2.057)\n\n\n\n\n\n\n(2.055)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n5,409\n\n\n5,409\n\n\n5,409\n\n\n5,409\n\n\n\n\nR2\n\n\n0.837\n\n\n0.357\n\n\n0.281\n\n\n0.386\n\n\n\n\nAdjusted R2\n\n\n0.837\n\n\n0.337\n\n\n0.254\n\n\n0.386\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01\n\n\n\n\n\n\nStandard errors clustered by country (iso\n\n\n\n\n\n\nCountry FE controls for time-invariant differences across countries.\n\n\n\n\n\n\nTwo-way FE adds year fixed effects to absorb global shocks.\n\n\n\n\n# --- Table B: EXTENDED models (adds energy control) ---\nstargazer(\n  m1_pool_ext, m2_fe_ext, m3_twfe_ext, m4_re_ext,\n  type = \"html\",\n  se = list(se_m1, se_m2, se_m3, se_m4),\n  title = \"Panel Models (OWID CO2): With Energy Control\",\n  column.labels = c(\"Pooled OLS\", \"Country FE\", \"Two-way FE\", \"Random Effects\"),\n  dep.var.labels = \"log(CO2 per capita)\",\n  omit = \"Intercept\",                      # ✅ avoids intercept mismatch across models\n  omit.stat = c(\"f\", \"ser\"),\n  digits = 3,\n  notes = c(\"Standard errors clustered by country (iso_code).\",\n            \"Adding energy per capita often reduces the GDP effect because energy use is a major driver of CO2.\")\n)\n\n\n\nPanel Models (OWID CO2): With Energy Control\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nlog(CO2 per capita)\n\n\n\n\n\n\nPooled OLS\n\n\nCountry FE\n\n\nTwo-way FE\n\n\nRandom Effects\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n(3)\n\n\n(4)\n\n\n\n\n\n\n\n\nlog_gdppc\n\n\n1.378***\n\n\n1.903***\n\n\n1.919***\n\n\n1.832***\n\n\n\n\n\n\n(0.470)\n\n\n(0.444)\n\n\n(0.445)\n\n\n(0.437)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlog_gdppc2\n\n\n-0.072***\n\n\n-0.100***\n\n\n-0.099***\n\n\n-0.095***\n\n\n\n\n\n\n(0.027)\n\n\n(0.023)\n\n\n(0.023)\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlog_energy_pc\n\n\n0.869\n\n\n0.621\n\n\n0.621\n\n\n0.672\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant\n\n\n-13.726***\n\n\n\n\n\n\n-14.103***\n\n\n\n\n\n\n(2.057)\n\n\n\n\n\n\n(2.055)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n5,358\n\n\n5,358\n\n\n5,358\n\n\n5,358\n\n\n\n\nR2\n\n\n0.948\n\n\n0.628\n\n\n0.582\n\n\n0.695\n\n\n\n\nAdjusted R2\n\n\n0.948\n\n\n0.616\n\n\n0.566\n\n\n0.695\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01\n\n\n\n\n\n\nStandard errors clustered by country (iso\n\n\n\n\n\n\nAdding energy per capita often reduces the GDP effect because energy use is a major driver of CO2."
   }
 ]

@@ -1,0 +1,198 @@
+---
+title: Classwork 3
+subtitle: "Panel Data Models"
+date: 2026-01-26
+code-fold: false
+execute: 
+  echo: true
+  warning: false
+  message: false
+toc: false
+from: markdown+emoji
+---
+```{r}
+#| include: false
+
+library(knitr)
+library(rmarkdown)
+library(tidyverse)
+library(skimr)
+library(ggthemes)
+library(hrbrthemes)
+library(broom)
+library(stargazer)
+
+theme_set(theme_ipsum() +
+          theme(strip.background =element_rect(fill="lightgray"),
+                axis.title.x = element_text(size = rel(1.5)),
+                axis.title.y = element_text(size = rel(1.5)),
+                legend.title = element_text(size=rel(1.25))
+                ))
+```
+
+
+```{r}
+#| results: asis
+
+library(tidyverse)
+library(plm)
+library(lmtest)
+library(sandwich)
+library(stargazer)
+
+co2 <- read_csv("https://bcdanl.github.io/data/owid-co2-data.csv")
+codebook <- read_csv("https://bcdanl.github.io/data/owid-co2-codebook.csv")
+
+```
+
+
+## Build a clean country-year panel
+```{r}
+
+df <- co2 |>
+  # Keep only country observations (drop regions / aggregates)
+  # OWID country entries typically have a 3-letter ISO code
+  filter(!is.na(iso_code), nchar(iso_code) == 3) |>
+  # Keep useful sample years (adjust as you want)
+  filter(year >= 1990) |>
+  # Select a simple EKC-style set of variables
+  mutate(
+    gdp_per_capita = gdp / population, 
+    .after = gdp
+  ) |> 
+  select(
+    iso_code, country, year,
+    co2_per_capita,
+    gdp_per_capita,
+    population,
+    energy_per_capita,         # optional control
+    primary_energy_consumption # optional control (can be NA a lot)
+  ) |>
+  # Drop missing core variables
+  filter(!is.na(co2_per_capita), !is.na(gdp_per_capita)) |>
+  # Create logs and squared log GDP per capita
+  mutate(
+    log_co2pc = log(co2_per_capita),
+    log_gdppc = log(gdp_per_capita),
+    log_gdppc2 = log_gdppc^2,
+    log_pop = log(population),
+    log_energy_pc = ifelse(!is.na(energy_per_capita) & energy_per_capita > 0,
+                          log(energy_per_capita), 
+                          NA)
+  ) |>
+  # Keep rows with finite log outcomes/predictors
+  filter(is.finite(log_co2pc), 
+         is.finite(log_gdppc), 
+         is.finite(log_gdppc2), 
+         is.finite(log_pop))
+
+# Convert to pdata.frame (panel format for plm)
+df_panel <- pdata.frame(df, index = c("iso_code", "year"))
+```
+
+
+## Specify models
+
+```{r}
+# Baseline (no optional controls)
+f_base <- log_co2pc ~ log_gdppc + log_gdppc2
+
+# Extended model (adds energy per capita; will drop rows with missing log_energy_pc)
+f_ext  <- log_co2pc ~ log_gdppc + log_gdppc2 + log_energy_pc
+
+# --- Models (BASE) ---
+m1_pool <- plm(f_base, data = df_panel, model = "pooling")                 # pooled OLS
+m2_fe   <- plm(f_base, data = df_panel, model = "within", effect = "individual")  # country FE
+m3_twfe <- plm(f_base, data = df_panel, model = "within", effect = "twoways")     # country FE + year FE
+m4_re   <- plm(f_base, data = df_panel, model = "random", effect = "individual") # random effects
+
+# --- Models (EXTENDED) ---
+# (Optional) include energy per capita as a control
+m1_pool_ext <- plm(f_ext, data = df_panel, model = "pooling")
+m2_fe_ext   <- plm(f_ext, data = df_panel, model = "within", effect = "individual")
+m3_twfe_ext <- plm(f_ext, data = df_panel, model = "within", effect = "twoways")
+m4_re_ext   <- plm(f_ext, data = df_panel, model = "random", effect = "individual")
+```
+
+
+
+## Robust / clustered standard errors
+```{r}
+# Function to compute clustered SE (country-clustered)
+se_cluster_country_safe <- function(model) {
+  V <- vcovHC(model, type = "HC1", cluster = "group")
+  se <- sqrt(diag(V))
+  se[is.na(se)] <- 0              # ✅ replace NA SEs so stargazer won't crash
+  return(se)
+}
+
+# Clustered SEs for BASE models
+se_m1 <- se_cluster_country_safe(m1_pool)
+se_m2 <- se_cluster_country_safe(m2_fe)
+se_m3 <- se_cluster_country_safe(m3_twfe)
+se_m4 <- se_cluster_country_safe(m4_re)
+
+# Clustered SEs for EXTENDED models
+se_m1e <- se_cluster_country_safe(m1_pool_ext)
+se_m2e <- se_cluster_country_safe(m2_fe_ext)
+se_m3e <- se_cluster_country_safe(m3_twfe_ext)
+se_m4e <- se_cluster_country_safe(m4_re_ext)
+```
+
+
+## Panel diagnostics
+```{r}
+# FE vs pooled OLS (is panel structure important?)
+pFtest(m2_fe, m1_pool)
+
+# RE vs pooled OLS (Breusch-Pagan LM test)
+plmtest(m1_pool, type = "bp")
+
+# FE vs RE (Hausman test)
+phtest(m2_fe, m4_re)
+```
+
+
+## Results
+
+```{r}
+#| results: asis
+
+# --- Table A: BASE models ---
+# Table (omit intercept so pooled/re match FE models cleanly)
+stargazer(
+  m1_pool, m2_fe, m3_twfe, m4_re,
+  type = "html",
+  se = list(se_m1, se_m2, se_m3, se_m4),
+  title = "Panel Models (OWID CO2): Pooled OLS vs FE vs TWFE vs RE",
+  column.labels = c("Pooled OLS", "Country FE", "Two-way FE", "Random Effects"),
+  dep.var.labels = "log(CO2 per capita)",
+  omit = "Intercept",                      # ✅ avoids intercept mismatch across models
+  omit.stat = c("f", "ser"),
+  digits = 3,
+  notes = c("Standard errors clustered by country (iso_code).",
+            "Country FE controls for time-invariant differences across countries.",
+            "Two-way FE adds year fixed effects to absorb global shocks.")
+)
+```
+
+
+```{r}
+#| results: asis
+
+# --- Table B: EXTENDED models (adds energy control) ---
+stargazer(
+  m1_pool_ext, m2_fe_ext, m3_twfe_ext, m4_re_ext,
+  type = "html",
+  se = list(se_m1, se_m2, se_m3, se_m4),
+  title = "Panel Models (OWID CO2): With Energy Control",
+  column.labels = c("Pooled OLS", "Country FE", "Two-way FE", "Random Effects"),
+  dep.var.labels = "log(CO2 per capita)",
+  omit = "Intercept",                      # ✅ avoids intercept mismatch across models
+  omit.stat = c("f", "ser"),
+  digits = 3,
+  notes = c("Standard errors clustered by country (iso_code).",
+            "Adding energy per capita often reduces the GDP effect because energy use is a major driver of CO2.")
+)
+```
+

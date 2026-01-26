@@ -113,7 +113,7 @@ $$
 
 - OVB for $\beta_1$ is:
 
-<div style="display:block; margin:-30px;"></div>
+<div style="display:block; margin:-40px;"></div>
 
 $$
 \text{OVB} = \widehat{\beta_{1}^{short}} - \widehat{\beta_{1}^{long}}
@@ -454,17 +454,6 @@ So FE is often the safer default in applied work.
 
 
 
-## 🧪 FE vs RE: The Hausman Intuition
-
-The logic is:
-
-- FE is consistent even when $Cov(\alpha_i, x_{it}) \neq 0$
-- RE is consistent only if $Cov(\alpha_i, x_{it}) = 0$
-
-So we test whether RE is “safe” by checking whether:
-- RE and FE estimates are statistically different
-
-That idea is formalized in the **Hausman test**.
 
 
 

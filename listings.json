@@ -2,7 +2,9 @@
   {
     "listing": "/listing-danl-410-cw.html",
     "items": [
-      "/danl-cw/danl-410-cw-01.html"
+      "/danl-cw/danl-410-cw-01.html",
+      "/danl-cw/danl-410-cw-02.html",
+      "/danl-cw/danl-410-cw-03.html"
     ]
   },
   {
@@ -33,7 +35,9 @@
     "items": [
       "/danl-lec/danl-410-lec-01-2026-0121.html",
       "/danl-lec/danl-410-lec-02-2026-0126.html",
-      "/danl-cw/danl-410-cw-01.html"
+      "/danl-cw/danl-410-cw-01.html",
+      "/danl-cw/danl-410-cw-02.html",
+      "/danl-cw/danl-410-cw-03.html"
     ]
   }
 ]
