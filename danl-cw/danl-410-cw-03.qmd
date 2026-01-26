@@ -7,7 +7,7 @@ execute:
   echo: true
   warning: false
   message: false
-toc: false
+toc: true
 from: markdown+emoji
 ---
 ```{r}
