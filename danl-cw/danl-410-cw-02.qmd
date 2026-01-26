@@ -71,7 +71,7 @@ stargazer(reg_long, reg_2nd,
 
 # Bad Controls
 
-## Education and Wages
+## Gender, Occupation, and Wages
 
 ```{r}
 #| results: asis
