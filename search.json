@@ -18,7 +18,7 @@
     "href": "listing-danl-410-lec.html",
     "title": "DANL 410 - Lecture",
     "section": "",
-    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Panel Data Models\n\n\nJanuary 26, 2026\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "listing-danl-410-ex.html",
@@ -137,7 +137,7 @@
     "href": "index.html#lecture",
     "title": "DANL 410: Data Analytics Capstone, Spring 2026",
     "section": "🚀 Lecture",
-    "text": "🚀 Lecture\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "🚀 Lecture\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Panel Data Models\n\n\nJanuary 26, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#classwork",
@@ -502,5 +502,446 @@
     "title": "Lecture 1",
     "section": "Documentary Spotlight — The Thinking Game 🎬🤖",
     "text": "Documentary Spotlight — The Thinking Game 🎬🤖\n\n\nA behind-the-scenes documentary about the people, pressure, and breakthroughs in modern AI research\nFollows the race to build increasingly capable systems (and what it takes to push the frontier)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#panel-data-models-pooled-ols-fe-two-way-fe-re",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#panel-data-models-pooled-ols-fe-two-way-fe-re",
+    "title": "Lecture 2",
+    "section": "👥📈 Panel Data Models: Pooled OLS → FE → Two-Way FE → RE",
+    "text": "👥📈 Panel Data Models: Pooled OLS → FE → Two-Way FE → RE\n✅ What is Panel Data?\nPanel data tracks the same units over time:\n\nUnit (i): country (e.g., USA, Korea, India)\nTime (t): year (e.g., 1990–2022)\n\nExample (OWID CO₂ data):\n\nOutcome: CO2 per capita\nUnit: iso_code (country)\nTime: year"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#pooled-ols-baseline",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#pooled-ols-baseline",
+    "title": "Lecture 2",
+    "section": "1️⃣ Pooled OLS (Baseline)",
+    "text": "1️⃣ Pooled OLS (Baseline)\n\\[\ny_{it} = \\beta_0 + \\beta_1 X_{it} + u_{it}\n\\]\nIn our EKC-style example:\n\\[\n\\ln(CO2pc_{it})\n= \\beta_0\n+ \\beta_1 \\ln(GDPpc_{it})\n+ \\beta_2 [\\ln(GDPpc_{it})]^2\n+ \\beta_3 \\ln(Pop_{it})\n+ u_{it}\n\\]\n✅ Uses all variation - cross-country differences (between variation) - within-country changes over time (within variation)\n⚠️ Risk: unobserved country traits are hidden inside \\(u_{it}\\)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#country-fixed-effects-fe",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#country-fixed-effects-fe",
+    "title": "Lecture 2",
+    "section": "2️⃣ Country Fixed Effects (FE)",
+    "text": "2️⃣ Country Fixed Effects (FE)\n\\[\ny_{it} = \\beta X_{it} + \\alpha_i + u_{it}\n\\]\n\n\\(\\alpha_i\\) = country fixed effect\ncaptures all time-invariant country characteristics\n\n✅ Interpretation: &gt; How does CO₂ change within a country as GDP changes within that same country?\n🔎 Key idea: FE “controls for” anything that does not change over time within a country.\n✅ FE uses only within-country variation."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#two-way-fixed-effects-twfe",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#two-way-fixed-effects-twfe",
+    "title": "Lecture 2",
+    "section": "3️⃣ Two-Way Fixed Effects (TWFE)",
+    "text": "3️⃣ Two-Way Fixed Effects (TWFE)\n\\[\ny_{it} = \\beta X_{it} + \\alpha_i + \\gamma_t + u_{it}\n\\]\n\n\\(\\alpha_i\\): country FE\n\\(\\gamma_t\\): year FE (global shocks / trends)\n\nExamples of year shocks: - global recessions (2008) - oil price spikes - global technological progress - worldwide climate policy shifts\n✅ Interpretation: &gt; Within-country changes, net of global year effects"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#random-effects-re",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#random-effects-re",
+    "title": "Lecture 2",
+    "section": "4️⃣ Random Effects (RE)",
+    "text": "4️⃣ Random Effects (RE)\n\\[\ny_{it} = \\beta X_{it} + \\alpha_i + u_{it}\n\\]\nRE treats the country effect \\(\\alpha_i\\) as random, assuming:\n\\[\nCov(\\alpha_i, X_{it}) = 0\n\\]\n✅ Advantage: - more efficient than FE (smaller SEs)\n⚠️ Risk: - if \\(\\alpha_i\\) is correlated with regressors → RE is biased"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#why-fe-models-do-not-show-a-constant",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#why-fe-models-do-not-show-a-constant",
+    "title": "Lecture 2",
+    "section": "✅ Why FE Models Do Not Show a Constant",
+    "text": "✅ Why FE Models Do Not Show a Constant\nIn FE models, each country has its own intercept \\(\\alpha_i\\).\nSo the usual constant term is not separately identified:\n\ncountry FE already act like many intercepts\nFE estimation uses “demeaned” data (within transformation)\n\nThat is why FE/TWFE models often do not report a constant."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#why-r²-changes-across-models",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#why-r²-changes-across-models",
+    "title": "Lecture 2",
+    "section": "✅ Why R² Changes Across Models",
+    "text": "✅ Why R² Changes Across Models\n\nPooled OLS often has high R² because it explains big level differences across countries\nFE/TWFE remove those level differences\n\nthey focus on within-country changes only\nthis is a harder target → R² often falls\n\n\n➡️ R² values are not always directly comparable across pooling vs FE."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#why-we-cluster-standard-errors-country-clustered-se",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#why-we-cluster-standard-errors-country-clustered-se",
+    "title": "Lecture 2",
+    "section": "🧠 Why We Cluster Standard Errors (Country-Clustered SE)",
+    "text": "🧠 Why We Cluster Standard Errors (Country-Clustered SE)\nThe Problem: Errors are correlated within countries\nIn panel data, observations within a country are usually not independent:\n\nshocks persist over time\npolicies change gradually\nmeasurement errors repeat\nemissions and GDP follow smooth trends\n\nSo the model residuals often satisfy:\n\\[\nCov(u_{it}, u_{is}) \\neq 0 \\quad \\text{for } t \\neq s\n\\]\nIf we ignore this, standard errors are often: ❌ too small → false statistical significance"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#model-summary-what-each-one-controls-for",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#model-summary-what-each-one-controls-for",
+    "title": "Lecture 2",
+    "section": "✅ Model Summary (What Each One Controls For)",
+    "text": "✅ Model Summary (What Each One Controls For)\n\n\n\n\n\n\n\n\n\nModel\nControls for country traits?\nControls for year shocks?\nUses between-country variation?\n\n\n\n\nPooled OLS\n❌ No\n❌ No\n✅ Yes\n\n\nCountry FE\n✅ Yes (time-invariant)\n❌ No\n❌ No\n\n\nTwo-way FE\n✅ Yes\n✅ Yes\n❌ No\n\n\nRandom Effects\n✅ Yes (random)\n❌ (optional)\n✅ Yes"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#why-use-panel-models-not-only-pooled-ols",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#why-use-panel-models-not-only-pooled-ols",
+    "title": "Lecture 2",
+    "section": "✅ Why Use Panel Models (Not Only Pooled OLS)?",
+    "text": "✅ Why Use Panel Models (Not Only Pooled OLS)?\nPooled OLS ignores important country differences:\n\nGeography (climate, natural resources)\nIndustrial structure\nCulture and lifestyle\nInstitutions and regulation\nLong-run energy system differences\n\nThese factors can affect both: - CO₂ emissions per capita - GDP per capita\nSo pooled OLS can suffer from omitted variable bias.\n✅ Panel models help because they allow us to control for unobserved heterogeneity."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#clustered-standard-errors-by-country",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#clustered-standard-errors-by-country",
+    "title": "Lecture 2",
+    "section": "✅ Clustered Standard Errors (by country)",
+    "text": "✅ Clustered Standard Errors (by country)\nWe compute SEs that allow arbitrary correlation within each country:\n✅ cluster = \"group\" in plm\nThis is why we use:\n\ncountry-clustered standard errors\nalso called cluster-robust SE\n\n✅ Interpretation: &gt; We allow any type of serial correlation inside each country."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#final-takeaway",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#final-takeaway",
+    "title": "Lecture 2",
+    "section": "✅ Final Takeaway",
+    "text": "✅ Final Takeaway\nWe use panel data models because they help us estimate:\n✅ relationships within units over time\nwhile controlling for:\n\nhidden country characteristics (FE)\nglobal year shocks (TWFE)\n\nAnd we use clustered standard errors because panel errors are typically correlated within each unit."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#what-is-the-ekc",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#what-is-the-ekc",
+    "title": "Lecture 2",
+    "section": "✅ What is the EKC?",
+    "text": "✅ What is the EKC?\nThe Environmental Kuznets Curve (EKC) hypothesis suggests:\n\nAs a country becomes richer, pollution first increases,\nbut after a certain income level, pollution decreases.\n\nIt is often described as an inverted-U relationship between: - Environmental damage (e.g., CO₂ emissions per capita) - Income (GDP per capita)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#ekc-panel-regression-country-year-data",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#ekc-panel-regression-country-year-data",
+    "title": "Lecture 2",
+    "section": "✅ EKC Panel Regression (Country-Year Data)",
+    "text": "✅ EKC Panel Regression (Country-Year Data)\nA common EKC specification is:\n\\[\n\\log(CO2pc_{it})\n=\n\\beta_1 \\log(GDPpc_{it})\n+\n\\beta_2 \\left[\\log(GDPpc_{it})\\right]^2\n+\n\\alpha_i\n+\n\\gamma_t\n+\nu_{it}\n\\]\n\n\\(i\\): country\n\n\\(t\\): year\n\n\\(\\alpha_i\\): country fixed effects (time-invariant traits)\n\n\\(\\gamma_t\\): year fixed effects (global shocks/trends)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#how-to-interpret-the-coefficients",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#how-to-interpret-the-coefficients",
+    "title": "Lecture 2",
+    "section": "✅ How to Interpret the Coefficients",
+    "text": "✅ How to Interpret the Coefficients\n\nIf \\(\\beta_1 &gt; 0\\) and \\(\\beta_2 &lt; 0\\)\n✅ emissions rise at first, but eventually the slope becomes negative\n→ EKC pattern (inverted-U)\nIf \\(\\beta_2 = 0\\)\n→ relationship is simply linear\nIf \\(\\beta_2 &gt; 0\\)\n→ emissions accelerate with income (U-shape)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#ekc-turning-point-income-level",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#ekc-turning-point-income-level",
+    "title": "Lecture 2",
+    "section": "✅ EKC Turning Point (Income Level)",
+    "text": "✅ EKC Turning Point (Income Level)\nThe turning point occurs where the slope becomes zero:\n\\[\n\\frac{\\partial \\log(CO2pc)}{\\partial \\log(GDPpc)}\n=\n\\beta_1 + 2\\beta_2 \\log(GDPpc) = 0\n\\]\nSo the turning point in log income is:\n\\[\n\\log(GDPpc^*)\n=\n-\\frac{\\beta_1}{2\\beta_2}\n\\]\nConvert back to the income level:\n\\[\nGDPpc^* = \\exp\\left(-\\frac{\\beta_1}{2\\beta_2}\\right)\n\\]\n✅ Interpretation:\n\nAt \\(GDPpc^*\\), CO₂ per capita stops rising and begins falling (in EKC theory)."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#intuition-why-might-ekc-happen",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#intuition-why-might-ekc-happen",
+    "title": "Lecture 2",
+    "section": "✅ Intuition: Why Might EKC Happen?",
+    "text": "✅ Intuition: Why Might EKC Happen?\nAs income rises, countries often experience:\n\nScale effect: more production → more emissions (early stage)\nComposition effect: shift from manufacturing → services (middle stage)\nTechnique effect: cleaner technology + regulation (later stage)\n\nSo EKC is a balance of:\n📈 growth raises emissions vs. 📉 development enables cleaner production"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126qmd.html#important-caveat-for-co₂",
+    "href": "danl-lec/danl-410-lec-02-2026-0126qmd.html#important-caveat-for-co₂",
+    "title": "Lecture 2",
+    "section": "✅ Important Caveat for CO₂",
+    "text": "✅ Important Caveat for CO₂\nEKC may be weaker for CO₂ than for local pollutants because:\n\nCO₂ is tied to energy systems\nbenefits of reducing CO₂ are global, but costs are local\ncountries may “export” emissions via trade (carbon leakage)\n\nSo EKC is a hypothesis to test, not a guaranteed result."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#what-is-the-ekc",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#what-is-the-ekc",
+    "title": "Lecture 2",
+    "section": "What is the EKC?",
+    "text": "What is the EKC?\nThe Environmental Kuznets Curve (EKC) hypothesis suggests:\n\nAs a country becomes richer, pollution first increases,\nbut after some income level, pollution decreases.\n\nIt is often described as an inverted-U relationship between: - pollution (e.g., CO\\(_2\\) per capita) - income (GDP per capita)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#ekc-panel-regression-country-year-data",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#ekc-panel-regression-country-year-data",
+    "title": "Lecture 2",
+    "section": "EKC Panel Regression (Country-Year Data)",
+    "text": "EKC Panel Regression (Country-Year Data)\nA common EKC specification:\n\\[\n\\log(CO2pc_{it})\n=\n\\beta_1 \\log(GDPpc_{it})\n+\n\\beta_2 \\left[\\log(GDPpc_{it})\\right]^2\n+\n\\alpha_i\n+\n\\gamma_t\n+\n\\epsilon_{it}\n\\]\n\n\\(i\\): country\n\\(t\\): year\n\\(\\alpha_i\\): country fixed effects\n\\(\\gamma_t\\): year fixed effects"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#how-to-interpret-the-coefficients",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#how-to-interpret-the-coefficients",
+    "title": "Lecture 2",
+    "section": "✅ How to Interpret the Coefficients",
+    "text": "✅ How to Interpret the Coefficients\n\nIf \\(\\beta_1 &gt; 0\\) and \\(\\beta_2 &lt; 0\\)\n✅ emissions rise at first, but eventually the slope becomes negative\n→ EKC pattern (inverted-U)\nIf \\(\\beta_2 = 0\\)\n→ relationship is simply linear\nIf \\(\\beta_2 &gt; 0\\)\n→ emissions accelerate with income (U-shape)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#ekc-turning-point-income-level",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#ekc-turning-point-income-level",
+    "title": "Lecture 2",
+    "section": "EKC Turning Point (Income Level)",
+    "text": "EKC Turning Point (Income Level)\nThe turning point occurs where the slope becomes zero:\n\\[\n\\frac{\\partial \\log(CO2pc)}{\\partial \\log(GDPpc)}\n= \\beta_1 + 2\\beta_2 \\log(GDPpc) = 0\n\\]\nSo the turning point in log income is:\n\\[\n\\log(GDPpc^*) = -\\frac{\\beta_1}{2\\beta_2}\n\\]\nConvert back to the income level:\n\\[\nGDPpc^* = \\exp\\left(-\\frac{\\beta_1}{2\\beta_2}\\right)\n\\]\n\nAt \\(GDPpc^*\\), CO\\(_2\\) per capita stops rising and begins falling (if EKC holds)."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#intuition-why-might-ekc-happen",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#intuition-why-might-ekc-happen",
+    "title": "Lecture 2",
+    "section": "Intuition: Why Might EKC Happen?",
+    "text": "Intuition: Why Might EKC Happen?\nAs income rises, countries often experience:\n\nScale effect 📈: more production → more emissions (early stage)\nComposition effect 🏗️➡️🧑‍💼: shift from industry → services (middle stage)\nTechnique effect 🧪⚡: cleaner technology + regulation (later stage)\n\nEKC is the balance of: - growth pressures that increase emissions - development forces that can reduce emissions"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#important-caveat-for-co₂",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#important-caveat-for-co₂",
+    "title": "Lecture 2",
+    "section": "✅ Important Caveat for CO₂",
+    "text": "✅ Important Caveat for CO₂\nEKC may be weaker for CO₂ than for local pollutants because:\n\nCO₂ is tied to energy systems\nbenefits of reducing CO₂ are global, but costs are local\ncountries may “export” emissions via trade (carbon leakage)\n\nSo EKC is a hypothesis to test, not a guaranteed result."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#panel-data-models-pooled-ols-fe-two-way-fe-re",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#panel-data-models-pooled-ols-fe-two-way-fe-re",
+    "title": "Lecture 2",
+    "section": "👥📈 Panel Data Models: Pooled OLS → FE → Two-Way FE → RE",
+    "text": "👥📈 Panel Data Models: Pooled OLS → FE → Two-Way FE → RE\n✅ What is Panel Data?\nPanel data tracks the same units over time:\n\nUnit (i): country (e.g., USA, Korea, India)\nTime (t): year (e.g., 1990–2022)\n\nExample (CO₂ data):\n\nOutcome: CO2 per capita\nUnit: iso_code (country)\nTime: year"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#why-use-panel-models-not-only-pooled-ols",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#why-use-panel-models-not-only-pooled-ols",
+    "title": "Lecture 2",
+    "section": "Why Use Panel Models (Not Only Pooled OLS)?",
+    "text": "Why Use Panel Models (Not Only Pooled OLS)?\n\n\n\nPooled OLS can be misleading because it ignores unobserved country differences that don’t change much over time, such as:\n\n🌍 geography / climate / natural resources\n🏭 industrial structure and history\n🏛️ institutions and regulation\n⚡ energy infrastructure and technology path\n🧑‍🤝‍🧑 culture and long-run lifestyle patterns\n\n\n\n\nThese factors can affect both\n\nemissions (or other outcomes) and\nGDP per capita (or other regressors)\n\n\n\n\n➡️ That creates omitted variable bias when we use Pooled OLS."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#pooled-ols-baseline",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#pooled-ols-baseline",
+    "title": "Lecture 2",
+    "section": "1️⃣ Pooled OLS (Baseline)",
+    "text": "1️⃣ Pooled OLS (Baseline)\n\\[\ny_{it} = \\beta_0 + \\beta_1 X_{it} + \\epsilon_{it}\n\\]\nIn our EKC-style example:\n\\[\n\\ln(CO2pc_{it})\n= \\beta_0\n+ \\beta_1 \\ln(GDPpc_{it})\n+ \\beta_2 [\\ln(GDPpc_{it})]^2\n+ \\beta_3 \\ln(Pop_{it})\n+ \\epsilon_{it}\n\\]\n✅ Uses all variation - cross-country differences (between variation) - within-country changes over time (within variation)\n⚠️ Risk: unobserved country traits are hidden inside \\(\\epsilon_{it}\\)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#country-fixed-effects-fe",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#country-fixed-effects-fe",
+    "title": "Lecture 2",
+    "section": "Country Fixed Effects (FE)",
+    "text": "Country Fixed Effects (FE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\epsilon_{it}\n\\]\n\n\\(\\alpha_i\\) = country fixed effect\ncaptures all time-invariant country characteristics\n\ngeography, long-run institutions, baseline culture, etc.\n\n\nFE answers a within-country question:\n\n“If a country’s \\(x\\) changes over time, how does \\(y\\) change within that same country?”"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#two-way-fixed-effects-twfe",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#two-way-fixed-effects-twfe",
+    "title": "Lecture 2",
+    "section": "3️⃣ Two-Way Fixed Effects (TWFE)",
+    "text": "3️⃣ Two-Way Fixed Effects (TWFE)\n\\[\ny_{it} = \\beta X_{it} + \\alpha_i + \\gamma_t + \\epsilon_{it}\n\\]\n\n\\(\\alpha_i\\): country FE\n\\(\\gamma_t\\): year FE (global shocks / trends)\n\nExamples of year shocks: - global recessions (2008) - oil price spikes - global technological progress - worldwide climate policy shifts\n✅ Interpretation: &gt; Within-country changes, net of global year effects"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#random-effects-re",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#random-effects-re",
+    "title": "Lecture 2",
+    "section": "4️⃣ Random Effects (RE)",
+    "text": "4️⃣ Random Effects (RE)\n\\[\ny_{it} = \\beta X_{it} + \\alpha_i + \\epsilon_{it}\n\\]\nRE treats the country effect \\(\\alpha_i\\) as random, assuming:\n\\[\nCov(\\alpha_i, X_{it}) = 0\n\\]\n✅ Advantage: - more efficient than FE (smaller SEs)\n⚠️ Risk: - if \\(\\alpha_i\\) is correlated with regressors → RE is biased"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#why-fe-models-do-not-show-a-constant",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#why-fe-models-do-not-show-a-constant",
+    "title": "Lecture 2",
+    "section": "✅ Why FE Models Do Not Show a Constant",
+    "text": "✅ Why FE Models Do Not Show a Constant\nIn FE models, each country has its own intercept \\(\\alpha_i\\).\nSo the usual constant term is not separately identified:\n\ncountry FE already act like many intercepts\nFE estimation uses “demeaned” data (within transformation)\n\nThat is why FE/TWFE models often do not report a constant."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#why-r²-changes-across-models",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#why-r²-changes-across-models",
+    "title": "Lecture 2",
+    "section": "✅ Why R² Changes Across Models",
+    "text": "✅ Why R² Changes Across Models\n\nPooled OLS often has high R² because it explains big level differences across countries\nFE/TWFE remove those level differences\n\nthey focus on within-country changes only\nthis is a harder target → R² often falls\n\n\n➡️ R² values are not always directly comparable across pooling vs FE."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#why-we-cluster-standard-errors-country-clustered-se",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#why-we-cluster-standard-errors-country-clustered-se",
+    "title": "Lecture 2",
+    "section": "🧠 Why We Cluster Standard Errors (Country-Clustered SE)",
+    "text": "🧠 Why We Cluster Standard Errors (Country-Clustered SE)\nThe problem: errors are correlated within countries\nIn panel data, observations inside a country are rarely independent:\n\nshocks persist over time\npolicies change gradually\nmeasurement errors repeat\nemissions and GDP move smoothly\n\nThat means residuals may satisfy:\n\\[\nCov(\\epsilon_{it}, \\epsilon_{is}) \\neq 0 \\quad \\text{for } t \\neq s\n\\]\nIf we ignore this, standard errors are often: ❌ too small → false “significance”"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#clustered-standard-errors-by-country",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#clustered-standard-errors-by-country",
+    "title": "Lecture 2",
+    "section": "✅ Clustered Standard Errors (by country)",
+    "text": "✅ Clustered Standard Errors (by country)\nWe compute SEs that allow arbitrary correlation within each country:\n✅ cluster = \"group\" in plm\nThis is why we use:\n\ncountry-clustered standard errors\nalso called cluster-robust SE\n\n✅ Interpretation: &gt; We allow any type of serial correlation inside each country."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#model-summary-what-each-one-controls-for",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#model-summary-what-each-one-controls-for",
+    "title": "Lecture 2",
+    "section": "Model Summary (What Each One Controls For)",
+    "text": "Model Summary (What Each One Controls For)\n\n\n\n\n\n\n\n\n\nModel\nControls for country traits?\nControls for year shocks?\nUses between-country variation?\n\n\n\n\nPooled OLS\n❌ No\n❌ No\nYes\n\n\nCountry FE\nYes (time-invariant)\n❌ No\n❌ No\n\n\nTwo-way FE\nYes (time-invariant)\nYes\n❌ No\n\n\nRandom Effects\nYes (modeled as random intercept)\nOptional\nYes"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#final-takeaway",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#final-takeaway",
+    "title": "Lecture 2",
+    "section": "✅ Final Takeaway",
+    "text": "✅ Final Takeaway\nWe use panel data models because they help us estimate:\n✅ relationships within units over time\nwhile controlling for:\n\nhidden country characteristics (FE)\nglobal year shocks (TWFE)\n\nAnd we use clustered standard errors because panel errors are typically correlated within each unit."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#panel-data-models-pols-fe-twfe-re",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#panel-data-models-pols-fe-twfe-re",
+    "title": "Lecture 2",
+    "section": "👥📈 Panel Data Models: POLS → FE → TWFE → RE",
+    "text": "👥📈 Panel Data Models: POLS → FE → TWFE → RE\n\n\n\nLearning goals\n\n\n\nUnderstand what panel data is (and why we love it)\nCompare Pooled OLS, Fixed Effects, Two-Way FE, and Random Effects\nLearn what variation each model uses and what it controls for\nUnderstand country-clustered standard errors (and why we need them)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#what-is-panel-data",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#what-is-panel-data",
+    "title": "Lecture 2",
+    "section": "What is Panel Data?",
+    "text": "What is Panel Data?\nPanel data tracks the same units over multiple time periods:\n\nUnit (\\(i\\)): country (USA, Korea, India, …)\nTime (\\(t\\)): year (1990–2022, …)\n\nExample (CO\\(_2\\) panel): - Outcome: CO\\(_2\\) emissions per capita - Unit ID: iso_code - Time ID: year\n\n\n\nTip\n\n\nPanel data gives us two kinds of variation: - Between variation: differences across countries - Within variation: changes within a country over time"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#unobserved-heterogeneity-the-core-issue",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#unobserved-heterogeneity-the-core-issue",
+    "title": "Lecture 2",
+    "section": "🧠 Unobserved Heterogeneity (The Core Issue)",
+    "text": "🧠 Unobserved Heterogeneity (The Core Issue)\nSuppose the true relationship includes an unobserved country component:\n\\[\ny_{it} = \\beta x_{it} + \\underbrace{\\alpha_i}_{\\text{unobserved country trait}} + \\epsilon_{it}\n\\]\nIf we ignore \\(\\alpha_i\\) and estimate Pooled OLS:\n\\[\ny_{it} = \\beta x_{it} + u_{it}\n\\quad \\text{where} \\quad\nu_{it} = \\alpha_i + \\epsilon_{it}\n\\]\n⚠️ If \\(Cov(\\alpha_i, x_{it}) \\neq 0\\), then:\n\n\\(x_{it}\\) is correlated with the error term\nPooled OLS is biased\n\n\n\n\n\nFixed Effects is designed to solve exactly this problem."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#pooled-ols-baseline-model",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#pooled-ols-baseline-model",
+    "title": "Lecture 2",
+    "section": "Pooled OLS: Baseline Model",
+    "text": "Pooled OLS: Baseline Model\nModel \\[\ny_{it} = \\beta_0 + \\beta_1 x_{it} + \\epsilon_{it}\n\\]\nMeaning\n\nWe pretend the dataset is one big cross-section\nWe ignore the panel structure (country identity)\n\nUses all variation\n\nbetween-country variation\nwithin-country variation"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#what-pols-is-really-comparing",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#what-pols-is-really-comparing",
+    "title": "Lecture 2",
+    "section": "✅ What POLS is Really Comparing",
+    "text": "✅ What POLS is Really Comparing\nWhen you estimate POLS, the slope \\(\\beta_1\\) reflects a combination of:\n\nCross-country differences (rich vs. poor countries)\nWithin-country changes (one country over time)\n\nSo interpretation becomes:\n\n“On average, countries with higher \\(x\\) have higher (or lower) \\(y\\), and/or when \\(x\\) rises over time, \\(y\\) moves…”\n\n⚠️ That can be fine only if unobserved country traits don’t confound the relationship."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#the-big-risk-in-pols-omitted-variable-bias",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#the-big-risk-in-pols-omitted-variable-bias",
+    "title": "Lecture 2",
+    "section": "⚠️ The Big Risk in POLS: Omitted Variable Bias",
+    "text": "⚠️ The Big Risk in POLS: Omitted Variable Bias\nIf richer countries also have different institutions, energy systems, or historical industrialization paths, then:\n\n\\(x_{it}\\) (GDP per capita) is correlated with \\(\\alpha_i\\) (unobserved traits)\nPooled OLS mixes together the effect of \\(x_{it}\\) and the influence of \\(\\alpha_i\\), so the estimated \\(\\beta\\) can be misleading.\n\nPanel methods help because they explicitly control for \\(\\alpha_i\\)."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#what-fe-controls-for-automatically",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#what-fe-controls-for-automatically",
+    "title": "Lecture 2",
+    "section": "🔎 What FE Controls For (Automatically)",
+    "text": "🔎 What FE Controls For (Automatically)\nBecause each country gets its own intercept \\(\\alpha_i\\), FE controls for:\n\nany factor that is constant within a country\neven if you do not observe or measure it\n\nExamples (time-invariant or very slow-moving):\n\ndistance to equator\nlandlocked status\nbaseline political system\ndeep energy infrastructure\n\n\n\n\n📌 FE is powerful because it controls for a lot without measuring those things."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#the-fe-within-transformation-why-it-works",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#the-fe-within-transformation-why-it-works",
+    "title": "Lecture 2",
+    "section": "🧮 The FE “Within Transformation” (Why It Works)",
+    "text": "🧮 The FE “Within Transformation” (Why It Works)\nFE can be estimated by subtracting each country’s time average:\nDefine:\n\n\\(\\bar{y}_i = \\frac{1}{T_i}\\sum_t y_{it}\\)\n\\(\\bar{x}_i = \\frac{1}{T_i}\\sum_t x_{it}\\)\n\nSubtract the average from each observation:\n\\[\n(y_{it} - \\bar{y}_i) = \\beta (x_{it} - \\bar{x}_i) + (\\epsilon_{it} - \\bar{\\epsilon}_i)\n\\]\n✅ Notice what disappears:\n\n\\(\\alpha_i\\) drops out completely (because it is constant over time)\n\nSo FE is basically OLS on demeaned data."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#fe-uses-only-within-country-variation",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#fe-uses-only-within-country-variation",
+    "title": "Lecture 2",
+    "section": "FE Uses Only Within-Country Variation",
+    "text": "FE Uses Only Within-Country Variation\nFE does not use differences between countries:\n\nIt does not compare USA vs India levels\nIt compares USA over time to itself\n\nSo FE is best when:\n\nthe key confounding problem is time-invariant\nwe care about within-country causal interpretation\n\n⚠️ FE cannot estimate effects of variables that do not change over time, e.g.:\n\nlandlocked, continent, distance_to_equator"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#two-way-fixed-effects-country-year-fe",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#two-way-fixed-effects-country-year-fe",
+    "title": "Lecture 2",
+    "section": "Two-Way Fixed Effects (Country + Year FE)",
+    "text": "Two-Way Fixed Effects (Country + Year FE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\gamma_t + \\epsilon_{it}\n\\]\n\n\\(\\alpha_i\\): country FE (time-invariant traits)\n\\(\\gamma_t\\): year FE (global shocks / common trends)\n\nTWFE answers:\n\n“Within a country, how does \\(y\\) change with \\(x\\), after removing global year shocks?”"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#why-add-year-fixed-effects",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#why-add-year-fixed-effects",
+    "title": "Lecture 2",
+    "section": "🌍 Why Add Year Fixed Effects?",
+    "text": "🌍 Why Add Year Fixed Effects?\nYear effects capture shocks that hit many countries at once:\n\n🛢️ oil price spikes\n📉 global recessions (e.g., 2008)\n🦠 pandemics\n💡 global technology trends\n🌐 global climate agreements\n\nIf we don’t include \\(\\gamma_t\\), the regression may mistakenly attribute these common shocks to \\(x_{it}\\).\nYear FE helps remove this confounding."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#random-effects-re-1",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#random-effects-re-1",
+    "title": "Lecture 2",
+    "section": "Random Effects (RE)",
+    "text": "Random Effects (RE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\epsilon_{it}\n\\]\nSame structure as FE… but different assumption:\n\nRE treats \\(\\alpha_i\\) as random\nand assumes it is uncorrelated with regressors:\n\n\\[\nCov(\\alpha_i, x_{it}) = 0\n\\]\nIf that assumption holds:\n\nRE is more efficient than FE (smaller standard errors)\nRE uses both within and between variation"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#when-re-fails-bias-risk",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#when-re-fails-bias-risk",
+    "title": "Lecture 2",
+    "section": "⚠️ When RE Fails (Bias Risk)",
+    "text": "⚠️ When RE Fails (Bias Risk)\nIf \\(Cov(\\alpha_i, x_{it}) \\neq 0\\), then RE is biased.\nIn many economic settings, this correlation is very plausible:\n\nricher countries may also have better institutions (inside \\(\\alpha_i\\))\nenergy system differences affect both GDP and emissions\n\nSo FE is often the safer default in applied work."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#fe-vs-re-the-hausman-intuition",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#fe-vs-re-the-hausman-intuition",
+    "title": "Lecture 2",
+    "section": "🧪 FE vs RE: The Hausman Intuition",
+    "text": "🧪 FE vs RE: The Hausman Intuition\nThe logic is:\n\nFE is consistent even when \\(Cov(\\alpha_i, x_{it}) \\neq 0\\)\nRE is consistent only if \\(Cov(\\alpha_i, x_{it}) = 0\\)\n\nSo we test whether RE is “safe” by checking whether: - RE and FE estimates are statistically different\nThat idea is formalized in the Hausman test."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#cluster-robust-standard-errors-by-country",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#cluster-robust-standard-errors-by-country",
+    "title": "Lecture 2",
+    "section": "Cluster-Robust Standard Errors (by Country)",
+    "text": "Cluster-Robust Standard Errors (by Country)\nCountry-clustered SEs allow:\n\narbitrary correlation over time within a country\nheteroskedasticity across countries\n\nInterpretation:\n\n“We allow any kind of serial correlation within each country.”\n\nIn R (plm), this is typically implemented using robust VCOV options, e.g. vcovHC() with clustering by group."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#final-takeaway-panel-models",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#final-takeaway-panel-models",
+    "title": "Lecture 2",
+    "section": "Final Takeaway (Panel Models)",
+    "text": "Final Takeaway (Panel Models)\nWe use panel data models to estimate relationships within units over time, while controlling for:\n\nhidden country characteristics (\\(\\alpha_i\\))\nglobal year shocks (\\(\\gamma_t\\))\n\nAnd we use clustered SEs because panel residuals are often correlated within each unit."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#environmental-kuznets-curve-ekc-growth-vs.-pollution-1",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#environmental-kuznets-curve-ekc-growth-vs.-pollution-1",
+    "title": "Lecture 2",
+    "section": "🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution",
+    "text": "🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution\n\n\n\nNote\n\n\nNow we add the key EKC idea: a nonlinear relationship between income and pollution."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#draw-the-ekc-curve-inverted-u",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#draw-the-ekc-curve-inverted-u",
+    "title": "Lecture 2",
+    "section": "📉📈 Draw the EKC Curve (Inverted-U)",
+    "text": "📉📈 Draw the EKC Curve (Inverted-U)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#how-to-interpret-ekc-coefficients",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#how-to-interpret-ekc-coefficients",
+    "title": "Lecture 2",
+    "section": "How to Interpret EKC Coefficients",
+    "text": "How to Interpret EKC Coefficients\n\nIf \\(\\beta_1 &gt; 0\\) and \\(\\beta_2 &lt; 0\\)\nemissions rise at first, then eventually fall\n→ EKC pattern (inverted-U)\nIf \\(\\beta_2 = 0\\)\n→ relationship is linear\nIf \\(\\beta_2 &gt; 0\\)\n→ U-shape (emissions accelerate with income)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#important-caveat-for-co_2",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#important-caveat-for-co_2",
+    "title": "Lecture 2",
+    "section": "Important Caveat for CO\\(_2\\)",
+    "text": "Important Caveat for CO\\(_2\\)\nEKC may be weaker for CO\\(_2\\) than for local air pollutants because:\n\nCO\\(_2\\) is deeply tied to energy systems\nbenefits are global, costs are often local\nemissions may shift across borders via trade (carbon leakage)\n\nSo EKC is a hypothesis to test, not a guaranteed pattern."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#final-takeaway-ekc",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#final-takeaway-ekc",
+    "title": "Lecture 2",
+    "section": "Final Takeaway (EKC)",
+    "text": "Final Takeaway (EKC)\nEKC tests whether pollution follows an inverted-U with income.\nPanel FE/TWFE help make that test more credible by controlling for:\n\ncountry traits (\\(\\alpha_i\\))\nyear shocks (\\(\\gamma_t\\))"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#what-pols-is-really-doing",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#what-pols-is-really-doing",
+    "title": "Lecture 2",
+    "section": "What POLS is Really Doing",
+    "text": "What POLS is Really Doing\nWhen you estimate POLS, the slope \\(\\beta_1\\) reflects a combination of:\n\nCross-country differences (rich vs. poor countries)\nWithin-country changes (one country over time)\n\nSo interpretation becomes:\n\n“On average, countries with higher \\(x\\) have higher (or lower) \\(y\\), and/or when \\(x\\) rises over time, \\(y\\) moves…”\n\n⚠️ That can be fine only if unobserved country traits don’t confound the relationship."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#omitted-variable-bias-1",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#omitted-variable-bias-1",
+    "title": "Lecture 2",
+    "section": "Omitted Variable Bias",
+    "text": "Omitted Variable Bias\n\nOmitted variable bias (OVB): bias in the model because of omitting an important regressor that is correlated with existing regressor(s).\nLet’s use an orange juice (OJ) example to demonstrate the OVB.\n\nOJ price elasticity estimates vary with models, whether or not taking into account brand or ad_status\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nsales\nQuantity of OJ cartons sold\n\n\nprice\nPrice of OJ\n\n\nbrand\nBrand of OJ\n\n\nad\nAdvertisement status"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#short--and-long--regressions",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#short--and-long--regressions",
+    "title": "Lecture 2",
+    "section": "📏 Short- and Long- Regressions",
+    "text": "📏 Short- and Long- Regressions\n\nOVB is the difference in beta estimates between short- and long-form regressions.\nShort regression: The regression model with less regressors\n\n\n\n\n\\[\n\\begin{align}\n\\log(\\text{sales}_i) = \\beta_0 + \\beta_1\\log(\\text{price}_i) + \\epsilon_i\n\\end{align}\n\\]\n\nLong regression: The regression model that adds additional regressor(s) to the short one.\n\n\n\n\n\\[\n\\begin{align}\n\\log(\\text{sales}_i) =& \\beta_0 + \\beta_{1}\\log(\\text{price}_i) \\\\\n&+ \\beta_{2}\\text{minute.maid}_i + \\beta_{3}\\text{tropicana}_i + \\epsilon_i\n\\end{align}\n\\]\n\nOVB for \\(\\beta_1\\) is:\n\n\n\n\n\\[\n\\text{OVB} = \\widehat{\\beta_{1}^{short}} - \\widehat{\\beta_{1}^{long}}\n\\]"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#ovb-formula",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#ovb-formula",
+    "title": "Lecture 2",
+    "section": "OVB formula",
+    "text": "OVB formula\n\nConsider the following short- and long- regressions:\n\nShort: \\(Y_i = \\beta_0 + \\beta_{1}^{short}X_1 + \\epsilon_{short}\\)\n\nLong: \\(Y_i = \\beta_0 + \\beta_{1}^{long}X_1 +\\beta_{2}X_2 + \\epsilon_{long}\\)\n\nError in short form can be represented as: \\[\n{\\epsilon_{short}} = \\beta_{2}X_2 + \\epsilon_{long}\n\\]\nIf variable \\(X_1\\) is correlated with \\(X_2\\), the following assumptions are violated in the short regression model:\n\nErrors are not correlated with regressors.\nErrors have a mean value of 0."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#how-does-an-ovb-happen-in-regression",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#how-does-an-ovb-happen-in-regression",
+    "title": "Lecture 2",
+    "section": "❓🔍 How does an OVB happen in regression?",
+    "text": "❓🔍 How does an OVB happen in regression?\n\nIn the first stage, consider the relationship between price and brand:\n\n\\[\n\\log(\\text{price}) = \\beta_0 + \\beta_1\\text{minute_maid} + \\beta_2\\text{tropicana} + \\epsilon_{1st}\n\\]\n\nThen, calculate the residual: \\[\n\\widehat{\\epsilon_{1st}} = \\log(\\text{price}) - \\widehat{\\log(\\text{price})}\n\\]\nThe residual represents the log of OJ price after its correlation with brand has been removed!\nIn the second stage, regress \\(\\log(\\text{sales})\\) on residual \\(\\widehat{\\epsilon_{1st}}\\):\n\n\\[\n\\log(\\text{sales}) = \\beta_0 + \\beta_1\\widehat{\\epsilon_{1st}}  + \\epsilon_{2nd}\n\\]"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#regression-sensitivity-analysis",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#regression-sensitivity-analysis",
+    "title": "Lecture 2",
+    "section": "Regression Sensitivity Analysis",
+    "text": "Regression Sensitivity Analysis\n\nRegression finds the coefficients on the part of each regressor that is independent from the other regressors.\nWhat can we do to deal with OVB problems?\n\nBecause we can never be sure whether a given set of controls is enough to eliminate OVB, it’s important to ask how sensitive regression results are to changes in the list of controls."
   }
 ]

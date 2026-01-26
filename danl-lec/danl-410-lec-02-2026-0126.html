@@ -1,0 +1,1555 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-html/tabby.min.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.3.450">
+
+  <meta name="author" content="Byeong-Hak Choe">
+  <meta name="dcterms.date" content="2026-01-26">
+  <title>Lecture 2</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+  </style>
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+
+  .callout {
+    margin-top: 1em;
+    margin-bottom: 1em;  
+    border-radius: .25rem;
+  }
+
+  .callout.callout-style-simple { 
+    padding: 0em 0.5em;
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+    display: flex;
+  }
+
+  .callout.callout-style-default {
+    border-left: solid #acacac .3rem;
+    border-right: solid 1px silver;
+    border-top: solid 1px silver;
+    border-bottom: solid 1px silver;
+  }
+
+  .callout .callout-body-container {
+    flex-grow: 1;
+  }
+
+  .callout.callout-style-simple .callout-body {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-style-default .callout-body {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  .callout.callout-titled.callout-style-simple .callout-body {
+    margin-top: 0.2em;
+  }
+
+  .callout:not(.callout-titled) .callout-body {
+      display: flex;
+  }
+
+  .callout:not(.no-icon).callout-titled.callout-style-simple .callout-content {
+    padding-left: 1.6em;
+  }
+
+  .callout.callout-titled .callout-header {
+    padding-top: 0.2em;
+    margin-bottom: -0.2em;
+  }
+
+  .callout.callout-titled .callout-title  p {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+  }
+    
+  .callout.callout-titled.callout-style-simple .callout-content  p {
+    margin-top: 0;
+  }
+
+  .callout.callout-titled.callout-style-default .callout-content  p {
+    margin-top: 0.7em;
+  }
+
+  .callout.callout-style-simple div.callout-title {
+    border-bottom: none;
+    font-size: .9rem;
+    font-weight: 600;
+    opacity: 75%;
+  }
+
+  .callout.callout-style-default  div.callout-title {
+    border-bottom: none;
+    font-weight: 600;
+    opacity: 85%;
+    font-size: 0.9rem;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-default div.callout-content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+
+  .callout.callout-style-simple .callout-icon::before {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem;
+  }
+
+  .callout.callout-style-default .callout-icon::before {
+    height: 0.9rem;
+    width: 0.9rem;
+    display: inline-block;
+    content: "";
+    background-repeat: no-repeat;
+    background-size: 0.9rem 0.9rem;
+  }
+
+  .callout-title {
+    display: flex
+  }
+    
+  .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  .callout.no-icon::before {
+    display: none !important;
+  }
+
+  .callout.callout-titled .callout-body > .callout-content > :last-child {
+    margin-bottom: 0.5rem;
+  }
+
+  .callout.callout-titled .callout-icon::before {
+    margin-top: .5rem;
+    padding-right: .5rem;
+  }
+
+  .callout:not(.callout-titled) .callout-icon::before {
+    margin-top: 1rem;
+    padding-right: .5rem;
+  }
+
+  /* Callout Types */
+
+  div.callout-note {
+    border-left-color: #4582ec !important;
+  }
+
+  div.callout-note .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEU0lEQVRYCcVXTWhcVRQ+586kSUMMxkyaElstCto2SIhitS5Ek8xUKV2poatCcVHtUlFQk8mbaaziwpWgglJwVaquitBOfhQXFlqlzSJpFSpIYyXNjBNiTCck7x2/8/LeNDOZxDuEkgOXe++553zfefee+/OYLOXFk3+1LLrRdiO81yNqZ6K9cG0P3MeFaMIQjXssE8Z1JzLO9ls20MBZX7oG8w9GxB0goaPrW5aNMp1yOZIa7Wv6o2ykpLtmAPs/vrG14Z+6d4jpbSKuhdcSyq9wGMPXjonwmESXrriLzFGOdDBLB8Y6MNYBu0dRokSygMA/mrun8MGFN3behm6VVAwg4WR3i6FvYK1T7MHo9BK7ydH+1uurECoouk5MPRyVSBrBHMYwVobG2aOXM07sWrn5qgB60rc6mcwIDJtQrnrEr44kmy+UO9r0u9O5/YbkS9juQckLed3DyW2XV/qWBBB3ptvI8EUY3I9p/67OW+g967TNr3Sotn3IuVlfMLVnsBwH4fsnebJvyGm5GeIUA3jljERmrv49SizPYuq+z7c2H/jlGC+Ghhupn/hcapqmcudB9jwJ/3jvnvu6vu5lVzF1fXyZuZZ7U8nRmVzytvT+H3kilYvH09mLWrQdwFSsFEsxFVs5fK7A0g8gMZjbif4ACpKbjv7gNGaD8bUrlk8x+KRflttr22JEMRUbTUwwDQScyzPgedQHZT0xnx7ujw2jfVfExwYHwOsDTjLdJ2ebmeQIlJ7neo41s/DrsL3kl+W2lWvAga0tR3zueGr6GL78M3ifH0rGXrBC2aAR8uYcIA5gwV8zIE8onoh8u0Fca/ciF7j1uOzEnqcIm59sEXoGc0+z6+H45V1CvAvHcD7THztu669cnp+L0okAeIc6zjbM/24LgGM1gZk7jnRu1aQWoU9sfUOuhrmtaPIO3YY1KLLWZaEO5TKUbMY5zx8W9UJ6elpLwKXbsaZ4EFl7B4bMtDv0iRipKoDQT2sNQI9b1utXFdYisi+wzZ/ri/1m7QfDgEuvgUUEIJPq3DhX/5DWNqIXDOweC2wvIR90Oq3lDpdMIgD2r0dXvGdsEW5H6x6HLRJYU7C69VefO1x8Gde1ZFSJLfWS1jbCnhtOPxmpfv2LXOA2Xk2tvnwKKPFuZ/oRmwBwqRQDcKNeVQkYcOjtWVBuM/JuYw5b6isojIkYxyYAFn5K7ZBF10fea52y8QltAg6jnMqNHFBmGkQ1j+U43HMi2xMar1Nv0zGsf1s8nUsmUtPOOrbFIR8bHFDMB5zL13Gmr/kGlCkUzedTzzmzsaJXhYawnA3UmARpiYj5ooJZiUoxFRtK3X6pgNPv+IZVPcnwbOl6f+aBaO1CNvPW9n9LmCp01nuSaTRF2YxHqZ8DYQT6WsXT+RD6eUztwYLZ8rM+rcPxamv1VQzFUkzFXvkiVrySGQgJNvXHJAxiU3/NwiC03rSf05VBaPtu/Z7/B8Yn/w7eguloAAAAAElFTkSuQmCC');
+  }
+
+  div.callout-note.callout-style-default .callout-title {
+    background-color: #dae6fb
+  }
+
+  div.callout-important {
+    border-left-color: #d9534f !important;
+  }
+
+  div.callout-important .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAEKklEQVRYCcVXTWhcVRS+575MJym48A+hSRFr00ySRQhURRfd2HYjk2SSTokuBCkU2o0LoSKKraKIBTcuFCoidGFD08nkBzdREbpQ1EDNIv8qSGMFUboImMSZd4/f9zJv8ibJMC8xJQfO3HPPPef7zrvvvnvviIkpC9nsw0UttFunbUhpFzFtarSd6WJkStVMw5xyVqYTvkwfzuf/5FgtkVoB0729j1rjXwThS7Vio+Mo6DNnvLfahoZ+i/o32lULuJ3NNiz7q6+pyAUkJaFF6JwaM2lUJlV0MlnQn5aTRbEu0SEqHUa0A4AdiGuB1kFXRfVyg5d87+Dg4DL6m2TLAub60ilj7A1Ec4odSAc8X95sHh7+ZRPCFo6Fnp7HfU/fBng/hi10CjCnWnJjsxvDNxWw0NfV6Rv5GgP3I3jGWXumdTD/3cbEOP2ZbOZp69yniG3FQ9z1jD7bnBu9Fc2tKGC2q+uAJOQHBDRiZX1x36o7fWBs7J9ownbtO+n0/qWkvW7UPIfc37WgT6ZGR++EOJyeQDSb9UB+DZ1G6DdLDzyS+b/kBCYGsYgJbSQHuThGKRcw5xdeQf8YdNHsc6ePXrlSYMBuSIAFTGAtQo+VuALo4BX83N190NWZWbynBjhOHsmNfFWLeL6v+ynsA58zDvvAC8j5PkbOcXCMg2PZFk3q8MjI7WAG/Dp9AwP7jdGBOOQkAvlFUB+irtm16I1Zw9YBcpGTGXYmk3kQIC/Cds55l+iMI3jqhjAuaoe+am2Jw5GT3Nbz3CkE12NavmzN5+erJW7046n/CH1RO/RVa8lBLozXk9uqykkGAyRXLWlLv5jyp4RFsG5vGVzpDLnIjTWgnRy2Rr+tDKvRc7Y8AyZq10jj8DqXdnIRNtFZb+t/ZRtXcDiVnzpqx8mPcDWxgARUqx0W1QB9MeUZiNrV4qP+Ehc+BpNgATsTX8ozYKL2NtFYAHc84fG7ndxUPr+AR/iQSns7uSUufAymwDOb2+NjK27lEFocm/EE2WpyIy/Hi66MWuMKJn8RvxIcj87IM5Vh9663ziW36kR0HNenXuxmfaD8JC7tfKbrhFr7LiZCrMjrzTeGx+PmkosrkNzW94ObzwocJ7A1HokLolY+AvkTiD/q1H0cN48c5EL8Crkttsa/AXQVDmutfyku0E7jShx49XqV3MFK8IryDhYVbj7Sj2P2eBxwcXoe8T8idsKKPRcnZw1b+slFTubwUwhktrfnAt7J++jwQtLZcm3sr9LQrjRzz6cfMv9aLvgmnAGvpoaGLxM4mAEaLV7iAzQ3oU0IvD5x9ix3yF2RAAuYAOO2f7PEFWCXZ4C9Pb2UsgDeVnFSpbFK7/IWu7TPTvBqzbGdCHOJQSxiEjt6IyZmxQyEJHv6xyQsYk//moVFsN2zP6fRImjfq7/n/wFDguUQFNEwugAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-important.callout-style-default .callout-title {
+    background-color: #f7dddc
+  }
+
+  div.callout-warning {
+    border-left-color: #f0ad4e !important;
+  }
+
+  div.callout-warning .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAAETklEQVRYCeVWW2gcVRg+58yaTUnizqbipZeX4uWhBEniBaoUX1Ioze52t7sRq6APio9V9MEaoWlVsFasRq0gltaAPuxms8lu0gcviE/FFOstVbSIxgcv6SU7EZqmdc7v9+9mJtNks51NTUH84ed889/PP+cmxP+d5FIbMJmNbpREu4WUkiTtCicKny0l1pIKmBzovF2S+hIJHX8iEu3hZJ5lNZGqyRrGSIQpq15AzF28jgpeY6yk6GVdrfFqdrD6Iw+QlB8g0YS2g7dyQmXM/IDhBhT0UCiRf59lfqmmDvzRt6kByV/m4JjtzuaujMUM2c5Z2d6JdKrRb3K2q6mA+oYVz8JnDdKPmmNthzkAk/lN63sYPgevrguc72aZX/L9C6x09GYyxBgCX4NlvyGUHOKELlm5rXeR1kchuChJt4SSwyddZRXgvwMGvYo4QSlk3/zkHD8UHxwVJA6zjZZqP8v8kK8OWLnIZtLyCAJagYC4rTGW/9Pqj92N/c+LUaAj27movwbi19tk/whRCIE7Q9vyI6yvRpftAKVTdUjOW40X3h5OXsKCdmFcx0xlLJoSuQngnrJe7Kcjm4OMq9FlC7CMmScQANuNvjfP3PjGXDBaUQmbp296S5L4DrpbrHN1T87ZVEZVCzg1FF0Ft+dKrlLukI+/c9ENo+TvlTDbYFvuKPtQ9+l052rXrgKoWkDAFnvh0wTOmYn8R5f4k/jN/fZiCM1tQx9jQQ4ANhqG4hiL0qIFTGViG9DKB7GYzgubnpofgYRwO+DFjh0Zin2m4b/97EDkXkc+f6xYAPX0KK2I/7fUQuwzuwo/L3AkcjugPNixC8cHf0FyPjWlItmLxWw4Ou9YsQCr5fijMGoD/zpdRy95HRysyXA74MWOnscpO4j2y3HAVisw85hX5+AFBRSHt4ShfLFkIMXTqyKFc46xdzQM6XbAi702a7sy04J0+feReMFKp5q9esYLCqAZYw/k14E/xcLLsFElaornTuJB0svMuJINy8xkIYuL+xPAlWRceH6+HX7THJ0djLUom46zREu7tTkxwmf/FdOZ/sh6Q8qvEAiHpm4PJ4a/doJe0gH1t+aHRgCzOvBvJedEK5OFE5jpm4AGP2a8Dxe3gGJ/pAutug9Gp6he92CsSsWBaEcxGx0FHytmIpuqGkOpldqNYQK8cSoXvd+xLxXADw0kf6UkJNFtdo5MOgaLjiQOQHcn+A6h5NuL2s0qsC2LOM75PcF3yr5STuBSAcGG+meA14K/CI21HcS4LBT6tv0QAh8Dr5l93AhZzG5ZJ4VxAqdZUEl9z7WJ4aN+svMvwHHL21UKTd1mqvChH7/Za5xzXBBKrUcB0TQ+Ulgkfbi/H/YT5EptrGzsEK7tR1B7ln9BBwckYfMiuSqklSznIuoIIOM42MQO+QnduCoFCI0bpkzjCjddHPN/F+2Yu+sd9bKNpVwHhbS3LluK/0zgfwD0xYI5dXuzlQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-warning.callout-style-default .callout-title {
+    background-color: #fcefdc
+  }
+
+  div.callout-tip {
+    border-left-color: #02b875 !important;
+  }
+
+  div.callout-tip .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAADr0lEQVRYCe1XTWgTQRj9ZjZV8a9SPIkKgj8I1bMHsUWrqYLVg4Ue6v9BwZOxSYsIerFao7UiUryIqJcqgtpimhbBXoSCVxUFe9CTiogUrUp2Pt+3aUI2u5vdNh4dmMzOzHvvezuz8xNFM0mjnbXaNu1MvFWRXkXEyE6aYOYJpdW4IXuA4r0fo8qqSMDBU0v1HJUgVieAXxzCsdE/YJTdFcVIZQNMyhruOMJKXYFoLfIfIvVIMWdsrd+Rpd86ZmyzzjJmLStqRn0v8lzkb4rVIXvnpScOJuAn2ACC65FkPzEdEy4TPWRLJ2h7z4cArXzzaOdKlbOvKKX25Wl00jSnrwVxAg3o4dRxhO13RBSdNvH0xSARv3adTXbBdTf64IWO2vH0LT+cv4GR1DJt+DUItaQogeBX/chhbTBxEiZ6gftlDNXTrvT7co4ub5A6gp9HIcHvzTa46OS5fBeP87Qm0fQkr4FsYgVQ7Qg+ZayaDg9jhg1GkWj8RG6lkeSacrrHgDaxdoBiZPg+NXV/KifMuB6//JmYH4CntVEHy/keA6x4h4CU5oFy8GzrBS18cLJMXcljAKB6INjWsRcuZBWVaS3GDrqB7rdapVIeA+isQ57Eev9eCqzqOa81CY05VLd6SamW2wA2H3SiTbnbSxmzfp7WtKZkqy4mdyAlGx7ennghYf8voqp9cLSgKdqNfa6RdRsAAkPwRuJZNbpByn+RrJi1RXTwdi8RQF6ymDwGMAtZ6TVE+4uoKh+MYkcLsT0Hk8eAienbiGdjJHZTpmNjlbFJNKDVAp2fJlYju6IreQxQ08UJDNYdoLSl6AadO+fFuCQqVMB1NJwPm69T04Wv5WhfcWyfXQB+wXRs1pt+nCknRa0LVzSA/2B+a9+zQJadb7IyyV24YAxKp2Jqs3emZTuNnKxsah+uabKbMk7CbTgJx/zIgQYErIeTKRQ9yD9wxVof5YolPHqaWo7TD6tJlh7jQnK5z2n3+fGdggIOx2kaa2YI9QWarc5Ce1ipNWMKeSG4DysFF52KBmTNMmn5HqCFkwy34rDg05gDwgH3bBi+sgFhN/e8QvRn8kbamCOhgrZ9GJhFDgfcMHzFb6BAtjKpFhzTjwv1KCVuxHvCbsSiEz4CANnj84cwHdFXAbAOJ4LTSAawGWFn5tDhLMYz6nWeU2wJfIhmIJBefcd/A5FWQWGgrWzyORZ3Q6HuV+Jf0Bj+BTX69fm1zWgK7By1YTXchFDORywnfQ7GpzOo6S+qECrsx2ifVQAAAABJRU5ErkJggg==');
+  }
+
+  div.callout-tip.callout-style-default .callout-title {
+    background-color: #ccf1e3
+  }
+
+  div.callout-caution {
+    border-left-color: #fd7e14 !important;
+  }
+
+  div.callout-caution .callout-icon::before {
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAIKADAAQAAAABAAAAIAAAAACshmLzAAACV0lEQVRYCdVWzWoUQRCuqp2ICBLJXgITZL1EfQDBW/bkzUMUD7klD+ATSHBEfAIfQO+iXsWDxJsHL96EHAwhgzlkg8nBg25XWb0zIb0zs9muYYWkoKeru+vn664fBqElyZNuyh167NXJ8Ut8McjbmEraKHkd7uAnAFku+VWdb3reSmRV8PKSLfZ0Gjn3a6Xlcq9YGb6tADjn+lUfTXtVmaZ1KwBIvFI11rRXlWlatwIAAv2asaa9mlB9wwygiDX26qaw1yYPzFXg2N1GgG0FMF8Oj+VIx7E/03lHx8UhvYyNZLN7BwSPgekXXLribw7w5/c8EF+DBK5idvDVYtEEwMeYefjjLAdEyQ3M9nfOkgnPTEkYU+sxMq0BxNR6jExrAI31H1rzvLEfRIdgcv1XEdj6QTQAS2wtstEALLG1yEZ3QhH6oDX7ExBSFEkFINXH98NTrme5IOaaA7kIfiu2L8A3qhH9zRbukdCqdsA98TdElyeMe5BI8Rs2xHRIsoTSSVFfCFCWGPn9XHb4cdobRIWABNf0add9jakDjQJpJ1bTXOJXnnRXHRf+dNL1ZV1MBRCXhMbaHqGI1JkKIL7+i8uffuP6wVQAzO7+qVEbF6NbS0LJureYcWXUUhH66nLR5rYmva+2tjRFtojkM2aD76HEGAD3tPtKM309FJg5j/K682ywcWJ3PASCcycH/22u+Bh7Aa0ehM2Fu4z0SAE81HF9RkB21c5bEn4Dzw+/qNOyXr3DCTQDMBOdhi4nAgiFDGCinIa2owCEChUwD8qzd03PG+qdW/4fDzjUMcE1ZpIAAAAASUVORK5CYII=');
+  }
+
+  div.callout-caution.callout-style-default .callout-title {
+    background-color: #ffe5d0
+  }
+
+  </style>
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Lecture 2</h1>
+  <p class="subtitle">Omitted Variable Bias; Panel Data Models</p>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+Byeong-Hak Choe 
+</div>
+<div class="quarto-title-author-email">
+<a href="mailto:bchoe@geneseo.edu">bchoe@geneseo.edu</a>
+</div>
+        <p class="quarto-title-affiliation">
+            SUNY Geneseo
+          </p>
+    </div>
+</div>
+
+  <p class="date">January 26, 2026</p>
+</section>
+<section>
+<section id="omitted-variable-bias" class="title-slide slide level1 center" data-background-color="#1c4982">
+<h1>❌ <strong>Omitted Variable Bias</strong></h1>
+
+</section>
+<section id="omitted-variable-bias-1" class="slide level2">
+<h2>Omitted Variable Bias</h2>
+<ul>
+<li><p><strong>Omitted variable bias (OVB)</strong>: bias in the model because of omitting an important regressor that is correlated with existing regressor(s).</p></li>
+<li><p>Let’s use an orange juice (OJ) example to demonstrate the OVB.</p>
+<ul>
+<li>OJ price elasticity estimates vary with models, whether or not taking into account <code>brand</code> or <code>ad_status</code></li>
+</ul></li>
+</ul>
+<table>
+<thead>
+<tr class="header">
+<th>Variable</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>sales</code></td>
+<td>Quantity of OJ cartons sold</td>
+</tr>
+<tr class="even">
+<td><code>price</code></td>
+<td>Price of OJ</td>
+</tr>
+<tr class="odd">
+<td><code>brand</code></td>
+<td>Brand of OJ</td>
+</tr>
+<tr class="even">
+<td><code>ad</code></td>
+<td>Advertisement status</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="short--and-long--regressions" class="slide level2">
+<h2>📏 Short- and Long- Regressions</h2>
+<ul>
+<li><p>OVB is the difference in beta estimates between short- and long-form regressions.</p></li>
+<li><p><strong>Short regression</strong>: The regression model with less regressors</p></li>
+</ul>
+<div style="display:block; margin:-25px;">
+
+</div>
+<p><span class="math display">\[
+\begin{align}
+\log(\text{sales}_i) = \beta_0 + \beta_1\log(\text{price}_i) + \epsilon_i
+\end{align}
+\]</span></p>
+<ul>
+<li><strong>Long regression</strong>: The regression model that adds additional regressor(s) to the short one.</li>
+</ul>
+<div style="display:block; margin:-25px;">
+
+</div>
+<p><span class="math display">\[
+\begin{align}
+\log(\text{sales}_i) =&amp; \beta_0 + \beta_{1}\log(\text{price}_i) \\
+&amp;+ \beta_{2}\text{minute.maid}_i + \beta_{3}\text{tropicana}_i + \epsilon_i
+\end{align}
+\]</span></p>
+<ul>
+<li>OVB for <span class="math inline">\(\beta_1\)</span> is:</li>
+</ul>
+<div style="display:block; margin:-30px;">
+
+</div>
+<p><span class="math display">\[
+\text{OVB} = \widehat{\beta_{1}^{short}} - \widehat{\beta_{1}^{long}}
+\]</span></p>
+</section>
+<section id="ovb-formula" class="slide level2">
+<h2>OVB formula</h2>
+<ul>
+<li><p>Consider the following short- and long- regressions:</p>
+<ul>
+<li>Short: <span class="math inline">\(Y_i = \beta_0 + \beta_{1}^{short}X_1 + \epsilon_{short}\)</span><br>
+</li>
+<li>Long: <span class="math inline">\(Y_i = \beta_0 + \beta_{1}^{long}X_1 +\beta_{2}X_2 + \epsilon_{long}\)</span></li>
+</ul></li>
+<li><p>Error in short form can be represented as: <span class="math display">\[
+{\epsilon_{short}} = \beta_{2}X_2 + \epsilon_{long}
+\]</span></p></li>
+<li><p>If variable <span class="math inline">\(X_1\)</span> is <strong>correlated</strong> with <span class="math inline">\(X_2\)</span>, the following assumptions are violated in the <u>short regression</u> model:</p>
+<ul>
+<li>Errors are not correlated with regressors.</li>
+<li>Errors have a mean value of 0.</li>
+</ul></li>
+</ul>
+</section>
+<section id="how-does-an-ovb-happen-in-regression" class="slide level2">
+<h2>❓🔍 How does an OVB happen in regression?</h2>
+<ul>
+<li>In the first stage, consider the relationship between <code>price</code> and <code>brand</code>:</li>
+</ul>
+<p><span class="math display">\[
+\log(\text{price}) = \beta_0 + \beta_1\text{minute_maid} + \beta_2\text{tropicana} + \epsilon_{1st}
+\]</span></p>
+<ul>
+<li><p>Then, calculate the residual: <span class="math display">\[
+\widehat{\epsilon_{1st}} = \log(\text{price}) - \widehat{\log(\text{price})}
+\]</span></p></li>
+<li><p>The residual represents the log of OJ price after its correlation with brand has been removed!</p></li>
+<li><p>In the second stage, regress <span class="math inline">\(\log(\text{sales})\)</span> on residual <span class="math inline">\(\widehat{\epsilon_{1st}}\)</span>:</p></li>
+</ul>
+<p><span class="math display">\[
+\log(\text{sales}) = \beta_0 + \beta_1\widehat{\epsilon_{1st}}  + \epsilon_{2nd}
+\]</span></p>
+</section>
+<section id="regression-sensitivity-analysis" class="slide level2">
+<h2>Regression Sensitivity Analysis</h2>
+<ul>
+<li><p>Regression finds the coefficients on the part of each regressor that is <strong>independent</strong> from the other regressors.</p></li>
+<li><p>What can we do to deal with OVB problems?</p>
+<ul>
+<li>Because we can never be sure whether a given set of controls is enough to eliminate OVB, it’s important to ask how sensitive regression results are to changes in the list of controls.</li>
+</ul></li>
+</ul>
+</section></section>
+<section>
+<section id="panel-data-models" class="title-slide slide level1 center" data-background-color="#1c4982">
+<h1>👥📈 Panel Data Models</h1>
+
+</section>
+<section id="panel-data-models-pols-fe-twfe-re" class="slide level2">
+<h2>👥📈 Panel Data Models: POLS → FE → TWFE → RE</h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong><strong>Learning goals</strong></strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li>Understand what <em>panel data</em> is (and why we love it)</li>
+<li>Compare <strong>Pooled OLS</strong>, <strong>Fixed Effects</strong>, <strong>Two-Way FE</strong>, and <strong>Random Effects</strong></li>
+<li>Learn <em>what variation each model uses</em> and <em>what it controls for</em></li>
+<li>Understand <strong>country-clustered standard errors</strong> (and why we need them)</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="what-is-panel-data" class="slide level2">
+<h2>What is Panel Data?</h2>
+<p>Panel data tracks <strong>the same units</strong> over <strong>multiple time periods</strong>:</p>
+<ul>
+<li><strong>Unit (<span class="math inline">\(i\)</span>)</strong>: country (USA, Korea, India, …)</li>
+<li><strong>Time (<span class="math inline">\(t\)</span>)</strong>: year (1990–2022, …)</li>
+</ul>
+<p><strong>Example (CO<span class="math inline">\(_2\)</span> panel):</strong> - Outcome: CO<span class="math inline">\(_2\)</span> emissions per capita - Unit ID: <code>iso_code</code> - Time ID: <code>year</code></p>
+<div class="callout callout-tip no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Tip</strong></p>
+</div>
+<div class="callout-content">
+<p>Panel data gives us <strong>two kinds of variation</strong>: - <strong>Between variation</strong>: differences <em>across countries</em> - <strong>Within variation</strong>: changes <em>within a country over time</em></p>
+</div>
+</div>
+</div>
+</section>
+<section id="why-use-panel-models-not-only-pooled-ols" class="slide level2">
+<h2>Why Use Panel Models (Not Only Pooled OLS)?</h2>
+<div style="display:block; margin:-20px;">
+
+</div>
+<p>Pooled OLS can be misleading because it ignores <strong>unobserved country differences</strong> that don’t change much over time, such as:</p>
+<ul>
+<li>🌍 geography / climate / natural resources</li>
+<li>🏭 industrial structure and history</li>
+<li>🏛️ institutions and regulation</li>
+<li>⚡ energy infrastructure and technology path</li>
+<li>🧑‍🤝‍🧑 culture and long-run lifestyle patterns</li>
+</ul>
+<div style="display:block; margin:-20px;">
+
+</div>
+<p>These factors can affect <strong>both</strong></p>
+<ul>
+<li>emissions (or other outcomes) <strong>and</strong></li>
+<li>GDP per capita (or other regressors)</li>
+</ul>
+<div style="display:block; margin:-20px;">
+
+</div>
+<p>➡️ That creates <strong>omitted variable bias</strong> when we use Pooled OLS.</p>
+</section>
+<section id="unobserved-heterogeneity-the-core-issue" class="slide level2">
+<h2>🧠 Unobserved Heterogeneity (The Core Issue)</h2>
+<p>Suppose the true relationship includes an unobserved country component:</p>
+<p><span class="math display">\[
+y_{it} = \beta x_{it} + \underbrace{\alpha_i}_{\text{unobserved country trait}} + \epsilon_{it}
+\]</span></p>
+<p>If we ignore <span class="math inline">\(\alpha_i\)</span> and estimate Pooled OLS:</p>
+<p><span class="math display">\[
+y_{it} = \beta x_{it} + u_{it}
+\quad \text{where} \quad
+u_{it} = \alpha_i + \epsilon_{it}
+\]</span></p>
+<p>⚠️ If <span class="math inline">\(Cov(\alpha_i, x_{it}) \neq 0\)</span>, then:</p>
+<ul>
+<li><span class="math inline">\(x_{it}\)</span> is correlated with the error term</li>
+<li><strong>Pooled OLS is biased</strong></li>
+</ul>
+<div style="display:block; margin:-20px;">
+
+</div>
+<div class="fragment">
+<p>Fixed Effects is designed to solve exactly this problem.</p>
+</div>
+</section></section>
+<section>
+<section id="pooled-ols-pols" class="title-slide slide level1 center" data-background-color="#1c4982">
+<h1>1️⃣ Pooled OLS (POLS)</h1>
+
+</section>
+<section id="pooled-ols-baseline-model" class="slide level2">
+<h2>Pooled OLS: Baseline Model</h2>
+<p><strong>Model</strong> <span class="math display">\[
+y_{it} = \beta_0 + \beta_1 x_{it} + \epsilon_{it}
+\]</span></p>
+<p><strong>Meaning</strong></p>
+<ul>
+<li>We pretend the dataset is one big cross-section</li>
+<li>We ignore the panel structure (country identity)</li>
+</ul>
+<p>Uses <strong>all variation</strong></p>
+<ul>
+<li>between-country variation</li>
+<li>within-country variation</li>
+</ul>
+</section>
+<section id="what-pols-is-really-doing" class="slide level2">
+<h2>What POLS is Really Doing</h2>
+<p>When you estimate POLS, the slope <span class="math inline">\(\beta_1\)</span> reflects a combination of:</p>
+<ul>
+<li><strong>Cross-country differences</strong> (rich vs.&nbsp;poor countries)</li>
+<li><strong>Within-country changes</strong> (one country over time)</li>
+</ul>
+<p>So interpretation becomes:</p>
+<blockquote>
+<p>“On average, countries with higher <span class="math inline">\(x\)</span> have higher (or lower) <span class="math inline">\(y\)</span>, <em>and/or</em> when <span class="math inline">\(x\)</span> rises over time, <span class="math inline">\(y\)</span> moves…”</p>
+</blockquote>
+<p>⚠️ That can be fine <em>only if</em> unobserved country traits don’t confound the relationship.</p>
+</section>
+<section id="the-big-risk-in-pols-omitted-variable-bias" class="slide level2">
+<h2>⚠️ The Big Risk in POLS: Omitted Variable Bias</h2>
+<p>If richer countries also have <strong>different institutions</strong>, <strong>energy systems</strong>, or <strong>historical industrialization paths</strong>, then:</p>
+<ul>
+<li><span class="math inline">\(x_{it}\)</span> (GDP per capita) is correlated with <span class="math inline">\(\alpha_i\)</span> (unobserved traits)</li>
+<li>Pooled OLS mixes together the effect of <span class="math inline">\(x_{it}\)</span> and the influence of <span class="math inline">\(\alpha_i\)</span>, so the estimated <span class="math inline">\(\beta\)</span> can be misleading.</li>
+</ul>
+<p>Panel methods help because they explicitly control for <span class="math inline">\(\alpha_i\)</span>.</p>
+</section></section>
+<section>
+<section id="fixed-effects-fe" class="title-slide slide level1 center" data-background-color="#1c4982">
+<h1>2️⃣ Fixed Effects (FE)</h1>
+
+</section>
+<section id="country-fixed-effects-fe" class="slide level2">
+<h2>Country Fixed Effects (FE)</h2>
+<p><strong>Model</strong> <span class="math display">\[
+y_{it} = \beta x_{it} + \alpha_i + \epsilon_{it}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\alpha_i\)</span> = <strong>country fixed effect</strong></li>
+<li>captures <strong>all time-invariant country characteristics</strong>
+<ul>
+<li>geography, long-run institutions, baseline culture, etc.</li>
+</ul></li>
+</ul>
+<p>FE answers a <strong>within-country</strong> question:</p>
+<blockquote>
+<p>“If a country’s <span class="math inline">\(x\)</span> changes over time, how does <span class="math inline">\(y\)</span> change within that same country?”</p>
+</blockquote>
+</section>
+<section id="what-fe-controls-for-automatically" class="slide level2">
+<h2>🔎 What FE Controls For (Automatically)</h2>
+<p>Because each country gets its own intercept <span class="math inline">\(\alpha_i\)</span>, FE controls for:</p>
+<ul>
+<li>any factor that is <strong>constant within a country</strong></li>
+<li>even if you do <strong>not</strong> observe or measure it</li>
+</ul>
+<p>Examples (time-invariant or very slow-moving):</p>
+<ul>
+<li>distance to equator</li>
+<li>landlocked status</li>
+<li>baseline political system</li>
+<li>deep energy infrastructure</li>
+</ul>
+<div style="display:block; margin:-15px;">
+
+</div>
+<p>📌 FE is powerful because it controls for <em>a lot</em> without measuring those things.</p>
+<!-- ## 🧮 The FE “Within Transformation” (Why It Works) -->
+<!-- FE can be estimated by subtracting each country’s time average: -->
+<!-- Define: -->
+<!-- - $\bar{y}_i = \frac{1}{T_i}\sum_t y_{it}$ -->
+<!-- - $\bar{x}_i = \frac{1}{T_i}\sum_t x_{it}$ -->
+<!-- Subtract the average from each observation: -->
+<!-- $$ -->
+<!-- (y_{it} - \bar{y}_i) = \beta (x_{it} - \bar{x}_i) + (\epsilon_{it} - \bar{\epsilon}_i) -->
+<!-- $$ -->
+<!-- Notice what disappears: -->
+<!-- - $\alpha_i$ drops out completely (because it is constant over time) -->
+<!-- So FE is basically **OLS on demeaned data**. -->
+</section>
+<section id="fe-uses-only-within-country-variation" class="slide level2">
+<h2>FE Uses Only Within-Country Variation</h2>
+<p>FE does <strong>not</strong> use differences between countries:</p>
+<ul>
+<li>It does not compare USA vs India levels</li>
+<li>It compares USA over time <em>to itself</em></li>
+</ul>
+<p>So FE is best when:</p>
+<ul>
+<li>the key confounding problem is <strong>time-invariant</strong></li>
+<li>we care about <strong>within-country causal interpretation</strong></li>
+</ul>
+<p>⚠️ FE cannot estimate effects of variables that <strong>do not change over time</strong>, e.g.:</p>
+<ul>
+<li><code>landlocked</code>, <code>continent</code>, <code>distance_to_equator</code></li>
+</ul>
+</section></section>
+<section>
+<section id="two-way-fixed-effects-twfe" class="title-slide slide level1 center" data-background-color="#1c4982">
+<h1>3️⃣ Two-Way Fixed Effects (TWFE)</h1>
+
+</section>
+<section id="two-way-fixed-effects-country-year-fe" class="slide level2">
+<h2>Two-Way Fixed Effects (Country + Year FE)</h2>
+<p><strong>Model</strong> <span class="math display">\[
+y_{it} = \beta x_{it} + \alpha_i + \gamma_t + \epsilon_{it}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(\alpha_i\)</span>: country FE (time-invariant traits)</li>
+<li><span class="math inline">\(\gamma_t\)</span>: year FE (global shocks / common trends)</li>
+</ul>
+<p>TWFE answers:</p>
+<blockquote>
+<p>“Within a country, how does <span class="math inline">\(y\)</span> change with <span class="math inline">\(x\)</span>, <em>after removing global year shocks</em>?”</p>
+</blockquote>
+</section>
+<section id="why-add-year-fixed-effects" class="slide level2">
+<h2>🌍 Why Add Year Fixed Effects?</h2>
+<p>Year effects capture shocks that hit many countries at once:</p>
+<ul>
+<li>🛢️ oil price spikes</li>
+<li>📉 global recessions (e.g., 2008)</li>
+<li>🦠 pandemics</li>
+<li>💡 global technology trends</li>
+<li>🌐 global climate agreements</li>
+</ul>
+<p>If we don’t include <span class="math inline">\(\gamma_t\)</span>, the regression may mistakenly attribute these common shocks to <span class="math inline">\(x_{it}\)</span>.</p>
+<p>Year FE helps remove this confounding.</p>
+</section></section>
+<section>
+<section id="random-effects-re" class="title-slide slide level1 center" data-background-color="#1c4982">
+<h1>4️⃣ Random Effects (RE)</h1>
+
+</section>
+<section id="random-effects-re-1" class="slide level2">
+<h2>Random Effects (RE)</h2>
+<p><strong>Model</strong> <span class="math display">\[
+y_{it} = \beta x_{it} + \alpha_i + \epsilon_{it}
+\]</span></p>
+<p>Same structure as FE… but different assumption:</p>
+<ul>
+<li>RE treats <span class="math inline">\(\alpha_i\)</span> as <strong>random</strong></li>
+<li>and assumes it is <strong>uncorrelated</strong> with regressors:</li>
+</ul>
+<p><span class="math display">\[
+Cov(\alpha_i, x_{it}) = 0
+\]</span></p>
+<p>If that assumption holds:</p>
+<ul>
+<li>RE is <strong>more efficient</strong> than FE (smaller standard errors)</li>
+<li>RE uses both within and between variation</li>
+</ul>
+</section>
+<section id="when-re-fails-bias-risk" class="slide level2">
+<h2>⚠️ When RE Fails (Bias Risk)</h2>
+<p>If <span class="math inline">\(Cov(\alpha_i, x_{it}) \neq 0\)</span>, then RE is biased.</p>
+<p>In many economic settings, this correlation is very plausible:</p>
+<ul>
+<li>richer countries may also have better institutions (inside <span class="math inline">\(\alpha_i\)</span>)</li>
+<li>energy system differences affect both GDP and emissions</li>
+</ul>
+<p>So FE is often the safer default in applied work.</p>
+</section>
+<section id="fe-vs-re-the-hausman-intuition" class="slide level2">
+<h2>🧪 FE vs RE: The Hausman Intuition</h2>
+<p>The logic is:</p>
+<ul>
+<li>FE is consistent even when <span class="math inline">\(Cov(\alpha_i, x_{it}) \neq 0\)</span></li>
+<li>RE is consistent only if <span class="math inline">\(Cov(\alpha_i, x_{it}) = 0\)</span></li>
+</ul>
+<p>So we test whether RE is “safe” by checking whether: - RE and FE estimates are statistically different</p>
+<p>That idea is formalized in the <strong>Hausman test</strong>.</p>
+</section></section>
+<section>
+<section id="standard-errors-in-panel-data" class="title-slide slide level1 center" data-background-color="#1c4982">
+<h1>🧠 Standard Errors in Panel Data</h1>
+
+</section>
+<section id="why-we-cluster-standard-errors-country-clustered-se" class="slide level2">
+<h2>🧠 Why We Cluster Standard Errors (Country-Clustered SE)</h2>
+<h3 id="the-problem-errors-are-correlated-within-countries">The problem: errors are correlated within countries</h3>
+<p>In panel data, observations inside a country are rarely independent:</p>
+<ul>
+<li>shocks persist over time</li>
+<li>policies change gradually</li>
+<li>measurement errors repeat</li>
+<li>emissions and GDP move smoothly</li>
+</ul>
+<p>That means residuals may satisfy:</p>
+<p><span class="math display">\[
+Cov(\epsilon_{it}, \epsilon_{is}) \neq 0 \quad \text{for } t \neq s
+\]</span></p>
+<p>If we ignore this, standard errors are often: ❌ too small → false “significance”</p>
+</section>
+<section id="cluster-robust-standard-errors-by-country" class="slide level2">
+<h2>Cluster-Robust Standard Errors (by Country)</h2>
+<p>Country-clustered SEs allow:</p>
+<ul>
+<li><strong>arbitrary correlation over time</strong> within a country</li>
+<li><strong>heteroskedasticity</strong> across countries</li>
+</ul>
+<p>Interpretation:</p>
+<blockquote>
+<p>“We allow any kind of serial correlation within each country.”</p>
+</blockquote>
+<p>In <strong>R (<code>plm</code>)</strong>, this is typically implemented using robust VCOV options, e.g.&nbsp;<code>vcovHC()</code> with clustering by group.</p>
+</section>
+<section id="model-summary-what-each-one-controls-for" class="slide level2">
+<h2>Model Summary (What Each One Controls For)</h2>
+<table>
+<colgroup>
+<col style="width: 13%">
+<col style="width: 33%">
+<col style="width: 24%">
+<col style="width: 28%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Controls for country traits?</th>
+<th>Controls for year shocks?</th>
+<th>Uses between-country variation?</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Pooled OLS</td>
+<td>❌ No</td>
+<td>❌ No</td>
+<td>Yes</td>
+</tr>
+<tr class="even">
+<td>Country FE</td>
+<td>Yes (time-invariant)</td>
+<td>❌ No</td>
+<td>❌ No</td>
+</tr>
+<tr class="odd">
+<td>Two-way FE</td>
+<td>Yes (time-invariant)</td>
+<td>Yes</td>
+<td>❌ No</td>
+</tr>
+<tr class="even">
+<td>Random Effects</td>
+<td>Yes (modeled as random intercept)</td>
+<td>Optional</td>
+<td>Yes</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="final-takeaway-panel-models" class="slide level2">
+<h2>Final Takeaway (Panel Models)</h2>
+<p>We use panel data models to estimate relationships <strong>within units over time</strong>, while controlling for:</p>
+<ul>
+<li><strong>hidden country characteristics</strong> (<span class="math inline">\(\alpha_i\)</span>)</li>
+<li><strong>global year shocks</strong> (<span class="math inline">\(\gamma_t\)</span>)</li>
+</ul>
+<p>And we use <strong>clustered SEs</strong> because panel residuals are often correlated within each unit.</p>
+</section></section>
+<section>
+<section id="environmental-kuznets-curve-ekc-growth-vs.-pollution" class="title-slide slide level1 center" data-background-color="#1c4982">
+<h1>🌿 Environmental Kuznets Curve (EKC): Growth vs.&nbsp;Pollution</h1>
+
+</section>
+<section id="environmental-kuznets-curve-ekc-growth-vs.-pollution-1" class="slide level2">
+<h2>🌿 Environmental Kuznets Curve (EKC): Growth vs.&nbsp;Pollution</h2>
+<div class="callout callout-note no-icon callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Now we add the key EKC idea: a <strong>nonlinear relationship</strong> between income and pollution.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="what-is-the-ekc" class="slide level2">
+<h2>What is the EKC?</h2>
+<p>The <strong>Environmental Kuznets Curve (EKC)</strong> hypothesis suggests:</p>
+<blockquote>
+<p>As a country becomes richer, pollution first <strong>increases</strong>,<br>
+but after some income level, pollution <strong>decreases</strong>.</p>
+</blockquote>
+<p>It is often described as an <strong>inverted-U</strong> relationship between: - pollution (e.g., CO<span class="math inline">\(_2\)</span> per capita) - income (GDP per capita)</p>
+</section>
+<section id="draw-the-ekc-curve-inverted-u" class="slide level2">
+<h2>📉📈 Draw the EKC Curve (Inverted-U)</h2>
+
+<img data-src="danl-410-lec-02-2026-0126_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
+<section id="ekc-panel-regression-country-year-data" class="slide level2">
+<h2>EKC Panel Regression (Country-Year Data)</h2>
+<p>A common EKC specification:</p>
+<p><span class="math display">\[
+\log(CO2pc_{it})
+=
+\beta_1 \log(GDPpc_{it})
++
+\beta_2 \left[\log(GDPpc_{it})\right]^2
++
+\alpha_i
++
+\gamma_t
++
+\epsilon_{it}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(i\)</span>: country</li>
+<li><span class="math inline">\(t\)</span>: year</li>
+<li><span class="math inline">\(\alpha_i\)</span>: country fixed effects</li>
+<li><span class="math inline">\(\gamma_t\)</span>: year fixed effects</li>
+</ul>
+</section>
+<section id="how-to-interpret-ekc-coefficients" class="slide level2">
+<h2>How to Interpret EKC Coefficients</h2>
+<ul>
+<li><p>If <span class="math inline">\(\beta_1 &gt; 0\)</span> and <span class="math inline">\(\beta_2 &lt; 0\)</span><br>
+emissions rise at first, then eventually fall<br>
+→ <strong>EKC pattern (inverted-U)</strong></p></li>
+<li><p>If <span class="math inline">\(\beta_2 = 0\)</span><br>
+→ relationship is <strong>linear</strong></p></li>
+<li><p>If <span class="math inline">\(\beta_2 &gt; 0\)</span><br>
+→ <strong>U-shape</strong> (emissions accelerate with income)</p></li>
+</ul>
+</section>
+<section id="ekc-turning-point-income-level" class="slide level2">
+<h2>EKC Turning Point (Income Level)</h2>
+<p>The turning point occurs where the slope becomes zero:</p>
+<p><span class="math display">\[
+\frac{\partial \log(CO2pc)}{\partial \log(GDPpc)}
+= \beta_1 + 2\beta_2 \log(GDPpc) = 0
+\]</span></p>
+<p>So the turning point in log income is:</p>
+<p><span class="math display">\[
+\log(GDPpc^*) = -\frac{\beta_1}{2\beta_2}
+\]</span></p>
+<p>Convert back to the income level:</p>
+<p><span class="math display">\[
+GDPpc^* = \exp\left(-\frac{\beta_1}{2\beta_2}\right)
+\]</span></p>
+<!-- Interpretation: -->
+<p>At <span class="math inline">\(GDPpc^*\)</span>, CO<span class="math inline">\(_2\)</span> per capita stops rising and begins falling (if EKC holds).</p>
+</section>
+<section id="intuition-why-might-ekc-happen" class="slide level2">
+<h2>Intuition: Why Might EKC Happen?</h2>
+<p>As income rises, countries often experience:</p>
+<ul>
+<li><strong>Scale effect</strong> 📈: more production → more emissions (early stage)</li>
+<li><strong>Composition effect</strong> 🏗️➡️🧑‍💼: shift from industry → services (middle stage)</li>
+<li><strong>Technique effect</strong> 🧪⚡: cleaner technology + regulation (later stage)</li>
+</ul>
+<p>EKC is the balance of: - growth pressures that increase emissions - development forces that can reduce emissions</p>
+</section>
+<section id="important-caveat-for-co_2" class="slide level2">
+<h2>Important Caveat for CO<span class="math inline">\(_2\)</span></h2>
+<p>EKC may be weaker for CO<span class="math inline">\(_2\)</span> than for local air pollutants because:</p>
+<ul>
+<li>CO<span class="math inline">\(_2\)</span> is deeply tied to <strong>energy systems</strong></li>
+<li>benefits are <strong>global</strong>, costs are often local</li>
+<li>emissions may shift across borders via trade (<strong>carbon leakage</strong>)</li>
+</ul>
+<p>So EKC is a <strong>hypothesis to test</strong>, not a guaranteed pattern.</p>
+</section>
+<section id="final-takeaway-ekc" class="slide level2">
+<h2>Final Takeaway (EKC)</h2>
+<p>EKC tests whether pollution follows an <strong>inverted-U</strong> with income.</p>
+<p>Panel FE/TWFE help make that test more credible by controlling for:</p>
+<ul>
+<li>country traits (<span class="math inline">\(\alpha_i\)</span>)</li>
+<li>year shocks (<span class="math inline">\(\gamma_t\)</span>)</li>
+</ul>
+
+<div class="footer footer-default">
+
+</div>
+</section></section>
+    </div>
+  </div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'smaller': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleChalkboard(event)\"><kbd>b</kbd> Toggle Chalkboard</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleNotesCanvas(event)\"><kbd>c</kbd> Toggle Notes Canvas</a></li>\n<li class=\"slide-tool-item\" data-item=\"6\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.downloadDrawings(event)\"><kbd>d</kbd> Download Drawings</a></li>\n<li class=\"slide-tool-item\" data-item=\"7\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'chalkboard': {"buttons":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'none',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, RevealChalkboard, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script>
+    document.addEventListener('wheel', function(event) {
+        if (event.deltaY > 0) {
+            Reveal.next(); // Scroll down to go to the next slide
+        } else {
+            Reveal.prev(); // Scroll up to go to the previous slide
+        }
+    }, false);
+
+    window.onload = function() {
+        document.querySelectorAll('a').forEach(function(link) {
+            link.setAttribute('target', '_blank');
+        });
+    };
+
+    document.addEventListener('DOMContentLoaded', function() {
+      // Query all anchor tags within code blocks (adjust the selector as needed)
+      document.querySelectorAll('pre code a').forEach(function(element) {
+        element.addEventListener('click', function(e) {
+          e.preventDefault(); // Prevent the default anchor action
+          e.stopPropagation(); // Stop the event from bubbling up
+        });
+      });
+    });
+
+
+
+    document.addEventListener('DOMContentLoaded', function() {
+        // Target all span elements within code blocks that have IDs starting with 'cb'
+        document.querySelectorAll('pre code span[id^="cb"]').forEach(function(element) {
+            element.addEventListener('mouseenter', function() {
+                // Apply yellow background color to the hovered span element
+                this.style.backgroundColor = '#FFFF99';
+            });
+            element.addEventListener('mouseleave', function() {
+                // Revert the background color when the mouse leaves the span element
+                this.style.backgroundColor = '';
+            });
+        });
+    });
+
+
+
+    </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
+    window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
+      const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+      tabsets.forEach(function(tabset) {
+        const tabby = new Tabby('#' + tabset.id);
+      });
+      const isCodeAnnotation = (el) => {
+        for (const clz of el.classList) {
+          if (clz.startsWith('code-annotation-')) {                     
+            return true;
+          }
+        }
+        return false;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
+        // button target
+        const button = e.trigger;
+        // don't keep focus
+        button.blur();
+        // flash "checked"
+        button.classList.add('code-copy-button-checked');
+        var currentTitle = button.getAttribute("title");
+        button.setAttribute("title", "Copied!");
+        let tooltip;
+        if (window.bootstrap) {
+          button.setAttribute("data-bs-toggle", "tooltip");
+          button.setAttribute("data-bs-placement", "left");
+          button.setAttribute("data-bs-title", "Copied!");
+          tooltip = new bootstrap.Tooltip(button, 
+            { trigger: "manual", 
+              customClass: "code-copy-button-tooltip",
+              offset: [0, -8]});
+          tooltip.show();    
+        }
+        setTimeout(function() {
+          if (tooltip) {
+            tooltip.hide();
+            button.removeAttribute("data-bs-title");
+            button.removeAttribute("data-bs-toggle");
+            button.removeAttribute("data-bs-placement");
+          }
+          button.setAttribute("title", currentTitle);
+          button.classList.remove('code-copy-button-checked');
+        }, 1000);
+        // clear code selection
+        e.clearSelection();
+      });
+      function tippyHover(el, contentFn) {
+        const config = {
+          allowHTML: true,
+          content: contentFn,
+          maxWidth: 500,
+          delay: 100,
+          arrow: false,
+          appendTo: function(el) {
+              return el.closest('section.slide') || el.parentElement;
+          },
+          interactive: true,
+          interactiveBorder: 10,
+          theme: 'light-border',
+          placement: 'bottom-start'
+        };
+          config['offset'] = [0,0];
+          config['maxWidth'] = 700;
+        window.tippy(el, config); 
+      }
+      const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+      for (var i=0; i<noterefs.length; i++) {
+        const ref = noterefs[i];
+        tippyHover(ref, function() {
+          // use id or data attribute instead here
+          let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+          try { href = new URL(href).hash; } catch {}
+          const id = href.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          return note.innerHTML;
+        });
+      }
+          let selectedAnnoteEl;
+          const selectorForAnnotation = ( cell, annotation) => {
+            let cellAttr = 'data-code-cell="' + cell + '"';
+            let lineAttr = 'data-code-annotation="' +  annotation + '"';
+            const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+            return selector;
+          }
+          const selectCodeLines = (annoteEl) => {
+            const doc = window.document;
+            const targetCell = annoteEl.getAttribute("data-target-cell");
+            const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+            const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+            const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+            const lineIds = lines.map((line) => {
+              return targetCell + "-" + line;
+            })
+            let top = null;
+            let height = null;
+            let parent = null;
+            if (lineIds.length > 0) {
+                //compute the position of the single el (top and bottom and make a div)
+                const el = window.document.getElementById(lineIds[0]);
+                top = el.offsetTop;
+                height = el.offsetHeight;
+                parent = el.parentElement.parentElement;
+              if (lineIds.length > 1) {
+                const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+                const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+                height = bottom - top;
+              }
+              if (top !== null && height !== null && parent !== null) {
+                // cook up a div (if necessary) and position it 
+                let div = window.document.getElementById("code-annotation-line-highlight");
+                if (div === null) {
+                  div = window.document.createElement("div");
+                  div.setAttribute("id", "code-annotation-line-highlight");
+                  div.style.position = 'absolute';
+                  parent.appendChild(div);
+                }
+                div.style.top = top - 2 + "px";
+                div.style.height = height + 4 + "px";
+                let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+                if (gutterDiv === null) {
+                  gutterDiv = window.document.createElement("div");
+                  gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                  gutterDiv.style.position = 'absolute';
+                  const codeCell = window.document.getElementById(targetCell);
+                  const gutter = codeCell.querySelector('.code-annotation-gutter');
+                  gutter.appendChild(gutterDiv);
+                }
+                gutterDiv.style.top = top - 2 + "px";
+                gutterDiv.style.height = height + 4 + "px";
+              }
+              selectedAnnoteEl = annoteEl;
+            }
+          };
+          const unselectCodeLines = () => {
+            const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+            elementsIds.forEach((elId) => {
+              const div = window.document.getElementById(elId);
+              if (div) {
+                div.remove();
+              }
+            });
+            selectedAnnoteEl = undefined;
+          };
+          // Handle positioning of the toggle
+          window.addEventListener(
+          "resize",
+          throttle(() => {
+            elRect = undefined;
+            if (selectedAnnoteEl) {
+              selectCodeLines(selectedAnnoteEl);
+            }
+          }, 10)
+          );
+          function throttle(fn, ms) {
+          let throttle = false;
+          let timer;
+            return (...args) => {
+              if(!throttle) { // first call gets through
+                  fn.apply(this, args);
+                  throttle = true;
+              } else { // all the others get throttled
+                  if(timer) clearTimeout(timer); // cancel #2
+                  timer = setTimeout(() => {
+                    fn.apply(this, args);
+                    timer = throttle = false;
+                  }, ms);
+              }
+            };
+          }
+          const annoteTargets = window.document.querySelectorAll('.code-annotation-anchor');
+          for (let i=0; i<annoteTargets.length; i++) {
+            const annoteTarget = annoteTargets[i];
+            const targetCell = annoteTarget.getAttribute("data-target-cell");
+            const targetAnnotation = annoteTarget.getAttribute("data-target-annotation");
+            const contentFn = () => {
+              const content = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+              if (content) {
+                const tipContent = content.cloneNode(true);
+                tipContent.classList.add("code-annotation-tip-content");
+                return tipContent.outerHTML;
+              }
+            }
+            const config = {
+              allowHTML: true,
+              content: contentFn,
+              onShow: (instance) => {
+                selectCodeLines(instance.reference);
+                instance.reference.classList.add('code-annotation-active');
+                window.tippy.hideAll();
+              },
+              onHide: (instance) => {
+                unselectCodeLines();
+                instance.reference.classList.remove('code-annotation-active');
+              },
+              maxWidth: 300,
+              delay: [50, 0],
+              duration: [200, 0],
+              offset: [5, 10],
+              arrow: true,
+              appendTo: function(el) {
+                return el.parentElement.parentElement.parentElement;
+              },
+              interactive: true,
+              interactiveBorder: 10,
+              theme: 'light-border',
+              placement: 'right',
+              popperOptions: {
+                modifiers: [
+                {
+                  name: 'flip',
+                  options: {
+                    flipVariations: false, // true by default
+                    allowedAutoPlacements: ['right'],
+                    fallbackPlacements: ['right', 'top', 'top-start', 'top-end'],
+                  },
+                },
+                {
+                  name: 'preventOverflow',
+                  options: {
+                    mainAxis: false,
+                    altAxis: false
+                  }
+                }
+                ]        
+              }      
+            };
+            window.tippy(annoteTarget, config); 
+          }
+      const findCites = (el) => {
+        const parentEl = el.parentElement;
+        if (parentEl) {
+          const cites = parentEl.dataset.cites;
+          if (cites) {
+            return {
+              el,
+              cites: cites.split(' ')
+            };
+          } else {
+            return findCites(el.parentElement)
+          }
+        } else {
+          return undefined;
+        }
+      };
+      var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+      for (var i=0; i<bibliorefs.length; i++) {
+        const ref = bibliorefs[i];
+        const citeInfo = findCites(ref);
+        if (citeInfo) {
+          tippyHover(citeInfo.el, function() {
+            var popup = window.document.createElement('div');
+            citeInfo.cites.forEach(function(cite) {
+              var citeDiv = window.document.createElement('div');
+              citeDiv.classList.add('hanging-indent');
+              citeDiv.classList.add('csl-entry');
+              var biblioDiv = window.document.getElementById('ref-' + cite);
+              if (biblioDiv) {
+                citeDiv.innerHTML = biblioDiv.innerHTML;
+              }
+              popup.appendChild(citeDiv);
+            });
+            return popup.innerHTML;
+          });
+        }
+      }
+    });
+    </script>
+    
+
+</body></html>

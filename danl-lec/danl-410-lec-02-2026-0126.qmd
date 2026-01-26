@@ -1,0 +1,672 @@
+---
+title: Lecture 2
+subtitle: Omitted Variable Bias; Panel Data Models
+format:
+  clean-revealjs:
+    self-contained: false
+    chalkboard: true
+    incremental: false
+    code-annotations: hover
+    scrollable: false
+
+    # logo: logo-title-slide.png
+author:
+  - name: Byeong-Hak Choe
+    email: bchoe@geneseo.edu
+    affiliations: SUNY Geneseo
+date: 2026-01-26
+execute: 
+  eval: true
+  echo: false
+callout-icon: false
+
+from: markdown+emoji
+include-after-body: target-hover.html # effect.html
+
+# bibliography: refs.bib
+---
+
+```{r setup}
+#| include: false
+
+library(tidyverse)
+library(lubridate)
+library(skimr)
+library(ggthemes)
+library(hrbrthemes)
+library(viridis)
+library(rmarkdown)
+library(gapminder)
+library(ggrepel)
+
+theme_set(theme_fivethirtyeight() +
+            theme(strip.background =element_rect(fill="lightgray"),
+                axis.title.x = 
+                  element_text(angle = 0,
+                               size = rel(1.75),
+                               margin = margin(10,0,0,0)),
+                axis.title.y = 
+                  element_text(angle = 0,
+                               size = rel(1.75),
+                               margin = margin(0,10,0,0)),
+                axis.text.x = element_text(size = rel(1.75)),
+                axis.text.y = element_text(size = rel(1.75)),
+                strip.text = element_text(size = rel(1.5)),
+                legend.position = "top",
+                legend.text = element_text(size = rel(1.5)),
+                legend.title = element_text(size = rel(1.5))
+                )
+          )
+
+# Set global options for color-blind-friendly scales
+# scale_colour_discrete <- function(...) scale_colour_viridis_d(...)
+scale_colour_discrete <- function(...) scale_color_colorblind(...)
+scale_fill_discrete <- function(...) scale_fill_colorblind(...)
+```
+
+
+
+# ❌ **Omitted Variable Bias** {background-color="#1c4982"}
+
+
+## Omitted Variable Bias
+
+- **Omitted variable bias (OVB)**: bias in the model because of omitting an important regressor that is
+correlated with existing regressor(s).
+
+
+- Let's use an orange juice (OJ) example to demonstrate the OVB.
+  - OJ price elasticity estimates vary with models, whether or not taking into account `brand` or `ad_status`
+
+Variable  | Description
+-|-
+`sales`   | Quantity of OJ cartons sold
+`price`   | Price of OJ
+`brand`   | Brand of OJ
+`ad`    | Advertisement status
+
+
+
+## 📏 Short- and Long- Regressions
+- OVB is the difference in beta estimates between short- and long-form regressions.
+
+- **Short regression**: The regression model with less regressors
+
+<div style="display:block; margin:-25px;"></div>
+
+$$
+\begin{align}
+\log(\text{sales}_i) = \beta_0 + \beta_1\log(\text{price}_i) + \epsilon_i
+\end{align}
+$$
+
+- **Long regression**: The regression model that adds additional regressor(s) to the short one.
+
+<div style="display:block; margin:-25px;"></div>
+
+$$
+\begin{align}
+\log(\text{sales}_i) =& \beta_0 + \beta_{1}\log(\text{price}_i) \\
+&+ \beta_{2}\text{minute.maid}_i + \beta_{3}\text{tropicana}_i + \epsilon_i
+\end{align}
+$$
+
+- OVB for $\beta_1$ is:
+
+<div style="display:block; margin:-30px;"></div>
+
+$$
+\text{OVB} = \widehat{\beta_{1}^{short}} - \widehat{\beta_{1}^{long}}
+$$
+
+## OVB formula
+
+- Consider the following short- and long- regressions:
+  - Short: $Y_i = \beta_0 + \beta_{1}^{short}X_1 + \epsilon_{short}$  
+  - Long: $Y_i = \beta_0 + \beta_{1}^{long}X_1 +\beta_{2}X_2 + \epsilon_{long}$
+
+
+- Error in short form can be represented as:
+$$
+{\epsilon_{short}} = \beta_{2}X_2 + \epsilon_{long}
+$$
+
+- If variable $X_1$ is **correlated** with $X_2$, the following assumptions are violated in the <u>short regression</u> model:
+  - Errors are not correlated with regressors.
+  - Errors have a mean value of 0.
+
+
+
+
+## ❓🔍 How does an OVB happen in regression?
+
+- In the first stage, consider the relationship between `price` and `brand`:
+
+$$
+\log(\text{price}) = \beta_0 + \beta_1\text{minute_maid} + \beta_2\text{tropicana} + \epsilon_{1st}
+$$
+
+
+- Then, calculate the residual:
+$$
+\widehat{\epsilon_{1st}} = \log(\text{price}) - \widehat{\log(\text{price})}
+$$
+- The residual represents the log of OJ price after its correlation with brand has been removed!
+
+- In the second stage, regress $\log(\text{sales})$ on residual $\widehat{\epsilon_{1st}}$:
+
+$$
+\log(\text{sales}) = \beta_0 + \beta_1\widehat{\epsilon_{1st}}  + \epsilon_{2nd}
+$$
+
+
+## Regression Sensitivity Analysis
+- Regression finds the coefficients on the part of each regressor that is **independent** from the other regressors.
+
+- What can we do to deal with OVB problems?
+  - Because we can never be sure whether a given set of
+controls is enough to eliminate OVB, it’s important to ask how sensitive regression results are to changes in the list of controls.
+
+
+# 👥📈 Panel Data Models {background-color="#1c4982"}
+
+## 👥📈 Panel Data Models: POLS → FE → TWFE → RE
+
+::: {.callout-note}
+## **Learning goals**
+
+- Understand what *panel data* is (and why we love it)
+- Compare **Pooled OLS**, **Fixed Effects**, **Two-Way FE**, and **Random Effects**
+- Learn *what variation each model uses* and *what it controls for*
+- Understand **country-clustered standard errors** (and why we need them)
+:::
+
+
+
+## What is Panel Data?
+
+Panel data tracks **the same units** over **multiple time periods**:
+
+- **Unit ($i$)**: country (USA, Korea, India, …)
+- **Time ($t$)**: year (1990–2022, …)
+
+**Example (CO$_2$ panel):**
+- Outcome: CO$_2$ emissions per capita
+- Unit ID: `iso_code`
+- Time ID: `year`
+
+::: {.callout-tip}
+Panel data gives us **two kinds of variation**:
+- **Between variation**: differences *across countries*
+- **Within variation**: changes *within a country over time*
+:::
+
+
+
+## Why Use Panel Models (Not Only Pooled OLS)?
+
+<div style="display:block; margin:-20px;"></div>
+Pooled OLS can be misleading because it ignores **unobserved country differences** that don’t change much over time, such as:
+
+- 🌍 geography / climate / natural resources
+- 🏭 industrial structure and history
+- 🏛️ institutions and regulation
+- ⚡ energy infrastructure and technology path
+- 🧑‍🤝‍🧑 culture and long-run lifestyle patterns
+
+<div style="display:block; margin:-20px;"></div>
+These factors can affect **both**
+
+- emissions (or other outcomes) **and**
+- GDP per capita (or other regressors)
+
+<div style="display:block; margin:-20px;"></div>
+➡️ That creates **omitted variable bias** when we use Pooled OLS.
+
+
+
+## 🧠 Unobserved Heterogeneity (The Core Issue)
+
+Suppose the true relationship includes an unobserved country component:
+
+$$
+y_{it} = \beta x_{it} + \underbrace{\alpha_i}_{\text{unobserved country trait}} + \epsilon_{it}
+$$
+
+If we ignore $\alpha_i$ and estimate Pooled OLS:
+
+$$
+y_{it} = \beta x_{it} + u_{it}
+\quad \text{where} \quad
+u_{it} = \alpha_i + \epsilon_{it}
+$$
+
+⚠️ If $Cov(\alpha_i, x_{it}) \neq 0$, then:
+
+- $x_{it}$ is correlated with the error term
+- **Pooled OLS is biased**
+
+<div style="display:block; margin:-20px;"></div>
+
+::: fragment
+Fixed Effects is designed to solve exactly this problem.
+
+:::
+
+
+# 1️⃣ Pooled OLS (POLS) {background-color="#1c4982"}
+
+## Pooled OLS: Baseline Model
+
+**Model**
+$$
+y_{it} = \beta_0 + \beta_1 x_{it} + \epsilon_{it}
+$$
+
+**Meaning**
+
+- We pretend the dataset is one big cross-section
+- We ignore the panel structure (country identity)
+
+Uses **all variation**
+
+- between-country variation
+- within-country variation
+
+
+
+## What POLS is Really Doing
+
+When you estimate POLS, the slope $\beta_1$ reflects a combination of:
+
+- **Cross-country differences** (rich vs. poor countries)
+- **Within-country changes** (one country over time)
+
+So interpretation becomes:
+
+> “On average, countries with higher $x$ have higher (or lower) $y$, *and/or* when $x$ rises over time, $y$ moves…”
+
+⚠️ That can be fine *only if* unobserved country traits don’t confound the relationship.
+
+
+
+## ⚠️ The Big Risk in POLS: Omitted Variable Bias
+
+If richer countries also have **different institutions**, **energy systems**, or **historical industrialization paths**, then:
+
+- $x_{it}$ (GDP per capita) is correlated with $\alpha_i$ (unobserved traits)
+-	Pooled OLS mixes together the effect of $x_{it}$ and the influence of $\alpha_i$, so the estimated $\beta$ can be misleading.
+
+
+Panel methods help because they explicitly control for $\alpha_i$.
+
+
+
+# 2️⃣ Fixed Effects (FE) {background-color="#1c4982"}
+
+## Country Fixed Effects (FE)
+
+**Model**
+$$
+y_{it} = \beta x_{it} + \alpha_i + \epsilon_{it}
+$$
+
+- $\alpha_i$ = **country fixed effect**
+- captures **all time-invariant country characteristics**
+  - geography, long-run institutions, baseline culture, etc.
+
+FE answers a **within-country** question:
+
+> “If a country’s $x$ changes over time, how does $y$ change within that same country?”
+
+
+
+## 🔎 What FE Controls For (Automatically)
+
+Because each country gets its own intercept $\alpha_i$, FE controls for:
+
+- any factor that is **constant within a country**
+- even if you do **not** observe or measure it
+
+Examples (time-invariant or very slow-moving):
+
+- distance to equator
+- landlocked status
+- baseline political system
+- deep energy infrastructure
+
+<div style="display:block; margin:-15px;"></div>
+
+📌 FE is powerful because it controls for *a lot* without measuring those things.
+
+
+
+<!-- ## 🧮 The FE “Within Transformation” (Why It Works) -->
+
+<!-- FE can be estimated by subtracting each country’s time average: -->
+
+<!-- Define: -->
+
+<!-- - $\bar{y}_i = \frac{1}{T_i}\sum_t y_{it}$ -->
+<!-- - $\bar{x}_i = \frac{1}{T_i}\sum_t x_{it}$ -->
+
+<!-- Subtract the average from each observation: -->
+
+<!-- $$ -->
+<!-- (y_{it} - \bar{y}_i) = \beta (x_{it} - \bar{x}_i) + (\epsilon_{it} - \bar{\epsilon}_i) -->
+<!-- $$ -->
+
+<!-- Notice what disappears: -->
+
+<!-- - $\alpha_i$ drops out completely (because it is constant over time) -->
+
+<!-- So FE is basically **OLS on demeaned data**. -->
+
+
+
+## FE Uses Only Within-Country Variation
+
+FE does **not** use differences between countries:
+
+- It does not compare USA vs India levels
+- It compares USA over time *to itself*
+
+So FE is best when:
+
+- the key confounding problem is **time-invariant**
+- we care about **within-country causal interpretation**
+
+⚠️ FE cannot estimate effects of variables that **do not change over time**, e.g.:
+
+- `landlocked`, `continent`, `distance_to_equator`
+
+
+
+# 3️⃣ Two-Way Fixed Effects (TWFE) {background-color="#1c4982"}
+
+## Two-Way Fixed Effects (Country + Year FE)
+
+**Model**
+$$
+y_{it} = \beta x_{it} + \alpha_i + \gamma_t + \epsilon_{it}
+$$
+
+- $\alpha_i$: country FE (time-invariant traits)
+- $\gamma_t$: year FE (global shocks / common trends)
+
+TWFE answers:
+
+> “Within a country, how does $y$ change with $x$, *after removing global year shocks*?”
+
+
+
+## 🌍 Why Add Year Fixed Effects?
+
+Year effects capture shocks that hit many countries at once:
+
+- 🛢️ oil price spikes
+- 📉 global recessions (e.g., 2008)
+- 🦠 pandemics
+- 💡 global technology trends
+- 🌐 global climate agreements
+
+If we don’t include $\gamma_t$, the regression may mistakenly attribute these common shocks to $x_{it}$.
+
+Year FE helps remove this confounding.
+
+
+
+# 4️⃣ Random Effects (RE) {background-color="#1c4982"}
+
+## Random Effects (RE)
+
+**Model**
+$$
+y_{it} = \beta x_{it} + \alpha_i + \epsilon_{it}
+$$
+
+Same structure as FE… but different assumption:
+
+- RE treats $\alpha_i$ as **random**
+- and assumes it is **uncorrelated** with regressors:
+
+$$
+Cov(\alpha_i, x_{it}) = 0
+$$
+
+If that assumption holds:
+
+- RE is **more efficient** than FE (smaller standard errors)
+- RE uses both within and between variation
+
+
+
+## ⚠️ When RE Fails (Bias Risk)
+
+If $Cov(\alpha_i, x_{it}) \neq 0$, then RE is biased.
+
+In many economic settings, this correlation is very plausible:
+
+- richer countries may also have better institutions (inside $\alpha_i$)
+- energy system differences affect both GDP and emissions
+
+So FE is often the safer default in applied work.
+
+
+
+## 🧪 FE vs RE: The Hausman Intuition
+
+The logic is:
+
+- FE is consistent even when $Cov(\alpha_i, x_{it}) \neq 0$
+- RE is consistent only if $Cov(\alpha_i, x_{it}) = 0$
+
+So we test whether RE is “safe” by checking whether:
+- RE and FE estimates are statistically different
+
+That idea is formalized in the **Hausman test**.
+
+
+
+# 🧠 Standard Errors in Panel Data  {background-color="#1c4982"}
+
+## 🧠 Why We Cluster Standard Errors (Country-Clustered SE)
+
+### The problem: errors are correlated within countries
+
+In panel data, observations inside a country are rarely independent:
+
+- shocks persist over time
+- policies change gradually
+- measurement errors repeat
+- emissions and GDP move smoothly
+
+That means residuals may satisfy:
+
+$$
+Cov(\epsilon_{it}, \epsilon_{is}) \neq 0 \quad \text{for } t \neq s
+$$
+
+If we ignore this, standard errors are often:
+❌ too small → false “significance”
+
+
+
+## Cluster-Robust Standard Errors (by Country)
+
+Country-clustered SEs allow:
+
+- **arbitrary correlation over time** within a country
+- **heteroskedasticity** across countries
+
+Interpretation:
+
+> “We allow any kind of serial correlation within each country.”
+
+In **R (`plm`)**, this is typically implemented using robust VCOV options, e.g. `vcovHC()` with clustering by group.
+
+
+
+## Model Summary (What Each One Controls For)
+
+| Model          | Controls for country traits?        | Controls for year shocks? | Uses between-country variation? |
+|---------------|--------------------------------------|----------------------------|---------------------------------|
+| Pooled OLS     | ❌ No                                | ❌ No                      | Yes                          |
+| Country FE     | Yes (time-invariant)              | ❌ No                      | ❌ No                           |
+| Two-way FE     | Yes (time-invariant)              | Yes                     | ❌ No                           |
+| Random Effects | Yes (modeled as random intercept) | Optional                | Yes                          |
+
+
+## Final Takeaway (Panel Models)
+
+We use panel data models to estimate relationships **within units over time**, while controlling for:
+
+- **hidden country characteristics** ($\alpha_i$)
+- **global year shocks** ($\gamma_t$)
+
+And we use **clustered SEs** because panel residuals are often correlated within each unit.
+
+
+
+# 🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution  {background-color="#1c4982"}
+
+## 🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution
+
+::: {.callout-note}
+Now we add the key EKC idea: a **nonlinear relationship** between income and pollution.
+:::
+
+
+
+## What is the EKC?
+
+The **Environmental Kuznets Curve (EKC)** hypothesis suggests:
+
+> As a country becomes richer, pollution first **increases**,  
+> but after some income level, pollution **decreases**.
+
+It is often described as an **inverted-U** relationship between:
+- pollution (e.g., CO$_2$ per capita)
+- income (GDP per capita)
+
+
+
+## 📉📈 Draw the EKC Curve (Inverted-U)
+
+```{r}
+# A simple EKC-shaped curve (illustration only)
+x <- seq(1, 10, length.out = 200)          # "log income"
+y <- -0.25 * (x - 6)^2 + 6                 # inverted-U shape
+
+plot(x, y,
+     type = "l",
+     xlab = "Income (e.g., log GDP per capita)",
+     ylab = "Pollution (e.g., CO2 per capita)",
+     main = "Environmental Kuznets Curve (EKC): Inverted-U")
+abline(v = 6, lty = 2)
+text(6, max(y), "Turning point", pos = 4)
+```
+
+
+
+## EKC Panel Regression (Country-Year Data)
+
+A common EKC specification:
+
+$$
+\log(CO2pc_{it})
+=
+\beta_1 \log(GDPpc_{it})
++
+\beta_2 \left[\log(GDPpc_{it})\right]^2
++
+\alpha_i
++
+\gamma_t
++
+\epsilon_{it}
+$$
+
+- $i$: country
+- $t$: year
+- $\alpha_i$: country fixed effects
+- $\gamma_t$: year fixed effects
+
+
+
+## How to Interpret EKC Coefficients
+
+- If $\beta_1 > 0$ and $\beta_2 < 0$  
+  emissions rise at first, then eventually fall  
+  → **EKC pattern (inverted-U)**
+
+- If $\beta_2 = 0$  
+  → relationship is **linear**
+
+- If $\beta_2 > 0$  
+  → **U-shape** (emissions accelerate with income)
+
+
+
+## EKC Turning Point (Income Level)
+
+The turning point occurs where the slope becomes zero:
+
+$$
+\frac{\partial \log(CO2pc)}{\partial \log(GDPpc)}
+= \beta_1 + 2\beta_2 \log(GDPpc) = 0
+$$
+
+So the turning point in log income is:
+
+$$
+\log(GDPpc^*) = -\frac{\beta_1}{2\beta_2}
+$$
+
+Convert back to the income level:
+
+$$
+GDPpc^* = \exp\left(-\frac{\beta_1}{2\beta_2}\right)
+$$
+
+<!-- Interpretation: -->
+
+At $GDPpc^*$, CO$_2$ per capita stops rising and begins falling (if EKC holds).
+
+
+
+## Intuition: Why Might EKC Happen?
+
+As income rises, countries often experience:
+
+- **Scale effect** 📈: more production → more emissions (early stage)
+- **Composition effect** 🏗️➡️🧑‍💼: shift from industry → services (middle stage)
+- **Technique effect** 🧪⚡: cleaner technology + regulation (later stage)
+
+EKC is the balance of:
+- growth pressures that increase emissions
+- development forces that can reduce emissions
+
+
+
+## Important Caveat for CO$_2$
+
+EKC may be weaker for CO$_2$ than for local air pollutants because:
+
+- CO$_2$ is deeply tied to **energy systems**
+- benefits are **global**, costs are often local
+- emissions may shift across borders via trade (**carbon leakage**)
+
+So EKC is a **hypothesis to test**, not a guaranteed pattern.
+
+
+
+## Final Takeaway (EKC)
+
+EKC tests whether pollution follows an **inverted-U** with income.
+
+Panel FE/TWFE help make that test more credible by controlling for:
+
+- country traits ($\alpha_i$)
+- year shocks ($\gamma_t$)
+
