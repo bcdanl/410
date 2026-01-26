@@ -81,7 +81,7 @@ tb <- tibble(
   gender = ifelse(runif(10000)>=0.5,1,0), # gender indicator variable
   ability = rnorm(10000), # e.g., talent, usually unobserved.
   discrimination = gender, # gender discrimination variable
-  occupation = 1 + 2*ability + 0*gender - 2*discrimination + rnorm(10000), # true data generating process for occupation variable
+  occupation = 1 + 2*ability + 0*gender - 2*discrimination + rnorm(10000), # true data generating process for occupation_index variable
   wage = 1 - 1*discrimination + 1*occupation + 2*ability + rnorm(10000) # true data generating process for wage variable
 )
 
