@@ -78,16 +78,16 @@ stargazer(reg_long, reg_2nd,
 set.seed(1)
 
 tb <- tibble( 
-  female = ifelse(runif(10000)>=0.5,1,0), # female indicator variable
+  gender = ifelse(runif(10000)>=0.5,1,0), # gender indicator variable
   ability = rnorm(10000), # e.g., talent, usually unobserved.
-  discrimination = female, # gender discrimination variable
-  occupation = 1 + 2*ability + 0*female - 2*discrimination + rnorm(10000), # true data generating process for occupation variable
+  discrimination = gender, # gender discrimination variable
+  occupation = 1 + 2*ability + 0*gender - 2*discrimination + rnorm(10000), # true data generating process for occupation variable
   wage = 1 - 1*discrimination + 1*occupation + 2*ability + rnorm(10000) # true data generating process for wage variable
 )
 
-lm_1 <- lm(wage ~ female, tb)
-lm_2 <- lm(wage ~ female + occupation, tb)
-lm_3 <- lm(wage ~ female + occupation + ability, tb)
+lm_1 <- lm(wage ~ gender, tb)
+lm_2 <- lm(wage ~ gender + occupation, tb)
+lm_3 <- lm(wage ~ gender + occupation + ability, tb)
 
 stargazer::stargazer(lm_1,lm_2,lm_3, 
                      column.labels = c("Biased Unconditional", 
