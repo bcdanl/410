@@ -772,23 +772,23 @@ F Statistic
 </section>
 <section id="bad-controls" class="level1">
 <h1>Bad Controls</h1>
-<section id="gender-occupation-and-wages" class="level2">
-<h2 class="anchored" data-anchor-id="gender-occupation-and-wages">Gender, Occupation, and Wages</h2>
+<section id="education-occupation-and-wages" class="level2">
+<h2 class="anchored" data-anchor-id="education-occupation-and-wages">Education, Occupation, and Wages</h2>
 <details open="">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">1</span>)</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>tb <span class="ot">&lt;-</span> <span class="fu">tibble</span>( </span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">gender =</span> <span class="fu">ifelse</span>(<span class="fu">runif</span>(<span class="dv">10000</span>)<span class="sc">&gt;=</span><span class="fl">0.5</span>,<span class="dv">1</span>,<span class="dv">0</span>), <span class="co"># gender indicator variable</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">highschool_degree =</span> <span class="fu">ifelse</span>(<span class="fu">runif</span>(<span class="dv">10000</span>)<span class="sc">&gt;=</span><span class="fl">0.5</span>, <span class="dv">1</span>,<span class="dv">0</span>), <span class="co"># highschool_degree indicator variable</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">ability =</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>), <span class="co"># e.g., talent, usually unobserved.</span></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">discrimination =</span> gender, <span class="co"># gender discrimination variable</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">occupation =</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span>ability <span class="sc">+</span> <span class="dv">0</span><span class="sc">*</span>gender <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span>discrimination <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>), <span class="co"># true data generating process for occupation_index variable</span></span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">wage =</span> <span class="dv">1</span> <span class="sc">-</span> <span class="dv">1</span><span class="sc">*</span>discrimination <span class="sc">+</span> <span class="dv">1</span><span class="sc">*</span>occupation <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span>ability <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>) <span class="co"># true data generating process for wage variable</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">discrimination =</span> highschool_degree, <span class="co"># highschool_degree discrimination variable</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">occupation_index =</span> <span class="dv">1</span> <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span>ability <span class="sc">+</span> <span class="dv">0</span><span class="sc">*</span>highschool_degree <span class="sc">-</span> <span class="dv">2</span><span class="sc">*</span>discrimination <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>), <span class="co"># true data generating process for occupation_index variable</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">wage =</span> <span class="dv">1</span> <span class="sc">-</span> <span class="dv">1</span><span class="sc">*</span>discrimination <span class="sc">+</span> <span class="dv">1</span><span class="sc">*</span>occupation_index <span class="sc">+</span> <span class="dv">2</span><span class="sc">*</span>ability <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">10000</span>) <span class="co"># true data generating process for wage variable</span></span>
 <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>)</span>
 <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>lm_1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wage <span class="sc">~</span> gender, tb)</span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>lm_2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wage <span class="sc">~</span> gender <span class="sc">+</span> occupation, tb)</span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>lm_3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wage <span class="sc">~</span> gender <span class="sc">+</span> occupation <span class="sc">+</span> ability, tb)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>lm_1 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wage <span class="sc">~</span> highschool_degree, tb)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>lm_2 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wage <span class="sc">~</span> highschool_degree <span class="sc">+</span> occupation_index, tb)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>lm_3 <span class="ot">&lt;-</span> <span class="fu">lm</span>(wage <span class="sc">~</span> highschool_degree <span class="sc">+</span> occupation_index <span class="sc">+</span> ability, tb)</span>
 <span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>stargazer<span class="sc">::</span><span class="fu">stargazer</span>(lm_1,lm_2,lm_3, </span>
 <span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>                     <span class="at">column.labels =</span> <span class="fu">c</span>(<span class="st">"Biased Unconditional"</span>, </span>
@@ -854,7 +854,7 @@ Unbiased Conditional
 </tr>
 <tr>
 <td style="text-align:left">
-gender
+highschool_degree
 </td>
 <td>
 -3.021<sup>***</sup>
@@ -891,7 +891,7 @@ gender
 </tr>
 <tr>
 <td style="text-align:left">
-occupation
+occupation_index
 </td>
 <td>
 </td>
