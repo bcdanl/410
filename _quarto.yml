@@ -49,6 +49,8 @@ website:
         contents:
           - text: Week 01
             href: danl-wk/wk-01.qmd
+          - text: Week 02
+            href: danl-wk/wk-02.qmd
       
         
   page-footer: 

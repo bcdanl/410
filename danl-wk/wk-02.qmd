@@ -1,0 +1,35 @@
+---
+title: Week 2
+subtitle: Controls; Panel Data Methods
+date: 2026-01-26
+from: markdown+emoji
+---
+
+In the second week, we will discuss good & bad controls in linear regression and panel data models.
+
+
+## 🏫 Lecture Slides  
+
+- **Lecture 2 — Omitted Variable Bias; Bad Controls**  
+  [View Slides](../danl-lec/danl-410-lec-02-2026-0126.html){target="_blank"}  
+  
+- **Lecture 3 — Panel Data Models**  
+  [View Slides](../danl-lec/danl-410-lec-02-2026-0126.html){target="_blank"}  
+
+
+🎥 Looking for lecture recordings? You can only find those on Brightspace.
+
+
+
+## 💬 Discussion
+
+<font size = "5">Welcome to our Week 2 Discussion Board! 👋 </font>
+
+
+This space is designed for you to engage with your classmates about the material covered in Week 2.
+
+Whether you are looking to delve deeper into the content, share insights, or have questions about the content, this is the perfect place for you.
+
+If you have any specific questions for Byeong-Hak (**@bcdanl**) or peer classmate (@GitHub-Username) regarding the Week 2 materials or need clarification on any points, don't hesitate to ask here. 
+
+Let's collaborate and learn from each other!

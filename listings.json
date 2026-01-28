@@ -12,16 +12,15 @@
     "items": []
   },
   {
-    "listing": "/listing-danl-410-lec.html",
+    "listing": "/index.html",
     "items": [
       "/danl-lec/danl-410-lec-01-2026-0121.html",
       "/danl-lec/danl-410-lec-02-2026-0126.html",
-      "/danl-lec/danl-410-lec-03-2026-0128.html"
+      "/danl-lec/danl-410-lec-03-2026-0128.html",
+      "/danl-cw/danl-410-cw-01.html",
+      "/danl-cw/danl-410-cw-02.html",
+      "/danl-cw/danl-410-cw-03.html"
     ]
-  },
-  {
-    "listing": "/listing-danl-410-ex.html",
-    "items": []
   },
   {
     "listing": "/listing-danl-410-wk.html",
@@ -32,14 +31,15 @@
     "items": []
   },
   {
-    "listing": "/index.html",
+    "listing": "/listing-danl-410-ex.html",
+    "items": []
+  },
+  {
+    "listing": "/listing-danl-410-lec.html",
     "items": [
       "/danl-lec/danl-410-lec-01-2026-0121.html",
       "/danl-lec/danl-410-lec-02-2026-0126.html",
-      "/danl-lec/danl-410-lec-03-2026-0128.html",
-      "/danl-cw/danl-410-cw-01.html",
-      "/danl-cw/danl-410-cw-02.html",
-      "/danl-cw/danl-410-cw-03.html"
+      "/danl-lec/danl-410-lec-03-2026-0128.html"
     ]
   }
 ]
