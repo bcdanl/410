@@ -1117,14 +1117,14 @@
     "href": "danl-lec/danl-410-lec-03-2026-0128.html#why-we-cluster-standard-errors-country-clustered-se",
     "title": "Lecture 3",
     "section": "🧠 Why We Cluster Standard Errors (Country-Clustered SE)",
-    "text": "🧠 Why We Cluster Standard Errors (Country-Clustered SE)\nThe problem: errors are correlated within countries\nIn panel data, observations inside a country are rarely independent:\n\nshocks persist over time\npolicies change gradually\nmeasurement errors repeat\nemissions and GDP move smoothly\n\nThat means residuals may satisfy:\n\\[\nCov(\\epsilon_{it}, \\epsilon_{is}) \\neq 0 \\quad \\text{for } t \\neq s\n\\]\nIf we ignore this, standard errors are often: ❌ too small → false “significance”"
+    "text": "🧠 Why We Cluster Standard Errors (Country-Clustered SE)\nThe problem: errors are correlated within countries\n\n\n\nIn panel data, observations inside a country are rarely independent:\n\nshocks persist over time\npolicies change gradually\nmeasurement errors repeat\nemissions and GDP move smoothly\n\n\n\n\nThat means residuals may satisfy serial correlation:\n\\[\nCov(\\epsilon_{it}, \\epsilon_{is}) \\neq 0 \\quad \\text{for } t \\neq s\n\\]\n\n\n\nIf we ignore this, standard errors are often too small → false “significance”"
   },
   {
     "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#cluster-robust-standard-errors-by-country",
     "href": "danl-lec/danl-410-lec-03-2026-0128.html#cluster-robust-standard-errors-by-country",
     "title": "Lecture 3",
     "section": "Cluster-Robust Standard Errors (by Country)",
-    "text": "Cluster-Robust Standard Errors (by Country)\nCountry-clustered SEs allow:\n\narbitrary correlation over time within a country\nheteroskedasticity across countries\n\nInterpretation:\n\n“We allow any kind of serial correlation within each country.”\n\nIn R (plm), this is typically implemented using robust VCOV options, e.g. vcovHC() with clustering by group."
+    "text": "Cluster-Robust Standard Errors (by Country)\nCountry-clustered SEs allow:\n\narbitrary correlation over time within a country\nheteroskedasticity across countries\n\nInterpretation:\n\n“We allow any kind of serial correlation within each country.”\n\nIn R (plm), this is typically implemented using robust VCOV options, e.g. vcovHC() with clustering by group.\n\nvcovHC: variance–covariance, heteroskedasticity-consistent"
   },
   {
     "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#model-summary-what-each-one-controls-for",
@@ -1180,14 +1180,14 @@
     "href": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-turning-point-income-level",
     "title": "Lecture 3",
     "section": "EKC Turning Point (Income Level)",
-    "text": "EKC Turning Point (Income Level)\nThe turning point occurs where the slope becomes zero:\n\\[\n\\frac{\\partial \\log(CO2pc)}{\\partial \\log(GDPpc)}\n= \\beta_1 + 2\\beta_2 \\log(GDPpc) = 0\n\\]\nSo the turning point in log income is:\n\\[\n\\log(GDPpc^*) = -\\frac{\\beta_1}{2\\beta_2}\n\\]\nConvert back to the income level:\n\\[\nGDPpc^* = \\exp\\left(-\\frac{\\beta_1}{2\\beta_2}\\right)\n\\]\n\nAt \\(GDPpc^*\\), CO\\(_2\\) per capita stops rising and begins falling (if EKC holds)."
+    "text": "EKC Turning Point (Income Level)\nThe turning point occurs where the slope becomes zero:\n\\[\n\\frac{\\partial \\log(CO2pc)}{\\partial \\log(GDPpc)}\n= \\beta_1 + 2\\beta_2 \\log(GDPpc) = 0\n\\]\nSo the turning point in log income is:\n\\[\n\\log(GDPpc^*) = -\\frac{\\beta_1}{2\\beta_2}\n\\]\nConvert back to the income level:\n\\[\nGDPpc^* = \\exp\\left(-\\frac{\\beta_1}{2\\beta_2}\\right)\n\\]\n\n\n\nAt \\(GDPpc^*\\), CO\\(_2\\) per capita stops rising and begins falling (if EKC holds)."
   },
   {
     "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#intuition-why-might-ekc-happen",
     "href": "danl-lec/danl-410-lec-03-2026-0128.html#intuition-why-might-ekc-happen",
     "title": "Lecture 3",
     "section": "Intuition: Why Might EKC Happen?",
-    "text": "Intuition: Why Might EKC Happen?\nAs income rises, countries often experience:\n\nScale effect 📈: more production → more emissions (early stage)\nComposition effect 🏗️➡️🧑‍💼: shift from industry → services (middle stage)\nTechnique effect 🧪⚡: cleaner technology + regulation (later stage)\n\nEKC is the balance of: - growth pressures that increase emissions - development forces that can reduce emissions"
+    "text": "Intuition: Why Might EKC Happen?\nAs income rises, countries often experience:\n\nScale effect 📈: more production → more emissions (early stage)\nComposition effect 🏗️➡️🧑‍💼: shift from industry → services (middle stage)\nTechnique effect 🧪⚡: cleaner technology + regulation (later stage)\n\nEKC is the balance of:\n\ngrowth pressures that increase emissions\ndevelopment forces that can reduce emissions"
   },
   {
     "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#important-caveat-for-co_2",

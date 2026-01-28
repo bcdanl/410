@@ -626,6 +626,9 @@ Cov(\alpha_i, x_{it}) = 0
 <section id="why-we-cluster-standard-errors-country-clustered-se" class="slide level2">
 <h2>🧠 Why We Cluster Standard Errors (Country-Clustered SE)</h2>
 <h3 id="the-problem-errors-are-correlated-within-countries">The problem: errors are correlated within countries</h3>
+<div style="display:block; margin:-10px;">
+
+</div>
 <p>In panel data, observations inside a country are rarely independent:</p>
 <ul>
 <li>shocks persist over time</li>
@@ -633,11 +636,17 @@ Cov(\alpha_i, x_{it}) = 0
 <li>measurement errors repeat</li>
 <li>emissions and GDP move smoothly</li>
 </ul>
-<p>That means residuals may satisfy:</p>
+<div style="display:block; margin:-30px;">
+
+</div>
+<p>That means residuals may satisfy <strong>serial correlation</strong>:</p>
 <p><span class="math display">\[
 Cov(\epsilon_{it}, \epsilon_{is}) \neq 0 \quad \text{for } t \neq s
 \]</span></p>
-<p>If we ignore this, standard errors are often: ❌ too small → false “significance”</p>
+<div style="display:block; margin:-10px;">
+
+</div>
+<p>If we ignore this, standard errors are often too small → false “significance”</p>
 </section>
 <section id="cluster-robust-standard-errors-by-country" class="slide level2">
 <h2>Cluster-Robust Standard Errors (by Country)</h2>
@@ -651,6 +660,9 @@ Cov(\epsilon_{it}, \epsilon_{is}) \neq 0 \quad \text{for } t \neq s
 <p>“We allow any kind of serial correlation within each country.”</p>
 </blockquote>
 <p>In <strong>R (<code>plm</code>)</strong>, this is typically implemented using robust VCOV options, e.g.&nbsp;<code>vcovHC()</code> with clustering by group.</p>
+<ul>
+<li><code>vcovHC</code>: variance–covariance, heteroskedasticity-consistent</li>
+</ul>
 </section>
 <section id="model-summary-what-each-one-controls-for" class="slide level2">
 <h2>Model Summary (What Each One Controls For)</h2>
@@ -787,7 +799,9 @@ emissions rise at first, then eventually fall<br>
 <p><span class="math display">\[
 GDPpc^* = \exp\left(-\frac{\beta_1}{2\beta_2}\right)
 \]</span></p>
-<!-- Interpretation: -->
+<div style="display:block; margin:-15px;">
+
+</div>
 <p>At <span class="math inline">\(GDPpc^*\)</span>, CO<span class="math inline">\(_2\)</span> per capita stops rising and begins falling (if EKC holds).</p>
 </section>
 <section id="intuition-why-might-ekc-happen" class="slide level2">
@@ -798,7 +812,11 @@ GDPpc^* = \exp\left(-\frac{\beta_1}{2\beta_2}\right)
 <li><strong>Composition effect</strong> 🏗️➡️🧑‍💼: shift from industry → services (middle stage)</li>
 <li><strong>Technique effect</strong> 🧪⚡: cleaner technology + regulation (later stage)</li>
 </ul>
-<p>EKC is the balance of: - growth pressures that increase emissions - development forces that can reduce emissions</p>
+<p>EKC is the balance of:</p>
+<ul>
+<li>growth pressures that increase emissions</li>
+<li>development forces that can reduce emissions</li>
+</ul>
 </section>
 <section id="important-caveat-for-co_2" class="slide level2">
 <h2>Important Caveat for CO<span class="math inline">\(_2\)</span></h2>

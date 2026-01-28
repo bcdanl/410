@@ -363,6 +363,8 @@ So FE is often the safer default in applied work.
 
 ### The problem: errors are correlated within countries
 
+<div style="display:block; margin:-10px;"></div>
+
 In panel data, observations inside a country are rarely independent:
 
 - shocks persist over time
@@ -370,14 +372,17 @@ In panel data, observations inside a country are rarely independent:
 - measurement errors repeat
 - emissions and GDP move smoothly
 
-That means residuals may satisfy:
+<div style="display:block; margin:-30px;"></div>
+
+That means residuals may satisfy **serial correlation**:
 
 $$
 Cov(\epsilon_{it}, \epsilon_{is}) \neq 0 \quad \text{for } t \neq s
 $$
 
-If we ignore this, standard errors are often:
-❌ too small → false “significance”
+<div style="display:block; margin:-10px;"></div>
+
+If we ignore this, standard errors are often too small → false “significance”
 
 
 
@@ -394,6 +399,7 @@ Interpretation:
 
 In **R (`plm`)**, this is typically implemented using robust VCOV options, e.g. `vcovHC()` with clustering by group.
 
+- `vcovHC`: variance–covariance, heteroskedasticity-consistent
 
 
 ## Model Summary (What Each One Controls For)
@@ -518,7 +524,8 @@ $$
 GDPpc^* = \exp\left(-\frac{\beta_1}{2\beta_2}\right)
 $$
 
-<!-- Interpretation: -->
+<div style="display:block; margin:-15px;"></div>
+
 
 At $GDPpc^*$, CO$_2$ per capita stops rising and begins falling (if EKC holds).
 
@@ -533,6 +540,7 @@ As income rises, countries often experience:
 - **Technique effect** 🧪⚡: cleaner technology + regulation (later stage)
 
 EKC is the balance of:
+
 - growth pressures that increase emissions
 - development forces that can reduce emissions
 
