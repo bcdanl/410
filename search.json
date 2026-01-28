@@ -704,14 +704,14 @@
     "href": "syllabus.html",
     "title": "Syllabus",
     "section": "",
-    "text": "(3 credits)\n\n\n\n\n\nItem\nDetails\n\n\n\n\nSemester\nSpring 2026\n\n\nClass Location\nSouth 338\n\n\nClass Hours\nMW 2:00 P.M. – 3:15 P.M.\n\n\n\n\n\n\n\n\n\nItem\nDetails\n\n\n\n\nName\nByeong-Hak Choe\n\n\nEmail (preferred)\nbchoe@geneseo.edu\n\n\nPhone (alternative)\n(545) 245-5425\n\n\nOffice Location\nSouth 227B\n\n\nOffice Hours\nMWF 9:15 A.M. – 10:15 A.M.\n\n\n\n\n\n\n\nCourse Website: https://bcdanl.github.io/310\n\nBrightspace: Use Brightspace for announcements, grades, and course materials.\n\n\n\n\nThis course covers tools and methodologies that visually represent data using well-presented and visually appealing graphics in order to understand data better and perform useful data analytics tasks.\nTopics covered in this course include:\n\nVisualizing many forms of graphs such as line graphs, scatter plots, bar charts, and more\n\nLoading data from various sources for data visualization\n\nCustomizing graphics using various formats and styles including colors, fonts, lines, and more\n\nVisualizing geographical data such as maps\n\nShowing an overview using dashboards and telling a story using storyboards\n\n\n\n\nDANL 101 and DANL 210\n\n\n\nInstructor checks email daily (Mon–Fri). Expect responses within 24–72 hours.\n\n\n\nThis syllabus is a working document and subject to change. Updates will be communicated in class meetings and/or Brightspace announcements."
+    "text": "(3 credits)\n\n\n\n\n\nItem\nDetails\n\n\n\n\nSemester\nSpring 2026\n\n\nClass Location\nNewton 212\n\n\nClass Hours\nMW 5:00 P.M. – 6:15 P.M.\n\n\n\n\n\n\n\n\n\nItem\nDetails\n\n\n\n\nName\nByeong-Hak Choe\n\n\nEmail (preferred)\nbchoe@geneseo.edu\n\n\nPhone (alternative)\n(545) 245-5425\n\n\nOffice Location\nSouth 227B\n\n\nOffice Hours\nMWF 9:15 A.M. – 10:15 A.M.\n\n\n\n\n\n\n\nCourse Website: https://bcdanl.github.io/410\n\nBrightspace: Use Brightspace for announcements, grades, and course materials.\n\n\n\n\nThis capstone is an individualized (or small-team) project experience that integrates technical data analytics skills and critical analysis around a topic of interest to the student, potentially connected to a disciplinary area and/or an external organization.\nYou will work with the capstone instructor to develop an approved proposal. In the proposal, you should demonstrate the ability to carry out data analytics from beginning to end, translate project objectives into a realistic analysis plan, and implement the analysis using tools such as R.\nThe capstone instructor oversees the data analytics aspects of the project, while a faculty member and/or organization contact may supervise the domain-specific aspects. A written report and an oral presentation are required.\n\n\n\nDANL 300 and DANL 310\n\n\n\nInstructor checks email daily (Mon–Fri). Expect responses within 24–72 hours.\n\n\n\nThis syllabus is a working document and subject to change. Updates will be communicated in class meetings and/or Brightspace announcements.\n\n\n\n\nBrightspace\n\nMicrosoft Teams\n\nRStudio\n\nGitHub"
   },
   {
     "objectID": "syllabus.html#course-information",
     "href": "syllabus.html#course-information",
     "title": "Syllabus",
     "section": "",
-    "text": "Item\nDetails\n\n\n\n\nSemester\nSpring 2026\n\n\nClass Location\nSouth 338\n\n\nClass Hours\nMW 2:00 P.M. – 3:15 P.M."
+    "text": "Item\nDetails\n\n\n\n\nSemester\nSpring 2026\n\n\nClass Location\nNewton 212\n\n\nClass Hours\nMW 5:00 P.M. – 6:15 P.M."
   },
   {
     "objectID": "syllabus.html#instructor-information",
@@ -725,21 +725,21 @@
     "href": "syllabus.html#course-access-and-orientation",
     "title": "Syllabus",
     "section": "",
-    "text": "Course Website: https://bcdanl.github.io/310\n\nBrightspace: Use Brightspace for announcements, grades, and course materials."
+    "text": "Course Website: https://bcdanl.github.io/410\n\nBrightspace: Use Brightspace for announcements, grades, and course materials."
   },
   {
     "objectID": "syllabus.html#course-description",
     "href": "syllabus.html#course-description",
     "title": "Syllabus",
     "section": "",
-    "text": "This course covers tools and methodologies that visually represent data using well-presented and visually appealing graphics in order to understand data better and perform useful data analytics tasks.\nTopics covered in this course include:\n\nVisualizing many forms of graphs such as line graphs, scatter plots, bar charts, and more\n\nLoading data from various sources for data visualization\n\nCustomizing graphics using various formats and styles including colors, fonts, lines, and more\n\nVisualizing geographical data such as maps\n\nShowing an overview using dashboards and telling a story using storyboards"
+    "text": "This capstone is an individualized (or small-team) project experience that integrates technical data analytics skills and critical analysis around a topic of interest to the student, potentially connected to a disciplinary area and/or an external organization.\nYou will work with the capstone instructor to develop an approved proposal. In the proposal, you should demonstrate the ability to carry out data analytics from beginning to end, translate project objectives into a realistic analysis plan, and implement the analysis using tools such as R.\nThe capstone instructor oversees the data analytics aspects of the project, while a faculty member and/or organization contact may supervise the domain-specific aspects. A written report and an oral presentation are required."
   },
   {
     "objectID": "syllabus.html#prerequisitescorequisites",
     "href": "syllabus.html#prerequisitescorequisites",
     "title": "Syllabus",
     "section": "",
-    "text": "DANL 101 and DANL 210"
+    "text": "DANL 300 and DANL 310"
   },
   {
     "objectID": "syllabus.html#communication-guidelines",
@@ -766,8 +766,8 @@
     "objectID": "syllabus.html#technology-requirements-with-privacy-policies",
     "href": "syllabus.html#technology-requirements-with-privacy-policies",
     "title": "Syllabus",
-    "section": "Technology Requirements with Privacy Policies",
-    "text": "Technology Requirements with Privacy Policies\n\nBrightspace\n\nMicrosoft Teams\n\nRStudio\n\nGitHub"
+    "section": "",
+    "text": "Brightspace\n\nMicrosoft Teams\n\nRStudio\n\nGitHub"
   },
   {
     "objectID": "syllabus.html#general-education-globe-learning-outcomes",
@@ -788,14 +788,14 @@
     "href": "syllabus.html#key-dates-summary",
     "title": "Syllabus",
     "section": "Key Dates (Summary)",
-    "text": "Key Dates (Summary)\n\nMidterm Exam: March 11 (during class time)\n\nSpring Break: March 14–21 (no classes)\n\nGREAT Day: April 22 (no class)\n\nFinal Exam: May 11, 3:30 P.M. – 5:30 P.M.\n\nData Storytelling Project Report: May 14"
+    "text": "Key Dates (Summary)\n\nResearch Kick-off Report: February 25\nMidterm Presentation: March 11 (during class time)\n\nSpring Break: March 14–21 (no classes)\n\nProgress & Insights Report: March 25\nGREAT Day Submission Due: March 25\n\nResearch Synthesis Report: April 15\nGREAT Day: April 22\n\nData Analytics Capstone Project Report: May 11, 11:59 P.M."
   },
   {
     "objectID": "syllabus.html#grade-components",
     "href": "syllabus.html#grade-components",
     "title": "Syllabus",
     "section": "Grade Components",
-    "text": "Grade Components\n\nAttendance (5%)\n\nParticipation (5%)\n\nGroup Project (20%)\n\nTotal Homework (20%)\n\nTotal Exam (50%)"
+    "text": "Grade Components\n\nAttendance (5%)\n\nParticipation (5%)\n\nResearch Kick-off Report (5%)\n\nProgress & Insights Report (5%)\n\nResearch Synthesis Report (5%)\n\nMidterm Presentation (15%)\n\nGREAT Day PowerPoint Presentation (30%)\n\nData Analytics Capstone Report (30%)"
   },
   {
     "objectID": "syllabus.html#grading-details",
@@ -830,7 +830,7 @@
     "href": "syllabus.html#make-up-work",
     "title": "Syllabus",
     "section": "Make-up Work",
-    "text": "Make-up Work\nMake-up exams will not be given unless you have either a medically verified excuse or an absence excused by the University.\nIf you cannot take exams because of religious obligations, notify me by email at least two weeks in advance so that an alternative exam time may be set.\nA missed exam without an excused absence earns a grade of zero.\nLate submissions for homework assignment will be accepted with a penalty. A zero will be recorded for a missed assignment."
+    "text": "Make-up Work\nMake-up presentations will not be given unless you have either a medically verified excuse or an absence excused by the University.\nIf you cannot make presentations because of religious obligations, notify me by email at least two weeks in advance so that an alternative presentation time may be set.\nA missed presentation without an excused absence earns a grade of zero."
   },
   {
     "objectID": "syllabus.html#attendance-participation",
@@ -845,5 +845,89 @@
     "title": "Syllabus",
     "section": "Netiquette Policy",
     "text": "Netiquette Policy\n\nBefore contributing to a discussion board, verify if your question has already been asked and answered. Avoid repeating topics as you would in a real-life conversation.\n\nRemain focused on the topic. Refrain from posting unrelated links, comments, thoughts, or images.\n\nAvoid typing in all caps, as it may appear as if you’re shouting.\n\nSteer clear of writing anything that might be interpreted as angry or sarcastic, particularly as tone is hard to convey online.\n\nAlways use “Please” and “Thank you” when requesting assistance from peers or instructors.\n\nRespect differing viewpoints. If disagreeing, do so respectfully and acknowledge the merits of your classmates’ arguments.\n\nEnsure accuracy when responding to a peer’s query. If unsure, especially about deadlines, it’s better not to guess to avoid confusion.\n\nBe concise in your responses; lengthy replies to simple questions might not be read fully.\n\nIf multiple responses are received to your question, consider summarizing them for the benefit of the entire class.\n\nAvoid derogatory comments or insulting others’ intelligence. Disagree with ideas, not individuals.\n\nWhen referencing a previous discussion, quote only the essential lines to provide context without requiring others to search for the original post.\n\nPractice forgiveness. If a peer makes an error, do not dwell on it; everyone makes mistakes.\n\nBefore posting, run a spell and grammar check. This small effort can significantly impact how your message is perceived."
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html",
+    "href": "danl-rw/danl-410-project-kickoff.html",
+    "title": "🧾📌 Capstone Project Guide",
+    "section": "",
+    "text": "In DANL 410: Data Analytics Capstone, you will complete an end-to-end analytics project—starting from a focused question, moving through data work and analysis, and ending with a polished report and presentation.\nThis course is designed to help you practice what data analysts actually do:\n\nTranslate a real-world problem into an analytics question\nFind and evaluate data (or create a clean dataset)\nClean, transform, and explore the data\nApply an appropriate machine learning or statistical method (e.g., regression, classification, clustering)\nCommunicate findings clearly with visuals and writing\nPublish your work on your Quarto website (GitHub Pages)\n\n\n\n\n\n\n\nNote\n\n\n\nYou do not need the “perfect” topic at the beginning. Your goal early in the semester is to build a feasible plan with a clear question, a credible dataset, and a reasonable method.\n\n\n\n\n\nEach team may have one or two members.\nEvery team member is expected to contribute actively and understand the entire project.\nTeams should be formed by Wednesday, Feb 11, 11:59 P.M.\nIf your team has two members, a representative should email Prof. Choe at bchoe@geneseo.edu, cc-ing a team member."
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#overview",
+    "href": "danl-rw/danl-410-project-kickoff.html#overview",
+    "title": "🧾📌 Capstone Project Guide",
+    "section": "",
+    "text": "In DANL 410: Data Analytics Capstone, you will complete an end-to-end analytics project—starting from a focused question, moving through data work and analysis, and ending with a polished report and presentation.\nThis course is designed to help you practice what data analysts actually do:\n\nTranslate a real-world problem into an analytics question\nFind and evaluate data (or create a clean dataset)\nClean, transform, and explore the data\nApply an appropriate machine learning or statistical method (e.g., regression, classification, clustering)\nCommunicate findings clearly with visuals and writing\nPublish your work on your Quarto website (GitHub Pages)\n\n\n\n\n\n\n\nNote\n\n\n\nYou do not need the “perfect” topic at the beginning. Your goal early in the semester is to build a feasible plan with a clear question, a credible dataset, and a reasonable method.\n\n\n\n\n\nEach team may have one or two members.\nEvery team member is expected to contribute actively and understand the entire project.\nTeams should be formed by Wednesday, Feb 11, 11:59 P.M.\nIf your team has two members, a representative should email Prof. Choe at bchoe@geneseo.edu, cc-ing a team member."
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#project-timeline",
+    "href": "danl-rw/danl-410-project-kickoff.html#project-timeline",
+    "title": "🌍 Research Project Guide — Climate Change and the Individual",
+    "section": "⏰ Project Timeline",
+    "text": "⏰ Project Timeline\n\n\n\n\n\n\n\n\nComponent\nDescription\nDue Date\n\n\n\n\n🧾 Research Kick-off Report\nPreliminary proposal — define your question, motivation, and framework\nSaturday, November 1, 2025\n\n\n🗣️ Final Presentation\n10–15 minute team presentation (Week of Dec 1)\nLast week of class\n\n\n📄 Final Proposal\nExpanded 5–7 page final proposal paper\nTuesday, December 16, 2025"
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#connecting-theory-to-practice",
+    "href": "danl-rw/danl-410-project-kickoff.html#connecting-theory-to-practice",
+    "title": "🌍 Research Project Guide — Climate Change and the Individual",
+    "section": "📘 Connecting Theory to Practice",
+    "text": "📘 Connecting Theory to Practice\nSo far, we have studied why environmental markets fail:\n\nExternalities\nPublic goods and common-pool resources\nInformation problems and principal-agent problems\nBehavioral anomalies\n\nNow, we extend these ideas to the economics of climate change, where individual decisions aggregate into global consequences.\n\n🧠 Key analytical tools we will further discuss include:\n\nDynamic efficiency and discounting — balancing present and future well-being\n\nStrategic interaction and game theory — analyzing incentives, cooperation, and negotiation in international environmental agreements (IEAs)\n\nRisk and uncertainty — understanding behavior and policy decisions when information is imperfect or incomplete"
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#research-kick-off-report-structure",
+    "href": "danl-rw/danl-410-project-kickoff.html#research-kick-off-report-structure",
+    "title": "🧾📌 Capstone Project Guide",
+    "section": "🧾 Research Kick-off Report — Structure",
+    "text": "🧾 Research Kick-off Report — Structure\nYour Research Kick-off Report (2–3 pages) is a concise proposal that explains:\n\nwhat you plan to study,\nwhy it matters (business, social, or policy relevance),\nhow you will study it using data.\n\nInclude these sections:\n\nWorking Title & Topic\n\nA clear, descriptive title.\n2–4 sentences describing the topic and setting.\n\nResearch Question\n\nState one main research question in a single sentence.\nAdd 1–3 sub-questions if helpful.\n\nMotivation / Value\n\nWhy would someone care?\nWho is the “stakeholder” (a business, customers, local government, nonprofit, campus office, etc.)?\nWhat decision, insight, or understanding might the analysis support?\n\nData Plan\n\nWhat dataset(s) will you use?\nUnit of analysis (customer? county? day? product? student? transaction?)\nKey variables you expect to use (inputs and outcomes)\nData limitations you already anticipate (missingness, small sample, measurement, bias)\n\nMethod Plan (Required: include one ML/statistical component)\n\nWhat approach will you use and why?\nExamples:\n\nRegression (prediction or cause-and-effect)\nClassification (e.g., churn / pass-fail / fraud / sentiment categories)\nClustering (e.g., segmentation)\nTime-series forecasting (if appropriate)\n\nWhat is your evaluation plan? (train/test split, accuracy/RMSE, cross-validation, or a clear validation idea)\n\nReferences\n\nUse a consistent citation style.\nFor online sources: include URL and date of access.\n\n\n\n\n\n\n\n\nNote\n\n\n\n💡 Think of the Kick-off Report as your project blueprint. You are not expected to have final results yet—but your plan should be credible and feasible."
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#brainstorming-ideas",
+    "href": "danl-rw/danl-410-project-kickoff.html#brainstorming-ideas",
+    "title": "🌍 Research Project Guide — Climate Change and the Individual",
+    "section": "💡 Brainstorming Ideas",
+    "text": "💡 Brainstorming Ideas\n\n\n\n\n\n\n\n\n\nTheme\nExample Research Question\nEconomic Concept\nPolicy Levers\n\n\n\n\nEnergy Behavior\nWhy do households underinvest in energy-efficient appliances?\nMyopia / bounded rationality\n💰 Incentives – Align financial signals with efficient choices\n\n\nTransportation\nHow do zoning or parking policies shape individual transportation choices and emissions?\nInstitutions / externalities\n🏛 Institutions – Reform parking minimums and zoning rules to reduce car dependency\n\n\nConsumption\nDo “low-carbon” labels affect purchasing choices?\nInformation asymmetry\n🧠 Information – Make efficiency visible, comparable, and easy to act on\n\n\nInsurance & Risk\nHow does climate risk perception affect home insurance demand?\nRisk aversion / misperception\n💰 Incentives – Price risk accurately through insurance and disclosure\n\n\nSocial Norms\nDo peer effects influence willingness to offset emissions?\nExternalities / social norms\n🤝 Social Norms – Use peer effects and social signaling to shift behavior\n\n\nAdaptation\nHow do individuals discount future flood or heat risks?\nTime preference / discounting\n🧠 Information + 💰 Incentives – Make future risks salient and reward long-term choices\n\n\n\n\nEffective climate policy often combines multiple levers — for example, tax + label + social norm feedback — to align private and social incentives."
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#research-idea-logic",
+    "href": "danl-rw/danl-410-project-kickoff.html#research-idea-logic",
+    "title": "🧾📌 Capstone Project Guide",
+    "section": "🧭 Research Idea Logic",
+    "text": "🧭 Research Idea Logic\nA strong capstone topic is:\n\nSpecific enough to answer within one semester\n\nData-supported (you can actually obtain usable data)\n\nMethod-feasible (you can execute and interpret a reasonable model)\n\nMeaningful (it has a real stakeholder, decision, or insight)\n\nThink in “question types”:\n\n\n\n\n\n\n\n\nType\nPurpose\nExample\n\n\n\n\nDescriptive\nSummarize what is happening\n“How have housing prices changed across counties since 2018?”\n\n\nComparative\nCompare groups or time periods\n“Do outcomes differ by region, income level, or policy change?”\n\n\nPredictive\nPredict an outcome using features\n“Can we predict churn using usage behavior?”\n\n\nSegmentation\nIdentify clusters / groups\n“Can we cluster customers into meaningful segments?”\n\n\nDiagnostic\nIdentify drivers of an outcome\n“Which factors are most associated with delays?”\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAvoid questions that are too broad:\n\n“How does social media affect society?”\n\nInstead, narrow:\n\n“Which post features predict higher engagement for a specific account/category?”\n\n\n\n\n\n💾 Using Data Effectively\nYou are encouraged to use real-world data and present evidence using:\n\nClean tables (summary statistics, grouped means, counts)\nClear visualizations (distributions, trends, comparisons, relationships)\nA method you can explain and justify\nTransparent code and reproducible workflow\n\nGuidelines:\n\nStart with a dataset you can actually obtain quickly (Week 2–4).\nPrefer data that has:\n\nEnough observations to learn patterns\nClear variable definitions\nA usable target/outcome variable (for prediction/classification), or a clear grouping structure (for clustering)\n\nUse modeling only when it adds value:\n\nA “fancy” model with weak interpretation is worse than a simple model well explained.\n\nAlways cite data sources and document data cleaning steps.\n\n\n\n\n\n\n\nTip\n\n\n\nYou don’t need complex modeling to do a strong capstone— but you do need clear evidence + clear reasoning + clear communication.\n\n\n\n\n\n🌐 Recommended Open Data Sources\n\n💰 Economic, Social & Development Indicators\n\n\n\nSource\nDescription\n\n\n\n\n💰 World Bank Data Catalog\nGlobal indicators for environment, economics, and public policy.\n\n\n🌐 World Bank Climate Change Knowledge Portal\nThe hub for global, climate-related data on historical and future climate, vulnerabilities, and impacts.\n\n\n🌏 UNDP Human Development Report – Horizons\nInteractive data and insights platform exploring global human development trends, sustainability, and inequality.\n\n\n♻️ UN SDG Indicators Database\nOfficial UN indicators tracking global sustainability goals.\n\n\n🌐️ IMF Data\nOfficial IMF Macroeconomic Climate Indicators.\n\n\n🎓 Harvard Dataverse\nRepository for academic datasets across disciplines, including environment and policy.\n\n\n🧩 Open ICPSR\nOpen-access social science data archive with economic and behavioral studies.\n\n\n\n\n\n💬 Public Opinion, Education & General Statistics\n\n\n\nSource\nDescription\n\n\n\n\n🌍 Our World in Data\nCross-country datasets on CO₂ emissions, energy use, and climate impacts.\n\n\n📊 Statista\nStatistics portal covering energy, environment, and sustainability topics. (Access through SUNY Geneseo library subscription.)\n\n\n🗺️ Yale Climate Opinion Map\nU.S. public opinion on climate change beliefs, attitudes, and policy support.\n\n\n\n\n\n🌍 Climate & Environmental Data\n\n\n\nSource\nDescription\n\n\n\n\n🌡 NOAA Climate Data Online\nTemperature, precipitation, and extreme weather records for U.S. and global stations.\n\n\n🌦 PRISM Climate Group (Oregon State University)\nHigh-resolution U.S. climate data (temperature, precipitation, and normals) for local and regional analysis.\n\n\n🌡️ Berkeley Earth\nLong-term global datasets on temperature, air quality, and climate change.\n\n\n🧮 Global Carbon Budget Office\nAnnual data on global carbon emissions and carbon budget analysis.\n\n\n🌎 UNEP Environment Data Explorer\nWorld Environment Situation Room (WESR), an open data platform by the UN Environment Programme (UNEP).\n\n\n💧 AQUASTAT (FAO Water Data)\nGlobal data on water resources, irrigation, and agricultural water management.\n\n\n\n\n\n⚡ Energy, Agriculture & Resource Use\n\n\n\nSource\nDescription\n\n\n\n\n⚡ U.S. Energy Information Administration (EIA)\nData on energy production, consumption, and fuel prices.\n\n\n🔋 IEA (International Energy Agency)\nGlobal datasets on energy production, consumption, efficiency, and emissions by sector and country.\n\n\n🌾 FAOSTAT (UN Food and Agriculture Organization)\nGlobal data on agriculture, food systems, land use, and greenhouse gas emissions by sector and country.\n\n\n🧭 OECD Environment Statistics\nData on environmental performance, green growth, energy intensity, and environmental taxes for OECD countries.\n\n\n🏠 U.S. Census Bureau – Natural & Built Environments\nDatasets on pollution, agriculture, transportation emissions, recycling, and rural development.\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAlways check:\n\nwhether the data is legally usable (license/terms),\nwhether variables are well-defined,\nand whether the data is appropriate for your question."
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#checklist",
+    "href": "danl-rw/danl-410-project-kickoff.html#checklist",
+    "title": "🌍 Research Project Guide — Climate Change and the Individual",
+    "section": "✅ Checklist",
+    "text": "✅ Checklist\nBefore submitting your Research Kick-off Report:\n\nTopic fits the theme Climate Change and the Individual\n\nClear, well-defined research question\n\nEconomic mechanism or concept identified\n\nData source or method described\n\nExpected insight or policy takeaway\n\n2–3 pages, professional formatting\n\nSubmitted via Brightspace by Saturday, November 1, 2025 (11:59 PM)"
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#closing-thought",
+    "href": "danl-rw/danl-410-project-kickoff.html#closing-thought",
+    "title": "🧾📌 Capstone Project Guide",
+    "section": "🌟 Closing Thought",
+    "text": "🌟 Closing Thought\n\nA strong capstone project is not about doing everything—\nit’s about doing a focused analysis well,\nand communicating results clearly enough that someone can act on them."
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#project-timeline-spring-2026",
+    "href": "danl-rw/danl-410-project-kickoff.html#project-timeline-spring-2026",
+    "title": "🧾📌 Capstone Project Guide",
+    "section": "⏰ Project Timeline (Spring 2026)",
+    "text": "⏰ Project Timeline (Spring 2026)\n\n\n\n\n\n\n\n\nComponent\nDescription\nDue Date\n\n\n\n\n🧾 Research Kick-off Report\nDefine question, motivation, data, and plan (2–3 pages)\nFeb 25 (11:59 P.M.)\n\n\n🗣️ Midterm Presentation\nShort progress presentation (what you have, what you learned, next steps)\nMar 11 (class time)\n\n\n🧩 Progress & Insights Report\nWhat you did + what you learned + obstacles + updated plan\nMar 25\n\n\n🧠 Research Synthesis Report\nStronger draft narrative + results + interpretation\nApr 15\n\n\n🖥️ GREAT Day PowerPoint\nSlide deck submission\nApr 22\n\n\n📄 Final Capstone Report\nFinal written report (published on website)\nMay 11 (11:59 P.M.)"
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#brainstorming-ideas-capstone-friendly",
+    "href": "danl-rw/danl-410-project-kickoff.html#brainstorming-ideas-capstone-friendly",
+    "title": "🧾📌 Capstone Project Guide",
+    "section": "💡 Brainstorming Ideas (Capstone-Friendly)",
+    "text": "💡 Brainstorming Ideas (Capstone-Friendly)\n\n\n\n\n\n\n\n\n\nArea\nExample Research Question\nData Type\nPossible Methods\n\n\n\n\nBusiness / Marketing\nWhich factors predict customer churn or repeat purchase?\ntransactions, CRM, reviews\nclassification, regression\n\n\nOperations\nWhat drives delays or failures in a process?\ntimestamps, logs\nregression, clustering\n\n\nFinance / Risk\nCan we predict risk outcomes or identify risky segments?\nfirm/household indicators\nclassification, clustering\n\n\nSports / Performance\nWhich player/team features predict win probability?\ngame logs\nregression, classification\n\n\nPublic Policy\nWhich communities face higher risk or lower access?\ncensus + admin data\nregression, mapping, clustering\n\n\nEducation\nWhat predicts course performance or retention patterns?\nLMS / grades / surveys\nregression, classification\n\n\nClimate Change\nWhich factors predict household solar adoption (or energy burden) across counties?\nAmerican Community Survey (ACS) + solar installs + weather/energy\nregression, classification, mapping"
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#checklist-research-kick-off-report",
+    "href": "danl-rw/danl-410-project-kickoff.html#checklist-research-kick-off-report",
+    "title": "🧾📌 Capstone Project Guide",
+    "section": "✅ Checklist (Research Kick-off Report)",
+    "text": "✅ Checklist (Research Kick-off Report)\nBefore submitting your Research Kick-off Report:\n\nTeam confirmed (1–2 people)\n\nClear research question (one sentence)\n\nStakeholder / value explained (why it matters)\n\nData source identified and link provided\n\nUnit of analysis + key variables listed\n\nMethod plan includes at least one ML/stat component (regression/classification/clustering/etc.)\n\nRealistic timeline and deliverables described\n\nReferences included (URLs + access date for online sources)\n\n2–3 pages, professional formatting\n\nSubmitted via Brightspace by Feb 25 (11:59 P.M.)"
   }
 ]

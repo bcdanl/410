@@ -44,7 +44,9 @@ website:
         
       - section: 🗣️️ Project
         contents:
-                
+          - text: 🧾📌 Research Kick-off Report
+            href: danl-rw/danl-410-project-kickoff.qmd
+            
       - section: 🗓️ Weeks
         contents:
           - text: Week 01

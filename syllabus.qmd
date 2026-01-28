@@ -1,6 +1,6 @@
 ---
 title: Syllabus
-subtitle: "DANL 310: Data Visualization and Presentation"
+subtitle: "DANL 410: Data Analytics Capstone"
 author: "Byeong-Hak Choe"
 number-sections: false
 toc: true
@@ -18,7 +18,7 @@ toc-title: "
 css: [weeks/styles-wk.css]
 ---
 
-# DANL 310-01: Data Visualization and Presentation  
+# DANL 410-01: Data Analytics Capstone
 **(3 credits)**
 
 ## Course Information
@@ -26,8 +26,8 @@ css: [weeks/styles-wk.css]
 | Item | Details |
 |---|---|
 | Semester | Spring 2026 |
-| Class Location | South 338 |
-| Class Hours | MW 2:00 P.M. – 3:15 P.M. |
+| Class Location | Newton 212 |
+| Class Hours | MW 5:00 P.M. – 6:15 P.M. |
 
 ## Instructor Information
 
@@ -41,24 +41,21 @@ css: [weeks/styles-wk.css]
 
 ## Course Access and Orientation
 
-- **Course Website:** <https://bcdanl.github.io/310>  
+- **Course Website:** <https://bcdanl.github.io/410>  
 - **Brightspace:** Use Brightspace for announcements, grades, and course materials.
 
 ## Course Description
 
-This course covers tools and methodologies that visually represent data using well-presented and visually appealing graphics in order to understand data better and perform useful data analytics tasks.
+This capstone is an individualized (or small-team) project experience that integrates technical data analytics skills and critical analysis around a topic of interest to the student, potentially connected to a disciplinary area and/or an external organization.
 
-Topics covered in this course include:
+You will work with the capstone instructor to develop an approved proposal. In the proposal, you should demonstrate the ability to carry out data analytics from beginning to end, translate project objectives into a realistic analysis plan, and implement the analysis using tools such as **R**.
 
-1. Visualizing many forms of graphs such as line graphs, scatter plots, bar charts, and more  
-2. Loading data from various sources for data visualization  
-3. Customizing graphics using various formats and styles including colors, fonts, lines, and more  
-4. Visualizing geographical data such as maps  
-5. Showing an overview using dashboards and telling a story using storyboards  
+The capstone instructor oversees the data analytics aspects of the project, while a faculty member and/or organization contact may supervise the domain-specific aspects. A **written report** and an **oral presentation** are required.
+
 
 ## Prerequisites/Corequisites
 
-DANL 101 and DANL 210
+**DANL 300 and DANL 310** 
 
 ## Communication Guidelines
 
@@ -68,21 +65,6 @@ Instructor checks email daily (Mon–Fri). Expect responses within **24–72 hou
 
 This syllabus is a working document and subject to change. Updates will be communicated in class meetings and/or Brightspace announcements.
 
-# Required Materials
-
-All required materials are **free**:
-
-- *Data Visualization: A Practical Introduction*  
-- *Guide for Quarto*  
-- *R for Data Science (2e)*  
-
-## Optional Readings
-
-- *ggplot2: Elegant Graphics for Data Analysis (3e)*  
-- *Fundamentals of Data Visualization*  
-- *Modern Data Visualization with R*  
-- *Quarto: The Practical Guide*  
-- *Mastering Shiny*  
 
 ## Technology Requirements with Privacy Policies
 
@@ -99,15 +81,27 @@ All required materials are **free**:
 - **Competency Goal 4:** Our learners will have a thorough understanding of various functional areas of business.  
 - **Competency Goal 5:** Our learners will have a multidimensional understanding of social responsibility.  
 
+# Integrative and Applied Learning in Data Analytics
+
+This course serves the following Integrative and Applied Learning objectives:
+
+- Integrate multiple bodies of knowledge with personal experience by asking meaningful questions about real-world problems.  
+- Apply skills, theories, and methods gained in academic study, professional experiences, and/or co-curricular experiences to new situations.  
+- Reflect upon changes in learning and outlook over time and integrate them into future endeavors.  
+
+
 # Course Objectives
 
-- Exploring a variety of graph types, including line graphs, scatter plots, and bar charts. (CG1, CG2, CG3)  
-- Preparing and organizing data from diverse sources for visualization. (CG1, CG2, CG3)  
-- Tailoring graphics with a range of formats and styles, such as color schemes, fonts, and line types. (CG1, CG2, CG3)  
-- Mapping geographical data effectively. (CG1, CG2, CG3)  
-- Creating dynamic and interactive visualizations. (CG1, CG2, CG3)  
-- Building and deploying web applications using Shiny for data visualization. (CG1, CG2, CG3)  
-- Utilizing Shiny dashboards to synthesize information and narrate data stories. (CG1, CG2, CG3, CG4, CG5)  
+By the end of this course, you should be able to:
+
+- Formulate a focused, meaningful capstone question grounded in a real-world business or socioeconomic context and motivated by stakeholder needs. (CG1, CG4, CG5)  
+- Design and execute an end-to-end data analytics project from proposal to final deliverables, including data acquisition, preparation, analysis, validation, and interpretation. (CG1, CG2)  
+- Select and apply appropriate quantitative methods (e.g., regression, classification, clustering, hypothesis testing) to answer the project question and evaluate results. (CG1, CG2)  
+- Produce publication-quality visualizations and analytical outputs that clearly communicate patterns, uncertainty, and key findings. (CG2, CG3)  
+- Demonstrate reproducible and well-documented analytics workflows using modern tools (e.g., R) to ensure transparency and credibility. (CG1, CG2)  
+- Integrate relevant domain knowledge (e.g., economics, marketing, finance, accounting, management) to frame the problem, interpret results, and propose actionable recommendations. (CG4)  
+- Communicate data-driven insights effectively in written and oral formats for technical and non-technical audiences, including a final report and presentation. (CG3)  
+- Identify ethical, social responsibility, and equity considerations related to data, methods, and recommendations (e.g., privacy, bias, fairness, stakeholder impacts). (CG5)  
 
 ## General Education (GLOBE) Learning Outcomes
 
@@ -123,28 +117,29 @@ Students acquire strong quantitative, analytical, and communication skills while
 
 # Course Schedule
 
-| Week | Module | Assignments | Due Dates |
-| --- | --- | --- | --- |
-| 1–2 | Building and managing a data portfolio website with<br>Git, GitHub, and Quarto | Building and managing a data portfolio website with<br>Git, GitHub, and Quarto |  |
-| 2–8 | Mastering ggplot & dplyr | HW 1 | Feb 11 |
-| 2–8 |  | HW 2 | Feb 25 |
-| 2–8 |  | HW 3 | Mar 9 |
-| 2–8 |  | Midterm Exam | Mar 11 |
-| 9 |  | Spring Break | March 14–21 |
-| 10–13 | Various ggplot charts | HW 4 | Apr 8 |
-| 14 | Interactive & animation charts | HW 5 | Apr 27 |
-| 15 | Shiny and dashboard | HW 6 | May 6 |
-| 16 | Data Storytelling Presentation | Data Storytelling Presentation | May <br>4–6 |
-| 17 | Final Exam | Final Exam | May 11 |
-| 17 | Data Storytelling Project Report | Data Storytelling Project Report | May 14 |
+| Week | Module | Assignment / Milestone | Due Date |
+|---|---|---|---|
+| 1–2 | Building and managing a data portfolio website with Git, GitHub, and Quarto | Website setup + workflow |  |
+| 2–8 | Research Methods | Research Kick-off Report | **Feb 25** |
+| 2–8 | Research Methods | Midterm Presentation | **Mar 11** |
+| 9 | Spring Break | No classes | **Mar 14–21** |
+| 10–16 | Research Methods | Progress & Insights Report | **Mar 25** |
+| 10–16 | Research Methods | Research Synthesis Report | **Apr 15** |
+| 10–16 | Research Methods | GREAT Day PowerPoint Presentation | **Apr 22** |
+| 17 | Final Deliverable | Data Analytics Capstone Report | **May 11 (11:59 P.M.)** |
+
 
 ## Key Dates (Summary)
 
-- **Midterm Exam:** March 11 (during class time)  
+- **Research Kick-off Report:** February 25
+- **Midterm Presentation:** March 11 (during class time)  
 - **Spring Break:** March 14–21 (no classes)  
-- **GREAT Day:** April 22 (no class)  
-- **Final Exam:** May 11, 3:30 P.M. – 5:30 P.M.  
-- **Data Storytelling Project Report:** May 14  
+- **Progress & Insights Report:** March 25
+- **GREAT Day Submission Due:** March 25  
+- **Research Synthesis Report:** April 15
+- **GREAT Day:** April 22  
+- **Data Analytics Capstone Project Report:** May 11, 11:59 P.M.
+
 
 # Website
 
@@ -152,16 +147,17 @@ You will build and publish your own course website using **Quarto**, **RStudio**
 
 Your website will be hosted on **GitHub Pages**. We will also cover the basics of **Markdown**, and introduce essential concepts in **HTML** and **CSS** for simple customization.
 
-# Group Project
+# Capstone Project
 
-Each project team will consist of **one or two students**. Your group will choose a dataset for the project, and the dataset must be approved by the instructor before you begin.
+Each project team will consist of **one or two students**. Your team will choose a dataset for the Capstone project, and the dataset must be approved by the instructor before you begin.
 
-The final write-up must include:
+The final Capstone write-up must include:
 
 - Exploratory Data Analysis (EDA), including descriptive statistics, data transformation, and multiple visualizations  
-- An interactive dashboard and Shiny application that allow users to explore the data and key findings (e.g., filters, summary tables, interactive plots)  
+- A machine learning analysis such as linear regression, classification, or clustering  
 
-All reports must be published on each team member’s website. Any change in group membership or project topic must be approved by the instructor.
+All Capstone reports must be published on each team member’s website. Any change in group membership or project topic must be approved by the instructor.
+
 
 # Grading
 
@@ -169,28 +165,13 @@ All reports must be published on each team member’s website. Any change in gro
 
 - Attendance (5%)  
 - Participation (5%)  
-- Group Project (20%)  
-- Total Homework (20%)  
-- Total Exam (50%)  
+- Research Kick-off Report (5%)  
+- Progress & Insights Report (5%)  
+- Research Synthesis Report (5%)  
+- Midterm Presentation (15%)  
+- GREAT Day PowerPoint Presentation (30%)  
+- Data Analytics Capstone Report (30%)
 
-## Grading Details
-
-- **Single lowest homework score is dropped** when calculating the Total Homework Grade.  
-- **Total Exam Grade** is the maximum between:  
-  - Simple average of Midterm Exam and Final Exam scores, **and**  
-  - Weighted average of Midterm Exam (33%) and Final Exam (67%)  
-
-## Group Project Grade
-
-- Peer evaluation on group presentation (5%)  
-- Instructor evaluation (95%)  
-  - Descriptive statistics (5%)  
-  - Data transformation (5%)  
-  - Data visualization (20%)  
-  - Data storytelling (20%)  
-  - Presentation slides (10%)  
-  - Presentation (30%)  
-  - Code (10%)  
 
 ## Grading Scale
 
@@ -213,13 +194,12 @@ Accepted up to **3 days late** with **30% penalty**.
 
 ## Make-up Work
 
-Make-up exams will not be given unless you have either a medically verified excuse or an absence excused by the University.
+Make-up presentations will not be given unless you have either a medically verified excuse or an absence excused by the University.
 
-If you cannot take exams because of religious obligations, notify me by email at least two weeks in advance so that an alternative exam time may be set.
+If you cannot make presentations because of religious obligations, notify me by email at least two weeks in advance so that an alternative presentation time may be set.
 
-A missed exam without an excused absence earns a grade of zero.
+A missed presentation without an excused absence earns a grade of zero.
 
-Late submissions for homework assignment will be accepted with a penalty. A zero will be recorded for a missed assignment.
 
 ## Attendance & Participation
 

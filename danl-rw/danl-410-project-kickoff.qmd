@@ -1,0 +1,269 @@
+---
+title: 🧾📌 Capstone Project Guide
+subtitle: Research Kick-off Report (DANL 410)
+author: Byeong-Hak Choe
+institute: SUNY Geneseo
+date: 2026-01-28
+
+# toc: true
+# toc-depth: 2
+# toc-expand: true
+# toc-title: Contents
+# number-sections: false
+# number-depth: 3
+
+code-fold: false
+
+execute:
+  echo: true
+  eval: true
+  message: false
+  warning: false
+  fig-width: 9
+  fig-height: 6
+---
+
+## 🌍 Overview
+
+In **DANL 410: Data Analytics Capstone**, you will complete an end-to-end analytics project—starting from a focused question, moving through data work and analysis, and ending with a polished report and presentation.
+
+This course is designed to help you practice what data analysts actually do:
+
+- Translate a real-world problem into an analytics question
+- Find and evaluate data (or create a clean dataset)
+- Clean, transform, and explore the data
+- Apply an appropriate **machine learning or statistical method** (e.g., regression, classification, clustering)
+- Communicate findings clearly with visuals and writing
+- Publish your work on your **Quarto website** (GitHub Pages)
+
+::: callout-note
+You do **not** need the “perfect” topic at the beginning.
+Your goal early in the semester is to build a **feasible plan** with a clear question, a credible dataset, and a reasonable method.
+:::
+
+### 👥 Team Formation
+
+- Each team may have **one or two members**.
+- Every team member is expected to contribute actively and understand the entire project.
+- Teams should be formed by **Wednesday, Feb 11, 11:59 P.M.**
+- If your team has two members, a representative should email Prof. Choe at <bchoe@geneseo.edu>, **cc-ing a team member**.
+
+---
+
+## ⏰ Project Timeline (Spring 2026)
+
+| Component | Description | Due Date |
+|---|---|---|
+| 🧾 **Research Kick-off Report** | Define question, motivation, data, and plan (2–3 pages) | **Feb 25 (11:59 P.M.)** |
+| 🗣️ **Midterm Presentation** | Short progress presentation (what you have, what you learned, next steps) | **Mar 11 (class time)** |
+| 🧩 **Progress & Insights Report** | What you did + what you learned + obstacles + updated plan | **Mar 25** |
+| 🧠 **Research Synthesis Report** | Stronger draft narrative + results + interpretation | **Apr 15** |
+| 🖥️ **GREAT Day PowerPoint** | Slide deck submission | **Apr 22** |
+| 📄 **Final Capstone Report** | Final written report (published on website) | **May 11 (11:59 P.M.)** |
+
+---
+
+## 🧾 Research Kick-off Report — Structure
+
+Your **Research Kick-off Report** (2–3 pages) is a concise proposal that explains:
+
+- **what** you plan to study,
+- **why** it matters (business, social, or policy relevance),
+- **how** you will study it using data.
+
+Include these sections:
+
+1. **Working Title & Topic**
+   - A clear, descriptive title.
+   - 2–4 sentences describing the topic and setting.
+
+2. **Research Question**
+   - State one main research question in a single sentence.
+   - Add 1–3 sub-questions if helpful.
+
+3. **Motivation / Value**
+   - Why would someone care?
+   - Who is the “stakeholder” (a business, customers, local government, nonprofit, campus office, etc.)?
+   - What decision, insight, or understanding might the analysis support?
+
+4. **Data Plan**
+   - What dataset(s) will you use?
+   - Unit of analysis (customer? county? day? product? student? transaction?)
+   - Key variables you expect to use (inputs and outcomes)
+   - Data limitations you already anticipate (missingness, small sample, measurement, bias)
+
+5. **Method Plan (Required: include one ML/statistical component)**
+   - What approach will you use and why?
+   - Examples:
+     - Regression (prediction or cause-and-effect)
+     - Classification (e.g., churn / pass-fail / fraud / sentiment categories)
+     - Clustering (e.g., segmentation)
+     - Time-series forecasting (if appropriate)
+   - What is your evaluation plan? (train/test split, accuracy/RMSE, cross-validation, or a clear validation idea)
+
+6. **References**
+   - Use a consistent citation style.
+   - For online sources: include **URL** and **date of access**.
+
+::: callout-note
+💡 Think of the Kick-off Report as your **project blueprint**.
+You are not expected to have final results yet—but your plan should be **credible and feasible**.
+:::
+
+---
+
+## 💡 Brainstorming Ideas (Capstone-Friendly)
+
+| Area | Example Research Question | Data Type | Possible Methods |
+|---|---|---|---|
+| Business / Marketing | Which factors predict customer churn or repeat purchase? | transactions, CRM, reviews | classification, regression |
+| Operations | What drives delays or failures in a process? | timestamps, logs | regression, clustering |
+| Finance / Risk | Can we predict risk outcomes or identify risky segments? | firm/household indicators | classification, clustering |
+| Sports / Performance | Which player/team features predict win probability? | game logs | regression, classification |
+| Public Policy | Which communities face higher risk or lower access? | census + admin data | regression, mapping, clustering |
+| Education | What predicts course performance or retention patterns? | LMS / grades / surveys | regression, classification |
+| Climate Change | Which factors predict household solar adoption (or energy burden) across counties? | American Community Survey (ACS) + solar installs + weather/energy | regression, classification, mapping |
+
+---
+
+## 🧭 Research Idea Logic
+
+A strong capstone topic is:
+
+- **Specific enough** to answer within one semester  
+- **Data-supported** (you can actually obtain usable data)  
+- **Method-feasible** (you can execute and interpret a reasonable model)  
+- **Meaningful** (it has a real stakeholder, decision, or insight)
+
+Think in “question types”:
+
+| Type | Purpose | Example |
+|---|---|---|
+| **Descriptive** | Summarize what is happening | “How have housing prices changed across counties since 2018?” |
+| **Comparative** | Compare groups or time periods | “Do outcomes differ by region, income level, or policy change?” |
+| **Predictive** | Predict an outcome using features | “Can we predict churn using usage behavior?” |
+| **Segmentation** | Identify clusters / groups | “Can we cluster customers into meaningful segments?” |
+| **Diagnostic** | Identify drivers of an outcome | “Which factors are most associated with delays?” |
+
+::: callout-warning
+Avoid questions that are too broad:
+
+- “How does social media affect society?”
+
+Instead, narrow:
+
+- “Which post features predict higher engagement for a specific account/category?”
+:::
+
+---
+
+### 💾 Using Data Effectively
+
+You are encouraged to use **real-world data** and present evidence using:
+
+- Clean tables (summary statistics, grouped means, counts)
+- Clear visualizations (distributions, trends, comparisons, relationships)
+- A method you can explain and justify
+- Transparent code and reproducible workflow
+
+**Guidelines:**
+
+- Start with a dataset you can actually obtain **quickly** (Week 2–4).
+- Prefer data that has:
+  - Enough observations to learn patterns
+  - Clear variable definitions
+  - A usable target/outcome variable (for prediction/classification), or a clear grouping structure (for clustering)
+- Use modeling only when it adds value:
+  - A “fancy” model with weak interpretation is worse than a simple model well explained.
+- Always cite data sources and document data cleaning steps.
+
+::: callout-tip
+You don’t need complex modeling to do a strong capstone—
+but you *do* need **clear evidence + clear reasoning + clear communication**.
+:::
+
+---
+
+
+### 🌐 Recommended Open Data Sources
+
+#### 💰 Economic, Social & Development Indicators
+
+| Source | Description |
+|---------|-------------|
+| 💰 [World Bank Data Catalog](https://data.worldbank.org/) | Global indicators for environment, economics, and public policy. |
+| 🌐 [World Bank Climate Change Knowledge Portal](https://climateknowledgeportal.worldbank.org) | The hub for global, climate-related data on historical and future climate, vulnerabilities, and impacts. |
+| 🌏 [UNDP Human Development Report – Horizons](https://horizons.hdr.undp.org/) | Interactive data and insights platform exploring global human development trends, sustainability, and inequality. |
+| ♻️ [UN SDG Indicators Database](https://unstats.un.org/sdgs/dataportal) | Official UN indicators tracking global sustainability goals. |
+| 🌐️ [IMF Data](https://climatedata.imf.org) | Official IMF Macroeconomic Climate Indicators. |
+| 🎓 [Harvard Dataverse](https://dataverse.harvard.edu/) | Repository for academic datasets across disciplines, including environment and policy. |
+| 🧩 [Open ICPSR](https://www.openicpsr.org/openicpsr/) | Open-access social science data archive with economic and behavioral studies. |
+
+
+
+#### 💬 Public Opinion, Education & General Statistics
+
+| Source | Description |
+|---------|-------------|
+| 🌍 [Our World in Data](https://ourworldindata.org/) | Cross-country datasets on CO₂ emissions, energy use, and climate impacts. |
+| 📊 [Statista](https://library.geneseo.edu/statista) | Statistics portal covering energy, environment, and sustainability topics. *(Access through SUNY Geneseo library subscription.)* |
+| 🗺️ [Yale Climate Opinion Map](https://climatecommunication.yale.edu/visualizations-data/ycom-us/) | U.S. public opinion on climate change beliefs, attitudes, and policy support. |
+
+
+#### 🌍 Climate & Environmental Data
+
+| Source | Description |
+|---------|-------------|
+| 🌡 [NOAA Climate Data Online](https://www.ncei.noaa.gov/cdo-web/) | Temperature, precipitation, and extreme weather records for U.S. and global stations. |
+| 🌦 [PRISM Climate Group (Oregon State University)](https://prism.oregonstate.edu/) | High-resolution U.S. climate data (temperature, precipitation, and normals) for local and regional analysis. |
+| 🌡️ [Berkeley Earth](https://berkeleyearth.org/data/) | Long-term global datasets on temperature, air quality, and climate change. |
+| 🧮 [Global Carbon Budget Office](https://globalcarbonbudget.org/gcb-2024/) | Annual data on global carbon emissions and carbon budget analysis. |
+| 🌎 [UNEP Environment Data Explorer](https://data.unep.org/app/) | World Environment Situation Room (WESR), an open data platform by the UN Environment Programme (UNEP). |
+| 💧 [AQUASTAT (FAO Water Data)](https://www.fao.org/aquastat/en/) | Global data on water resources, irrigation, and agricultural water management. |
+
+
+
+#### ⚡ Energy, Agriculture & Resource Use
+
+| Source | Description |
+|---------|-------------|
+| ⚡ [U.S. Energy Information Administration (EIA)](https://www.eia.gov/opendata/) | Data on energy production, consumption, and fuel prices. |
+| 🔋 [IEA (International Energy Agency)](https://www.iea.org/data-and-statistics) | Global datasets on energy production, consumption, efficiency, and emissions by sector and country. |
+| 🌾 [FAOSTAT (UN Food and Agriculture Organization)](https://www.fao.org/faostat/en/#home) | Global data on agriculture, food systems, land use, and greenhouse gas emissions by sector and country. |
+| 🧭 [OECD Environment Statistics](https://data-explorer.oecd.org) | Data on environmental performance, green growth, energy intensity, and environmental taxes for OECD countries. |
+| 🏠 [U.S. Census Bureau – Natural & Built Environments](https://opportunity.census.gov/data/natural-built/) | Datasets on pollution, agriculture, transportation emissions, recycling, and rural development. |
+
+
+
+::: callout-warning
+Always check:
+
+- whether the data is legally usable (license/terms),
+- whether variables are well-defined,
+- and whether the data is appropriate for your question.
+:::
+
+---
+
+## ✅ Checklist (Research Kick-off Report)
+
+Before submitting your **Research Kick-off Report**:
+
+- [ ] Team confirmed (1–2 people)  
+- [ ] Clear research question (one sentence)  
+- [ ] Stakeholder / value explained (why it matters)  
+- [ ] Data source identified and link provided  
+- [ ] Unit of analysis + key variables listed  
+- [ ] Method plan includes at least one ML/stat component (regression/classification/clustering/etc.)  
+- [ ] Realistic timeline and deliverables described  
+- [ ] References included (URLs + access date for online sources)  
+- [ ] 2–3 pages, professional formatting  
+- [ ] Submitted via Brightspace by **Feb 25 (11:59 P.M.)**
+
+---
+
+## 🌟 Closing Thought
+
+> A strong capstone project is not about doing *everything*—  
+> it’s about doing a **focused** analysis **well**,  
+> and communicating results clearly enough that someone can act on them.
