@@ -80,9 +80,8 @@ set.seed(1)
 tb <- tibble( 
   highschool_degree = ifelse(runif(10000)>=0.5, 1,0), # highschool_degree indicator variable
   ability = rnorm(10000), # e.g., talent, usually unobserved.
-  discrimination = highschool_degree, # highschool_degree discrimination variable
-  occupation_index = 1 + 2*ability + 0*highschool_degree - 2*discrimination + rnorm(10000), # true data generating process for occupation_index variable
-  wage = 1 - 1*discrimination + 1*occupation_index + 2*ability + rnorm(10000) # true data generating process for wage variable
+  occupation_index = 1 + 2*ability - 2*highschool_degree + rnorm(10000), # true data generating process for occupation_index variable
+  wage = 1 - 1*highschool_degree + 1*occupation_index + 2*ability + rnorm(10000) # true data generating process for wage variable
 )
 
 lm_1 <- lm(wage ~ highschool_degree, tb)

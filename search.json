@@ -14,473 +14,74 @@
     "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
-    "objectID": "danl-wk/wk-01.html",
-    "href": "danl-wk/wk-01.html",
-    "title": "Week 1",
+    "objectID": "danl-wk/wk-03.html",
+    "href": "danl-wk/wk-03.html",
+    "title": "Week 3",
     "section": "",
-    "text": "Welcome to DANL 410, the first step in your data analytics journey! 👋\nIn the first week, we will go over what you can expect to learn in this course and review key logistics, including the structure of lectures and class meetings, assessments, and how we will communicate throughout the semester."
+    "text": "In the week 3, we will continue a discussion on Panel Data Models."
   },
   {
-    "objectID": "danl-wk/wk-01.html#syllabus",
-    "href": "danl-wk/wk-01.html#syllabus",
-    "title": "Week 1",
-    "section": "📓 Syllabus",
-    "text": "📓 Syllabus\n\nPlease read the syllabus."
-  },
-  {
-    "objectID": "danl-wk/wk-01.html#lecture-slides",
-    "href": "danl-wk/wk-01.html#lecture-slides",
-    "title": "Week 1",
+    "objectID": "danl-wk/wk-03.html#lecture-slides",
+    "href": "danl-wk/wk-03.html#lecture-slides",
+    "title": "Week 3",
     "section": "🏫 Lecture Slides",
-    "text": "🏫 Lecture Slides\n\nLecture 1 — Syllabus\nView Slides\n\n🎥 Looking for lecture recordings? You can only find those on Brightspace."
+    "text": "🏫 Lecture Slides\n\nLecture 3 — Panel Data Models\nView Slides\n\n🎥 Looking for lecture recordings? You can only find those on Brightspace."
   },
   {
-    "objectID": "danl-wk/wk-01.html#recommended-reading",
-    "href": "danl-wk/wk-01.html#recommended-reading",
-    "title": "Week 1",
-    "section": "📚 Recommended Reading",
-    "text": "📚 Recommended Reading\n\nMachine Learning\n\nReference"
-  },
-  {
-    "objectID": "danl-wk/wk-01.html#discussion",
-    "href": "danl-wk/wk-01.html#discussion",
-    "title": "Week 1",
+    "objectID": "danl-wk/wk-03.html#discussion",
+    "href": "danl-wk/wk-03.html#discussion",
+    "title": "Week 3",
     "section": "💬 Discussion",
-    "text": "💬 Discussion\nWelcome to our Week 1 Discussion Board! 👋 \nThis space is designed for you to engage with your classmates about the material covered in Week 1.\nWhether you are looking to delve deeper into the content, share insights, or have questions about the content, this is the perfect place for you.\nIf you have any specific questions for Byeong-Hak (@bcdanl) or peer classmate (@GitHub-Username) regarding the Week 1 materials or need clarification on any points, don’t hesitate to ask here.\nLet’s collaborate and learn from each other!"
+    "text": "💬 Discussion\nWelcome to our Week 3 Discussion Board! 👋 \nThis space is designed for you to engage with your classmates about the material covered in Week 3.\nWhether you are looking to delve deeper into the content, share insights, or have questions about the content, this is the perfect place for you.\nIf you have any specific questions for Byeong-Hak (@bcdanl) or peer classmate (@GitHub-Username) regarding the Week 3 materials or need clarification on any points, don’t hesitate to ask here.\nLet’s collaborate and learn from each other!"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "DANL 410: Data Analytics Capstone, Spring 2026",
+    "objectID": "listing-danl-410-lec.html",
+    "href": "listing-danl-410-lec.html",
+    "title": "DANL 410 - Lecture",
     "section": "",
-    "text": "Welcome! 👋\n\\(-\\) Explore, Learn, and Grow with Data Analytics! 🌟"
+    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nLecture 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
-    "objectID": "index.html#lecture",
-    "href": "index.html#lecture",
-    "title": "DANL 410: Data Analytics Capstone, Spring 2026",
-    "section": "🚀 Lecture",
-    "text": "🚀 Lecture\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nLecture 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#classwork",
-    "href": "index.html#classwork",
-    "title": "DANL 410: Data Analytics Capstone, Spring 2026",
-    "section": "⌨️ Classwork",
-    "text": "⌨️ Classwork\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nClasswork 1\n\n\nVibe Coding\n\n\nJanuary 21, 2026\n\n\n\n\nClasswork 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nClasswork 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html#homework",
-    "href": "index.html#homework",
-    "title": "DANL 410: Data Analytics Capstone, Spring 2026",
-    "section": "💻 Homework",
-    "text": "💻 Homework\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "danl-cw/danl-410-cw-03.html",
-    "href": "danl-cw/danl-410-cw-03.html",
-    "title": "Classwork 3",
-    "section": "",
-    "text": "library(tidyverse)\nlibrary(plm)\nlibrary(lmtest)\nlibrary(sandwich)\nlibrary(stargazer)\n\nco2 &lt;- read_csv(\"https://bcdanl.github.io/data/owid-co2-data.csv\")\ncodebook &lt;- read_csv(\"https://bcdanl.github.io/data/owid-co2-codebook.csv\")"
-  },
-  {
-    "objectID": "danl-cw/danl-410-cw-03.html#build-a-clean-country-year-panel",
-    "href": "danl-cw/danl-410-cw-03.html#build-a-clean-country-year-panel",
-    "title": "Classwork 3",
-    "section": "Build a clean country-year panel",
-    "text": "Build a clean country-year panel\n\ndf &lt;- co2 |&gt;\n  # Keep only country observations (drop regions / aggregates)\n  # OWID country entries typically have a 3-letter ISO code\n  filter(!is.na(iso_code), nchar(iso_code) == 3) |&gt;\n  # Keep useful sample years (adjust as you want)\n  filter(year &gt;= 1990) |&gt;\n  # Select a simple EKC-style set of variables\n  mutate(\n    gdp_per_capita = gdp / population, \n    .after = gdp\n  ) |&gt; \n  select(\n    iso_code, country, year,\n    co2_per_capita,\n    gdp_per_capita,\n    population,\n    energy_per_capita,         # optional control\n    primary_energy_consumption # optional control (can be NA a lot)\n  ) |&gt;\n  # Drop missing core variables\n  filter(!is.na(co2_per_capita), !is.na(gdp_per_capita)) |&gt;\n  # Create logs and squared log GDP per capita\n  mutate(\n    log_co2pc = log(co2_per_capita),\n    log_gdppc = log(gdp_per_capita),\n    log_gdppc2 = log_gdppc^2,\n    log_pop = log(population),\n    log_energy_pc = ifelse(!is.na(energy_per_capita) & energy_per_capita &gt; 0,\n                          log(energy_per_capita), \n                          NA)\n  ) |&gt;\n  # Keep rows with finite log outcomes/predictors\n  filter(is.finite(log_co2pc), \n         is.finite(log_gdppc), \n         is.finite(log_gdppc2), \n         is.finite(log_pop))\n\n# Convert to pdata.frame (panel format for plm)\ndf_panel &lt;- pdata.frame(df, index = c(\"iso_code\", \"year\"))"
-  },
-  {
-    "objectID": "danl-cw/danl-410-cw-03.html#specify-models",
-    "href": "danl-cw/danl-410-cw-03.html#specify-models",
-    "title": "Classwork 3",
-    "section": "Specify models",
-    "text": "Specify models\n\n# Baseline (no optional controls)\nf_base &lt;- log_co2pc ~ log_gdppc + log_gdppc2\n\n# Extended model (adds energy per capita; will drop rows with missing log_energy_pc)\nf_ext  &lt;- log_co2pc ~ log_gdppc + log_gdppc2 + log_energy_pc\n\n# --- Models (BASE) ---\nm1_pool &lt;- plm(f_base, data = df_panel, model = \"pooling\")                 # pooled OLS\nm2_fe   &lt;- plm(f_base, data = df_panel, model = \"within\", effect = \"individual\")  # country FE\nm3_twfe &lt;- plm(f_base, data = df_panel, model = \"within\", effect = \"twoways\")     # country FE + year FE\nm4_re   &lt;- plm(f_base, data = df_panel, model = \"random\", effect = \"individual\") # random effects\n\n# --- Models (EXTENDED) ---\n# (Optional) include energy per capita as a control\nm1_pool_ext &lt;- plm(f_ext, data = df_panel, model = \"pooling\")\nm2_fe_ext   &lt;- plm(f_ext, data = df_panel, model = \"within\", effect = \"individual\")\nm3_twfe_ext &lt;- plm(f_ext, data = df_panel, model = \"within\", effect = \"twoways\")\nm4_re_ext   &lt;- plm(f_ext, data = df_panel, model = \"random\", effect = \"individual\")"
-  },
-  {
-    "objectID": "danl-cw/danl-410-cw-03.html#robust-clustered-standard-errors",
-    "href": "danl-cw/danl-410-cw-03.html#robust-clustered-standard-errors",
-    "title": "Classwork 3",
-    "section": "Robust / clustered standard errors",
-    "text": "Robust / clustered standard errors\n\n# Function to compute clustered SE (country-clustered)\nse_cluster_country_safe &lt;- function(model) {\n  V &lt;- vcovHC(model, type = \"HC1\", cluster = \"group\")\n  se &lt;- sqrt(diag(V))\n  se[is.na(se)] &lt;- 0              # ✅ replace NA SEs so stargazer won't crash\n  return(se)\n}\n\n# Clustered SEs for BASE models\nse_m1 &lt;- se_cluster_country_safe(m1_pool)\nse_m2 &lt;- se_cluster_country_safe(m2_fe)\nse_m3 &lt;- se_cluster_country_safe(m3_twfe)\nse_m4 &lt;- se_cluster_country_safe(m4_re)\n\n# Clustered SEs for EXTENDED models\nse_m1e &lt;- se_cluster_country_safe(m1_pool_ext)\nse_m2e &lt;- se_cluster_country_safe(m2_fe_ext)\nse_m3e &lt;- se_cluster_country_safe(m3_twfe_ext)\nse_m4e &lt;- se_cluster_country_safe(m4_re_ext)"
-  },
-  {
-    "objectID": "danl-cw/danl-410-cw-03.html#panel-diagnostics",
-    "href": "danl-cw/danl-410-cw-03.html#panel-diagnostics",
-    "title": "Classwork 3",
-    "section": "Panel diagnostics",
-    "text": "Panel diagnostics\n\n# FE vs pooled OLS (is panel structure important?)\npFtest(m2_fe, m1_pool)\n\n\n    F test for individual effects\n\ndata:  f_base\nF = 193.79, df1 = 163, df2 = 5243, p-value &lt; 2.2e-16\nalternative hypothesis: significant effects\n\n# RE vs pooled OLS (Breusch-Pagan LM test)\nplmtest(m1_pool, type = \"bp\")\n\n\n    Lagrange Multiplier Test - (Breusch-Pagan)\n\ndata:  f_base\nchisq = 42925, df = 1, p-value &lt; 2.2e-16\nalternative hypothesis: significant effects\n\n# FE vs RE (Hausman test)\nphtest(m2_fe, m4_re)\n\n\n    Hausman Test\n\ndata:  f_base\nchisq = 9819.7, df = 2, p-value &lt; 2.2e-16\nalternative hypothesis: one model is inconsistent"
-  },
-  {
-    "objectID": "danl-cw/danl-410-cw-03.html#results",
-    "href": "danl-cw/danl-410-cw-03.html#results",
-    "title": "Classwork 3",
-    "section": "Results",
-    "text": "Results\n# --- Table A: BASE models ---\n# Table (omit intercept so pooled/re match FE models cleanly)\nstargazer(\n  m1_pool, m2_fe, m3_twfe, m4_re,\n  type = \"html\",\n  se = list(se_m1, se_m2, se_m3, se_m4),\n  title = \"Panel Models (OWID CO2): Pooled OLS vs FE vs TWFE vs RE\",\n  column.labels = c(\"Pooled OLS\", \"Country FE\", \"Two-way FE\", \"Random Effects\"),\n  dep.var.labels = \"log(CO2 per capita)\",\n  omit = \"Intercept\",                      # ✅ avoids intercept mismatch across models\n  omit.stat = c(\"f\", \"ser\"),\n  digits = 3,\n  notes = c(\"Standard errors clustered by country (iso_code).\",\n            \"Country FE controls for time-invariant differences across countries.\",\n            \"Two-way FE adds year fixed effects to absorb global shocks.\")\n)\n\n\n\nPanel Models (OWID CO2): Pooled OLS vs FE vs TWFE vs RE\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nlog(CO2 per capita)\n\n\n\n\n\n\nPooled OLS\n\n\nCountry FE\n\n\nTwo-way FE\n\n\nRandom Effects\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n(3)\n\n\n(4)\n\n\n\n\n\n\n\n\nlog_gdppc\n\n\n4.009***\n\n\n3.440***\n\n\n3.453***\n\n\n3.539***\n\n\n\n\n\n\n(0.470)\n\n\n(0.444)\n\n\n(0.445)\n\n\n(0.437)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlog_gdppc2\n\n\n-0.157***\n\n\n-0.168***\n\n\n-0.167***\n\n\n-0.170***\n\n\n\n\n\n\n(0.027)\n\n\n(0.023)\n\n\n(0.023)\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant\n\n\n-22.396***\n\n\n\n\n\n\n-17.176***\n\n\n\n\n\n\n(2.057)\n\n\n\n\n\n\n(2.055)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n5,409\n\n\n5,409\n\n\n5,409\n\n\n5,409\n\n\n\n\nR2\n\n\n0.837\n\n\n0.357\n\n\n0.281\n\n\n0.386\n\n\n\n\nAdjusted R2\n\n\n0.837\n\n\n0.337\n\n\n0.254\n\n\n0.386\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01\n\n\n\n\n\n\nStandard errors clustered by country (iso\n\n\n\n\n\n\nCountry FE controls for time-invariant differences across countries.\n\n\n\n\n\n\nTwo-way FE adds year fixed effects to absorb global shocks.\n\n\n\n\n# --- Table B: EXTENDED models (adds energy control) ---\nstargazer(\n  m1_pool_ext, m2_fe_ext, m3_twfe_ext, m4_re_ext,\n  type = \"html\",\n  se = list(se_m1, se_m2, se_m3, se_m4),\n  title = \"Panel Models (OWID CO2): With Energy Control\",\n  column.labels = c(\"Pooled OLS\", \"Country FE\", \"Two-way FE\", \"Random Effects\"),\n  dep.var.labels = \"log(CO2 per capita)\",\n  omit = \"Intercept\",                      # ✅ avoids intercept mismatch across models\n  omit.stat = c(\"f\", \"ser\"),\n  digits = 3,\n  notes = c(\"Standard errors clustered by country (iso_code).\",\n            \"Adding energy per capita often reduces the GDP effect because energy use is a major driver of CO2.\")\n)\n\n\n\nPanel Models (OWID CO2): With Energy Control\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nlog(CO2 per capita)\n\n\n\n\n\n\nPooled OLS\n\n\nCountry FE\n\n\nTwo-way FE\n\n\nRandom Effects\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n(3)\n\n\n(4)\n\n\n\n\n\n\n\n\nlog_gdppc\n\n\n1.378***\n\n\n1.903***\n\n\n1.919***\n\n\n1.832***\n\n\n\n\n\n\n(0.470)\n\n\n(0.444)\n\n\n(0.445)\n\n\n(0.437)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlog_gdppc2\n\n\n-0.072***\n\n\n-0.100***\n\n\n-0.099***\n\n\n-0.095***\n\n\n\n\n\n\n(0.027)\n\n\n(0.023)\n\n\n(0.023)\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlog_energy_pc\n\n\n0.869\n\n\n0.621\n\n\n0.621\n\n\n0.672\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant\n\n\n-13.726***\n\n\n\n\n\n\n-14.103***\n\n\n\n\n\n\n(2.057)\n\n\n\n\n\n\n(2.055)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n5,358\n\n\n5,358\n\n\n5,358\n\n\n5,358\n\n\n\n\nR2\n\n\n0.948\n\n\n0.628\n\n\n0.582\n\n\n0.695\n\n\n\n\nAdjusted R2\n\n\n0.948\n\n\n0.616\n\n\n0.566\n\n\n0.695\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01\n\n\n\n\n\n\nStandard errors clustered by country (iso\n\n\n\n\n\n\nAdding energy per capita often reduces the GDP effect because energy use is a major driver of CO2."
-  },
-  {
-    "objectID": "listing-danl-410-wk.html",
-    "href": "listing-danl-410-wk.html",
-    "title": "Weeks",
+    "objectID": "listing-danl-410-ex.html",
+    "href": "listing-danl-410-ex.html",
+    "title": "DANL 410 - Exams",
     "section": "",
     "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
-    "objectID": "danl-rw/danl-410-project-kickoff.html",
-    "href": "danl-rw/danl-410-project-kickoff.html",
-    "title": "🧾📌 Capstone Project Guide",
+    "objectID": "danl-cw/danl-410-cw-01.html",
+    "href": "danl-cw/danl-410-cw-01.html",
+    "title": "Classwork 1",
     "section": "",
-    "text": "In DANL 410: Data Analytics Capstone, you will complete an end-to-end analytics project—starting from a focused question, moving through data work and analysis, and ending with a polished report and presentation.\nThis course is designed to help you practice what data analysts actually do:\n\nTranslate a real-world problem into an analytics question\nFind and evaluate data (or create a clean dataset)\nClean, transform, and explore the data\nApply an appropriate machine learning or statistical method (e.g., regression, classification, clustering)\nCommunicate findings clearly with visuals and writing\nPublish your work on your Quarto website (GitHub Pages)\n\n\n\n\n\n\n\nNote\n\n\n\nYou do not need the “perfect” topic at the beginning. Your goal early in the semester is to build a feasible plan with a clear question, a credible dataset, and a reasonable method.\n\n\n\n\n\nEach team may have one or two members.\nEvery team member is expected to contribute actively and understand the entire project.\nTeams should be formed by Wednesday, Feb 11, 11:59 P.M.\nIf your team has two members, a representative should email Prof. Choe at bchoe@geneseo.edu, cc-ing a team member."
+    "text": "What is Vibe Coding?\n\n\n\nVibe coding is an artificial intelligence-assisted software development technique popularized by Andrej Karpathy in February 2025. The term was listed in the Merriam-Webster Dictionary the following month as a “slang & trending” term. (Wikipedia, 2025)\n\n\n\n\n\n\n\n\nWhat are HTML and JS?\n\n\n\n\nHTML (HyperText Markup Language) is the standard language for creating web pages.\n\nIt defines the structure of a webpage.\n\nA webpage is made up of HTML elements.\n\nThese elements instruct the browser on how to display the content.\n\nJavaScript (JS) is a programming language that enhances web interactivity.\n\nIt runs directly in the user’s browser, reducing server load. \nIt enables dynamic content, user interactions, and animations.\n\nAnalogy:\n\nHTML = The structure of a house (walls, roof, foundation).\n\nJS = The interactive elements (automatic doors, lights, smart devices).\n\n\n\n\n\nStep 1. Start with this prompt (use exactly):\n\n“Create a single-file HTML/JS page to play perfect tic-tac-toe vs. human.”\n\n\ne.g., Prof. Choe’s Tic-Tac-Toe\n\nStep 1-1 Prepare your text editor:\n\n\nWindows\n\nPress the Windows key, type Notepad, and press Enter.\n\nPaste the HTML code from your AI.\n\nGo to File → Save As.\n\nChange Save as type to All Files.\n\nEnter a name like tic-tac-toe.html.\n\nSelect the location (Desktop, Documents, etc.).\n\nSet Encoding to UTF-8.\n\nClick Save.\n\n\nDouble-click the file to open it in your default browser (Edge, Chrome, etc.).\n\n\n\n\nMac\nSet up TextEdit (one-time)\n\n\n\n\n\nPress Command + Space to open Spotlight.\n\nType TextEdit and press Enter.\n\nPress Command + , to open Settings.\n\nUnder Format, select Plain Text.\n\n\nQuit TextEdit (Command + Q).\n\nRe-open TextEdit for coding\n\n\n\n\n\nPress Command + Space, type TextEdit, and press Enter.\n\nClick Show Options.\n\nUnder Plain Text Encoding, select Unicode (UTF-8).\n\n\nClick New Document.\n\nPaste the HTML code from your generative AI.\n\nSave the file (Command + S):\n\nName it tic-tac-toe.html.\n\nEnsure the extension is .html.\n\nChoose a location (Desktop, Documents, etc.).\n\nClick Save, and if prompted, choose Use .html.\n\n\nDouble-click the file to open it in your default browser (Safari, Chrome, etc.).\n\n\n\nStep 2. Add an option for two-player mode.\n\ne.g., Prof. Choe’s Tic-Tac-Toe with the Two-player Mode\n\n\nStep 3. Make a 4×4 tic-tac-toe version (if your current build is only 3×3).\n\ne.g., Prof. Choe’s 4×4 Tic-Tac-Toe\n\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "danl-rw/danl-410-project-kickoff.html#overview",
-    "href": "danl-rw/danl-410-project-kickoff.html#overview",
-    "title": "🧾📌 Capstone Project Guide",
+    "objectID": "danl-cw/danl-410-cw-02.html",
+    "href": "danl-cw/danl-410-cw-02.html",
+    "title": "Classwork 2",
     "section": "",
-    "text": "In DANL 410: Data Analytics Capstone, you will complete an end-to-end analytics project—starting from a focused question, moving through data work and analysis, and ending with a polished report and presentation.\nThis course is designed to help you practice what data analysts actually do:\n\nTranslate a real-world problem into an analytics question\nFind and evaluate data (or create a clean dataset)\nClean, transform, and explore the data\nApply an appropriate machine learning or statistical method (e.g., regression, classification, clustering)\nCommunicate findings clearly with visuals and writing\nPublish your work on your Quarto website (GitHub Pages)\n\n\n\n\n\n\n\nNote\n\n\n\nYou do not need the “perfect” topic at the beginning. Your goal early in the semester is to build a feasible plan with a clear question, a credible dataset, and a reasonable method.\n\n\n\n\n\nEach team may have one or two members.\nEvery team member is expected to contribute actively and understand the entire project.\nTeams should be formed by Wednesday, Feb 11, 11:59 P.M.\nIf your team has two members, a representative should email Prof. Choe at bchoe@geneseo.edu, cc-ing a team member."
+    "text": "Code\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(stargazer)\n\noj &lt;- read_csv('https://bcdanl.github.io/data/dominick_oj_ad.csv')\n\nreg_short &lt;- lm(log(sales) ~ log(price),\n                data = oj)\n\nreg_long &lt;- lm(log(sales) ~ log(price) + brand,\n                data = oj)\n\nstargazer(reg_short, reg_long,\n          type = 'html')\n\n\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nlog(sales)\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n\n\n\n\n\n\nlog(price)\n\n\n-1.601***\n\n\n-3.139***\n\n\n\n\n\n\n(0.018)\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\nbrandminute_maid\n\n\n\n\n0.870***\n\n\n\n\n\n\n\n\n(0.013)\n\n\n\n\n\n\n\n\n\n\n\n\nbrandtropicana\n\n\n\n\n1.530***\n\n\n\n\n\n\n\n\n(0.016)\n\n\n\n\n\n\n\n\n\n\n\n\nConstant\n\n\n10.423***\n\n\n10.829***\n\n\n\n\n\n\n(0.015)\n\n\n(0.015)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n28,947\n\n\n28,947\n\n\n\n\nR2\n\n\n0.208\n\n\n0.394\n\n\n\n\nAdjusted R2\n\n\n0.208\n\n\n0.394\n\n\n\n\nResidual Std. Error\n\n\n0.907 (df = 28945)\n\n\n0.794 (df = 28943)\n\n\n\n\nF Statistic\n\n\n7,608.212*** (df = 1; 28945)\n\n\n6,275.074*** (df = 3; 28943)\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01\n\n\n\n\n\nCode\nreg_1st &lt;- lm(log(price) ~ brand,\n              data = oj)\n\naug_m2 &lt;- augment(reg_1st)    # broom::augment()\n\nreg_2nd &lt;- lm(log(sales) ~ aug_m2$.resid,\n              data = oj)\n\nstargazer(reg_long, reg_2nd,\n          type = 'html')\n\n\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nlog(sales)\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n\n\n\n\n\n\nlog(price)\n\n\n-3.139***\n\n\n\n\n\n\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbrandminute_maid\n\n\n0.870***\n\n\n\n\n\n\n\n\n(0.013)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbrandtropicana\n\n\n1.530***\n\n\n\n\n\n\n\n\n(0.016)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.resid\n\n\n\n\n-3.139***\n\n\n\n\n\n\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\nConstant\n\n\n10.829***\n\n\n9.168***\n\n\n\n\n\n\n(0.015)\n\n\n(0.005)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n28,947\n\n\n28,947\n\n\n\n\nR2\n\n\n0.394\n\n\n0.392\n\n\n\n\nAdjusted R2\n\n\n0.394\n\n\n0.392\n\n\n\n\nResidual Std. Error\n\n\n0.794 (df = 28943)\n\n\n0.795 (df = 28945)\n\n\n\n\nF Statistic\n\n\n6,275.074*** (df = 3; 28943)\n\n\n18,683.570*** (df = 1; 28945)\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01"
   },
   {
-    "objectID": "danl-rw/danl-410-project-kickoff.html#project-timeline-spring-2026",
-    "href": "danl-rw/danl-410-project-kickoff.html#project-timeline-spring-2026",
-    "title": "🧾📌 Capstone Project Guide",
-    "section": "⏰ Project Timeline (Spring 2026)",
-    "text": "⏰ Project Timeline (Spring 2026)\n\n\n\n\n\n\n\n\nComponent\nDescription\nDue Date\n\n\n\n\n🧾 Research Kick-off Report\nDefine question, motivation, data, and plan (2–3 pages)\nFeb 25 (11:59 P.M.)\n\n\n🗣️ Midterm Presentation\nShort progress presentation (what you have, what you learned, next steps)\nMar 11 (class time)\n\n\n🧩 Progress & Insights Report\nWhat you did + what you learned + obstacles + updated plan\nMar 25\n\n\n🧠 Research Synthesis Report\nStronger draft narrative + results + interpretation\nApr 15\n\n\n🖥️ GREAT Day PowerPoint\nSlide deck submission\nApr 22\n\n\n📄 Final Capstone Report\nFinal written report (published on website)\nMay 11 (11:59 P.M.)"
+    "objectID": "danl-cw/danl-410-cw-02.html#education-occupation-and-wages",
+    "href": "danl-cw/danl-410-cw-02.html#education-occupation-and-wages",
+    "title": "Classwork 2",
+    "section": "Education, Occupation, and Wages",
+    "text": "Education, Occupation, and Wages\n\nCode\nset.seed(1)\n\ntb &lt;- tibble( \n  highschool_degree = ifelse(runif(10000)&gt;=0.5, 1,0), # highschool_degree indicator variable\n  ability = rnorm(10000), # e.g., talent, usually unobserved.\n  occupation_index = 1 + 2*ability - 2*highschool_degree + rnorm(10000), # true data generating process for occupation_index variable\n  wage = 1 - 1*highschool_degree + 1*occupation_index + 2*ability + rnorm(10000) # true data generating process for wage variable\n)\n\nlm_1 &lt;- lm(wage ~ highschool_degree, tb)\nlm_2 &lt;- lm(wage ~ highschool_degree + occupation_index, tb)\nlm_3 &lt;- lm(wage ~ highschool_degree + occupation_index + ability, tb)\n\nstargazer::stargazer(lm_1,lm_2,lm_3, \n                     column.labels = c(\"Biased Unconditional\", \n                                       \"Biased\",\n                                       \"Unbiased Conditional\"),\n                     type = 'html')\n\n\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nwage\n\n\n\n\n\n\nBiased Unconditional\n\n\nBiased\n\n\nUnbiased Conditional\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n(3)\n\n\n\n\n\n\n\n\nhighschool_degree\n\n\n-3.021***\n\n\n0.557***\n\n\n-1.039***\n\n\n\n\n\n\n(0.084)\n\n\n(0.030)\n\n\n(0.029)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\noccupation_index\n\n\n\n\n1.789***\n\n\n0.981***\n\n\n\n\n\n\n\n\n(0.006)\n\n\n(0.010)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nability\n\n\n\n\n\n\n2.028***\n\n\n\n\n\n\n\n\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant\n\n\n1.968***\n\n\n0.201***\n\n\n1.021***\n\n\n\n\n\n\n(0.059)\n\n\n(0.020)\n\n\n(0.018)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n10,000\n\n\n10,000\n\n\n10,000\n\n\n\n\nR2\n\n\n0.115\n\n\n0.907\n\n\n0.948\n\n\n\n\nAdjusted R2\n\n\n0.115\n\n\n0.907\n\n\n0.948\n\n\n\n\nResidual Std. Error\n\n\n4.192 (df = 9998)\n\n\n1.357 (df = 9997)\n\n\n1.013 (df = 9996)\n\n\n\n\nF Statistic\n\n\n1,297.822*** (df = 1; 9998)\n\n\n48,922.550*** (df = 2; 9997)\n\n\n61,140.750*** (df = 3; 9996)\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01"
   },
   {
-    "objectID": "danl-rw/danl-410-project-kickoff.html#research-kick-off-report-structure",
-    "href": "danl-rw/danl-410-project-kickoff.html#research-kick-off-report-structure",
-    "title": "🧾📌 Capstone Project Guide",
-    "section": "🧾 Research Kick-off Report — Structure",
-    "text": "🧾 Research Kick-off Report — Structure\nYour Research Kick-off Report (2–3 pages) is a concise proposal that explains:\n\nwhat you plan to study,\nwhy it matters (business, social, or policy relevance),\nhow you will study it using data.\n\nInclude these sections:\n\nWorking Title & Topic\n\nA clear, descriptive title.\n2–4 sentences describing the topic and setting.\n\nResearch Question\n\nState one main research question in a single sentence.\nAdd 1–3 sub-questions if helpful.\n\nMotivation / Value\n\nWhy would someone care?\nWho is the “stakeholder” (a business, customers, local government, nonprofit, campus office, etc.)?\nWhat decision, insight, or understanding might the analysis support?\n\nData Plan\n\nWhat dataset(s) will you use?\nUnit of analysis (customer? county? day? product? student? transaction?)\nKey variables you expect to use (inputs and outcomes)\nData limitations you already anticipate (missingness, small sample, measurement, bias)\n\nMethod Plan (Required: include one ML/statistical component)\n\nWhat approach will you use and why?\nExamples:\n\nRegression (prediction or cause-and-effect)\nClassification (e.g., churn / pass-fail / fraud / sentiment categories)\nClustering (e.g., segmentation)\nTime-series forecasting (if appropriate)\n\nWhat is your evaluation plan? (train/test split, accuracy/RMSE, cross-validation, or a clear validation idea)\n\nReferences\n\nUse a consistent citation style.\nFor online sources: include URL and date of access.\n\n\n\n\n\n\n\n\nNote\n\n\n\n💡 Think of the Kick-off Report as your project blueprint. You are not expected to have final results yet—but your plan should be credible and feasible."
+    "objectID": "danl-cw/danl-410-cw-02.html#fertilizer-plant-height-and-crop-yield",
+    "href": "danl-cw/danl-410-cw-02.html#fertilizer-plant-height-and-crop-yield",
+    "title": "Classwork 2",
+    "section": "Fertilizer, Plant Height, and Crop Yield",
+    "text": "Fertilizer, Plant Height, and Crop Yield\n\nCode\nset.seed(2026)\n\n# Simulate 10,000 plots\ntb3 &lt;- tibble(\n  fertilizer    = rbinom(10000, 1, 0.5),       # 0 = no fertilizer, 1 = fertilizer applied\n  soil_quality  = rnorm(10000),                # unobserved “plot fertility”\n  # Height (cm) is boosted by fertilizer *and* by soil quality\n  height        = 50 + 8 * fertilizer + 5 * soil_quality + rnorm(10000),\n  # Yield (bushels) depends on fertilizer, height, and soil quality\n  yield         = 200 \n  + 10 * fertilizer      # direct effect of fertilizer\n  + 3  * height          # return to plant height\n  + 6  * soil_quality    # underlying soil fertility\n  + rnorm(10000)\n)\n\n# 1) Omitting height: picks up both direct and indirect effects\nlm1 &lt;- lm(yield ~ fertilizer,         data = tb3)\n# 2) Controlling for height: \"blocks\" the mediation channel\nlm2 &lt;- lm(yield ~ fertilizer + height, data = tb3)\n# 3) Also control soil_quality to recover the true direct effect\nlm3 &lt;- lm(yield ~ fertilizer + height + soil_quality, data = tb3)\n\nstargazer(\n  lm1, lm2, lm3,\n  column.labels   = c(\"Omit Height (Biased)\", \n                      \"Control Height (More Biased)\",\n                      \"Also Soil (Unbiased)\"),\n  dep.var.labels  = \"yield\",\n  keep            = c(\"fertilizer\", \"height\", \"soil_quality\"),\n  covariate.labels= c(\"Fertilizer\", \"Plant Height\", \"Soil Quality\"),\n  type            = \"html\"\n)\n\n\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nyield\n\n\n\n\n\n\nOmit Height (Biased)\n\n\nControl Height (More Biased)\n\n\nAlso Soil (Unbiased)\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n(3)\n\n\n\n\n\n\n\n\nFertilizer\n\n\n34.657***\n\n\n0.789***\n\n\n10.025***\n\n\n\n\n\n\n(0.426)\n\n\n(0.040)\n\n\n(0.081)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlant Height\n\n\n\n\n4.156***\n\n\n2.999***\n\n\n\n\n\n\n\n\n(0.003)\n\n\n(0.010)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSoil Quality\n\n\n\n\n\n\n6.002***\n\n\n\n\n\n\n\n\n\n\n(0.050)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n10,000\n\n\n10,000\n\n\n10,000\n\n\n\n\nR2\n\n\n0.398\n\n\n0.997\n\n\n0.999\n\n\n\n\nAdjusted R2\n\n\n0.398\n\n\n0.997\n\n\n0.999\n\n\n\n\nResidual Std. Error\n\n\n21.323 (df = 9998)\n\n\n1.551 (df = 9997)\n\n\n0.996 (df = 9996)\n\n\n\n\nF Statistic\n\n\n6,604.218*** (df = 1; 9998)\n\n\n1,563,217.000*** (df = 2; 9997)\n\n\n2,532,263.000*** (df = 3; 9996)\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01"
   },
   {
-    "objectID": "danl-rw/danl-410-project-kickoff.html#brainstorming-ideas-capstone-friendly",
-    "href": "danl-rw/danl-410-project-kickoff.html#brainstorming-ideas-capstone-friendly",
-    "title": "🧾📌 Capstone Project Guide",
-    "section": "💡 Brainstorming Ideas (Capstone-Friendly)",
-    "text": "💡 Brainstorming Ideas (Capstone-Friendly)\n\n\n\n\n\n\n\n\n\nArea\nExample Research Question\nData Type\nPossible Methods\n\n\n\n\nBusiness / Marketing\nWhich factors predict customer churn or repeat purchase?\ntransactions, CRM, reviews\nclassification, regression\n\n\nOperations\nWhat drives delays or failures in a process?\ntimestamps, logs\nregression, clustering\n\n\nFinance / Risk\nCan we predict risk outcomes or identify risky segments?\nfirm/household indicators\nclassification, clustering\n\n\nSports / Performance\nWhich player/team features predict win probability?\ngame logs\nregression, classification\n\n\nPublic Policy\nWhich communities face higher risk or lower access?\ncensus + admin data\nregression, mapping, clustering\n\n\nEducation\nWhat predicts course performance or retention patterns?\nLMS / grades / surveys\nregression, classification\n\n\nClimate Change\nWhich factors predict household solar adoption (or energy burden) across counties?\nAmerican Community Survey (ACS) + solar installs + weather/energy\nregression, classification, mapping"
-  },
-  {
-    "objectID": "danl-rw/danl-410-project-kickoff.html#research-idea-logic",
-    "href": "danl-rw/danl-410-project-kickoff.html#research-idea-logic",
-    "title": "🧾📌 Capstone Project Guide",
-    "section": "🧭 Research Idea Logic",
-    "text": "🧭 Research Idea Logic\nA strong capstone topic is:\n\nSpecific enough to answer within one semester\n\nData-supported (you can actually obtain usable data)\n\nMethod-feasible (you can execute and interpret a reasonable model)\n\nMeaningful (it has a real stakeholder, decision, or insight)\n\nThink in “question types”:\n\n\n\n\n\n\n\n\nType\nPurpose\nExample\n\n\n\n\nDescriptive\nSummarize what is happening\n“How have housing prices changed across counties since 2018?”\n\n\nComparative\nCompare groups or time periods\n“Do outcomes differ by region, income level, or policy change?”\n\n\nPredictive\nPredict an outcome using features\n“Can we predict churn using usage behavior?”\n\n\nSegmentation\nIdentify clusters / groups\n“Can we cluster customers into meaningful segments?”\n\n\nDiagnostic\nIdentify drivers of an outcome\n“Which factors are most associated with delays?”\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAvoid questions that are too broad:\n\n“How does social media affect society?”\n\nInstead, narrow:\n\n“Which post features predict higher engagement for a specific account/category?”\n\n\n\n\n\n💾 Using Data Effectively\nYou are encouraged to use real-world data and present evidence using:\n\nClean tables (summary statistics, grouped means, counts)\nClear visualizations (distributions, trends, comparisons, relationships)\nA method you can explain and justify\nTransparent code and reproducible workflow\n\nGuidelines:\n\nStart with a dataset you can actually obtain quickly (Week 2–4).\nPrefer data that has:\n\nEnough observations to learn patterns\nClear variable definitions\nA usable target/outcome variable (for prediction/classification), or a clear grouping structure (for clustering)\n\nUse modeling only when it adds value:\n\nA “fancy” model with weak interpretation is worse than a simple model well explained.\n\nAlways cite data sources and document data cleaning steps.\n\n\n\n\n\n\n\nTip\n\n\n\nYou don’t need complex modeling to do a strong capstone— but you do need clear evidence + clear reasoning + clear communication.\n\n\n\n\n\n🌐 Recommended Open Data Sources\n\n💰 Economic, Social & Development Indicators\n\n\n\nSource\nDescription\n\n\n\n\n💰 World Bank Data Catalog\nGlobal indicators for environment, economics, and public policy.\n\n\n🌐 World Bank Climate Change Knowledge Portal\nThe hub for global, climate-related data on historical and future climate, vulnerabilities, and impacts.\n\n\n🌏 UNDP Human Development Report – Horizons\nInteractive data and insights platform exploring global human development trends, sustainability, and inequality.\n\n\n♻️ UN SDG Indicators Database\nOfficial UN indicators tracking global sustainability goals.\n\n\n🌐️ IMF Data\nOfficial IMF Macroeconomic Climate Indicators.\n\n\n🎓 Harvard Dataverse\nRepository for academic datasets across disciplines, including environment and policy.\n\n\n🧩 Open ICPSR\nOpen-access social science data archive with economic and behavioral studies.\n\n\n\n\n\n💬 Public Opinion, Education & General Statistics\n\n\n\nSource\nDescription\n\n\n\n\n🌍 Our World in Data\nCross-country datasets on CO₂ emissions, energy use, and climate impacts.\n\n\n📊 Statista\nStatistics portal covering energy, environment, and sustainability topics. (Access through SUNY Geneseo library subscription.)\n\n\n🗺️ Yale Climate Opinion Map\nU.S. public opinion on climate change beliefs, attitudes, and policy support.\n\n\n\n\n\n🌍 Climate & Environmental Data\n\n\n\nSource\nDescription\n\n\n\n\n🌡 NOAA Climate Data Online\nTemperature, precipitation, and extreme weather records for U.S. and global stations.\n\n\n🌦 PRISM Climate Group (Oregon State University)\nHigh-resolution U.S. climate data (temperature, precipitation, and normals) for local and regional analysis.\n\n\n🌡️ Berkeley Earth\nLong-term global datasets on temperature, air quality, and climate change.\n\n\n🧮 Global Carbon Budget Office\nAnnual data on global carbon emissions and carbon budget analysis.\n\n\n🌎 UNEP Environment Data Explorer\nWorld Environment Situation Room (WESR), an open data platform by the UN Environment Programme (UNEP).\n\n\n💧 AQUASTAT (FAO Water Data)\nGlobal data on water resources, irrigation, and agricultural water management.\n\n\n\n\n\n⚡ Energy, Agriculture & Resource Use\n\n\n\nSource\nDescription\n\n\n\n\n⚡ U.S. Energy Information Administration (EIA)\nData on energy production, consumption, and fuel prices.\n\n\n🔋 IEA (International Energy Agency)\nGlobal datasets on energy production, consumption, efficiency, and emissions by sector and country.\n\n\n🌾 FAOSTAT (UN Food and Agriculture Organization)\nGlobal data on agriculture, food systems, land use, and greenhouse gas emissions by sector and country.\n\n\n🧭 OECD Environment Statistics\nData on environmental performance, green growth, energy intensity, and environmental taxes for OECD countries.\n\n\n🏠 U.S. Census Bureau – Natural & Built Environments\nDatasets on pollution, agriculture, transportation emissions, recycling, and rural development.\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAlways check:\n\nwhether the data is legally usable (license/terms),\nwhether variables are well-defined,\nand whether the data is appropriate for your question."
-  },
-  {
-    "objectID": "danl-rw/danl-410-project-kickoff.html#checklist-research-kick-off-report",
-    "href": "danl-rw/danl-410-project-kickoff.html#checklist-research-kick-off-report",
-    "title": "🧾📌 Capstone Project Guide",
-    "section": "✅ Checklist (Research Kick-off Report)",
-    "text": "✅ Checklist (Research Kick-off Report)\nBefore submitting your Research Kick-off Report:\n\nTeam confirmed (1–2 people)\n\nClear research question (one sentence)\n\nStakeholder / value explained (why it matters)\n\nData source identified and link provided\n\nUnit of analysis + key variables listed\n\nMethod plan includes at least one ML/stat component (regression/classification/clustering/etc.)\n\nRealistic timeline and deliverables described\n\nReferences included (URLs + access date for online sources)\n\n2–3 pages, professional formatting\n\nSubmitted via Brightspace by Feb 25 (11:59 P.M.)"
-  },
-  {
-    "objectID": "danl-rw/danl-410-project-kickoff.html#closing-thought",
-    "href": "danl-rw/danl-410-project-kickoff.html#closing-thought",
-    "title": "🧾📌 Capstone Project Guide",
-    "section": "🌟 Closing Thought",
-    "text": "🌟 Closing Thought\n\nA strong capstone project is not about doing everything—\nit’s about doing a focused analysis well,\nand communicating results clearly enough that someone can act on them."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#omitted-variable-bias-1",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#omitted-variable-bias-1",
-    "title": "Lecture 2",
-    "section": "Omitted Variable Bias",
-    "text": "Omitted Variable Bias\n\nOmitted variable bias (OVB): bias in the model because of omitting an important regressor that is correlated with existing regressor(s).\nLet’s use an orange juice (OJ) example to demonstrate the OVB.\n\nOJ price elasticity estimates vary with models, whether or not taking into account brand or ad_status\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nsales\nQuantity of OJ cartons sold\n\n\nprice\nPrice of OJ\n\n\nbrand\nBrand of OJ\n\n\nad\nAdvertisement status"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#short--and-long--regressions",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#short--and-long--regressions",
-    "title": "Lecture 2",
-    "section": "📏 Short- and Long- Regressions",
-    "text": "📏 Short- and Long- Regressions\n\nOVB is the difference in beta estimates between short- and long-form regressions.\nShort regression: The regression model with less regressors\n\n\n\n\n\\[\n\\begin{align}\n\\log(\\text{sales}_i) = \\beta_0 + \\beta_1\\log(\\text{price}_i) + \\epsilon_i\n\\end{align}\n\\]\n\nLong regression: The regression model that adds additional regressor(s) to the short one.\n\n\n\n\n\\[\n\\begin{align}\n\\log(\\text{sales}_i) =& \\beta_0 + \\beta_{1}\\log(\\text{price}_i) \\\\\n&+ \\beta_{2}\\text{minute.maid}_i + \\beta_{3}\\text{tropicana}_i + \\epsilon_i\n\\end{align}\n\\]\n\nOVB for \\(\\beta_1\\) is:\n\n\n\n\n\\[\n\\text{OVB} = \\widehat{\\beta_{1}^{short}} - \\widehat{\\beta_{1}^{long}}\n\\]"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#ovb-formula",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#ovb-formula",
-    "title": "Lecture 2",
-    "section": "OVB formula",
-    "text": "OVB formula\n\nConsider the following short- and long- regressions:\n\nShort: \\(Y_i = \\beta_0 + \\beta_{1}^{short}X_1 + \\epsilon_{short}\\)\n\nLong: \\(Y_i = \\beta_0 + \\beta_{1}^{long}X_1 +\\beta_{2}X_2 + \\epsilon_{long}\\)\n\nError in short form can be represented as: \\[\n{\\epsilon_{short}} = \\beta_{2}X_2 + \\epsilon_{long}\n\\]\nIf variable \\(X_1\\) is correlated with \\(X_2\\), the following assumptions are violated in the short regression model:\n\nErrors are not correlated with regressors.\nErrors have a mean value of 0."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#how-does-an-ovb-happen-in-regression",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#how-does-an-ovb-happen-in-regression",
-    "title": "Lecture 2",
-    "section": "❓🔍 How does an OVB happen in regression?",
-    "text": "❓🔍 How does an OVB happen in regression?\n\nIn the first stage, consider the relationship between price and brand:\n\n\\[\n\\log(\\text{price}) = \\beta_0 + \\beta_1\\text{minute_maid} + \\beta_2\\text{tropicana} + \\epsilon_{1st}\n\\]\n\nThen, calculate the residual: \\[\n\\widehat{\\epsilon_{1st}} = \\log(\\text{price}) - \\widehat{\\log(\\text{price})}\n\\]\nThe residual represents the log of OJ price after its correlation with brand has been removed!\nIn the second stage, regress \\(\\log(\\text{sales})\\) on residual \\(\\widehat{\\epsilon_{1st}}\\):\n\n\\[\n\\log(\\text{sales}) = \\beta_0 + \\beta_1\\widehat{\\epsilon_{1st}}  + \\epsilon_{2nd}\n\\]"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#regression-sensitivity-analysis",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#regression-sensitivity-analysis",
-    "title": "Lecture 2",
-    "section": "Regression Sensitivity Analysis",
-    "text": "Regression Sensitivity Analysis\n\nRegression finds the coefficients on the part of each regressor that is independent from the other regressors.\nWhat can we do to deal with OVB problems?\n\nBecause we can never be sure whether a given set of controls is enough to eliminate OVB, it’s important to ask how sensitive regression results are to changes in the list of controls."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#bad-controls-when-controlling-more-makes-things-worse",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#bad-controls-when-controlling-more-makes-things-worse",
-    "title": "Lecture 2",
-    "section": "🚫 Bad Controls: When “Controlling More” Makes Things Worse",
-    "text": "🚫 Bad Controls: When “Controlling More” Makes Things Worse\nA common mistake in regression is thinking:\n\n✅ “If I add more controls, the model must get better.”\n\nBut some controls are bad controls — they can actually bias your estimate."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#what-is-a-bad-control",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#what-is-a-bad-control",
-    "title": "Lecture 2",
-    "section": "🚫 What is a “Bad Control”?",
-    "text": "🚫 What is a “Bad Control”?\nA bad control is a variable that:\n\nis influenced by the explanatory variable \\(x\\), or\nis part of the process that links \\(x\\) to the outcome \\(y\\)\n\nIncluding a bad control can “control away” the variation in \\(y\\) that is connected to \\(x\\), making the estimated relationship look smaller than it really is."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#intuition-what-should-a-good-control-look-like",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#intuition-what-should-a-good-control-look-like",
-    "title": "Lecture 2",
-    "section": "🧠 Intuition: What Should a “Good Control” Look Like?",
-    "text": "🧠 Intuition: What Should a “Good Control” Look Like?\nA good control is a variable that:\n✅ helps explain variation in the outcome \\(y\\)\n✅ is related to the explanatory variable \\(x\\)\n✅ is not a consequence of \\(x\\) (it exists “in the background”)\nThat’s the key difference."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#example-1-education-and-wages",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#example-1-education-and-wages",
-    "title": "Lecture 2",
-    "section": "🔗 Example 1: Education and Wages 💼",
-    "text": "🔗 Example 1: Education and Wages 💼\nSuppose we want to estimate:\n\nDoes education increase wages?\n\n✅ Good regression idea:\n\\[\nwage_i = \\beta_0 + \\beta_1 education_i + u_i\n\\]\nMaybe add good controls like:\n\nage\ngender\nregion\nparent education (if available)"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-occupation-or-job-type",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-occupation-or-job-type",
-    "title": "Lecture 2",
-    "section": "🚫 Bad Control: Occupation or Job Type",
-    "text": "🚫 Bad Control: Occupation or Job Type\nBut what if we control for occupation?\n\\[\nwage_i = \\beta_0 + \\beta_1 education_i + \\beta_2 occupation_i + u_i\n\\]\nWhy is that bad?\n\nBecause education affects occupation:\n\\[\neducation \\rightarrow occupation \\rightarrow wage\n\\]\nSo controlling for occupation:\n🚫 blocks part of the education effect\n→ we underestimate the impact of education"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#example-2-fertilizer-plant-height-and-crop-yield",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#example-2-fertilizer-plant-height-and-crop-yield",
-    "title": "Lecture 2",
-    "section": "🌱 Example 2: Fertilizer, Plant Height, and Crop Yield",
-    "text": "🌱 Example 2: Fertilizer, Plant Height, and Crop Yield\n\n\nWe want to estimate:\n\nDoes fertilizer increase crop yield?\n\nBut fertilizer changes the plant’s growth:\n\\[\nfertilizer \\rightarrow height\n\\]\nAnd height is strongly related to yield:\n\\[\nheight \\rightarrow yield\n\\]\n\nAlso, some plots are simply better than others because of soil quality:\n\\[\n\\begin{align}\n&soil\\ quality \\rightarrow height\\\\\n&soil\\ quality \\rightarrow yield\n\\end{align}\n\\]\nSo soil quality is a hidden factor that affects both height and yield."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-plant-height",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-plant-height",
-    "title": "Lecture 2",
-    "section": "🚫 Bad Control: Plant Height",
-    "text": "🚫 Bad Control: Plant Height\nBut what if we control for plant height?\n\\[\nyield_i = \\beta_0 + \\beta_1 fertilizer_i + \\beta_2 height_i + u_i\n\\]\nWhy is that bad?\n\nBecause fertilizer affects plant height:\n\\[\nfertilizer \\rightarrow height \\rightarrow yield\n\\]\nSo controlling for height:\n🚫 blocks an important pathway through which fertilizer raises yield\n→ we underestimate the impact of fertilizer"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#good-controls-vs.-bad-controls-big-picture",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#good-controls-vs.-bad-controls-big-picture",
-    "title": "Lecture 2",
-    "section": "✅ Good Controls vs. Bad Controls (Big Picture)",
-    "text": "✅ Good Controls vs. Bad Controls (Big Picture)\n\n\n\n\n\n\n\n\nType\nExample\nWhy it matters\n\n\n\n\n✅ Good control\nAge, gender, region, baseline ability\nHelps reduce omitted variable bias by holding constant pre-existing differences\n\n\n🚫 Bad control\nOccupation (when studying education → wages)\nCan remove part of the education effect by controlling for something education influences\n\n\n🚫 Bad control\nPlant height (when studying fertilizer → yield)\nCan remove part of the fertilizer effect by controlling for something fertilizer influences"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#why-bad-controls-are-dangerous",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#why-bad-controls-are-dangerous",
-    "title": "Lecture 2",
-    "section": "🎯 Why Bad Controls Are Dangerous",
-    "text": "🎯 Why Bad Controls Are Dangerous\nBad controls can cause two problems:\n\n\n1) ❌ Block part of the true effect\nYou unintentionally remove the pathway:\n\\[\nx \\rightarrow control \\rightarrow y\n\\]\nSo the estimated \\(\\hat{\\beta}_1\\) becomes too small.\n\n2) ❌ Create new bias\nSometimes the control is influenced by both \\(x\\) and \\(y\\):\n\\[\nx \\rightarrow control \\leftarrow y\n\\]\nThen controlling for it creates a fake association between \\(x\\) and \\(y\\)\neven if none existed before."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#quick-rule-should-we-control-for-it",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#quick-rule-should-we-control-for-it",
-    "title": "Lecture 2",
-    "section": "✅ Quick Rule: Should We Control for It?",
-    "text": "✅ Quick Rule: Should We Control for It?\nBefore adding a variable \\(z\\) as a control, ask:\n\nDoes \\(z\\) exist before \\(x\\) is determined?\n✅ If yes → usually safe to control for\n\n\n\n\n\nDoes \\(z\\) change after \\(x\\) changes?\n🚫 If yes → it may be a bad control\n\n\n\n\n\nIs \\(z\\) a pre-existing characteristic that is related to both \\(x\\) and \\(y\\)?\n✅ If yes → it is often a useful control"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#summary-more-controls-better",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#summary-more-controls-better",
-    "title": "Lecture 2",
-    "section": "🧾 Summary: “More Controls” ≠ “Better”",
-    "text": "🧾 Summary: “More Controls” ≠ “Better”\n\n✅ Controls are helpful when they fix omitted variable bias\n\n🚫 Controls are harmful when they “control away” the effect you want\n\n\n\n\n\nThe goal is not to control for everything.\n\nThe goal is to control for the right things."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#panel-data-models-pols-fe-twfe-re",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#panel-data-models-pols-fe-twfe-re",
-    "title": "Lecture 3",
-    "section": "👥📈 Panel Data Models: POLS → FE → TWFE → RE",
-    "text": "👥📈 Panel Data Models: POLS → FE → TWFE → RE\n\n\n\nLearning goals\n\n\n\nUnderstand what panel data is (and why we love it)\nCompare Pooled OLS, Fixed Effects, Two-Way FE, and Random Effects\nLearn what variation each model uses and what it controls for\nUnderstand country-clustered standard errors (and why we need them)"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-panel-data",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-panel-data",
-    "title": "Lecture 3",
-    "section": "What is Panel Data?",
-    "text": "What is Panel Data?\nPanel data tracks the same units over multiple time periods:\n\nUnit (\\(i\\)): country (USA, Korea, India, …)\nTime (\\(t\\)): year (1990–2022, …)\n\nExample (CO\\(_2\\) panel): - Outcome: CO\\(_2\\) emissions per capita - Unit ID: iso_code - Time ID: year\n\n\n\nTip\n\n\nPanel data gives us two kinds of variation: - Between variation: differences across countries - Within variation: changes within a country over time"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#why-use-panel-models-not-only-pooled-ols",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#why-use-panel-models-not-only-pooled-ols",
-    "title": "Lecture 3",
-    "section": "Why Use Panel Models (Not Only Pooled OLS)?",
-    "text": "Why Use Panel Models (Not Only Pooled OLS)?\n\n\n\nPooled OLS can be misleading because it ignores unobserved country differences that don’t change much over time, such as:\n\n🌍 geography / climate / natural resources\n🏭 industrial structure and history\n🏛️ institutions and regulation\n⚡ energy infrastructure and technology path\n🧑‍🤝‍🧑 culture and long-run lifestyle patterns\n\n\n\n\nThese factors can affect both\n\nemissions (or other outcomes) and\nGDP per capita (or other regressors)\n\n\n\n\n➡️ That creates omitted variable bias when we use Pooled OLS."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#unobserved-heterogeneity-the-core-issue",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#unobserved-heterogeneity-the-core-issue",
-    "title": "Lecture 3",
-    "section": "🧠 Unobserved Heterogeneity (The Core Issue)",
-    "text": "🧠 Unobserved Heterogeneity (The Core Issue)\nSuppose the true relationship includes an unobserved country component:\n\\[\ny_{it} = \\beta x_{it} + \\underbrace{\\alpha_i}_{\\text{unobserved country trait}} + \\epsilon_{it}\n\\]\nIf we ignore \\(\\alpha_i\\) and estimate Pooled OLS:\n\\[\ny_{it} = \\beta x_{it} + u_{it}\n\\quad \\text{where} \\quad\nu_{it} = \\alpha_i + \\epsilon_{it}\n\\]\n⚠️ If \\(Cov(\\alpha_i, x_{it}) \\neq 0\\), then:\n\n\\(x_{it}\\) is correlated with the error term\nPooled OLS is biased\n\n\n\n\n\nFixed Effects is designed to solve exactly this problem."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#pooled-ols-baseline-model",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#pooled-ols-baseline-model",
-    "title": "Lecture 3",
-    "section": "Pooled OLS: Baseline Model",
-    "text": "Pooled OLS: Baseline Model\nModel \\[\ny_{it} = \\beta_0 + \\beta_1 x_{it} + \\epsilon_{it}\n\\]\nMeaning\n\nWe pretend the dataset is one big cross-section\nWe ignore the panel structure (country identity)\n\nUses all variation\n\nbetween-country variation\nwithin-country variation"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-pols-is-really-doing",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-pols-is-really-doing",
-    "title": "Lecture 3",
-    "section": "What POLS is Really Doing",
-    "text": "What POLS is Really Doing\nWhen you estimate POLS, the slope \\(\\beta_1\\) reflects a combination of:\n\nCross-country differences (rich vs. poor countries)\nWithin-country changes (one country over time)\n\nSo interpretation becomes:\n\n“On average, countries with higher \\(x\\) have higher (or lower) \\(y\\), and/or when \\(x\\) rises over time, \\(y\\) moves…”\n\n⚠️ That can be fine only if unobserved country traits don’t confound the relationship."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#the-big-risk-in-pols-omitted-variable-bias",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#the-big-risk-in-pols-omitted-variable-bias",
-    "title": "Lecture 3",
-    "section": "⚠️ The Big Risk in POLS: Omitted Variable Bias",
-    "text": "⚠️ The Big Risk in POLS: Omitted Variable Bias\nIf richer countries also have different institutions, energy systems, or historical industrialization paths, then:\n\n\\(x_{it}\\) (GDP per capita) is correlated with \\(\\alpha_i\\) (unobserved traits)\nPooled OLS mixes together the effect of \\(x_{it}\\) and the influence of \\(\\alpha_i\\), so the estimated \\(\\beta\\) can be misleading.\n\nPanel methods help because they explicitly control for \\(\\alpha_i\\)."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#country-fixed-effects-fe",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#country-fixed-effects-fe",
-    "title": "Lecture 3",
-    "section": "Country Fixed Effects (FE)",
-    "text": "Country Fixed Effects (FE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\epsilon_{it}\n\\]\n\n\\(\\alpha_i\\) = country fixed effect\ncaptures all time-invariant country characteristics\n\ngeography, long-run institutions, baseline culture, etc.\n\n\nFE answers a within-country question:\n\n“If a country’s \\(x\\) changes over time, how does \\(y\\) change within that same country?”"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-fe-controls-for-automatically",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-fe-controls-for-automatically",
-    "title": "Lecture 3",
-    "section": "🔎 What FE Controls For (Automatically)",
-    "text": "🔎 What FE Controls For (Automatically)\nBecause each country gets its own intercept \\(\\alpha_i\\), FE controls for:\n\nany factor that is constant within a country\neven if you do not observe or measure it\n\nExamples (time-invariant or very slow-moving):\n\ndistance to equator\nlandlocked status\nbaseline political system\ndeep energy infrastructure\n\n\n\n\n📌 FE is powerful because it controls for a lot without measuring those things."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#fe-uses-only-within-country-variation",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#fe-uses-only-within-country-variation",
-    "title": "Lecture 3",
-    "section": "FE Uses Only Within-Country Variation",
-    "text": "FE Uses Only Within-Country Variation\nFE does not use differences between countries:\n\nIt does not compare USA vs India levels\nIt compares USA over time to itself\n\nSo FE is best when:\n\nthe key confounding problem is time-invariant\nwe care about within-country causal interpretation\n\n⚠️ FE cannot estimate effects of variables that do not change over time, e.g.:\n\nlandlocked, continent, distance_to_equator"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#two-way-fixed-effects-country-year-fe",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#two-way-fixed-effects-country-year-fe",
-    "title": "Lecture 3",
-    "section": "Two-Way Fixed Effects (Country + Year FE)",
-    "text": "Two-Way Fixed Effects (Country + Year FE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\gamma_t + \\epsilon_{it}\n\\]\n\n\\(\\alpha_i\\): country FE (time-invariant traits)\n\\(\\gamma_t\\): year FE (global shocks / common trends)\n\nTWFE answers:\n\n“Within a country, how does \\(y\\) change with \\(x\\), after removing global year shocks?”"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#why-add-year-fixed-effects",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#why-add-year-fixed-effects",
-    "title": "Lecture 3",
-    "section": "🌍 Why Add Year Fixed Effects?",
-    "text": "🌍 Why Add Year Fixed Effects?\nYear effects capture shocks that hit many countries at once:\n\n🛢️ oil price spikes\n📉 global recessions (e.g., 2008)\n🦠 pandemics\n💡 global technology trends\n🌐 global climate agreements\n\nIf we don’t include \\(\\gamma_t\\), the regression may mistakenly attribute these common shocks to \\(x_{it}\\).\nYear FE helps remove this confounding."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#random-effects-re-1",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#random-effects-re-1",
-    "title": "Lecture 3",
-    "section": "Random Effects (RE)",
-    "text": "Random Effects (RE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\epsilon_{it}\n\\]\nSame structure as FE… but different assumption:\n\nRE treats \\(\\alpha_i\\) as random\nand assumes it is uncorrelated with regressors:\n\n\\[\nCov(\\alpha_i, x_{it}) = 0\n\\]\nIf that assumption holds:\n\nRE is more efficient than FE (smaller standard errors)\nRE uses both within and between variation"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#when-re-fails-bias-risk",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#when-re-fails-bias-risk",
-    "title": "Lecture 3",
-    "section": "⚠️ When RE Fails (Bias Risk)",
-    "text": "⚠️ When RE Fails (Bias Risk)\nIf \\(Cov(\\alpha_i, x_{it}) \\neq 0\\), then RE is biased.\nIn many economic settings, this correlation is very plausible:\n\nricher countries may also have better institutions (inside \\(\\alpha_i\\))\nenergy system differences affect both GDP and emissions\n\nSo FE is often the safer default in applied work."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#why-we-cluster-standard-errors-country-clustered-se",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#why-we-cluster-standard-errors-country-clustered-se",
-    "title": "Lecture 3",
-    "section": "🧠 Why We Cluster Standard Errors (Country-Clustered SE)",
-    "text": "🧠 Why We Cluster Standard Errors (Country-Clustered SE)\nThe problem: errors are correlated within countries\n\n\n\nIn panel data, observations inside a country are rarely independent:\n\nshocks persist over time\npolicies change gradually\nmeasurement errors repeat\nemissions and GDP move smoothly\n\n\n\n\nThat means residuals may satisfy serial correlation:\n\\[\nCov(\\epsilon_{it}, \\epsilon_{is}) \\neq 0 \\quad \\text{for } t \\neq s\n\\]\n\n\n\nIf we ignore this, standard errors are often too small → false “significance”"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#cluster-robust-standard-errors-by-country",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#cluster-robust-standard-errors-by-country",
-    "title": "Lecture 3",
-    "section": "Cluster-Robust Standard Errors (by Country)",
-    "text": "Cluster-Robust Standard Errors (by Country)\nCountry-clustered SEs allow:\n\narbitrary correlation over time within a country\nheteroskedasticity across countries\n\nInterpretation:\n\n“We allow any kind of serial correlation within each country.”\n\nIn R (plm), this is typically implemented using robust VCOV options, e.g. vcovHC() with clustering by group.\n\nvcovHC: variance–covariance, heteroskedasticity-consistent"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#model-summary-what-each-one-controls-for",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#model-summary-what-each-one-controls-for",
-    "title": "Lecture 3",
-    "section": "Model Summary (What Each One Controls For)",
-    "text": "Model Summary (What Each One Controls For)\n\n\n\n\n\n\n\n\n\nModel\nControls for country traits?\nControls for year shocks?\nUses between-country variation?\n\n\n\n\nPooled OLS\n❌ No\n❌ No\nYes\n\n\nCountry FE\nYes (time-invariant)\n❌ No\n❌ No\n\n\nTwo-way FE\nYes (time-invariant)\nYes\n❌ No\n\n\nRandom Effects\nYes (modeled as random intercept)\nOptional\nYes"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-panel-models",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-panel-models",
-    "title": "Lecture 3",
-    "section": "Final Takeaway (Panel Models)",
-    "text": "Final Takeaway (Panel Models)\nWe use panel data models to estimate relationships within units over time, while controlling for:\n\nhidden country characteristics (\\(\\alpha_i\\))\nglobal year shocks (\\(\\gamma_t\\))\n\nAnd we use clustered SEs because panel residuals are often correlated within each unit."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#environmental-kuznets-curve-ekc-growth-vs.-pollution-1",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#environmental-kuznets-curve-ekc-growth-vs.-pollution-1",
-    "title": "Lecture 3",
-    "section": "🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution",
-    "text": "🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution\n\n\n\nNote\n\n\nNow we add the key EKC idea: a nonlinear relationship between income and pollution."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-the-ekc",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-the-ekc",
-    "title": "Lecture 3",
-    "section": "What is the EKC?",
-    "text": "What is the EKC?\nThe Environmental Kuznets Curve (EKC) hypothesis suggests:\n\nAs a country becomes richer, pollution first increases,\nbut after some income level, pollution decreases.\n\nIt is often described as an inverted-U relationship between: - pollution (e.g., CO\\(_2\\) per capita) - income (GDP per capita)"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#draw-the-ekc-curve-inverted-u",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#draw-the-ekc-curve-inverted-u",
-    "title": "Lecture 3",
-    "section": "📉📈 Draw the EKC Curve (Inverted-U)",
-    "text": "📉📈 Draw the EKC Curve (Inverted-U)"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-panel-regression-country-year-data",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-panel-regression-country-year-data",
-    "title": "Lecture 3",
-    "section": "EKC Panel Regression (Country-Year Data)",
-    "text": "EKC Panel Regression (Country-Year Data)\nA common EKC specification:\n\\[\n\\log(CO2pc_{it})\n=\n\\beta_1 \\log(GDPpc_{it})\n+\n\\beta_2 \\left[\\log(GDPpc_{it})\\right]^2\n+\n\\alpha_i\n+\n\\gamma_t\n+\n\\epsilon_{it}\n\\]\n\n\\(i\\): country\n\\(t\\): year\n\\(\\alpha_i\\): country fixed effects\n\\(\\gamma_t\\): year fixed effects"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#how-to-interpret-ekc-coefficients",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#how-to-interpret-ekc-coefficients",
-    "title": "Lecture 3",
-    "section": "How to Interpret EKC Coefficients",
-    "text": "How to Interpret EKC Coefficients\n\nIf \\(\\beta_1 &gt; 0\\) and \\(\\beta_2 &lt; 0\\)\nemissions rise at first, then eventually fall\n→ EKC pattern (inverted-U)\nIf \\(\\beta_2 = 0\\)\n→ relationship is linear\nIf \\(\\beta_2 &gt; 0\\)\n→ U-shape (emissions accelerate with income)"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-turning-point-income-level",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-turning-point-income-level",
-    "title": "Lecture 3",
-    "section": "EKC Turning Point (Income Level)",
-    "text": "EKC Turning Point (Income Level)\nThe turning point occurs where the slope becomes zero:\n\\[\n\\frac{\\partial \\log(CO2pc)}{\\partial \\log(GDPpc)}\n= \\beta_1 + 2\\beta_2 \\log(GDPpc) = 0\n\\]\nSo the turning point in log income is:\n\\[\n\\log(GDPpc^*) = -\\frac{\\beta_1}{2\\beta_2}\n\\]\nConvert back to the income level:\n\\[\nGDPpc^* = \\exp\\left(-\\frac{\\beta_1}{2\\beta_2}\\right)\n\\]\n\n\n\nAt \\(GDPpc^*\\), CO\\(_2\\) per capita stops rising and begins falling (if EKC holds)."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#intuition-why-might-ekc-happen",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#intuition-why-might-ekc-happen",
-    "title": "Lecture 3",
-    "section": "Intuition: Why Might EKC Happen?",
-    "text": "Intuition: Why Might EKC Happen?\nAs income rises, countries often experience:\n\nScale effect 📈: more production → more emissions (early stage)\nComposition effect 🏗️➡️🧑‍💼: shift from industry → services (middle stage)\nTechnique effect 🧪⚡: cleaner technology + regulation (later stage)\n\nEKC is the balance of:\n\ngrowth pressures that increase emissions\ndevelopment forces that can reduce emissions"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#important-caveat-for-co_2",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#important-caveat-for-co_2",
-    "title": "Lecture 3",
-    "section": "Important Caveat for CO\\(_2\\)",
-    "text": "Important Caveat for CO\\(_2\\)\nEKC may be weaker for CO\\(_2\\) than for local air pollutants because:\n\nCO\\(_2\\) is deeply tied to energy systems\nbenefits are global, costs are often local\nemissions may shift across borders via trade (carbon leakage)\n\nSo EKC is a hypothesis to test, not a guaranteed pattern."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-ekc",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-ekc",
-    "title": "Lecture 3",
-    "section": "Final Takeaway (EKC)",
-    "text": "Final Takeaway (EKC)\nEKC tests whether pollution follows an inverted-U with income.\nPanel FE/TWFE help make that test more credible by controlling for:\n\ncountry traits (\\(\\alpha_i\\))\nyear shocks (\\(\\gamma_t\\))"
+    "objectID": "listing-danl-410-hw-q.html",
+    "href": "listing-danl-410-hw-q.html",
+    "title": "DANL 410 - Homework Submission",
+    "section": "",
+    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#course-meeting-info",
@@ -686,53 +287,473 @@
     "text": "From Answers to Workflows: Agent AI\n\nAgent AI: an AI system that can\n\\(\\hspace{.67cm}\\) plan multi-step work\n→ act (edit files, run code, use apps)\n→ check results\n→ iterate toward a goal\nWith external tools + memory, prompts become multi-step workflows.\nExample: a sales-order agent can validate orders, check inventory, generate invoices/shipping labels, and update ERP/CRM.\n\n\n\nNot just “answering questions,” but executing workflows. Goal → Plan → Act → Check → Repeat\n\n\n\nRecommended Reading: WSJ (Jan 17, 2026), “Claude Is Taking the AI World by Storm, and Even Non-Nerds Are Blown Away”"
   },
   {
-    "objectID": "listing-danl-410-hw-q.html",
-    "href": "listing-danl-410-hw-q.html",
-    "title": "DANL 410 - Homework Submission",
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#panel-data-models-pols-fe-twfe-re",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#panel-data-models-pols-fe-twfe-re",
+    "title": "Lecture 3",
+    "section": "👥📈 Panel Data Models: POLS → FE → TWFE → RE",
+    "text": "👥📈 Panel Data Models: POLS → FE → TWFE → RE\n\n\n\nLearning goals\n\n\n\nUnderstand what panel data is (and why we love it)\nCompare Pooled OLS, Fixed Effects, Two-Way FE, and Random Effects\nLearn what variation each model uses and what it controls for\nUnderstand country-clustered standard errors (and why we need them)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-panel-data",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-panel-data",
+    "title": "Lecture 3",
+    "section": "What is Panel Data?",
+    "text": "What is Panel Data?\nPanel data tracks the same units over multiple time periods:\n\nUnit (\\(i\\)): country (USA, Korea, India, …)\nTime (\\(t\\)): year (1990–2022, …)\n\nExample (CO\\(_2\\) panel): - Outcome: CO\\(_2\\) emissions per capita - Unit ID: iso_code - Time ID: year\n\n\n\nTip\n\n\nPanel data gives us two kinds of variation: - Between variation: differences across countries - Within variation: changes within a country over time"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#why-use-panel-models-not-only-pooled-ols",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#why-use-panel-models-not-only-pooled-ols",
+    "title": "Lecture 3",
+    "section": "Why Use Panel Models (Not Only Pooled OLS)?",
+    "text": "Why Use Panel Models (Not Only Pooled OLS)?\n\n\n\nPooled OLS can be misleading because it ignores unobserved country differences that don’t change much over time, such as:\n\n🌍 geography / climate / natural resources\n🏭 industrial structure and history\n🏛️ institutions and regulation\n⚡ energy infrastructure and technology path\n🧑‍🤝‍🧑 culture and long-run lifestyle patterns\n\n\n\n\nThese factors can affect both\n\nemissions (or other outcomes) and\nGDP per capita (or other regressors)\n\n\n\n\n➡️ That creates omitted variable bias when we use Pooled OLS."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#unobserved-heterogeneity-the-core-issue",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#unobserved-heterogeneity-the-core-issue",
+    "title": "Lecture 3",
+    "section": "🧠 Unobserved Heterogeneity (The Core Issue)",
+    "text": "🧠 Unobserved Heterogeneity (The Core Issue)\nSuppose the true relationship includes an unobserved country component:\n\\[\ny_{it} = \\beta x_{it} + \\underbrace{\\alpha_i}_{\\text{unobserved country trait}} + \\epsilon_{it}\n\\]\nIf we ignore \\(\\alpha_i\\) and estimate Pooled OLS:\n\\[\ny_{it} = \\beta x_{it} + u_{it}\n\\quad \\text{where} \\quad\nu_{it} = \\alpha_i + \\epsilon_{it}\n\\]\n⚠️ If \\(Cov(\\alpha_i, x_{it}) \\neq 0\\), then:\n\n\\(x_{it}\\) is correlated with the error term\nPooled OLS is biased\n\n\n\n\n\nFixed Effects is designed to solve exactly this problem."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#pooled-ols-baseline-model",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#pooled-ols-baseline-model",
+    "title": "Lecture 3",
+    "section": "Pooled OLS: Baseline Model",
+    "text": "Pooled OLS: Baseline Model\nModel \\[\ny_{it} = \\beta_0 + \\beta_1 x_{it} + \\epsilon_{it}\n\\]\nMeaning\n\nWe pretend the dataset is one big cross-section\nWe ignore the panel structure (country identity)\n\nUses all variation\n\nbetween-country variation\nwithin-country variation"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-pols-is-really-doing",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-pols-is-really-doing",
+    "title": "Lecture 3",
+    "section": "What POLS is Really Doing",
+    "text": "What POLS is Really Doing\nWhen you estimate POLS, the slope \\(\\beta_1\\) reflects a combination of:\n\nCross-country differences (rich vs. poor countries)\nWithin-country changes (one country over time)\n\nSo interpretation becomes:\n\n“On average, countries with higher \\(x\\) have higher (or lower) \\(y\\), and/or when \\(x\\) rises over time, \\(y\\) moves…”\n\n⚠️ That can be fine only if unobserved country traits don’t confound the relationship."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#the-big-risk-in-pols-omitted-variable-bias",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#the-big-risk-in-pols-omitted-variable-bias",
+    "title": "Lecture 3",
+    "section": "⚠️ The Big Risk in POLS: Omitted Variable Bias",
+    "text": "⚠️ The Big Risk in POLS: Omitted Variable Bias\nIf richer countries also have different institutions, energy systems, or historical industrialization paths, then:\n\n\\(x_{it}\\) (GDP per capita) is correlated with \\(\\alpha_i\\) (unobserved traits)\nPooled OLS mixes together the effect of \\(x_{it}\\) and the influence of \\(\\alpha_i\\), so the estimated \\(\\beta\\) can be misleading.\n\nPanel methods help because they explicitly control for \\(\\alpha_i\\)."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#country-fixed-effects-fe",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#country-fixed-effects-fe",
+    "title": "Lecture 3",
+    "section": "Country Fixed Effects (FE)",
+    "text": "Country Fixed Effects (FE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\epsilon_{it}\n\\]\n\n\\(\\alpha_i\\) = country fixed effect\ncaptures all time-invariant country characteristics\n\ngeography, long-run institutions, baseline culture, etc.\n\n\nFE answers a within-country question:\n\n“If a country’s \\(x\\) changes over time, how does \\(y\\) change within that same country?”"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-fe-controls-for-automatically",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-fe-controls-for-automatically",
+    "title": "Lecture 3",
+    "section": "🔎 What FE Controls For (Automatically)",
+    "text": "🔎 What FE Controls For (Automatically)\nBecause each country gets its own intercept \\(\\alpha_i\\), FE controls for:\n\nany factor that is constant within a country\neven if you do not observe or measure it\n\nExamples (time-invariant or very slow-moving):\n\ndistance to equator\nlandlocked status\nbaseline political system\ndeep energy infrastructure\n\n\n\n\n📌 FE is powerful because it controls for a lot without measuring those things."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#fe-uses-only-within-country-variation",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#fe-uses-only-within-country-variation",
+    "title": "Lecture 3",
+    "section": "FE Uses Only Within-Country Variation",
+    "text": "FE Uses Only Within-Country Variation\nFE does not use differences between countries:\n\nIt does not compare USA vs India levels\nIt compares USA over time to itself\n\nSo FE is best when:\n\nthe key confounding problem is time-invariant\nwe care about within-country causal interpretation\n\n⚠️ FE cannot estimate effects of variables that do not change over time, e.g.:\n\nlandlocked, continent, distance_to_equator"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#two-way-fixed-effects-country-year-fe",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#two-way-fixed-effects-country-year-fe",
+    "title": "Lecture 3",
+    "section": "Two-Way Fixed Effects (Country + Year FE)",
+    "text": "Two-Way Fixed Effects (Country + Year FE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\gamma_t + \\epsilon_{it}\n\\]\n\n\\(\\alpha_i\\): country FE (time-invariant traits)\n\\(\\gamma_t\\): year FE (global shocks / common trends)\n\nTWFE answers:\n\n“Within a country, how does \\(y\\) change with \\(x\\), after removing global year shocks?”"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#why-add-year-fixed-effects",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#why-add-year-fixed-effects",
+    "title": "Lecture 3",
+    "section": "🌍 Why Add Year Fixed Effects?",
+    "text": "🌍 Why Add Year Fixed Effects?\nYear effects capture shocks that hit many countries at once:\n\n🛢️ oil price spikes\n📉 global recessions (e.g., 2008)\n🦠 pandemics\n💡 global technology trends\n🌐 global climate agreements\n\nIf we don’t include \\(\\gamma_t\\), the regression may mistakenly attribute these common shocks to \\(x_{it}\\).\nYear FE helps remove this confounding."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#random-effects-re-1",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#random-effects-re-1",
+    "title": "Lecture 3",
+    "section": "Random Effects (RE)",
+    "text": "Random Effects (RE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\epsilon_{it}\n\\]\nSame structure as FE… but different assumption:\n\nRE treats \\(\\alpha_i\\) as random\nand assumes it is uncorrelated with regressors:\n\n\\[\nCov(\\alpha_i, x_{it}) = 0\n\\]\nIf that assumption holds:\n\nRE is more efficient than FE (smaller standard errors)\nRE uses both within and between variation"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#when-re-fails-bias-risk",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#when-re-fails-bias-risk",
+    "title": "Lecture 3",
+    "section": "⚠️ When RE Fails (Bias Risk)",
+    "text": "⚠️ When RE Fails (Bias Risk)\nIf \\(Cov(\\alpha_i, x_{it}) \\neq 0\\), then RE is biased.\nIn many economic settings, this correlation is very plausible:\n\nricher countries may also have better institutions (inside \\(\\alpha_i\\))\nenergy system differences affect both GDP and emissions\n\nSo FE is often the safer default in applied work."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#why-we-cluster-standard-errors-country-clustered-se",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#why-we-cluster-standard-errors-country-clustered-se",
+    "title": "Lecture 3",
+    "section": "🧠 Why We Cluster Standard Errors (Country-Clustered SE)",
+    "text": "🧠 Why We Cluster Standard Errors (Country-Clustered SE)\nThe problem: errors are correlated within countries\n\n\n\nIn panel data, observations inside a country are rarely independent:\n\nshocks persist over time\npolicies change gradually\nmeasurement errors repeat\nemissions and GDP move smoothly\n\n\n\n\nThat means residuals may satisfy serial correlation:\n\\[\nCov(\\epsilon_{it}, \\epsilon_{is}) \\neq 0 \\quad \\text{for } t \\neq s\n\\]\n\n\n\nIf we ignore this, standard errors are often too small → false “significance”"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#cluster-robust-standard-errors-by-country",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#cluster-robust-standard-errors-by-country",
+    "title": "Lecture 3",
+    "section": "Cluster-Robust Standard Errors (by Country)",
+    "text": "Cluster-Robust Standard Errors (by Country)\nCountry-clustered SEs allow:\n\narbitrary correlation over time within a country\nheteroskedasticity across countries\n\nInterpretation:\n\n“We allow any kind of serial correlation within each country.”\n\nIn R (plm), this is typically implemented using robust VCOV options, e.g. vcovHC() with clustering by group.\n\nvcovHC: variance–covariance, heteroskedasticity-consistent"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#model-summary-what-each-one-controls-for",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#model-summary-what-each-one-controls-for",
+    "title": "Lecture 3",
+    "section": "Model Summary (What Each One Controls For)",
+    "text": "Model Summary (What Each One Controls For)\n\n\n\n\n\n\n\n\n\nModel\nControls for country traits?\nControls for year shocks?\nUses between-country variation?\n\n\n\n\nPooled OLS\n❌ No\n❌ No\nYes\n\n\nCountry FE\nYes (time-invariant)\n❌ No\n❌ No\n\n\nTwo-way FE\nYes (time-invariant)\nYes\n❌ No\n\n\nRandom Effects\nYes (modeled as random intercept)\nOptional\nYes"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-panel-models",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-panel-models",
+    "title": "Lecture 3",
+    "section": "Final Takeaway (Panel Models)",
+    "text": "Final Takeaway (Panel Models)\nWe use panel data models to estimate relationships within units over time, while controlling for:\n\nhidden country characteristics (\\(\\alpha_i\\))\nglobal year shocks (\\(\\gamma_t\\))\n\nAnd we use clustered SEs because panel residuals are often correlated within each unit."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#environmental-kuznets-curve-ekc-growth-vs.-pollution-1",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#environmental-kuznets-curve-ekc-growth-vs.-pollution-1",
+    "title": "Lecture 3",
+    "section": "🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution",
+    "text": "🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution\n\n\n\nNote\n\n\nNow we add the key EKC idea: a nonlinear relationship between income and pollution."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-the-ekc",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-the-ekc",
+    "title": "Lecture 3",
+    "section": "What is the EKC?",
+    "text": "What is the EKC?\nThe Environmental Kuznets Curve (EKC) hypothesis suggests:\n\nAs a country becomes richer, pollution first increases,\nbut after some income level, pollution decreases.\n\nIt is often described as an inverted-U relationship between: - pollution (e.g., CO\\(_2\\) per capita) - income (GDP per capita)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#draw-the-ekc-curve-inverted-u",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#draw-the-ekc-curve-inverted-u",
+    "title": "Lecture 3",
+    "section": "📉📈 Draw the EKC Curve (Inverted-U)",
+    "text": "📉📈 Draw the EKC Curve (Inverted-U)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-panel-regression-country-year-data",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-panel-regression-country-year-data",
+    "title": "Lecture 3",
+    "section": "EKC Panel Regression (Country-Year Data)",
+    "text": "EKC Panel Regression (Country-Year Data)\nA common EKC specification:\n\\[\n\\log(CO2pc_{it})\n=\n\\beta_1 \\log(GDPpc_{it})\n+\n\\beta_2 \\left[\\log(GDPpc_{it})\\right]^2\n+\n\\alpha_i\n+\n\\gamma_t\n+\n\\epsilon_{it}\n\\]\n\n\\(i\\): country\n\\(t\\): year\n\\(\\alpha_i\\): country fixed effects\n\\(\\gamma_t\\): year fixed effects"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#how-to-interpret-ekc-coefficients",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#how-to-interpret-ekc-coefficients",
+    "title": "Lecture 3",
+    "section": "How to Interpret EKC Coefficients",
+    "text": "How to Interpret EKC Coefficients\n\nIf \\(\\beta_1 &gt; 0\\) and \\(\\beta_2 &lt; 0\\)\nemissions rise at first, then eventually fall\n→ EKC pattern (inverted-U)\nIf \\(\\beta_2 = 0\\)\n→ relationship is linear\nIf \\(\\beta_2 &gt; 0\\)\n→ U-shape (emissions accelerate with income)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-turning-point-income-level",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-turning-point-income-level",
+    "title": "Lecture 3",
+    "section": "EKC Turning Point (Income Level)",
+    "text": "EKC Turning Point (Income Level)\nThe turning point occurs where the slope becomes zero:\n\\[\n\\frac{\\partial \\log(CO2pc)}{\\partial \\log(GDPpc)}\n= \\beta_1 + 2\\beta_2 \\log(GDPpc) = 0\n\\]\nSo the turning point in log income is:\n\\[\n\\log(GDPpc^*) = -\\frac{\\beta_1}{2\\beta_2}\n\\]\nConvert back to the income level:\n\\[\nGDPpc^* = \\exp\\left(-\\frac{\\beta_1}{2\\beta_2}\\right)\n\\]\n\n\n\nAt \\(GDPpc^*\\), CO\\(_2\\) per capita stops rising and begins falling (if EKC holds)."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#intuition-why-might-ekc-happen",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#intuition-why-might-ekc-happen",
+    "title": "Lecture 3",
+    "section": "Intuition: Why Might EKC Happen?",
+    "text": "Intuition: Why Might EKC Happen?\nAs income rises, countries often experience:\n\nScale effect 📈: more production → more emissions (early stage)\nComposition effect 🏗️➡️🧑‍💼: shift from industry → services (middle stage)\nTechnique effect 🧪⚡: cleaner technology + regulation (later stage)\n\nEKC is the balance of:\n\ngrowth pressures that increase emissions\ndevelopment forces that can reduce emissions"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#important-caveat-for-co_2",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#important-caveat-for-co_2",
+    "title": "Lecture 3",
+    "section": "Important Caveat for CO\\(_2\\)",
+    "text": "Important Caveat for CO\\(_2\\)\nEKC may be weaker for CO\\(_2\\) than for local air pollutants because:\n\nCO\\(_2\\) is deeply tied to energy systems\nbenefits are global, costs are often local\nemissions may shift across borders via trade (carbon leakage)\n\nSo EKC is a hypothesis to test, not a guaranteed pattern."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-ekc",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-ekc",
+    "title": "Lecture 3",
+    "section": "Final Takeaway (EKC)",
+    "text": "Final Takeaway (EKC)\nEKC tests whether pollution follows an inverted-U with income.\nPanel FE/TWFE help make that test more credible by controlling for:\n\ncountry traits (\\(\\alpha_i\\))\nyear shocks (\\(\\gamma_t\\))"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#omitted-variable-bias-1",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#omitted-variable-bias-1",
+    "title": "Lecture 2",
+    "section": "Omitted Variable Bias",
+    "text": "Omitted Variable Bias\n\nOmitted variable bias (OVB): bias in the model because of omitting an important regressor that is correlated with existing regressor(s).\nLet’s use an orange juice (OJ) example to demonstrate the OVB.\n\nOJ price elasticity estimates vary with models, whether or not taking into account brand or ad_status\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nsales\nQuantity of OJ cartons sold\n\n\nprice\nPrice of OJ\n\n\nbrand\nBrand of OJ\n\n\nad\nAdvertisement status"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#short--and-long--regressions",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#short--and-long--regressions",
+    "title": "Lecture 2",
+    "section": "📏 Short- and Long- Regressions",
+    "text": "📏 Short- and Long- Regressions\n\nOVB is the difference in beta estimates between short- and long-form regressions.\nShort regression: The regression model with less regressors\n\n\n\n\n\\[\n\\begin{align}\n\\log(\\text{sales}_i) = \\beta_0 + \\beta_1\\log(\\text{price}_i) + \\epsilon_i\n\\end{align}\n\\]\n\nLong regression: The regression model that adds additional regressor(s) to the short one.\n\n\n\n\n\\[\n\\begin{align}\n\\log(\\text{sales}_i) =& \\beta_0 + \\beta_{1}\\log(\\text{price}_i) \\\\\n&+ \\beta_{2}\\text{minute.maid}_i + \\beta_{3}\\text{tropicana}_i + \\epsilon_i\n\\end{align}\n\\]\n\nOVB for \\(\\beta_1\\) is:\n\n\n\n\n\\[\n\\text{OVB} = \\widehat{\\beta_{1}^{short}} - \\widehat{\\beta_{1}^{long}}\n\\]"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#ovb-formula",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#ovb-formula",
+    "title": "Lecture 2",
+    "section": "OVB formula",
+    "text": "OVB formula\n\nConsider the following short- and long- regressions:\n\nShort: \\(Y_i = \\beta_0 + \\beta_{1}^{short}X_1 + \\epsilon_{short}\\)\n\nLong: \\(Y_i = \\beta_0 + \\beta_{1}^{long}X_1 +\\beta_{2}X_2 + \\epsilon_{long}\\)\n\nError in short form can be represented as: \\[\n{\\epsilon_{short}} = \\beta_{2}X_2 + \\epsilon_{long}\n\\]\nIf variable \\(X_1\\) is correlated with \\(X_2\\), the following assumptions are violated in the short regression model:\n\nErrors are not correlated with regressors.\nErrors have a mean value of 0."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#how-does-an-ovb-happen-in-regression",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#how-does-an-ovb-happen-in-regression",
+    "title": "Lecture 2",
+    "section": "❓🔍 How does an OVB happen in regression?",
+    "text": "❓🔍 How does an OVB happen in regression?\n\nIn the first stage, consider the relationship between price and brand:\n\n\\[\n\\log(\\text{price}) = \\beta_0 + \\beta_1\\text{minute_maid} + \\beta_2\\text{tropicana} + \\epsilon_{1st}\n\\]\n\nThen, calculate the residual: \\[\n\\widehat{\\epsilon_{1st}} = \\log(\\text{price}) - \\widehat{\\log(\\text{price})}\n\\]\nThe residual represents the log of OJ price after its correlation with brand has been removed!\nIn the second stage, regress \\(\\log(\\text{sales})\\) on residual \\(\\widehat{\\epsilon_{1st}}\\):\n\n\\[\n\\log(\\text{sales}) = \\beta_0 + \\beta_1\\widehat{\\epsilon_{1st}}  + \\epsilon_{2nd}\n\\]"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#regression-sensitivity-analysis",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#regression-sensitivity-analysis",
+    "title": "Lecture 2",
+    "section": "Regression Sensitivity Analysis",
+    "text": "Regression Sensitivity Analysis\n\nRegression finds the coefficients on the part of each regressor that is independent from the other regressors.\nWhat can we do to deal with OVB problems?\n\nBecause we can never be sure whether a given set of controls is enough to eliminate OVB, it’s important to ask how sensitive regression results are to changes in the list of controls."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#bad-controls-when-controlling-more-makes-things-worse",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#bad-controls-when-controlling-more-makes-things-worse",
+    "title": "Lecture 2",
+    "section": "🚫 Bad Controls: When “Controlling More” Makes Things Worse",
+    "text": "🚫 Bad Controls: When “Controlling More” Makes Things Worse\nA common mistake in regression is thinking:\n\n✅ “If I add more controls, the model must get better.”\n\nBut some controls are bad controls — they can actually bias your estimate."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#what-is-a-bad-control",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#what-is-a-bad-control",
+    "title": "Lecture 2",
+    "section": "🚫 What is a “Bad Control”?",
+    "text": "🚫 What is a “Bad Control”?\nA bad control is a variable that:\n\nis influenced by the explanatory variable \\(x\\), or\nis part of the process that links \\(x\\) to the outcome \\(y\\)\n\nIncluding a bad control can “control away” the variation in \\(y\\) that is connected to \\(x\\), making the estimated relationship look smaller than it really is."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#intuition-what-should-a-good-control-look-like",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#intuition-what-should-a-good-control-look-like",
+    "title": "Lecture 2",
+    "section": "🧠 Intuition: What Should a “Good Control” Look Like?",
+    "text": "🧠 Intuition: What Should a “Good Control” Look Like?\nA good control is a variable that:\n✅ helps explain variation in the outcome \\(y\\)\n✅ is related to the explanatory variable \\(x\\)\n✅ is not a consequence of \\(x\\) (it exists “in the background”)\nThat’s the key difference."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#example-1-education-and-wages",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#example-1-education-and-wages",
+    "title": "Lecture 2",
+    "section": "🔗 Example 1: Education and Wages 💼",
+    "text": "🔗 Example 1: Education and Wages 💼\nSuppose we want to estimate:\n\nDoes education increase wages?\n\n✅ Good regression idea:\n\\[\nwage_i = \\beta_0 + \\beta_1 education_i + u_i\n\\]\nMaybe add good controls like:\n\nage\ngender\nregion\nparent education (if available)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-occupation-or-job-type",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-occupation-or-job-type",
+    "title": "Lecture 2",
+    "section": "🚫 Bad Control: Occupation or Job Type",
+    "text": "🚫 Bad Control: Occupation or Job Type\nBut what if we control for occupation?\n\\[\nwage_i = \\beta_0 + \\beta_1 education_i + \\beta_2 occupation_i + u_i\n\\]\nWhy is that bad?\n\nBecause education affects occupation:\n\\[\neducation \\rightarrow occupation \\rightarrow wage\n\\]\nSo controlling for occupation:\n🚫 blocks part of the education effect\n→ we underestimate the impact of education"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#example-2-fertilizer-plant-height-and-crop-yield",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#example-2-fertilizer-plant-height-and-crop-yield",
+    "title": "Lecture 2",
+    "section": "🌱 Example 2: Fertilizer, Plant Height, and Crop Yield",
+    "text": "🌱 Example 2: Fertilizer, Plant Height, and Crop Yield\n\n\nWe want to estimate:\n\nDoes fertilizer increase crop yield?\n\nBut fertilizer changes the plant’s growth:\n\\[\nfertilizer \\rightarrow height\n\\]\nAnd height is strongly related to yield:\n\\[\nheight \\rightarrow yield\n\\]\n\nAlso, some plots are simply better than others because of soil quality:\n\\[\n\\begin{align}\n&soil\\ quality \\rightarrow height\\\\\n&soil\\ quality \\rightarrow yield\n\\end{align}\n\\]\nSo soil quality is a hidden factor that affects both height and yield."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-plant-height",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-plant-height",
+    "title": "Lecture 2",
+    "section": "🚫 Bad Control: Plant Height",
+    "text": "🚫 Bad Control: Plant Height\nBut what if we control for plant height?\n\\[\nyield_i = \\beta_0 + \\beta_1 fertilizer_i + \\beta_2 height_i + u_i\n\\]\nWhy is that bad?\n\nBecause fertilizer affects plant height:\n\\[\nfertilizer \\rightarrow height \\rightarrow yield\n\\]\nSo controlling for height:\n🚫 blocks an important pathway through which fertilizer raises yield\n→ we underestimate the impact of fertilizer"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#good-controls-vs.-bad-controls-big-picture",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#good-controls-vs.-bad-controls-big-picture",
+    "title": "Lecture 2",
+    "section": "✅ Good Controls vs. Bad Controls (Big Picture)",
+    "text": "✅ Good Controls vs. Bad Controls (Big Picture)\n\n\n\n\n\n\n\n\nType\nExample\nWhy it matters\n\n\n\n\n✅ Good control\nAge, gender, region, baseline ability\nHelps reduce omitted variable bias by holding constant pre-existing differences\n\n\n🚫 Bad control\nOccupation (when studying education → wages)\nCan remove part of the education effect by controlling for something education influences\n\n\n🚫 Bad control\nPlant height (when studying fertilizer → yield)\nCan remove part of the fertilizer effect by controlling for something fertilizer influences"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#why-bad-controls-are-dangerous",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#why-bad-controls-are-dangerous",
+    "title": "Lecture 2",
+    "section": "🎯 Why Bad Controls Are Dangerous",
+    "text": "🎯 Why Bad Controls Are Dangerous\nBad controls can cause two problems:\n\n\n1) ❌ Block part of the true effect\nYou unintentionally remove the pathway:\n\\[\nx \\rightarrow control \\rightarrow y\n\\]\nSo the estimated \\(\\hat{\\beta}_1\\) becomes too small.\n\n2) ❌ Create new bias\nSometimes the control is influenced by both \\(x\\) and \\(y\\):\n\\[\nx \\rightarrow control \\leftarrow y\n\\]\nThen controlling for it creates a fake association between \\(x\\) and \\(y\\)\neven if none existed before."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#quick-rule-should-we-control-for-it",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#quick-rule-should-we-control-for-it",
+    "title": "Lecture 2",
+    "section": "✅ Quick Rule: Should We Control for It?",
+    "text": "✅ Quick Rule: Should We Control for It?\nBefore adding a variable \\(z\\) as a control, ask:\n\nDoes \\(z\\) exist before \\(x\\) is determined?\n✅ If yes → usually safe to control for\n\n\n\n\n\nDoes \\(z\\) change after \\(x\\) changes?\n🚫 If yes → it may be a bad control\n\n\n\n\n\nIs \\(z\\) a pre-existing characteristic that is related to both \\(x\\) and \\(y\\)?\n✅ If yes → it is often a useful control"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#summary-more-controls-better",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#summary-more-controls-better",
+    "title": "Lecture 2",
+    "section": "🧾 Summary: “More Controls” ≠ “Better”",
+    "text": "🧾 Summary: “More Controls” ≠ “Better”\n\n✅ Controls are helpful when they fix omitted variable bias\n\n🚫 Controls are harmful when they “control away” the effect you want\n\n\n\n\n\nThe goal is not to control for everything.\n\nThe goal is to control for the right things."
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html",
+    "href": "danl-rw/danl-410-project-kickoff.html",
+    "title": "🧾📌 Capstone Project Guide",
+    "section": "",
+    "text": "In DANL 410: Data Analytics Capstone, you will complete an end-to-end analytics project—starting from a focused question, moving through data work and analysis, and ending with a polished report and presentation.\nThis course is designed to help you practice what data analysts actually do:\n\nTranslate a real-world problem into an analytics question\nFind and evaluate data (or create a clean dataset)\nClean, transform, and explore the data\nApply an appropriate machine learning or statistical method (e.g., regression, classification, clustering)\nCommunicate findings clearly with visuals and writing\nPublish your work on your Quarto website (GitHub Pages)\n\n\n\n\n\n\n\nNote\n\n\n\nYou do not need the “perfect” topic at the beginning. Your goal early in the semester is to build a feasible plan with a clear question, a credible dataset, and a reasonable method.\n\n\n\n\n\nEach team may have one or two members.\nEvery team member is expected to contribute actively and understand the entire project.\nTeams should be formed by Wednesday, Feb 11, 11:59 P.M.\nIf your team has two members, a representative should email Prof. Choe at bchoe@geneseo.edu, cc-ing a team member."
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#overview",
+    "href": "danl-rw/danl-410-project-kickoff.html#overview",
+    "title": "🧾📌 Capstone Project Guide",
+    "section": "",
+    "text": "In DANL 410: Data Analytics Capstone, you will complete an end-to-end analytics project—starting from a focused question, moving through data work and analysis, and ending with a polished report and presentation.\nThis course is designed to help you practice what data analysts actually do:\n\nTranslate a real-world problem into an analytics question\nFind and evaluate data (or create a clean dataset)\nClean, transform, and explore the data\nApply an appropriate machine learning or statistical method (e.g., regression, classification, clustering)\nCommunicate findings clearly with visuals and writing\nPublish your work on your Quarto website (GitHub Pages)\n\n\n\n\n\n\n\nNote\n\n\n\nYou do not need the “perfect” topic at the beginning. Your goal early in the semester is to build a feasible plan with a clear question, a credible dataset, and a reasonable method.\n\n\n\n\n\nEach team may have one or two members.\nEvery team member is expected to contribute actively and understand the entire project.\nTeams should be formed by Wednesday, Feb 11, 11:59 P.M.\nIf your team has two members, a representative should email Prof. Choe at bchoe@geneseo.edu, cc-ing a team member."
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#project-timeline-spring-2026",
+    "href": "danl-rw/danl-410-project-kickoff.html#project-timeline-spring-2026",
+    "title": "🧾📌 Capstone Project Guide",
+    "section": "⏰ Project Timeline (Spring 2026)",
+    "text": "⏰ Project Timeline (Spring 2026)\n\n\n\n\n\n\n\n\nComponent\nDescription\nDue Date\n\n\n\n\n🧾 Research Kick-off Report\nDefine question, motivation, data, and plan (2–3 pages)\nFeb 25 (11:59 P.M.)\n\n\n🗣️ Midterm Presentation\nShort progress presentation (what you have, what you learned, next steps)\nMar 11 (class time)\n\n\n🧩 Progress & Insights Report\nWhat you did + what you learned + obstacles + updated plan\nMar 25\n\n\n🧠 Research Synthesis Report\nStronger draft narrative + results + interpretation\nApr 15\n\n\n🖥️ GREAT Day PowerPoint\nSlide deck submission\nApr 22\n\n\n📄 Final Capstone Report\nFinal written report (published on website)\nMay 11 (11:59 P.M.)"
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#research-kick-off-report-structure",
+    "href": "danl-rw/danl-410-project-kickoff.html#research-kick-off-report-structure",
+    "title": "🧾📌 Capstone Project Guide",
+    "section": "🧾 Research Kick-off Report — Structure",
+    "text": "🧾 Research Kick-off Report — Structure\nYour Research Kick-off Report (2–3 pages) is a concise proposal that explains:\n\nwhat you plan to study,\nwhy it matters (business, social, or policy relevance),\nhow you will study it using data.\n\nInclude these sections:\n\nWorking Title & Topic\n\nA clear, descriptive title.\n2–4 sentences describing the topic and setting.\n\nResearch Question\n\nState one main research question in a single sentence.\nAdd 1–3 sub-questions if helpful.\n\nMotivation / Value\n\nWhy would someone care?\nWho is the “stakeholder” (a business, customers, local government, nonprofit, campus office, etc.)?\nWhat decision, insight, or understanding might the analysis support?\n\nData Plan\n\nWhat dataset(s) will you use?\nUnit of analysis (customer? county? day? product? student? transaction?)\nKey variables you expect to use (inputs and outcomes)\nData limitations you already anticipate (missingness, small sample, measurement, bias)\n\nMethod Plan (Required: include one ML/statistical component)\n\nWhat approach will you use and why?\nExamples:\n\nRegression (prediction or cause-and-effect)\nClassification (e.g., churn / pass-fail / fraud / sentiment categories)\nClustering (e.g., segmentation)\nTime-series forecasting (if appropriate)\n\nWhat is your evaluation plan? (train/test split, accuracy/RMSE, cross-validation, or a clear validation idea)\n\nReferences\n\nUse a consistent citation style.\nFor online sources: include URL and date of access.\n\n\n\n\n\n\n\n\nNote\n\n\n\n💡 Think of the Kick-off Report as your project blueprint. You are not expected to have final results yet—but your plan should be credible and feasible."
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#brainstorming-ideas-capstone-friendly",
+    "href": "danl-rw/danl-410-project-kickoff.html#brainstorming-ideas-capstone-friendly",
+    "title": "🧾📌 Capstone Project Guide",
+    "section": "💡 Brainstorming Ideas (Capstone-Friendly)",
+    "text": "💡 Brainstorming Ideas (Capstone-Friendly)\n\n\n\n\n\n\n\n\n\nArea\nExample Research Question\nData Type\nPossible Methods\n\n\n\n\nBusiness / Marketing\nWhich factors predict customer churn or repeat purchase?\ntransactions, CRM, reviews\nclassification, regression\n\n\nOperations\nWhat drives delays or failures in a process?\ntimestamps, logs\nregression, clustering\n\n\nFinance / Risk\nCan we predict risk outcomes or identify risky segments?\nfirm/household indicators\nclassification, clustering\n\n\nSports / Performance\nWhich player/team features predict win probability?\ngame logs\nregression, classification\n\n\nPublic Policy\nWhich communities face higher risk or lower access?\ncensus + admin data\nregression, mapping, clustering\n\n\nEducation\nWhat predicts course performance or retention patterns?\nLMS / grades / surveys\nregression, classification\n\n\nClimate Change\nWhich factors predict household solar adoption (or energy burden) across counties?\nAmerican Community Survey (ACS) + solar installs + weather/energy\nregression, classification, mapping"
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#research-idea-logic",
+    "href": "danl-rw/danl-410-project-kickoff.html#research-idea-logic",
+    "title": "🧾📌 Capstone Project Guide",
+    "section": "🧭 Research Idea Logic",
+    "text": "🧭 Research Idea Logic\nA strong capstone topic is:\n\nSpecific enough to answer within one semester\n\nData-supported (you can actually obtain usable data)\n\nMethod-feasible (you can execute and interpret a reasonable model)\n\nMeaningful (it has a real stakeholder, decision, or insight)\n\nThink in “question types”:\n\n\n\n\n\n\n\n\nType\nPurpose\nExample\n\n\n\n\nDescriptive\nSummarize what is happening\n“How have housing prices changed across counties since 2018?”\n\n\nComparative\nCompare groups or time periods\n“Do outcomes differ by region, income level, or policy change?”\n\n\nPredictive\nPredict an outcome using features\n“Can we predict churn using usage behavior?”\n\n\nSegmentation\nIdentify clusters / groups\n“Can we cluster customers into meaningful segments?”\n\n\nDiagnostic\nIdentify drivers of an outcome\n“Which factors are most associated with delays?”\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAvoid questions that are too broad:\n\n“How does social media affect society?”\n\nInstead, narrow:\n\n“Which post features predict higher engagement for a specific account/category?”\n\n\n\n\n\n💾 Using Data Effectively\nYou are encouraged to use real-world data and present evidence using:\n\nClean tables (summary statistics, grouped means, counts)\nClear visualizations (distributions, trends, comparisons, relationships)\nA method you can explain and justify\nTransparent code and reproducible workflow\n\nGuidelines:\n\nStart with a dataset you can actually obtain quickly (Week 2–4).\nPrefer data that has:\n\nEnough observations to learn patterns\nClear variable definitions\nA usable target/outcome variable (for prediction/classification), or a clear grouping structure (for clustering)\n\nUse modeling only when it adds value:\n\nA “fancy” model with weak interpretation is worse than a simple model well explained.\n\nAlways cite data sources and document data cleaning steps.\n\n\n\n\n\n\n\nTip\n\n\n\nYou don’t need complex modeling to do a strong capstone— but you do need clear evidence + clear reasoning + clear communication.\n\n\n\n\n\n🌐 Recommended Open Data Sources\n\n💰 Economic, Social & Development Indicators\n\n\n\nSource\nDescription\n\n\n\n\n💰 World Bank Data Catalog\nGlobal indicators for environment, economics, and public policy.\n\n\n🌐 World Bank Climate Change Knowledge Portal\nThe hub for global, climate-related data on historical and future climate, vulnerabilities, and impacts.\n\n\n🌏 UNDP Human Development Report – Horizons\nInteractive data and insights platform exploring global human development trends, sustainability, and inequality.\n\n\n♻️ UN SDG Indicators Database\nOfficial UN indicators tracking global sustainability goals.\n\n\n🌐️ IMF Data\nOfficial IMF Macroeconomic Climate Indicators.\n\n\n🎓 Harvard Dataverse\nRepository for academic datasets across disciplines, including environment and policy.\n\n\n🧩 Open ICPSR\nOpen-access social science data archive with economic and behavioral studies.\n\n\n\n\n\n💬 Public Opinion, Education & General Statistics\n\n\n\nSource\nDescription\n\n\n\n\n🌍 Our World in Data\nCross-country datasets on CO₂ emissions, energy use, and climate impacts.\n\n\n📊 Statista\nStatistics portal covering energy, environment, and sustainability topics. (Access through SUNY Geneseo library subscription.)\n\n\n🗺️ Yale Climate Opinion Map\nU.S. public opinion on climate change beliefs, attitudes, and policy support.\n\n\n\n\n\n🌍 Climate & Environmental Data\n\n\n\nSource\nDescription\n\n\n\n\n🌡 NOAA Climate Data Online\nTemperature, precipitation, and extreme weather records for U.S. and global stations.\n\n\n🌦 PRISM Climate Group (Oregon State University)\nHigh-resolution U.S. climate data (temperature, precipitation, and normals) for local and regional analysis.\n\n\n🌡️ Berkeley Earth\nLong-term global datasets on temperature, air quality, and climate change.\n\n\n🧮 Global Carbon Budget Office\nAnnual data on global carbon emissions and carbon budget analysis.\n\n\n🌎 UNEP Environment Data Explorer\nWorld Environment Situation Room (WESR), an open data platform by the UN Environment Programme (UNEP).\n\n\n💧 AQUASTAT (FAO Water Data)\nGlobal data on water resources, irrigation, and agricultural water management.\n\n\n\n\n\n⚡ Energy, Agriculture & Resource Use\n\n\n\nSource\nDescription\n\n\n\n\n⚡ U.S. Energy Information Administration (EIA)\nData on energy production, consumption, and fuel prices.\n\n\n🔋 IEA (International Energy Agency)\nGlobal datasets on energy production, consumption, efficiency, and emissions by sector and country.\n\n\n🌾 FAOSTAT (UN Food and Agriculture Organization)\nGlobal data on agriculture, food systems, land use, and greenhouse gas emissions by sector and country.\n\n\n🧭 OECD Environment Statistics\nData on environmental performance, green growth, energy intensity, and environmental taxes for OECD countries.\n\n\n🏠 U.S. Census Bureau – Natural & Built Environments\nDatasets on pollution, agriculture, transportation emissions, recycling, and rural development.\n\n\n\n\n\n\n\n\n\nWarning\n\n\n\nAlways check:\n\nwhether the data is legally usable (license/terms),\nwhether variables are well-defined,\nand whether the data is appropriate for your question."
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#checklist-research-kick-off-report",
+    "href": "danl-rw/danl-410-project-kickoff.html#checklist-research-kick-off-report",
+    "title": "🧾📌 Capstone Project Guide",
+    "section": "✅ Checklist (Research Kick-off Report)",
+    "text": "✅ Checklist (Research Kick-off Report)\nBefore submitting your Research Kick-off Report:\n\nTeam confirmed (1–2 people)\n\nClear research question (one sentence)\n\nStakeholder / value explained (why it matters)\n\nData source identified and link provided\n\nUnit of analysis + key variables listed\n\nMethod plan includes at least one ML/stat component (regression/classification/clustering/etc.)\n\nRealistic timeline and deliverables described\n\nReferences included (URLs + access date for online sources)\n\n2–3 pages, professional formatting\n\nSubmitted via Brightspace by Feb 25 (11:59 P.M.)"
+  },
+  {
+    "objectID": "danl-rw/danl-410-project-kickoff.html#closing-thought",
+    "href": "danl-rw/danl-410-project-kickoff.html#closing-thought",
+    "title": "🧾📌 Capstone Project Guide",
+    "section": "🌟 Closing Thought",
+    "text": "🌟 Closing Thought\n\nA strong capstone project is not about doing everything—\nit’s about doing a focused analysis well,\nand communicating results clearly enough that someone can act on them."
+  },
+  {
+    "objectID": "listing-danl-410-wk.html",
+    "href": "listing-danl-410-wk.html",
+    "title": "Weeks",
     "section": "",
     "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
-    "objectID": "danl-cw/danl-410-cw-02.html",
-    "href": "danl-cw/danl-410-cw-02.html",
-    "title": "Classwork 2",
+    "objectID": "danl-cw/danl-410-cw-03.html",
+    "href": "danl-cw/danl-410-cw-03.html",
+    "title": "Classwork 3",
     "section": "",
-    "text": "Code\nlibrary(tidyverse)\nlibrary(broom)\nlibrary(stargazer)\n\noj &lt;- read_csv('https://bcdanl.github.io/data/dominick_oj_ad.csv')\n\nreg_short &lt;- lm(log(sales) ~ log(price),\n                data = oj)\n\nreg_long &lt;- lm(log(sales) ~ log(price) + brand,\n                data = oj)\n\nstargazer(reg_short, reg_long,\n          type = 'html')\n\n\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nlog(sales)\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n\n\n\n\n\n\nlog(price)\n\n\n-1.601***\n\n\n-3.139***\n\n\n\n\n\n\n(0.018)\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\nbrandminute_maid\n\n\n\n\n0.870***\n\n\n\n\n\n\n\n\n(0.013)\n\n\n\n\n\n\n\n\n\n\n\n\nbrandtropicana\n\n\n\n\n1.530***\n\n\n\n\n\n\n\n\n(0.016)\n\n\n\n\n\n\n\n\n\n\n\n\nConstant\n\n\n10.423***\n\n\n10.829***\n\n\n\n\n\n\n(0.015)\n\n\n(0.015)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n28,947\n\n\n28,947\n\n\n\n\nR2\n\n\n0.208\n\n\n0.394\n\n\n\n\nAdjusted R2\n\n\n0.208\n\n\n0.394\n\n\n\n\nResidual Std. Error\n\n\n0.907 (df = 28945)\n\n\n0.794 (df = 28943)\n\n\n\n\nF Statistic\n\n\n7,608.212*** (df = 1; 28945)\n\n\n6,275.074*** (df = 3; 28943)\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01\n\n\n\n\n\nCode\nreg_1st &lt;- lm(log(price) ~ brand,\n              data = oj)\n\naug_m2 &lt;- augment(reg_1st)    # broom::augment()\n\nreg_2nd &lt;- lm(log(sales) ~ aug_m2$.resid,\n              data = oj)\n\nstargazer(reg_long, reg_2nd,\n          type = 'html')\n\n\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nlog(sales)\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n\n\n\n\n\n\nlog(price)\n\n\n-3.139***\n\n\n\n\n\n\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbrandminute_maid\n\n\n0.870***\n\n\n\n\n\n\n\n\n(0.013)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nbrandtropicana\n\n\n1.530***\n\n\n\n\n\n\n\n\n(0.016)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n.resid\n\n\n\n\n-3.139***\n\n\n\n\n\n\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\nConstant\n\n\n10.829***\n\n\n9.168***\n\n\n\n\n\n\n(0.015)\n\n\n(0.005)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n28,947\n\n\n28,947\n\n\n\n\nR2\n\n\n0.394\n\n\n0.392\n\n\n\n\nAdjusted R2\n\n\n0.394\n\n\n0.392\n\n\n\n\nResidual Std. Error\n\n\n0.794 (df = 28943)\n\n\n0.795 (df = 28945)\n\n\n\n\nF Statistic\n\n\n6,275.074*** (df = 3; 28943)\n\n\n18,683.570*** (df = 1; 28945)\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01"
+    "text": "library(tidyverse)\nlibrary(plm)\nlibrary(lmtest)\nlibrary(sandwich)\nlibrary(stargazer)\n\nco2 &lt;- read_csv(\"https://bcdanl.github.io/data/owid-co2-data.csv\")\ncodebook &lt;- read_csv(\"https://bcdanl.github.io/data/owid-co2-codebook.csv\")"
   },
   {
-    "objectID": "danl-cw/danl-410-cw-02.html#education-occupation-and-wages",
-    "href": "danl-cw/danl-410-cw-02.html#education-occupation-and-wages",
-    "title": "Classwork 2",
-    "section": "Education, Occupation, and Wages",
-    "text": "Education, Occupation, and Wages\n\nCode\nset.seed(1)\n\ntb &lt;- tibble( \n  highschool_degree = ifelse(runif(10000)&gt;=0.5, 1,0), # highschool_degree indicator variable\n  ability = rnorm(10000), # e.g., talent, usually unobserved.\n  discrimination = highschool_degree, # highschool_degree discrimination variable\n  occupation_index = 1 + 2*ability + 0*highschool_degree - 2*discrimination + rnorm(10000), # true data generating process for occupation_index variable\n  wage = 1 - 1*discrimination + 1*occupation_index + 2*ability + rnorm(10000) # true data generating process for wage variable\n)\n\nlm_1 &lt;- lm(wage ~ highschool_degree, tb)\nlm_2 &lt;- lm(wage ~ highschool_degree + occupation_index, tb)\nlm_3 &lt;- lm(wage ~ highschool_degree + occupation_index + ability, tb)\n\nstargazer::stargazer(lm_1,lm_2,lm_3, \n                     column.labels = c(\"Biased Unconditional\", \n                                       \"Biased\",\n                                       \"Unbiased Conditional\"),\n                     type = 'html')\n\n\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nwage\n\n\n\n\n\n\nBiased Unconditional\n\n\nBiased\n\n\nUnbiased Conditional\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n(3)\n\n\n\n\n\n\n\n\nhighschool_degree\n\n\n-3.021***\n\n\n0.557***\n\n\n-1.039***\n\n\n\n\n\n\n(0.084)\n\n\n(0.030)\n\n\n(0.029)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\noccupation_index\n\n\n\n\n1.789***\n\n\n0.981***\n\n\n\n\n\n\n\n\n(0.006)\n\n\n(0.010)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nability\n\n\n\n\n\n\n2.028***\n\n\n\n\n\n\n\n\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant\n\n\n1.968***\n\n\n0.201***\n\n\n1.021***\n\n\n\n\n\n\n(0.059)\n\n\n(0.020)\n\n\n(0.018)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n10,000\n\n\n10,000\n\n\n10,000\n\n\n\n\nR2\n\n\n0.115\n\n\n0.907\n\n\n0.948\n\n\n\n\nAdjusted R2\n\n\n0.115\n\n\n0.907\n\n\n0.948\n\n\n\n\nResidual Std. Error\n\n\n4.192 (df = 9998)\n\n\n1.357 (df = 9997)\n\n\n1.013 (df = 9996)\n\n\n\n\nF Statistic\n\n\n1,297.822*** (df = 1; 9998)\n\n\n48,922.550*** (df = 2; 9997)\n\n\n61,140.750*** (df = 3; 9996)\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01"
+    "objectID": "danl-cw/danl-410-cw-03.html#build-a-clean-country-year-panel",
+    "href": "danl-cw/danl-410-cw-03.html#build-a-clean-country-year-panel",
+    "title": "Classwork 3",
+    "section": "Build a clean country-year panel",
+    "text": "Build a clean country-year panel\n\ndf &lt;- co2 |&gt;\n  # Keep only country observations (drop regions / aggregates)\n  # OWID country entries typically have a 3-letter ISO code\n  filter(!is.na(iso_code), nchar(iso_code) == 3) |&gt;\n  # Keep useful sample years (adjust as you want)\n  filter(year &gt;= 1990) |&gt;\n  # Select a simple EKC-style set of variables\n  mutate(\n    gdp_per_capita = gdp / population, \n    .after = gdp\n  ) |&gt; \n  select(\n    iso_code, country, year,\n    co2_per_capita,\n    gdp_per_capita,\n    population,\n    energy_per_capita,         # optional control\n    primary_energy_consumption # optional control (can be NA a lot)\n  ) |&gt;\n  # Drop missing core variables\n  filter(!is.na(co2_per_capita), !is.na(gdp_per_capita)) |&gt;\n  # Create logs and squared log GDP per capita\n  mutate(\n    log_co2pc = log(co2_per_capita),\n    log_gdppc = log(gdp_per_capita),\n    log_gdppc2 = log_gdppc^2,\n    log_pop = log(population),\n    log_energy_pc = ifelse(!is.na(energy_per_capita) & energy_per_capita &gt; 0,\n                          log(energy_per_capita), \n                          NA)\n  ) |&gt;\n  # Keep rows with finite log outcomes/predictors\n  filter(is.finite(log_co2pc), \n         is.finite(log_gdppc), \n         is.finite(log_gdppc2), \n         is.finite(log_pop))\n\n# Convert to pdata.frame (panel format for plm)\ndf_panel &lt;- pdata.frame(df, index = c(\"iso_code\", \"year\"))"
   },
   {
-    "objectID": "danl-cw/danl-410-cw-02.html#fertilizer-plant-height-and-crop-yield",
-    "href": "danl-cw/danl-410-cw-02.html#fertilizer-plant-height-and-crop-yield",
-    "title": "Classwork 2",
-    "section": "Fertilizer, Plant Height, and Crop Yield",
-    "text": "Fertilizer, Plant Height, and Crop Yield\n\nCode\nset.seed(2026)\n\n# Simulate 10,000 plots\ntb3 &lt;- tibble(\n  fertilizer    = rbinom(10000, 1, 0.5),       # 0 = no fertilizer, 1 = fertilizer applied\n  soil_quality  = rnorm(10000),                # unobserved “plot fertility”\n  # Height (cm) is boosted by fertilizer *and* by soil quality\n  height        = 50 + 8 * fertilizer + 5 * soil_quality + rnorm(10000),\n  # Yield (bushels) depends on fertilizer, height, and soil quality\n  yield         = 200 \n  + 10 * fertilizer      # direct effect of fertilizer\n  + 3  * height          # return to plant height\n  + 6  * soil_quality    # underlying soil fertility\n  + rnorm(10000)\n)\n\n# 1) Omitting height: picks up both direct and indirect effects\nlm1 &lt;- lm(yield ~ fertilizer,         data = tb3)\n# 2) Controlling for height: \"blocks\" the mediation channel\nlm2 &lt;- lm(yield ~ fertilizer + height, data = tb3)\n# 3) Also control soil_quality to recover the true direct effect\nlm3 &lt;- lm(yield ~ fertilizer + height + soil_quality, data = tb3)\n\nstargazer(\n  lm1, lm2, lm3,\n  column.labels   = c(\"Omit Height (Biased)\", \n                      \"Control Height (More Biased)\",\n                      \"Also Soil (Unbiased)\"),\n  dep.var.labels  = \"yield\",\n  keep            = c(\"fertilizer\", \"height\", \"soil_quality\"),\n  covariate.labels= c(\"Fertilizer\", \"Plant Height\", \"Soil Quality\"),\n  type            = \"html\"\n)\n\n\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nyield\n\n\n\n\n\n\nOmit Height (Biased)\n\n\nControl Height (More Biased)\n\n\nAlso Soil (Unbiased)\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n(3)\n\n\n\n\n\n\n\n\nFertilizer\n\n\n34.657***\n\n\n0.789***\n\n\n10.025***\n\n\n\n\n\n\n(0.426)\n\n\n(0.040)\n\n\n(0.081)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlant Height\n\n\n\n\n4.156***\n\n\n2.999***\n\n\n\n\n\n\n\n\n(0.003)\n\n\n(0.010)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSoil Quality\n\n\n\n\n\n\n6.002***\n\n\n\n\n\n\n\n\n\n\n(0.050)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n10,000\n\n\n10,000\n\n\n10,000\n\n\n\n\nR2\n\n\n0.398\n\n\n0.997\n\n\n0.999\n\n\n\n\nAdjusted R2\n\n\n0.398\n\n\n0.997\n\n\n0.999\n\n\n\n\nResidual Std. Error\n\n\n21.323 (df = 9998)\n\n\n1.551 (df = 9997)\n\n\n0.996 (df = 9996)\n\n\n\n\nF Statistic\n\n\n6,604.218*** (df = 1; 9998)\n\n\n1,563,217.000*** (df = 2; 9997)\n\n\n2,532,263.000*** (df = 3; 9996)\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01"
+    "objectID": "danl-cw/danl-410-cw-03.html#specify-models",
+    "href": "danl-cw/danl-410-cw-03.html#specify-models",
+    "title": "Classwork 3",
+    "section": "Specify models",
+    "text": "Specify models\n\n# Baseline (no optional controls)\nf_base &lt;- log_co2pc ~ log_gdppc + log_gdppc2\n\n# Extended model (adds energy per capita; will drop rows with missing log_energy_pc)\nf_ext  &lt;- log_co2pc ~ log_gdppc + log_gdppc2 + log_energy_pc\n\n# --- Models (BASE) ---\nm1_pool &lt;- plm(f_base, data = df_panel, model = \"pooling\")                 # pooled OLS\nm2_fe   &lt;- plm(f_base, data = df_panel, model = \"within\", effect = \"individual\")  # country FE\nm3_twfe &lt;- plm(f_base, data = df_panel, model = \"within\", effect = \"twoways\")     # country FE + year FE\nm4_re   &lt;- plm(f_base, data = df_panel, model = \"random\", effect = \"individual\") # random effects\n\n# --- Models (EXTENDED) ---\n# (Optional) include energy per capita as a control\nm1_pool_ext &lt;- plm(f_ext, data = df_panel, model = \"pooling\")\nm2_fe_ext   &lt;- plm(f_ext, data = df_panel, model = \"within\", effect = \"individual\")\nm3_twfe_ext &lt;- plm(f_ext, data = df_panel, model = \"within\", effect = \"twoways\")\nm4_re_ext   &lt;- plm(f_ext, data = df_panel, model = \"random\", effect = \"individual\")"
   },
   {
-    "objectID": "danl-cw/danl-410-cw-01.html",
-    "href": "danl-cw/danl-410-cw-01.html",
-    "title": "Classwork 1",
+    "objectID": "danl-cw/danl-410-cw-03.html#robust-clustered-standard-errors",
+    "href": "danl-cw/danl-410-cw-03.html#robust-clustered-standard-errors",
+    "title": "Classwork 3",
+    "section": "Robust / clustered standard errors",
+    "text": "Robust / clustered standard errors\n\n# Function to compute clustered SE (country-clustered)\nse_cluster_country_safe &lt;- function(model) {\n  V &lt;- vcovHC(model, type = \"HC1\", cluster = \"group\")\n  se &lt;- sqrt(diag(V))\n  se[is.na(se)] &lt;- 0              # ✅ replace NA SEs so stargazer won't crash\n  return(se)\n}\n\n# Clustered SEs for BASE models\nse_m1 &lt;- se_cluster_country_safe(m1_pool)\nse_m2 &lt;- se_cluster_country_safe(m2_fe)\nse_m3 &lt;- se_cluster_country_safe(m3_twfe)\nse_m4 &lt;- se_cluster_country_safe(m4_re)\n\n# Clustered SEs for EXTENDED models\nse_m1e &lt;- se_cluster_country_safe(m1_pool_ext)\nse_m2e &lt;- se_cluster_country_safe(m2_fe_ext)\nse_m3e &lt;- se_cluster_country_safe(m3_twfe_ext)\nse_m4e &lt;- se_cluster_country_safe(m4_re_ext)"
+  },
+  {
+    "objectID": "danl-cw/danl-410-cw-03.html#panel-diagnostics",
+    "href": "danl-cw/danl-410-cw-03.html#panel-diagnostics",
+    "title": "Classwork 3",
+    "section": "Panel diagnostics",
+    "text": "Panel diagnostics\n\n# FE vs pooled OLS (is panel structure important?)\npFtest(m2_fe, m1_pool)\n\n\n    F test for individual effects\n\ndata:  f_base\nF = 193.79, df1 = 163, df2 = 5243, p-value &lt; 2.2e-16\nalternative hypothesis: significant effects\n\n# RE vs pooled OLS (Breusch-Pagan LM test)\nplmtest(m1_pool, type = \"bp\")\n\n\n    Lagrange Multiplier Test - (Breusch-Pagan)\n\ndata:  f_base\nchisq = 42925, df = 1, p-value &lt; 2.2e-16\nalternative hypothesis: significant effects\n\n# FE vs RE (Hausman test)\nphtest(m2_fe, m4_re)\n\n\n    Hausman Test\n\ndata:  f_base\nchisq = 9819.7, df = 2, p-value &lt; 2.2e-16\nalternative hypothesis: one model is inconsistent"
+  },
+  {
+    "objectID": "danl-cw/danl-410-cw-03.html#results",
+    "href": "danl-cw/danl-410-cw-03.html#results",
+    "title": "Classwork 3",
+    "section": "Results",
+    "text": "Results\n# --- Table A: BASE models ---\n# Table (omit intercept so pooled/re match FE models cleanly)\nstargazer(\n  m1_pool, m2_fe, m3_twfe, m4_re,\n  type = \"html\",\n  se = list(se_m1, se_m2, se_m3, se_m4),\n  title = \"Panel Models (OWID CO2): Pooled OLS vs FE vs TWFE vs RE\",\n  column.labels = c(\"Pooled OLS\", \"Country FE\", \"Two-way FE\", \"Random Effects\"),\n  dep.var.labels = \"log(CO2 per capita)\",\n  omit = \"Intercept\",                      # ✅ avoids intercept mismatch across models\n  omit.stat = c(\"f\", \"ser\"),\n  digits = 3,\n  notes = c(\"Standard errors clustered by country (iso_code).\",\n            \"Country FE controls for time-invariant differences across countries.\",\n            \"Two-way FE adds year fixed effects to absorb global shocks.\")\n)\n\n\n\nPanel Models (OWID CO2): Pooled OLS vs FE vs TWFE vs RE\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nlog(CO2 per capita)\n\n\n\n\n\n\nPooled OLS\n\n\nCountry FE\n\n\nTwo-way FE\n\n\nRandom Effects\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n(3)\n\n\n(4)\n\n\n\n\n\n\n\n\nlog_gdppc\n\n\n4.009***\n\n\n3.440***\n\n\n3.453***\n\n\n3.539***\n\n\n\n\n\n\n(0.470)\n\n\n(0.444)\n\n\n(0.445)\n\n\n(0.437)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlog_gdppc2\n\n\n-0.157***\n\n\n-0.168***\n\n\n-0.167***\n\n\n-0.170***\n\n\n\n\n\n\n(0.027)\n\n\n(0.023)\n\n\n(0.023)\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant\n\n\n-22.396***\n\n\n\n\n\n\n-17.176***\n\n\n\n\n\n\n(2.057)\n\n\n\n\n\n\n(2.055)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n5,409\n\n\n5,409\n\n\n5,409\n\n\n5,409\n\n\n\n\nR2\n\n\n0.837\n\n\n0.357\n\n\n0.281\n\n\n0.386\n\n\n\n\nAdjusted R2\n\n\n0.837\n\n\n0.337\n\n\n0.254\n\n\n0.386\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01\n\n\n\n\n\n\nStandard errors clustered by country (iso\n\n\n\n\n\n\nCountry FE controls for time-invariant differences across countries.\n\n\n\n\n\n\nTwo-way FE adds year fixed effects to absorb global shocks.\n\n\n\n\n# --- Table B: EXTENDED models (adds energy control) ---\nstargazer(\n  m1_pool_ext, m2_fe_ext, m3_twfe_ext, m4_re_ext,\n  type = \"html\",\n  se = list(se_m1, se_m2, se_m3, se_m4),\n  title = \"Panel Models (OWID CO2): With Energy Control\",\n  column.labels = c(\"Pooled OLS\", \"Country FE\", \"Two-way FE\", \"Random Effects\"),\n  dep.var.labels = \"log(CO2 per capita)\",\n  omit = \"Intercept\",                      # ✅ avoids intercept mismatch across models\n  omit.stat = c(\"f\", \"ser\"),\n  digits = 3,\n  notes = c(\"Standard errors clustered by country (iso_code).\",\n            \"Adding energy per capita often reduces the GDP effect because energy use is a major driver of CO2.\")\n)\n\n\n\nPanel Models (OWID CO2): With Energy Control\n\n\n\n\n\n\n\n\n\nDependent variable:\n\n\n\n\n\n\n\n\n\n\n\n\nlog(CO2 per capita)\n\n\n\n\n\n\nPooled OLS\n\n\nCountry FE\n\n\nTwo-way FE\n\n\nRandom Effects\n\n\n\n\n\n\n(1)\n\n\n(2)\n\n\n(3)\n\n\n(4)\n\n\n\n\n\n\n\n\nlog_gdppc\n\n\n1.378***\n\n\n1.903***\n\n\n1.919***\n\n\n1.832***\n\n\n\n\n\n\n(0.470)\n\n\n(0.444)\n\n\n(0.445)\n\n\n(0.437)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlog_gdppc2\n\n\n-0.072***\n\n\n-0.100***\n\n\n-0.099***\n\n\n-0.095***\n\n\n\n\n\n\n(0.027)\n\n\n(0.023)\n\n\n(0.023)\n\n\n(0.023)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlog_energy_pc\n\n\n0.869\n\n\n0.621\n\n\n0.621\n\n\n0.672\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nConstant\n\n\n-13.726***\n\n\n\n\n\n\n-14.103***\n\n\n\n\n\n\n(2.057)\n\n\n\n\n\n\n(2.055)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nObservations\n\n\n5,358\n\n\n5,358\n\n\n5,358\n\n\n5,358\n\n\n\n\nR2\n\n\n0.948\n\n\n0.628\n\n\n0.582\n\n\n0.695\n\n\n\n\nAdjusted R2\n\n\n0.948\n\n\n0.616\n\n\n0.566\n\n\n0.695\n\n\n\n\n\n\n\n\nNote:\n\n\np&lt;0.1; p&lt;0.05; p&lt;0.01\n\n\n\n\n\n\nStandard errors clustered by country (iso\n\n\n\n\n\n\nAdding energy per capita often reduces the GDP effect because energy use is a major driver of CO2."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "DANL 410: Data Analytics Capstone, Spring 2026",
     "section": "",
-    "text": "What is Vibe Coding?\n\n\n\nVibe coding is an artificial intelligence-assisted software development technique popularized by Andrej Karpathy in February 2025. The term was listed in the Merriam-Webster Dictionary the following month as a “slang & trending” term. (Wikipedia, 2025)\n\n\n\n\n\n\n\n\nWhat are HTML and JS?\n\n\n\n\nHTML (HyperText Markup Language) is the standard language for creating web pages.\n\nIt defines the structure of a webpage.\n\nA webpage is made up of HTML elements.\n\nThese elements instruct the browser on how to display the content.\n\nJavaScript (JS) is a programming language that enhances web interactivity.\n\nIt runs directly in the user’s browser, reducing server load. \nIt enables dynamic content, user interactions, and animations.\n\nAnalogy:\n\nHTML = The structure of a house (walls, roof, foundation).\n\nJS = The interactive elements (automatic doors, lights, smart devices).\n\n\n\n\n\nStep 1. Start with this prompt (use exactly):\n\n“Create a single-file HTML/JS page to play perfect tic-tac-toe vs. human.”\n\n\ne.g., Prof. Choe’s Tic-Tac-Toe\n\nStep 1-1 Prepare your text editor:\n\n\nWindows\n\nPress the Windows key, type Notepad, and press Enter.\n\nPaste the HTML code from your AI.\n\nGo to File → Save As.\n\nChange Save as type to All Files.\n\nEnter a name like tic-tac-toe.html.\n\nSelect the location (Desktop, Documents, etc.).\n\nSet Encoding to UTF-8.\n\nClick Save.\n\n\nDouble-click the file to open it in your default browser (Edge, Chrome, etc.).\n\n\n\n\nMac\nSet up TextEdit (one-time)\n\n\n\n\n\nPress Command + Space to open Spotlight.\n\nType TextEdit and press Enter.\n\nPress Command + , to open Settings.\n\nUnder Format, select Plain Text.\n\n\nQuit TextEdit (Command + Q).\n\nRe-open TextEdit for coding\n\n\n\n\n\nPress Command + Space, type TextEdit, and press Enter.\n\nClick Show Options.\n\nUnder Plain Text Encoding, select Unicode (UTF-8).\n\n\nClick New Document.\n\nPaste the HTML code from your generative AI.\n\nSave the file (Command + S):\n\nName it tic-tac-toe.html.\n\nEnsure the extension is .html.\n\nChoose a location (Desktop, Documents, etc.).\n\nClick Save, and if prompted, choose Use .html.\n\n\nDouble-click the file to open it in your default browser (Safari, Chrome, etc.).\n\n\n\nStep 2. Add an option for two-player mode.\n\ne.g., Prof. Choe’s Tic-Tac-Toe with the Two-player Mode\n\n\nStep 3. Make a 4×4 tic-tac-toe version (if your current build is only 3×3).\n\ne.g., Prof. Choe’s 4×4 Tic-Tac-Toe\n\n\n\n\n\n Back to top"
+    "text": "Welcome! 👋\n\\(-\\) Explore, Learn, and Grow with Data Analytics! 🌟"
   },
   {
-    "objectID": "listing-danl-410-ex.html",
-    "href": "listing-danl-410-ex.html",
-    "title": "DANL 410 - Exams",
-    "section": "",
-    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "objectID": "index.html#lecture",
+    "href": "index.html#lecture",
+    "title": "DANL 410: Data Analytics Capstone, Spring 2026",
+    "section": "🚀 Lecture",
+    "text": "🚀 Lecture\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nLecture 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "listing-danl-410-lec.html",
-    "href": "listing-danl-410-lec.html",
-    "title": "DANL 410 - Lecture",
+    "objectID": "index.html#classwork",
+    "href": "index.html#classwork",
+    "title": "DANL 410: Data Analytics Capstone, Spring 2026",
+    "section": "⌨️ Classwork",
+    "text": "⌨️ Classwork\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nClasswork 1\n\n\nVibe Coding\n\n\nJanuary 21, 2026\n\n\n\n\nClasswork 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nClasswork 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html#homework",
+    "href": "index.html#homework",
+    "title": "DANL 410: Data Analytics Capstone, Spring 2026",
+    "section": "💻 Homework",
+    "text": "💻 Homework\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "danl-wk/wk-01.html",
+    "href": "danl-wk/wk-01.html",
+    "title": "Week 1",
     "section": "",
-    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nLecture 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Welcome to DANL 410, the first step in your data analytics journey! 👋\nIn the first week, we will go over what you can expect to learn in this course and review key logistics, including the structure of lectures and class meetings, assessments, and how we will communicate throughout the semester."
+  },
+  {
+    "objectID": "danl-wk/wk-01.html#syllabus",
+    "href": "danl-wk/wk-01.html#syllabus",
+    "title": "Week 1",
+    "section": "📓 Syllabus",
+    "text": "📓 Syllabus\n\nPlease read the syllabus."
+  },
+  {
+    "objectID": "danl-wk/wk-01.html#lecture-slides",
+    "href": "danl-wk/wk-01.html#lecture-slides",
+    "title": "Week 1",
+    "section": "🏫 Lecture Slides",
+    "text": "🏫 Lecture Slides\n\nLecture 1 — Syllabus\nView Slides\n\n🎥 Looking for lecture recordings? You can only find those on Brightspace."
+  },
+  {
+    "objectID": "danl-wk/wk-01.html#recommended-reading",
+    "href": "danl-wk/wk-01.html#recommended-reading",
+    "title": "Week 1",
+    "section": "📚 Recommended Reading",
+    "text": "📚 Recommended Reading\n\nMachine Learning\n\nReference"
+  },
+  {
+    "objectID": "danl-wk/wk-01.html#discussion",
+    "href": "danl-wk/wk-01.html#discussion",
+    "title": "Week 1",
+    "section": "💬 Discussion",
+    "text": "💬 Discussion\nWelcome to our Week 1 Discussion Board! 👋 \nThis space is designed for you to engage with your classmates about the material covered in Week 1.\nWhether you are looking to delve deeper into the content, share insights, or have questions about the content, this is the perfect place for you.\nIf you have any specific questions for Byeong-Hak (@bcdanl) or peer classmate (@GitHub-Username) regarding the Week 1 materials or need clarification on any points, don’t hesitate to ask here.\nLet’s collaborate and learn from each other!"
   },
   {
     "objectID": "danl-wk/wk-02.html",
