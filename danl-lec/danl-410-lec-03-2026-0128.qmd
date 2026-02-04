@@ -425,11 +425,13 @@ And we use **clustered SEs** because panel residuals are often correlated within
 
 # 🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution  {background-color="#1c4982"}
 
-## 🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution
+## 🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution {background-color="#1c4982"}
 
-::: {.callout-note}
-Now we add the key EKC idea: a **nonlinear relationship** between income and pollution.
-:::
+Now we add the key EKC idea: 
+
+<center>
+a **nonlinear relationship** between income and pollution.
+</center>
 
 
 
@@ -441,6 +443,7 @@ The **Environmental Kuznets Curve (EKC)** hypothesis suggests:
 > but after some income level, pollution **decreases**.
 
 It is often described as an **inverted-U** relationship between:
+
 - pollution (e.g., CO$_2$ per capita)
 - income (GDP per capita)
 
@@ -462,6 +465,40 @@ abline(v = 6, lty = 2)
 text(6, max(y), "Turning point", pos = 4)
 ```
 
+
+## Intuition: Why Might EKC Happen?
+
+As income rises, countries often experience:
+
+- **Scale effect** 📈: more production → more emissions (early stage)
+- **Composition effect** 🏗️➡️🧑‍💼: shift from industry → services (middle stage)
+- **Technique effect** 🧪⚡: cleaner technology + regulation (later stage)
+
+EKC is the balance of:
+
+- growth pressures that increase emissions
+- development forces that can reduce emissions
+
+
+
+## Important Caveat for CO$_2$
+
+EKC may be weaker for CO$_2$ than for local air pollutants because:
+
+- CO$_2$ is deeply tied to **energy systems**
+- benefits are **global**, costs are often local
+- emissions may shift across borders via trade (**carbon leakage**)
+
+So EKC is a **hypothesis to test**, not a guaranteed pattern.
+
+
+
+## 💡Quick Review: Graph for a Quadratic Function
+
+
+<div style="text-align:center; width: 60%; margin: auto;">
+  <img src="https://bcdanl.github.io/lec_figs/quadratic-graph.png" alt="" style="max-width: 1000px; width: 100%; border-radius: 10px; box-shadow: 0 0 12px rgba(0,0,0,.15);">
+</div>
 
 
 ## EKC Panel Regression (Country-Year Data)
@@ -530,31 +567,6 @@ $$
 At $GDPpc^*$, CO$_2$ per capita stops rising and begins falling (if EKC holds).
 
 
-
-## Intuition: Why Might EKC Happen?
-
-As income rises, countries often experience:
-
-- **Scale effect** 📈: more production → more emissions (early stage)
-- **Composition effect** 🏗️➡️🧑‍💼: shift from industry → services (middle stage)
-- **Technique effect** 🧪⚡: cleaner technology + regulation (later stage)
-
-EKC is the balance of:
-
-- growth pressures that increase emissions
-- development forces that can reduce emissions
-
-
-
-## Important Caveat for CO$_2$
-
-EKC may be weaker for CO$_2$ than for local air pollutants because:
-
-- CO$_2$ is deeply tied to **energy systems**
-- benefits are **global**, costs are often local
-- emissions may shift across borders via trade (**carbon leakage**)
-
-So EKC is a **hypothesis to test**, not a guaranteed pattern.
 
 
 

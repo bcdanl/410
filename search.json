@@ -417,14 +417,14 @@
     "href": "danl-lec/danl-410-lec-03-2026-0128.html#environmental-kuznets-curve-ekc-growth-vs.-pollution-1",
     "title": "Lecture 3",
     "section": "🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution",
-    "text": "🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution\n\n\n\nNote\n\n\nNow we add the key EKC idea: a nonlinear relationship between income and pollution."
+    "text": "🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution\nNow we add the key EKC idea:\n\na nonlinear relationship between income and pollution."
   },
   {
     "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-the-ekc",
     "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-the-ekc",
     "title": "Lecture 3",
     "section": "What is the EKC?",
-    "text": "What is the EKC?\nThe Environmental Kuznets Curve (EKC) hypothesis suggests:\n\nAs a country becomes richer, pollution first increases,\nbut after some income level, pollution decreases.\n\nIt is often described as an inverted-U relationship between: - pollution (e.g., CO\\(_2\\) per capita) - income (GDP per capita)"
+    "text": "What is the EKC?\nThe Environmental Kuznets Curve (EKC) hypothesis suggests:\n\nAs a country becomes richer, pollution first increases,\nbut after some income level, pollution decreases.\n\nIt is often described as an inverted-U relationship between:\n\npollution (e.g., CO\\(_2\\) per capita)\nincome (GDP per capita)"
   },
   {
     "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#draw-the-ekc-curve-inverted-u",
@@ -901,5 +901,12 @@
     "title": "Syllabus",
     "section": "Netiquette Policy",
     "text": "Netiquette Policy\n\nBefore contributing to a discussion board, verify if your question has already been asked and answered. Avoid repeating topics as you would in a real-life conversation.\n\nRemain focused on the topic. Refrain from posting unrelated links, comments, thoughts, or images.\n\nAvoid typing in all caps, as it may appear as if you’re shouting.\n\nSteer clear of writing anything that might be interpreted as angry or sarcastic, particularly as tone is hard to convey online.\n\nAlways use “Please” and “Thank you” when requesting assistance from peers or instructors.\n\nRespect differing viewpoints. If disagreeing, do so respectfully and acknowledge the merits of your classmates’ arguments.\n\nEnsure accuracy when responding to a peer’s query. If unsure, especially about deadlines, it’s better not to guess to avoid confusion.\n\nBe concise in your responses; lengthy replies to simple questions might not be read fully.\n\nIf multiple responses are received to your question, consider summarizing them for the benefit of the entire class.\n\nAvoid derogatory comments or insulting others’ intelligence. Disagree with ideas, not individuals.\n\nWhen referencing a previous discussion, quote only the essential lines to provide context without requiring others to search for the original post.\n\nPractice forgiveness. If a peer makes an error, do not dwell on it; everyone makes mistakes.\n\nBefore posting, run a spell and grammar check. This small effort can significantly impact how your message is perceived."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#quick-review-graph-for-a-quadratic-function",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#quick-review-graph-for-a-quadratic-function",
+    "title": "Lecture 3",
+    "section": "💡Quick Review: Graph for a Quadratic Function",
+    "text": "💡Quick Review: Graph for a Quadratic Function"
   }
 ]
