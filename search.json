@@ -908,5 +908,12 @@
     "title": "Lecture 3",
     "section": "💡Quick Review: Graph for a Quadratic Function",
     "text": "💡Quick Review: Graph for a Quadratic Function"
+  },
+  {
+    "objectID": "danl-cw/danl-410-cw-03.html#empirical-ekc",
+    "href": "danl-cw/danl-410-cw-03.html#empirical-ekc",
+    "title": "Classwork 3",
+    "section": "Empirical EKC",
+    "text": "Empirical EKC\n\n# EKC shape + 95% band (country-clustered), plotted over x in [0, 20], y in [0, 13]\n\nlibrary(plm)\nlibrary(sandwich)\nlibrary(dplyr)\nlibrary(ggplot2)\n\n# 0) Cluster-robust vcov\nV &lt;- vcovHC(m3_twfe_ext, type = \"HC1\", cluster = \"group\")\n\n# 1) Coefs (GDP terms only)\nb &lt;- coef(m3_twfe_ext)\nb1 &lt;- unname(b[\"log_gdppc\"])\nb2 &lt;- unname(b[\"log_gdppc2\"])\n\n# 2) Grid over requested range\nekc_shape_df &lt;- tibble(\n  x = seq(0, 20, length.out = 400)\n) |&gt;\n  mutate(ekc_shape = b1 * x + b2 * x^2)\n\n# 3) Delta-method SE for m(x) = b1*x + b2*x^2\nV_sub &lt;- V[c(\"log_gdppc\", \"log_gdppc2\"), c(\"log_gdppc\", \"log_gdppc2\")]\n\nekc_shape_df &lt;- ekc_shape_df |&gt;\n  rowwise() |&gt;\n  mutate(\n    se = sqrt(c(x, x^2) %*% V_sub %*% c(x, x^2)),\n    lo = ekc_shape - 1.96 * se,\n    hi = ekc_shape + 1.96 * se\n  ) |&gt;\n  ungroup()\n\n# 4) Turning point\nx_star &lt;- -b1 / (2 * b2)\ngdppc_star &lt;- exp(x_star)\n\n# 5) Plot\nggplot(ekc_shape_df, aes(x = x, y = ekc_shape)) +\n  geom_ribbon(aes(ymin = lo, ymax = hi), alpha = 0.2) +\n  geom_line(linewidth = 1.1) +\n  geom_vline(xintercept = x_star, linetype = \"dashed\") +\n  coord_cartesian(xlim = c(0, 20), ylim = c(0, 13)) +\n  labs(\n    title = \"Empirical EKC Shape from Two-way FE (Extended Model)\",\n    subtitle = paste0(\n      \"Curve: β̂1 x + β̂2 x² (x = log GDP per capita). \",\n      \"95% CI via delta method (country-clustered). \",\n      \"\\nTurning point at x* = \", round(x_star, 3),\n      \" (GDPpc* ≈ \", scales::comma(round(gdppc_star, 0)), \").\"\n    ),\n    x = \"log(GDP per capita)\",\n    y = expression(widehat(log(CO[2]))~~\"(per capita)\")\n  )"
   }
 ]

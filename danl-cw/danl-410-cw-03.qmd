@@ -196,3 +196,63 @@ stargazer(
 )
 ```
 
+
+## Empirical EKC
+
+```{r}
+# EKC shape + 95% band (country-clustered), plotted over x in [0, 20], y in [0, 13]
+
+library(plm)
+library(sandwich)
+library(dplyr)
+library(ggplot2)
+
+# 0) Cluster-robust vcov
+V <- vcovHC(m3_twfe_ext, type = "HC1", cluster = "group")
+
+# 1) Coefs (GDP terms only)
+b <- coef(m3_twfe_ext)
+b1 <- unname(b["log_gdppc"])
+b2 <- unname(b["log_gdppc2"])
+
+# 2) Grid over requested range
+ekc_shape_df <- tibble(
+  x = seq(0, 20, length.out = 400)
+) |>
+  mutate(ekc_shape = b1 * x + b2 * x^2)
+
+# 3) Delta-method SE for m(x) = b1*x + b2*x^2
+V_sub <- V[c("log_gdppc", "log_gdppc2"), c("log_gdppc", "log_gdppc2")]
+
+ekc_shape_df <- ekc_shape_df |>
+  rowwise() |>
+  mutate(
+    se = sqrt(c(x, x^2) %*% V_sub %*% c(x, x^2)),
+    lo = ekc_shape - 1.96 * se,
+    hi = ekc_shape + 1.96 * se
+  ) |>
+  ungroup()
+
+# 4) Turning point
+x_star <- -b1 / (2 * b2)
+gdppc_star <- exp(x_star)
+
+# 5) Plot
+ggplot(ekc_shape_df, aes(x = x, y = ekc_shape)) +
+  geom_ribbon(aes(ymin = lo, ymax = hi), alpha = 0.2) +
+  geom_line(linewidth = 1.1) +
+  geom_vline(xintercept = x_star, linetype = "dashed") +
+  coord_cartesian(xlim = c(0, 20), ylim = c(0, 13)) +
+  labs(
+    title = "Empirical EKC Shape from Two-way FE (Extended Model)",
+    subtitle = paste0(
+      "Curve: β̂1 x + β̂2 x² (x = log GDP per capita). ",
+      "95% CI via delta method (country-clustered). ",
+      "\nTurning point at x* = ", round(x_star, 3),
+      " (GDPpc* ≈ ", scales::comma(round(gdppc_star, 0)), ")."
+    ),
+    x = "log(GDP per capita)",
+    y = expression(widehat(log(CO[2]))~~"(per capita)")
+  )
+```
+
