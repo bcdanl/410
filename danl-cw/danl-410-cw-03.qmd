@@ -196,16 +196,70 @@ stargazer(
 )
 ```
 
+### `lm()`
+
+```{r}
+#| results: asis
+
+# ----------------------------
+# Estimate with lm() (LSDV FE and TWFE)
+#    IMPORTANT: use the same sample as plm EXTENDED model
+#    plm drops rows with NA in log_energy_pc; match that here.
+# ----------------------------
+df_lm <- as.data.frame(df_panel) |>
+  filter(!is.na(log_energy_pc))
+
+m_pool_lm_ext <- lm(
+  log_co2pc ~ log_gdppc + log_gdppc2 + log_energy_pc,
+  data = df_lm
+)
+
+m_fe_lm_ext <- lm(
+  log_co2pc ~ log_gdppc + log_gdppc2 + log_energy_pc + factor(iso_code),
+  data = df_lm
+)
+
+m_twfe_lm_ext <- lm(
+  log_co2pc ~ log_gdppc + log_gdppc2 + log_energy_pc + factor(iso_code) + factor(year),
+  data = df_lm
+)
+
+# ----------------------------
+# 6) Clustered SEs for lm() (country clustered)
+# ----------------------------
+se_pool_lm <- sqrt(diag(vcovCL(m_pool_lm_ext, cluster = ~ iso_code, type = "HC1")))
+se_fe_lm   <- sqrt(diag(vcovCL(m_fe_lm_ext,   cluster = ~ iso_code, type = "HC1")))
+se_twfe_lm <- sqrt(diag(vcovCL(m_twfe_lm_ext, cluster = ~ iso_code, type = "HC1")))
+
+# ----------------------------
+# 7) Stargazer tables
+#    lm() table
+# ----------------------------
+
+
+# lm(): Pooled vs (dummy) FE vs (dummy) TWFE
+stargazer(
+  m_pool_lm_ext, m_fe_lm_ext, m_twfe_lm_ext,
+  type = "html",
+  se = list(se_pool_lm, se_fe_lm, se_twfe_lm),
+  title = "LM (LSDV) (OWID CO2): With Energy Control",
+  column.labels = c("Pooled OLS", "Country FE (dummies)", "Two-way FE (dummies)"),
+  dep.var.labels = "log(CO2 per capita)",
+  keep = c("log_gdppc", "log_gdppc2", "log_energy_pc", "(Intercept)"),
+  digits = 3,
+  omit.stat = c("f", "ser", "rsq", "adj.rsq"),
+  notes = c(
+    "Standard errors are HC1 and clustered by country (iso_code).",
+    "LM FE/TWFE report a Constant due to dummy coding; it depends on the omitted baseline country/year."
+  )
+)
+```
+
 
 ## Empirical EKC
 
 ```{r}
 # EKC shape + 95% band (country-clustered), plotted over x in [0, 20], y in [0, 13]
-
-library(plm)
-library(sandwich)
-library(dplyr)
-library(ggplot2)
 
 # 0) Cluster-robust vcov
 V <- vcovHC(m3_twfe_ext, type = "HC1", cluster = "group")
