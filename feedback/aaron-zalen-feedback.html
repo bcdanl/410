@@ -257,8 +257,8 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>Hi Aaron,</p>
-<p>Thank you for your Research Kick-off Report, and for your thoughtful follow-up email about the train/test split question. This is a strong <strong>prediction</strong> project. The central idea is not only to predict individual game winners, but to convert those probabilities into a bracket portfolio that can compete in a real pool. That is a meaningful and well-motivated data analytics problem, and your use of historical pool results gives the project a concrete applied setting rather than an artificial classroom benchmark.</p>
-<p>The proposal already shows several strengths. First, you recognize that game prediction and bracket selection are not the same task. Second, you are thinking in terms of probabilities rather than deterministic picks, which is exactly the right starting point for bracket simulation. Third, comparing random forest to logistic regression and gradient boosting is a sensible modeling plan, and your idea of normalizing performance across years is important because bracket pools are strongly affected by how upset-heavy a tournament happens to be.</p>
+<p>Thank you for your Research Kick-off Report, and for your thoughtful follow-up email about the train/test split question. This is a strong <strong>prediction</strong> project. The central idea is not only to predict individual game winners, but to convert those probabilities into a bracket portfolio that can compete in a real pool. That is a meaningful and well-motivated data analytics problem, and your use of historical pool results gives the project a concrete applied setting.</p>
+<p>The proposal already shows several strengths. First, you recognize that game prediction and bracket selection are not the same task. Second, you are thinking in terms of probabilities rather than deterministic picks, which is the right starting point for bracket simulation. Third, comparing random forest to logistic regression and gradient boosting is a sensible modeling plan, and your idea of normalizing performance across years is important because bracket pools are strongly affected by how upset-heavy a tournament happens to be.</p>
 <p>The main priorities for your <strong>capstone paper</strong> are to tighten the evaluation design, make the train/test strategy fully time-aware, define what “outperforming human judgment” really means in a measurable way, and explain the bracket diversification rule precisely enough that another analyst could reproduce it.</p>
 <hr>
 <section id="addressing-your-email-traintest-split-time-based-validation-and-the-confusion-matrix" class="level3">
@@ -361,12 +361,14 @@ For your capstone paper and presentation, the following are especially useful:
 <ul>
 <li>Lopez, M. J., &amp; Matthews, G. J. (2015). <a href="https://bcdanl.github.io/410/danl-rw-refs/LopezMatthews-JQAS-2015.pdf"><em>“Building an NCAA Men’s Basketball Predictive Model and Quantifying Its Success.”</em></a> <em>Journal of Quantitative Analysis in Sports</em>, 11(1), 5-12.</li>
 <li>Kaggle. (2026). <a href="https://www.kaggle.com/competitions/march-machine-learning-mania-2026"><em>March Machine Learning Mania 2026.</em></a></li>
+<li>R <code>yardstick</code>. <a href="https://yardstick.tidymodels.org/reference/brier_class.html"><em>Brier score for classification models</em></a></li>
 <li>R <code>tidymodels</code> developers. <a href="https://www.tidymodels.org/learn/models/time-series/"><em>Modeling time series with tidy resampling.</em></a></li>
 <li>R <code>rsample</code> developers. <a href="https://rsample.tidymodels.org/reference/slide-resampling.html"><em>Time-based Resampling.</em></a></li>
 <li>R <code>tidymodels</code> developers. <a href="https://www.tidymodels.org/learn/models/calibration/"><em>An introduction to calibration with tidymodels.</em></a></li>
 <li>R <code>probably</code> developers. <a href="https://probably.tidymodels.org/reference/index.html"><em>probably package reference.</em></a></li>
 <li>R <code>probably</code> developers. <a href="https://probably.tidymodels.org/reference/cal_estimate_logistic.html"><em>Uses a logistic regression model to calibrate probabilities.</em></a></li>
 <li>R <code>probably</code> developers. <a href="https://probably.tidymodels.org/reference/cal_estimate_isotonic.html"><em>Uses an Isotonic regression model to calibrate model predictions.</em></a></li>
+<li>Python <code>scikit-learn</code> developers. <a href="https://scikit-learn.org/stable/modules/generated/sklearn.metrics.brier_score_loss.html"><em>Brier score loss.</em></a></li>
 <li>Python <code>scikit-learn</code> developers. <a href="https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html"><em>TimeSeriesSplit documentation.</em></a></li>
 <li>Python <code>scikit-learn</code> developers. <a href="https://scikit-learn.org/stable/modules/calibration.html"><em>Probability calibration user guide.</em></a></li>
 </ul></li>

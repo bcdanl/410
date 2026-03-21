@@ -16,7 +16,7 @@ execute:
 
 Hi Marcus,
 
-Thank you for your Research Kick-off Report. You have chosen an ambitious and genuinely important question in international relations. The deterrence versus security dilemma framing is clear, the long historical scope gives the project real intellectual weight, and the Correlates of War project is exactly the right place to begin building a dataset for a study like this. I also like your instinct to divide the analysis into major historical eras. That is good historical judgment, since there is no reason to expect the relationship between military buildup and interstate conflict to look the same before World War I, during the Cold War, and after 1991.
+Thank you for your Research Kick-off Report. You have chosen an ambitious and important question in international relations. The deterrence versus security dilemma framing is clear, the long historical scope gives the project real intellectual weight, and the Correlates of War (COW) project is exactly the right place to begin building a dataset for a study like this. I also like your instinct to divide the analysis into major historical eras. That is good historical judgment, since there is no reason to expect the relationship between military buildup and interstate conflict to look the same before World War I, during the Cold War, and after 1991.
 
 Overall, this project has real potential to become a strong capstone paper. The main priorities for your capstone paper are to pin down the exact datasets and years you can actually use, settle the unit of analysis, and tighten the model so that it matches the question you want to answer about cause and effect.
 
@@ -24,7 +24,7 @@ Overall, this project has real potential to become a strong capstone paper. The 
 
 ### Next Steps
 
-You are working toward the **presentation**, the **capstone paper**, and ultimately the **capstone paper**. Focus on **clear theory**, **careful data construction**, and a model that is framed either as **inference** or as **prediction**.
+You are working toward the **presentation** and the **capstone paper**. Focus on **clear theory**, **careful data construction**, and a model that is framed either as **inference** or as **prediction**.
 
 - **First, confirm the time window that is actually feasible.**  
   Right now, the report presents the project as spanning 1818 to 2023, but the COW sources you are likely to use do not all run through the same end year:
@@ -38,7 +38,7 @@ You are working toward the **presentation**, the **capstone paper**, and ultimat
 - **Clarify the unit of analysis early.**  
   The report sometimes sounds like a country-year study and sometimes like a country-pair study. That choice matters because your theories are relational. Deterrence and the security dilemma are really about what happens between states, not just within one state. For the capstone paper, decide whether your unit is:
   - a **country-year** (for example, whether a state is involved in any dispute in a given year), or
-  - a **dyad-year** (for example, whether State A and State B have a dispute with each other in a given year).
+  - a **dyad-year** (*pair + year*, for example, whether a pair of states (e.g., State A and State B) has a dispute with each other in a given year).
   
   A dyad-year design is usually the better match for your theory. If that feels too large for a semester project, you could limit the sample to contiguous dyads, major-power dyads, or other clearly motivated subsets.
 
@@ -52,7 +52,7 @@ You are working toward the **presentation**, the **capstone paper**, and ultimat
 
 - **Turn "arms accumulation" into precise measures.**  
   Right now, phrases like "total arms stock" and "technological sophistication" are too broad. For the capstone paper, define exactly what each variable will be:
-  - A **capability level** measure such as CINC, military expenditure, or military personnel.
+  - A **state military capability** measure such as military expenditure, military personnel, or another indicator of national military capacity.
   - A **change** measure such as year-to-year growth in capability.
   - A **technology** measure such as the number or type of arms technologies adopted.
   - A **relative balance** measure for dyads, since deterrence often depends on how evenly matched two states are, not just how armed one state is in isolation.
@@ -73,7 +73,7 @@ You are working toward the **presentation**, the **capstone paper**, and ultimat
   
   If you want a **prediction** angle instead, then you should create a training period and a later test period and evaluate how well the model flags future disputes. Because conflict is rare, simple accuracy will not be enough. You would want to focus on whether the model meaningfully improves prediction over a simple baseline.
 
-- **Add the main control variables that conflict scholars usually include.**  
+- **Add the main control variables that matter.**  
   Economic capacity, population, and alliances are a good start, but the model should probably also include:
   - **contiguity**, since neighboring states are far more likely to fight;
   - **joint democracy** or a regime-type measure, if feasible;
@@ -99,9 +99,6 @@ You are working toward the **presentation**, the **capstone paper**, and ultimat
   
   The capstone paper should explain how you will handle changing state codes, missing values, and incomplete coverage in the nineteenth century. This is especially important if you use both monadic and dyadic files.
 
-- **Keep the capstone paper's tone formal.**  
-  The core idea is strong, but the capstone paper and capstone paper should use fully professional language. Phrases like "pumpfake" and "beef" make the topic feel less serious than it is. In revision, aim for a more formal tone and define each concept as precisely as possible.
-
 
 ---
 
@@ -109,8 +106,8 @@ You are working toward the **presentation**, the **capstone paper**, and ultimat
 
 - **Draw on key background readings and data sources (recommended).**  
   For your capstone paper, presentation, and capstone paper, the following sources would be especially helpful:
-  - Fearon, J. D. (1995). [*"Rationalist Explanations for War."*](https://doi.org/10.1017/S0020818300033324) *International Organization*, 49(3), 379-414.
-  - Jervis, R. (1978). [*"Cooperation under the Security Dilemma."*](https://doi.org/10.2307/2009958) *World Politics*, 30(2), 167-214.
+  - Fearon, J. D. (1995). [*"Rationalist Explanations for War."*](https://bcdanl.github.io/410/danl-rw-refs/fearon-IO-1995.pdf) *International Organization*, 49(3), 379-414.
+  - Jervis, R. (1978). [*"Cooperation under the Security Dilemma."*](https://bcdanl.github.io/410/danl-rw-refs/jervis-wp-1978.pdf) *World Politics*, 30(2), 167-214.
   - Federle, J., Meier, A., Müller G,, Mutschler, W.,& Schularic, M.(2026). [*"The Price of War.*"](https://bcdanl.github.io/410/danl-rw-refs/federle-et-al-2026-the-price-of-war.pdf) *American Economic Review*, 116(3), 791–827.
   - Maoz, Z., Johnson, P. L., Kaplan, J., Ogunkoya, F., & Shreve, A. P. (2019). [*"The Dyadic Militarized Interstate Disputes (MIDs) Dataset Version 3.0: Logic, Characteristics, and Comparisons to Alternative Datasets."*](https://bcdanl.github.io/410/danl-rw-refs/Maoz-et-al-JCR-2019.pdf) *Journal of Conflict Resolution*, 63(3), 811-835.
   

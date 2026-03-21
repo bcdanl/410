@@ -256,15 +256,15 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>Hi Hayden,</p>
-<p>Thank you for your Research Kick-off Report. Your topic is practically relevant and easy to motivate. Employee turnover is costly, and understanding whether benefits are associated with lower turnover is a question that matters to managers, compensation analysts, and policy discussions. I also like that you are trying to build the project around public BLS data rather than relying mainly on proprietary surveys. That is a strong foundation for a capstone project.</p>
-<p>The proposal already shows several strengths. First, you have a clear business problem. Second, you identified useful national data sources. Third, you correctly recognized that this is better suited to regression-style analysis than clustering. The idea of decoding BLS series IDs and building a merged analytic file is also ambitious in a good way.</p>
+<p>Thank you for your Research Kick-off Report. Your topic is practically relevant and easy to motivate. Employee turnover is costly, and understanding whether benefits are associated with lower turnover is a question that matters to managers, compensation analysts, and policy discussions. I also like that you are trying to build the project around public BLS data rather than relying mainly on proprietary surveys.</p>
+<p>The proposal shows several strengths. First, you have a clear business problem. Second, you identified useful national data sources. Third, you correctly recognized that this is better suited to regression-style analysis than clustering. The idea of decoding BLS series IDs and building a merged analytic file is also ambitious in a good way.</p>
 <p>The main priorities for your <strong>Capstone Paper</strong> are to sharpen the outcome variable, rethink the unit of analysis around what the BLS datasets actually provide, choose whether the project is primarily <strong>inferential</strong> or <strong>predictive</strong>, and make the data-merging plan more concrete.</p>
 <hr>
 <section id="next-steps" class="level3">
 <h3 class="anchored" data-anchor-id="next-steps">Next Steps</h3>
 <p>You are working toward the <strong>presentation</strong>, the <strong>Capstone Paper</strong>, and ultimately the <strong>capstone paper</strong>. Focus on <strong>feasible data construction</strong>, a <strong>clear modeling goal</strong>, and <strong>careful interpretation</strong>.</p>
 <ul>
-<li><p><strong>Define the dependent variable more precisely.</strong> Right now the report uses “turnover” and “churn” somewhat interchangeably. In the BLS JOLTS data, you will need to decide whether your outcome is:</p>
+<li><p><strong>Define the dependent variable more precisely.</strong> Right now the report uses “turnover” and “churn” somewhat interchangeably. In the <a href="https://www.bls.gov/jlt/">BLS JOLTS (Job Openings and Labor Turnover Survey) data</a>, you will need to decide whether your outcome is:</p>
 <ul>
 <li>the <strong>quits rate</strong></li>
 <li>the <strong>total separations rate</strong></li>
@@ -272,7 +272,7 @@ ul.task-list li input[type="checkbox"] {
 </ul>
 <p>For a question about employee retention, quits rate or total separations rate makes more sense than job openings or hires. Be explicit about which one you will study and why.</p></li>
 <li><p><strong>Rethink the unit of analysis around the data that are actually available.</strong> Your proposal says the unit of analysis will be “the employee benefits themselves.” That is not the unit of observation in a regression. Benefits are variables. The unit of observation is the row of the dataset.</p>
-<p>A more important issue is feasibility. In the public BLS series formats, the Employee Benefits (NB) and ECEC (CM) series IDs include both <strong>industry</strong> and <strong>occupation</strong>, but JOLTS series IDs are organized around <strong>industry, geography, establishment size, and data element</strong>, not occupation. That means a public JOLTS-based outcome is naturally an <strong>industry-by-time</strong> outcome, not an industry-by-occupation-by-time outcome.</p>
+<p>A more important issue is feasibility. In the public BLS series formats, the <a href="https://www.bls.gov/ebs/">Employee Benefits</a> (<code>NB</code>) and <a href="https://www.bls.gov/ecec/">Employer Costs for Employee Compensation (ECEC)</a> (<code>CM</code>) series IDs include both <strong>industry</strong> and <strong>occupation</strong>, but JOLTS series IDs are organized around <strong>industry, geography, establishment size, and data element</strong>, not occupation. That means a public JOLTS-based outcome is naturally an <strong>industry-by-time</strong> outcome, not an industry-by-occupation-by-time outcome.</p>
 <p>Because of this, your most feasible unit of analysis is probably an <strong>industry-year</strong> or <strong>industry-month</strong> panel. If occupation is central to your question, then you should either:</p>
 <ul>
 <li>find a different outcome source that supports occupation-level turnover, or</li>
@@ -280,7 +280,7 @@ ul.task-list li input[type="checkbox"] {
 </ul></li>
 <li><p><strong>Choose whether the project is inferential or predictive.</strong> The capstone should make either an inferential contribution or a predictive contribution, and your Capstone Paper should state which one you are doing.</p>
 <p>For this topic, an <strong>inferential</strong> study seems more natural. Your question is essentially: which benefits are associated with lower turnover, after accounting for other factors? If that is the goal, then your main outputs are coefficient estimates, uncertainty measures, and careful interpretation.</p>
-<p>A <strong>predictive</strong> version is also possible, but it would need a different framing: for example, using benefit and workforce characteristics to predict future turnover rates across industries. If you choose that path, then you would want a training/test split and prediction metrics such as RMSE or MAE. In that case, you should avoid strong causal language.</p></li>
+<p>A <strong>predictive</strong> version is also possible, but it would need a different framing: for example, using benefit and workforce characteristics to predict future turnover rates across industries. If you choose that path, then you would want a training/test split and prediction metrics such as RMSE. In that case, you should avoid strong causal language.</p></li>
 <li><p><strong>Think carefully about causality, but keep your claims modest.</strong> A negative relationship between benefits and turnover does not automatically mean that benefits cause lower turnover. High-turnover industries may offer fewer benefits because of their workforce structure, cost pressures, or business model. Wages, unionization, establishment size, and worker composition may also affect both benefits and turnover.</p>
 <p>For the Capstone Paper, you should:</p>
 <ul>
@@ -289,17 +289,22 @@ ul.task-list li input[type="checkbox"] {
 <li>include strong control variables where possible</li>
 <li>consider using lagged benefit variables, such as benefits in year <span class="math inline">\(t - 1\)</span> to explain turnover in year <span class="math inline">\(t\)</span></li>
 </ul></li>
-<li><p><strong>Do not restrict the study to a single March snapshot unless you must.</strong> Your report sometimes sounds like the analysis will be “as of March 2025.” That is workable for a descriptive comparison, but it is much weaker for inference or prediction. If the data coverage allows it, a multi-year panel will be much stronger because it gives you more observations and lets you separate persistent industry differences from broader time shocks.</p></li>
+<li><p><strong>Do not restrict the study to a single March snapshot unless you must.</strong> Your report sometimes sounds like the analysis will be “as of March 2025.” That is workable for a descriptive comparison, but it is weaker for inference or prediction. If the data coverage allows it, a multi-year panel will be much stronger because it gives you more observations and lets you separate persistent industry differences from broader time shocks.</p></li>
 <li><p><strong>Write the model down explicitly.</strong> Right now the method section says “general Cause-and-Effect regression,” but the actual specification is not written out. Your Capstone Paper should present an equation.</p>
 <p>If you use an industry-year panel, a sensible inferential specification would look like:</p>
-<p><span class="math display">\[\text{TurnoverRate}_{i,t} = \beta_0 + \beta_1 \text{HealthAccess}_{i,t} + \beta_2 \text{RetirementAccess}_{i,t} + \beta_3 \text{PaidLeaveCost}_{i,t} + \mathbf{X}_{i,t}'\boldsymbol{\gamma} + \alpha_i + \delta_t + \varepsilon_{i,t}\]</span></p>
+<p><span class="math display">\[
+\begin{align}
+\text{TurnoverRate}_{i,t} = \beta_0 &amp;+ \beta_1 \text{HealthAccess}_{i,t} + \beta_2 \text{RetirementAccess}_{i,t} + \beta_3 \text{PaidLeaveCost}_{i,t} \\
+&amp;+ \mathbf{X}_{i,t}'\boldsymbol{\gamma} + \alpha_i + \delta_t + \varepsilon_{i,t}
+\end{align}
+\]</span></p>
 <p>where <span class="math inline">\(i\)</span> indexes industries, <span class="math inline">\(t\)</span> indexes time, <span class="math inline">\(\alpha_i\)</span> captures persistent differences across industries, <span class="math inline">\(\delta_t\)</span> captures common time shocks, and <span class="math inline">\(\mathbf{X}_{i,t}\)</span> includes controls such as wage levels, establishment size mix, or other workforce characteristics.</p>
 <p>If you choose a predictive framing instead, say so clearly and explain the target variable, feature set, and evaluation plan.</p></li>
 <li><p><strong>Be explicit about the time alignment problem.</strong> Your three main data sources do not operate on the same schedule:</p>
 <ul>
-<li>JOLTS is monthly</li>
-<li>Employee Benefits is annual</li>
-<li>ECEC is quarterly</li>
+<li><code>JOLTS</code> is monthly</li>
+<li><code>NB</code> is annual</li>
+<li><code>CM</code> is quarterly</li>
 </ul>
 <p>That means you need a clear plan for aligning time. One reasonable option is to aggregate JOLTS to the year level and match it to annual benefit measures. Another is to use March or annual averages consistently if that matches the benefit reference period better. Do not leave this as an unstated merge issue. It is one of the central design choices in the project.</p></li>
 <li><p><strong>Specify which benefits you will include.</strong> “Benefits” is too broad as written. For the Capstone Paper, list the exact benefit measures you plan to study, such as:</p>
@@ -308,7 +313,7 @@ ul.task-list li input[type="checkbox"] {
 <li>retirement plan access</li>
 <li>paid vacation access</li>
 <li>paid sick leave access</li>
-<li>employer benefit cost shares from ECEC</li>
+<li>employer benefit cost shares from <code>ECEC</code></li>
 </ul>
 <p>Then decide whether you will:</p>
 <ul>
@@ -319,14 +324,14 @@ ul.task-list li input[type="checkbox"] {
 <li><p><strong>Make the merge plan concrete and test it early.</strong> One of the strongest technical parts of your proposal is the idea of decoding BLS series IDs. That can work, but only if you document the exact keys.</p>
 <p>For the Capstone Paper, show:</p>
 <ul>
-<li>one example NB series ID and how you will parse it</li>
-<li>one example CM series ID and how you will parse it</li>
-<li>one example JOLTS series ID and how you will parse it</li>
+<li>one example <code>NB</code> series ID and how you will parse it</li>
+<li>one example <code>CM</code> series ID and how you will parse it</li>
+<li>one example <code>JOLTS</code> series ID and how you will parse it</li>
 <li>the common fields that will actually be used for the merge</li>
 </ul>
 <p>My advice is to build a small prototype dataset first with just a few industries and a few years. That will tell you quickly whether the full design is feasible.</p></li>
 <li><p><strong>Use non-BLS sources carefully.</strong> The QuickBooks and Nuveen materials are fine for motivation, but they should not drive your main empirical analysis. The same caution applies to the GIGAcalculator spreadsheet unless you can clearly document where the data come from and how the measures were constructed.</p>
-<p>For the final paper, the strongest version of this project uses BLS data as the core analytic source and treats outside surveys as context only.</p></li>
+<p>For the capstone paper, the strongest version of this project uses BLS data as the core analytic source and treats outside surveys as context only.</p></li>
 <li><p><strong>Strengthen the writing of the research question.</strong> Right now the question asks, “Which employee benefits result in the lowest average turnover?” That wording sounds stronger than your design can likely support. A more careful version would be:</p>
 <blockquote class="blockquote">
 <p>Which employee benefits are most strongly associated with lower labor turnover across U.S. industries?</p>
@@ -337,7 +342,7 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="questions-to-think-about-as-you-refine-your-capstone-paper" class="level3">
 <h3 class="anchored" data-anchor-id="questions-to-think-about-as-you-refine-your-capstone-paper">Questions to Think About as You Refine Your Capstone Paper</h3>
-<p>You do <strong>not</strong> need to answer all of these now, but they may help you sharpen both the analysis and the story you tell in your presentation and final paper.</p>
+<p>You do <strong>not</strong> need to answer all of these now, but they may help you sharpen both the analysis and the story you tell in your presentation and the capstone paper.</p>
 <p><strong>1. What exactly is your outcome measure?</strong></p>
 <ul>
 <li>Is the best retention outcome the quits rate, the total separations rate, or something else?</li>
@@ -374,7 +379,9 @@ ul.task-list li input[type="checkbox"] {
 <li>Bureau of Labor Statistics. <a href="https://www.bls.gov/opub/hom/ecec/"><em>Handbook of Methods: Employer Costs for Employee Compensation.</em></a></li>
 <li>Bureau of Labor Statistics. <a href="https://www.bls.gov/ebs/publications/employee-benefits-in-the-united-states-march-2025.htm"><em>Employee Benefits in the United States, March 2025.</em></a></li>
 <li>Bureau of Labor Statistics. <a href="https://www.bls.gov/help/hlpforma.htm"><em>Series ID Formats.</em></a></li>
-<li>Ouimet, P., &amp; Tate, G. (2023). <a href="https://bcdanl.github.io/410/danl-rw-refs/OuimetTate-NBER-2023.pdf"><em>“Firms with Benefits? Nonwage Compensation and Implications for Firms and Labor Markets.”</em></a> NBER Working Paper 31463.</li>
+<li>Ouimet, P., &amp; Tate, G. (2023). <a href="https://bcdanl.github.io/410/danl-rw-refs/OuimetTate-NBER-2023.pdf"><em>“Firms with Benefits? Nonwage Compensation and Implications for Firms and Labor Markets.”</em></a> <em>NBER Working Paper</em> 31463.</li>
+<li>Frazis, H., &amp; Loewenstein, M. (2013). <a href="https://www.jstor.org/stable/23798593?seq=1"><em>“How Responsive are Quits to Benefits?”</em></a> <em>Journal of Human Resources</em>, 48(4), 969-997.</li>
+<li>Bailey, J., Colman, G. &amp; Dave, D. (2022). <a href="https://www.mdpi.com/1911-8074/15/7/296"><em>“The Evolution of Job Lock in the U.S.: Evidence from the Affordable Care Act”</em></a> <em>Journal of Risk and Financial Management</em>, 15(7), 296.</li>
 </ul>
 <hr>
 <p>Best,<br>

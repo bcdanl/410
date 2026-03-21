@@ -16,9 +16,9 @@ execute:
 
 Hi Jordan and Jake,
 
-Thank you for your Research Kick-off Report. You have chosen a timely and genuinely important public-policy question: whether drug-related arrests are associated with lower or higher overdose mortality across New York City neighborhoods. The project is well motivated, the stakeholder framing is strong, and the decision to use a neighborhood-by-year panel with fixed effects is a very sensible starting point for this topic. Your report also does a good job acknowledging several core limitations up front—especially reverse causality, boundary mismatches, and the fact that arrest counts may reflect policing intensity as much as underlying drug activity.
+Thank you for your Research Kick-off Report. You group has chosen a timely and important public-policy question: whether drug-related arrests are associated with lower or higher overdose mortality across New York City neighborhoods. The project is well motivated, the stakeholder framing is strong, and the decision to use a neighborhood-by-year panel with fixed effects is a sensible starting point for this topic. Your report also does a good job acknowledging several core limitations up front, especially reverse causality, boundary mismatches, and the fact that arrest counts may reflect policing intensity as much as underlying drug activity.
 
-Overall, this has the makings of a strong capstone project. The biggest priorities going forward are to (1) tighten the identification strategy, (2) lock down a feasible and internally consistent geography, (3) make the outcome model fit the structure of the data, and (4) expand the reference base beyond CDC WONDER so the data plan is more clearly tied to NYC-specific sources.
+Overall, this has the makings of a strong capstone project. The biggest priorities going forward are to (1) tighten the empirical strategy, (2) lock down a feasible and internally consistent geography, (3) make the outcome model fit the structure of the data, and (4) expand the reference base beyond CDC WONDER so the data plan is more clearly tied to NYC-specific sources.
 
 ---
 
@@ -27,10 +27,10 @@ Overall, this has the makings of a strong capstone project. The biggest prioriti
 You are working toward both the **presentation** and the **capstone paper**. Focus on **clear causal reasoning**, a **defensible data-construction plan**, and **transparent interpretation of what your model can and cannot establish**.
 
 - **Address reverse causality more explicitly and place it at the center of your analysis.**  
-  Your current limitations section correctly notes reverse causality, but this issue deserves to be central in the Capstone Paper. Neighborhoods experiencing more overdoses may receive more police attention, so a simple positive correlation between arrests and overdose deaths does **not** imply arrests worsen outcomes — it may just reflect targeted enforcement. In the Capstone Paper:
+  Your current limitations section correctly notes reverse causality, but this issue deserves to be central in the Capstone Paper. Neighborhoods experiencing more overdoses may receive more police attention, so a simple positive correlation between arrests and overdose deaths does **not** imply arrests worsen outcomes. But it may just reflect targeted enforcement. In the Capstone Paper:
   - State clearly that the main threat to causal interpretation is that enforcement responds to the same drug-market conditions that drive overdoses.
   - Explain what lagged arrest rates do and do not solve. A one-year lag helps reduce the concern that this year's arrests are directly caused by this year's overdose deaths, but it does not eliminate the possibility that both are being driven by the same underlying neighborhood conditions.
-  - Discuss whether there is a policy shift, administrative change, or other real-world event that created variation in arrests that was unrelated to overdose trends — such variation would give you a stronger basis for a causal claim.
+  - Discuss whether there is a policy shift, administrative change, or other real-world event that created variation in arrests that was unrelated to overdose trends. Such variation would give you a stronger basis for a causal claim.
 
 - **Choose one geography early, and make sure the two datasets are measuring the same place concept.**  
   Right now the paper leaves open ZIP codes versus community districts. That choice is not a minor detail; it may determine whether the project is feasible.
@@ -38,7 +38,7 @@ You are working toward both the **presentation** and the **capstone paper**. Foc
   - NYC overdose reporting is often organized at the **United Hospital Fund (UHF) neighborhood** level, which may be a more practical compromise than raw ZIP codes or community districts.
   - In the Capstone Paper, explain exactly how you will map arrests and overdose deaths to the same geographic unit, and what you will do if some boundaries do not line up cleanly.
 
-- **Revisit the outcome model before you commit to log(rate + constant) as the main specification.**  
+- **Revisit the outcome model before you commit to `log(rate + constant)` as the main specification.**  
   The log transformation is a reasonable first idea, but this setting has a few complications:
   - Small-area overdose counts can be sparse, and some neighborhood-year cells may be zero, suppressed, or unstable.
   - Adding a constant before taking logs can affect interpretation, especially when values are small.
@@ -59,7 +59,7 @@ You are working toward both the **presentation** and the **capstone paper**. Foc
   - In addition to COVID, think about the transition to a fentanyl-dominated overdose environment. The relationship between arrests and overdose deaths may differ sharply between earlier heroin-dominant years and later fentanyl-heavy years, when even small disruptions in supply can lead to users encountering more dangerous substitutes.
 
 - **Refine the socioeconomic heterogeneity question.**  
-  The idea is good, but the current framing — "high gini like Manhattan, compared to Staten Island" — needs tightening.
+  The idea is good, but the current framing, such as "high gini like Manhattan, compared to Staten Island," needs tightening.
   - Manhattan and Staten Island are boroughs, not neighborhood categories.
   - Borough-level inequality is not the same thing as neighborhood-level inequality.
   - A cleaner approach would be to define heterogeneity using **neighborhood poverty rate**, **median household income**, or a small number of income/poverty quartiles drawn from ACS data.
@@ -110,8 +110,8 @@ You do **not** need to answer all of these now, but they may help you sharpen th
 
 - How many neighborhood-year cells have zero, missing, or suppressed overdose values?
 - Do your headline results change if you compare:
-  - log(overdose rate + constant),
-  - a count model with a population offset, and
+  - `log(overdose rate + constant)`,
+  - a Poisson count model with a population offset, and
   - a simpler level-level or standardized-rate specification?
 
 **4. Controls and Panel Structure**
@@ -138,8 +138,8 @@ These are not the only sources you should use, but they are better aligned with 
 - Mattson, C. L., Tanz, L. J., Quinn, K., Kariisa, M., Patel, P., & Davis, N. L. (2021). [*Trends and Geographic Patterns in Drug and Synthetic Opioid Overdose Deaths - United States, 2013-2019*](https://www.cdc.gov/mmwr/volumes/70/wr/mm7006a4.htm). *Morbidity and Mortality Weekly Report*, 70(6), 202-207.
 - Hawk, M., Coulter, R. W. S., Egan, J. E., Fisk, S., Friedman, M. R., Tula, M., & Kinsky, S. (2017). [*Harm reduction principles for healthcare settings*](https://doi.org/10.1186/s12954-017-0196-4). *Harm Reduction Journal*, 14(1).
 - Schnell, M., & Currie, J. (2018). [*Addressing the opioid epidemic: Is there a role for physician education?*](https://bcdanl.github.io/410/danl-rw-refs/SchnellCurrie-AJHE-2018.pdf). *American Journal of Health Economics*, 4(3), 383-410.
-- Ray et. al. (2023) [*"Spatiotemporal Analysis Exploring the Effect of Law Enforcement Drug Market Disruptions on Overdose, Indianapolis, Indiana, 2020–2021"*](https://ajph.aphapublications.org/doi/full/10.2105/AJPH.2023.307291).  *American Journal of Public Health*, 
-- Kral et. al. (2025) [*"Law Enforcement Drug Seizures and Opioid-Involved Overdose Mortality"*](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2831697). *JAMA Network Open*, 8(3)
+- Ray et. al. (2023) [*"Spatiotemporal Analysis Exploring the Effect of Law Enforcement Drug Market Disruptions on Overdose, Indianapolis, Indiana, 2020–2021"*](https://ajph.aphapublications.org/doi/full/10.2105/AJPH.2023.307291).  *American Journal of Public Health* (*To test the hypothesis that law enforcement efforts to disrupt local drug markets by seizing opioids or stimulants are associated with increased spatiotemporal clustering of overdose events in the surrounding geographic area.*) 
+- Kral et. al. (2025) [*"Law Enforcement Drug Seizures and Opioid-Involved Overdose Mortality"*](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2831697). *JAMA Network Open*, 8(3) (*Is there a geospatial association between opioid-involved overdose mortality and law enforcement drug seizures in San Francisco?*)
 
 
 

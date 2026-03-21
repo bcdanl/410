@@ -256,46 +256,71 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>Hi Cameron and Nada,</p>
-<p>Thank you for your Research Kick-off Report. You have chosen a topic with real policy importance. Food access is closely tied to nutrition, transportation, neighborhood opportunity, and health, and New York State gives you meaningful variation between dense urban areas, suburbs, small cities, and rural counties. Starting with the USDA Food Access Research Atlas is appropriate, and logistic regression is a sensible method for a binary tract-level outcome.</p>
-<p>The proposal is clearly motivated and well organized. The main priorities for your <strong>capstone paper</strong> are to choose whether the primary goal is <strong>inference</strong> or <strong>prediction</strong>, define the USDA outcome variable with greater precision, and handle the urban and rural structure of the data more carefully. You should also tighten the model specification and be more explicit about what the USDA variables do and do not measure.</p>
+<p>Thank you for your Research Kick-off Report. You have chosen a topic with real policy importance. Food access is closely tied to nutrition, transportation, neighborhood opportunity, and health, and New York State gives you meaningful variation between dense urban areas, suburbs, small cities, and rural counties. Starting with the USDA Food Access Research Atlas is appropriate, and a binary-response model is a sensible method if your outcome is whether a tract is classified as low access.</p>
+<p>The proposal is clearly motivated and well organized. The main priorities for your <strong>capstone paper</strong> are to choose whether the primary goal is <strong>inference</strong> or <strong>prediction</strong>, define the USDA outcome variable with greater precision, and handle the urban and rural structure of the data more carefully. You should also tighten the model specification, be more explicit about what the USDA variables do and do not measure, and clarify whether your dataset is truly cross-sectional or a short tract-level panel created by combining multiple USDA releases.</p>
 <hr>
 <section id="next-steps" class="level3">
 <h3 class="anchored" data-anchor-id="next-steps">Next Steps</h3>
-<p>You are working toward both the <strong>presentation</strong> and the <strong>capstone paper</strong>. Focus on a <strong>clear empirical goal</strong>, a <strong>carefully defined tract-level model</strong>, and <strong>honest interpretation</strong> of what this cross-sectional dataset can and cannot tell us.</p>
+<p>You are working toward both the <strong>presentation</strong> and the <strong>capstone paper</strong>. Focus on a <strong>clear empirical goal</strong>, a <strong>carefully defined tract-level model</strong>, and careful <strong>interpretation</strong> of what the data can and cannot tell us.</p>
 <ul>
 <li><p><strong>Choose a primary goal: inference or prediction.</strong><br>
 Your current method section says logistic regression will be used for both “prediction” and “cause-and-effect.” Those are related but not identical tasks.</p>
 <ul>
-<li>If your primary goal is <strong>inference</strong>, the paper should ask: which tract characteristics are associated with a higher probability of being low access, holding other characteristics constant? Then your emphasis should be on coefficient estimates, odds ratios or marginal effects, standard errors, and interpretation.</li>
-<li>If your primary goal is <strong>prediction</strong>, the paper should ask: how accurately can tract characteristics classify whether a tract is low access? Then your emphasis should be on out-of-sample performance such as AUC, precision, recall, F1, and the confusion matrix.</li>
+<li>If your primary goal is <strong>inference</strong>, the paper should ask: which tract characteristics are associated with a higher probability of being low access, holding other tract characteristics constant? Then your emphasis should be on coefficient estimates, marginal effects, confidence intervals, and interpretation.</li>
+<li>If your primary goal is <strong>prediction</strong>, the paper should ask: how accurately can tract characteristics classify whether a tract is low access? Then your emphasis should be on out-of-sample performance such as AUC, precision, recall, and the confusion matrix.</li>
 </ul>
 <p>Given your research questions, I think <strong>inference</strong> is the stronger primary direction, with prediction as an optional secondary section. That framing matches your question about which socioeconomic factors are associated with low food access. If you do include a prediction section, keep the claims clearly predictive and avoid treating predictive accuracy as evidence of causality.</p></li>
 <li><p><strong>Be more precise about the outcome variable.</strong><br>
-The proposal currently defines low access as one-third of the population living beyond the distance threshold. The USDA definition used for <code>LA1and10</code> is slightly more specific: a tract is flagged if <strong>at least 500 people or at least 33 percent of the population</strong> live more than 1 mile from the nearest supermarket in urban areas or more than 10 miles in rural areas. That detail matters, especially for smaller tracts.</p>
+The proposal currently defines low access as one-third of the population living beyond the distance threshold. The USDA definition used for <a href="https://www.ers.usda.gov/data-products/food-access-research-atlas/documentation#:~:text=Low%2Dincome%20and%20low%2Daccess%20tract%20measured%20at%201%20mile,Dimensions%20TDLinx%20directory%20of%20stores"><code>LA1and10</code></a> is slightly more specific: a tract is flagged if <strong>at least 500 people or at least 33 percent of the population</strong> live more than 1 mile from the nearest supermarket in urban areas or more than 10 miles in rural areas. That detail matters, especially for smaller tracts.</p>
 <p>For the capstone paper:</p>
 <ul>
 <li>State the exact outcome variable name and definition.</li>
 <li>Make clear that your unit of analysis is the <strong>census tract</strong>.</li>
-<li>Distinguish carefully between a <strong>low-access tract</strong> and a <strong>low-income, low-access tract</strong>. Those are not the same USDA concept, and the variable choice changes the interpretation of your results.</li>
+<li>Distinguish carefully between a <strong>low-access tract</strong> and a <strong>low-income, low-access tract</strong>. Those are not the same USDA concepts, and the variable choice changes the interpretation of your results.</li>
 </ul></li>
-<li><p><strong>Write out the logistic regression specification explicitly.</strong><br>
-Right now the method plan says “logistic regression” but does not show the model. For the capstone paper, write it out clearly:</p>
-<p><span class="math display">\[
-\Pr(\text{LA1and10}_i = 1) = \text{logit}^{-1}\left(\beta_0 + \beta_1 \text{Poverty}_i + \beta_2 \text{Income}_i + \beta_3 \text{NoVehicle}_i + \beta_4 \text{Urban}_i + \mathbf{X}_i'\boldsymbol{\gamma}\right)
-\]</span></p>
-<p>where <span class="math inline">\(i\)</span> indexes census tracts and <span class="math inline">\(\mathbf{X}_i\)</span> can include race or ethnicity shares, county fixed effects, or regional controls.</p>
-<p>A few practical notes:</p>
+<li><p><strong>Match the model to the structure of your data.</strong><br>
+This point is very important. If you use only one USDA release, then the data are essentially <strong>cross-sectional</strong>, and a standard cross-sectional logistic regression is appropriate. But if you combine multiple USDA releases for the same census tracts, then you are working with a <strong>short tract-level panel</strong> and should use a model that reflects that structure.</p>
+<p>Because your dependent variable is binary, I recommend the following:</p>
 <ul>
-<li><strong>RMSE is not the right main metric</strong> for a binary logistic model. For inference, focus on coefficients, standard errors, confidence intervals, and substantive interpretation. For prediction, use AUC, precision, recall, F1, and the confusion matrix.</li>
-<li>Odds ratios are fine, but the capstone paper will be easier to read if you also translate the main results into <strong>predicted probabilities</strong> for a few example tracts.</li>
-<li>Because this is tract-level data, interpret results as differences across <strong>neighborhoods</strong>, not as claims about individual households.</li>
-</ul></li>
+<li>If you have <strong>one cross section</strong>, use <strong>cross-sectional logistic regression</strong>.</li>
+<li>If you have a <strong>tract-level panel across multiple years</strong>, use a <strong>correlated random effects logistic model</strong> rather than a simple pooled logit.</li>
+</ul>
+<p>A correlated random effects approach is attractive here because it allows you to model a binary outcome while also accounting for tract-specific unobserved heterogeneity that may be correlated with your regressors. It is also more practical than a fixed-effects logit in a short panel, since fixed-effects logit drops tracts with no within-tract change in the binary outcome.</p></li>
+<li><p><strong>Write out the model specification explicitly.</strong><br>
+If you build a tract-level panel, your capstone paper should write the model clearly. A useful specification is:</p>
+<p><span class="math display">\[
+\Pr(\text{LA1and10}_{it} = 1 \mid \mathbf{X}_{it}, \bar{\mathbf{X}}_i, c_i)
+=
+\text{logit}^{-1}
+\left(
+\beta_0
++ \mathbf{X}_{it}'\boldsymbol{\beta}
++ \bar{\mathbf{X}}_i'\boldsymbol{\delta}
++ c_i
+\right),
+\]</span></p>
+<p>where <span class="math inline">\(i\)</span> indexes census tracts, <span class="math inline">\(t\)</span> indexes years, <span class="math inline">\(\mathbf{X}_{it}\)</span> contains time-varying tract characteristics, and <span class="math inline">\(\bar{\mathbf{X}}_i\)</span> contains tract-level means of those time-varying regressors. Including these tract means is the key correlated-random-effects adjustment because it allows the tract-specific effect to be correlated with the observed covariates.</p>
+<p>In words, this lets you separate:</p>
+<ul>
+<li><strong>within-tract changes over time</strong>, and</li>
+<li><strong>between-tract differences in average characteristics</strong>.</li>
+</ul>
+<p>That distinction will make your interpretation much stronger.</p>
+<p>If your data remain cross-sectional, then remove the time index and estimate an ordinary logistic regression instead.</p></li>
+<li><p><strong>Use appropriate interpretation and evaluation tools for a binary model.</strong><br>
+Because your outcome is binary:</p>
+<ul>
+<li><strong>RMSE should not be the main performance metric</strong> for the model.</li>
+<li>For inference, focus on <strong>marginal effects</strong> and their confidence intervals.</li>
+<li>For prediction, use <strong>AUC, precision, recall, and the confusion matrix</strong>.</li>
+</ul>
+<p>Odds ratios are acceptable, but the capstone paper will be easier to read if you also translate the main results into <strong>predicted probabilities</strong> or <strong>average marginal effects</strong>. Also remember that this is tract-level analysis, so you should interpret results as differences across <strong>neighborhoods</strong>, not as claims about individual households.</p></li>
 <li><p><strong>Handle the urban and rural issue more carefully.</strong><br>
-This is one of the most important conceptual issues in your design. The <code>LA1and10</code> outcome already uses different thresholds for urban and rural tracts. That means the <code>Urban</code> variable is partly built into the definition of the dependent variable. If you simply include <code>Urban</code> as an ordinary control in one pooled regression, interpretation becomes awkward.</p>
+This is one of the most important conceptual issues in your design. The <code>LA1and10</code> outcome already uses different thresholds for urban and rural tracts. That means the <code>Urban</code> variable is partly built into the dependent variable itself. If you simply include <code>Urban</code> as an ordinary control in one pooled model, interpretation becomes awkward.</p>
 <p>Better options:</p>
 <ul>
 <li>Run <strong>separate models</strong> for urban and rural tracts.</li>
-<li>Or estimate a pooled model with interaction terms and treat the results cautiously.</li>
+<li>Or estimate a pooled model with interaction terms and interpret cautiously.</li>
 </ul>
 <p>Separate models may be the clearest choice for an undergraduate capstone paper because the mechanisms are likely different. In New York City, public transit and neighborhood density may matter most. In rural upstate counties, vehicle access and long travel distances may matter more.</p></li>
 <li><p><strong>Be careful about which independent variables are mechanically related to the outcome.</strong><br>
@@ -315,17 +340,18 @@ Your report says the dataset is limited to 2010 census data and 2019 food source
 <li>rural and urban status uses the 2019 urban area definition,</li>
 <li>and store locations come from 2019 store directories.</li>
 </ul>
-<p>Some demographic counts in the Atlas still trace back to 2010 census tract counts. So the capstone paper should explicitly document the source year for each major variable rather than treating the whole dataset as one year. This also means your conclusions describe <strong>late-2010s food access patterns</strong>, not current 2026 conditions.</p></li>
+<p>Some demographic counts in the Atlas still trace back to 2010 census tract counts. So the capstone paper should explicitly document the source year for each major variable rather than treating the whole dataset as one year. This also means your conclusions describe <strong>late-2010s food access patterns</strong>, not current conditions.</p></li>
 <li><p><strong>Add a spatial and descriptive section before the regression.</strong><br>
-Your paper will be much stronger if readers first see where low-access tracts are and how they differ descriptively from other tracts. Before the logistic regression, I recommend:</p>
+Your paper will be much stronger if readers first see where low-access tracts are and how they differ descriptively from other tracts. Before the model, I recommend:</p>
 <ul>
 <li>a <strong>New York map of census tracts</strong> colored by <code>LA1and10</code>,</li>
 <li>a <strong>table comparing low-access and non-low-access tracts</strong> on poverty, income, no-vehicle share, and urban or rural status,</li>
 <li>and one simple figure showing low-access rates by county group or by urban versus rural tracts.</li>
 </ul>
 <p>These descriptive pieces will make the later regression results much easier to interpret.</p></li>
-<li><p><strong>Think about spatial dependence.</strong><br>
-Nearby tracts are not truly independent. Tracts within the same county or metro area share infrastructure, transit systems, land use patterns, and retailer networks. For an inferential model, at minimum consider <strong>county fixed effects</strong> or <strong>standard errors clustered by county</strong>. For a predictive section, be aware that a purely random train/test split may overstate performance because nearby tracts are similar. If prediction becomes a major part of the project, a <strong>county-based or metro-based validation split</strong> would be more convincing than a simple random split.</p></li>
+<li><p><strong>Think about spatial dependence and clustered structure.</strong><br>
+Nearby tracts are not truly independent. Tracts within the same county or metro area share infrastructure, transit systems, land use patterns, and retailer networks. At minimum, consider <strong>standard errors clustered by county</strong>. If you estimate a tract-level panel, you may also want county or regional controls to absorb broader area characteristics.</p>
+<p>If prediction becomes a major part of the project, a purely random train/test split may overstate model performance because nearby tracts are similar. A <strong>county-based or metro-based validation split</strong> would be more convincing.</p></li>
 </ul>
 <hr>
 </section>
@@ -341,8 +367,8 @@ For your capstone paper and presentation, you may find it helpful to consult:
 <li>Dutko, P., Ver Ploeg, M., &amp; Farrigan, T. (2012). <a href="https://www.ers.usda.gov/publications/pub-details?pubid=45017"><em>Characteristics and Influential Factors of Food Deserts.</em></a> <em>USDA Economic Research Report No.&nbsp;140.</em></li>
 <li>Walker, R. E., Keane, C. R., &amp; Burke, J. G. (2010). <a href="https://doi.org/10.1016/j.healthplace.2010.04.013"><em>“Disparities and Access to Healthy Food in the United States: A Review of Food Deserts Literature.”</em></a> <em>Health &amp; Place</em>, 16(5), 876-884.</li>
 <li>Sönmez, E., Lee, D., Gómez, M. I., &amp; Fan, X. (2016). <a href="https://bcdanl.github.io/410/danl-rw-refs/snmezEtAl-ajae-2016-food-bank.pdf"><em>“Improving Food Bank Gleaning Operations: An Application in New York State”</em></a>. <em>American Journal of Agricultural Economics</em>, 98(2), 549-563.</li>
-<li>Prendergast, C. (2017). <a href="https://bcdanl.github.io/410/danl-rw-refs/prendergast-jep-2017.pdf"><em>“How Food Banks Use Markets to Feed the Poor”</em></a> <em>Journal of Economic Perspectives</em>, 31(4), 145–162.</li>
-<li>Prendergast, C. (2022). <a href="https://bcdanl.github.io/410/danl-rw-refs/prendergast-jpe-2022-food-banks.pdf"><em>“The Allocation of Food to Food Banks”</em></a> <em>Journal of Political Economy</em>, 130(8), 1993–2017.</li>
+<li>Prendergast, C. (2017). <a href="https://bcdanl.github.io/410/danl-rw-refs/prendergast-jep-2017.pdf"><em>“How Food Banks Use Markets to Feed the Poor”</em></a> <em>Journal of Economic Perspectives</em>, 31(4), 145-162.</li>
+<li>Prendergast, C. (2022). <a href="https://bcdanl.github.io/410/danl-rw-refs/prendergast-jpe-2022-food-banks.pdf"><em>“The Allocation of Food to Food Banks”</em></a> <em>Journal of Political Economy</em>, 130(8), 1993-2017.</li>
 <li>Smith, V. &amp; Goldstein, J. (2017). <a href="https://www.npr.org/sections/money/2019/09/11/565736836/episode-665-the-free-food-market"><em>“Planet Money - Episode 665: The Free Food Market”</em></a>. <em>National Public Radio</em>.</li>
 </ul></li>
 </ul>
@@ -351,22 +377,27 @@ For your capstone paper and presentation, you may find it helpful to consult:
 <section id="questions-to-think-about-as-you-refine-your-capstone-paper" class="level3">
 <h3 class="anchored" data-anchor-id="questions-to-think-about-as-you-refine-your-capstone-paper">Questions to Think About as You Refine Your capstone paper</h3>
 <p>You do <strong>not</strong> need to answer all of these, but they may help you sharpen your analysis and policy narrative.</p>
-<p><strong>1. Urban and Rural Mechanisms</strong></p>
+<p><strong>1. Cross Section or Panel</strong></p>
+<ul>
+<li>Are you using only one Atlas release, or will you combine multiple releases for the same census tracts?</li>
+<li>If you combine releases, which variables truly vary over time and which are mostly fixed by construction?</li>
+</ul>
+<p><strong>2. Urban and Rural Mechanisms</strong></p>
 <ul>
 <li>Would it be cleaner to run separate urban and rural models, given that the USDA outcome itself uses different distance rules?</li>
 <li>Are the strongest predictors of low access the same in New York City as they are in rural western or northern New York?</li>
 </ul>
-<p><strong>2. Variable Construction</strong></p>
+<p><strong>3. Variable Construction</strong></p>
 <ul>
 <li>Is your vehicle variable a pure no-car measure, or is it already combined with distance to stores? If it is the latter, it overlaps too much with the outcome.</li>
 <li>Will you use race and ethnicity as shares, and how will you choose the omitted reference group?</li>
 </ul>
-<p><strong>3. Causal Interpretation</strong></p>
+<p><strong>4. Interpretation</strong></p>
 <ul>
-<li>If poverty rate is strongly associated with low food access, what is the mechanism you have in mind? Lower retailer incentives, transportation barriers, residential segregation, zoning, or something else?</li>
-<li>If race or ethnicity variables remain important after controlling for income and vehicle access, what omitted neighborhood features might they be capturing, such as public transit, density, or historical segregation?</li>
+<li>In a correlated random effects model, are your main results coming from changes within tracts over time, or from persistent differences across tracts?</li>
+<li>If poverty rate is strongly associated with low food access, what mechanism do you have in mind: lower retailer incentives, transportation barriers, residential segregation, zoning, or something else?</li>
 </ul>
-<p><strong>4. Policy Implications</strong></p>
+<p><strong>5. Policy Implications</strong></p>
 <ul>
 <li>If low vehicle access turns out to be the strongest predictor, does that point more toward transportation solutions than store-siting solutions?</li>
 <li>Are there high-income but low-access rural tracts in New York? Those would be interesting cases because they may require a very different policy response than low-income urban tracts.</li>

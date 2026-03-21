@@ -216,7 +216,7 @@ ul.task-list li input[type="checkbox"] {
 <br>On this page</h2>
    
   <ul>
-  <li><a href="#the-main-issue-this-is-currently-more-than-one-project" id="toc-the-main-issue-this-is-currently-more-than-one-project" class="nav-link active" data-scroll-target="#the-main-issue-this-is-currently-more-than-one-project">The Main Issue: This Is Currently More Than One Project</a></li>
+  <li><a href="#the-main-issue-the-proposal-currently-combines-multiple-projects" id="toc-the-main-issue-the-proposal-currently-combines-multiple-projects" class="nav-link active" data-scroll-target="#the-main-issue-the-proposal-currently-combines-multiple-projects">The Main Issue: The Proposal Currently Combines Multiple Projects</a></li>
   <li><a href="#a-critical-data-issue-d1-does-not-measure-general-u.s.-voting-behavior" id="toc-a-critical-data-issue-d1-does-not-measure-general-u.s.-voting-behavior" class="nav-link" data-scroll-target="#a-critical-data-issue-d1-does-not-measure-general-u.s.-voting-behavior">A Critical Data Issue: D1 Does Not Measure General U.S. Voting Behavior</a></li>
   <li><a href="#another-important-data-issue-mspus-is-not-a-state-level-affordability-measure" id="toc-another-important-data-issue-mspus-is-not-a-state-level-affordability-measure" class="nav-link" data-scroll-target="#another-important-data-issue-mspus-is-not-a-state-level-affordability-measure">Another Important Data Issue: MSPUS Is Not a State-Level Affordability Measure</a></li>
   <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
@@ -259,37 +259,37 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>Hi Christopher,</p>
-<p>Thank you for your Research Kick-off Report. Your topic touches on important questions about the relationship between housing affordability, household debt, income, and political behavior, and your personal motivation is clear and sincere. You are trying to connect broad structural changes in ownership and financial security to patterns you can actually study with data, which is a worthwhile starting point for a capstone project. I also appreciate that you have already gone out and found several public datasets rather than waiting for a perfectly packaged source to appear.</p>
-<p>That said, I want to be candid with you: as currently written, the proposal has a major alignment problem between its motivation, research questions, data sources, and method. The good news is that there is a strong project in here. But before this becomes a successful capstone paper, you need to narrow the scope and choose one clear empirical path.</p>
+<p>Thank you for your Research Kick-off Report. Your topic touches on important questions about the relationship between housing affordability, household debt, income, and political behavior, and your personal motivation is clear. You are trying to connect broad structural changes in ownership and financial security to patterns you can actually study with data. This is a worthwhile starting point for a capstone project. I also appreciate that you have already gone out and found several public datasets.</p>
+<p>That said, I want to be candid with you: as currently written, the proposal still has a major alignment problem between its motivation, research questions, data sources, and method. The good news is that there is a promising project here. But before this becomes a successful capstone paper, you need to narrow the scope and choose one clear empirical path.</p>
 <hr>
-<section id="the-main-issue-this-is-currently-more-than-one-project" class="level3">
-<h3 class="anchored" data-anchor-id="the-main-issue-this-is-currently-more-than-one-project">The Main Issue: This Is Currently More Than One Project</h3>
+<section id="the-main-issue-the-proposal-currently-combines-multiple-projects" class="level3">
+<h3 class="anchored" data-anchor-id="the-main-issue-the-proposal-currently-combines-multiple-projects">The Main Issue: The Proposal Currently Combines Multiple Projects</h3>
 <p>Right now, the proposal is trying to do several different things at once:</p>
 <ol type="1">
 <li><strong>A political economy question</strong>: How do housing affordability, debt, and income relate to voting outcomes?</li>
 <li><strong>A household finance question</strong>: How are debt burdens, housing costs, and financial distress changing across states over time?</li>
 <li><strong>A party-level financial behavior question</strong>: Do Republicans and Democrats differ in ownership, debt, and long-run financial choices?</li>
 </ol>
-<p>These are all interesting questions, but they require different data, different units of analysis, and in some cases different methods. Trying to answer all of them in one paper will make the final analysis feel scattered.</p>
-<p>For the <strong>capstone paper</strong>, you need to choose one primary question and organize the entire project around it.</p>
-<p>I see two realistic paths:</p>
+<p>These are all interesting questions, but they involve different units of analysis, different dependent variables, and different empirical strategies. Trying to answer all of them in one paper will likely make the final analysis feel scattered and underdeveloped.</p>
+<p>For the <strong>capstone paper</strong>, you need to choose one primary question and organize the full project around it. Once that question is fixed, you can compare a small number of appropriate model specifications and then decide which approach fits the data and research purpose best.</p>
+<p>I see two realistic directions:</p>
 <p><strong>Path A: Political economy path</strong><br>
 How do state-level housing affordability and household debt burdens relate to voting outcomes in U.S. election years?</p>
 <ul>
 <li>Natural unit of analysis: <strong>state-election-year</strong></li>
-<li>Natural outcome variable: <strong>party vote share</strong>, <strong>turnout</strong>, or <strong>change in vote share</strong>, not simply which party won the state</li>
-<li>Likely method: <strong>panel regression for inference</strong></li>
+<li>Natural outcome variable: <strong>party vote share</strong>, <strong>turnout</strong>, or <strong>change in vote share</strong>, rather than simply which party won the state</li>
+<li>Possible methods to compare: <strong>linear panel models for vote share</strong>, or other limited dependent variable approaches if you redefine the outcome differently</li>
 </ul>
-<p>This path can work, but you would need to redesign the voting data and be very clear that election outcomes are only observed in election years, not every year.</p>
+<p>This path can work, but it requires a tighter redesign of the voting component because election outcomes are observed only in election years, not every year. You would also need to be very precise about whether your objective is explaining variation in vote share or predicting party outcomes.</p>
 <p><strong>Path B: Household finance and affordability path</strong><br>
 How have housing affordability and debt burdens changed across U.S. states, and which factors are associated with higher financial distress or lower ownership security?</p>
 <ul>
 <li>Natural unit of analysis: <strong>state-year</strong> or <strong>state-quarter</strong></li>
 <li>Natural outcome variable: <strong>delinquency rate</strong>, <strong>homeownership rate</strong>, or another direct measure of financial stress</li>
-<li>Likely method: <strong>panel regression for inference</strong></li>
+<li>Possible methods to compare: <strong>panel regression models with alternative specifications</strong>, depending on the exact dependent variable and data frequency</li>
 </ul>
-<p>This path is closer to your stated motivation and is probably the more coherent project with your current data.</p>
-<p>My honest advice is that <strong>Path B is the stronger project unless you are especially committed to the politics question</strong>.</p>
+<p>This path is closer to your stated motivation and is probably the more coherent project with your current data. It also gives you more flexibility to compare several sensible model specifications and identify which one provides the clearest and most credible empirical results.</p>
+<p>My honest advice is that <strong>Path B is the stronger project unless you are especially committed to the politics question</strong>. If you do want to compare multiple models, that is fine, but the comparison should happen <strong>within one clearly defined project</strong>, not across several different projects at once.</p>
 <hr>
 </section>
 <section id="a-critical-data-issue-d1-does-not-measure-general-u.s.-voting-behavior" class="level3">
@@ -317,8 +317,8 @@ How have housing affordability and debt burdens changed across U.S. states, and 
 <p>More importantly, <strong>home price is not the same thing as housing affordability</strong>. Affordability is usually some combination of prices, rents, income, interest rates, and cost burden.</p>
 <p>For the capstone paper, replace MSPUS with a more appropriate state-level measure such as:</p>
 <ul>
-<li>FHFA state house price indexes</li>
-<li>Zillow state-level home value or rent data</li>
+<li><a href="https://www.fhfa.gov/data/hpi">FHFA state house price indexes</a></li>
+<li><a href="https://www.zillow.com/research/data/">Zillow state-level home value or rent data</a></li>
 <li>A constructed affordability measure such as <strong>home price to income</strong>, <strong>rent to income</strong>, or <strong>share of households spending more than 30% of income on housing</strong></li>
 </ul>
 <hr>

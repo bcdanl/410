@@ -24,7 +24,7 @@ Overall, this has the makings of a strong capstone project. The biggest prioriti
 
 ### Next Steps
 
-You are working toward both the **presentation** and the **capstone paper**. Focus on **careful data construction**, a **well-specified panel model**, and **honest interpretation** that speaks to insurance regulators and state government.
+You are working toward both the **presentation** and the **capstone paper**. Focus on **careful data construction**, a **well-specified panel model**, and **interpretation** that speaks to insurance regulators and state government.
 
 - **Turn insurer withdrawal into a measurable outcome, not just a limitation.**  
   Your report says that private insurer withdrawal data is not very public, which is partly true, but the project may be more feasible than you think. The California Department of Insurance now publishes annual homeowners policy counts by county and ZIP code, including **new**, **renewed**, and **non-renewed** policies. That gives you a direct way to measure two different parts of market retreat:
@@ -93,9 +93,9 @@ You are working toward both the **presentation** and the **capstone paper**. Foc
   These matter because FAIR Plan growth can reflect both wildfire risk and the economic scale of the housing market. Expensive counties can have rising FAIR exposure even if policy counts are not rising as quickly.
 
 - **Use wildfire incident data that matches your unit of analysis.**  
-  The NOAA Climate at a Glance page is useful for background climate context, but it is not the cleanest source for county-level wildfire activity. For a county-year panel, you will likely be better off with:
-  - **CAL FIRE Fire Hazard Severity Zones** for structural wildfire exposure
-  - **CAL FIRE Fire Perimeters** for annual realized fire activity
+  The [NOAA Climate at a Glance page](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/county) is useful for background climate context, but it might not be the cleanest source for county-level wildfire activity. For a county-year panel, you would likely be better off with:
+  - [**CAL FIRE Fire Hazard Severity Zones**](https://osfm.fire.ca.gov/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones) for structural wildfire exposure (data available under *State Responsibility Area data*, [Click here](https://34c031f8-c9fd-4018-8c5a-4159cdff6b0d-cdn-endpoint.azureedge.net/-/media/osfm-website/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones/fhszsra_23_3.zip?rev=f5118b1ba17044a8aa3cd2994f00d6d3&hash=87816F8F0635FFA1D7B99A723DE38A70))
+  - [**CAL FIRE Fire Perimeters**](https://www.fire.ca.gov/what-we-do/fire-resource-assessment-program/fire-perimeters) for annual realized fire activity
   - possibly **MTBS** if you want burn severity measures
 
   One practical idea is to aggregate annual **acres burned**, **number of large fires**, or **fire perimeter area** to the county-year level. That would match your panel structure well.

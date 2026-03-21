@@ -16,9 +16,9 @@ execute:
 
 Hi Aaron,
 
-Thank you for your Research Kick-off Report, and for your thoughtful follow-up email about the train/test split question. This is a strong **prediction** project. The central idea is not only to predict individual game winners, but to convert those probabilities into a bracket portfolio that can compete in a real pool. That is a meaningful and well-motivated data analytics problem, and your use of historical pool results gives the project a concrete applied setting rather than an artificial classroom benchmark.
+Thank you for your Research Kick-off Report, and for your thoughtful follow-up email about the train/test split question. This is a strong **prediction** project. The central idea is not only to predict individual game winners, but to convert those probabilities into a bracket portfolio that can compete in a real pool. That is a meaningful and well-motivated data analytics problem, and your use of historical pool results gives the project a concrete applied setting.
 
-The proposal already shows several strengths. First, you recognize that game prediction and bracket selection are not the same task. Second, you are thinking in terms of probabilities rather than deterministic picks, which is exactly the right starting point for bracket simulation. Third, comparing random forest to logistic regression and gradient boosting is a sensible modeling plan, and your idea of normalizing performance across years is important because bracket pools are strongly affected by how upset-heavy a tournament happens to be.
+The proposal already shows several strengths. First, you recognize that game prediction and bracket selection are not the same task. Second, you are thinking in terms of probabilities rather than deterministic picks, which is the right starting point for bracket simulation. Third, comparing random forest to logistic regression and gradient boosting is a sensible modeling plan, and your idea of normalizing performance across years is important because bracket pools are strongly affected by how upset-heavy a tournament happens to be.
 
 The main priorities for your **capstone paper** are to tighten the evaluation design, make the train/test strategy fully time-aware, define what "outperforming human judgment" really means in a measurable way, and explain the bracket diversification rule precisely enough that another analyst could reproduce it.
 
@@ -129,12 +129,14 @@ You are working toward both the **presentation** and the **capstone paper**. Foc
   For your capstone paper and presentation, the following are especially useful:
   - Lopez, M. J., & Matthews, G. J. (2015). [*"Building an NCAA Men's Basketball Predictive Model and Quantifying Its Success."*](https://bcdanl.github.io/410/danl-rw-refs/LopezMatthews-JQAS-2015.pdf) *Journal of Quantitative Analysis in Sports*, 11(1), 5-12.
   - Kaggle. (2026). [*March Machine Learning Mania 2026.*](https://www.kaggle.com/competitions/march-machine-learning-mania-2026)
+  - R `yardstick`. [*Brier score for classification models*](https://yardstick.tidymodels.org/reference/brier_class.html)
   - R `tidymodels` developers. [*Modeling time series with tidy resampling.*](https://www.tidymodels.org/learn/models/time-series/)
   - R `rsample` developers. [*Time-based Resampling.*](https://rsample.tidymodels.org/reference/slide-resampling.html)
   - R `tidymodels` developers. [*An introduction to calibration with tidymodels.*](https://www.tidymodels.org/learn/models/calibration/)
   - R `probably` developers. [*probably package reference.*](https://probably.tidymodels.org/reference/index.html)
   - R `probably` developers. [*Uses a logistic regression model to calibrate probabilities.*](https://probably.tidymodels.org/reference/cal_estimate_logistic.html)
   - R `probably` developers. [*Uses an Isotonic regression model to calibrate model predictions.*](https://probably.tidymodels.org/reference/cal_estimate_isotonic.html)
+  - Python `scikit-learn` developers. [*Brier score loss.*](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.brier_score_loss.html)
   - Python `scikit-learn` developers. [*TimeSeriesSplit documentation.*](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html)
   - Python `scikit-learn` developers. [*Probability calibration user guide.*](https://scikit-learn.org/stable/modules/calibration.html)
 

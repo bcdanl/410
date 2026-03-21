@@ -16,13 +16,13 @@ execute:
 
 Hi Christopher,
 
-Thank you for your Research Kick-off Report. Your topic touches on important questions about the relationship between housing affordability, household debt, income, and political behavior, and your personal motivation is clear and sincere. You are trying to connect broad structural changes in ownership and financial security to patterns you can actually study with data, which is a worthwhile starting point for a capstone project. I also appreciate that you have already gone out and found several public datasets rather than waiting for a perfectly packaged source to appear.
+Thank you for your Research Kick-off Report. Your topic touches on important questions about the relationship between housing affordability, household debt, income, and political behavior, and your personal motivation is clear. You are trying to connect broad structural changes in ownership and financial security to patterns you can actually study with data. This is a worthwhile starting point for a capstone project. I also appreciate that you have already gone out and found several public datasets.
 
-That said, I want to be candid with you: as currently written, the proposal has a major alignment problem between its motivation, research questions, data sources, and method. The good news is that there is a strong project in here. But before this becomes a successful capstone paper, you need to narrow the scope and choose one clear empirical path.
+That said, I want to be candid with you: as currently written, the proposal still has a major alignment problem between its motivation, research questions, data sources, and method. The good news is that there is a promising project here. But before this becomes a successful capstone paper, you need to narrow the scope and choose one clear empirical path.
 
 ---
 
-### The Main Issue: This Is Currently More Than One Project
+### The Main Issue: The Proposal Currently Combines Multiple Projects
 
 Right now, the proposal is trying to do several different things at once:
 
@@ -30,31 +30,31 @@ Right now, the proposal is trying to do several different things at once:
 2. **A household finance question**: How are debt burdens, housing costs, and financial distress changing across states over time?
 3. **A party-level financial behavior question**: Do Republicans and Democrats differ in ownership, debt, and long-run financial choices?
 
-These are all interesting questions, but they require different data, different units of analysis, and in some cases different methods. Trying to answer all of them in one paper will make the final analysis feel scattered.
+These are all interesting questions, but they involve different units of analysis, different dependent variables, and different empirical strategies. Trying to answer all of them in one paper will likely make the final analysis feel scattered and underdeveloped.
 
-For the **capstone paper**, you need to choose one primary question and organize the entire project around it.
+For the **capstone paper**, you need to choose one primary question and organize the full project around it. Once that question is fixed, you can compare a small number of appropriate model specifications and then decide which approach fits the data and research purpose best.
 
-I see two realistic paths:
+I see two realistic directions:
 
 **Path A: Political economy path**  
 How do state-level housing affordability and household debt burdens relate to voting outcomes in U.S. election years?
 
 - Natural unit of analysis: **state-election-year**
-- Natural outcome variable: **party vote share**, **turnout**, or **change in vote share**, not simply which party won the state
-- Likely method: **panel regression for inference**
+- Natural outcome variable: **party vote share**, **turnout**, or **change in vote share**, rather than simply which party won the state
+- Possible methods to compare: **linear panel models for vote share**, or other limited dependent variable approaches if you redefine the outcome differently
 
-This path can work, but you would need to redesign the voting data and be very clear that election outcomes are only observed in election years, not every year.
+This path can work, but it requires a tighter redesign of the voting component because election outcomes are observed only in election years, not every year. You would also need to be very precise about whether your objective is explaining variation in vote share or predicting party outcomes.
 
 **Path B: Household finance and affordability path**  
 How have housing affordability and debt burdens changed across U.S. states, and which factors are associated with higher financial distress or lower ownership security?
 
 - Natural unit of analysis: **state-year** or **state-quarter**
 - Natural outcome variable: **delinquency rate**, **homeownership rate**, or another direct measure of financial stress
-- Likely method: **panel regression for inference**
+- Possible methods to compare: **panel regression models with alternative specifications**, depending on the exact dependent variable and data frequency
 
-This path is closer to your stated motivation and is probably the more coherent project with your current data.
+This path is closer to your stated motivation and is probably the more coherent project with your current data. It also gives you more flexibility to compare several sensible model specifications and identify which one provides the clearest and most credible empirical results.
 
-My honest advice is that **Path B is the stronger project unless you are especially committed to the politics question**.
+My honest advice is that **Path B is the stronger project unless you are especially committed to the politics question**. If you do want to compare multiple models, that is fine, but the comparison should happen **within one clearly defined project**, not across several different projects at once.
 
 ---
 
@@ -88,8 +88,8 @@ More importantly, **home price is not the same thing as housing affordability**.
 
 For the capstone paper, replace MSPUS with a more appropriate state-level measure such as:
 
-- FHFA state house price indexes
-- Zillow state-level home value or rent data
+- [FHFA state house price indexes](https://www.fhfa.gov/data/hpi)
+- [Zillow state-level home value or rent data](https://www.zillow.com/research/data/)
 - A constructed affordability measure such as **home price to income**, **rent to income**, or **share of households spending more than 30% of income on housing**
 
 ---
