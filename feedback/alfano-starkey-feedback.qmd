@@ -137,7 +137,12 @@ These are not the only sources you should use, but they are better aligned with 
 - U.S. Census Bureau. [*American Community Survey 5-Year Data*](https://www.census.gov/data/developers/data-sets/acs-5year.html)
 - Mattson, C. L., Tanz, L. J., Quinn, K., Kariisa, M., Patel, P., & Davis, N. L. (2021). [*Trends and Geographic Patterns in Drug and Synthetic Opioid Overdose Deaths - United States, 2013-2019*](https://www.cdc.gov/mmwr/volumes/70/wr/mm7006a4.htm). *Morbidity and Mortality Weekly Report*, 70(6), 202-207.
 - Hawk, M., Coulter, R. W. S., Egan, J. E., Fisk, S., Friedman, M. R., Tula, M., & Kinsky, S. (2017). [*Harm reduction principles for healthcare settings*](https://doi.org/10.1186/s12954-017-0196-4). *Harm Reduction Journal*, 14(1).
-- Schnell, M., & Currie, J. (2018). [*Addressing the opioid epidemic: Is there a role for physician education?*](https://doi.org/10.1162/ajhe_a_00113). *American Journal of Health Economics*, 4(3), 383-410.
+- Schnell, M., & Currie, J. (2018). [*Addressing the opioid epidemic: Is there a role for physician education?*](https://bcdanl.github.io/410/danl-rw-refs/SchnellCurrie-AJHE-2018.pdf). *American Journal of Health Economics*, 4(3), 383-410.
+- Ray et. al. (2023) [*"Spatiotemporal Analysis Exploring the Effect of Law Enforcement Drug Market Disruptions on Overdose, Indianapolis, Indiana, 2020–2021"*](https://ajph.aphapublications.org/doi/full/10.2105/AJPH.2023.307291).  *American Journal of Public Health*, 
+- Kral et. al. (2025) [*"Law Enforcement Drug Seizures and Opioid-Involved Overdose Mortality"*](https://jamanetwork.com/journals/jamanetworkopen/fullarticle/2831697). *JAMA Network Open*, 8(3)
+
+
+
 
 ---
 
