@@ -14,7 +14,7 @@ execute:
   fig-height: 6
 ---
 
-Dear Aaron,
+Hi Aaron,
 
 Thank you for your Research Kick-off Report, and for your thoughtful follow-up email about the train/test split question. This is a strong **prediction** project. The central idea is not only to predict individual game winners, but to convert those probabilities into a bracket portfolio that can compete in a real pool. That is a meaningful and well-motivated data analytics problem, and your use of historical pool results gives the project a concrete applied setting rather than an artificial classroom benchmark.
 

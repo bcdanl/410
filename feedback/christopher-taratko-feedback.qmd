@@ -14,7 +14,7 @@ execute:
   fig-height: 6
 ---
 
-Dear Christopher,
+Hi Christopher,
 
 Thank you for your Research Kick-off Report. Your topic touches on important questions about the relationship between housing affordability, household debt, income, and political behavior, and your personal motivation is clear and sincere. You are trying to connect broad structural changes in ownership and financial security to patterns you can actually study with data, which is a worthwhile starting point for a capstone project. I also appreciate that you have already gone out and found several public datasets rather than waiting for a perfectly packaged source to appear.
 

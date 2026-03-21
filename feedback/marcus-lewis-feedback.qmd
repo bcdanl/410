@@ -112,7 +112,7 @@ You are working toward the **presentation**, the **capstone paper**, and ultimat
   - Fearon, J. D. (1995). [*"Rationalist Explanations for War."*](https://doi.org/10.1017/S0020818300033324) *International Organization*, 49(3), 379-414.
   - Jervis, R. (1978). [*"Cooperation under the Security Dilemma."*](https://doi.org/10.2307/2009958) *World Politics*, 30(2), 167-214.
   - Federle, J., Meier, A., Müller G,, Mutschler, W.,& Schularic, M.(2026). [*"The Price of War.*"](https://bcdanl.github.io/410/danl-rw-refs/federle-et-al-2026-the-price-of-war.pdf) *American Economic Review*, 116(3), 791–827.
-  - Maoz, Z., Johnson, P. L., Kaplan, J., Ogunkoya, F., & Shreve, A. P. (2019). [*"The Dyadic Militarized Interstate Disputes (MIDs) Dataset Version 3.0: Logic, Characteristics, and Comparisons to Alternative Datasets."*](https://doi.org/10.1177/0022002718784158) *Journal of Conflict Resolution*, 63(3), 811-835.
+  - Maoz, Z., Johnson, P. L., Kaplan, J., Ogunkoya, F., & Shreve, A. P. (2019). [*"The Dyadic Militarized Interstate Disputes (MIDs) Dataset Version 3.0: Logic, Characteristics, and Comparisons to Alternative Datasets."*](https://bcdanl.github.io/410/danl-rw-refs/Maoz-et-al-JCR-2019.pdf) *Journal of Conflict Resolution*, 63(3), 811-835.
   
   - Correlates of War Project. [*Arms Technology Data (v1.0).*](https://correlatesofwar.org/data-sets/arms-technology-data-v1-0/)
   - Correlates of War Project. [*National Material Capabilities (v6.0).*](https://correlatesofwar.org/data-sets/national-material-capabilities/)
@@ -120,7 +120,8 @@ You are working toward the **presentation**, the **capstone paper**, and ultimat
   - Correlates of War Project. [*COW War Data, 1816-2007 (v4.0).*](https://correlatesofwar.org/data-sets/cow-war/)
   - Correlates of War Project. [*Direct Contiguity (v3.2).*](https://correlatesofwar.org/data-sets/direct-contiguity/) and [*Formal Alliances (v4.1).*](https://correlatesofwar.org/data-sets/formal-alliances/)  
     These are useful if you decide to build a dyad-year design with core control variables.
-  - Gibler, D. M. (2012). [*The Territorial Peace.*](https://doi.org/10.1017/CBO9781139060233) Cambridge University Press.
+    
+  <!-- - Gibler, D. M. (2012). [*The Territorial Peace.*](https://doi.org/10.1017/CBO9781139060233) Cambridge University Press. -->
 
 - **Include a few simple visuals in the capstone paper and presentation.**  
   Helpful visuals could include:
