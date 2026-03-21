@@ -158,8 +158,8 @@ You do **not** need to answer all of these, but they may help you sharpen the an
 For your capstone project paper and presentation, the following sources would be useful background:
 
 - IEA. (2025). [*Energy and AI.*](https://www.iea.org/reports/energy-and-ai/) *(Useful background on the rapid growth of electricity demand tied to AI and data centers.)*
-- Masanet, E., Shehabi, A., Lei, N., Smith, S., & Koomey, J. (2020). [*"Recalibrating Global Data Center Energy-Use Estimates."*](https://doi.org/10.1126/science.aba3758) *Science*, 367(6481), 984-986.
-- Currie, J., Davis, L., Greenstone, M., & Walker, R. (2015). [*"Environmental Health Risks and Housing Values: Evidence from 1,600 Toxic Plant Openings and Closings."*](https://doi.org/10.1257/aer.20121656) *American Economic Review*, 105(2), 678-709.
+- Masanet, E., Shehabi, A., Lei, N., Smith, S., & Koomey, J. (2020). [*"Recalibrating Global Data Center Energy-Use Estimates."*](https://bcdanl.github.io/410/danl-rw-refs/Masanet-et-al-Science-2020.pdf) *Science*, 367(6481), 984-986.
+- Currie, J., Davis, L., Greenstone, M., & Walker, R. (2015). [*"Environmental Health Risks and Housing Values: Evidence from 1,600 Toxic Plant Openings and Closings."*](https://bcdanl.github.io/410/danl-rw-refs/currie-et-al-2015-environmental-health-risks-and-housing-values-evidence-from-1-600-toxic-plant-openings-and-closings.pdf) *American Economic Review*, 105(2), 678-709.
 - U.S. EPA. [*EJScreen Technical Documentation.*](https://www.epa.gov/system/files/documents/2024-07/ejscreen-tech-doc-version-2-3.pdf)
 - U.S. Census Bureau. [*American Community Survey Data via API.*](https://www.census.gov/programs-surveys/acs/data/data-via-api.html)
 - U.S. EPA. [*ECHO Data Downloads.*](https://echo.epa.gov/tools/data-downloads)
