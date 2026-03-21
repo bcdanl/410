@@ -133,6 +133,9 @@ You are working toward both the **presentation** and the **capstone paper**. Foc
   - Auer, M. R. (2024). [*"Wildfire risk and insurance: research directions for policy scientists"*](https://doi.org/10.1007/s11077-024-09528-7) *Policy Sciences*, 57(2), 459-484.
   - Bayham et. al. (2022) [*"The Economics of Wildfire in the United States"*](https://doi.org/10.1146/annurev-resource-111920-014804) *Annual Review of Resource Economics*, 14,  379-401
   - Boomhower, J., Fowlie, M., & Plantinga, A. J. (2023). [*"Wildfire Insurance, Information, and Self-Protection"*](https://bcdanl.github.io/410/danl-rw-refs/boomhower-et-al-2023-wildfire-insurance-information-and-self-protection.pdf) *AEA Papers and Proceedings*, 113, 310-315.
+  - Fowlie et. al. (2025). [*“How is climate change impacting home insurance markets?”*](https://www.brookings.edu/articles/how-is-climate-change-impacting-home-insurance-markets/). *Brookings Institution*
+- Keys, B. (2025) [*“Housing, Climate Risk, and Insurance”*](https://bcecon.github.io/docs/keys-nber-2025-housing-climate-risk-insurance.pdf). NBER Working Paper
+- Keys, B. & Mulder, P. (2025). [*"Property Insurance and Disaster Risk: New Evidence from Mortgage Escrow Data"*](https://bcecon.github.io/docs/keys-mulder-nber-2024-insurance-climate-risk.pdf). NBER Working Paper
 
 - **Include a few simple descriptive visuals.**  
   A small set of visuals would make the project much easier to understand:
