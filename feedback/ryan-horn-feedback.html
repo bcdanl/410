@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Byeong-Hak Choe">
-<meta name="dcterms.date" content="2026-01-26">
+<meta name="dcterms.date" content="2026-03-20">
 
-<title>Week 2 | Byeong-Hak Choe</title>
+<title>Does NFL Draft Position Predict Career Receiving Yards for Wide Receivers, 2004-2019? | Byeong-Hak Choe</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,9 +67,9 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../assets/css/font.css">
-<link rel="stylesheet" href="styles-wk.css">
-<meta property="og:title" content="Week 2 | Byeong-Hak Choe">
-<meta property="og:description" content="Controls; Panel Data Methods">
+<link rel="stylesheet" href="../danl-wk/styles-wk.css">
+<meta property="og:title" content="Does NFL Draft Position Predict Career Receiving Yards for Wide Receivers, 2004-2019? | Byeong-Hak Choe">
+<meta property="og:description" content="Ryan Horn">
 <meta property="og:image" content="/assets/img/posts.png">
 </head>
 
@@ -109,7 +109,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../danl-wk/wk-01.html">🗓️ Weeks</a></li><li class="breadcrumb-item"><a href="../danl-wk/wk-02.html">Week 02</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Does NFL Draft Position Predict Career Receiving Yards for Wide Receivers, 2004-2019?</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -191,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../danl-wk/wk-02.html" class="sidebar-item-text sidebar-link active">
+  <a href="../danl-wk/wk-02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 02</span></a>
   </div>
 </li>
@@ -214,8 +214,9 @@ ul.task-list li input[type="checkbox"] {
 <br>On this page</h2>
    
   <ul>
-  <li><a href="#lecture-slides" id="toc-lecture-slides" class="nav-link active" data-scroll-target="#lecture-slides">🏫 Lecture Slides</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">💬 Discussion</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link active" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#questions-to-think-about-as-you-refine-your-capstone-paper" id="toc-questions-to-think-about-as-you-refine-your-capstone-paper" class="nav-link" data-scroll-target="#questions-to-think-about-as-you-refine-your-capstone-paper">Questions to Think About as You Refine Your Capstone Paper</a></li>
   </ul>
 </nav>
     </div>
@@ -224,8 +225,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 2</h1>
-<p class="subtitle lead">Controls; Panel Data Methods</p>
+<h1 class="title">Does NFL Draft Position Predict Career Receiving Yards for Wide Receivers, 2004-2019?</h1>
+<p class="subtitle lead">Ryan Horn</p>
 </div>
 
 
@@ -242,40 +243,156 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 26, 2026</p>
+      <p class="date">March 20, 2026</p>
     </div>
   </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">January 27, 2026</p>
-    </div>
-  </div>
     
   </div>
   
 
 </header>
 
-<p>In the second week, we will discuss good &amp; bad controls in linear regression and panel data models.</p>
-<section id="lecture-slides" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-slides">🏫 Lecture Slides</h2>
+<p>Hi Ryan,</p>
+<p>Thank you for your Research Kick-off Report. Your topic is well chosen and easy to motivate. It sits at the intersection of sports analytics, labor economics, and organizational decision-making, and it asks a question that NFL teams, analysts, and fans genuinely care about: how much useful information is contained in draft capital when projecting future player performance? The focus on a single position group is a smart scoping choice, and the project is straightforward enough to be feasible within one semester.</p>
+<p>At the same time, the current design is still quite narrow. A single regression of career receiving yards on overall draft pick number will probably recover a negative relationship, but by itself it will not say very much about why that pattern appears or how useful draft position really is as an analytical tool. The main priorities going forward are to decide whether the paper is mainly about prediction or about inference, broaden the variable set, address the playing-time and opportunity problem, and define the outcome window more carefully so the final capstone paper tells a stronger story.</p>
+<p>Overall, this project has strong potential to become an engaging and analytically meaningful capstone paper by the end of the semester. The subject is interesting to a broad audience, the data are public, and the question connects directly to how NFL teams evaluate talent. The key now is to move from a simple descriptive relationship toward a more developed research design.</p>
+<hr>
+<section id="next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="next-steps">Next Steps</h3>
+<p>You are working toward both the <strong>presentation</strong> and the <strong>final capstone project paper</strong>. Focus on a clear research goal, stronger data construction, and results that go beyond a single fitted line.</p>
 <ul>
-<li><p><strong>Lecture 2 — Omitted Variable Bias; Bad Controls</strong><br>
-<a href="../danl-lec/danl-410-lec-02-2026-0126.html" target="_blank">View Slides</a></p></li>
-<li><p><strong>Lecture 3 — Panel Data Models</strong><br>
-<a href="../danl-lec/danl-410-lec-02-2026-0126.html" target="_blank">View Slides</a></p></li>
+<li><p><strong>Decide whether the project is mainly about prediction or about inference.</strong><br>
+Your title uses the word “predict,” which naturally points toward a prediction project. That is probably the cleaner primary framing for this topic. If prediction is your main goal, then the question becomes: how well does draft position forecast later NFL receiving production, and how much do other pre-draft variables improve that forecast? In that case, your final paper should:</p>
+<ul>
+<li>Compare a simple baseline model that uses only draft pick number to richer models that also include draft round, combine measures, college production, and draft year.</li>
+<li>Evaluate models with out-of-sample metrics such as RMSE or MAE, not just in-sample R squared.</li>
+<li>Use a train-test split by draft class, or cross-validation that respects time ordering.</li>
 </ul>
-<p>🎥 Looking for lecture recordings? You can only find those on Brightspace.</p>
+<p>If you want an inference angle as well, frame coefficients as associations and be cautious about causal language. Early draft picks are not only viewed as better prospects. They also receive more opportunities, patience, and organizational investment once they enter the league.</p></li>
+<li><p><strong>Expand beyond a single predictor.</strong><br>
+Draft pick number alone will not explain much of the variation in career receiving yards. For the final paper, build a multiple regression or prediction model with additional variables that teams could plausibly know at or before the draft:</p>
+<ul>
+<li><strong>Draft round</strong> or a set of round indicators.</li>
+<li><strong>Age at draft</strong>.</li>
+<li><strong>NFL Combine measures</strong> such as 40-yard dash, vertical jump, broad jump, height, and weight.</li>
+<li><strong>College receiving production</strong> such as receiving yards, yards per game, receptions, touchdowns, and yards per catch.</li>
+<li><strong>Drafting team context known at draft time</strong>, such as the team’s previous-season pass attempts or passing yards.</li>
+<li><strong>Draft year fixed effects</strong> or draft-year indicators, since the NFL passing environment changed a great deal from 2004 to 2019.</li>
+</ul>
+<p>These variables would make the project much more informative. They let you ask whether draft position still matters after controlling for what scouts already knew before the player ever played an NFL snap.</p></li>
+<li><p><strong>Address the opportunity problem directly.</strong><br>
+You already identify one of the most important challenges in the report: earlier picks usually get more chances to play. That means a strong relationship between early draft position and career yards could reflect talent, opportunity, or both. Your capstone paper should discuss this clearly.</p>
+<p>A few ways to improve the analysis:</p>
+<ul>
+<li>Use <strong>yards per game</strong> or <strong>yards per target</strong> as alternative outcomes alongside total career yards.</li>
+<li>Include <strong>games played</strong> or <strong>seasons active</strong> in some specifications, while explaining what that changes in the interpretation.</li>
+<li>Consider a restricted sample of players who reached a minimum playing-time threshold, such as at least 32 career games.</li>
+</ul>
+<p>None of these choices fully solves the problem, but they help you separate “better players were drafted earlier” from “earlier picks were given more chances.”</p></li>
+<li><p><strong>Reconsider total career receiving yards as the only outcome.</strong><br>
+Total career yards combine talent, playing time, health, team context, and career length. That makes the outcome interesting, but also noisy. The final paper would be much stronger if you reported several outcomes:</p>
+<ul>
+<li><strong>Total receiving yards</strong> for overall career production.</li>
+<li><strong>Receiving yards per game</strong> for efficiency and usage-adjusted performance.</li>
+<li><strong>Peak single-season receiving yards</strong> for ceiling.</li>
+<li><strong>First five seasons receiving yards</strong> for a fair comparison across draft classes.</li>
+</ul>
+<p>This last point matters a great deal. Players drafted in 2004 have had much longer careers to accumulate statistics than players drafted in 2019. A common five-season window would put everyone on the same footing and make the comparison much cleaner. Also, because receiving yards are highly right-skewed, a transformation such as <code>log(1 + yards)</code> is worth considering if you estimate regression models.</p></li>
+<li><p><strong>Model the draft relationship in a way that allows non-linearity.</strong><br>
+The difference between pick 5 and pick 25 is much more meaningful than the difference between pick 205 and pick 225. A simple linear effect of pick number assumes the same change everywhere in the draft, which is unlikely to be realistic. For the final paper, consider:</p>
+<ul>
+<li>Using <strong>log(pick number)</strong> as the main predictor.</li>
+<li>Replacing raw pick number with <strong>draft round indicators</strong>.</li>
+<li>Testing a flexible curve, such as a spline or polynomial, if you want a richer fit.</li>
+</ul>
+<p>Any of these options would fit the football context better than a strictly linear model.</p></li>
+<li><p><strong>Improve the data plan beyond the Kaggle file.</strong><br>
+The Kaggle dataset is a reasonable starting point, but the project will be stronger if you cross-check or supplement it with more targeted football data sources.</p>
+<ul>
+<li><strong>Pro Football Reference</strong> is especially useful for draft position, career receiving statistics, games played, and Approximate Value.</li>
+<li><strong>College Football at Sports Reference</strong> is useful for college receiving production and player history.</li>
+<li><strong>nflreadr / nflverse</strong> can make data collection and cleaning easier if you work in R.</li>
+</ul>
+<p>In your final paper, say exactly how you will merge players across sources, how you will handle name matching and missing combine results, and whether undrafted free agents are part of the study or excluded by design.</p></li>
+<li><p><strong>Make the modeling plan more informative than one regression line.</strong><br>
+Right now the evaluation plan is very minimal. Expand it so the analysis feels like a real capstone paper:</p>
+<ul>
+<li>Show summary tables by draft round.</li>
+<li>Compare a baseline pick-only model to richer models with pre-draft controls.</li>
+<li>Report both fit statistics and coefficient interpretations.</li>
+<li>Check residual plots and look for influential outliers.</li>
+<li>Use visuals that make the football story easy to understand.</li>
+</ul>
+<p>A strong presentation figure would be a scatterplot of receiving yards versus draft pick with a flexible fitted curve and labels for notable late-round successes and early-round disappointments.</p></li>
+<li><p><strong>Consider whether there are important subgroup patterns.</strong><br>
+One way to deepen the analysis is to test whether the relationship differs across contexts:</p>
+<ul>
+<li><strong>Before and after the 2011 rookie wage scale era</strong>, if you want a sports economics angle.</li>
+<li><strong>Early rounds versus later rounds</strong>, since front offices treat these groups very differently.</li>
+<li><strong>Power-conference versus non-power-conference college players</strong>, if college context is available.</li>
+</ul>
+<p>You do not need to do all of these. Even one well-chosen heterogeneity analysis would make the final paper more interesting.</p></li>
+</ul>
+<hr>
 </section>
-<section id="discussion" class="level2">
-<h2 class="anchored" data-anchor-id="discussion">💬 Discussion</h2>
-<p><font size="5">Welcome to our Week 2 Discussion Board! 👋 </font></p>
-<p>This space is designed for you to engage with your classmates about the material covered in Week 2.</p>
-<p>Whether you are looking to delve deeper into the content, share insights, or have questions about the content, this is the perfect place for you.</p>
-<p>If you have any specific questions for Byeong-Hak (<strong><span class="citation" data-cites="bcdanl">@bcdanl</span></strong>) or peer classmate (<span class="citation" data-cites="GitHub-Username">@GitHub-Username</span>) regarding the Week 2 materials or need clarification on any points, don’t hesitate to ask here.</p>
-<p>Let’s collaborate and learn from each other!</p>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
+<ul>
+<li><strong>Draw on key background readings and data sources.</strong><br>
+For your capstone paper and presentation, you may find it helpful to consult, and where appropriate cite, the following sources:
+<ul>
+<li>Massey, C., &amp; Thaler, R. H. (2013). <a href="https://bcdanl.github.io/410/danl-rw-refs/MasseyThaler-management-science-2011.pdf"><em>“The Loser’s Curse: Decision Making and Market Efficiency in the National Football League Draft.”</em></a> <em>Management Science</em>, 59(7), 1479-1495.</li>
+<li>Teramoto, M., Cross, C. L., &amp; Willick, S. E. (2016). <a href="https://doi.org/10.1519/JSC.0000000000001202"><em>“Predictive Value of National Football League Scouting Combine on Future Performance of Running Backs and Wide Receivers.”</em></a> <em>Journal of Strength and Conditioning Research</em>, 30(5), 1379-1390.</li>
+<li>Pro Football Reference. <a href="https://www.pro-football-reference.com/draft/"><em>NFL and AFL Draft History.</em></a></li>
+<li>College Football at Sports-Reference.com. <a href="https://www.sports-reference.com/cfb/about/data-coverage.html"><em>Data Coverage.</em></a></li>
+<li><code>nflreadr</code> documentation. <a href="https://nflreadr.nflverse.com/"><em>nflreadr.</em></a></li>
+</ul></li>
+<li><strong>Include a few strong descriptive visuals in the final paper.</strong><br>
+A small number of clean figures will make the project far more compelling:
+<ul>
+<li>A <strong>scatterplot</strong> of draft pick number versus first five seasons receiving yards, with a flexible fitted curve.</li>
+<li>A <strong>box plot</strong> of receiving yards by draft round.</li>
+<li>A <strong>bar chart</strong> or dot plot of the biggest “steals” and “busts” relative to the model’s prediction.</li>
+<li>A <strong>coefficient plot</strong> if you estimate a multiple regression model.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="questions-to-think-about-as-you-refine-your-capstone-paper" class="level3">
+<h3 class="anchored" data-anchor-id="questions-to-think-about-as-you-refine-your-capstone-paper">Questions to Think About as You Refine Your Capstone Paper</h3>
+<p>You do <strong>not</strong> need to answer all of these now, but they may help you sharpen the project.</p>
+<p><strong>1. What is the project really trying to measure?</strong></p>
+<ul>
+<li>Is the main question whether NFL teams are good at identifying future wide receiver talent?</li>
+<li>Or is the question whether draft status itself shapes later production by giving some players more playing time, patience, and development opportunities?</li>
+<li>Those are related, but not identical, questions. Your paper should make clear which one comes first.</li>
+</ul>
+<p><strong>2. What is the fairest outcome window?</strong></p>
+<ul>
+<li>Is a full-career total the right measure, or does it unfairly penalize more recent draft classes?</li>
+<li>Would the first 3, 5, or 7 seasons be a more comparable window across players?</li>
+</ul>
+<p><strong>3. How will you handle players with very low opportunity?</strong></p>
+<ul>
+<li>If a receiver is drafted and never becomes part of a regular offense, is that a true zero that belongs in the sample?</li>
+<li>Or does it create a different kind of outcome than the players who had real chances to produce?</li>
+<li>Your answer affects both the modeling choice and the interpretation.</li>
+</ul>
+<p><strong>4. How much does the answer depend on the level of detail in the data?</strong></p>
+<ul>
+<li>If draft position alone predicts only a small share of the variation, does that mean the draft is inefficient?</li>
+<li>Or does it simply mean that later NFL success depends on many post-draft factors such as scheme fit, quarterback quality, injuries, and coaching?</li>
+</ul>
+<p><strong>5. Could the paper tell a stronger story with one extension?</strong></p>
+<ul>
+<li>Would it be more interesting to compare wide receivers to another position group?</li>
+<li>Would it be more interesting to study only first-contract production?</li>
+<li>Would it be more interesting to compare raw production to efficiency measures?</li>
+</ul>
+<hr>
+<p>Best,<br>
+Byeong-Hak Choe</p>
 
 
 </section>
@@ -655,8 +772,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="bcdanl/410-spr-2026-discussion" data-repo-id="R_kgDOQ8gipQ" data-category="General" data-category-id="DIC_kwDOQ8gipc4C1IRh" data-mapping="title" data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

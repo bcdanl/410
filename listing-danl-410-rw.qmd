@@ -1,8 +1,8 @@
 ---
-title: '<font style="font-family:Optima"><b>DANL 410 - Exams</b></font>'
+title: '<font style="font-family:Optima"><b>DANL 410 - Feedback</b></font>'
 date-modified: ""
 listing:
-  contents: "danl-ex/*.qmd"
+  contents: "feedback/*.qmd"
   type: table
   fields: [title, subtitle, date]
   sort: 

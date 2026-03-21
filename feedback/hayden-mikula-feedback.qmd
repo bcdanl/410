@@ -1,0 +1,169 @@
+---
+title: "The Impact of Employee Benefits on Labor Turnover in the United States"
+subtitle: "Hayden Mikula"
+date: 2026-03-20
+
+code-fold: false
+
+execute:
+  echo: true
+  eval: true
+  message: false
+  warning: false
+  fig-width: 9
+  fig-height: 6
+---
+
+Hi Hayden,
+
+Thank you for your Research Kick-off Report. Your topic is practically relevant and easy to motivate. Employee turnover is costly, and understanding whether benefits are associated with lower turnover is a question that matters to managers, compensation analysts, and policy discussions. I also like that you are trying to build the project around public BLS data rather than relying mainly on proprietary surveys. That is a strong foundation for a capstone project.
+
+The proposal already shows several strengths. First, you have a clear business problem. Second, you identified useful national data sources. Third, you correctly recognized that this is better suited to regression-style analysis than clustering. The idea of decoding BLS series IDs and building a merged analytic file is also ambitious in a good way.
+
+The main priorities for your **Capstone Paper** are to sharpen the outcome variable, rethink the unit of analysis around what the BLS datasets actually provide, choose whether the project is primarily **inferential** or **predictive**, and make the data-merging plan more concrete.
+
+---
+
+### Next Steps
+
+You are working toward the **presentation**, the **Capstone Paper**, and ultimately the **capstone paper**. Focus on **feasible data construction**, a **clear modeling goal**, and **careful interpretation**.
+
+- **Define the dependent variable more precisely.**
+  Right now the report uses "turnover" and "churn" somewhat interchangeably. In the BLS JOLTS data, you will need to decide whether your outcome is:
+  - the **quits rate**
+  - the **total separations rate**
+  - or some other JOLTS measure
+
+  For a question about employee retention, quits rate or total separations rate makes more sense than job openings or hires. Be explicit about which one you will study and why.
+
+- **Rethink the unit of analysis around the data that are actually available.**
+  Your proposal says the unit of analysis will be "the employee benefits themselves." That is not the unit of observation in a regression. Benefits are variables. The unit of observation is the row of the dataset.
+
+  A more important issue is feasibility. In the public BLS series formats, the Employee Benefits (NB) and ECEC (CM) series IDs include both **industry** and **occupation**, but JOLTS series IDs are organized around **industry, geography, establishment size, and data element**, not occupation. That means a public JOLTS-based outcome is naturally an **industry-by-time** outcome, not an industry-by-occupation-by-time outcome.
+
+  Because of this, your most feasible unit of analysis is probably an **industry-year** or **industry-month** panel. If occupation is central to your question, then you should either:
+  - find a different outcome source that supports occupation-level turnover, or
+  - narrow the project so that the main analysis is industry-level, while occupation appears only in descriptive background tables.
+
+- **Choose whether the project is inferential or predictive.**
+  The capstone should make either an inferential contribution or a predictive contribution, and your Capstone Paper should state which one you are doing.
+
+  For this topic, an **inferential** study seems more natural. Your question is essentially: which benefits are associated with lower turnover, after accounting for other factors? If that is the goal, then your main outputs are coefficient estimates, uncertainty measures, and careful interpretation.
+
+  A **predictive** version is also possible, but it would need a different framing: for example, using benefit and workforce characteristics to predict future turnover rates across industries. If you choose that path, then you would want a training/test split and prediction metrics such as RMSE or MAE. In that case, you should avoid strong causal language.
+
+- **Think carefully about causality, but keep your claims modest.**
+  A negative relationship between benefits and turnover does not automatically mean that benefits cause lower turnover. High-turnover industries may offer fewer benefits because of their workforce structure, cost pressures, or business model. Wages, unionization, establishment size, and worker composition may also affect both benefits and turnover.
+
+  For the Capstone Paper, you should:
+  - explain this challenge in plain language
+  - state that your regression estimates will show associations unless your design gives stronger causal leverage
+  - include strong control variables where possible
+  - consider using lagged benefit variables, such as benefits in year $t - 1$ to explain turnover in year $t$
+
+- **Do not restrict the study to a single March snapshot unless you must.**
+  Your report sometimes sounds like the analysis will be "as of March 2025." That is workable for a descriptive comparison, but it is much weaker for inference or prediction. If the data coverage allows it, a multi-year panel will be much stronger because it gives you more observations and lets you separate persistent industry differences from broader time shocks.
+
+- **Write the model down explicitly.**
+  Right now the method section says "general Cause-and-Effect regression," but the actual specification is not written out. Your Capstone Paper should present an equation.
+
+  If you use an industry-year panel, a sensible inferential specification would look like:
+
+  $$\text{TurnoverRate}_{i,t} = \beta_0 + \beta_1 \text{HealthAccess}_{i,t} + \beta_2 \text{RetirementAccess}_{i,t} + \beta_3 \text{PaidLeaveCost}_{i,t} + \mathbf{X}_{i,t}'\boldsymbol{\gamma} + \alpha_i + \delta_t + \varepsilon_{i,t}$$
+
+  where $i$ indexes industries, $t$ indexes time, $\alpha_i$ captures persistent differences across industries, $\delta_t$ captures common time shocks, and $\mathbf{X}_{i,t}$ includes controls such as wage levels, establishment size mix, or other workforce characteristics.
+
+  If you choose a predictive framing instead, say so clearly and explain the target variable, feature set, and evaluation plan.
+
+- **Be explicit about the time alignment problem.**
+  Your three main data sources do not operate on the same schedule:
+  - JOLTS is monthly
+  - Employee Benefits is annual
+  - ECEC is quarterly
+
+  That means you need a clear plan for aligning time. One reasonable option is to aggregate JOLTS to the year level and match it to annual benefit measures. Another is to use March or annual averages consistently if that matches the benefit reference period better. Do not leave this as an unstated merge issue. It is one of the central design choices in the project.
+
+- **Specify which benefits you will include.**
+  "Benefits" is too broad as written. For the Capstone Paper, list the exact benefit measures you plan to study, such as:
+  - medical care access
+  - retirement plan access
+  - paid vacation access
+  - paid sick leave access
+  - employer benefit cost shares from ECEC
+
+  Then decide whether you will:
+  - include these as separate regressors, or
+  - build a smaller number of indices, such as a health or insurance index and a leave index
+
+  Also note that some benefit variables are likely to move together. You should plan to check pairwise correlations and whether the regression results become unstable when too many similar variables are included at once.
+
+- **Make the merge plan concrete and test it early.**
+  One of the strongest technical parts of your proposal is the idea of decoding BLS series IDs. That can work, but only if you document the exact keys.
+
+  For the Capstone Paper, show:
+  - one example NB series ID and how you will parse it
+  - one example CM series ID and how you will parse it
+  - one example JOLTS series ID and how you will parse it
+  - the common fields that will actually be used for the merge
+
+  My advice is to build a small prototype dataset first with just a few industries and a few years. That will tell you quickly whether the full design is feasible.
+
+- **Use non-BLS sources carefully.**
+  The QuickBooks and Nuveen materials are fine for motivation, but they should not drive your main empirical analysis. The same caution applies to the GIGAcalculator spreadsheet unless you can clearly document where the data come from and how the measures were constructed.
+
+  For the final paper, the strongest version of this project uses BLS data as the core analytic source and treats outside surveys as context only.
+
+- **Strengthen the writing of the research question.**
+  Right now the question asks, "Which employee benefits result in the lowest average turnover?" That wording sounds stronger than your design can likely support. A more careful version would be:
+
+  > Which employee benefits are most strongly associated with lower labor turnover across U.S. industries?
+
+  If you later develop a stronger research design, you can revisit the wording. For now, this phrasing is more defensible.
+
+---
+
+### Questions to Think About as You Refine Your Capstone Paper
+
+You do **not** need to answer all of these now, but they may help you sharpen both the analysis and the story you tell in your presentation and final paper.
+
+**1. What exactly is your outcome measure?**
+
+- Is the best retention outcome the quits rate, the total separations rate, or something else?
+- Would your interpretation change depending on which turnover measure you use?
+
+**2. Can you really study occupations with your chosen outcome data?**
+
+- If JOLTS is the main source for turnover, how will you support the occupation part of the question?
+- Would it be better to narrow the project to industries first and do that well?
+
+**3. Access versus cost**
+
+- Do you expect access to benefits or employer spending on benefits to matter more?
+- Could a low-cost but widely available benefit matter more for retention than a more expensive but rarer one?
+
+**4. Timing**
+
+- Do benefits in the same year explain turnover in that year, or should benefits in one period predict turnover in the next period?
+- Would lagging the benefits make your interpretation more convincing?
+
+**5. Managerial usefulness**
+
+- Suppose you find that paid sick leave and retirement access are the strongest predictors of lower turnover. How would you turn that into a recommendation for a manager with a limited budget?
+- Can you rank benefits by approximate "turnover reduction per dollar" rather than only by statistical significance?
+
+---
+
+### Recommended Background Readings
+
+- Lazear, E. P., & Shaw, K. L. (2007). [*"Personnel Economics: The Economist's View of Human Resources."*](https://bcdanl.github.io/410/danl-rw-refs/LazearShaw-JEP-2007.pdf) *Journal of Economic Perspectives*, 21(4), 91-114.
+- Bureau of Labor Statistics. [*Handbook of Methods: Job Openings and Labor Turnover Survey.*](https://www.bls.gov/opub/hom/jlt/)
+- Bureau of Labor Statistics. [*Handbook of Methods: Employee Benefits.*](https://www.bls.gov/opub/hom/eb/)
+- Bureau of Labor Statistics. [*Handbook of Methods: Employer Costs for Employee Compensation.*](https://www.bls.gov/opub/hom/ecec/)
+- Bureau of Labor Statistics. [*Employee Benefits in the United States, March 2025.*](https://www.bls.gov/ebs/publications/employee-benefits-in-the-united-states-march-2025.htm)
+- Bureau of Labor Statistics. [*Series ID Formats.*](https://www.bls.gov/help/hlpforma.htm)
+- Ouimet, P., & Tate, G. (2023). [*"Firms with Benefits? Nonwage Compensation and Implications for Firms and Labor Markets."*](https://bcdanl.github.io/410/danl-rw-refs/OuimetTate-NBER-2023.pdf) NBER Working Paper 31463.
+
+---
+
+Best,
+Byeong-Hak Choe

@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Byeong-Hak Choe">
-<meta name="dcterms.date" content="2026-01-26">
+<meta name="dcterms.date" content="2026-03-20">
 
-<title>Week 2 | Byeong-Hak Choe</title>
+<title>The Impact of Employee Benefits on Labor Turnover in the United States | Byeong-Hak Choe</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,12 +64,14 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../assets/css/font.css">
-<link rel="stylesheet" href="styles-wk.css">
-<meta property="og:title" content="Week 2 | Byeong-Hak Choe">
-<meta property="og:description" content="Controls; Panel Data Methods">
+<link rel="stylesheet" href="../danl-wk/styles-wk.css">
+<meta property="og:title" content="The Impact of Employee Benefits on Labor Turnover in the United States | Byeong-Hak Choe">
+<meta property="og:description" content="Hayden Mikula">
 <meta property="og:image" content="/assets/img/posts.png">
 </head>
 
@@ -109,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../danl-wk/wk-01.html">🗓️ Weeks</a></li><li class="breadcrumb-item"><a href="../danl-wk/wk-02.html">Week 02</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">The Impact of Employee Benefits on Labor Turnover in the United States</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -191,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../danl-wk/wk-02.html" class="sidebar-item-text sidebar-link active">
+  <a href="../danl-wk/wk-02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 02</span></a>
   </div>
 </li>
@@ -214,8 +216,9 @@ ul.task-list li input[type="checkbox"] {
 <br>On this page</h2>
    
   <ul>
-  <li><a href="#lecture-slides" id="toc-lecture-slides" class="nav-link active" data-scroll-target="#lecture-slides">🏫 Lecture Slides</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">💬 Discussion</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link active" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#questions-to-think-about-as-you-refine-your-capstone-paper" id="toc-questions-to-think-about-as-you-refine-your-capstone-paper" class="nav-link" data-scroll-target="#questions-to-think-about-as-you-refine-your-capstone-paper">Questions to Think About as You Refine Your Capstone Paper</a></li>
+  <li><a href="#recommended-background-readings" id="toc-recommended-background-readings" class="nav-link" data-scroll-target="#recommended-background-readings">Recommended Background Readings</a></li>
   </ul>
 </nav>
     </div>
@@ -224,8 +227,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 2</h1>
-<p class="subtitle lead">Controls; Panel Data Methods</p>
+<h1 class="title">The Impact of Employee Benefits on Labor Turnover in the United States</h1>
+<p class="subtitle lead">Hayden Mikula</p>
 </div>
 
 
@@ -242,40 +245,139 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 26, 2026</p>
+      <p class="date">March 20, 2026</p>
     </div>
   </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">January 27, 2026</p>
-    </div>
-  </div>
     
   </div>
   
 
 </header>
 
-<p>In the second week, we will discuss good &amp; bad controls in linear regression and panel data models.</p>
-<section id="lecture-slides" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-slides">🏫 Lecture Slides</h2>
+<p>Hi Hayden,</p>
+<p>Thank you for your Research Kick-off Report. Your topic is practically relevant and easy to motivate. Employee turnover is costly, and understanding whether benefits are associated with lower turnover is a question that matters to managers, compensation analysts, and policy discussions. I also like that you are trying to build the project around public BLS data rather than relying mainly on proprietary surveys. That is a strong foundation for a capstone project.</p>
+<p>The proposal already shows several strengths. First, you have a clear business problem. Second, you identified useful national data sources. Third, you correctly recognized that this is better suited to regression-style analysis than clustering. The idea of decoding BLS series IDs and building a merged analytic file is also ambitious in a good way.</p>
+<p>The main priorities for your <strong>Capstone Paper</strong> are to sharpen the outcome variable, rethink the unit of analysis around what the BLS datasets actually provide, choose whether the project is primarily <strong>inferential</strong> or <strong>predictive</strong>, and make the data-merging plan more concrete.</p>
+<hr>
+<section id="next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="next-steps">Next Steps</h3>
+<p>You are working toward the <strong>presentation</strong>, the <strong>Capstone Paper</strong>, and ultimately the <strong>capstone paper</strong>. Focus on <strong>feasible data construction</strong>, a <strong>clear modeling goal</strong>, and <strong>careful interpretation</strong>.</p>
 <ul>
-<li><p><strong>Lecture 2 — Omitted Variable Bias; Bad Controls</strong><br>
-<a href="../danl-lec/danl-410-lec-02-2026-0126.html" target="_blank">View Slides</a></p></li>
-<li><p><strong>Lecture 3 — Panel Data Models</strong><br>
-<a href="../danl-lec/danl-410-lec-02-2026-0126.html" target="_blank">View Slides</a></p></li>
+<li><p><strong>Define the dependent variable more precisely.</strong> Right now the report uses “turnover” and “churn” somewhat interchangeably. In the BLS JOLTS data, you will need to decide whether your outcome is:</p>
+<ul>
+<li>the <strong>quits rate</strong></li>
+<li>the <strong>total separations rate</strong></li>
+<li>or some other JOLTS measure</li>
 </ul>
-<p>🎥 Looking for lecture recordings? You can only find those on Brightspace.</p>
+<p>For a question about employee retention, quits rate or total separations rate makes more sense than job openings or hires. Be explicit about which one you will study and why.</p></li>
+<li><p><strong>Rethink the unit of analysis around the data that are actually available.</strong> Your proposal says the unit of analysis will be “the employee benefits themselves.” That is not the unit of observation in a regression. Benefits are variables. The unit of observation is the row of the dataset.</p>
+<p>A more important issue is feasibility. In the public BLS series formats, the Employee Benefits (NB) and ECEC (CM) series IDs include both <strong>industry</strong> and <strong>occupation</strong>, but JOLTS series IDs are organized around <strong>industry, geography, establishment size, and data element</strong>, not occupation. That means a public JOLTS-based outcome is naturally an <strong>industry-by-time</strong> outcome, not an industry-by-occupation-by-time outcome.</p>
+<p>Because of this, your most feasible unit of analysis is probably an <strong>industry-year</strong> or <strong>industry-month</strong> panel. If occupation is central to your question, then you should either:</p>
+<ul>
+<li>find a different outcome source that supports occupation-level turnover, or</li>
+<li>narrow the project so that the main analysis is industry-level, while occupation appears only in descriptive background tables.</li>
+</ul></li>
+<li><p><strong>Choose whether the project is inferential or predictive.</strong> The capstone should make either an inferential contribution or a predictive contribution, and your Capstone Paper should state which one you are doing.</p>
+<p>For this topic, an <strong>inferential</strong> study seems more natural. Your question is essentially: which benefits are associated with lower turnover, after accounting for other factors? If that is the goal, then your main outputs are coefficient estimates, uncertainty measures, and careful interpretation.</p>
+<p>A <strong>predictive</strong> version is also possible, but it would need a different framing: for example, using benefit and workforce characteristics to predict future turnover rates across industries. If you choose that path, then you would want a training/test split and prediction metrics such as RMSE or MAE. In that case, you should avoid strong causal language.</p></li>
+<li><p><strong>Think carefully about causality, but keep your claims modest.</strong> A negative relationship between benefits and turnover does not automatically mean that benefits cause lower turnover. High-turnover industries may offer fewer benefits because of their workforce structure, cost pressures, or business model. Wages, unionization, establishment size, and worker composition may also affect both benefits and turnover.</p>
+<p>For the Capstone Paper, you should:</p>
+<ul>
+<li>explain this challenge in plain language</li>
+<li>state that your regression estimates will show associations unless your design gives stronger causal leverage</li>
+<li>include strong control variables where possible</li>
+<li>consider using lagged benefit variables, such as benefits in year <span class="math inline">\(t - 1\)</span> to explain turnover in year <span class="math inline">\(t\)</span></li>
+</ul></li>
+<li><p><strong>Do not restrict the study to a single March snapshot unless you must.</strong> Your report sometimes sounds like the analysis will be “as of March 2025.” That is workable for a descriptive comparison, but it is much weaker for inference or prediction. If the data coverage allows it, a multi-year panel will be much stronger because it gives you more observations and lets you separate persistent industry differences from broader time shocks.</p></li>
+<li><p><strong>Write the model down explicitly.</strong> Right now the method section says “general Cause-and-Effect regression,” but the actual specification is not written out. Your Capstone Paper should present an equation.</p>
+<p>If you use an industry-year panel, a sensible inferential specification would look like:</p>
+<p><span class="math display">\[\text{TurnoverRate}_{i,t} = \beta_0 + \beta_1 \text{HealthAccess}_{i,t} + \beta_2 \text{RetirementAccess}_{i,t} + \beta_3 \text{PaidLeaveCost}_{i,t} + \mathbf{X}_{i,t}'\boldsymbol{\gamma} + \alpha_i + \delta_t + \varepsilon_{i,t}\]</span></p>
+<p>where <span class="math inline">\(i\)</span> indexes industries, <span class="math inline">\(t\)</span> indexes time, <span class="math inline">\(\alpha_i\)</span> captures persistent differences across industries, <span class="math inline">\(\delta_t\)</span> captures common time shocks, and <span class="math inline">\(\mathbf{X}_{i,t}\)</span> includes controls such as wage levels, establishment size mix, or other workforce characteristics.</p>
+<p>If you choose a predictive framing instead, say so clearly and explain the target variable, feature set, and evaluation plan.</p></li>
+<li><p><strong>Be explicit about the time alignment problem.</strong> Your three main data sources do not operate on the same schedule:</p>
+<ul>
+<li>JOLTS is monthly</li>
+<li>Employee Benefits is annual</li>
+<li>ECEC is quarterly</li>
+</ul>
+<p>That means you need a clear plan for aligning time. One reasonable option is to aggregate JOLTS to the year level and match it to annual benefit measures. Another is to use March or annual averages consistently if that matches the benefit reference period better. Do not leave this as an unstated merge issue. It is one of the central design choices in the project.</p></li>
+<li><p><strong>Specify which benefits you will include.</strong> “Benefits” is too broad as written. For the Capstone Paper, list the exact benefit measures you plan to study, such as:</p>
+<ul>
+<li>medical care access</li>
+<li>retirement plan access</li>
+<li>paid vacation access</li>
+<li>paid sick leave access</li>
+<li>employer benefit cost shares from ECEC</li>
+</ul>
+<p>Then decide whether you will:</p>
+<ul>
+<li>include these as separate regressors, or</li>
+<li>build a smaller number of indices, such as a health or insurance index and a leave index</li>
+</ul>
+<p>Also note that some benefit variables are likely to move together. You should plan to check pairwise correlations and whether the regression results become unstable when too many similar variables are included at once.</p></li>
+<li><p><strong>Make the merge plan concrete and test it early.</strong> One of the strongest technical parts of your proposal is the idea of decoding BLS series IDs. That can work, but only if you document the exact keys.</p>
+<p>For the Capstone Paper, show:</p>
+<ul>
+<li>one example NB series ID and how you will parse it</li>
+<li>one example CM series ID and how you will parse it</li>
+<li>one example JOLTS series ID and how you will parse it</li>
+<li>the common fields that will actually be used for the merge</li>
+</ul>
+<p>My advice is to build a small prototype dataset first with just a few industries and a few years. That will tell you quickly whether the full design is feasible.</p></li>
+<li><p><strong>Use non-BLS sources carefully.</strong> The QuickBooks and Nuveen materials are fine for motivation, but they should not drive your main empirical analysis. The same caution applies to the GIGAcalculator spreadsheet unless you can clearly document where the data come from and how the measures were constructed.</p>
+<p>For the final paper, the strongest version of this project uses BLS data as the core analytic source and treats outside surveys as context only.</p></li>
+<li><p><strong>Strengthen the writing of the research question.</strong> Right now the question asks, “Which employee benefits result in the lowest average turnover?” That wording sounds stronger than your design can likely support. A more careful version would be:</p>
+<blockquote class="blockquote">
+<p>Which employee benefits are most strongly associated with lower labor turnover across U.S. industries?</p>
+</blockquote>
+<p>If you later develop a stronger research design, you can revisit the wording. For now, this phrasing is more defensible.</p></li>
+</ul>
+<hr>
 </section>
-<section id="discussion" class="level2">
-<h2 class="anchored" data-anchor-id="discussion">💬 Discussion</h2>
-<p><font size="5">Welcome to our Week 2 Discussion Board! 👋 </font></p>
-<p>This space is designed for you to engage with your classmates about the material covered in Week 2.</p>
-<p>Whether you are looking to delve deeper into the content, share insights, or have questions about the content, this is the perfect place for you.</p>
-<p>If you have any specific questions for Byeong-Hak (<strong><span class="citation" data-cites="bcdanl">@bcdanl</span></strong>) or peer classmate (<span class="citation" data-cites="GitHub-Username">@GitHub-Username</span>) regarding the Week 2 materials or need clarification on any points, don’t hesitate to ask here.</p>
-<p>Let’s collaborate and learn from each other!</p>
+<section id="questions-to-think-about-as-you-refine-your-capstone-paper" class="level3">
+<h3 class="anchored" data-anchor-id="questions-to-think-about-as-you-refine-your-capstone-paper">Questions to Think About as You Refine Your Capstone Paper</h3>
+<p>You do <strong>not</strong> need to answer all of these now, but they may help you sharpen both the analysis and the story you tell in your presentation and final paper.</p>
+<p><strong>1. What exactly is your outcome measure?</strong></p>
+<ul>
+<li>Is the best retention outcome the quits rate, the total separations rate, or something else?</li>
+<li>Would your interpretation change depending on which turnover measure you use?</li>
+</ul>
+<p><strong>2. Can you really study occupations with your chosen outcome data?</strong></p>
+<ul>
+<li>If JOLTS is the main source for turnover, how will you support the occupation part of the question?</li>
+<li>Would it be better to narrow the project to industries first and do that well?</li>
+</ul>
+<p><strong>3. Access versus cost</strong></p>
+<ul>
+<li>Do you expect access to benefits or employer spending on benefits to matter more?</li>
+<li>Could a low-cost but widely available benefit matter more for retention than a more expensive but rarer one?</li>
+</ul>
+<p><strong>4. Timing</strong></p>
+<ul>
+<li>Do benefits in the same year explain turnover in that year, or should benefits in one period predict turnover in the next period?</li>
+<li>Would lagging the benefits make your interpretation more convincing?</li>
+</ul>
+<p><strong>5. Managerial usefulness</strong></p>
+<ul>
+<li>Suppose you find that paid sick leave and retirement access are the strongest predictors of lower turnover. How would you turn that into a recommendation for a manager with a limited budget?</li>
+<li>Can you rank benefits by approximate “turnover reduction per dollar” rather than only by statistical significance?</li>
+</ul>
+<hr>
+</section>
+<section id="recommended-background-readings" class="level3">
+<h3 class="anchored" data-anchor-id="recommended-background-readings">Recommended Background Readings</h3>
+<ul>
+<li>Lazear, E. P., &amp; Shaw, K. L. (2007). <a href="https://bcdanl.github.io/410/danl-rw-refs/LazearShaw-JEP-2007.pdf"><em>“Personnel Economics: The Economist’s View of Human Resources.”</em></a> <em>Journal of Economic Perspectives</em>, 21(4), 91-114.</li>
+<li>Bureau of Labor Statistics. <a href="https://www.bls.gov/opub/hom/jlt/"><em>Handbook of Methods: Job Openings and Labor Turnover Survey.</em></a></li>
+<li>Bureau of Labor Statistics. <a href="https://www.bls.gov/opub/hom/eb/"><em>Handbook of Methods: Employee Benefits.</em></a></li>
+<li>Bureau of Labor Statistics. <a href="https://www.bls.gov/opub/hom/ecec/"><em>Handbook of Methods: Employer Costs for Employee Compensation.</em></a></li>
+<li>Bureau of Labor Statistics. <a href="https://www.bls.gov/ebs/publications/employee-benefits-in-the-united-states-march-2025.htm"><em>Employee Benefits in the United States, March 2025.</em></a></li>
+<li>Bureau of Labor Statistics. <a href="https://www.bls.gov/help/hlpforma.htm"><em>Series ID Formats.</em></a></li>
+<li>Ouimet, P., &amp; Tate, G. (2023). <a href="https://bcdanl.github.io/410/danl-rw-refs/OuimetTate-NBER-2023.pdf"><em>“Firms with Benefits? Nonwage Compensation and Implications for Firms and Labor Markets.”</em></a> NBER Working Paper 31463.</li>
+</ul>
+<hr>
+<p>Best, Byeong-Hak Choe</p>
 
 
 </section>
@@ -655,8 +757,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="bcdanl/410-spr-2026-discussion" data-repo-id="R_kgDOQ8gipQ" data-category="General" data-category-id="DIC_kwDOQ8gipc4C1IRh" data-mapping="title" data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

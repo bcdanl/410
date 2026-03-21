@@ -1,0 +1,145 @@
+---
+title: "Do Higher Levels of Drug-Related Arrests Reduce Overdose Deaths in New York City Neighborhoods?"
+subtitle: "Jordan Alfano & Jake Starkey"
+date: 2026-03-20
+
+code-fold: false
+
+execute:
+  echo: true
+  eval: true
+  message: false
+  warning: false
+  fig-width: 9
+  fig-height: 6
+---
+
+Hi Jordan and Jake,
+
+Thank you for your Research Kick-off Report. You have chosen a timely and genuinely important public-policy question: whether drug-related arrests are associated with lower or higher overdose mortality across New York City neighborhoods. The project is well motivated, the stakeholder framing is strong, and the decision to use a neighborhood-by-year panel with fixed effects is a very sensible starting point for this topic. Your report also does a good job acknowledging several core limitations up front—especially reverse causality, boundary mismatches, and the fact that arrest counts may reflect policing intensity as much as underlying drug activity.
+
+Overall, this has the makings of a strong capstone project. The biggest priorities going forward are to (1) tighten the identification strategy, (2) lock down a feasible and internally consistent geography, (3) make the outcome model fit the structure of the data, and (4) expand the reference base beyond CDC WONDER so the data plan is more clearly tied to NYC-specific sources.
+
+---
+
+### Next Steps
+
+You are working toward both the **presentation** and the **capstone paper**. Focus on **clear causal reasoning**, a **defensible data-construction plan**, and **transparent interpretation of what your model can and cannot establish**.
+
+- **Address reverse causality more explicitly and place it at the center of your analysis.**  
+  Your current limitations section correctly notes reverse causality, but this issue deserves to be central in the Capstone Paper. Neighborhoods experiencing more overdoses may receive more police attention, so a simple positive correlation between arrests and overdose deaths does **not** imply arrests worsen outcomes — it may just reflect targeted enforcement. In the Capstone Paper:
+  - State clearly that the main threat to causal interpretation is that enforcement responds to the same drug-market conditions that drive overdoses.
+  - Explain what lagged arrest rates do and do not solve. A one-year lag helps reduce the concern that this year's arrests are directly caused by this year's overdose deaths, but it does not eliminate the possibility that both are being driven by the same underlying neighborhood conditions.
+  - Discuss whether there is a policy shift, administrative change, or other real-world event that created variation in arrests that was unrelated to overdose trends — such variation would give you a stronger basis for a causal claim.
+
+- **Choose one geography early, and make sure the two datasets are measuring the same place concept.**  
+  Right now the paper leaves open ZIP codes versus community districts. That choice is not a minor detail; it may determine whether the project is feasible.
+  - Overdose deaths are often reported by **residence**, while arrest data are often tied to the **location of the arrest**. If those are not aligned, the interpretation becomes much weaker.
+  - NYC overdose reporting is often organized at the **United Hospital Fund (UHF) neighborhood** level, which may be a more practical compromise than raw ZIP codes or community districts.
+  - In the Capstone Paper, explain exactly how you will map arrests and overdose deaths to the same geographic unit, and what you will do if some boundaries do not line up cleanly.
+
+- **Revisit the outcome model before you commit to log(rate + constant) as the main specification.**  
+  The log transformation is a reasonable first idea, but this setting has a few complications:
+  - Small-area overdose counts can be sparse, and some neighborhood-year cells may be zero, suppressed, or unstable.
+  - Adding a constant before taking logs can affect interpretation, especially when values are small.
+  - A useful robustness check would be a **fixed-effects Poisson model with a population offset**, since the underlying data are counts and Poisson-type models handle zeros more naturally.
+  
+  If you keep the log-rate model as the main specification, explain the constant you add, test sensitivity to that choice, and compare results to at least one count-based alternative.
+
+- **Use an inference strategy that matches panel data.**  
+  Your attention to robust standard errors is good, but I would rethink **Newey-West** as the primary correction.
+  - In a neighborhood-by-year panel, **clustering standard errors by neighborhood** is the more natural default.
+  - If you worry about common shocks across neighborhoods in a given year, you might also discuss two-way clustering by neighborhood and year.
+  - Newey-West can still appear as a robustness check, but it should not be your first or only answer to serial correlation in panel data.
+
+- **Narrow the time question to a feasible window.**  
+  The pre/post-COVID comparison is strong, but the reference to the "80's" makes the scope feel too broad for the available data and for a capstone timeline.
+  - Unless you find a surprisingly rich historical neighborhood series, the 1980s are probably outside the feasible scope of this project.
+  - A modern window such as the 2010s through the post-COVID years is more realistic and more policy relevant.
+  - In addition to COVID, think about the transition to a fentanyl-dominated overdose environment. The relationship between arrests and overdose deaths may differ sharply between earlier heroin-dominant years and later fentanyl-heavy years, when even small disruptions in supply can lead to users encountering more dangerous substitutes.
+
+- **Refine the socioeconomic heterogeneity question.**  
+  The idea is good, but the current framing — "high gini like Manhattan, compared to Staten Island" — needs tightening.
+  - Manhattan and Staten Island are boroughs, not neighborhood categories.
+  - Borough-level inequality is not the same thing as neighborhood-level inequality.
+  - A cleaner approach would be to define heterogeneity using **neighborhood poverty rate**, **median household income**, or a small number of income/poverty quartiles drawn from ACS data.
+
+- **Be careful with ACS controls in a year-by-year fixed-effects panel.**  
+  This is a subtle but important data issue.
+  - Small-area ACS estimates are often based on **5-year rolling samples**, so adjacent years overlap heavily.
+  - That means year-to-year changes in poverty, income, or unemployment may look more precise than they really are.
+  - Keep the control set parsimonious, and explain how ACS timing and overlap affect interpretation.
+
+- **Make the possession vs. distribution question operational.**  
+  This is one of the most interesting parts of the paper, but it will only work if the arrest data truly allow that split.
+  - Confirm that the NYPD arrest data contain enough charge detail to separate possession from sale/distribution in a defensible way.
+  - If they do, estimate them as separate regressors rather than pooling all drug arrests together.
+  - If they do not, say so early and simplify the project rather than keeping a sub-question you cannot answer cleanly.
+
+- **Strengthen and localize the data sources.**  
+  The current reference list is too thin for the ambitions of the project.
+  - **CDC WONDER** is useful for national or county-level mortality work, but it is not the ideal source for a neighborhood-level NYC panel.
+  - Your Capstone Paper should reference the **NYC Department of Health and Mental Hygiene** overdose surveillance pages and the relevant **NYC Open Data** arrest datasets directly.
+  - Expand the literature review so the project is grounded not only in data availability, but also in current thinking about overdose surveillance, synthetic opioids, and harm reduction.
+
+- **Include simple descriptive visuals in both the presentation and capstone paper.**  
+  A few basic visuals would make the project much easier to understand:
+  - A map of the chosen neighborhood unit showing overdose death rates.
+  - A citywide time-series of overdose deaths and drug arrests.
+  - A scatter plot of neighborhood arrest intensity against overdose mortality.
+  - A small table showing how many neighborhood-year observations remain after merging, suppression handling, and missing-data decisions.
+
+---
+
+### Questions to Think About as You Refine Your Capstone Paper
+
+You do **not** need to answer all of these now, but they may help you sharpen the design.
+
+**1. Causality and Interpretation**
+
+- Suppose you estimate a positive coefficient on arrests. What is the most credible interpretation: a harmful effect of enforcement, or policing simply responding to higher-risk neighborhoods?
+- What kind of real-world event or policy change would make you more comfortable saying the association you estimate is close to causal, rather than just descriptive?
+
+**2. Geography and Measurement**
+
+- Are your arrest data measuring where the arrest happened, where the person lives, or something else?
+- Are your overdose data measuring decedent residence, location of death, or both?
+- If the two datasets are on different geographic concepts, what is your plan for reconciling them?
+
+**3. Functional Form and Robustness**
+
+- How many neighborhood-year cells have zero, missing, or suppressed overdose values?
+- Do your headline results change if you compare:
+  - log(overdose rate + constant),
+  - a count model with a population offset, and
+  - a simpler level-level or standardized-rate specification?
+
+**4. Controls and Panel Structure**
+
+- Which socioeconomic controls actually vary enough within neighborhoods over time to matter in a fixed-effects model?
+- Are you at risk of "over-controlling" with a long list of highly correlated variables that mostly move together?
+
+**5. Policy Narrative**
+
+- If arrests are not associated with lower overdose mortality, what alternative investments would the evidence point toward?
+- If arrests appear protective in some places but not others, what neighborhood characteristics seem to condition that relationship?
+- How will you explain your results to an audience split between public-health and law-enforcement stakeholders?
+
+---
+
+### Background Sources Worth Using in the Capstone Paper
+
+These are not the only sources you should use, but they are better aligned with your project than the current reference list and will help you ground the paper in NYC-specific data and policy context.
+
+- New York City Department of Health and Mental Hygiene. [*NYC Drug and Alcohol Data*](https://www.nyc.gov/site/doh/health/health-topics/alcohol-and-drug-use-data.page)
+- New York City Department of Health and Mental Hygiene. [*Epi Data Briefs and Data Tables*](https://www.nyc.gov/site/doh/data/data-publications/epi-data-briefs-and-data-tables.page)
+- NYC Open Data. [*NYPD Arrests Data (Historic) - Dangerous Drugs*](https://data.cityofnewyork.us/Public-Safety/NYPD-Arrests-Data-Historic-Dangerous-Drugs/pzkv-yu47)
+- U.S. Census Bureau. [*American Community Survey 5-Year Data*](https://www.census.gov/data/developers/data-sets/acs-5year.html)
+- Mattson, C. L., Tanz, L. J., Quinn, K., Kariisa, M., Patel, P., & Davis, N. L. (2021). [*Trends and Geographic Patterns in Drug and Synthetic Opioid Overdose Deaths - United States, 2013-2019*](https://www.cdc.gov/mmwr/volumes/70/wr/mm7006a4.htm). *Morbidity and Mortality Weekly Report*, 70(6), 202-207.
+- Hawk, M., Coulter, R. W. S., Egan, J. E., Fisk, S., Friedman, M. R., Tula, M., & Kinsky, S. (2017). [*Harm reduction principles for healthcare settings*](https://doi.org/10.1186/s12954-017-0196-4). *Harm Reduction Journal*, 14(1).
+- Schnell, M., & Currie, J. (2018). [*Addressing the opioid epidemic: Is there a role for physician education?*](https://doi.org/10.1162/ajhe_a_00113). *American Journal of Health Economics*, 4(3), 383-410.
+
+---
+
+Best,  
+Byeong-Hak Choe

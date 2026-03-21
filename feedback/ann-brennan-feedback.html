@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Byeong-Hak Choe">
-<meta name="dcterms.date" content="2026-01-26">
+<meta name="dcterms.date" content="2026-03-20">
 
-<title>Week 2 | Byeong-Hak Choe</title>
+<title>Wildfires, Insurer Withdrawal, and the Expansion of FAIR Plans in the Western United States | Byeong-Hak Choe</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,12 +64,14 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../assets/css/font.css">
-<link rel="stylesheet" href="styles-wk.css">
-<meta property="og:title" content="Week 2 | Byeong-Hak Choe">
-<meta property="og:description" content="Controls; Panel Data Methods">
+<link rel="stylesheet" href="../danl-wk/styles-wk.css">
+<meta property="og:title" content="Wildfires, Insurer Withdrawal, and the Expansion of FAIR Plans in the Western United States | Byeong-Hak Choe">
+<meta property="og:description" content="Ann Brennan">
 <meta property="og:image" content="/assets/img/posts.png">
 </head>
 
@@ -109,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../danl-wk/wk-01.html">🗓️ Weeks</a></li><li class="breadcrumb-item"><a href="../danl-wk/wk-02.html">Week 02</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Wildfires, Insurer Withdrawal, and the Expansion of FAIR Plans in the Western United States</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -191,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../danl-wk/wk-02.html" class="sidebar-item-text sidebar-link active">
+  <a href="../danl-wk/wk-02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 02</span></a>
   </div>
 </li>
@@ -214,8 +216,9 @@ ul.task-list li input[type="checkbox"] {
 <br>On this page</h2>
    
   <ul>
-  <li><a href="#lecture-slides" id="toc-lecture-slides" class="nav-link active" data-scroll-target="#lecture-slides">🏫 Lecture Slides</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">💬 Discussion</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link active" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#questions-to-think-about-as-you-refine-your-capstone-paper" id="toc-questions-to-think-about-as-you-refine-your-capstone-paper" class="nav-link" data-scroll-target="#questions-to-think-about-as-you-refine-your-capstone-paper">Questions to Think About as You Refine Your Capstone Paper</a></li>
   </ul>
 </nav>
     </div>
@@ -224,8 +227,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 2</h1>
-<p class="subtitle lead">Controls; Panel Data Methods</p>
+<h1 class="title">Wildfires, Insurer Withdrawal, and the Expansion of FAIR Plans in the Western United States</h1>
+<p class="subtitle lead">Ann Brennan</p>
 </div>
 
 
@@ -242,40 +245,175 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 26, 2026</p>
+      <p class="date">March 20, 2026</p>
     </div>
   </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">January 27, 2026</p>
-    </div>
-  </div>
     
   </div>
   
 
 </header>
 
-<p>In the second week, we will discuss good &amp; bad controls in linear regression and panel data models.</p>
-<section id="lecture-slides" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-slides">🏫 Lecture Slides</h2>
+<p>Hi Ann,</p>
+<p>Thank you for your Research Kick-off Report. You have chosen a timely and policy-relevant topic. The retreat of private insurers from wildfire-exposed areas and the growth of FAIR Plan coverage is one of the clearest ways climate risk is reshaping household finance, insurance regulation, and local housing markets in the western United States. Your research question is clear, your stakeholder motivation is strong, and your county-year panel structure is a sensible starting point for this kind of project. I also appreciate that you already recognize practical challenges such as FAIR Plan data locked in PDFs and the difficulty of measuring insurer withdrawal directly.</p>
+<p>Overall, this has the makings of a strong capstone project. The biggest priorities for your <strong>Capstone Paper</strong> are to tighten the data construction plan, decide whether the project is mainly about <strong>inference</strong> or <strong>prediction</strong>, and make sure the panel model matches the type of wildfire variable you want to use. Right now, the strongest path is probably a California-first study that leans on official FAIR Plan and California Department of Insurance data, with other western states treated as a secondary comparison only if comparable public data are truly available.</p>
+<hr>
+<section id="next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="next-steps">Next Steps</h3>
+<p>You are working toward both the <strong>presentation</strong> and the <strong>capstone paper</strong>. Focus on <strong>careful data construction</strong>, a <strong>well-specified panel model</strong>, and <strong>honest interpretation</strong> that speaks to insurance regulators and state government.</p>
 <ul>
-<li><p><strong>Lecture 2 — Omitted Variable Bias; Bad Controls</strong><br>
-<a href="../danl-lec/danl-410-lec-02-2026-0126.html" target="_blank">View Slides</a></p></li>
-<li><p><strong>Lecture 3 — Panel Data Models</strong><br>
-<a href="../danl-lec/danl-410-lec-02-2026-0126.html" target="_blank">View Slides</a></p></li>
+<li><p><strong>Turn insurer withdrawal into a measurable outcome, not just a limitation.</strong><br>
+Your report says that private insurer withdrawal data is not very public, which is partly true, but the project may be more feasible than you think. The California Department of Insurance now publishes annual homeowners policy counts by county and ZIP code, including <strong>new</strong>, <strong>renewed</strong>, and <strong>non-renewed</strong> policies. That gives you a direct way to measure two different parts of market retreat:</p>
+<ul>
+<li><strong>Non-renewals</strong>, which capture existing policyholders being dropped from the standard market.</li>
+<li><strong>Fewer new policies</strong>, which capture insurers becoming less willing to write new business.</li>
 </ul>
-<p>🎥 Looking for lecture recordings? You can only find those on Brightspace.</p>
+<p>For the Capstone Paper, decide which of these is central to your story. I see three promising empirical framings:</p>
+<ul>
+<li>wildfire risk and fire activity predict <strong>FAIR Plan growth</strong></li>
+<li>wildfire risk and fire activity predict <strong>private-market non-renewals</strong></li>
+<li>wildfire risk and fire activity predict <strong>non-renewals, which then help explain FAIR Plan growth</strong></li>
+</ul>
+<p>The third option is especially compelling because it matches the policy story most closely.</p></li>
+<li><p><strong>Use the most direct FAIR Plan data source available.</strong><br>
+Your kick-off report emphasizes annual reports in PDF form. That may still be useful, but the California FAIR Plan now publishes a <strong>Key Statistics &amp; Data</strong> page with county and ZIP-code tables for policies in force and exposure, updated quarterly. This may reduce the data-cleaning burden a lot. For the Capstone Paper:</p>
+<ul>
+<li>State whether you will use <strong>quarterly FAIR Plan data aggregated to the year level</strong> or one <strong>annual snapshot</strong> per year.</li>
+<li>Be explicit about whether your main outcome is <strong>policy count</strong>, <strong>total insured value</strong>, or <strong>both</strong>.</li>
+<li>Treat total insured value carefully. It rises not only when more properties enter the FAIR Plan, but also when insured values rise because of housing prices, rebuilding costs, and inflation.</li>
+</ul>
+<p>I would lean toward <strong>policy count</strong> as the cleaner main outcome, and use <strong>total insured value</strong> as a secondary outcome.</p></li>
+<li><p><strong>Choose a primary lane: inference or prediction.</strong><br>
+Right now your evaluation plan mixes both. That is not wrong, but the paper will be much stronger if you say which one comes first.</p>
+<ul>
+<li>If your main goal is <strong>inference</strong>, then the core result is a panel regression that estimates how wildfire exposure, recent fires, and insurer retreat are associated with FAIR Plan growth after controlling for county and year differences. In that case, the key outputs are coefficients, confidence intervals, and interpretation.</li>
+<li>If your main goal is <strong>prediction</strong>, then the main question is whether wildfire and insurance variables improve out-of-sample forecasts of FAIR Plan enrollment. In that case, the key outputs are RMSE and validation over time.</li>
+</ul>
+<p>Given your motivation, I think <strong>inference should be primary</strong> and <strong>prediction should be a short extension</strong>. That framing fits regulators better. Also, a county-year dataset is not huge, so more complex machine learning methods may add less than you expect unless you move to a finer geography such as ZIP-year.</p></li>
+<li><p><strong>Match the panel model to the type of wildfire measure you use.</strong><br>
+This is the most important modeling issue in your report. A county fixed-effects model learns from <strong>within-county change over time</strong>. That means a wildfire variable that is mostly fixed for each county, such as a broad structural risk category, may not do much work once county fixed effects are included. So for the Capstone Paper, be very clear about which wildfire measure is actually changing over time.</p>
+<p>A strong starting model would be something like:</p>
+<p><span class="math display">\[
+\log(1 + \text{FAIRPolicies}_{it}) = \beta_1 \text{FireActivity}_{i,t-1} + \beta_2 \text{NonRenewals}_{it} + \mathbf{X}_{it}'\gamma + \alpha_i + \delta_t + \varepsilon_{it}
+\]</span></p>
+<p>where:</p>
+<ul>
+<li><span class="math inline">\(\alpha_i\)</span> is a county fixed effect</li>
+<li><span class="math inline">\(\delta_t\)</span> is a year fixed effect</li>
+<li><span class="math inline">\(\mathbf{X}_{it}\)</span> is a set of county-year controls</li>
+</ul>
+<p>This setup fits your project well because <strong>recent fire activity</strong> and <strong>non-renewals</strong> both vary over time. If you also want to use a more stable wildfire risk measure, think about using it as:</p>
+<ul>
+<li>a <strong>baseline county characteristic</strong> in a simpler cross-county analysis, or</li>
+<li>an <strong>interaction term</strong> with time, such as baseline risk multiplied by recent fire activity or by a post-2017 indicator.</li>
+</ul>
+<p>Also consider <strong>lagged fire variables</strong>. Insurance renewals and FAIR Plan take-up may respond with a delay after a major fire season.</p></li>
+<li><p><strong>Use the right denominator and reconsider growth rates.</strong><br>
+Population is a reasonable background control, but property insurance is much more naturally tied to <strong>housing units</strong> and <strong>owner-occupied units</strong> than to total population. For the Capstone Paper, think about outcomes such as:</p>
+<ul>
+<li>FAIR Plan policies per 1,000 housing units</li>
+<li>FAIR Plan policies per 1,000 owner-occupied units</li>
+<li>log policy count</li>
+<li>log total insured value</li>
+</ul>
+<p>I would be cautious about using <strong>growth rates</strong> as the main outcome. Growth rates can become noisy in counties where FAIR Plan enrollment starts very small. Log counts are usually easier to interpret and more stable.</p></li>
+<li><p><strong>Expand the control variables beyond population.</strong><br>
+You already know this needs work, and you are right. A stronger county-year control set would include:</p>
+<ul>
+<li><strong>median home value</strong></li>
+<li><strong>owner-occupied housing share</strong></li>
+<li><strong>median household income</strong></li>
+<li><strong>housing stock age</strong></li>
+<li><strong>number of housing units or new housing permits</strong></li>
+</ul>
+<p>These matter because FAIR Plan growth can reflect both wildfire risk and the economic scale of the housing market. Expensive counties can have rising FAIR exposure even if policy counts are not rising as quickly.</p></li>
+<li><p><strong>Use wildfire incident data that matches your unit of analysis.</strong><br>
+The NOAA Climate at a Glance page is useful for background climate context, but it is not the cleanest source for county-level wildfire activity. For a county-year panel, you will likely be better off with:</p>
+<ul>
+<li><strong>CAL FIRE Fire Hazard Severity Zones</strong> for structural wildfire exposure</li>
+<li><strong>CAL FIRE Fire Perimeters</strong> for annual realized fire activity</li>
+<li>possibly <strong>MTBS</strong> if you want burn severity measures</li>
+</ul>
+<p>One practical idea is to aggregate annual <strong>acres burned</strong>, <strong>number of large fires</strong>, or <strong>fire perimeter area</strong> to the county-year level. That would match your panel structure well.</p></li>
+<li><p><strong>Be realistic about the cross-state comparison.</strong><br>
+Comparing California with Oregon or Colorado is interesting, but I would treat that as secondary until you confirm the data.</p>
+<ul>
+<li><a href="https://orfairplan.com/">Oregon does have an official FAIR Plan</a>, but California appears to have much richer public statistical releases.</li>
+<li><a href="https://doi.colorado.gov/insurance-products/homeowners/renters-insurance/fair-access-to-insurance-requirements-fair-plan">Colorado’s FAIR Plan is very new</a>, which means the time series is likely too short for a strong panel comparison.</li>
+</ul>
+<p>Because of that, I would make <strong>California the clear primary contribution</strong>. If you later confirm comparable data elsewhere, you can add a smaller comparison section.</p></li>
+<li><p><strong>Use stronger source choices in the capstone paper bibliography.</strong><br>
+Your current references point in the right direction, but the Capstone Paper should lean much more heavily on:</p>
+<ul>
+<li>official data sources</li>
+<li>peer-reviewed research</li>
+<li>regulator publications</li>
+</ul>
+<p>Trade-press articles can still help motivate the topic, but they should not carry the empirical foundation of the project.</p></li>
+</ul>
+<hr>
 </section>
-<section id="discussion" class="level2">
-<h2 class="anchored" data-anchor-id="discussion">💬 Discussion</h2>
-<p><font size="5">Welcome to our Week 2 Discussion Board! 👋 </font></p>
-<p>This space is designed for you to engage with your classmates about the material covered in Week 2.</p>
-<p>Whether you are looking to delve deeper into the content, share insights, or have questions about the content, this is the perfect place for you.</p>
-<p>If you have any specific questions for Byeong-Hak (<strong><span class="citation" data-cites="bcdanl">@bcdanl</span></strong>) or peer classmate (<span class="citation" data-cites="GitHub-Username">@GitHub-Username</span>) regarding the Week 2 materials or need clarification on any points, don’t hesitate to ask here.</p>
-<p>Let’s collaborate and learn from each other!</p>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
+<ul>
+<li><p><strong>Draw on key background readings and data sources.</strong><br>
+For your Capstone Paper and presentation, I recommend starting with the following sources:</p>
+<ul>
+<li>California FAIR Plan Association. <a href="https://www.cfpnet.com/key-statistics-data/"><em>Key Statistics &amp; Data</em></a></li>
+<li>California Department of Insurance. <a href="https://www.insurance.ca.gov/01-consumers/200-wrr/DataAnalysisOnWildfiresAndInsurance.cfm"><em>Data and Analysis on Wildfires and Insurance</em></a></li>
+<li>California Department of Forestry and Fire Protection. <a href="https://www.fire.ca.gov/osfm/what-we-do/community-wildfire-preparedness-and-mitigation/fire-hazard-severity-zones"><em>Fire Hazard Severity Zones</em></a></li>
+<li>California Department of Forestry and Fire Protection. <a href="https://www.fire.ca.gov/what-we-do/fire-resource-assessment-program/fire-perimeters"><em>Fire Perimeters</em></a></li>
+<li>U.S. Census Bureau. <a href="https://www.census.gov/programs-surveys/acs/"><em>American Community Survey</em></a></li>
+<li>Auer, M. R. (2024). <a href="https://doi.org/10.1007/s11077-024-09528-7"><em>“Wildfire risk and insurance: research directions for policy scientists”</em></a> <em>Policy Sciences</em>, 57(2), 459-484.</li>
+<li>Bayham et. al.&nbsp;(2022) <a href="https://doi.org/10.1146/annurev-resource-111920-014804"><em>“The Economics of Wildfire in the United States”</em></a> <em>Annual Review of Resource Economics</em>, 14, 379-401</li>
+<li>Boomhower, J., Fowlie, M., &amp; Plantinga, A. J. (2023). <a href="https://bcdanl.github.io/410/danl-rw-refs/boomhower-et-al-2023-wildfire-insurance-information-and-self-protection.pdf"><em>“Wildfire Insurance, Information, and Self-Protection”</em></a> <em>AEA Papers and Proceedings</em>, 113, 310-315.</li>
+</ul></li>
+<li><p><strong>Include a few simple descriptive visuals.</strong><br>
+A small set of visuals would make the project much easier to understand:</p>
+<ul>
+<li>a <strong>map of California counties</strong> showing FAIR Plan policy counts or growth</li>
+<li>a <strong>time-series plot</strong> of statewide non-renewals and statewide FAIR Plan policies</li>
+<li>a <strong>scatter plot</strong> of county wildfire risk share versus FAIR Plan growth, with notable counties labeled</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="questions-to-think-about-as-you-refine-your-capstone-paper" class="level3">
+<h3 class="anchored" data-anchor-id="questions-to-think-about-as-you-refine-your-capstone-paper">Questions to Think About as You Refine Your Capstone Paper</h3>
+<p>You do <strong>not</strong> need to answer all of these, but they may help you sharpen your analysis and policy story.</p>
+<p><strong>1. Data Construction</strong></p>
+<ul>
+<li>Can you build a direct measure of insurer retreat using <strong>non-renewals</strong> and <strong>new policy counts</strong> from CDI, instead of treating insurer withdrawal as almost fully unobserved?</li>
+<li>Will you use <strong>county-year</strong> as the final unit of analysis, or does the availability of FAIR Plan and insurance data by ZIP code make a <strong>ZIP-year</strong> panel worth considering?</li>
+<li>How will you line up <strong>quarterly FAIR Plan data</strong> with <strong>annual CDI</strong> and <strong>ACS</strong> data? Will you average quarters, use end-of-year values, or define one annual snapshot?</li>
+</ul>
+<p><strong>2. Model Choice and Timing</strong></p>
+<ul>
+<li>If you keep county fixed effects, which wildfire variable actually changes enough over time to identify the relationship you care about?</li>
+<li>Are insurers reacting mostly to <strong>recent fires</strong>, to <strong>baseline structural risk</strong>, or to both?</li>
+<li>Should recent fire activity enter with a <strong>one-year lag</strong>, given that insurance renewal decisions often happen after a fire season rather than during it?</li>
+</ul>
+<p><strong>3. Outcome Definition</strong></p>
+<ul>
+<li>Which outcome best matches your headline question: <strong>FAIR Plan policy count</strong>, <strong>FAIR Plan total insured value</strong>, <strong>non-renewals</strong>, or some sequence across all three?</li>
+<li>If total insured value rises, how much of that is more FAIR enrollment versus simply higher insured values in expensive counties?</li>
+</ul>
+<p><strong>4. Inference versus Prediction</strong></p>
+<ul>
+<li>If your main goal is inference, what is the single coefficient or relationship that a regulator should care most about?</li>
+<li>If your main goal is prediction, is the county-year sample large enough to justify machine learning, or would a simpler panel model be more credible and easier to explain?</li>
+<li>If you keep a prediction component, would a <strong>rolling out-of-time validation</strong> be more convincing than one train/test split?</li>
+</ul>
+<p><strong>5. Policy Interpretation</strong></p>
+<ul>
+<li>If wildfire risk remains strongly associated with FAIR Plan growth even after recent fire activity is controlled for, would that suggest that insurers are reacting more to <strong>expected future risk</strong> than to recent realized losses?</li>
+<li>If private-market non-renewals rise first and FAIR Plan enrollment rises after, how should regulators respond earlier in that sequence?</li>
+<li>Do you expect the relationship to differ between <strong>Northern California and Southern California</strong>, or between <strong>coastal</strong> and <strong>inland</strong> counties?</li>
+</ul>
+<hr>
+<p>Best,<br>
+Byeong-Hak Choe</p>
 
 
 </section>
@@ -655,8 +793,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="bcdanl/410-spr-2026-discussion" data-repo-id="R_kgDOQ8gipQ" data-category="General" data-category-id="DIC_kwDOQ8gipc4C1IRh" data-mapping="title" data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

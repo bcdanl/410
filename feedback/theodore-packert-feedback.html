@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Byeong-Hak Choe">
-<meta name="dcterms.date" content="2026-01-26">
+<meta name="dcterms.date" content="2026-03-20">
 
-<title>Week 2 | Byeong-Hak Choe</title>
+<title>Living Near the Cloud: Quality of Life Near Data Centers in New York State | Byeong-Hak Choe</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,12 +64,14 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../assets/css/font.css">
-<link rel="stylesheet" href="styles-wk.css">
-<meta property="og:title" content="Week 2 | Byeong-Hak Choe">
-<meta property="og:description" content="Controls; Panel Data Methods">
+<link rel="stylesheet" href="../danl-wk/styles-wk.css">
+<meta property="og:title" content="Living Near the Cloud: Quality of Life Near Data Centers in New York State | Byeong-Hak Choe">
+<meta property="og:description" content="Theodore Packert">
 <meta property="og:image" content="/assets/img/posts.png">
 </head>
 
@@ -109,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../danl-wk/wk-01.html">🗓️ Weeks</a></li><li class="breadcrumb-item"><a href="../danl-wk/wk-02.html">Week 02</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Living Near the Cloud: Quality of Life Near Data Centers in New York State</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -191,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../danl-wk/wk-02.html" class="sidebar-item-text sidebar-link active">
+  <a href="../danl-wk/wk-02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 02</span></a>
   </div>
 </li>
@@ -214,8 +216,9 @@ ul.task-list li input[type="checkbox"] {
 <br>On this page</h2>
    
   <ul>
-  <li><a href="#lecture-slides" id="toc-lecture-slides" class="nav-link active" data-scroll-target="#lecture-slides">🏫 Lecture Slides</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">💬 Discussion</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link active" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#questions-to-think-about-as-you-refine-your-capstone-project-paper" id="toc-questions-to-think-about-as-you-refine-your-capstone-project-paper" class="nav-link" data-scroll-target="#questions-to-think-about-as-you-refine-your-capstone-project-paper">Questions to Think About as You Refine Your Capstone Project Paper</a></li>
+  <li><a href="#background-readings-and-source-documentation" id="toc-background-readings-and-source-documentation" class="nav-link" data-scroll-target="#background-readings-and-source-documentation">Background Readings and Source Documentation</a></li>
   </ul>
 </nav>
     </div>
@@ -224,8 +227,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 2</h1>
-<p class="subtitle lead">Controls; Panel Data Methods</p>
+<h1 class="title">Living Near the Cloud: Quality of Life Near Data Centers in New York State</h1>
+<p class="subtitle lead">Theodore Packert</p>
 </div>
 
 
@@ -242,40 +245,154 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 26, 2026</p>
+      <p class="date">March 20, 2026</p>
     </div>
   </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">January 27, 2026</p>
-    </div>
-  </div>
     
   </div>
   
 
 </header>
 
-<p>In the second week, we will discuss good &amp; bad controls in linear regression and panel data models.</p>
-<section id="lecture-slides" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-slides">🏫 Lecture Slides</h2>
+<p>Dear Theodore,</p>
+<p>Thank you for your Research Kick-off Report. You have identified a timely and policy-relevant topic. Data centers are expanding quickly, and your plan to combine directory data with EPA EJSCREEN, ACS, ECHO, and New York State air permit records shows real initiative. The project also has a clear stakeholder audience: planners, community groups, and economic development offices all care about whether data center siting is associated with local environmental or neighborhood impacts.</p>
+<p>Overall, this project has strong potential to become an original capstone project paper. The main priorities going forward are to narrow the scope, make the core empirical question more precise, and separate what your data can support as inference from what it can support as prediction.</p>
+<hr>
+<section id="next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="next-steps">Next Steps</h3>
+<p>You are working toward both the <strong>presentation</strong> and the <strong>capstone project paper</strong>. Focus on a <strong>well-scoped empirical question</strong>, <strong>clear causal reasoning</strong>, and a <strong>primary method that is either inferential or predictive</strong>.</p>
 <ul>
-<li><p><strong>Lecture 2 — Omitted Variable Bias; Bad Controls</strong><br>
-<a href="../danl-lec/danl-410-lec-02-2026-0126.html" target="_blank">View Slides</a></p></li>
-<li><p><strong>Lecture 3 — Panel Data Models</strong><br>
-<a href="../danl-lec/danl-410-lec-02-2026-0126.html" target="_blank">View Slides</a></p></li>
+<li><p><strong>Decide whether the project is primarily about inference or prediction.</strong><br>
+Right now, your research question is mostly inferential: are block groups near data centers systematically different from comparable block groups farther away? That is a reasonable capstone direction. If you keep that framing, the regression analysis should be the center of the paper, and the ML model should be secondary. If you prefer a prediction framing instead, you need one clearly defined prediction target, such as PM2.5 or median rent, and you need to evaluate out-of-sample performance by geography. Trying to do both equally may spread the project too thin.</p></li>
+<li><p><strong>Narrow and prioritize your outcome variables.</strong><br>
+The proposal currently treats environmental, housing, and socioeconomic outcomes as parallel outcomes. That is too broad for one capstone project paper. For the paper, choose one primary family of outcomes and make the others secondary or descriptive.</p>
+<ul>
+<li>Environmental indicators such as <strong>PM2.5</strong>, <strong>diesel particulate matter</strong>, and possibly <strong>traffic proximity</strong> are the most direct outcomes for your current design.</li>
+<li>Housing measures such as <strong>median rent</strong> and <strong>home value</strong> are plausible, but they operate through different mechanisms and need a separate interpretation.</li>
+<li>Poverty and unemployment are more likely to describe where data centers locate than to be caused by data centers in a cross-sectional design. A good strategy would be to make <strong>PM2.5</strong> or <strong>diesel PM</strong> your primary outcome and treat housing outcomes as a secondary extension.</li>
+</ul></li>
+<li><p><strong>Operationalize “quality of life” more carefully.</strong><br>
+“Quality of life” is a broad phrase, but your actual variables are specific neighborhood indicators. In the capstone project paper, define exactly what you mean. For example, you might write that you are studying <strong>environmental and neighborhood indicators associated with proximity to data centers</strong>, rather than claiming to measure overall quality of life directly. That makes the paper more precise and easier to defend.</p></li>
+<li><p><strong>Address the main confounding problem directly.</strong><br>
+The biggest challenge in this project is that data centers do not locate randomly. They often cluster near existing industrial land, substations, fiber routes, dense commercial zones, and transportation infrastructure. Those same places may already have different air quality, rent levels, and demographic composition.</p>
+<p>For the capstone project paper:</p>
+<ul>
+<li>Control for nearby industrial activity using <strong>ECHO facility counts</strong>, <strong>air permit counts</strong>, or similar measures.</li>
+<li>Include <strong>metro area fixed effects</strong> or <strong>county fixed effects</strong> so you are comparing nearby and farther block groups within the same broader market rather than comparing Manhattan to rural upstate areas.</li>
+<li>Use population density, median income, housing stock characteristics, and other ACS variables as controls.</li>
+<li>Consider restricting the sample to metros or counties where data centers are actually present, so the comparison group is more plausible.</li>
+<li>Be explicit that even with controls, the results are best interpreted as <strong>associations with cautious causal reasoning</strong>, not definitive proof of causal effects, unless you can add timing.</li>
+</ul></li>
+<li><p><strong>Try to add timing if you can.</strong><br>
+Right now the design is cross-sectional. If you can identify approximate opening years for even a subset of facilities, your paper becomes much stronger. That would let you compare nearby areas before and after openings using multiple ACS 5-year releases or annual EJSCREEN vintages. Even a limited before-after analysis for a smaller set of verified facilities would be stronger than a pure cross-section.</p>
+<p>If opening dates are not feasible, keep the design cross-sectional and be disciplined about the claims you make. Also note that ACS 5-year releases overlap, so small year-to-year changes should be interpreted cautiously.</p></li>
+<li><p><strong>Clarify what counts as a data center.</strong><br>
+A major measurement issue is that “data center” can mean very different things. A small colocation facility in a dense urban building is not the same exposure as a large standalone campus with major backup generation. If possible, distinguish facilities by <strong>type</strong>, <strong>size</strong>, or a proxy such as <strong>air permit intensity</strong>, <strong>generator permits</strong>, or <strong>facility operator category</strong>. If that is not possible, at least discuss this limitation clearly in the paper.</p></li>
+<li><p><strong>Be precise about the treatment variable and spatial matching rule.</strong><br>
+Distance to the nearest data center is a good starting point, but you should think carefully about how to model it and how to construct it.</p>
+<ul>
+<li>A simple continuous distance variable may be too restrictive.</li>
+<li>Distance bands such as <strong>within 1 mile</strong>, <strong>1-3 miles</strong>, <strong>3-5 miles</strong>, and <strong>more than 5 miles</strong> may be easier to interpret.</li>
+<li>You could also use <strong>data center count within a buffer</strong> as an alternative exposure measure.</li>
+<li>Be clear about whether distance is measured from the <strong>block group centroid</strong> or from the <strong>block group boundary</strong>.</li>
+<li>For environmental pathways, straight-line distance is reasonable. For traffic or access-related pathways, road-network distance may be more appropriate.</li>
+<li>Explain how you handle block groups that actually contain a data center.</li>
 </ul>
-<p>🎥 Looking for lecture recordings? You can only find those on Brightspace.</p>
+<p>I would recommend testing both <strong>nearest-distance</strong> and <strong>buffer-count</strong> measures and then choosing one as your primary specification.</p></li>
+<li><p><strong>Write out the regression model explicitly.</strong><br>
+For the capstone project paper, state the inferential model clearly. A natural baseline specification is:</p>
+<p><span class="math display">\[Y_{b} = \beta_0 + \beta_1 \text{NearDataCenter}_{b} + \mathbf{X}_{b}'\boldsymbol{\gamma} + \mu_m + \varepsilon_b\]</span></p>
+<p>where <span class="math inline">\(b\)</span> indexes census block groups, <span class="math inline">\(\text{NearDataCenter}_{b}\)</span> is your distance- or buffer-based exposure measure, <span class="math inline">\(\mathbf{X}_{b}\)</span> includes controls such as income, density, housing variables, and nearby industrial activity, and <span class="math inline">\(\mu_m\)</span> is a metro-area fixed effect.</p>
+<p>If you keep a continuous distance measure, you may want to use <span class="math inline">\(\log(\text{distance}+1)\)</span> or distance bands so the model does not impose a completely linear effect.</p></li>
+<li><p><strong>Use EJSCREEN variables carefully.</strong><br>
+EJSCREEN is very useful, but some of its outputs are screening indicators or percentiles, not direct measured exposures. For your main regressions, prefer the <strong>raw environmental indicators</strong> rather than percentile rankings when possible. Percentiles are harder to interpret and can mix the underlying environmental burden with broader comparison-based scaling. Also, be careful not to treat EJSCREEN as hyper-local ground-monitor data. It is a screening tool.</p></li>
+<li><p><strong>Be realistic about geographic resolution.</strong><br>
+Block groups give you more spatial detail, but ACS block-group estimates can be noisy, especially for housing and income measures outside large metros. If the block-group data become unstable or difficult to merge cleanly, census tracts may be a better primary unit. It is better to have a cleaner, more defensible tract-level analysis than an overcomplicated block-group analysis that becomes fragile.</p></li>
+<li><p><strong>Account for spatial dependence in your uncertainty estimates.</strong><br>
+Nearby block groups are not independent. They share pollution, land use, and housing market conditions. At minimum:</p>
+<ul>
+<li>Cluster standard errors at the <strong>county</strong> or <strong>metro</strong> level.</li>
+<li>Explain how you avoid spatial leakage in any predictive exercise.</li>
+<li>If you keep an ML component, hold out an entire metro area rather than random block groups.</li>
+</ul></li>
+<li><p><strong>Reconsider the alternative energy sub-question.</strong><br>
+Your third sub-question on co-located renewables or small modular reactors is interesting, but it is not well integrated with the current dataset. As written, it reads more like a policy discussion than an empirical research question. I would recommend one of two paths:</p>
+<ul>
+<li>Move it to the <strong>policy implications</strong> section at the end of the paper, or</li>
+<li>Reframe it as a testable empirical question by adding county- or region-level electricity data from an official energy source. Unless you add that extra data, it should not be one of the central empirical questions.</li>
+</ul></li>
+<li><p><strong>Clean up the source list and verify official links.</strong><br>
+Several of the links in the kickoff report are archived snapshot pages or marketplace directories. For the capstone project paper, keep the commercial directories as source leads, but cite the most stable official documentation for the government datasets. In particular, use:</p>
+<ul>
+<li>ACS API documentation from the U.S. Census Bureau</li>
+<li>ECHO data downloads from EPA</li>
+<li>The New York State Open Data air permits dataset</li>
+<li>Current EJSCREEN technical documentation</li>
+</ul>
+<p>For the commercial directory sources, the stable New York pages are <a href="https://www.datacentermap.com/usa/new-york/">DataCenterMap - New York</a> and <a href="https://inflect.com/datacenters/na/usa/new-york">Inflect - New York, United States</a>. Use these as discovery tools, not as final proof that a facility exists.</p></li>
+<li><p><strong>A simpler prediction component is acceptable if you want one.</strong><br>
+If you keep an ML component, make it narrow and clearly secondary. For example, you could predict <strong>PM2.5</strong> using block-group controls plus data center exposure measures, and evaluate whether adding the data center variables improves out-of-sample RMSE when you hold out an entire metro area. That would give you a clean prediction exercise that complements, rather than replaces, the regression-based inference.</p></li>
+<li><p><strong>Include a few strong descriptive visuals.</strong><br>
+Before the regression results, the paper and presentation would benefit from:</p>
+<ul>
+<li>a <strong>map of New York State</strong> showing verified data center locations</li>
+<li>a <strong>table comparing block groups by distance group</strong></li>
+<li>a <strong>binscatter or grouped mean plot</strong> of PM2.5 against distance to the nearest data center within metro areas These will make the project easier to understand and help the audience see why the inferential model matters.</li>
+</ul></li>
+</ul>
+<hr>
 </section>
-<section id="discussion" class="level2">
-<h2 class="anchored" data-anchor-id="discussion">💬 Discussion</h2>
-<p><font size="5">Welcome to our Week 2 Discussion Board! 👋 </font></p>
-<p>This space is designed for you to engage with your classmates about the material covered in Week 2.</p>
-<p>Whether you are looking to delve deeper into the content, share insights, or have questions about the content, this is the perfect place for you.</p>
-<p>If you have any specific questions for Byeong-Hak (<strong><span class="citation" data-cites="bcdanl">@bcdanl</span></strong>) or peer classmate (<span class="citation" data-cites="GitHub-Username">@GitHub-Username</span>) regarding the Week 2 materials or need clarification on any points, don’t hesitate to ask here.</p>
-<p>Let’s collaborate and learn from each other!</p>
+<section id="questions-to-think-about-as-you-refine-your-capstone-project-paper" class="level3">
+<h3 class="anchored" data-anchor-id="questions-to-think-about-as-you-refine-your-capstone-project-paper">Questions to Think About as You Refine Your Capstone Project Paper</h3>
+<p>You do <strong>not</strong> need to answer all of these, but they may help you sharpen the analysis and policy narrative.</p>
+<p><strong>1. What is the strongest outcome for your design?</strong></p>
+<ul>
+<li>Which outcome is closest to a plausible mechanism from data center operations: PM2.5, diesel PM, noise, traffic exposure, rent, or home value?</li>
+<li>Which of these can you measure most credibly with the data you actually have?</li>
+</ul>
+<p><strong>2. What makes two communities “comparable”?</strong></p>
+<ul>
+<li>If you compare block groups near and far from data centers, how will you make sure you are not just comparing industrial urban cores to suburban or rural areas?</li>
+<li>Would a within-metro comparison with strong controls be more credible than a statewide pooled comparison?</li>
+</ul>
+<p><strong>3. What counts as exposure?</strong></p>
+<ul>
+<li>Is the right exposure measure distance to the nearest facility, number of facilities within a buffer, or a weighted exposure measure based on facility size?</li>
+<li>Should all data centers be treated equally, or do large generator-heavy facilities deserve more weight than small colocation sites?</li>
+</ul>
+<p><strong>4. What can you say about causality?</strong></p>
+<ul>
+<li>If you find worse environmental indicators near data centers, how will you separate the effect of the data center itself from the fact that these facilities often locate in already industrial places?</li>
+<li>Is there any way to recover opening years or permit dates for a subset of facilities to strengthen the causal story?</li>
+</ul>
+<p><strong>5. How should the ML piece fit the paper?</strong></p>
+<ul>
+<li>If you use random forest or LASSO, what exactly is the prediction target?</li>
+<li>What would the prediction model add beyond the regression analysis?</li>
+<li>Would it be better to keep the paper centered on inference and use the ML component only as a short robustness or extension section?</li>
+</ul>
+<p><strong>6. What are the policy implications?</strong></p>
+<ul>
+<li>If you find no clear association between proximity and your primary environmental outcome, does that suggest current permitting is adequate, or only that your data are too coarse to detect very local harms?</li>
+<li>If you do find evidence that communities near data centers face worse environmental conditions, what specific planning tools would follow from that result: tighter permitting, buffer guidance, generator restrictions, community benefit agreements, or better monitoring?</li>
+</ul>
+<hr>
+</section>
+<section id="background-readings-and-source-documentation" class="level3">
+<h3 class="anchored" data-anchor-id="background-readings-and-source-documentation">Background Readings and Source Documentation</h3>
+<p>For your capstone project paper and presentation, the following sources would be useful background:</p>
+<ul>
+<li>IEA. (2025). <a href="https://www.iea.org/reports/energy-and-ai/"><em>Energy and AI.</em></a> <em>(Useful background on the rapid growth of electricity demand tied to AI and data centers.)</em></li>
+<li>Masanet, E., Shehabi, A., Lei, N., Smith, S., &amp; Koomey, J. (2020). <a href="https://doi.org/10.1126/science.aba3758"><em>“Recalibrating Global Data Center Energy-Use Estimates.”</em></a> <em>Science</em>, 367(6481), 984-986.</li>
+<li>Currie, J., Davis, L., Greenstone, M., &amp; Walker, R. (2015). <a href="https://doi.org/10.1257/aer.20121656"><em>“Environmental Health Risks and Housing Values: Evidence from 1,600 Toxic Plant Openings and Closings.”</em></a> <em>American Economic Review</em>, 105(2), 678-709.</li>
+<li>U.S. EPA. <a href="https://www.epa.gov/system/files/documents/2024-07/ejscreen-tech-doc-version-2-3.pdf"><em>EJScreen Technical Documentation.</em></a></li>
+<li>U.S. Census Bureau. <a href="https://www.census.gov/programs-surveys/acs/data/data-via-api.html"><em>American Community Survey Data via API.</em></a></li>
+<li>U.S. EPA. <a href="https://echo.epa.gov/tools/data-downloads"><em>ECHO Data Downloads.</em></a></li>
+<li>New York State Open Data. <a href="https://data.ny.gov/Energy-Environment/Issued-State-Facility-Air-Permits/2wgt-bc53"><em>Issued State Facility Air Permits.</em></a></li>
+</ul>
+<p>Best,<br>
+Byeong-Hak Choe</p>
 
 
 </section>
@@ -655,8 +772,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="bcdanl/410-spr-2026-discussion" data-repo-id="R_kgDOQ8gipQ" data-category="General" data-category-id="DIC_kwDOQ8gipc4C1IRh" data-mapping="title" data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

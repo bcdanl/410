@@ -1,0 +1,166 @@
+---
+title: "A Panel Data Analysis of Military Modernization and Interstate War Onset, 1818–2023"
+subtitle: "Marcus Lewis"
+date: 2026-03-20
+
+code-fold: false
+
+execute:
+  echo: true
+  eval: true
+  message: false
+  warning: false
+  fig-width: 9
+  fig-height: 6
+---
+
+Hi Marcus,
+
+Thank you for your Research Kick-off Report. You have chosen an ambitious and genuinely important question in international relations. The deterrence versus security dilemma framing is clear, the long historical scope gives the project real intellectual weight, and the Correlates of War project is exactly the right place to begin building a dataset for a study like this. I also like your instinct to divide the analysis into major historical eras. That is good historical judgment, since there is no reason to expect the relationship between military buildup and interstate conflict to look the same before World War I, during the Cold War, and after 1991.
+
+Overall, this project has real potential to become a strong capstone paper. The main priorities for your capstone paper are to pin down the exact datasets and years you can actually use, settle the unit of analysis, and tighten the model so that it matches the question you want to answer about cause and effect.
+
+---
+
+### Next Steps
+
+You are working toward the **presentation**, the **capstone paper**, and ultimately the **capstone paper**. Focus on **clear theory**, **careful data construction**, and a model that is framed either as **inference** or as **prediction**.
+
+- **First, confirm the time window that is actually feasible.**  
+  Right now, the report presents the project as spanning 1818 to 2023, but the COW sources you are likely to use do not all run through the same end year:
+  - The **Arms Technology Data** run through **2023**.
+  - The **National Material Capabilities** data run through **2016**.
+  - The **Militarized Interstate Disputes** data run through **2014**.
+  - The **COW interstate war data** run through **2007**.
+  
+  This means your first task for the capstone paper is to define a common sample window. The simplest path may be to use a common period such as **1816 to 2014** and center the paper on militarized interstate disputes (MIDs), or to narrow the outcome to interstate war and accept a shorter endpoint. If you want to reach 2023, you will need to explain how later years will be measured and whether you are combining COW with a newer conflict source.
+
+- **Clarify the unit of analysis early.**  
+  The report sometimes sounds like a country-year study and sometimes like a country-pair study. That choice matters because your theories are relational. Deterrence and the security dilemma are really about what happens between states, not just within one state. For the capstone paper, decide whether your unit is:
+  - a **country-year** (for example, whether a state is involved in any dispute in a given year), or
+  - a **dyad-year** (for example, whether State A and State B have a dispute with each other in a given year).
+  
+  A dyad-year design is usually the better match for your theory. If that feels too large for a semester project, you could limit the sample to contiguous dyads, major-power dyads, or other clearly motivated subsets.
+
+- **Pick one primary outcome and make it central.**  
+  You mention war onset, MID participation, and conflict duration. These are related but distinct outcomes. Because interstate war is rare, a model of war onset may leave you with very few positive cases, especially once you split the data into four eras. A more manageable strategy would be:
+  - Use **MID onset** or **MID participation** as the primary outcome.
+  - Treat **war onset** as a secondary or robustness outcome.
+  - If you use MIDs, decide whether all MIDs count equally or whether you want a higher-severity threshold.
+  
+  Narrowing the outcome this way will make the capstone paper more coherent.
+
+- **Turn "arms accumulation" into precise measures.**  
+  Right now, phrases like "total arms stock" and "technological sophistication" are too broad. For the capstone paper, define exactly what each variable will be:
+  - A **capability level** measure such as CINC, military expenditure, or military personnel.
+  - A **change** measure such as year-to-year growth in capability.
+  - A **technology** measure such as the number or type of arms technologies adopted.
+  - A **relative balance** measure for dyads, since deterrence often depends on how evenly matched two states are, not just how armed one state is in isolation.
+  
+  This will help you connect the model to theory. Absolute capability, rapid growth, and relative balance speak to different arguments in international relations.
+
+- **Be careful about cause and effect.**  
+  The biggest challenge in your paper is that states may increase arms because they expect danger, not just the other way around. That means a positive relationship between arms and conflict does not automatically show that arms buildup causes conflict. For the capstone paper:
+  - Say clearly that reverse causality is a major concern.
+  - Consider using **lagged arms measures** so that arms in one year are used to predict conflict in the next year.
+  - Be cautious in the paper's wording. A regression can show that arms buildup is associated with later conflict, but stronger claims about cause and effect require more care.
+
+- **Decide whether the project is mainly inference or mainly prediction.**  
+  Your current report reads more like an **inference** project, because the core question is whether arms buildup is linked to conflict and which theory fits better. If that is the main goal, the paper should emphasize:
+  - coefficient estimates or marginal effects,
+  - confidence intervals or standard errors,
+  - and careful interpretation of what the model says about the direction and size of the relationship.
+  
+  If you want a **prediction** angle instead, then you should create a training period and a later test period and evaluate how well the model flags future disputes. Because conflict is rare, simple accuracy will not be enough. You would want to focus on whether the model meaningfully improves prediction over a simple baseline.
+
+- **Add the main control variables that conflict scholars usually include.**  
+  Economic capacity, population, and alliances are a good start, but the model should probably also include:
+  - **contiguity**, since neighboring states are far more likely to fight;
+  - **joint democracy** or a regime-type measure, if feasible;
+  - **territorial rivalry** or territorial disputes, if feasible;
+  - **year effects** or period indicators to absorb system-wide shocks;
+  - and **clustered standard errors** by country or dyad, since the same units repeat over time.
+  
+  Without at least some of these controls, it will be hard to interpret the estimated relationship between arms and conflict.
+
+- **Use the historical periods as more than a descriptive device.**  
+  Splitting the sample into pre-World War I, the World Wars, the Cold War, and the post-Cold War era is a promising idea. But in the capstone paper, explain what you expect to change across periods and why. You could:
+  - estimate separate models by era, or
+  - run a full-sample model with interactions between arms variables and period dummies.
+  
+  The second approach gives you a more direct statistical test of whether the arms-conflict relationship actually changed over time.
+
+- **Plan the data merge carefully over two centuries.**  
+  A long historical panel is powerful, but it also creates practical issues:
+  - state membership changes over time;
+  - borders change;
+  - some states enter and exit the system;
+  - and missing data may be much worse in earlier years.
+  
+  The capstone paper should explain how you will handle changing state codes, missing values, and incomplete coverage in the nineteenth century. This is especially important if you use both monadic and dyadic files.
+
+- **Keep the capstone paper's tone formal.**  
+  The core idea is strong, but the capstone paper and capstone paper should use fully professional language. Phrases like "pumpfake" and "beef" make the topic feel less serious than it is. In revision, aim for a more formal tone and define each concept as precisely as possible.
+
+
+---
+
+### References
+
+- **Draw on key background readings and data sources (recommended).**  
+  For your capstone paper, presentation, and capstone paper, the following sources would be especially helpful:
+  - Fearon, J. D. (1995). [*"Rationalist Explanations for War."*](https://doi.org/10.1017/S0020818300033324) *International Organization*, 49(3), 379-414.
+  - Jervis, R. (1978). [*"Cooperation under the Security Dilemma."*](https://doi.org/10.2307/2009958) *World Politics*, 30(2), 167-214.
+  - Federle, J., Meier, A., Müller G,, Mutschler, W.,& Schularic, M.(2026). [*"The Price of War.*"](https://bcdanl.github.io/410/danl-rw-refs/federle-et-al-2026-the-price-of-war.pdf) *American Economic Review*, 116(3), 791–827.
+  - Maoz, Z., Johnson, P. L., Kaplan, J., Ogunkoya, F., & Shreve, A. P. (2019). [*"The Dyadic Militarized Interstate Disputes (MIDs) Dataset Version 3.0: Logic, Characteristics, and Comparisons to Alternative Datasets."*](https://doi.org/10.1177/0022002718784158) *Journal of Conflict Resolution*, 63(3), 811-835.
+  
+  - Correlates of War Project. [*Arms Technology Data (v1.0).*](https://correlatesofwar.org/data-sets/arms-technology-data-v1-0/)
+  - Correlates of War Project. [*National Material Capabilities (v6.0).*](https://correlatesofwar.org/data-sets/national-material-capabilities/)
+  - Correlates of War Project. [*Militarized Interstate Disputes (v5.0).*](https://correlatesofwar.org/data-sets/MIDs/)
+  - Correlates of War Project. [*COW War Data, 1816-2007 (v4.0).*](https://correlatesofwar.org/data-sets/cow-war/)
+  - Correlates of War Project. [*Direct Contiguity (v3.2).*](https://correlatesofwar.org/data-sets/direct-contiguity/) and [*Formal Alliances (v4.1).*](https://correlatesofwar.org/data-sets/formal-alliances/)  
+    These are useful if you decide to build a dyad-year design with core control variables.
+  - Gibler, D. M. (2012). [*The Territorial Peace.*](https://doi.org/10.1017/CBO9781139060233) Cambridge University Press.
+
+- **Include a few simple visuals in the capstone paper and presentation.**  
+  Helpful visuals could include:
+  - a **time-series plot** of conflict frequency and average arms or capability measures,
+  - a **coefficient plot** comparing estimated effects across historical eras,
+  - and a **table** showing exactly which variables and years are available in each dataset.
+
+---
+
+### Questions to Think About as You Refine Your capstone paper
+
+You do **not** need to answer all of these now, but they may help you sharpen the design of the capstone paper and the eventual capstone paper.
+
+**1. Theory and Mechanism**
+
+- Is your main argument about **deterrence** (more arms prevent attack), the **security dilemma** (more arms provoke fear), or **rapid change** in relative power?
+- Do you expect the important variable to be the absolute level of arms, the growth rate of arms, or the balance between rivals?
+
+**2. Scope and Unit of Analysis**
+
+- Would a dyad-year design better match the theory than a country-year design?
+- If a full dyad-year dataset is too large, which subset of dyads would make the most sense: neighboring states, major powers, or another clearly justified group?
+
+**3. Inference vs. Prediction**
+
+- Is the paper trying to explain whether arms buildup is linked to conflict, or is it trying to forecast which state-years or dyad-years will experience conflict next?
+- If you take the prediction route, what baseline model will you compare your model against?
+
+**4. Measurement and Data**
+
+- Which exact COW variable will stand in for "arms accumulation"?
+- Are you comfortable defining a common sample window once you confirm that the conflict and capability datasets do not all run through 2023?
+- What will you do about years or states with missing capability data?
+
+**5. Interpretation**
+
+- If you find a positive association between arms growth and conflict, how will you distinguish genuine escalation from states arming in response to already rising danger?
+- If you find a negative association, how will you explain whether that supports deterrence or simply reflects that powerful states face fewer challengers?
+
+---
+
+Best,  
+Byeong-Hak Choe

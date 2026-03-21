@@ -1,0 +1,180 @@
+---
+title: "Using Predictive Analytics to Outperform Human Judgment in NCAA March Madness Bracket Selection"
+subtitle: "Aaron Zalen"
+date: 2026-03-20
+
+code-fold: false
+
+execute:
+  echo: true
+  eval: true
+  message: false
+  warning: false
+  fig-width: 9
+  fig-height: 6
+---
+
+Dear Aaron,
+
+Thank you for your Research Kick-off Report, and for your thoughtful follow-up email about the train/test split question. This is a strong **prediction** project. The central idea is not only to predict individual game winners, but to convert those probabilities into a bracket portfolio that can compete in a real pool. That is a meaningful and well-motivated data analytics problem, and your use of historical pool results gives the project a concrete applied setting rather than an artificial classroom benchmark.
+
+The proposal already shows several strengths. First, you recognize that game prediction and bracket selection are not the same task. Second, you are thinking in terms of probabilities rather than deterministic picks, which is exactly the right starting point for bracket simulation. Third, comparing random forest to logistic regression and gradient boosting is a sensible modeling plan, and your idea of normalizing performance across years is important because bracket pools are strongly affected by how upset-heavy a tournament happens to be.
+
+The main priorities for your **capstone paper** are to tighten the evaluation design, make the train/test strategy fully time-aware, define what "outperforming human judgment" really means in a measurable way, and explain the bracket diversification rule precisely enough that another analyst could reproduce it.
+
+---
+
+### Addressing Your Email: Train/Test Split, Time-Based Validation, and the Confusion Matrix
+
+This is a very good question, and your instinct is right: you should not evaluate on the same games used to train the model. At the same time, you also do not need to permanently throw away a large share of a relatively small historical dataset.
+
+For this project, the best approach is **rolling-origin evaluation** (also called expanding-window time-based cross-validation):
+
+- Choose a first test year after you have enough seasons to train on, such as 2010.
+- Train on all seasons before that year.
+- Predict the held-out tournament year.
+- Then expand the training window by one year and repeat.
+
+For example:
+
+- Train on 2003-2009, test on 2010
+- Train on 2003-2010, test on 2011
+- ...
+- Train on 2003-2024, test on 2025
+
+This is the cleanest way to respect time order, maximize training data, and still get honest out-of-sample performance.
+
+So, to your direct question: **yes, it is standard to report evaluation metrics from time-based held-out years, then retrain the final model on the full historical dataset once the model class, feature set, and tuning choices are fixed.** What would be bad practice is using the full dataset for both model fitting and evaluation, then reporting those in-sample results as if they were true predictive performance.
+
+A few important refinements:
+
+- A **confusion matrix should be secondary, not primary**, because your model outputs probabilities and your downstream task is bracket scoring, not only binary classification at a 0.5 threshold.
+- Your primary game-level metrics should be **log loss or Brier score**, plus a **calibration curve**.
+- Your primary bracket-level metrics should come from the held-out years in the rolling evaluation, not from brackets generated after fitting on all years.
+- If you compare random forest, logistic regression, and gradient boosting, make that comparison inside the same rolling evaluation framework. Do not choose the best model using all years and then pretend the held-out results were untouched.
+
+This also addresses your concern about rare upsets. You are not "losing" them by holding out years. Each upset still appears as a real out-of-sample test case in its own tournament year, and then becomes available for later training folds. That is a fairer test than a random split, which would mix past and future tournaments together.
+
+One more practical note: for the earliest seasons, your training window may be too small to support stable tuning. It is reasonable to begin formal evaluation only after a minimum training window, such as 5 to 7 prior tournaments.
+
+---
+
+### Next Steps
+
+You are working toward both the **presentation** and the **capstone paper**. Focus on a reproducible prediction pipeline, honest out-of-sample evaluation, and a benchmark definition that matches the real bracket-pool problem.
+
+- **Define the prediction target and unit of analysis clearly.**  
+  The predictive model operates at the **game level**, not the bracket level. Each observation is a tournament game, and the response variable is whether Team A wins. The bracket is a downstream object built from those game-level probabilities. Make that distinction explicit in the capstone paper.
+
+- **Write the validation design as a forecasting problem.**  
+  For the capstone paper, state the evaluation plan clearly:
+  - use an expanding-window train/test design by tournament year,
+  - generate predictions only from information available before that year's tournament begins,
+  - aggregate held-out metrics across years.
+  
+  This matters because team features can accidentally leak information from the tournament itself or from post-selection updates if you are not careful about the cutoff date.
+
+- **Do not rely on accuracy or the confusion matrix alone.**  
+  A model that mostly picks favorites can look good on raw accuracy because favorites win often. But your project depends on **probability quality**, not only hard classifications. For the capstone paper, separate the evaluation into two layers:
+  1. **Game-level prediction**: log loss, Brier score, calibration, and perhaps accuracy by round.
+  2. **Bracket-level performance**: percentile rank, win rate, expected score relative to the pool median, and probability that at least one submitted bracket lands in the top 10%.
+
+- **Define "outperforming human judgment" precisely.**  
+  Right now the title is broad, but the actual benchmark is more specific. Are you trying to beat:
+  - the average entrant in your dad's pool?
+  - the pool median?
+  - a consensus bracket based on public pick percentages?
+  - the top quartile of human entries?
+  
+  I recommend choosing one primary benchmark and two secondary ones. For example, your main result could be whether the best model-generated entry finishes above the pool median more often than a consensus bracket does.
+
+- **Make the bracket diversification rule reproducible.**  
+  "Pick brackets that are varied in points between each other" is too vague at the moment. The capstone paper should define the selection rule precisely. For example:
+  - maximize expected top score across a set of $k$ submitted brackets,
+  - subject to a minimum pairwise Hamming distance between brackets,
+  - or subject to limits on duplicated Final Four or champion picks.
+  
+  The key is that another analyst should be able to reproduce your bracket portfolio from your written method.
+
+- **Protect against leakage in feature construction.**  
+  This is one of the biggest technical risks in the project. Be precise about which features are available at bracket lock. Pre-tournament KenPom-style efficiencies are reasonable if they are truly frozen before the first tournament game. But do not use statistics that already reflect tournament play, later injuries, or other information that would not have been available when a real bracket was submitted.
+
+- **Be careful about the KenPom source and data citation.**  
+  In your kickoff report, the KenPom reference points to the homepage, not to the exact historical dataset you plan to use. For the capstone paper:
+  - name the exact dataset or repository,
+  - explain whether it is an official export or a community-compiled historical file,
+  - and note any coverage limitations or licensing constraints.
+  
+  The same goes for the Kaggle competition data: cite the exact competition version you actually use.
+
+- **Separate public sources from private evaluation data.**  
+  Your dad's pool history workbook is valuable, but it is not a public source in the same way as Kaggle or KenPom. In the capstone paper, cite it as a private spreadsheet or historical pool archive provided by the organizer, and briefly describe what it contains, how many years it covers, and what cleaning steps were needed.
+
+- **Add simple baselines.**  
+  Your more complex models will be much more convincing if they beat simple, transparent rules. At minimum, include:
+  - a seed-only baseline,
+  - a consensus-picks baseline,
+  - and a logistic regression baseline.
+  
+  If the random forest or gradient boosting model does not beat these consistently, that is still a useful and interesting result.
+
+- **Think about generalizability honestly.**  
+  Your dad's pool is a strong applied test case, but it is still one pool with one scoring system and one participant mix. Unless you test more than one pool structure, frame your conclusions as applying to **this pool and similar pools**, not to "human judgment" in general.
+
+---
+
+### References
+
+- **Draw on key background and technical references (recommended).**  
+  For your capstone paper and presentation, the following are especially useful:
+  - Lopez, M. J., & Matthews, G. J. (2015). [*"Building an NCAA Men's Basketball Predictive Model and Quantifying Its Success."*](https://bcdanl.github.io/410/danl-rw-refs/LopezMatthews-JQAS-2015.pdf) *Journal of Quantitative Analysis in Sports*, 11(1), 5-12.
+  - Kaggle. (2026). [*March Machine Learning Mania 2026.*](https://www.kaggle.com/competitions/march-machine-learning-mania-2026)
+  - R `tidymodels` developers. [*Modeling time series with tidy resampling.*](https://www.tidymodels.org/learn/models/time-series/)
+  - R `rsample` developers. [*Time-based Resampling.*](https://rsample.tidymodels.org/reference/slide-resampling.html)
+  - R `tidymodels` developers. [*An introduction to calibration with tidymodels.*](https://www.tidymodels.org/learn/models/calibration/)
+  - R `probably` developers. [*probably package reference.*](https://probably.tidymodels.org/reference/index.html)
+  - R `probably` developers. [*Uses a logistic regression model to calibrate probabilities.*](https://probably.tidymodels.org/reference/cal_estimate_logistic.html)
+  - R `probably` developers. [*Uses an Isotonic regression model to calibrate model predictions.*](https://probably.tidymodels.org/reference/cal_estimate_isotonic.html)
+  - Python `scikit-learn` developers. [*TimeSeriesSplit documentation.*](https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.TimeSeriesSplit.html)
+  - Python `scikit-learn` developers. [*Probability calibration user guide.*](https://scikit-learn.org/stable/modules/calibration.html)
+
+---
+
+### Questions to Think About as You Refine Your capstone paper
+
+You do **not** need to answer all of these, but they may help you sharpen the analysis and the presentation narrative.
+
+**1. What is the real target of success?**
+
+- Is the goal to maximize average score, maximize the chance that one bracket cashes, or maximize the chance of finishing first?
+- Those are different optimization problems. Which one fits the way the pool actually pays out?
+
+**2. How many brackets should the model submit?**
+
+- If the model is allowed multiple entries, what is the marginal value of bracket number 2, 3, or 4?
+- Does performance improve enough to justify the extra entries, or do the extra brackets mostly duplicate the same ideas?
+
+**3. How should you evaluate upsets?**
+
+- A generic confusion matrix may hide the part of the problem you care about most. Would it be helpful to report performance separately for likely favorites and genuine upset opportunities?
+- Are there certain seed matchups, such as 8-9, 5-12, or 6-11 games, where the model has a real edge over consensus picks?
+
+**4. How stable are your probabilities?**
+
+- If you slightly change the training window or hyperparameters, do the predicted probabilities change a lot?
+- If they do, then the bracket portfolio may be less robust than it appears.
+
+**5. How much of winning is luck?**
+
+- Even a strong predictive model may only modestly improve the odds of winning a single pool because late-round outcomes dominate scoring. How will you separate "the model is better" from "this particular year was lucky"?
+- Could you use repeated tournament simulation to show the distribution of possible pool outcomes under your model?
+
+**6. What can you claim at the end of the semester?**
+
+- A realistic capstone conclusion might not be "the model beats humans every year."
+- A stronger and more defensible claim may be something like: "A probability-based bracket portfolio can outperform simple human or consensus baselines on average under this scoring system, but year-to-year results remain highly variable."
+
+---
+
+Best,  
+Byeong-Hak Choe

@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Byeong-Hak Choe">
-<meta name="dcterms.date" content="2026-01-26">
+<meta name="dcterms.date" content="2026-03-20">
 
-<title>Week 2 | Byeong-Hak Choe</title>
+<title>Exploring Socioeconomic Factors Associated with Low Food Access Tracts in New York State | Byeong-Hak Choe</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -64,12 +64,14 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.4/css/academicons.min.css">
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 <link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="../assets/css/font.css">
-<link rel="stylesheet" href="styles-wk.css">
-<meta property="og:title" content="Week 2 | Byeong-Hak Choe">
-<meta property="og:description" content="Controls; Panel Data Methods">
+<link rel="stylesheet" href="../danl-wk/styles-wk.css">
+<meta property="og:title" content="Exploring Socioeconomic Factors Associated with Low Food Access Tracts in New York State | Byeong-Hak Choe">
+<meta property="og:description" content="Cameron &amp; Nada">
 <meta property="og:image" content="/assets/img/posts.png">
 </head>
 
@@ -109,7 +111,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../danl-wk/wk-01.html">🗓️ Weeks</a></li><li class="breadcrumb-item"><a href="../danl-wk/wk-02.html">Week 02</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Exploring Socioeconomic Factors Associated with Low Food Access Tracts in New York State</li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -191,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../danl-wk/wk-02.html" class="sidebar-item-text sidebar-link active">
+  <a href="../danl-wk/wk-02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Week 02</span></a>
   </div>
 </li>
@@ -214,8 +216,9 @@ ul.task-list li input[type="checkbox"] {
 <br>On this page</h2>
    
   <ul>
-  <li><a href="#lecture-slides" id="toc-lecture-slides" class="nav-link active" data-scroll-target="#lecture-slides">🏫 Lecture Slides</a></li>
-  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">💬 Discussion</a></li>
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link active" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#references" id="toc-references" class="nav-link" data-scroll-target="#references">References</a></li>
+  <li><a href="#questions-to-think-about-as-you-refine-your-capstone-paper" id="toc-questions-to-think-about-as-you-refine-your-capstone-paper" class="nav-link" data-scroll-target="#questions-to-think-about-as-you-refine-your-capstone-paper">Questions to Think About as You Refine Your capstone paper</a></li>
   </ul>
 </nav>
     </div>
@@ -224,8 +227,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Week 2</h1>
-<p class="subtitle lead">Controls; Panel Data Methods</p>
+<h1 class="title">Exploring Socioeconomic Factors Associated with Low Food Access Tracts in New York State</h1>
+<p class="subtitle lead">Cameron &amp; Nada</p>
 </div>
 
 
@@ -242,40 +245,135 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 26, 2026</p>
+      <p class="date">March 20, 2026</p>
     </div>
   </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">January 27, 2026</p>
-    </div>
-  </div>
     
   </div>
   
 
 </header>
 
-<p>In the second week, we will discuss good &amp; bad controls in linear regression and panel data models.</p>
-<section id="lecture-slides" class="level2">
-<h2 class="anchored" data-anchor-id="lecture-slides">🏫 Lecture Slides</h2>
+<p>Hi Cameron and Nada,</p>
+<p>Thank you for your Research Kick-off Report. You have chosen a topic with real policy importance. Food access is closely tied to nutrition, transportation, neighborhood opportunity, and health, and New York State gives you meaningful variation between dense urban areas, suburbs, small cities, and rural counties. Starting with the USDA Food Access Research Atlas is appropriate, and logistic regression is a sensible method for a binary tract-level outcome.</p>
+<p>The proposal is clearly motivated and well organized. The main priorities for your <strong>capstone paper</strong> are to choose whether the primary goal is <strong>inference</strong> or <strong>prediction</strong>, define the USDA outcome variable with greater precision, and handle the urban and rural structure of the data more carefully. You should also tighten the model specification and be more explicit about what the USDA variables do and do not measure.</p>
+<hr>
+<section id="next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="next-steps">Next Steps</h3>
+<p>You are working toward both the <strong>presentation</strong> and the <strong>capstone paper</strong>. Focus on a <strong>clear empirical goal</strong>, a <strong>carefully defined tract-level model</strong>, and <strong>honest interpretation</strong> of what this cross-sectional dataset can and cannot tell us.</p>
 <ul>
-<li><p><strong>Lecture 2 — Omitted Variable Bias; Bad Controls</strong><br>
-<a href="../danl-lec/danl-410-lec-02-2026-0126.html" target="_blank">View Slides</a></p></li>
-<li><p><strong>Lecture 3 — Panel Data Models</strong><br>
-<a href="../danl-lec/danl-410-lec-02-2026-0126.html" target="_blank">View Slides</a></p></li>
+<li><p><strong>Choose a primary goal: inference or prediction.</strong><br>
+Your current method section says logistic regression will be used for both “prediction” and “cause-and-effect.” Those are related but not identical tasks.</p>
+<ul>
+<li>If your primary goal is <strong>inference</strong>, the paper should ask: which tract characteristics are associated with a higher probability of being low access, holding other characteristics constant? Then your emphasis should be on coefficient estimates, odds ratios or marginal effects, standard errors, and interpretation.</li>
+<li>If your primary goal is <strong>prediction</strong>, the paper should ask: how accurately can tract characteristics classify whether a tract is low access? Then your emphasis should be on out-of-sample performance such as AUC, precision, recall, F1, and the confusion matrix.</li>
 </ul>
-<p>🎥 Looking for lecture recordings? You can only find those on Brightspace.</p>
+<p>Given your research questions, I think <strong>inference</strong> is the stronger primary direction, with prediction as an optional secondary section. That framing matches your question about which socioeconomic factors are associated with low food access. If you do include a prediction section, keep the claims clearly predictive and avoid treating predictive accuracy as evidence of causality.</p></li>
+<li><p><strong>Be more precise about the outcome variable.</strong><br>
+The proposal currently defines low access as one-third of the population living beyond the distance threshold. The USDA definition used for <code>LA1and10</code> is slightly more specific: a tract is flagged if <strong>at least 500 people or at least 33 percent of the population</strong> live more than 1 mile from the nearest supermarket in urban areas or more than 10 miles in rural areas. That detail matters, especially for smaller tracts.</p>
+<p>For the capstone paper:</p>
+<ul>
+<li>State the exact outcome variable name and definition.</li>
+<li>Make clear that your unit of analysis is the <strong>census tract</strong>.</li>
+<li>Distinguish carefully between a <strong>low-access tract</strong> and a <strong>low-income, low-access tract</strong>. Those are not the same USDA concept, and the variable choice changes the interpretation of your results.</li>
+</ul></li>
+<li><p><strong>Write out the logistic regression specification explicitly.</strong><br>
+Right now the method plan says “logistic regression” but does not show the model. For the capstone paper, write it out clearly:</p>
+<p><span class="math display">\[
+\Pr(\text{LA1and10}_i = 1) = \text{logit}^{-1}\left(\beta_0 + \beta_1 \text{Poverty}_i + \beta_2 \text{Income}_i + \beta_3 \text{NoVehicle}_i + \beta_4 \text{Urban}_i + \mathbf{X}_i'\boldsymbol{\gamma}\right)
+\]</span></p>
+<p>where <span class="math inline">\(i\)</span> indexes census tracts and <span class="math inline">\(\mathbf{X}_i\)</span> can include race or ethnicity shares, county fixed effects, or regional controls.</p>
+<p>A few practical notes:</p>
+<ul>
+<li><strong>RMSE is not the right main metric</strong> for a binary logistic model. For inference, focus on coefficients, standard errors, confidence intervals, and substantive interpretation. For prediction, use AUC, precision, recall, F1, and the confusion matrix.</li>
+<li>Odds ratios are fine, but the capstone paper will be easier to read if you also translate the main results into <strong>predicted probabilities</strong> for a few example tracts.</li>
+<li>Because this is tract-level data, interpret results as differences across <strong>neighborhoods</strong>, not as claims about individual households.</li>
+</ul></li>
+<li><p><strong>Handle the urban and rural issue more carefully.</strong><br>
+This is one of the most important conceptual issues in your design. The <code>LA1and10</code> outcome already uses different thresholds for urban and rural tracts. That means the <code>Urban</code> variable is partly built into the definition of the dependent variable. If you simply include <code>Urban</code> as an ordinary control in one pooled regression, interpretation becomes awkward.</p>
+<p>Better options:</p>
+<ul>
+<li>Run <strong>separate models</strong> for urban and rural tracts.</li>
+<li>Or estimate a pooled model with interaction terms and treat the results cautiously.</li>
+</ul>
+<p>Separate models may be the clearest choice for an undergraduate capstone paper because the mechanisms are likely different. In New York City, public transit and neighborhood density may matter most. In rural upstate counties, vehicle access and long travel distances may matter more.</p></li>
+<li><p><strong>Be careful about which independent variables are mechanically related to the outcome.</strong><br>
+This is especially important for vehicle variables. The Atlas includes some measures that combine vehicle access and store distance. Those should not be used as predictors if <code>LA1and10</code> is the outcome, because they overlap mechanically with the definition of low access.</p>
+<p>For the capstone paper:</p>
+<ul>
+<li>Use a <strong>pure vehicle availability measure</strong>, not a “low access and no vehicle” measure.</li>
+<li>Use race and ethnicity as <strong>shares of tract population</strong> rather than raw counts, since tract population sizes differ.</li>
+<li>If you include multiple race-share variables, leave one group out as the reference category to avoid perfect collinearity.</li>
+<li>Poverty rate and median family income may be highly correlated, so check that early and decide whether both belong in the same model.</li>
+</ul></li>
+<li><p><strong>Correct and document the data-vintage issue more carefully.</strong><br>
+Your report says the dataset is limited to 2010 census data and 2019 food sources. That is partly right, but the current USDA Atlas is actually a mixed-vintage dataset:</p>
+<ul>
+<li>the tract geography and some population allocation pieces come from the 2010 Census,</li>
+<li>income and vehicle access measures come from the 2014-18 American Community Survey,</li>
+<li>rural and urban status uses the 2019 urban area definition,</li>
+<li>and store locations come from 2019 store directories.</li>
+</ul>
+<p>Some demographic counts in the Atlas still trace back to 2010 census tract counts. So the capstone paper should explicitly document the source year for each major variable rather than treating the whole dataset as one year. This also means your conclusions describe <strong>late-2010s food access patterns</strong>, not current 2026 conditions.</p></li>
+<li><p><strong>Add a spatial and descriptive section before the regression.</strong><br>
+Your paper will be much stronger if readers first see where low-access tracts are and how they differ descriptively from other tracts. Before the logistic regression, I recommend:</p>
+<ul>
+<li>a <strong>New York map of census tracts</strong> colored by <code>LA1and10</code>,</li>
+<li>a <strong>table comparing low-access and non-low-access tracts</strong> on poverty, income, no-vehicle share, and urban or rural status,</li>
+<li>and one simple figure showing low-access rates by county group or by urban versus rural tracts.</li>
+</ul>
+<p>These descriptive pieces will make the later regression results much easier to interpret.</p></li>
+<li><p><strong>Think about spatial dependence.</strong><br>
+Nearby tracts are not truly independent. Tracts within the same county or metro area share infrastructure, transit systems, land use patterns, and retailer networks. For an inferential model, at minimum consider <strong>county fixed effects</strong> or <strong>standard errors clustered by county</strong>. For a predictive section, be aware that a purely random train/test split may overstate performance because nearby tracts are similar. If prediction becomes a major part of the project, a <strong>county-based or metro-based validation split</strong> would be more convincing than a simple random split.</p></li>
+</ul>
+<hr>
 </section>
-<section id="discussion" class="level2">
-<h2 class="anchored" data-anchor-id="discussion">💬 Discussion</h2>
-<p><font size="5">Welcome to our Week 2 Discussion Board! 👋 </font></p>
-<p>This space is designed for you to engage with your classmates about the material covered in Week 2.</p>
-<p>Whether you are looking to delve deeper into the content, share insights, or have questions about the content, this is the perfect place for you.</p>
-<p>If you have any specific questions for Byeong-Hak (<strong><span class="citation" data-cites="bcdanl">@bcdanl</span></strong>) or peer classmate (<span class="citation" data-cites="GitHub-Username">@GitHub-Username</span>) regarding the Week 2 materials or need clarification on any points, don’t hesitate to ask here.</p>
-<p>Let’s collaborate and learn from each other!</p>
+<section id="references" class="level3">
+<h3 class="anchored" data-anchor-id="references">References</h3>
+<ul>
+<li><strong>Draw on key background readings (recommended).</strong><br>
+For your capstone paper and presentation, you may find it helpful to consult:
+<ul>
+<li>USDA ERS. <a href="https://www.ers.usda.gov/data-products/food-access-research-atlas/documentation"><em>Food Access Research Atlas: Documentation.</em></a> <em>(Essential for variable definitions, data sources, and tract classification rules.)</em></li>
+<li>Rhone, A., Williams, R., &amp; Dicken, C. (2022). <a href="https://www.ers.usda.gov/publications/pub-details?pubid=104157"><em>Low-Income and Low-Foodstore-Access Census Tracts, 2015-19.</em></a> <em>USDA Economic Information Bulletin No.&nbsp;236.</em> <em>(Most directly relevant to the current Atlas update.)</em></li>
+<li>Ver Ploeg, M., et al.&nbsp;(2009). <a href="https://www.ers.usda.gov/publications/pub-details?pubid=42729"><em>Access to Affordable and Nutritious Food: Measuring and Understanding Food Deserts and Their Consequences.</em></a> <em>USDA Economic Research Report No.&nbsp;80.</em></li>
+<li>Dutko, P., Ver Ploeg, M., &amp; Farrigan, T. (2012). <a href="https://www.ers.usda.gov/publications/pub-details?pubid=45017"><em>Characteristics and Influential Factors of Food Deserts.</em></a> <em>USDA Economic Research Report No.&nbsp;140.</em></li>
+<li>Walker, R. E., Keane, C. R., &amp; Burke, J. G. (2010). <a href="https://doi.org/10.1016/j.healthplace.2010.04.013"><em>“Disparities and Access to Healthy Food in the United States: A Review of Food Deserts Literature.”</em></a> <em>Health &amp; Place</em>, 16(5), 876-884.</li>
+<li>Sönmez, E., Lee, D., Gómez, M. I., &amp; Fan, X. (2016). <a href="https://bcdanl.github.io/410/danl-rw-refs/snmezEtAl-ajae-2016-food-bank.pdf"><em>“Improving Food Bank Gleaning Operations: An Application in New York State”</em></a>. <em>American Journal of Agricultural Economics</em>, 98(2), 549-563.</li>
+<li>Prendergast, C. (2017). <a href="https://bcdanl.github.io/410/danl-rw-refs/prendergast-jep-2017.pdf"><em>“How Food Banks Use Markets to Feed the Poor”</em></a> <em>Journal of Economic Perspectives</em>, 31(4), 145–162.</li>
+<li>Prendergast, C. (2022). <a href="https://bcdanl.github.io/410/danl-rw-refs/prendergast-jpe-2022-food-banks.pdf"><em>“The Allocation of Food to Food Banks”</em></a> <em>Journal of Political Economy</em>, 130(8), 1993–2017.</li>
+<li>Smith, V. &amp; Goldstein, J. (2017). <a href="https://www.npr.org/sections/money/2019/09/11/565736836/episode-665-the-free-food-market"><em>“Planet Money - Episode 665: The Free Food Market”</em></a>. <em>National Public Radio</em>.</li>
+</ul></li>
+</ul>
+<hr>
+</section>
+<section id="questions-to-think-about-as-you-refine-your-capstone-paper" class="level3">
+<h3 class="anchored" data-anchor-id="questions-to-think-about-as-you-refine-your-capstone-paper">Questions to Think About as You Refine Your capstone paper</h3>
+<p>You do <strong>not</strong> need to answer all of these, but they may help you sharpen your analysis and policy narrative.</p>
+<p><strong>1. Urban and Rural Mechanisms</strong></p>
+<ul>
+<li>Would it be cleaner to run separate urban and rural models, given that the USDA outcome itself uses different distance rules?</li>
+<li>Are the strongest predictors of low access the same in New York City as they are in rural western or northern New York?</li>
+</ul>
+<p><strong>2. Variable Construction</strong></p>
+<ul>
+<li>Is your vehicle variable a pure no-car measure, or is it already combined with distance to stores? If it is the latter, it overlaps too much with the outcome.</li>
+<li>Will you use race and ethnicity as shares, and how will you choose the omitted reference group?</li>
+</ul>
+<p><strong>3. Causal Interpretation</strong></p>
+<ul>
+<li>If poverty rate is strongly associated with low food access, what is the mechanism you have in mind? Lower retailer incentives, transportation barriers, residential segregation, zoning, or something else?</li>
+<li>If race or ethnicity variables remain important after controlling for income and vehicle access, what omitted neighborhood features might they be capturing, such as public transit, density, or historical segregation?</li>
+</ul>
+<p><strong>4. Policy Implications</strong></p>
+<ul>
+<li>If low vehicle access turns out to be the strongest predictor, does that point more toward transportation solutions than store-siting solutions?</li>
+<li>Are there high-income but low-access rural tracts in New York? Those would be interesting cases because they may require a very different policy response than low-income urban tracts.</li>
+</ul>
+<hr>
+<p>Best,<br>
+Byeong-Hak Choe</p>
 
 
 </section>
@@ -655,8 +753,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       }
     }
 });
-</script>
-<script src="https://giscus.app/client.js" data-repo="bcdanl/410-spr-2026-discussion" data-repo-id="R_kgDOQ8gipQ" data-category="General" data-category-id="DIC_kwDOQ8gipc4C1IRh" data-mapping="title" data-reactions-enabled="0" data-emit-metadata="0" data-input-position="top" data-theme="preferred_color_scheme" data-lang="en" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
 <footer class="footer">

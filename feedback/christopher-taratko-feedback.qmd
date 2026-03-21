@@ -1,0 +1,192 @@
+---
+title: "Housing Affordability, Income, and Voting Behavior in the United States, 2007-2022"
+subtitle: "Christopher Taratko"
+date: 2026-03-20
+
+code-fold: false
+
+execute:
+  echo: true
+  eval: true
+  message: false
+  warning: false
+  fig-width: 9
+  fig-height: 6
+---
+
+Dear Christopher,
+
+Thank you for your Research Kick-off Report. Your topic touches on important questions about the relationship between housing affordability, household debt, income, and political behavior, and your personal motivation is clear and sincere. You are trying to connect broad structural changes in ownership and financial security to patterns you can actually study with data, which is a worthwhile starting point for a capstone project. I also appreciate that you have already gone out and found several public datasets rather than waiting for a perfectly packaged source to appear.
+
+That said, I want to be candid with you: as currently written, the proposal has a major alignment problem between its motivation, research questions, data sources, and method. The good news is that there is a strong project in here. But before this becomes a successful capstone paper, you need to narrow the scope and choose one clear empirical path.
+
+---
+
+### The Main Issue: This Is Currently More Than One Project
+
+Right now, the proposal is trying to do several different things at once:
+
+1. **A political economy question**: How do housing affordability, debt, and income relate to voting outcomes?
+2. **A household finance question**: How are debt burdens, housing costs, and financial distress changing across states over time?
+3. **A party-level financial behavior question**: Do Republicans and Democrats differ in ownership, debt, and long-run financial choices?
+
+These are all interesting questions, but they require different data, different units of analysis, and in some cases different methods. Trying to answer all of them in one paper will make the final analysis feel scattered.
+
+For the **capstone paper**, you need to choose one primary question and organize the entire project around it.
+
+I see two realistic paths:
+
+**Path A: Political economy path**  
+How do state-level housing affordability and household debt burdens relate to voting outcomes in U.S. election years?
+
+- Natural unit of analysis: **state-election-year**
+- Natural outcome variable: **party vote share**, **turnout**, or **change in vote share**, not simply which party won the state
+- Likely method: **panel regression for inference**
+
+This path can work, but you would need to redesign the voting data and be very clear that election outcomes are only observed in election years, not every year.
+
+**Path B: Household finance and affordability path**  
+How have housing affordability and debt burdens changed across U.S. states, and which factors are associated with higher financial distress or lower ownership security?
+
+- Natural unit of analysis: **state-year** or **state-quarter**
+- Natural outcome variable: **delinquency rate**, **homeownership rate**, or another direct measure of financial stress
+- Likely method: **panel regression for inference**
+
+This path is closer to your stated motivation and is probably the more coherent project with your current data.
+
+My honest advice is that **Path B is the stronger project unless you are especially committed to the politics question**.
+
+---
+
+### A Critical Data Issue: D1 Does Not Measure General U.S. Voting Behavior
+
+The Harvard Dataverse dataset you call D1 is a dataset of **ranked-choice voting elections**. That creates a major problem for your current research question.
+
+- Ranked-choice voting is used in only a limited set of jurisdictions, so it is not a representative measure of general voting behavior across U.S. states.
+- The unit of analysis in D1 is not a state-year observation. It is closer to a **candidate-round-election** observation.
+- The `party_affiliation` field refers to the **candidate**, not the financial behavior of voters in that state.
+- Many of the jurisdictions in the ranked-choice voting data are cities or localities, not entire states.
+
+So even before you estimate any regression, there is a mismatch between the outcome you want and the data you currently have.
+
+If you want to pursue **Path A**, you should replace D1 with a dataset that actually measures general election outcomes. Better options include:
+
+- **MIT Election Data and Science Lab** for statewide or county-level election returns
+- **Cooperative Election Study** if you want individual-level vote choice or party identification
+
+These alternatives fit the question much better than ranked-choice voting data.
+
+---
+
+### Another Important Data Issue: MSPUS Is Not a State-Level Affordability Measure
+
+Your D3 series, **Median Sales Price of Houses Sold for the United States (MSPUS)**, is a **national** series. That means it changes over time, but it does not vary across states within a given year.
+
+This matters because your main empirical structure is otherwise state-based. If every state gets the same housing price value in a given year, then MSPUS does not help explain why one state differs from another in that year. Once you include year fixed effects, a national series like MSPUS contributes very little in a state-level regression.
+
+More importantly, **home price is not the same thing as housing affordability**. Affordability is usually some combination of prices, rents, income, interest rates, and cost burden.
+
+For the capstone paper, replace MSPUS with a more appropriate state-level measure such as:
+
+- FHFA state house price indexes
+- Zillow state-level home value or rent data
+- A constructed affordability measure such as **home price to income**, **rent to income**, or **share of households spending more than 30% of income on housing**
+
+---
+
+### Next Steps
+
+You are working toward both the **presentation** and the **capstone paper**. Focus on **one clear research question**, a **well-defined unit of analysis**, and a design that is honest about what your data can and cannot tell you.
+
+- **Choose one primary question and one primary outcome.**  
+  Do not try to study voting behavior, party-level personal finance behavior, and ownership trends all in one paper. Decide whether your paper is mainly about **voting outcomes** or mainly about **financial distress and affordability**.
+
+- **Clarify the unit of analysis and the time structure.**  
+  If you choose the voting path, your natural unit is **state-election-year**, not state-year, because elections do not happen every year in the same form. If you choose the household finance path, a **state-year** or **state-quarter** panel is more natural. Right now, your three datasets are operating on different time scales, and that mismatch needs to be fixed before you can merge anything cleanly.
+
+- **Use a better voting outcome if you stay on the politics path.**  
+  Do not code the outcome simply as which party won a state. That throws away too much information. A better outcome would be **Republican two-party vote share**, **Democratic two-party vote share**, or **change in vote share from the previous election**.
+
+- **If ownership is central to your motivation, add a direct ownership measure.**  
+  Your current datasets do not actually measure ownership very well. If the paper is really about how ownership and financial security are changing, then add a direct measure such as **homeownership rate** from ACS or Census data. Otherwise, the project risks talking about ownership without ever measuring it.
+
+- **Use direct measures, not rankings.**  
+  You mention wanting education rankings by state or county. Rankings are usually a poor regression input because they throw away information and make coefficients harder to interpret. Use direct variables instead, such as the **share of adults with a bachelor's degree or higher**.
+
+- **Write out the regression specification explicitly.**  
+  Given your current framing, this project is better suited to **inference** than to prediction. A useful generic specification would be:
+
+  $$
+  Y_{s,t} = \beta_0 + \beta_1 \text{Affordability}_{s,t} + \beta_2 \text{Debt Burden}_{s,t} + \mathbf{X}_{s,t}'\boldsymbol{\gamma} + \alpha_s + \delta_t + \varepsilon_{s,t}
+  $$
+
+  where $s$ indexes states, $t$ indexes years or election years, $Y_{s,t}$ is either a voting outcome (Path A) or a financial distress outcome such as delinquency rate (Path B), $\alpha_s$ is a state fixed effect, $\delta_t$ is a year fixed effect, and $\mathbf{X}_{s,t}$ includes controls such as unemployment, education, age structure, and urbanization.
+
+  If you deliberately switch to a **prediction** project instead, then say that clearly and define the target, holdout strategy, and out-of-sample metric. That would be a different project from the one currently described.
+
+- **Measure affordability directly and inflation-adjust monetary variables.**  
+  If you use debt, income, and home values over a long time span, convert them to real terms. Also consider ratios that are easier to interpret, such as **debt-to-income ratio**, **mortgage debt share**, **student loan share**, or **housing cost-to-income burden**.
+
+- **Address causality and confounding carefully.**  
+  Expensive states also differ in many other ways: urbanization, age structure, education, migration, industrial composition, and long-run political culture. Those factors can affect both financial conditions and political outcomes. Your paper should discuss these alternative explanations directly and interpret coefficients cautiously.
+
+- **Treat your ideological prior as a hypothesis, not a premise.**  
+  The statement that Republicans tend to carry generational wealth while Democrats tend to build innovational wealth may be an interesting motivation for asking a question, but it cannot be assumed to be true before the analysis begins. Phrase it as something to test, not something already established.
+
+- **Be careful about ecological fallacy.**  
+  State-level data can tell you about relationships across states, but it cannot tell you how individual Republicans or Democrats behave with money. For example, if a state with higher debt also has a higher Democratic vote share, that does **not** mean Democratic voters in that state personally carry more debt.
+
+---
+
+### Draw on Key Background Readings and Data Sources (Recommended)
+
+For your capstone paper and presentation, you may find it helpful to consult the following sources:
+
+<!-- - Mian, A., & Sufi, A. (2014). [*House of Debt: How They (and You) Caused the Great Recession, and How We Can Prevent It from Happening Again.*](https://press.uchicago.edu/ucp/books/book/chicago/H/bo20832545.html) University of Chicago Press. *(Accessible background on household debt, housing, and financial distress.)* -->
+
+- Marble, W. & Nall, C. (2021). [*"Where Self-Interest Trumps Ideology: Liberal Homeowners and Local Opposition to Housing Development"*](https://bcdanl.github.io/410/danl-rw-refs/MarbleNall-JOP-2021.pdf) *Journal of Politics*, 83(4). *(Even liberal U.S. homeowners oppose local housing development due to self-interest (property value protection), revealing how housing status shapes political behavior independently of ideological affiliation.)*
+
+- Ansell, B., Hjorth, F., Nyrup, J., & Larsen, M. V. (2022). [*"Sheltering Populists? House Prices and the Support for Populist Parties"*](https://bcdanl.github.io/410/danl-rw-refs/Ansell-et-al-JOP-2022.pdf) *Journal of Politics*, 84(3). *(Provides comparative evidence (Denmark, Sweden, Norway, Finland) showing that negative housing price shocks drive voters toward populist parties, which has theoretical relevance to understanding how housing affordability crises may shift U.S. voting behavior.)*
+
+- Autor, D., Dorn, D., & Hanson, G. (2013). [*"The China Syndrome: Local Labor Market Effects of Import Competition in the United States."*](https://bcdanl.github.io/410/danl-rw-refs/autor-et-al-aer-2013.pdf) *American Economic Review*, 103(6), 2121-2168. *(A useful example of how regional economic shocks can be studied with panel data and careful controls.)*
+
+- MIT Election Data and Science Lab. [*Data.*](https://electionlab.mit.edu/data) *(Useful source for statewide and county-level election returns if you pursue the voting path.)*
+- Cooperative Election Study. [*Data Downloads.*](https://tischcollege.tufts.edu/research-faculty/research-centers/cooperative-election-study/data-downloads) *(Useful if you want individual-level vote choice or party identification rather than aggregate election returns.)*
+- Federal Housing Finance Agency. [*House Price Index Datasets.*](https://www.fhfa.gov/data/hpi/datasets) *(State-level housing price data that fit a state panel much better than a national series.)*
+- Zillow Research. [*Housing Data.*](https://www.zillow.com/research/data/) *(Helpful for state, county, and metro measures of home values and rents.)*
+
+---
+
+### Questions to Think About as You Refine Your Capstone Paper
+
+You do **not** need to answer all of these now, but they may help you choose a stronger final direction.
+
+**1. Choosing the Core Question**
+
+- Which question matters more to you: how economic conditions relate to voting, or how affordability and debt shape financial distress and ownership security?
+- If ownership and financial security are your real motivation, is voting actually the right outcome for this project?
+
+**2. Timing and Unit of Analysis**
+
+- If you pursue the voting path, will you use presidential election years only, all even-year federal elections, or some other election-based panel?
+- How will you align quarterly debt data with election outcomes or annual housing measures?
+
+**3. Causality and Alternative Explanations**
+
+- If you find that more expensive states vote differently, how will you separate the effect of affordability from education, urbanization, migration, and long-run political culture?
+- If you find that states with higher debt levels look financially worse, how will you distinguish debt itself from labor market weakness or differences in cost of living?
+
+**4. Individual Versus Aggregate Interpretation**
+
+- What can your state-level data tell you about states as places, and what can it **not** tell you about individual voters?
+- Would an individual-level survey design answer your party-differences question more directly than an aggregate state panel?
+
+**5. Presentation and Takeaway**
+
+- What is the one chart or table you want your audience to remember?
+- If you choose Path B, a clear time series of real debt burdens or delinquency rates by state could be very effective. If you choose Path A, a visual showing changes in affordability against changes in vote share may be more compelling.
+
+---
+
+Best,  
+Byeong-Hak Choe
