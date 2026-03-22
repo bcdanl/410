@@ -16,9 +16,9 @@ execute:
 
 Hi Ryan,
 
-Thank you for your Research Kick-off Report. Your topic is well chosen and easy to motivate. It sits at the intersection of sports analytics, labor economics, and organizational decision-making, and it asks a question that NFL teams, analysts, and fans genuinely care about: how much useful information is contained in draft capital when projecting future player performance? The focus on a single position group is a smart scoping choice, and the project is straightforward enough to be feasible within one semester.
+Thank you for your Research Kick-off Report. Your topic is well chosen and easy to motivate. It sits at the intersection of sports analytics, labor economics, and organizational decision-making, and it asks a question that NFL teams, analysts, and fans care about: how much useful information is contained in draft capital when projecting future player performance? The focus on a single position group is a smart scoping choice, and the project is straightforward enough to be feasible within one semester.
 
-At the same time, the current design is still quite narrow. A single regression of career receiving yards on overall draft pick number will probably recover a negative relationship, but by itself it will not say very much about why that pattern appears or how useful draft position really is as an analytical tool. The main priorities going forward are to decide whether the paper is mainly about prediction or about inference, broaden the variable set, address the playing-time and opportunity problem, and define the outcome window more carefully so the final capstone paper tells a stronger story.
+At the same time, the current design is still quite narrow. A single regression of career receiving yards on overall draft pick number will probably recover a negative relationship, but by itself it will not say very much about why that pattern appears or how useful draft position really is as an analytical tool. The main priorities going forward are to decide whether the paper is mainly about prediction or about inference, broaden the variable set, address the playing-time and opportunity problem, and define the outcome window more carefully so the capstone paper tells a stronger story.
 
 Overall, this project has strong potential to become an engaging and analytically meaningful capstone paper by the end of the semester. The subject is interesting to a broad audience, the data are public, and the question connects directly to how NFL teams evaluate talent. The key now is to move from a simple descriptive relationship toward a more developed research design.
 
@@ -26,18 +26,18 @@ Overall, this project has strong potential to become an engaging and analyticall
 
 ### Next Steps
 
-You are working toward both the **presentation** and the **final capstone project paper**. Focus on a clear research goal, stronger data construction, and results that go beyond a single fitted line.
+You are working toward both the **presentation** and the **capstone project paper**. Focus on a clear research goal, stronger data construction, and results that go beyond a single fitted line.
 
 - **Decide whether the project is mainly about prediction or about inference.**  
-  Your title uses the word "predict," which naturally points toward a prediction project. That is probably the cleaner primary framing for this topic. If prediction is your main goal, then the question becomes: how well does draft position forecast later NFL receiving production, and how much do other pre-draft variables improve that forecast? In that case, your final paper should:
+  Your title uses the word "predict," which naturally points toward a prediction project. That is probably the cleaner primary framing for this topic. If prediction is your main goal, then the question becomes: how well does draft position forecast later NFL receiving production, and how much do other pre-draft variables improve that forecast? In that case, your capstone paper should:
   - Compare a simple baseline model that uses only draft pick number to richer models that also include draft round, combine measures, college production, and draft year.
-  - Evaluate models with out-of-sample metrics such as RMSE or MAE, not just in-sample R squared.
+  - Evaluate models with out-of-sample metrics such as RMSE, not just in-sample R squared.
   - Use a train-test split by draft class, or cross-validation that respects time ordering.
 
   If you want an inference angle as well, frame coefficients as associations and be cautious about causal language. Early draft picks are not only viewed as better prospects. They also receive more opportunities, patience, and organizational investment once they enter the league.
 
 - **Expand beyond a single predictor.**  
-  Draft pick number alone will not explain much of the variation in career receiving yards. For the final paper, build a multiple regression or prediction model with additional variables that teams could plausibly know at or before the draft:
+  Draft pick number alone will not explain much of the variation in career receiving yards. For the capstone paper, build a multiple regression or prediction model with additional variables that teams could plausibly know at or before the draft:
   - **Draft round** or a set of round indicators.
   - **Age at draft**.
   - **NFL Combine measures** such as 40-yard dash, vertical jump, broad jump, height, and weight.
@@ -58,7 +58,7 @@ You are working toward both the **presentation** and the **final capstone projec
   None of these choices fully solves the problem, but they help you separate "better players were drafted earlier" from "earlier picks were given more chances."
 
 - **Reconsider total career receiving yards as the only outcome.**  
-  Total career yards combine talent, playing time, health, team context, and career length. That makes the outcome interesting, but also noisy. The final paper would be much stronger if you reported several outcomes:
+  Total career yards combine talent, playing time, health, team context, and career length. That makes the outcome interesting, but also noisy. The capstone paper would be much stronger if you reported several outcomes:
   - **Total receiving yards** for overall career production.
   - **Receiving yards per game** for efficiency and usage-adjusted performance.
   - **Peak single-season receiving yards** for ceiling.
@@ -67,7 +67,7 @@ You are working toward both the **presentation** and the **final capstone projec
   This last point matters a great deal. Players drafted in 2004 have had much longer careers to accumulate statistics than players drafted in 2019. A common five-season window would put everyone on the same footing and make the comparison much cleaner. Also, because receiving yards are highly right-skewed, a transformation such as `log(1 + yards)` is worth considering if you estimate regression models.
 
 - **Model the draft relationship in a way that allows non-linearity.**  
-  The difference between pick 5 and pick 25 is much more meaningful than the difference between pick 205 and pick 225. A simple linear effect of pick number assumes the same change everywhere in the draft, which is unlikely to be realistic. For the final paper, consider:
+  The difference between pick 5 and pick 25 is much more meaningful than the difference between pick 205 and pick 225. A simple linear effect of pick number assumes the same change everywhere in the draft, which is unlikely to be realistic. For the capstone paper, consider:
   - Using **log(pick number)** as the main predictor.
   - Replacing raw pick number with **draft round indicators**.
   - Testing a flexible curve, such as a spline or polynomial, if you want a richer fit.
@@ -78,9 +78,9 @@ You are working toward both the **presentation** and the **final capstone projec
   The Kaggle dataset is a reasonable starting point, but the project will be stronger if you cross-check or supplement it with more targeted football data sources.
   - **Pro Football Reference** is especially useful for draft position, career receiving statistics, games played, and Approximate Value.
   - **College Football at Sports Reference** is useful for college receiving production and player history.
-  - **nflreadr / nflverse** can make data collection and cleaning easier if you work in R.
+  - **[`nflreadr`](https://nflreadr.nflverse.com) / [`nflverse`](https://nflverse.nflverse.com)** can make data collection and cleaning easier if you work in R.
 
-  In your final paper, say exactly how you will merge players across sources, how you will handle name matching and missing combine results, and whether undrafted free agents are part of the study or excluded by design.
+  In your capstone paper, say exactly how you will merge players across sources, how you will handle name matching and missing combine results, and whether undrafted free agents are part of the study or excluded by design.
 
 - **Make the modeling plan more informative than one regression line.**  
   Right now the evaluation plan is very minimal. Expand it so the analysis feels like a real capstone paper:
@@ -98,9 +98,16 @@ You are working toward both the **presentation** and the **final capstone projec
   - **Early rounds versus later rounds**, since front offices treat these groups very differently.
   - **Power-conference versus non-power-conference college players**, if college context is available.
 
-  You do not need to do all of these. Even one well-chosen heterogeneity analysis would make the final paper more interesting.
+  You do not need to do all of these. Even one well-chosen heterogeneity analysis would make the capstone paper more interesting.
 
 
+- **Include a few strong descriptive visuals in the capstone paper.**  
+  A small number of clean figures will make the project far more compelling:
+  - A **scatterplot** of draft pick number versus first five seasons receiving yards, with a flexible fitted curve.
+  - A **box plot** of receiving yards by draft round.
+  - A **bar chart** or dot plot of the biggest "steals" and "busts" relative to the model's prediction.
+  - A **coefficient plot** if you estimate a multiple regression model.
+  
 ---
 
 ### References
@@ -109,16 +116,14 @@ You are working toward both the **presentation** and the **final capstone projec
   For your capstone paper and presentation, you may find it helpful to consult, and where appropriate cite, the following sources:
   - Massey, C., & Thaler, R. H. (2013). [*"The Loser's Curse: Decision Making and Market Efficiency in the National Football League Draft."*](https://bcdanl.github.io/410/danl-rw-refs/MasseyThaler-management-science-2011.pdf) *Management Science*, 59(7), 1479-1495.
   - Teramoto, M., Cross, C. L., & Willick, S. E. (2016). [*"Predictive Value of National Football League Scouting Combine on Future Performance of Running Backs and Wide Receivers."*](https://doi.org/10.1519/JSC.0000000000001202) *Journal of Strength and Conditioning Research*, 30(5), 1379-1390.
+  - Treme, J., & Allen, S. (2009). [*"Widely Received: Payoffs to Player Attributes in the NFL."*](http://www.accessecon.com/Pubs/EB/2009/Volume29/EB-09-V29-I3-P11.pdf) *Economics Bluetin*, 29(3), 1631-1643.
+  - Hadley, B., Kim, J.W., Magnusen, M., & Kim, K.T. (2025). [*"Redefining the draft pick valuation in the National Football League."*](https://pmc.ncbi.nlm.nih.gov/articles/PMC12457378/) *Front Sports Act Living*.
+  - Kraeutler, M. J., Carver, T.J., Belk, J. W., & McCarty, E.C. (2018). [*"What is the Value of a National Football League Draft Pick? An Analysis Based on Changes Made in the Collective Bargaining Agreement."*](https://journals.lww.com/nsca-jscr/fulltext/2018/06000/what_is_the_value_of_a_national_football_league.20.aspx) *Journal of Strength and Conditioning Research*, 32(6), 1656-1661.
+  - Pitts, J. & Evans, B. (2017). [*"Drafting for Success: How Good Are NFL Teams at Identifying Future Productivity at Offensive-Skill Positions in the Draft?."*](https://www.jstor.org/stable/26725798?seq=1) *The American Economist*, 64(1), 102-122.
   - Pro Football Reference. [*NFL and AFL Draft History.*](https://www.pro-football-reference.com/draft/)
   - College Football at Sports-Reference.com. [*Data Coverage.*](https://www.sports-reference.com/cfb/about/data-coverage.html)
   - `nflreadr` documentation. [*nflreadr.*](https://nflreadr.nflverse.com/)
 
-- **Include a few strong descriptive visuals in the final paper.**  
-  A small number of clean figures will make the project far more compelling:
-  - A **scatterplot** of draft pick number versus first five seasons receiving yards, with a flexible fitted curve.
-  - A **box plot** of receiving yards by draft round.
-  - A **bar chart** or dot plot of the biggest "steals" and "busts" relative to the model's prediction.
-  - A **coefficient plot** if you estimate a multiple regression model.
 
 ---
 

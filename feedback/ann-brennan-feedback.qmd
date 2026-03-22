@@ -116,6 +116,11 @@ You are working toward both the **presentation** and the **capstone paper**. Foc
   Trade-press articles can still help motivate the topic, but they should not carry the empirical foundation of the project.
 
 
+- **Include a few simple descriptive visuals.**  
+  A small set of visuals would make the project much easier to understand:
+  - a **map of California counties** showing FAIR Plan policy counts or growth
+  - a **time-series plot** of statewide non-renewals and statewide FAIR Plan policies
+  - a **scatter plot** of county wildfire risk share versus FAIR Plan growth, with notable counties labeled
 
 ---
 
@@ -137,11 +142,6 @@ You are working toward both the **presentation** and the **capstone paper**. Foc
 - Keys, B. (2025) [*“Housing, Climate Risk, and Insurance”*](https://bcecon.github.io/docs/keys-nber-2025-housing-climate-risk-insurance.pdf). NBER Working Paper
 - Keys, B. & Mulder, P. (2025). [*"Property Insurance and Disaster Risk: New Evidence from Mortgage Escrow Data"*](https://bcecon.github.io/docs/keys-mulder-nber-2024-insurance-climate-risk.pdf). NBER Working Paper
 
-- **Include a few simple descriptive visuals.**  
-  A small set of visuals would make the project much easier to understand:
-  - a **map of California counties** showing FAIR Plan policy counts or growth
-  - a **time-series plot** of statewide non-renewals and statewide FAIR Plan policies
-  - a **scatter plot** of county wildfire risk share versus FAIR Plan growth, with notable counties labeled
 
 ---
 

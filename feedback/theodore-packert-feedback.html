@@ -256,12 +256,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 <p>Dear Theodore,</p>
-<p>Thank you for your Research Kick-off Report. You have identified a timely and policy-relevant topic. Data centers are expanding quickly, and your plan to combine directory data with EPA EJSCREEN, ACS, ECHO, and New York State air permit records shows real initiative. The project also has a clear stakeholder audience: planners, community groups, and economic development offices all care about whether data center siting is associated with local environmental or neighborhood impacts.</p>
-<p>Overall, this project has strong potential to become an original capstone project paper. The main priorities going forward are to narrow the scope, make the core empirical question more precise, and separate what your data can support as inference from what it can support as prediction.</p>
+<p>Thank you for your Research Kick-off Report. You have identified a timely and policy-relevant topic. Data centers are expanding quickly, and combining directory data with <a href="https://web.archive.org/web/20250124121127/https://www.epa.gov/ejscreen/download-ejscreen-data">EPA EJSCREEN</a>, <a href="https://www.census.gov/programs-surveys/acs/data.html">ACS</a>, <a href="https://echo.epa.gov/tools/data-downloads">ECHO</a>, and New York State air permit records is a well-structured approach. The project also has a clear stakeholder audience: planners, community groups, and economic development offices all care about whether data center siting is associated with local environmental or neighborhood impacts.</p>
+<p>Overall, this project has strong potential to become an original capstone project. The main priorities going forward are to narrow the scope, make the core empirical question more precise, and separate what your data can support as inference from what it can support as prediction.</p>
 <hr>
 <section id="next-steps" class="level3">
 <h3 class="anchored" data-anchor-id="next-steps">Next Steps</h3>
-<p>You are working toward both the <strong>presentation</strong> and the <strong>capstone project paper</strong>. Focus on a <strong>well-scoped empirical question</strong>, <strong>clear causal reasoning</strong>, and a <strong>primary method that is either inferential or predictive</strong>.</p>
+<p>You are working toward both the <strong>presentation</strong> and the <strong>capstone paper</strong>. Focus on a <strong>well-scoped empirical question</strong>, <strong>clear causal reasoning</strong>, and a <strong>primary method that is either inferential or predictive</strong>.</p>
 <ul>
 <li><p><strong>Decide whether the project is primarily about inference or prediction.</strong><br>
 Right now, your research question is mostly inferential: are block groups near data centers systematically different from comparable block groups farther away? That is a reasonable capstone direction. If you keep that framing, the regression analysis should be the center of the paper, and the ML model should be secondary. If you prefer a prediction framing instead, you need one clearly defined prediction target, such as PM2.5 or median rent, and you need to evaluate out-of-sample performance by geography. Trying to do both equally may spread the project too thin.</p></li>
@@ -272,11 +272,11 @@ The proposal currently treats environmental, housing, and socioeconomic outcomes
 <li>Housing measures such as <strong>median rent</strong> and <strong>home value</strong> are plausible, but they operate through different mechanisms and need a separate interpretation.</li>
 <li>Poverty and unemployment are more likely to describe where data centers locate than to be caused by data centers in a cross-sectional design. A good strategy would be to make <strong>PM2.5</strong> or <strong>diesel PM</strong> your primary outcome and treat housing outcomes as a secondary extension.</li>
 </ul></li>
-<li><p><strong>Operationalize “quality of life” more carefully.</strong><br>
-“Quality of life” is a broad phrase, but your actual variables are specific neighborhood indicators. In the capstone project paper, define exactly what you mean. For example, you might write that you are studying <strong>environmental and neighborhood indicators associated with proximity to data centers</strong>, rather than claiming to measure overall quality of life directly. That makes the paper more precise and easier to defend.</p></li>
+<li><p><strong>Define “quality of life” more precisely.</strong><br>
+“Quality of life” is a broad phrase, but your actual variables are specific neighborhood indicators. In the capstone paper, define exactly what you mean. For example, you might write that you are studying <strong>environmental and neighborhood indicators associated with proximity to data centers</strong>, rather than claiming to measure overall quality of life directly. That makes the paper more precise and easier to defend.</p></li>
 <li><p><strong>Address the main confounding problem directly.</strong><br>
 The biggest challenge in this project is that data centers do not locate randomly. They often cluster near existing industrial land, substations, fiber routes, dense commercial zones, and transportation infrastructure. Those same places may already have different air quality, rent levels, and demographic composition.</p>
-<p>For the capstone project paper:</p>
+<p>For the capstone paper:</p>
 <ul>
 <li>Control for nearby industrial activity using <strong>ECHO facility counts</strong>, <strong>air permit counts</strong>, or similar measures.</li>
 <li>Include <strong>metro area fixed effects</strong> or <strong>county fixed effects</strong> so you are comparing nearby and farther block groups within the same broader market rather than comparing Manhattan to rural upstate areas.</li>
@@ -326,7 +326,7 @@ Your third sub-question on co-located renewables or small modular reactors is in
 Several of the links in the kickoff report are archived snapshot pages or marketplace directories. For the capstone project paper, keep the commercial directories as source leads, but cite the most stable official documentation for the government datasets. In particular, use:</p>
 <ul>
 <li>ACS API documentation from the U.S. Census Bureau</li>
-<li>ECHO data downloads from EPA</li>
+<li>ECHO data downloads from <a href="(https://web.archive.org/web/20250124121127/https://www.epa.gov/ejscreen/download-ejscreen-data)">EPA Web Archive</a></li>
 <li>The New York State Open Data air permits dataset</li>
 <li>Current EJSCREEN technical documentation</li>
 </ul>
@@ -338,7 +338,7 @@ Before the regression results, the paper and presentation would benefit from:</p
 <ul>
 <li>a <strong>map of New York State</strong> showing verified data center locations</li>
 <li>a <strong>table comparing block groups by distance group</strong></li>
-<li>a <strong>binscatter or grouped mean plot</strong> of PM2.5 against distance to the nearest data center within metro areas These will make the project easier to understand and help the audience see why the inferential model matters.</li>
+<li>a <strong>binscatter (e.g., <code>geom_hex()</code>) or grouped mean plot</strong> of PM2.5 against distance to the nearest data center within metro areas These will make the project easier to understand and help the audience see why the inferential model matters.</li>
 </ul></li>
 </ul>
 <hr>
@@ -383,13 +383,22 @@ Before the regression results, the paper and presentation would benefit from:</p
 <h3 class="anchored" data-anchor-id="background-readings-and-source-documentation">Background Readings and Source Documentation</h3>
 <p>For your capstone project paper and presentation, the following sources would be useful background:</p>
 <ul>
-<li>IEA. (2025). <a href="https://www.iea.org/reports/energy-and-ai/"><em>Energy and AI.</em></a> <em>(Useful background on the rapid growth of electricity demand tied to AI and data centers.)</em></li>
-<li>Masanet, E., Shehabi, A., Lei, N., Smith, S., &amp; Koomey, J. (2020). <a href="https://bcdanl.github.io/410/danl-rw-refs/Masanet-et-al-Science-2020.pdf"><em>“Recalibrating Global Data Center Energy-Use Estimates.”</em></a> <em>Science</em>, 367(6481), 984-986.</li>
-<li>Currie, J., Davis, L., Greenstone, M., &amp; Walker, R. (2015). <a href="https://bcdanl.github.io/410/danl-rw-refs/currie-et-al-2015-environmental-health-risks-and-housing-values-evidence-from-1-600-toxic-plant-openings-and-closings.pdf"><em>“Environmental Health Risks and Housing Values: Evidence from 1,600 Toxic Plant Openings and Closings.”</em></a> <em>American Economic Review</em>, 105(2), 678-709.</li>
-<li>U.S. EPA. <a href="https://www.epa.gov/system/files/documents/2024-07/ejscreen-tech-doc-version-2-3.pdf"><em>EJScreen Technical Documentation.</em></a></li>
-<li>U.S. Census Bureau. <a href="https://www.census.gov/programs-surveys/acs/data/data-via-api.html"><em>American Community Survey Data via API.</em></a></li>
-<li>U.S. EPA. <a href="https://echo.epa.gov/tools/data-downloads"><em>ECHO Data Downloads.</em></a></li>
-<li>New York State Open Data. <a href="https://data.ny.gov/Energy-Environment/Issued-State-Facility-Air-Permits/2wgt-bc53"><em>Issued State Facility Air Permits.</em></a></li>
+<li><p>IEA. (2025). <a href="https://www.iea.org/reports/energy-and-ai/"><em>Energy and AI.</em></a> <em>(Useful background on the rapid growth of electricity demand tied to AI and data centers.)</em></p></li>
+<li><p>Masanet, E., Shehabi, A., Lei, N., Smith, S., &amp; Koomey, J. (2020). <a href="https://bcdanl.github.io/410/danl-rw-refs/Masanet-et-al-Science-2020.pdf"><em>“Recalibrating Global Data Center Energy-Use Estimates.”</em></a> <em>Science</em>, 367(6481), 984-986.</p></li>
+<li><p>Currie, J., Davis, L., Greenstone, M., &amp; Walker, R. (2015). <a href="https://bcdanl.github.io/410/danl-rw-refs/currie-et-al-2015-environmental-health-risks-and-housing-values-evidence-from-1-600-toxic-plant-openings-and-closings.pdf"><em>“Environmental Health Risks and Housing Values: Evidence from 1,600 Toxic Plant Openings and Closings.”</em></a> <em>American Economic Review</em>, 105(2), 678-709.</p></li>
+<li><p>O’Donnell, J. &amp; Crownhart, C. (2025). <a href="https://www.technologyreview.com/2025/05/20/1116327/ai-energy-usage-climate-footprint-big-tech/"><em>“We did the math on AI’s energy footprint. Here’s the story you haven’t heard.”</em></a> <em>MIT Technology Review</em></p></li>
+<li><p>Xiao, T., Nerini, F.F., Matthews, H.D. et al.&nbsp;(2025). <a href="https://www.nature.com/articles/s41893-025-01681-y"><em>“Environmental impact and net-zero pathways for sustainable artificial intelligence servers in the USA”</em></a> <em>Nature Sustainability</em>, 8, 1541–1553.</p></li>
+<li><p>U.S. EPA. <a href="https://www.epa.gov/system/files/documents/2024-07/ejscreen-tech-doc-version-2-3.pdf"><em>EJScreen Technical Documentation.</em></a></p></li>
+<li><p>U.S. Census Bureau. <a href="https://www.census.gov/programs-surveys/acs/data/data-via-api.html"><em>American Community Survey Data via API.</em></a></p></li>
+<li><p>U.S. EPA. <a href="https://echo.epa.gov/tools/data-downloads"><em>ECHO Data Downloads.</em></a></p></li>
+<li><p>New York State Open Data. <a href="https://data.ny.gov/Energy-Environment/Issued-State-Facility-Air-Permits/2wgt-bc53"><em>Issued State Facility Air Permits.</em></a></p></li>
+<li><p>News-style articles to illustrate current debates and policy concerns:</p>
+<ul>
+<li><a href="https://www.smithsonianmag.com/science-nature/with-ai-on-the-rise-what-will-be-the-environmental-impacts-of-data-centers-180987379/"><em>“A.I. Is on the Rise, and So Is the Environmental Impact of the Data Centers That Drive It”</em></a> (Smithsonian Magazine)</li>
+<li><a href="https://news.mit.edu/2025/responding-to-generative-ai-climate-impact-0930"><em>“Responding to the climate impact of generative AI”</em></a> (MIT News)<br>
+</li>
+<li><a href="https://www.unep.org/news-and-stories/story/ai-has-environmental-problem-heres-what-world-can-do-about"><em>“AI has an environmental problem. Here’s what the world can do about that.”</em></a> (UNEP) - <a href="https://www.brookings.edu/articles/ai-data-centers-and-water/"><em>“AI, data centers, and water”</em></a> (Brookings Institution)</li>
+</ul></li>
 </ul>
 <p>Best,<br>
 Byeong-Hak Choe</p>

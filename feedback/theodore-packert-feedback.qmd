@@ -16,15 +16,15 @@ execute:
 
 Dear Theodore,
 
-Thank you for your Research Kick-off Report. You have identified a timely and policy-relevant topic. Data centers are expanding quickly, and your plan to combine directory data with EPA EJSCREEN, ACS, ECHO, and New York State air permit records shows real initiative. The project also has a clear stakeholder audience: planners, community groups, and economic development offices all care about whether data center siting is associated with local environmental or neighborhood impacts.
+Thank you for your Research Kick-off Report. You have identified a timely and policy-relevant topic. Data centers are expanding quickly, and combining directory data with [EPA EJSCREEN](https://web.archive.org/web/20250124121127/https://www.epa.gov/ejscreen/download-ejscreen-data), [ACS](https://www.census.gov/programs-surveys/acs/data.html), [ECHO](https://echo.epa.gov/tools/data-downloads), and New York State air permit records is a well-structured approach. The project also has a clear stakeholder audience: planners, community groups, and economic development offices all care about whether data center siting is associated with local environmental or neighborhood impacts.
 
-Overall, this project has strong potential to become an original capstone project paper. The main priorities going forward are to narrow the scope, make the core empirical question more precise, and separate what your data can support as inference from what it can support as prediction.
+Overall, this project has strong potential to become an original capstone project. The main priorities going forward are to narrow the scope, make the core empirical question more precise, and separate what your data can support as inference from what it can support as prediction.
 
 ---
 
 ### Next Steps
 
-You are working toward both the **presentation** and the **capstone project paper**. Focus on a **well-scoped empirical question**, **clear causal reasoning**, and a **primary method that is either inferential or predictive**.
+You are working toward both the **presentation** and the **capstone paper**. Focus on a **well-scoped empirical question**, **clear causal reasoning**, and a **primary method that is either inferential or predictive**.
 
 - **Decide whether the project is primarily about inference or prediction.**  
   Right now, your research question is mostly inferential: are block groups near data centers systematically different from comparable block groups farther away? That is a reasonable capstone direction. If you keep that framing, the regression analysis should be the center of the paper, and the ML model should be secondary. If you prefer a prediction framing instead, you need one clearly defined prediction target, such as PM2.5 or median rent, and you need to evaluate out-of-sample performance by geography. Trying to do both equally may spread the project too thin.
@@ -36,13 +36,14 @@ You are working toward both the **presentation** and the **capstone project pape
   - Poverty and unemployment are more likely to describe where data centers locate than to be caused by data centers in a cross-sectional design.
   A good strategy would be to make **PM2.5** or **diesel PM** your primary outcome and treat housing outcomes as a secondary extension.
 
-- **Operationalize "quality of life" more carefully.**  
-  "Quality of life" is a broad phrase, but your actual variables are specific neighborhood indicators. In the capstone project paper, define exactly what you mean. For example, you might write that you are studying **environmental and neighborhood indicators associated with proximity to data centers**, rather than claiming to measure overall quality of life directly. That makes the paper more precise and easier to defend.
+	
+- **Define “quality of life” more precisely.**  
+  "Quality of life" is a broad phrase, but your actual variables are specific neighborhood indicators. In the capstone paper, define exactly what you mean. For example, you might write that you are studying **environmental and neighborhood indicators associated with proximity to data centers**, rather than claiming to measure overall quality of life directly. That makes the paper more precise and easier to defend.
 
 - **Address the main confounding problem directly.**  
   The biggest challenge in this project is that data centers do not locate randomly. They often cluster near existing industrial land, substations, fiber routes, dense commercial zones, and transportation infrastructure. Those same places may already have different air quality, rent levels, and demographic composition.
   
-  For the capstone project paper:
+  For the capstone paper:
   - Control for nearby industrial activity using **ECHO facility counts**, **air permit counts**, or similar measures.
   - Include **metro area fixed effects** or **county fixed effects** so you are comparing nearby and farther block groups within the same broader market rather than comparing Manhattan to rural upstate areas.
   - Use population density, median income, housing stock characteristics, and other ACS variables as controls.
@@ -98,7 +99,7 @@ You are working toward both the **presentation** and the **capstone project pape
 - **Clean up the source list and verify official links.**  
   Several of the links in the kickoff report are archived snapshot pages or marketplace directories. For the capstone project paper, keep the commercial directories as source leads, but cite the most stable official documentation for the government datasets. In particular, use:
   - ACS API documentation from the U.S. Census Bureau
-  - ECHO data downloads from EPA
+  - ECHO data downloads from [EPA Web Archive]((https://web.archive.org/web/20250124121127/https://www.epa.gov/ejscreen/download-ejscreen-data))
   - The New York State Open Data air permits dataset
   - Current EJSCREEN technical documentation
   
@@ -111,7 +112,7 @@ You are working toward both the **presentation** and the **capstone project pape
   Before the regression results, the paper and presentation would benefit from:
   - a **map of New York State** showing verified data center locations
   - a **table comparing block groups by distance group**
-  - a **binscatter or grouped mean plot** of PM2.5 against distance to the nearest data center within metro areas
+  - a **binscatter (e.g., `geom_hex()`) or grouped mean plot** of PM2.5 against distance to the nearest data center within metro areas
   These will make the project easier to understand and help the audience see why the inferential model matters.
 
 ---
@@ -160,10 +161,18 @@ For your capstone project paper and presentation, the following sources would be
 - IEA. (2025). [*Energy and AI.*](https://www.iea.org/reports/energy-and-ai/) *(Useful background on the rapid growth of electricity demand tied to AI and data centers.)*
 - Masanet, E., Shehabi, A., Lei, N., Smith, S., & Koomey, J. (2020). [*"Recalibrating Global Data Center Energy-Use Estimates."*](https://bcdanl.github.io/410/danl-rw-refs/Masanet-et-al-Science-2020.pdf) *Science*, 367(6481), 984-986.
 - Currie, J., Davis, L., Greenstone, M., & Walker, R. (2015). [*"Environmental Health Risks and Housing Values: Evidence from 1,600 Toxic Plant Openings and Closings."*](https://bcdanl.github.io/410/danl-rw-refs/currie-et-al-2015-environmental-health-risks-and-housing-values-evidence-from-1-600-toxic-plant-openings-and-closings.pdf) *American Economic Review*, 105(2), 678-709.
+- O'Donnell, J. & Crownhart, C. (2025). [*“We did the math on AI’s energy footprint. Here’s the story you haven’t heard.”*](https://www.technologyreview.com/2025/05/20/1116327/ai-energy-usage-climate-footprint-big-tech/) *MIT Technology Review*
+- Xiao, T., Nerini, F.F., Matthews, H.D. et al. (2025). [*"Environmental impact and net-zero pathways for sustainable artificial intelligence servers in the USA"*](https://www.nature.com/articles/s41893-025-01681-y) *Nature Sustainability*, 8, 1541–1553.
+      
 - U.S. EPA. [*EJScreen Technical Documentation.*](https://www.epa.gov/system/files/documents/2024-07/ejscreen-tech-doc-version-2-3.pdf)
 - U.S. Census Bureau. [*American Community Survey Data via API.*](https://www.census.gov/programs-surveys/acs/data/data-via-api.html)
 - U.S. EPA. [*ECHO Data Downloads.*](https://echo.epa.gov/tools/data-downloads)
 - New York State Open Data. [*Issued State Facility Air Permits.*](https://data.ny.gov/Energy-Environment/Issued-State-Facility-Air-Permits/2wgt-bc53)
 
+- News-style articles to illustrate current debates and policy concerns:
+  - [*“A.I. Is on the Rise, and So Is the Environmental Impact of the Data Centers That Drive It”*](https://www.smithsonianmag.com/science-nature/with-ai-on-the-rise-what-will-be-the-environmental-impacts-of-data-centers-180987379/) (Smithsonian Magazine)
+  - [*“Responding to the climate impact of generative AI”*](https://news.mit.edu/2025/responding-to-generative-ai-climate-impact-0930) (MIT News)  
+  - [*“AI has an environmental problem. Here’s what the world can do about that.”*](https://www.unep.org/news-and-stories/story/ai-has-environmental-problem-heres-what-world-can-do-about) (UNEP)   - [*"AI, data centers, and water"*](https://www.brookings.edu/articles/ai-data-centers-and-water/) (Brookings Institution)
+  
 Best,  
 Byeong-Hak Choe

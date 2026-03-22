@@ -100,6 +100,12 @@ You are working toward the **presentation** and the **capstone paper**. Focus on
   The capstone paper should explain how you will handle changing state codes, missing values, and incomplete coverage in the nineteenth century. This is especially important if you use both monadic and dyadic files.
 
 
+- **Include a few simple visuals in the capstone paper and presentation.**  
+  Helpful visuals could include:
+  - a **time-series plot** of conflict frequency and average arms or capability measures,
+  - a **coefficient plot** comparing estimated effects across historical eras,
+  - and a **table** showing exactly which variables and years are available in each dataset.
+
 ---
 
 ### References
@@ -120,11 +126,6 @@ You are working toward the **presentation** and the **capstone paper**. Focus on
     
   <!-- - Gibler, D. M. (2012). [*The Territorial Peace.*](https://doi.org/10.1017/CBO9781139060233) Cambridge University Press. -->
 
-- **Include a few simple visuals in the capstone paper and presentation.**  
-  Helpful visuals could include:
-  - a **time-series plot** of conflict frequency and average arms or capability measures,
-  - a **coefficient plot** comparing estimated effects across historical eras,
-  - and a **table** showing exactly which variables and years are available in each dataset.
 
 ---
 
