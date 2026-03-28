@@ -1,0 +1,154 @@
+---
+title: "Do Sustainability Marketing Claims Reflect Reality? Evidence of Greenwashing in Corporate ESG Performance"
+subtitle: "Saya Kondo"
+date: 2026-03-25
+
+code-fold: false
+
+execute:
+  echo: true
+  eval: true
+  message: false
+  warning: false
+  fig-width: 9
+  fig-height: 6
+---
+
+Dear Saya,
+
+Thank you for your Research Kick-off Report. You have chosen a timely and important topic. The question of whether firms' sustainability messaging actually matches their environmental performance is central to current debates about ESG investing, consumer trust, and corporate accountability. Your report identifies a clear research question, the stakeholder motivation is strong, and the firm-year structure is a sensible starting point for this kind of analysis. I also appreciate that you already recognize several real limitations, especially the difficulty of measuring communication quality with simple keyword counts and the fact that ESG scores are not perfectly consistent across providers.
+
+Overall, this project has strong potential. The main priorities for your presentation and final capstone paper are to define the greenwashing concept more precisely, strengthen the text-measurement strategy, expand the control variables beyond industry alone, and separate your inference goal from your prediction goal more clearly.
+
+---
+
+### Next Steps
+
+You are working toward both the **presentation** and the **final capstone project paper**. Focus on **careful variable construction**, **a well-specified regression for inference**, and **clear interpretation of what your results can and cannot say about causality**.
+
+- **Define greenwashing more precisely.**  
+  Right now, the project asks whether firms that emphasize sustainability in their communications have better environmental performance. That is a good starting question, but it is not exactly the same as greenwashing. A firm can talk a lot about sustainability and still perform well. A firm can also talk very little and still perform poorly. For the final paper, clarify which of these you want to study:
+  - **Alignment question:** Do firms that talk more about sustainability also score better on environmental performance?
+  - **Mismatch question:** Do some firms communicate much more sustainability language than their observed performance would justify?
+  
+  If your deeper interest is greenwashing, you may want to construct a **gap measure** rather than relying only on a direct regression. For example, you could standardize both the marketing score and the environmental score, then define a firm as having a larger greenwashing gap when communication is high but environmental performance is low.
+
+- **Improve the sustainability marketing measure.**  
+  A raw keyword count is probably too crude on its own. Firms with longer reports will naturally mention sustainability terms more often, even if sustainability is not especially central to the document. For the final paper, I recommend:
+  - Normalizing keyword counts by total document length, such as mentions per 1,000 or 10,000 words.
+  - Separating **broad ESG language** from **specific environmental claims**. For example, words like "sustainable" and "responsible" are much broader than terms such as "carbon emissions," "net zero," "renewable energy," or "scope 1 emissions."
+  - Manually reading a small validation sample of reports to check whether your dictionary is actually identifying meaningful claims rather than generic boilerplate language.
+  - Considering a more focused outcome such as the share of sentences devoted to environmental claims rather than just total keyword frequency.
+
+- **Expand the control variable set.**  
+  Industry is important, but it is not enough by itself. Firms in energy, manufacturing, finance, and technology differ substantially in both environmental exposure and communication strategy. For the final paper, try to include at least several of the following controls if data are available:
+  - **Firm size** such as log assets, log sales, or market capitalization.
+  - **Profitability** such as return on assets or operating margin.
+  - **Leverage** or debt ratio.
+  - **Industry fixed effects** because environmental scores differ structurally across sectors.
+  - **Year fixed effects** because ESG language and reporting norms have changed over time for all firms.
+  - **Report length** because longer reports mechanically create more chances for keyword matches.
+
+- **Use the panel structure if you truly have firm-year data.**  
+  Your report says the unit of analysis will be firm-year observations. If that is feasible, the project becomes much stronger because you can compare firms to themselves over time rather than only comparing one firm to another. In that case, a firm fixed-effects model would be a strong choice:
+
+  $$
+  \text{EnvironmentalScore}_{i,t} = \beta_1 \text{MarketingScore}_{i,t} + \mathbf{X}_{i,t}'\boldsymbol{\gamma} + \alpha_i + \delta_t + \varepsilon_{i,t}
+  $$
+
+  where $i$ indexes firms, $t$ indexes years, $\alpha_i$ captures time-invariant firm characteristics, and $\delta_t$ captures common year shocks such as changes in ESG disclosure norms or regulation.
+
+  If your data only contain one year per firm, then say so clearly and frame the analysis as a cross-sectional multiple regression instead.
+
+- **Separate inference from prediction more clearly.**  
+  Your current plan mixes several evaluation ideas that belong to different goals. If your main goal is **inference**, then the key outputs are coefficient estimates, confidence intervals, and careful interpretation. If your main goal is **prediction**, then train-test splits, cross-validation, and RMSE matter more. For your specific research question, I think **inference is the more natural primary goal**, because you are trying to understand whether communication and performance move together in a meaningful way. If you keep a predictive component, treat it as secondary.
+
+- **Be careful about causality and timing.**  
+  Even if you find that firms with stronger sustainability communication also have higher environmental scores, that does not mean the communication caused the performance. It may be that firms with genuinely better environmental practices have more to say and therefore produce stronger sustainability messaging. To think more carefully about causality, consider:
+  - Whether the text score should be measured in year $t$ and the ESG outcome in year $t+1$.
+  - Whether lagged marketing communication predicts later environmental scores.
+  - Whether the more realistic interpretation is that communication reflects performance, rather than changes it.
+  
+  You do not need to solve every causal issue, but your final paper should be explicit about what kind of claim your design can support.
+
+- **Treat overall ESG score as secondary to environmental score.**  
+  Since your question is specifically about sustainability and environmental performance, the **environmental score** should be the primary outcome. The **overall ESG score** can be useful as a robustness check, but it combines environmental, social, and governance dimensions that may blur the main question. A company could have a high overall ESG score because of strong governance while still performing weakly on environmental outcomes.
+
+- **Use clustering only as a supporting extension.**  
+  Clustering could be useful, but it should not be the centerpiece of the capstone. A stronger core design would be:
+  1. descriptive statistics and visuals,
+  2. regression analysis for inference,
+  3. optional clustering as a way to illustrate groups such as high-marketing / high-performance, high-marketing / low-performance, low-marketing / high-performance, and low-marketing / low-performance.
+  
+  That would make the clustering results easier to interpret and more closely tied to the main research question.
+
+- **Clarify how the two datasets will be matched.**  
+  Matching firm-year data is often harder than it looks. In the final paper, explain:
+  - Which firm identifier you will use, such as ticker, company name, or CIK.
+  - How you will handle name changes or mismatches across datasets.
+  - Whether the sustainability report and ESG score refer to the same reporting year.
+  - How much data loss occurs after merging.
+
+- **Include simple descriptive visuals in the presentation and final paper.**  
+  A few clear visuals would immediately strengthen the project:
+  - A **scatter plot** of sustainability marketing score vs. environmental score with industry-colored points.
+  - A **box plot** of marketing score by industry to show which sectors use sustainability language most heavily.
+  - A **four-quadrant plot** showing high vs. low communication and high vs. low environmental performance, which is especially useful if you want to discuss greenwashing risk.
+
+
+---
+
+### References
+
+- **Draw on key background readings and policy sources.**  
+  For the final capstone paper and presentation, you may find it useful to consult and, where appropriate, cite the following:
+  - Coen, D., Herman, K., & Pegram, T. (2022). [*Are corporate climate efforts genuine? An empirical analysis of the climate ‘talk–walk’ hypothesis*](https://onlinelibrary.wiley.com/doi/10.1002/bse.3063). *Business Strategy and the Environment*, 31(7), 3040-3059.
+  - Walker, K., & Wan, F (2012). [*The Harm of Symbolic Actions and Green-Washing: Corporate Actions and Communications on Environmental Performance and Their Financial Implications*](https://bcdanl.github.io/410/danl-rw-refs/WalkerWan-JBE-2011.pdf). *Journal of Business Ethics*, 109, 227-242.
+  - Delmas, M. A., & Burbano, V. C. (2011). [*The Drivers of Greenwashing*](https://bcdanl.github.io/410/danl-rw-refs/DelmasBurbano-CMR-2011.pdf). *California Management Review*, 54(1), 64-87.
+  - Marrucci, L., Iovino, R. and Iraldo, F. (2025). [*Environmental Sustainability Award Winners: Do They Communicate Their Environmental Performance Without Potential Greenwashing?*](https://onlinelibrary.wiley.com/doi/10.1002/csr.3088). *Corporate Social Responsiblity and Environmental Management*, 32, 2783-2794.
+  - Lyon, T. P., & Montgomery, A. W. (2015). [*The Means and End of Greenwash*](https://bcdanl.github.io/410/danl-rw-refs/410/danl-rw-refs/LyonMontgomery-OE-2015.pdf). *Organization & Environment*, 28(2), 223-249.
+  - Zhang, K., Pan, Z., Janardhanan, M. et al. (2023). [*Relationship analysis between greenwashing and environmental performance*](https://link.springer.com/article/10.1007/s10668-022-02381-9). *Environment, Development and Sustainability*, 25, 7927-7957.
+  - Berg, F., Kölbel, J. F., & Rigobon, R. (2022). [*Aggregate Confusion: The Divergence of ESG Ratings*](https://academic.oup.com/rof/article/26/6/1315/6590670). *Review of Finance*, 26(6), 1315-1344.
+  - Federal Trade Commission. [*Green Guides*](https://www.ftc.gov/legal-library/browse/rules/green-guides). This is especially useful for grounding the policy relevance of misleading environmental claims.
+  - U.S. Securities and Exchange Commission. [*The Enhancement and Standardization of Climate-Related Disclosures for Investors*](https://www.sec.gov/rules-regulations/2024/03/s7-10-22). This is helpful context for the broader disclosure environment facing public companies.
+
+---
+
+### Questions to Think About as You Refine Your Capstone Project Paper
+
+You do **not** need to answer all of these now, but they may help you sharpen your final design and interpretation.
+
+**1. What exactly counts as greenwashing in your project?**
+
+- Is greenwashing simply a case where sustainability language is high and environmental performance is low?
+- Or do you want to reserve that label for a more extreme mismatch, such as firms in the top quartile of communication but the bottom quartile of environmental performance?
+- Would a gap measure or residual-based measure better match your concept than a simple regression coefficient?
+
+**2. How strong is the text measure?**
+
+- If a company issues a much longer sustainability report, does your method count that as stronger marketing even when the underlying message is similar?
+- Are you measuring genuine environmental claims, or mostly generic corporate language?
+- Could you validate the dictionary by hand on a sample of 20 to 30 reports?
+
+**3. What is the main research goal: inference or prediction?**
+
+- If the goal is inference, what coefficient is the main quantity of interest?
+- If the goal is prediction, what would count as good predictive performance, and why would prediction be the most useful outcome for stakeholders?
+- Does clustering add insight beyond what a regression and a few good visualizations already provide?
+
+**4. How will you think about causality?**
+
+- If you find a positive relationship, is the story that sustainability communication reflects real performance, or that firms with better performance choose to advertise it more?
+- If you find little or no relationship, does that suggest widespread greenwashing, noisy ESG measurement, or an overly simple text measure?
+- Would using lagged communication or lagged outcomes help you think more clearly about timing?
+
+**5. How should the results be presented to stakeholders?**
+
+- What would a regulator care about most: average alignment, extreme mismatch cases, or sector-specific patterns?
+- What would an investor care about most: whether ESG language predicts actual environmental performance, or whether it fails to do so?
+- How would you explain your findings to a skeptical audience that already believes ESG scores and sustainability reports are both noisy?
+
+---
+
+Best,  
+Byeong-Hak Choe
