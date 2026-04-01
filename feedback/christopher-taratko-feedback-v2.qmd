@@ -1,0 +1,163 @@
+---
+title: "Christopher"
+subtitle: "Housing Prices and Household Financial Behavior"
+author: Byeong-Hak Choe
+institute: SUNY Geneseo
+date: 2026-04-01
+
+code-fold: false
+
+execute:
+  echo: true
+  eval: true
+  message: false
+  warning: false
+  fig-width: 9
+  fig-height: 6
+---
+
+Dear Christopher,
+
+Thank you for your updated work on this project. This is a solid and well-motivated research question. Housing prices plausibly shape household financial behavior in important ways, and your topic sits in a meaningful part of applied economics where household finance, housing markets, and macroeconomic conditions intersect. The question is accessible, policy relevant, and feasible for a capstone project. A panel design is also a sensible starting point.
+
+The challenge is now whether the empirical design can separate a genuine effect of housing prices on household debt behavior from other forces that move both variables together. For your presentation and final paper, the most important priorities are to clarify the direction of causality, improve the model specification, and be very transparent about what your estimates can and cannot show.
+
+Overall, this can still become a strong capstone paper. The key is to frame the contribution carefully. Unless you can bring in stronger identifying variation, the project is best presented as an inference-based panel study that provides careful evidence on associations and mechanisms, rather than a paper that claims to prove a clean causal effect.
+
+---
+
+### Next Steps
+
+You are working toward both the **presentation** and the **final paper**. Focus on **clear causal reasoning**, a **carefully specified panel model**, and **honest interpretation of the evidence**.
+
+- **Address the reverse-causality problem directly.**  
+  The biggest challenge in your project is that housing prices and household debt can affect each other at the same time. This goes in both directions:
+  - When households take on more mortgage debt, housing demand can rise, which can push prices upward.
+  - When housing prices rise, households may need larger mortgages, which can raise debt ratios.
+
+  This means a regression of debt on housing prices is hard to interpret as one-directional. For the final paper:
+  - State clearly that the relationship may run in both directions.
+  - Explain why this makes causal interpretation difficult.
+  - If you keep the current design, describe the results as **associational evidence** rather than proof that price changes cause changes in debt behavior.
+
+- **Be explicit about omitted variables that move both prices and debt.**  
+  Many state-level factors may influence both housing prices and household financial outcomes in the same period. These include:
+  - local income growth,
+  - labor market conditions,
+  - lending standards and credit supply,
+  - demographic change,
+  - state housing and tax policy.
+
+  Even with state fixed effects and year fixed effects, time-varying differences within states remain a concern. Your final paper should acknowledge this clearly and discuss which control variables you can include to reduce this problem.
+
+- **Justify the housing-price measure carefully.**  
+  Your project will be stronger if you explain exactly how housing prices are measured and why that measure is appropriate. Housing price indices differ in coverage and construction.
+  - If you use **FHFA**, explain that it has broad geographic coverage and is widely used for repeat-sales analysis.
+  - If you use **Case-Shiller**, explain its strengths but also its more selective market coverage.
+
+  The choice matters, and you should explain why your preferred series fits your research question best.
+
+- **Think carefully about aggregation and the unit of analysis.**  
+  State-year data are workable, but they are also coarse. Large states contain very different housing markets, and state averages may hide important within-state differences.
+  - Urban and rural housing markets often move very differently.
+  - State-level debt ratios may change because the composition of borrowers changes, not only because behavior changes.
+
+  In the final paper, be upfront about what is lost by working at the state-year level. If county- or metro-level data are feasible, even for a smaller sample, discuss whether those could provide a sharper design.
+
+- **Use a thoughtful lag structure.**  
+  Housing market changes are unlikely to affect debt ratios or delinquency immediately. Mortgage borrowing, refinancing, repayment stress, and delinquency often unfold over more than one year. For the final paper:
+  - Motivate the lag structure economically, not just statistically.
+  - Consider whether one-year, two-year, or multi-year lags make more sense for your outcome.
+  - Explain why your preferred lag aligns with the underlying mechanism you want to study.
+
+- **Do not let the 2008 crisis drive the entire story without saying so.**  
+  If your panel spans only about a dozen years, the Great Recession and housing crash may dominate the variation in both prices and debt outcomes. In that case, the regression may mostly be picking up that one common episode rather than a broader relationship. For the final paper:
+  - Show descriptive plots of housing prices and debt outcomes over time.
+  - Consider separate analysis for pre-crisis, crisis, and post-crisis periods if your sample allows.
+  - Discuss whether your findings are general or mostly crisis-specific.
+
+- **Specify the panel model clearly.**  
+  A two-way fixed-effects model is the natural starting point here. You can present it as:
+
+  $$Y_{s,t} = \beta_1 \text{HousingPrice}_{s,t-k} + \mathbf{X}_{s,t}'\boldsymbol{\gamma} + \alpha_s + \delta_t + \varepsilon_{s,t}$$
+
+  where $s$ indexes states, $t$ indexes years, $\alpha_s$ are state fixed effects, $\delta_t$ are year fixed effects, and $\mathbf{X}_{s,t}$ is a vector of time-varying controls.
+
+  This model helps by:
+  - controlling for time-invariant state characteristics,
+  - controlling for nationwide shocks common to all states,
+  - focusing on within-state changes over time.
+
+  But it does **not** by itself solve the two-way causality problem or all omitted-variable concerns. That limitation should be discussed directly.
+
+- **Use clustered standard errors at the state level.**  
+  This is essential because state-year observations are likely correlated within states over time. Without clustering, standard errors may look too small. If the panel is short, note that inference is still somewhat limited even with clustering.
+
+- **Consider useful extensions if time permits.**  
+  You do not need to do everything, but some extensions would add real value:
+  - **State-specific time trends** to absorb slow-moving divergence across states.
+  - **Separate outcomes** for mortgage debt and unsecured debt.
+  - **Heterogeneity analysis** for high-price versus low-price states.
+  - **Pre- versus post-2008 comparisons**.
+
+  These additions could make the paper much more informative even if the main results remain associational.
+
+- **Think about a stronger source of identifying variation.**  
+  If you want to push the paper closer to causality, one promising direction is to use variation in housing supply elasticity. The Saiz framework is especially relevant here because places with tighter geographic constraints may experience larger price changes for reasons less directly tied to short-run household borrowing behavior. Even if you do not implement a full instrumental-variables design, you should discuss this literature as a benchmark for stronger empirical strategies.
+
+- **Anchor the project in the core literature.**  
+  Your final paper will be stronger if it is clearly situated in the household finance and housing literature. In particular, you should engage with:
+  - Mian and Sufi on household debt and housing demand,
+  - Glaeser and Gyourko on housing supply,
+  - Bhutta on mortgage debt dynamics.
+
+  These studies help define what counts as a convincing contribution in this area and will also help you describe your own paper more precisely.
+
+---
+
+### Questions to Think About as You Refine Your Final Paper
+
+You do **not** need to answer all of these now, but they may help you sharpen the project.
+
+**1. What Is the Main Outcome?**
+
+- Is your primary outcome **debt-to-income ratios**, **mortgage debt**, or **delinquency rates**?
+- These variables capture different parts of household financial behavior. Your paper should identify one main outcome and explain why it is the most important for your question.
+
+**2. What Is the Main Mechanism?**
+
+- Are rising housing prices increasing debt because households need larger mortgages?
+- Or are rising prices relaxing borrowing constraints by increasing home equity?
+- These mechanisms point in different directions and may imply different model choices.
+
+**3. How Will You Handle Timing?**
+
+- Should housing prices in year *t* affect debt outcomes in year *t*, year *t+1*, or later?
+- What timing is most consistent with mortgage origination, refinancing, and eventual repayment stress?
+
+**4. How Much of the Result Is Really the Great Recession?**
+
+- If you drop the crisis years, do your estimates change substantially?
+- If so, your final paper should say clearly that the relationship may be concentrated in one unusual macroeconomic period.
+
+**5. What Can You Claim?**
+
+- If your design cannot fully separate changes in housing prices from other changes happening within states at the same time, how should you describe the result?
+- A careful answer would be that the paper provides **inference about association and mechanism**, not a definitive causal estimate.
+
+---
+
+### Recommended Background Readings
+
+For your final paper and presentation, you may find the following especially useful:
+
+- Mian, A., & Sufi, A. (2011). [*"House Prices, Home Equity-Based Borrowing, and the US Household Leverage Crisis."*](/Users/bchoe/Documents/websites/410/danl-rw-refs/MianSufi-AER-2011-house-prices-home-equity-based-borrowing-and-the-us-household-leverage-crisis.pdf) *American Economic Review*, 101(5), 2132-2156.
+<!-- - Mian, A., & Sufi, A. (2014). [*House of Debt.*](https://press.uchicago.edu/ucp/books/book/chicago/H/bo17505484.html) University of Chicago Press. -->
+- Saiz, A. (2010). [*"The Geographic Determinants of Housing Supply."*](/Users/bchoe/Documents/websites/410/danl-rw-refs/Saiz-QJE-2010.pdf) *Quarterly Journal of Economics*, 125(3), 1253-1296.
+- Glaeser, E. L., & Gyourko, J. (2018). [*"The Economic Implications of Housing Supply."*](https://doi.org/10.1257/jep.32.1.3) *Journal of Economic Perspectives*, 32(1), 3-30.
+- Bhutta, N. (2015). [*"The Ins and Outs of Mortgage Debt during the Housing Boom and Bust."*](https://fedinprint.org/item/fedgfe/35281/original) *FEDS Working Paper 2015-41*, Board of Governors of the Federal Reserve System.
+
+---
+
+Best,  
+Byeong-Hak Choe
