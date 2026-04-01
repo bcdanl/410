@@ -20,7 +20,7 @@ Dear Christopher,
 
 Thank you for your updated work on this project. This is a solid and well-motivated research question. Housing prices plausibly shape household financial behavior in important ways, and your topic sits in a meaningful part of applied economics where household finance, housing markets, and macroeconomic conditions intersect. The question is accessible, policy relevant, and feasible for a capstone project. A panel design is also a sensible starting point.
 
-The challenge is now whether the empirical design can separate a genuine effect of housing prices on household debt behavior from other forces that move both variables together. For your presentation and final paper, the most important priorities are to clarify the direction of causality, improve the model specification, and be very transparent about what your estimates can and cannot show.
+The challenge is now whether the empirical design can separate a genuine effect of housing prices on household debt behavior from other forces that move both variables together. For your presentation and capstone paper, the most important priorities are to clarify the direction of causality, improve the model specification, and be very transparent about what your estimates can and cannot show.
 
 Overall, this can still become a strong capstone paper. The key is to frame the contribution carefully. Unless you can bring in stronger identifying variation, the project is best presented as an inference-based panel study that provides careful evidence on associations and mechanisms, rather than a paper that claims to prove a clean causal effect.
 
@@ -28,17 +28,16 @@ Overall, this can still become a strong capstone paper. The key is to frame the 
 
 ### Next Steps
 
-You are working toward both the **presentation** and the **final paper**. Focus on **clear causal reasoning**, a **carefully specified panel model**, and **honest interpretation of the evidence**.
+You are working toward both the **presentation** and the **capstone paper**. Focus on **clear causal reasoning**, a **carefully specified panel model**, and **honest interpretation of the evidence**.
 
 - **Address the reverse-causality problem directly.**  
   The biggest challenge in your project is that housing prices and household debt can affect each other at the same time. This goes in both directions:
   - When households take on more mortgage debt, housing demand can rise, which can push prices upward.
   - When housing prices rise, households may need larger mortgages, which can raise debt ratios.
 
-  This means a regression of debt on housing prices is hard to interpret as one-directional. For the final paper:
+  This means a regression of debt on housing prices is hard to interpret as one-directional. For the capstone paper:
   - State clearly that the relationship may run in both directions.
   - Explain why this makes causal interpretation difficult.
-  - If you keep the current design, describe the results as **associational evidence** rather than proof that price changes cause changes in debt behavior.
 
 - **Be explicit about omitted variables that move both prices and debt.**  
   Many state-level factors may influence both housing prices and household financial outcomes in the same period. These include:
@@ -48,30 +47,29 @@ You are working toward both the **presentation** and the **final paper**. Focus 
   - demographic change,
   - state housing and tax policy.
 
-  Even with state fixed effects and year fixed effects, time-varying differences within states remain a concern. Your final paper should acknowledge this clearly and discuss which control variables you can include to reduce this problem.
+  Even with state fixed effects and year fixed effects, time-varying differences within states remain a concern. Your capstone paper should acknowledge this clearly and discuss which control variables you can include to reduce this problem.
 
 - **Justify the housing-price measure carefully.**  
   Your project will be stronger if you explain exactly how housing prices are measured and why that measure is appropriate. Housing price indices differ in coverage and construction.
   - If you use **FHFA**, explain that it has broad geographic coverage and is widely used for repeat-sales analysis.
   - If you use **Case-Shiller**, explain its strengths but also its more selective market coverage.
 
-  The choice matters, and you should explain why your preferred series fits your research question best.
 
 - **Think carefully about aggregation and the unit of analysis.**  
   State-year data are workable, but they are also coarse. Large states contain very different housing markets, and state averages may hide important within-state differences.
   - Urban and rural housing markets often move very differently.
   - State-level debt ratios may change because the composition of borrowers changes, not only because behavior changes.
 
-  In the final paper, be upfront about what is lost by working at the state-year level. If county- or metro-level data are feasible, even for a smaller sample, discuss whether those could provide a sharper design.
+  In the capstone paper, be upfront about what is lost by working at the **state-year** level. If **county-year** or **metro-year** level data are feasible, even for a smaller sample, discuss whether those could provide a sharper design.
 
 - **Use a thoughtful lag structure.**  
-  Housing market changes are unlikely to affect debt ratios or delinquency immediately. Mortgage borrowing, refinancing, repayment stress, and delinquency often unfold over more than one year. For the final paper:
+  Housing market changes are unlikely to affect debt ratios or delinquency immediately. Mortgage borrowing, refinancing, repayment stress, and delinquency often unfold over more than one year. For the capstone paper:
   - Motivate the lag structure economically, not just statistically.
   - Consider whether one-year, two-year, or multi-year lags make more sense for your outcome.
   - Explain why your preferred lag aligns with the underlying mechanism you want to study.
 
 - **Do not let the 2008 crisis drive the entire story without saying so.**  
-  If your panel spans only about a dozen years, the Great Recession and housing crash may dominate the variation in both prices and debt outcomes. In that case, the regression may mostly be picking up that one common episode rather than a broader relationship. For the final paper:
+  If your panel spans only about a dozen years, the Great Recession and housing crash may dominate the variation in both prices and debt outcomes. In that case, the regression may mostly be picking up that one common episode rather than a broader relationship. For the capstone paper:
   - Show descriptive plots of housing prices and debt outcomes over time.
   - Consider separate analysis for pre-crisis, crisis, and post-crisis periods if your sample allows.
   - Discuss whether your findings are general or mostly crisis-specific.
@@ -106,7 +104,7 @@ You are working toward both the **presentation** and the **final paper**. Focus 
   If you want to push the paper closer to causality, one promising direction is to use variation in housing supply elasticity. The Saiz framework is especially relevant here because places with tighter geographic constraints may experience larger price changes for reasons less directly tied to short-run household borrowing behavior. Even if you do not implement a full instrumental-variables design, you should discuss this literature as a benchmark for stronger empirical strategies.
 
 - **Anchor the project in the core literature.**  
-  Your final paper will be stronger if it is clearly situated in the household finance and housing literature. In particular, you should engage with:
+  Your capstone paper will be stronger if it is clearly situated in the household finance and housing literature. In particular, you should engage with:
   - Mian and Sufi on household debt and housing demand,
   - Glaeser and Gyourko on housing supply,
   - Bhutta on mortgage debt dynamics.
@@ -115,7 +113,7 @@ You are working toward both the **presentation** and the **final paper**. Focus 
 
 ---
 
-### Questions to Think About as You Refine Your Final Paper
+### Questions to Think About as You Refine Your capstone paper
 
 You do **not** need to answer all of these now, but they may help you sharpen the project.
 
@@ -138,7 +136,7 @@ You do **not** need to answer all of these now, but they may help you sharpen th
 **4. How Much of the Result Is Really the Great Recession?**
 
 - If you drop the crisis years, do your estimates change substantially?
-- If so, your final paper should say clearly that the relationship may be concentrated in one unusual macroeconomic period.
+- If so, your capstone paper should say clearly that the relationship may be concentrated in one unusual macroeconomic period.
 
 **5. What Can You Claim?**
 
@@ -149,7 +147,7 @@ You do **not** need to answer all of these now, but they may help you sharpen th
 
 ### Recommended Background Readings
 
-For your final paper and presentation, you may find the following especially useful:
+For your capstone paper and presentation, you may find the following especially useful:
 
 - Mian, A., & Sufi, A. (2011). [*"House Prices, Home Equity-Based Borrowing, and the US Household Leverage Crisis."*](/Users/bchoe/Documents/websites/410/danl-rw-refs/MianSufi-AER-2011-house-prices-home-equity-based-borrowing-and-the-us-household-leverage-crisis.pdf) *American Economic Review*, 101(5), 2132-2156.
 <!-- - Mian, A., & Sufi, A. (2014). [*House of Debt.*](https://press.uchicago.edu/ucp/books/book/chicago/H/bo17505484.html) University of Chicago Press. -->
