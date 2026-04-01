@@ -1,6 +1,6 @@
 ---
-title: "Christopher"
-subtitle: "Housing Prices and Household Financial Behavior"
+title: "Housing Prices and Household Financial Behavior"
+subtitle: "Christopher Taratko"
 author: Byeong-Hak Choe
 institute: SUNY Geneseo
 date: 2026-04-01
