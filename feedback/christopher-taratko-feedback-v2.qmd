@@ -31,7 +31,7 @@ Overall, this can still become a strong capstone paper. The key is to frame the 
 You are working toward both the **presentation** and the **capstone paper**. Focus on **clear causal reasoning**, a **carefully specified panel model**, and **honest interpretation of the evidence**.
 
 - **Address the reverse-causality problem directly.**  
-  The biggest challenge in your project is that housing prices and household debt can affect each other at the same time. This goes in both directions:
+  One big challenge in your project is that housing prices and household debt can affect each other at the same time. This goes in both directions:
   - When households take on more mortgage debt, housing demand can rise, which can push prices upward.
   - When housing prices rise, households may need larger mortgages, which can raise debt ratios.
 
