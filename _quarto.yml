@@ -44,6 +44,8 @@ website:
         contents:
           - text: 🧾📌 Research Kick-off Report
             href: danl-rw/danl-410-project-kickoff.qmd
+          - text: 📄🎓 Capstone Paper
+            href: danl-rw/danl-410-capstone-paper-guideline.qmd
             
       - section: 🗓️ Weeks
         contents:

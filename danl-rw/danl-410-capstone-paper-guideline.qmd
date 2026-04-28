@@ -1,0 +1,491 @@
+---
+title: "📄🎓 DANL 410 Capstone Paper Guidelines"
+subtitle: "Final Empirical Capstone Report"
+author: "Byeong-Hak Choe"
+institute: "SUNY Geneseo"
+date: "2026-04-28"
+
+# toc: true
+# toc-depth: 2
+# toc-expand: true
+# toc-title: Contents
+# number-sections: false
+# number-depth: 3
+
+code-fold: false
+
+execute:
+  echo: true
+  eval: true
+  message: false
+  warning: false
+  fig-width: 9
+  fig-height: 6
+---
+
+## 🌍 Overview
+
+The **DANL 410 Capstone Paper** is the final written product of your data analytics capstone project. The paper should follow the general structure of a **typical empirical paper**: a clear research question, relevant background, transparent data description, appropriate empirical strategy, carefully interpreted results, and evidence-based discussion.
+
+Your final paper should show that you or your team can complete an end-to-end empirical data analytics project:
+
+- Define a focused and meaningful research question
+- Explain why the question matters to a real stakeholder or audience
+- Collect, clean, transform, and document data
+- Use appropriate statistical, machine learning, or computational methods
+- Present empirical results clearly using tables and figures
+- Interpret results honestly and avoid overstating conclusions
+- Communicate implications, limitations, and future directions
+- Publish the final project on your **personal GitHub website**
+
+::: callout-note
+The capstone paper is not just a longer version of your slides. The paper should provide enough detail that a reader can understand your question, data, empirical strategy, results, interpretation, and implications without attending your presentation.
+:::
+
+---
+
+## 📦 Required Final Submission Materials
+
+Your final submission must include the following materials.
+
+1. **Quarto document for the capstone write-up**
+   - Submit the `.qmd` file used to write your final capstone report.
+   - The `.qmd` file should include your written report, figures, tables, references, and any code that is directly embedded in the report.
+   - Your references must include the **data source(s)** with links when applicable.
+   - For online data sources, include the full URL and date/time accessed.
+
+2. **R and/or Python script for the code used in the project**
+   - Submit the R and/or Python script(s) used for all project work, including data preparation, data cleaning, visualization, table creation, model estimation, and evaluation.
+   - The code should be organized clearly enough that I can understand how your final results were produced.
+   - If **all** R/Python code is already included in the `.qmd` file for the capstone write-up, you do **not** need to submit separate R and/or Python script files.
+
+3. **Data files**
+   - Submit the data files used for your final analysis.
+   - Include cleaned data files whenever possible.
+   - If your project uses multiple datasets, submit all files needed to reproduce your analysis.
+   - If data files are too large to submit to Brightspace or email, share them with **Byeong-Hak** through **SharePoint, Google Drive, OneDrive, or Dropbox**.
+   - If the data cannot be shared because of size, privacy, licensing, or access restrictions, include a short note explaining the source, access method, and reason the full data cannot be submitted.
+
+4. **Link to the capstone project webpage**
+   - Submit a working link to the published capstone project webpage on your **personal GitHub website**.
+   - The webpage should include the final written report and any relevant visuals, tables, dashboards, apps, or project links.
+
+5. **Optional: A rendered Word document (`.docx`) generated from the Quarto Word template file posted on Brightspace**
+   - The Word file is not required if the HTML webpage is complete and working.
+   - Students may submit a Word file if they prefer to provide an additional polished version of the paper.
+
+
+::: callout-warning
+A final report submitted only as a Word/PDF document is not sufficient. You must submit the Quarto write-up, project code when needed, data files, and a working GitHub webpage link.
+:::
+
+---
+
+## 🧩 Required Sectioning and Organization
+
+Your capstone write-up and code files must be clearly organized using section headings. Clear sectioning makes your work easier to read, evaluate, and reproduce.
+
+### Quarto Write-up
+
+Use Quarto/Markdown section headings to organize your paper. Major sections should use `#`, subsections should use `##`, and smaller subsections should use `###`.
+
+For example, your capstone write-up may be organized as follows:
+
+```markdown
+# Introduction
+
+# Background and Related Literature
+
+# Data
+
+# Empirical Strategy / Methods
+
+# Results
+
+# Discussion and Implications
+
+# Conclusion
+
+# References
+```
+
+You may use smaller headings within each major section:
+
+```markdown
+# Data
+
+## Data Source
+
+## Unit of Observation
+
+## Key Variables
+
+## Data Cleaning
+
+## Summary Statistics
+```
+
+### R Script
+
+Your R script must also be divided into clear sections. In RStudio, you can create section headings using **Ctrl/Command + Shift + R**.
+
+Examples:
+
+```r
+# Load packages ------------------------------------------------------------
+
+# Import data --------------------------------------------------------------
+
+# Data cleaning ------------------------------------------------------------
+
+# Summary statistics -------------------------------------------------------
+
+# Data visualization -------------------------------------------------------
+
+# Model estimation ---------------------------------------------------------
+
+# Export tables and figures ------------------------------------------------
+```
+
+
+### Python Script
+
+Your Python script must also be divided into clear sections. In Spyder, you can create section headings using **Command/Ctrl + 1**, then **Command/Ctrl + 2**, then **Command/Ctrl + 4**.
+
+This creates a section format like:
+
+```python
+# %%
+# =============================================================================
+# Section Title
+# =============================================================================
+```
+
+Examples:
+
+```python
+# %%
+# =============================================================================
+# Load packages
+# =============================================================================
+
+# %%
+# =============================================================================
+# Import data
+# =============================================================================
+
+# %%
+# =============================================================================
+# Data cleaning
+# =============================================================================
+
+# %%
+# =============================================================================
+# Summary statistics
+# =============================================================================
+
+# %%
+# =============================================================================
+# Data visualization
+# =============================================================================
+
+# %%
+# =============================================================================
+# Model estimation
+# =============================================================================
+```
+
+The goal is that another person should be able to open your write-up or script and quickly understand where each major part of the project begins and ends.
+
+---
+
+## 📘 Final Capstone Paper — Structure & Formatting Guidelines
+
+**Recommended total length:** approximately **10–15 pages**, excluding references, appendices, and large code blocks.
+
+This length is a guideline rather than a strict rule. A strong paper is not judged by page count alone. It should be long enough to explain your question, data, empirical strategy, results, and implications clearly, but concise enough that every section adds value.
+
+You are strongly encouraged to incorporate polished figures, tables, maps, dashboards, or diagrams from your presentation when they help clarify the story. However, every figure and table must be explained in the text. Do not insert visuals without interpretation.
+
+---
+
+## 1. Introduction (1.5–2 pages)
+
+The introduction should motivate the project, state the research question, and preview the main empirical findings. In a typical empirical economics paper, the introduction gives the reader a complete overview of the paper before the technical details appear.
+
+- **Motivation and Context**
+  - Introduce the real-world issue, decision problem, or empirical puzzle.
+  - Explain why the issue matters in economic, business, policy, social, environmental, sports, or organizational terms.
+  - Identify the stakeholder or audience that would care about your results.
+
+- **Research Question**
+  - State your primary research question clearly and early.
+  - Make sure the question is answerable using your data and empirical method.
+  - If useful, list 2–4 related sub-questions.
+
+- **Data and Method Preview**
+  - Briefly describe the dataset, unit of observation, and sample.
+  - Preview the main empirical method, such as regression, classification, forecasting, clustering, text analysis, geospatial analysis, or another data analytics approach.
+
+- **Main Findings and Contribution**
+  - Briefly summarize the most important results.
+  - Explain what your project contributes.
+  - The contribution may be practical rather than academic: a new dataset, a local analysis, a prediction model, a visualization tool, a policy implication, or a stakeholder-focused recommendation.
+
+*Suggested writing amount:* 5–8 well-developed paragraphs. A reader should understand the entire purpose and direction of the paper from this section.
+
+---
+
+## 2. Background and Related Literature (1.5–2 pages)
+
+This section should explain what is already known about the topic and how your project connects to prior work. It should not be a disconnected list of sources. Instead, synthesize the most relevant studies, reports, or credible background sources.
+
+- **Topic Background**
+  - Define important terms, institutions, measures, or outcomes.
+  - Explain the setting needed to understand your research question.
+  - Provide relevant historical, policy, industry, or market context.
+
+- **Related Literature or Prior Evidence**
+  - Summarize academic studies, government reports, industry reports, policy reports, or credible data journalism related to your topic.
+  - Explain the main findings from previous work.
+  - Focus on sources that directly inform your question, data, method, or interpretation.
+
+- **Gap and Contribution**
+  - Explain what remains unclear, underexplored, locally relevant, or empirically interesting.
+  - Describe how your project contributes to understanding the topic.
+
+*Suggested writing amount:* 4–7 paragraphs. You may include a small table summarizing key studies, datasets, or institutional details if it helps organize the discussion.
+
+---
+
+## 3. Data (1.5–2.5 pages)
+
+The data section should make your dataset understandable, credible, and transparent. A reader should know exactly what the data measure, where they came from, and what their limitations are.
+
+- **Data Source(s)**
+  - Identify each dataset used.
+  - Provide links to original data sources when applicable.
+  - Explain who collected the data and for what purpose.
+  - Include date/time accessed for online data sources.
+
+- **Unit of Observation**
+  - Clearly state what each row represents.
+  - Examples: one county, one customer, one transaction, one game, one player-season, one firm-year, one school, one product review, one day, or one neighborhood.
+
+- **Sample and Scope**
+  - Describe the time period, geographic coverage, population, or sample restrictions.
+  - Report the number of observations and key variables.
+  - Explain any filtering decisions or exclusions.
+
+- **Key Variables**
+  - Identify the outcome variable or target variable.
+  - Identify the main explanatory variables, predictors, features, controls, or grouping variables.
+  - Explain how important variables are measured or constructed.
+
+- **Data Quality and Limitations**
+  - Discuss missing values, measurement error, small sample size, selection bias, class imbalance, limited external validity, or other data concerns.
+  - Be honest about what the data can and cannot support.
+
+*Expected table:* Include a data dictionary or variable summary table for the most important variables. A summary statistics table is also strongly recommended.
+
+---
+
+## 4. Empirical Strategy / Methods (1.5–2.5 pages)
+
+This section should explain how you use the data to answer the research question. The goal is not only to name a method, but also to explain why it is appropriate.
+
+- **Empirical Approach**
+  - Identify the main method or methods used.
+  - Examples include OLS regression, logistic regression, fixed effects, classification models, random forest, gradient boosting, clustering, topic modeling, time-series forecasting, causal inference designs, geospatial analysis, or descriptive dashboard-based analysis.
+  - Explain why the method fits your research question.
+
+- **Model Specification or Analytical Framework**
+  - Define the outcome variable and main predictors.
+  - Explain the model structure in words.
+  - Include an equation if it helps clarify the empirical strategy.
+
+For example, a **two-way fixed effects regression** can be used as an empirical strategy for **inference** when the goal is to estimate the relationship between a key explanatory variable and an outcome while accounting for unit-specific and time-specific factors:
+
+$$
+Y_{it} = \beta_0 + \beta_1 X_{it} + \delta' Z_{it} + \alpha_i + \lambda_t + \varepsilon_{it},
+$$
+
+where $Y_{it}$ is the outcome of interest for unit $i$ at time $t$, $X_{it}$ is the main explanatory variable, $Z_{it}$ represents control variables, $\alpha_i$ captures unit fixed effects, $\lambda_t$ captures time fixed effects, and $\varepsilon_{it}$ is the error term.
+
+- **Prediction, Classification, or Machine Learning Methods**
+  - If your project uses prediction or machine learning, describe the train/test split, cross-validation, tuning, and evaluation metrics.
+  - Examples of metrics include accuracy, precision, recall, F1 score, ROC-AUC, RMSE, MAE, $R^2$, confusion matrix, or Brier score.
+  - Explain why the chosen metric is appropriate for your problem.
+
+- **Interpretation and Identification**
+  - Explain how the results should be interpreted.
+  - Be clear about whether your analysis is descriptive, predictive, or causal.
+  - Do not make causal claims unless your empirical design supports them.
+  - If the evidence is correlational, say so clearly.
+
+*Suggested writing amount:* This section should be detailed enough that another student could understand the logic of your analysis, even if they cannot reproduce every technical detail from the prose alone.
+
+---
+
+## 5. Results (2–3 pages)
+
+This section should present the main empirical findings of the project. The strongest results should appear first, and every table or figure should be interpreted in the text.
+
+- **Main Empirical Findings**
+  - Present your most important findings clearly.
+  - Use tables and figures selectively.
+  - Do not include every model output if it does not help the story.
+
+- **Interpretation in Plain Language**
+  - Explain what the results mean for your research question.
+  - Translate statistical or machine learning output into practical meaning.
+  - Discuss the direction, magnitude, and importance of key findings.
+
+- **Descriptive Evidence and Model Results**
+  - Include descriptive figures or tables if they help support the interpretation.
+  - Include regression tables, model performance tables, coefficient plots, prediction plots, maps, feature importance plots, or other outputs as appropriate.
+
+- **Robustness, Sensitivity, or Model Comparison**
+  - If you tried alternative specifications, variables, models, or samples, summarize what changed and what remained consistent.
+  - If possible, compare your main model to a simple baseline.
+
+- **Connection to the Research Question**
+  - Explicitly return to the research question.
+  - State what your results answer clearly and what remains unanswered.
+
+*Expected visuals/tables:* Include your strongest result table(s) and figure(s). Students should not simply paste raw software output; tables and figures should be polished and readable.
+
+---
+
+## 6. Discussion and Implications (1–1.5 pages)
+
+This section should explain the broader meaning of your findings. It should connect the empirical results to the real-world problem introduced earlier.
+
+- **Interpretation of Findings**
+  - Explain why the results matter.
+  - Discuss whether the findings match expectations or prior evidence.
+  - Identify the most important insight from the analysis.
+
+- **Economic, Business, Policy, or Social Implications**
+  - Discuss what your findings imply for the stakeholder or audience.
+  - Depending on your topic, discuss implications for policy, business strategy, risk management, equity, operations, marketing, sustainability, education, sports decision-making, or community planning.
+
+- **Recommendation or Decision Support**
+  - Provide a clear recommendation, implication, or decision-support insight when appropriate.
+  - The recommendation should follow directly from your evidence.
+  - Acknowledge uncertainty, implementation challenges, tradeoffs, or unintended consequences when relevant.
+
+::: callout-tip
+A good recommendation is not just “more research is needed.” It should explain what a decision-maker can reasonably learn or do based on your evidence.
+:::
+
+---
+
+## 7. Conclusion (0.5–1 page)
+
+The conclusion should close the paper by returning to the main message.
+
+- Restate the research question and why it matters.
+- Summarize the data and empirical method used.
+- Highlight the main result or insight.
+- State the final implication, recommendation, or takeaway.
+- Briefly mention what future work could improve.
+
+::: callout-note
+The conclusion should not introduce major new evidence. It should synthesize the project and leave the reader with a clear final message.
+:::
+
+---
+
+## 8. References (No page limit)
+
+Use a consistent citation format throughout the paper.
+
+For all online sources, include:
+
+- Author or organization
+- Title of page, report, article, or dataset
+- Full URL
+- Date and time of access
+
+Your references must include the **data source(s)** used in the project. All sources cited in the text must appear in the references section. All sources listed in references should be cited somewhere in the report.
+
+---
+
+## 9. Appendix (Optional)
+
+Use an appendix for material that supports the report but would interrupt the main narrative.
+
+Possible appendix items include:
+
+- Additional tables or figures
+- Detailed model outputs
+- Extra robustness checks
+- Survey questions or coding rules
+- Larger data dictionary
+- Supplementary maps or dashboards
+- Notes on data collection, scraping, or API access
+- Additional details on data cleaning or variable construction
+
+Do not use the appendix as a place to hide important results. The main findings should appear in the main body of the report.
+
+---
+
+## 🧭 Suggested Page Allocation
+
+| Section | Suggested Length |
+|---|---:|
+| Introduction | 1.5–2 pages |
+| Background and Related Literature | 1.5–2 pages |
+| Data | 1.5–2.5 pages |
+| Empirical Strategy / Methods | 1.5–2.5 pages |
+| Results | 2–3 pages |
+| Discussion and Implications | 1–1.5 pages |
+| Conclusion | 0.5–1 page |
+| References | No page limit |
+| Appendix | Optional |
+
+---
+
+## 🧾 Rubric for Capstone Project
+
+| Attribute | Very Deficient (1) | Somewhat Deficient (2) | Acceptable (3) | Very Good (4) | Outstanding (5) |
+|---|---|---|---|---|---|
+| **1. Potential for success** | Little or no potential for success | Tenuous potential for success | Adequate potential for success | High potential for success | Excellent potential for success |
+| **2. Quality of research question** | Unclear or unstated; entirely derivative; no meaningful contribution expected | Somewhat unclear; slight originality; minor contribution expected | Clearly stated; moderately original; limited but plausible contribution expected | Very clear; original and creative; at least one meaningful contribution expected | Exceptionally clear; highly original; multiple important contributions expected |
+| **3. Quality of empirical analysis** | Very weak or incorrect empirical reasoning; little or no understanding; no empirical evidence provided | Rudimentary reasoning; shaky understanding; evidence minimal or unclear | Adequate reasoning; solid understanding; some empirical evidence supports the story | Strong reasoning; clear methods; credible evidence integrated well | Sophisticated reasoning; superior methods; compelling evidence validates analysis |
+| **4. Quality of policy recommendation** | None or unrelated/unsupported | Weakly justified; limited link to analysis | Generally appropriate; basic justification | Strong and well-supported; grounded in evidence | Insightful and feasible; highly coherent with analysis |
+| **5. Quality of presentation** | Poorly organized; weak visuals; unable to answer key questions | Some disorganization; unclear slides; difficulty answering | Mostly organized; clear slides; adequate responses | Well organized; strong visuals; confident responses | Exceptionally organized; outstanding visuals; excellent responses |
+| **6. Quality of writing** | Very poorly structured; hard to understand; many errors | Somewhat disorganized; confusing sections; many errors | Mostly organized; mostly clear; some errors | Well organized; clear; few errors | Extremely polished; no errors |
+
+---
+
+## ✅ Final Submission Checklist
+
+Before submitting your final capstone materials, make sure you have completed the following:
+
+- [ ] Final report is written in a Quarto `.qmd` document
+- [ ] Data source(s) are cited in the references with links when applicable
+- [ ] R and/or Python script files are submitted, unless all code is already included in the `.qmd` file
+- [ ] Code covers all major project steps: data preparation, visualization, table creation, and model estimation or analysis
+- [ ] Data files are submitted, or large files are shared with Byeong-Hak through SharePoint, Google Drive, OneDrive, or Dropbox
+- [ ] Final report is published on your personal GitHub website
+- [ ] Working webpage link is submitted
+- [ ] Research question is clear and stated early
+- [ ] Data source, unit of analysis, sample, and key variables are clearly explained
+- [ ] Empirical strategy or method is appropriate and clearly explained
+- [ ] Descriptive statistics and visual evidence are included
+- [ ] Main results are presented in polished tables or figures
+- [ ] Results are interpreted in plain language
+- [ ] Implications or recommendations are supported by evidence
+- [ ] Limitations are discussed honestly
+- [ ] References are complete and consistently formatted
+- [ ] Figures and tables are readable, labeled, and discussed in the text
+- [ ] Writing is polished and professionally formatted
+
+---
+
+## 🌟 Closing Thought
+
+> A strong capstone paper does not need to solve every problem.  
+> It should answer a focused question with credible data, careful analysis, and clear communication.

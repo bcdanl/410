@@ -35,6 +35,13 @@
     "text": "💬 Discussion\nWelcome to our Week 3 Discussion Board! 👋 \nThis space is designed for you to engage with your classmates about the material covered in Week 3.\nWhether you are looking to delve deeper into the content, share insights, or have questions about the content, this is the perfect place for you.\nIf you have any specific questions for Byeong-Hak (@bcdanl) or peer classmate (@GitHub-Username) regarding the Week 3 materials or need clarification on any points, don’t hesitate to ask here.\nLet’s collaborate and learn from each other!"
   },
   {
+    "objectID": "feedback/saya-kondo-feedback.html",
+    "href": "feedback/saya-kondo-feedback.html",
+    "title": "Do Sustainability Marketing Claims Reflect Reality? Evidence of Greenwashing in Corporate ESG Performance",
+    "section": "",
+    "text": "Dear Saya,\nThank you for your Research Kick-off Report. You have chosen a timely and important topic. The question of whether firms’ sustainability messaging actually matches their environmental performance is central to current debates about ESG investing, consumer trust, and corporate accountability. Your report identifies a clear research question, the stakeholder motivation is strong, and the firm-year structure is a sensible starting point for this kind of analysis. I also appreciate that you already recognize several real limitations, especially the difficulty of measuring communication quality with simple keyword counts and the fact that ESG scores are not perfectly consistent across providers.\nOverall, this project has strong potential. The main priorities for your presentation and final capstone paper are to define the greenwashing concept more precisely, strengthen the text-measurement strategy, expand the control variables beyond industry alone, and separate your inference goal from your prediction goal more clearly.\n\n\nNext Steps\nYou are working toward both the presentation and the final capstone project paper. Focus on careful variable construction, a well-specified regression for inference, and clear interpretation of what your results can and cannot say about causality.\n\nDefine greenwashing more precisely.\nRight now, the project asks whether firms that emphasize sustainability in their communications have better environmental performance. That is a good starting question, but it is not exactly the same as greenwashing. A firm can talk a lot about sustainability and still perform well. A firm can also talk very little and still perform poorly. For the final paper, clarify which of these you want to study:\n\nAlignment question: Do firms that talk more about sustainability also score better on environmental performance?\nMismatch question: Do some firms communicate much more sustainability language than their observed performance would justify?\n\nIf your deeper interest is greenwashing, you may want to construct a gap measure rather than relying only on a direct regression. For example, you could standardize both the marketing score and the environmental score, then define a firm as having a larger greenwashing gap when communication is high but environmental performance is low.\nImprove the sustainability marketing measure.\nA raw keyword count is probably too crude on its own. Firms with longer reports will naturally mention sustainability terms more often, even if sustainability is not especially central to the document. For the final paper, I recommend:\n\nNormalizing keyword counts by total document length, such as mentions per 1,000 or 10,000 words.\nSeparating broad ESG language from specific environmental claims. For example, words like “sustainable” and “responsible” are much broader than terms such as “carbon emissions,” “net zero,” “renewable energy,” or “scope 1 emissions.”\nManually reading a small validation sample of reports to check whether your dictionary is actually identifying meaningful claims rather than generic boilerplate language.\nConsidering a more focused outcome such as the share of sentences devoted to environmental claims rather than just total keyword frequency.\n\nExpand the control variable set.\nIndustry is important, but it is not enough by itself. Firms in energy, manufacturing, finance, and technology differ substantially in both environmental exposure and communication strategy. For the final paper, try to include at least several of the following controls if data are available:\n\nFirm size such as log assets, log sales, or market capitalization.\nProfitability such as return on assets or operating margin.\nLeverage or debt ratio.\nIndustry fixed effects because environmental scores differ structurally across sectors.\nYear fixed effects because ESG language and reporting norms have changed over time for all firms.\nReport length because longer reports mechanically create more chances for keyword matches.\n\nUse the panel structure if you truly have firm-year data.\nYour report says the unit of analysis will be firm-year observations. If that is feasible, the project becomes much stronger because you can compare firms to themselves over time rather than only comparing one firm to another. In that case, a firm fixed-effects model would be a strong choice:\n\\[\n\\text{EnvironmentalScore}_{i,t} = \\beta_1 \\text{MarketingScore}_{i,t} + \\mathbf{X}_{i,t}'\\boldsymbol{\\gamma} + \\alpha_i + \\delta_t + \\varepsilon_{i,t}\n\\]\nwhere \\(i\\) indexes firms, \\(t\\) indexes years, \\(\\alpha_i\\) captures time-invariant firm characteristics, and \\(\\delta_t\\) captures common year shocks such as changes in ESG disclosure norms or regulation.\nIf your data only contain one year per firm, then say so clearly and frame the analysis as a cross-sectional multiple regression instead.\nSeparate inference from prediction more clearly.\nYour current plan mixes several evaluation ideas that belong to different goals. If your main goal is inference, then the key outputs are coefficient estimates, confidence intervals, and careful interpretation. If your main goal is prediction, then train-test splits, cross-validation, and RMSE matter more. For your specific research question, I think inference is the more natural primary goal, because you are trying to understand whether communication and performance move together in a meaningful way. If you keep a predictive component, treat it as secondary.\nBe careful about causality and timing.\nEven if you find that firms with stronger sustainability communication also have higher environmental scores, that does not mean the communication caused the performance. It may be that firms with genuinely better environmental practices have more to say and therefore produce stronger sustainability messaging. To think more carefully about causality, consider:\n\nWhether the text score should be measured in year \\(t\\) and the ESG outcome in year \\(t+1\\).\nWhether lagged marketing communication predicts later environmental scores.\nWhether the more realistic interpretation is that communication reflects performance, rather than changes it.\n\nYou do not need to solve every causal issue, but your final paper should be explicit about what kind of claim your design can support.\nTreat overall ESG score as secondary to environmental score.\nSince your question is specifically about sustainability and environmental performance, the environmental score should be the primary outcome. The overall ESG score can be useful as a robustness check, but it combines environmental, social, and governance dimensions that may blur the main question. A company could have a high overall ESG score because of strong governance while still performing weakly on environmental outcomes.\nUse clustering only as a supporting extension.\nClustering could be useful, but it should not be the centerpiece of the capstone. A stronger core design would be:\n\ndescriptive statistics and visuals,\nregression analysis for inference,\noptional clustering as a way to illustrate groups such as high-marketing / high-performance, high-marketing / low-performance, low-marketing / high-performance, and low-marketing / low-performance.\n\nThat would make the clustering results easier to interpret and more closely tied to the main research question.\nClarify how the two datasets will be matched.\nMatching firm-year data is often harder than it looks. In the final paper, explain:\n\nWhich firm identifier you will use, such as ticker, company name, or CIK.\nHow you will handle name changes or mismatches across datasets.\nWhether the sustainability report and ESG score refer to the same reporting year.\nHow much data loss occurs after merging.\n\nInclude simple descriptive visuals in the presentation and final paper.\nA few clear visuals would immediately strengthen the project:\n\nA scatter plot of sustainability marketing score vs. environmental score with industry-colored points.\nA box plot of marketing score by industry to show which sectors use sustainability language most heavily.\nA four-quadrant plot showing high vs. low communication and high vs. low environmental performance, which is especially useful if you want to discuss greenwashing risk.\n\n\n\n\n\nReferences\n\nDraw on key background readings and policy sources.\nFor the final capstone paper and presentation, you may find it useful to consult and, where appropriate, cite the following:\n\nCoen, D., Herman, K., & Pegram, T. (2022). Are corporate climate efforts genuine? An empirical analysis of the climate ‘talk–walk’ hypothesis. Business Strategy and the Environment, 31(7), 3040-3059.\nWalker, K., & Wan, F (2012). The Harm of Symbolic Actions and Green-Washing: Corporate Actions and Communications on Environmental Performance and Their Financial Implications. Journal of Business Ethics, 109, 227-242.\nDelmas, M. A., & Burbano, V. C. (2011). The Drivers of Greenwashing. California Management Review, 54(1), 64-87.\nMarrucci, L., Iovino, R. and Iraldo, F. (2025). Environmental Sustainability Award Winners: Do They Communicate Their Environmental Performance Without Potential Greenwashing?. Corporate Social Responsiblity and Environmental Management, 32, 2783-2794.\nLyon, T. P., & Montgomery, A. W. (2015). The Means and End of Greenwash. Organization & Environment, 28(2), 223-249.\nZhang, K., Pan, Z., Janardhanan, M. et al. (2023). Relationship analysis between greenwashing and environmental performance. Environment, Development and Sustainability, 25, 7927-7957.\nBerg, F., Kölbel, J. F., & Rigobon, R. (2022). Aggregate Confusion: The Divergence of ESG Ratings. Review of Finance, 26(6), 1315-1344.\nFederal Trade Commission. Green Guides. This is especially useful for grounding the policy relevance of misleading environmental claims.\nU.S. Securities and Exchange Commission. The Enhancement and Standardization of Climate-Related Disclosures for Investors. This is helpful context for the broader disclosure environment facing public companies.\n\n\n\n\n\nQuestions to Think About as You Refine Your Capstone Project Paper\nYou do not need to answer all of these now, but they may help you sharpen your final design and interpretation.\n1. What exactly counts as greenwashing in your project?\n\nIs greenwashing simply a case where sustainability language is high and environmental performance is low?\nOr do you want to reserve that label for a more extreme mismatch, such as firms in the top quartile of communication but the bottom quartile of environmental performance?\nWould a gap measure or residual-based measure better match your concept than a simple regression coefficient?\n\n2. How strong is the text measure?\n\nIf a company issues a much longer sustainability report, does your method count that as stronger marketing even when the underlying message is similar?\nAre you measuring genuine environmental claims, or mostly generic corporate language?\nCould you validate the dictionary by hand on a sample of 20 to 30 reports?\n\n3. What is the main research goal: inference or prediction?\n\nIf the goal is inference, what coefficient is the main quantity of interest?\nIf the goal is prediction, what would count as good predictive performance, and why would prediction be the most useful outcome for stakeholders?\nDoes clustering add insight beyond what a regression and a few good visualizations already provide?\n\n4. How will you think about causality?\n\nIf you find a positive relationship, is the story that sustainability communication reflects real performance, or that firms with better performance choose to advertise it more?\nIf you find little or no relationship, does that suggest widespread greenwashing, noisy ESG measurement, or an overly simple text measure?\nWould using lagged communication or lagged outcomes help you think more clearly about timing?\n\n5. How should the results be presented to stakeholders?\n\nWhat would a regulator care about most: average alignment, extreme mismatch cases, or sector-specific patterns?\nWhat would an investor care about most: whether ESG language predicts actual environmental performance, or whether it fails to do so?\nHow would you explain your findings to a skeptical audience that already believes ESG scores and sustainability reports are both noisy?\n\n\nBest,\nByeong-Hak Choe\n\n\n\n\n Back to top"
+  },
+  {
     "objectID": "feedback/christopher-taratko-feedback.html",
     "href": "feedback/christopher-taratko-feedback.html",
     "title": "Housing Affordability, Income, and Voting Behavior in the United States, 2007-2022",
@@ -208,314 +215,6 @@
     "title": "🧾📌 Capstone Project Guide",
     "section": "🌟 Closing Thought",
     "text": "🌟 Closing Thought\n\nA strong capstone project is not about doing everything—\nit’s about doing a focused analysis well,\nand communicating results clearly enough that someone can act on them."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#omitted-variable-bias-1",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#omitted-variable-bias-1",
-    "title": "Lecture 2",
-    "section": "Omitted Variable Bias",
-    "text": "Omitted Variable Bias\n\nOmitted variable bias (OVB): bias in the model because of omitting an important regressor that is correlated with existing regressor(s).\nLet’s use an orange juice (OJ) example to demonstrate the OVB.\n\nOJ price elasticity estimates vary with models, whether or not taking into account brand or ad_status\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nsales\nQuantity of OJ cartons sold\n\n\nprice\nPrice of OJ\n\n\nbrand\nBrand of OJ\n\n\nad\nAdvertisement status"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#short--and-long--regressions",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#short--and-long--regressions",
-    "title": "Lecture 2",
-    "section": "📏 Short- and Long- Regressions",
-    "text": "📏 Short- and Long- Regressions\n\nOVB is the difference in beta estimates between short- and long-form regressions.\nShort regression: The regression model with less regressors\n\n\n\n\n\\[\n\\begin{align}\n\\log(\\text{sales}_i) = \\beta_0 + \\beta_1\\log(\\text{price}_i) + \\epsilon_i\n\\end{align}\n\\]\n\nLong regression: The regression model that adds additional regressor(s) to the short one.\n\n\n\n\n\\[\n\\begin{align}\n\\log(\\text{sales}_i) =& \\beta_0 + \\beta_{1}\\log(\\text{price}_i) \\\\\n&+ \\beta_{2}\\text{minute.maid}_i + \\beta_{3}\\text{tropicana}_i + \\epsilon_i\n\\end{align}\n\\]\n\nOVB for \\(\\beta_1\\) is:\n\n\n\n\n\\[\n\\text{OVB} = \\widehat{\\beta_{1}^{short}} - \\widehat{\\beta_{1}^{long}}\n\\]"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#ovb-formula",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#ovb-formula",
-    "title": "Lecture 2",
-    "section": "OVB formula",
-    "text": "OVB formula\n\nConsider the following short- and long- regressions:\n\nShort: \\(Y_i = \\beta_0 + \\beta_{1}^{short}X_1 + \\epsilon_{short}\\)\n\nLong: \\(Y_i = \\beta_0 + \\beta_{1}^{long}X_1 +\\beta_{2}X_2 + \\epsilon_{long}\\)\n\nError in short form can be represented as: \\[\n{\\epsilon_{short}} = \\beta_{2}X_2 + \\epsilon_{long}\n\\]\nIf variable \\(X_1\\) is correlated with \\(X_2\\), the following assumptions are violated in the short regression model:\n\nErrors are not correlated with regressors.\nErrors have a mean value of 0."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#how-does-an-ovb-happen-in-regression",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#how-does-an-ovb-happen-in-regression",
-    "title": "Lecture 2",
-    "section": "❓🔍 How does an OVB happen in regression?",
-    "text": "❓🔍 How does an OVB happen in regression?\n\nIn the first stage, consider the relationship between price and brand:\n\n\\[\n\\log(\\text{price}) = \\beta_0 + \\beta_1\\text{minute_maid} + \\beta_2\\text{tropicana} + \\epsilon_{1st}\n\\]\n\nThen, calculate the residual: \\[\n\\widehat{\\epsilon_{1st}} = \\log(\\text{price}) - \\widehat{\\log(\\text{price})}\n\\]\nThe residual represents the log of OJ price after its correlation with brand has been removed!\nIn the second stage, regress \\(\\log(\\text{sales})\\) on residual \\(\\widehat{\\epsilon_{1st}}\\):\n\n\\[\n\\log(\\text{sales}) = \\beta_0 + \\beta_1\\widehat{\\epsilon_{1st}}  + \\epsilon_{2nd}\n\\]"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#regression-sensitivity-analysis",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#regression-sensitivity-analysis",
-    "title": "Lecture 2",
-    "section": "Regression Sensitivity Analysis",
-    "text": "Regression Sensitivity Analysis\n\nRegression finds the coefficients on the part of each regressor that is independent from the other regressors.\nWhat can we do to deal with OVB problems?\n\nBecause we can never be sure whether a given set of controls is enough to eliminate OVB, it’s important to ask how sensitive regression results are to changes in the list of controls."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#bad-controls-when-controlling-more-makes-things-worse",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#bad-controls-when-controlling-more-makes-things-worse",
-    "title": "Lecture 2",
-    "section": "🚫 Bad Controls: When “Controlling More” Makes Things Worse",
-    "text": "🚫 Bad Controls: When “Controlling More” Makes Things Worse\nA common mistake in regression is thinking:\n\n✅ “If I add more controls, the model must get better.”\n\nBut some controls are bad controls — they can actually bias your estimate."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#what-is-a-bad-control",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#what-is-a-bad-control",
-    "title": "Lecture 2",
-    "section": "🚫 What is a “Bad Control”?",
-    "text": "🚫 What is a “Bad Control”?\nA bad control is a variable that:\n\nis influenced by the explanatory variable \\(x\\), or\nis part of the process that links \\(x\\) to the outcome \\(y\\)\n\nIncluding a bad control can “control away” the variation in \\(y\\) that is connected to \\(x\\), making the estimated relationship look smaller than it really is."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#intuition-what-should-a-good-control-look-like",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#intuition-what-should-a-good-control-look-like",
-    "title": "Lecture 2",
-    "section": "🧠 Intuition: What Should a “Good Control” Look Like?",
-    "text": "🧠 Intuition: What Should a “Good Control” Look Like?\nA good control is a variable that:\n✅ helps explain variation in the outcome \\(y\\)\n✅ is related to the explanatory variable \\(x\\)\n✅ is not a consequence of \\(x\\) (it exists “in the background”)\nThat’s the key difference."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#example-1-education-and-wages",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#example-1-education-and-wages",
-    "title": "Lecture 2",
-    "section": "🔗 Example 1: Education and Wages 💼",
-    "text": "🔗 Example 1: Education and Wages 💼\nSuppose we want to estimate:\n\nDoes education increase wages?\n\n✅ Good regression idea:\n\\[\nwage_i = \\beta_0 + \\beta_1 education_i + u_i\n\\]\nMaybe add good controls like:\n\nage\ngender\nregion\nparent education (if available)"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-occupation-or-job-type",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-occupation-or-job-type",
-    "title": "Lecture 2",
-    "section": "🚫 Bad Control: Occupation or Job Type",
-    "text": "🚫 Bad Control: Occupation or Job Type\nBut what if we control for occupation?\n\\[\nwage_i = \\beta_0 + \\beta_1 education_i + \\beta_2 occupation_i + u_i\n\\]\nWhy is that bad?\n\nBecause education affects occupation:\n\\[\neducation \\rightarrow occupation \\rightarrow wage\n\\]\nSo controlling for occupation:\n🚫 blocks part of the education effect\n→ we underestimate the impact of education"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#example-2-fertilizer-plant-height-and-crop-yield",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#example-2-fertilizer-plant-height-and-crop-yield",
-    "title": "Lecture 2",
-    "section": "🌱 Example 2: Fertilizer, Plant Height, and Crop Yield",
-    "text": "🌱 Example 2: Fertilizer, Plant Height, and Crop Yield\n\n\nWe want to estimate:\n\nDoes fertilizer increase crop yield?\n\nBut fertilizer changes the plant’s growth:\n\\[\nfertilizer \\rightarrow height\n\\]\nAnd height is strongly related to yield:\n\\[\nheight \\rightarrow yield\n\\]\n\nAlso, some plots are simply better than others because of soil quality:\n\\[\n\\begin{align}\n&soil\\ quality \\rightarrow height\\\\\n&soil\\ quality \\rightarrow yield\n\\end{align}\n\\]\nSo soil quality is a hidden factor that affects both height and yield."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-plant-height",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-plant-height",
-    "title": "Lecture 2",
-    "section": "🚫 Bad Control: Plant Height",
-    "text": "🚫 Bad Control: Plant Height\nBut what if we control for plant height?\n\\[\nyield_i = \\beta_0 + \\beta_1 fertilizer_i + \\beta_2 height_i + u_i\n\\]\nWhy is that bad?\n\nBecause fertilizer affects plant height:\n\\[\nfertilizer \\rightarrow height \\rightarrow yield\n\\]\nSo controlling for height:\n🚫 blocks an important pathway through which fertilizer raises yield\n→ we underestimate the impact of fertilizer"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#good-controls-vs.-bad-controls-big-picture",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#good-controls-vs.-bad-controls-big-picture",
-    "title": "Lecture 2",
-    "section": "✅ Good Controls vs. Bad Controls (Big Picture)",
-    "text": "✅ Good Controls vs. Bad Controls (Big Picture)\n\n\n\n\n\n\n\n\nType\nExample\nWhy it matters\n\n\n\n\n✅ Good control\nAge, gender, region, baseline ability\nHelps reduce omitted variable bias by holding constant pre-existing differences\n\n\n🚫 Bad control\nOccupation (when studying education → wages)\nCan remove part of the education effect by controlling for something education influences\n\n\n🚫 Bad control\nPlant height (when studying fertilizer → yield)\nCan remove part of the fertilizer effect by controlling for something fertilizer influences"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#why-bad-controls-are-dangerous",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#why-bad-controls-are-dangerous",
-    "title": "Lecture 2",
-    "section": "🎯 Why Bad Controls Are Dangerous",
-    "text": "🎯 Why Bad Controls Are Dangerous\nBad controls can cause two problems:\n\n\n1) ❌ Block part of the true effect\nYou unintentionally remove the pathway:\n\\[\nx \\rightarrow control \\rightarrow y\n\\]\nSo the estimated \\(\\hat{\\beta}_1\\) becomes too small.\n\n2) ❌ Create new bias\nSometimes the control is influenced by both \\(x\\) and \\(y\\):\n\\[\nx \\rightarrow control \\leftarrow y\n\\]\nThen controlling for it creates a fake association between \\(x\\) and \\(y\\)\neven if none existed before."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#quick-rule-should-we-control-for-it",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#quick-rule-should-we-control-for-it",
-    "title": "Lecture 2",
-    "section": "✅ Quick Rule: Should We Control for It?",
-    "text": "✅ Quick Rule: Should We Control for It?\nBefore adding a variable \\(z\\) as a control, ask:\n\nDoes \\(z\\) exist before \\(x\\) is determined?\n✅ If yes → usually safe to control for\n\n\n\n\n\nDoes \\(z\\) change after \\(x\\) changes?\n🚫 If yes → it may be a bad control\n\n\n\n\n\nIs \\(z\\) a pre-existing characteristic that is related to both \\(x\\) and \\(y\\)?\n✅ If yes → it is often a useful control"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#summary-more-controls-better",
-    "href": "danl-lec/danl-410-lec-02-2026-0126.html#summary-more-controls-better",
-    "title": "Lecture 2",
-    "section": "🧾 Summary: “More Controls” ≠ “Better”",
-    "text": "🧾 Summary: “More Controls” ≠ “Better”\n\n✅ Controls are helpful when they fix omitted variable bias\n\n🚫 Controls are harmful when they “control away” the effect you want\n\n\n\n\n\nThe goal is not to control for everything.\n\nThe goal is to control for the right things."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#panel-data-models-pols-fe-twfe-re",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#panel-data-models-pols-fe-twfe-re",
-    "title": "Lecture 3",
-    "section": "👥📈 Panel Data Models: POLS → FE → TWFE → RE",
-    "text": "👥📈 Panel Data Models: POLS → FE → TWFE → RE\n\n\n\nLearning goals\n\n\n\nUnderstand what panel data is (and why we love it)\nCompare Pooled OLS, Fixed Effects, Two-Way FE, and Random Effects\nLearn what variation each model uses and what it controls for\nUnderstand country-clustered standard errors (and why we need them)"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-panel-data",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-panel-data",
-    "title": "Lecture 3",
-    "section": "What is Panel Data?",
-    "text": "What is Panel Data?\nPanel data tracks the same units over multiple time periods:\n\nUnit (\\(i\\)): country (USA, Korea, India, …)\nTime (\\(t\\)): year (1990–2022, …)\n\nExample (CO\\(_2\\) panel): - Outcome: CO\\(_2\\) emissions per capita - Unit ID: iso_code - Time ID: year\n\n\n\nTip\n\n\nPanel data gives us two kinds of variation: - Between variation: differences across countries - Within variation: changes within a country over time"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#why-use-panel-models-not-only-pooled-ols",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#why-use-panel-models-not-only-pooled-ols",
-    "title": "Lecture 3",
-    "section": "Why Use Panel Models (Not Only Pooled OLS)?",
-    "text": "Why Use Panel Models (Not Only Pooled OLS)?\n\n\n\nPooled OLS can be misleading because it ignores unobserved country differences that don’t change much over time, such as:\n\n🌍 geography / climate / natural resources\n🏭 industrial structure and history\n🏛️ institutions and regulation\n⚡ energy infrastructure and technology path\n🧑‍🤝‍🧑 culture and long-run lifestyle patterns\n\n\n\n\nThese factors can affect both\n\nemissions (or other outcomes) and\nGDP per capita (or other regressors)\n\n\n\n\n➡️ That creates omitted variable bias when we use Pooled OLS."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#unobserved-heterogeneity-the-core-issue",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#unobserved-heterogeneity-the-core-issue",
-    "title": "Lecture 3",
-    "section": "🧠 Unobserved Heterogeneity (The Core Issue)",
-    "text": "🧠 Unobserved Heterogeneity (The Core Issue)\nSuppose the true relationship includes an unobserved country component:\n\\[\ny_{it} = \\beta x_{it} + \\underbrace{\\alpha_i}_{\\text{unobserved country trait}} + \\epsilon_{it}\n\\]\nIf we ignore \\(\\alpha_i\\) and estimate Pooled OLS:\n\\[\ny_{it} = \\beta x_{it} + u_{it}\n\\quad \\text{where} \\quad\nu_{it} = \\alpha_i + \\epsilon_{it}\n\\]\n⚠️ If \\(Cov(\\alpha_i, x_{it}) \\neq 0\\), then:\n\n\\(x_{it}\\) is correlated with the error term\nPooled OLS is biased\n\n\n\n\n\nFixed Effects is designed to solve exactly this problem."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#pooled-ols-baseline-model",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#pooled-ols-baseline-model",
-    "title": "Lecture 3",
-    "section": "Pooled OLS: Baseline Model",
-    "text": "Pooled OLS: Baseline Model\nModel \\[\ny_{it} = \\beta_0 + \\beta_1 x_{it} + \\epsilon_{it}\n\\]\nMeaning\n\nWe pretend the dataset is one big cross-section\nWe ignore the panel structure (country identity)\n\nUses all variation\n\nbetween-country variation\nwithin-country variation"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-pols-is-really-doing",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-pols-is-really-doing",
-    "title": "Lecture 3",
-    "section": "What POLS is Really Doing",
-    "text": "What POLS is Really Doing\nWhen you estimate POLS, the slope \\(\\beta_1\\) reflects a combination of:\n\nCross-country differences (rich vs. poor countries)\nWithin-country changes (one country over time)\n\nSo interpretation becomes:\n\n“On average, countries with higher \\(x\\) have higher (or lower) \\(y\\), and/or when \\(x\\) rises over time, \\(y\\) moves…”\n\n⚠️ That can be fine only if unobserved country traits don’t confound the relationship."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#the-big-risk-in-pols-omitted-variable-bias",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#the-big-risk-in-pols-omitted-variable-bias",
-    "title": "Lecture 3",
-    "section": "⚠️ The Big Risk in POLS: Omitted Variable Bias",
-    "text": "⚠️ The Big Risk in POLS: Omitted Variable Bias\nIf richer countries also have different institutions, energy systems, or historical industrialization paths, then:\n\n\\(x_{it}\\) (GDP per capita) is correlated with \\(\\alpha_i\\) (unobserved traits)\nPooled OLS mixes together the effect of \\(x_{it}\\) and the influence of \\(\\alpha_i\\), so the estimated \\(\\beta\\) can be misleading.\n\nPanel methods help because they explicitly control for \\(\\alpha_i\\)."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#country-fixed-effects-fe",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#country-fixed-effects-fe",
-    "title": "Lecture 3",
-    "section": "Country Fixed Effects (FE)",
-    "text": "Country Fixed Effects (FE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\epsilon_{it}\n\\]\n\n\\(\\alpha_i\\) = country fixed effect\ncaptures all time-invariant country characteristics\n\ngeography, long-run institutions, baseline culture, etc.\n\n\nFE answers a within-country question:\n\n“If a country’s \\(x\\) changes over time, how does \\(y\\) change within that same country?”"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-fe-controls-for-automatically",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-fe-controls-for-automatically",
-    "title": "Lecture 3",
-    "section": "🔎 What FE Controls For (Automatically)",
-    "text": "🔎 What FE Controls For (Automatically)\nBecause each country gets its own intercept \\(\\alpha_i\\), FE controls for:\n\nany factor that is constant within a country\neven if you do not observe or measure it\n\nExamples (time-invariant or very slow-moving):\n\ndistance to equator\nlandlocked status\nbaseline political system\ndeep energy infrastructure\n\n\n\n\n📌 FE is powerful because it controls for a lot without measuring those things."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#fe-uses-only-within-country-variation",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#fe-uses-only-within-country-variation",
-    "title": "Lecture 3",
-    "section": "FE Uses Only Within-Country Variation",
-    "text": "FE Uses Only Within-Country Variation\nFE does not use differences between countries:\n\nIt does not compare USA vs India levels\nIt compares USA over time to itself\n\nSo FE is best when:\n\nthe key confounding problem is time-invariant\nwe care about within-country causal interpretation\n\n⚠️ FE cannot estimate effects of variables that do not change over time, e.g.:\n\nlandlocked, continent, distance_to_equator"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#two-way-fixed-effects-country-year-fe",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#two-way-fixed-effects-country-year-fe",
-    "title": "Lecture 3",
-    "section": "Two-Way Fixed Effects (Country + Year FE)",
-    "text": "Two-Way Fixed Effects (Country + Year FE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\gamma_t + \\epsilon_{it}\n\\]\n\n\\(\\alpha_i\\): country FE (time-invariant traits)\n\\(\\gamma_t\\): year FE (global shocks / common trends)\n\nTWFE answers:\n\n“Within a country, how does \\(y\\) change with \\(x\\), after removing global year shocks?”"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#why-add-year-fixed-effects",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#why-add-year-fixed-effects",
-    "title": "Lecture 3",
-    "section": "🌍 Why Add Year Fixed Effects?",
-    "text": "🌍 Why Add Year Fixed Effects?\nYear effects capture shocks that hit many countries at once:\n\n🛢️ oil price spikes\n📉 global recessions (e.g., 2008)\n🦠 pandemics\n💡 global technology trends\n🌐 global climate agreements\n\nIf we don’t include \\(\\gamma_t\\), the regression may mistakenly attribute these common shocks to \\(x_{it}\\).\nYear FE helps remove this confounding."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#random-effects-re-1",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#random-effects-re-1",
-    "title": "Lecture 3",
-    "section": "Random Effects (RE)",
-    "text": "Random Effects (RE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\epsilon_{it}\n\\]\nSame structure as FE… but different assumption:\n\nRE treats \\(\\alpha_i\\) as random\nand assumes it is uncorrelated with regressors:\n\n\\[\nCov(\\alpha_i, x_{it}) = 0\n\\]\nIf that assumption holds:\n\nRE is more efficient than FE (smaller standard errors)\nRE uses both within and between variation"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#when-re-fails-bias-risk",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#when-re-fails-bias-risk",
-    "title": "Lecture 3",
-    "section": "⚠️ When RE Fails (Bias Risk)",
-    "text": "⚠️ When RE Fails (Bias Risk)\nIf \\(Cov(\\alpha_i, x_{it}) \\neq 0\\), then RE is biased.\nIn many economic settings, this correlation is very plausible:\n\nricher countries may also have better institutions (inside \\(\\alpha_i\\))\nenergy system differences affect both GDP and emissions\n\nSo FE is often the safer default in applied work."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#why-we-cluster-standard-errors-country-clustered-se",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#why-we-cluster-standard-errors-country-clustered-se",
-    "title": "Lecture 3",
-    "section": "🧠 Why We Cluster Standard Errors (Country-Clustered SE)",
-    "text": "🧠 Why We Cluster Standard Errors (Country-Clustered SE)\nThe problem: errors are correlated within countries\n\n\n\nIn panel data, observations inside a country are rarely independent:\n\nshocks persist over time\npolicies change gradually\nmeasurement errors repeat\nemissions and GDP move smoothly\n\n\n\n\nThat means residuals may satisfy serial correlation:\n\\[\nCov(\\epsilon_{it}, \\epsilon_{is}) \\neq 0 \\quad \\text{for } t \\neq s\n\\]\n\n\n\nIf we ignore this, standard errors are often too small → false “significance”"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#cluster-robust-standard-errors-by-country",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#cluster-robust-standard-errors-by-country",
-    "title": "Lecture 3",
-    "section": "Cluster-Robust Standard Errors (by Country)",
-    "text": "Cluster-Robust Standard Errors (by Country)\nCountry-clustered SEs allow:\n\narbitrary correlation over time within a country\nheteroskedasticity across countries\n\nInterpretation:\n\n“We allow any kind of serial correlation within each country.”\n\nIn R (plm), this is typically implemented using robust VCOV options, e.g. vcovHC() with clustering by group.\n\nvcovHC: variance–covariance, heteroskedasticity-consistent"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#model-summary-what-each-one-controls-for",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#model-summary-what-each-one-controls-for",
-    "title": "Lecture 3",
-    "section": "Model Summary (What Each One Controls For)",
-    "text": "Model Summary (What Each One Controls For)\n\n\n\n\n\n\n\n\n\nModel\nControls for country traits?\nControls for year shocks?\nUses between-country variation?\n\n\n\n\nPooled OLS\n❌ No\n❌ No\nYes\n\n\nCountry FE\nYes (time-invariant)\n❌ No\n❌ No\n\n\nTwo-way FE\nYes (time-invariant)\nYes\n❌ No\n\n\nRandom Effects\nYes (modeled as random intercept)\nOptional\nYes"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-panel-models",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-panel-models",
-    "title": "Lecture 3",
-    "section": "Final Takeaway (Panel Models)",
-    "text": "Final Takeaway (Panel Models)\nWe use panel data models to estimate relationships within units over time, while controlling for:\n\nhidden country characteristics (\\(\\alpha_i\\))\nglobal year shocks (\\(\\gamma_t\\))\n\nAnd we use clustered SEs because panel residuals are often correlated within each unit."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#environmental-kuznets-curve-ekc-growth-vs.-pollution-1",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#environmental-kuznets-curve-ekc-growth-vs.-pollution-1",
-    "title": "Lecture 3",
-    "section": "🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution",
-    "text": "🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution\nNow we add the key EKC idea:\n\na nonlinear relationship between income and pollution."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-the-ekc",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-the-ekc",
-    "title": "Lecture 3",
-    "section": "What is the EKC?",
-    "text": "What is the EKC?\nThe Environmental Kuznets Curve (EKC) hypothesis suggests:\n\nAs a country becomes richer, pollution first increases,\nbut after some income level, pollution decreases.\n\nIt is often described as an inverted-U relationship between:\n\npollution (e.g., CO\\(_2\\) per capita)\nincome (GDP per capita)"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#draw-the-ekc-curve-inverted-u",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#draw-the-ekc-curve-inverted-u",
-    "title": "Lecture 3",
-    "section": "📉📈 Draw the EKC Curve (Inverted-U)",
-    "text": "📉📈 Draw the EKC Curve (Inverted-U)"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#intuition-why-might-ekc-happen",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#intuition-why-might-ekc-happen",
-    "title": "Lecture 3",
-    "section": "Intuition: Why Might EKC Happen?",
-    "text": "Intuition: Why Might EKC Happen?\nAs income rises, countries often experience:\n\nScale effect 📈: more production → more emissions (early stage)\nComposition effect 🏗️➡️🧑‍💼: shift from industry → services (middle stage)\nTechnique effect 🧪⚡: cleaner technology + regulation (later stage)\n\nEKC is the balance of:\n\ngrowth pressures that increase emissions\ndevelopment forces that can reduce emissions"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#important-caveat-for-co_2",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#important-caveat-for-co_2",
-    "title": "Lecture 3",
-    "section": "Important Caveat for CO\\(_2\\)",
-    "text": "Important Caveat for CO\\(_2\\)\nEKC may be weaker for CO\\(_2\\) than for local air pollutants because:\n\nCO\\(_2\\) is deeply tied to energy systems\nbenefits are global, costs are often local\nemissions may shift across borders via trade (carbon leakage)\n\nSo EKC is a hypothesis to test, not a guaranteed pattern."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#quick-review-graph-for-a-quadratic-function",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#quick-review-graph-for-a-quadratic-function",
-    "title": "Lecture 3",
-    "section": "💡Quick Review: Graph for a Quadratic Function",
-    "text": "💡Quick Review: Graph for a Quadratic Function"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-panel-regression-country-year-data",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-panel-regression-country-year-data",
-    "title": "Lecture 3",
-    "section": "EKC Panel Regression (Country-Year Data)",
-    "text": "EKC Panel Regression (Country-Year Data)\nA common EKC specification:\n\\[\n\\log(CO2pc_{it})\n=\n\\beta_1 \\log(GDPpc_{it})\n+\n\\beta_2 \\left[\\log(GDPpc_{it})\\right]^2\n+\n\\alpha_i\n+\n\\gamma_t\n+\n\\epsilon_{it}\n\\]\n\n\\(i\\): country\n\\(t\\): year\n\\(\\alpha_i\\): country fixed effects\n\\(\\gamma_t\\): year fixed effects"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#how-to-interpret-ekc-coefficients",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#how-to-interpret-ekc-coefficients",
-    "title": "Lecture 3",
-    "section": "How to Interpret EKC Coefficients",
-    "text": "How to Interpret EKC Coefficients\n\nIf \\(\\beta_1 &gt; 0\\) and \\(\\beta_2 &lt; 0\\)\nemissions rise at first, then eventually fall\n→ EKC pattern (inverted-U)\nIf \\(\\beta_2 = 0\\)\n→ relationship is linear\nIf \\(\\beta_2 &gt; 0\\)\n→ U-shape (emissions accelerate with income)"
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-turning-point-income-level",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-turning-point-income-level",
-    "title": "Lecture 3",
-    "section": "EKC Turning Point (Income Level)",
-    "text": "EKC Turning Point (Income Level)\nThe turning point occurs where the slope becomes zero:\n\\[\n\\frac{\\partial \\log(CO2pc)}{\\partial \\log(GDPpc)}\n= \\beta_1 + 2\\beta_2 \\log(GDPpc) = 0\n\\]\nSo the turning point in log income is:\n\\[\n\\log(GDPpc^*) = -\\frac{\\beta_1}{2\\beta_2}\n\\]\nConvert back to the income level:\n\\[\nGDPpc^* = \\exp\\left(-\\frac{\\beta_1}{2\\beta_2}\\right)\n\\]\n\n\n\nAt \\(GDPpc^*\\), CO\\(_2\\) per capita stops rising and begins falling (if EKC holds)."
-  },
-  {
-    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-ekc",
-    "href": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-ekc",
-    "title": "Lecture 3",
-    "section": "Final Takeaway (EKC)",
-    "text": "Final Takeaway (EKC)\nEKC tests whether pollution follows an inverted-U with income.\nPanel FE/TWFE help make that test more credible by controlling for:\n\ncountry traits (\\(\\alpha_i\\))\nyear shocks (\\(\\gamma_t\\))"
   },
   {
     "objectID": "danl-lec/danl-410-lec-01-2026-0121.html#course-meeting-info",
@@ -721,6 +420,440 @@
     "text": "From Answers to Workflows: Agent AI\n\nAgent AI: an AI system that can\n\\(\\hspace{.67cm}\\) plan multi-step work\n→ act (edit files, run code, use apps)\n→ check results\n→ iterate toward a goal\nWith external tools + memory, prompts become multi-step workflows.\nExample: a sales-order agent can validate orders, check inventory, generate invoices/shipping labels, and update ERP/CRM.\n\n\n\nNot just “answering questions,” but executing workflows. Goal → Plan → Act → Check → Repeat\n\n\n\nRecommended Reading: WSJ (Jan 17, 2026), “Claude Is Taking the AI World by Storm, and Even Non-Nerds Are Blown Away”"
   },
   {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#panel-data-models-pols-fe-twfe-re",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#panel-data-models-pols-fe-twfe-re",
+    "title": "Lecture 3",
+    "section": "👥📈 Panel Data Models: POLS → FE → TWFE → RE",
+    "text": "👥📈 Panel Data Models: POLS → FE → TWFE → RE\n\n\n\nLearning goals\n\n\n\nUnderstand what panel data is (and why we love it)\nCompare Pooled OLS, Fixed Effects, Two-Way FE, and Random Effects\nLearn what variation each model uses and what it controls for\nUnderstand country-clustered standard errors (and why we need them)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-panel-data",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-panel-data",
+    "title": "Lecture 3",
+    "section": "What is Panel Data?",
+    "text": "What is Panel Data?\nPanel data tracks the same units over multiple time periods:\n\nUnit (\\(i\\)): country (USA, Korea, India, …)\nTime (\\(t\\)): year (1990–2022, …)\n\nExample (CO\\(_2\\) panel): - Outcome: CO\\(_2\\) emissions per capita - Unit ID: iso_code - Time ID: year\n\n\n\nTip\n\n\nPanel data gives us two kinds of variation: - Between variation: differences across countries - Within variation: changes within a country over time"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#why-use-panel-models-not-only-pooled-ols",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#why-use-panel-models-not-only-pooled-ols",
+    "title": "Lecture 3",
+    "section": "Why Use Panel Models (Not Only Pooled OLS)?",
+    "text": "Why Use Panel Models (Not Only Pooled OLS)?\n\n\n\nPooled OLS can be misleading because it ignores unobserved country differences that don’t change much over time, such as:\n\n🌍 geography / climate / natural resources\n🏭 industrial structure and history\n🏛️ institutions and regulation\n⚡ energy infrastructure and technology path\n🧑‍🤝‍🧑 culture and long-run lifestyle patterns\n\n\n\n\nThese factors can affect both\n\nemissions (or other outcomes) and\nGDP per capita (or other regressors)\n\n\n\n\n➡️ That creates omitted variable bias when we use Pooled OLS."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#unobserved-heterogeneity-the-core-issue",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#unobserved-heterogeneity-the-core-issue",
+    "title": "Lecture 3",
+    "section": "🧠 Unobserved Heterogeneity (The Core Issue)",
+    "text": "🧠 Unobserved Heterogeneity (The Core Issue)\nSuppose the true relationship includes an unobserved country component:\n\\[\ny_{it} = \\beta x_{it} + \\underbrace{\\alpha_i}_{\\text{unobserved country trait}} + \\epsilon_{it}\n\\]\nIf we ignore \\(\\alpha_i\\) and estimate Pooled OLS:\n\\[\ny_{it} = \\beta x_{it} + u_{it}\n\\quad \\text{where} \\quad\nu_{it} = \\alpha_i + \\epsilon_{it}\n\\]\n⚠️ If \\(Cov(\\alpha_i, x_{it}) \\neq 0\\), then:\n\n\\(x_{it}\\) is correlated with the error term\nPooled OLS is biased\n\n\n\n\n\nFixed Effects is designed to solve exactly this problem."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#pooled-ols-baseline-model",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#pooled-ols-baseline-model",
+    "title": "Lecture 3",
+    "section": "Pooled OLS: Baseline Model",
+    "text": "Pooled OLS: Baseline Model\nModel \\[\ny_{it} = \\beta_0 + \\beta_1 x_{it} + \\epsilon_{it}\n\\]\nMeaning\n\nWe pretend the dataset is one big cross-section\nWe ignore the panel structure (country identity)\n\nUses all variation\n\nbetween-country variation\nwithin-country variation"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-pols-is-really-doing",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-pols-is-really-doing",
+    "title": "Lecture 3",
+    "section": "What POLS is Really Doing",
+    "text": "What POLS is Really Doing\nWhen you estimate POLS, the slope \\(\\beta_1\\) reflects a combination of:\n\nCross-country differences (rich vs. poor countries)\nWithin-country changes (one country over time)\n\nSo interpretation becomes:\n\n“On average, countries with higher \\(x\\) have higher (or lower) \\(y\\), and/or when \\(x\\) rises over time, \\(y\\) moves…”\n\n⚠️ That can be fine only if unobserved country traits don’t confound the relationship."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#the-big-risk-in-pols-omitted-variable-bias",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#the-big-risk-in-pols-omitted-variable-bias",
+    "title": "Lecture 3",
+    "section": "⚠️ The Big Risk in POLS: Omitted Variable Bias",
+    "text": "⚠️ The Big Risk in POLS: Omitted Variable Bias\nIf richer countries also have different institutions, energy systems, or historical industrialization paths, then:\n\n\\(x_{it}\\) (GDP per capita) is correlated with \\(\\alpha_i\\) (unobserved traits)\nPooled OLS mixes together the effect of \\(x_{it}\\) and the influence of \\(\\alpha_i\\), so the estimated \\(\\beta\\) can be misleading.\n\nPanel methods help because they explicitly control for \\(\\alpha_i\\)."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#country-fixed-effects-fe",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#country-fixed-effects-fe",
+    "title": "Lecture 3",
+    "section": "Country Fixed Effects (FE)",
+    "text": "Country Fixed Effects (FE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\epsilon_{it}\n\\]\n\n\\(\\alpha_i\\) = country fixed effect\ncaptures all time-invariant country characteristics\n\ngeography, long-run institutions, baseline culture, etc.\n\n\nFE answers a within-country question:\n\n“If a country’s \\(x\\) changes over time, how does \\(y\\) change within that same country?”"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-fe-controls-for-automatically",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-fe-controls-for-automatically",
+    "title": "Lecture 3",
+    "section": "🔎 What FE Controls For (Automatically)",
+    "text": "🔎 What FE Controls For (Automatically)\nBecause each country gets its own intercept \\(\\alpha_i\\), FE controls for:\n\nany factor that is constant within a country\neven if you do not observe or measure it\n\nExamples (time-invariant or very slow-moving):\n\ndistance to equator\nlandlocked status\nbaseline political system\ndeep energy infrastructure\n\n\n\n\n📌 FE is powerful because it controls for a lot without measuring those things."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#fe-uses-only-within-country-variation",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#fe-uses-only-within-country-variation",
+    "title": "Lecture 3",
+    "section": "FE Uses Only Within-Country Variation",
+    "text": "FE Uses Only Within-Country Variation\nFE does not use differences between countries:\n\nIt does not compare USA vs India levels\nIt compares USA over time to itself\n\nSo FE is best when:\n\nthe key confounding problem is time-invariant\nwe care about within-country causal interpretation\n\n⚠️ FE cannot estimate effects of variables that do not change over time, e.g.:\n\nlandlocked, continent, distance_to_equator"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#two-way-fixed-effects-country-year-fe",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#two-way-fixed-effects-country-year-fe",
+    "title": "Lecture 3",
+    "section": "Two-Way Fixed Effects (Country + Year FE)",
+    "text": "Two-Way Fixed Effects (Country + Year FE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\gamma_t + \\epsilon_{it}\n\\]\n\n\\(\\alpha_i\\): country FE (time-invariant traits)\n\\(\\gamma_t\\): year FE (global shocks / common trends)\n\nTWFE answers:\n\n“Within a country, how does \\(y\\) change with \\(x\\), after removing global year shocks?”"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#why-add-year-fixed-effects",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#why-add-year-fixed-effects",
+    "title": "Lecture 3",
+    "section": "🌍 Why Add Year Fixed Effects?",
+    "text": "🌍 Why Add Year Fixed Effects?\nYear effects capture shocks that hit many countries at once:\n\n🛢️ oil price spikes\n📉 global recessions (e.g., 2008)\n🦠 pandemics\n💡 global technology trends\n🌐 global climate agreements\n\nIf we don’t include \\(\\gamma_t\\), the regression may mistakenly attribute these common shocks to \\(x_{it}\\).\nYear FE helps remove this confounding."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#random-effects-re-1",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#random-effects-re-1",
+    "title": "Lecture 3",
+    "section": "Random Effects (RE)",
+    "text": "Random Effects (RE)\nModel \\[\ny_{it} = \\beta x_{it} + \\alpha_i + \\epsilon_{it}\n\\]\nSame structure as FE… but different assumption:\n\nRE treats \\(\\alpha_i\\) as random\nand assumes it is uncorrelated with regressors:\n\n\\[\nCov(\\alpha_i, x_{it}) = 0\n\\]\nIf that assumption holds:\n\nRE is more efficient than FE (smaller standard errors)\nRE uses both within and between variation"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#when-re-fails-bias-risk",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#when-re-fails-bias-risk",
+    "title": "Lecture 3",
+    "section": "⚠️ When RE Fails (Bias Risk)",
+    "text": "⚠️ When RE Fails (Bias Risk)\nIf \\(Cov(\\alpha_i, x_{it}) \\neq 0\\), then RE is biased.\nIn many economic settings, this correlation is very plausible:\n\nricher countries may also have better institutions (inside \\(\\alpha_i\\))\nenergy system differences affect both GDP and emissions\n\nSo FE is often the safer default in applied work."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#why-we-cluster-standard-errors-country-clustered-se",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#why-we-cluster-standard-errors-country-clustered-se",
+    "title": "Lecture 3",
+    "section": "🧠 Why We Cluster Standard Errors (Country-Clustered SE)",
+    "text": "🧠 Why We Cluster Standard Errors (Country-Clustered SE)\nThe problem: errors are correlated within countries\n\n\n\nIn panel data, observations inside a country are rarely independent:\n\nshocks persist over time\npolicies change gradually\nmeasurement errors repeat\nemissions and GDP move smoothly\n\n\n\n\nThat means residuals may satisfy serial correlation:\n\\[\nCov(\\epsilon_{it}, \\epsilon_{is}) \\neq 0 \\quad \\text{for } t \\neq s\n\\]\n\n\n\nIf we ignore this, standard errors are often too small → false “significance”"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#cluster-robust-standard-errors-by-country",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#cluster-robust-standard-errors-by-country",
+    "title": "Lecture 3",
+    "section": "Cluster-Robust Standard Errors (by Country)",
+    "text": "Cluster-Robust Standard Errors (by Country)\nCountry-clustered SEs allow:\n\narbitrary correlation over time within a country\nheteroskedasticity across countries\n\nInterpretation:\n\n“We allow any kind of serial correlation within each country.”\n\nIn R (plm), this is typically implemented using robust VCOV options, e.g. vcovHC() with clustering by group.\n\nvcovHC: variance–covariance, heteroskedasticity-consistent"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#model-summary-what-each-one-controls-for",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#model-summary-what-each-one-controls-for",
+    "title": "Lecture 3",
+    "section": "Model Summary (What Each One Controls For)",
+    "text": "Model Summary (What Each One Controls For)\n\n\n\n\n\n\n\n\n\nModel\nControls for country traits?\nControls for year shocks?\nUses between-country variation?\n\n\n\n\nPooled OLS\n❌ No\n❌ No\nYes\n\n\nCountry FE\nYes (time-invariant)\n❌ No\n❌ No\n\n\nTwo-way FE\nYes (time-invariant)\nYes\n❌ No\n\n\nRandom Effects\nYes (modeled as random intercept)\nOptional\nYes"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-panel-models",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-panel-models",
+    "title": "Lecture 3",
+    "section": "Final Takeaway (Panel Models)",
+    "text": "Final Takeaway (Panel Models)\nWe use panel data models to estimate relationships within units over time, while controlling for:\n\nhidden country characteristics (\\(\\alpha_i\\))\nglobal year shocks (\\(\\gamma_t\\))\n\nAnd we use clustered SEs because panel residuals are often correlated within each unit."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#environmental-kuznets-curve-ekc-growth-vs.-pollution-1",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#environmental-kuznets-curve-ekc-growth-vs.-pollution-1",
+    "title": "Lecture 3",
+    "section": "🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution",
+    "text": "🌿 Environmental Kuznets Curve (EKC): Growth vs. Pollution\nNow we add the key EKC idea:\n\na nonlinear relationship between income and pollution."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-the-ekc",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#what-is-the-ekc",
+    "title": "Lecture 3",
+    "section": "What is the EKC?",
+    "text": "What is the EKC?\nThe Environmental Kuznets Curve (EKC) hypothesis suggests:\n\nAs a country becomes richer, pollution first increases,\nbut after some income level, pollution decreases.\n\nIt is often described as an inverted-U relationship between:\n\npollution (e.g., CO\\(_2\\) per capita)\nincome (GDP per capita)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#draw-the-ekc-curve-inverted-u",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#draw-the-ekc-curve-inverted-u",
+    "title": "Lecture 3",
+    "section": "📉📈 Draw the EKC Curve (Inverted-U)",
+    "text": "📉📈 Draw the EKC Curve (Inverted-U)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#intuition-why-might-ekc-happen",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#intuition-why-might-ekc-happen",
+    "title": "Lecture 3",
+    "section": "Intuition: Why Might EKC Happen?",
+    "text": "Intuition: Why Might EKC Happen?\nAs income rises, countries often experience:\n\nScale effect 📈: more production → more emissions (early stage)\nComposition effect 🏗️➡️🧑‍💼: shift from industry → services (middle stage)\nTechnique effect 🧪⚡: cleaner technology + regulation (later stage)\n\nEKC is the balance of:\n\ngrowth pressures that increase emissions\ndevelopment forces that can reduce emissions"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#important-caveat-for-co_2",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#important-caveat-for-co_2",
+    "title": "Lecture 3",
+    "section": "Important Caveat for CO\\(_2\\)",
+    "text": "Important Caveat for CO\\(_2\\)\nEKC may be weaker for CO\\(_2\\) than for local air pollutants because:\n\nCO\\(_2\\) is deeply tied to energy systems\nbenefits are global, costs are often local\nemissions may shift across borders via trade (carbon leakage)\n\nSo EKC is a hypothesis to test, not a guaranteed pattern."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#quick-review-graph-for-a-quadratic-function",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#quick-review-graph-for-a-quadratic-function",
+    "title": "Lecture 3",
+    "section": "💡Quick Review: Graph for a Quadratic Function",
+    "text": "💡Quick Review: Graph for a Quadratic Function"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-panel-regression-country-year-data",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-panel-regression-country-year-data",
+    "title": "Lecture 3",
+    "section": "EKC Panel Regression (Country-Year Data)",
+    "text": "EKC Panel Regression (Country-Year Data)\nA common EKC specification:\n\\[\n\\log(CO2pc_{it})\n=\n\\beta_1 \\log(GDPpc_{it})\n+\n\\beta_2 \\left[\\log(GDPpc_{it})\\right]^2\n+\n\\alpha_i\n+\n\\gamma_t\n+\n\\epsilon_{it}\n\\]\n\n\\(i\\): country\n\\(t\\): year\n\\(\\alpha_i\\): country fixed effects\n\\(\\gamma_t\\): year fixed effects"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#how-to-interpret-ekc-coefficients",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#how-to-interpret-ekc-coefficients",
+    "title": "Lecture 3",
+    "section": "How to Interpret EKC Coefficients",
+    "text": "How to Interpret EKC Coefficients\n\nIf \\(\\beta_1 &gt; 0\\) and \\(\\beta_2 &lt; 0\\)\nemissions rise at first, then eventually fall\n→ EKC pattern (inverted-U)\nIf \\(\\beta_2 = 0\\)\n→ relationship is linear\nIf \\(\\beta_2 &gt; 0\\)\n→ U-shape (emissions accelerate with income)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-turning-point-income-level",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#ekc-turning-point-income-level",
+    "title": "Lecture 3",
+    "section": "EKC Turning Point (Income Level)",
+    "text": "EKC Turning Point (Income Level)\nThe turning point occurs where the slope becomes zero:\n\\[\n\\frac{\\partial \\log(CO2pc)}{\\partial \\log(GDPpc)}\n= \\beta_1 + 2\\beta_2 \\log(GDPpc) = 0\n\\]\nSo the turning point in log income is:\n\\[\n\\log(GDPpc^*) = -\\frac{\\beta_1}{2\\beta_2}\n\\]\nConvert back to the income level:\n\\[\nGDPpc^* = \\exp\\left(-\\frac{\\beta_1}{2\\beta_2}\\right)\n\\]\n\n\n\nAt \\(GDPpc^*\\), CO\\(_2\\) per capita stops rising and begins falling (if EKC holds)."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-ekc",
+    "href": "danl-lec/danl-410-lec-03-2026-0128.html#final-takeaway-ekc",
+    "title": "Lecture 3",
+    "section": "Final Takeaway (EKC)",
+    "text": "Final Takeaway (EKC)\nEKC tests whether pollution follows an inverted-U with income.\nPanel FE/TWFE help make that test more credible by controlling for:\n\ncountry traits (\\(\\alpha_i\\))\nyear shocks (\\(\\gamma_t\\))"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#omitted-variable-bias-1",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#omitted-variable-bias-1",
+    "title": "Lecture 2",
+    "section": "Omitted Variable Bias",
+    "text": "Omitted Variable Bias\n\nOmitted variable bias (OVB): bias in the model because of omitting an important regressor that is correlated with existing regressor(s).\nLet’s use an orange juice (OJ) example to demonstrate the OVB.\n\nOJ price elasticity estimates vary with models, whether or not taking into account brand or ad_status\n\n\n\n\n\nVariable\nDescription\n\n\n\n\nsales\nQuantity of OJ cartons sold\n\n\nprice\nPrice of OJ\n\n\nbrand\nBrand of OJ\n\n\nad\nAdvertisement status"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#short--and-long--regressions",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#short--and-long--regressions",
+    "title": "Lecture 2",
+    "section": "📏 Short- and Long- Regressions",
+    "text": "📏 Short- and Long- Regressions\n\nOVB is the difference in beta estimates between short- and long-form regressions.\nShort regression: The regression model with less regressors\n\n\n\n\n\\[\n\\begin{align}\n\\log(\\text{sales}_i) = \\beta_0 + \\beta_1\\log(\\text{price}_i) + \\epsilon_i\n\\end{align}\n\\]\n\nLong regression: The regression model that adds additional regressor(s) to the short one.\n\n\n\n\n\\[\n\\begin{align}\n\\log(\\text{sales}_i) =& \\beta_0 + \\beta_{1}\\log(\\text{price}_i) \\\\\n&+ \\beta_{2}\\text{minute.maid}_i + \\beta_{3}\\text{tropicana}_i + \\epsilon_i\n\\end{align}\n\\]\n\nOVB for \\(\\beta_1\\) is:\n\n\n\n\n\\[\n\\text{OVB} = \\widehat{\\beta_{1}^{short}} - \\widehat{\\beta_{1}^{long}}\n\\]"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#ovb-formula",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#ovb-formula",
+    "title": "Lecture 2",
+    "section": "OVB formula",
+    "text": "OVB formula\n\nConsider the following short- and long- regressions:\n\nShort: \\(Y_i = \\beta_0 + \\beta_{1}^{short}X_1 + \\epsilon_{short}\\)\n\nLong: \\(Y_i = \\beta_0 + \\beta_{1}^{long}X_1 +\\beta_{2}X_2 + \\epsilon_{long}\\)\n\nError in short form can be represented as: \\[\n{\\epsilon_{short}} = \\beta_{2}X_2 + \\epsilon_{long}\n\\]\nIf variable \\(X_1\\) is correlated with \\(X_2\\), the following assumptions are violated in the short regression model:\n\nErrors are not correlated with regressors.\nErrors have a mean value of 0."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#how-does-an-ovb-happen-in-regression",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#how-does-an-ovb-happen-in-regression",
+    "title": "Lecture 2",
+    "section": "❓🔍 How does an OVB happen in regression?",
+    "text": "❓🔍 How does an OVB happen in regression?\n\nIn the first stage, consider the relationship between price and brand:\n\n\\[\n\\log(\\text{price}) = \\beta_0 + \\beta_1\\text{minute_maid} + \\beta_2\\text{tropicana} + \\epsilon_{1st}\n\\]\n\nThen, calculate the residual: \\[\n\\widehat{\\epsilon_{1st}} = \\log(\\text{price}) - \\widehat{\\log(\\text{price})}\n\\]\nThe residual represents the log of OJ price after its correlation with brand has been removed!\nIn the second stage, regress \\(\\log(\\text{sales})\\) on residual \\(\\widehat{\\epsilon_{1st}}\\):\n\n\\[\n\\log(\\text{sales}) = \\beta_0 + \\beta_1\\widehat{\\epsilon_{1st}}  + \\epsilon_{2nd}\n\\]"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#regression-sensitivity-analysis",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#regression-sensitivity-analysis",
+    "title": "Lecture 2",
+    "section": "Regression Sensitivity Analysis",
+    "text": "Regression Sensitivity Analysis\n\nRegression finds the coefficients on the part of each regressor that is independent from the other regressors.\nWhat can we do to deal with OVB problems?\n\nBecause we can never be sure whether a given set of controls is enough to eliminate OVB, it’s important to ask how sensitive regression results are to changes in the list of controls."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#bad-controls-when-controlling-more-makes-things-worse",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#bad-controls-when-controlling-more-makes-things-worse",
+    "title": "Lecture 2",
+    "section": "🚫 Bad Controls: When “Controlling More” Makes Things Worse",
+    "text": "🚫 Bad Controls: When “Controlling More” Makes Things Worse\nA common mistake in regression is thinking:\n\n✅ “If I add more controls, the model must get better.”\n\nBut some controls are bad controls — they can actually bias your estimate."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#what-is-a-bad-control",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#what-is-a-bad-control",
+    "title": "Lecture 2",
+    "section": "🚫 What is a “Bad Control”?",
+    "text": "🚫 What is a “Bad Control”?\nA bad control is a variable that:\n\nis influenced by the explanatory variable \\(x\\), or\nis part of the process that links \\(x\\) to the outcome \\(y\\)\n\nIncluding a bad control can “control away” the variation in \\(y\\) that is connected to \\(x\\), making the estimated relationship look smaller than it really is."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#intuition-what-should-a-good-control-look-like",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#intuition-what-should-a-good-control-look-like",
+    "title": "Lecture 2",
+    "section": "🧠 Intuition: What Should a “Good Control” Look Like?",
+    "text": "🧠 Intuition: What Should a “Good Control” Look Like?\nA good control is a variable that:\n✅ helps explain variation in the outcome \\(y\\)\n✅ is related to the explanatory variable \\(x\\)\n✅ is not a consequence of \\(x\\) (it exists “in the background”)\nThat’s the key difference."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#example-1-education-and-wages",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#example-1-education-and-wages",
+    "title": "Lecture 2",
+    "section": "🔗 Example 1: Education and Wages 💼",
+    "text": "🔗 Example 1: Education and Wages 💼\nSuppose we want to estimate:\n\nDoes education increase wages?\n\n✅ Good regression idea:\n\\[\nwage_i = \\beta_0 + \\beta_1 education_i + u_i\n\\]\nMaybe add good controls like:\n\nage\ngender\nregion\nparent education (if available)"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-occupation-or-job-type",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-occupation-or-job-type",
+    "title": "Lecture 2",
+    "section": "🚫 Bad Control: Occupation or Job Type",
+    "text": "🚫 Bad Control: Occupation or Job Type\nBut what if we control for occupation?\n\\[\nwage_i = \\beta_0 + \\beta_1 education_i + \\beta_2 occupation_i + u_i\n\\]\nWhy is that bad?\n\nBecause education affects occupation:\n\\[\neducation \\rightarrow occupation \\rightarrow wage\n\\]\nSo controlling for occupation:\n🚫 blocks part of the education effect\n→ we underestimate the impact of education"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#example-2-fertilizer-plant-height-and-crop-yield",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#example-2-fertilizer-plant-height-and-crop-yield",
+    "title": "Lecture 2",
+    "section": "🌱 Example 2: Fertilizer, Plant Height, and Crop Yield",
+    "text": "🌱 Example 2: Fertilizer, Plant Height, and Crop Yield\n\n\nWe want to estimate:\n\nDoes fertilizer increase crop yield?\n\nBut fertilizer changes the plant’s growth:\n\\[\nfertilizer \\rightarrow height\n\\]\nAnd height is strongly related to yield:\n\\[\nheight \\rightarrow yield\n\\]\n\nAlso, some plots are simply better than others because of soil quality:\n\\[\n\\begin{align}\n&soil\\ quality \\rightarrow height\\\\\n&soil\\ quality \\rightarrow yield\n\\end{align}\n\\]\nSo soil quality is a hidden factor that affects both height and yield."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-plant-height",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#bad-control-plant-height",
+    "title": "Lecture 2",
+    "section": "🚫 Bad Control: Plant Height",
+    "text": "🚫 Bad Control: Plant Height\nBut what if we control for plant height?\n\\[\nyield_i = \\beta_0 + \\beta_1 fertilizer_i + \\beta_2 height_i + u_i\n\\]\nWhy is that bad?\n\nBecause fertilizer affects plant height:\n\\[\nfertilizer \\rightarrow height \\rightarrow yield\n\\]\nSo controlling for height:\n🚫 blocks an important pathway through which fertilizer raises yield\n→ we underestimate the impact of fertilizer"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#good-controls-vs.-bad-controls-big-picture",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#good-controls-vs.-bad-controls-big-picture",
+    "title": "Lecture 2",
+    "section": "✅ Good Controls vs. Bad Controls (Big Picture)",
+    "text": "✅ Good Controls vs. Bad Controls (Big Picture)\n\n\n\n\n\n\n\n\nType\nExample\nWhy it matters\n\n\n\n\n✅ Good control\nAge, gender, region, baseline ability\nHelps reduce omitted variable bias by holding constant pre-existing differences\n\n\n🚫 Bad control\nOccupation (when studying education → wages)\nCan remove part of the education effect by controlling for something education influences\n\n\n🚫 Bad control\nPlant height (when studying fertilizer → yield)\nCan remove part of the fertilizer effect by controlling for something fertilizer influences"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#why-bad-controls-are-dangerous",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#why-bad-controls-are-dangerous",
+    "title": "Lecture 2",
+    "section": "🎯 Why Bad Controls Are Dangerous",
+    "text": "🎯 Why Bad Controls Are Dangerous\nBad controls can cause two problems:\n\n\n1) ❌ Block part of the true effect\nYou unintentionally remove the pathway:\n\\[\nx \\rightarrow control \\rightarrow y\n\\]\nSo the estimated \\(\\hat{\\beta}_1\\) becomes too small.\n\n2) ❌ Create new bias\nSometimes the control is influenced by both \\(x\\) and \\(y\\):\n\\[\nx \\rightarrow control \\leftarrow y\n\\]\nThen controlling for it creates a fake association between \\(x\\) and \\(y\\)\neven if none existed before."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#quick-rule-should-we-control-for-it",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#quick-rule-should-we-control-for-it",
+    "title": "Lecture 2",
+    "section": "✅ Quick Rule: Should We Control for It?",
+    "text": "✅ Quick Rule: Should We Control for It?\nBefore adding a variable \\(z\\) as a control, ask:\n\nDoes \\(z\\) exist before \\(x\\) is determined?\n✅ If yes → usually safe to control for\n\n\n\n\n\nDoes \\(z\\) change after \\(x\\) changes?\n🚫 If yes → it may be a bad control\n\n\n\n\n\nIs \\(z\\) a pre-existing characteristic that is related to both \\(x\\) and \\(y\\)?\n✅ If yes → it is often a useful control"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-02-2026-0126.html#summary-more-controls-better",
+    "href": "danl-lec/danl-410-lec-02-2026-0126.html#summary-more-controls-better",
+    "title": "Lecture 2",
+    "section": "🧾 Summary: “More Controls” ≠ “Better”",
+    "text": "🧾 Summary: “More Controls” ≠ “Better”\n\n✅ Controls are helpful when they fix omitted variable bias\n\n🚫 Controls are harmful when they “control away” the effect you want\n\n\n\n\n\nThe goal is not to control for everything.\n\nThe goal is to control for the right things."
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "",
+    "text": "The DANL 410 Capstone Paper is the final written product of your data analytics capstone project. The paper should follow the general structure of a typical empirical paper: a clear research question, relevant background, transparent data description, appropriate empirical strategy, carefully interpreted results, and evidence-based discussion.\nYour final paper should show that you or your team can complete an end-to-end empirical data analytics project:\n\nDefine a focused and meaningful research question\nExplain why the question matters to a real stakeholder or audience\nCollect, clean, transform, and document data\nUse appropriate statistical, machine learning, or computational methods\nPresent empirical results clearly using tables and figures\nInterpret results honestly and avoid overstating conclusions\nCommunicate implications, limitations, and future directions\nPublish the final project on your personal GitHub website\n\n\n\n\n\n\n\nNote\n\n\n\nThe capstone paper is not just a longer version of your slides. The paper should provide enough detail that a reader can understand your question, data, empirical strategy, results, interpretation, and implications without attending your presentation."
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html#overview",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html#overview",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "",
+    "text": "The DANL 410 Capstone Paper is the final written product of your data analytics capstone project. The paper should follow the general structure of a typical empirical paper: a clear research question, relevant background, transparent data description, appropriate empirical strategy, carefully interpreted results, and evidence-based discussion.\nYour final paper should show that you or your team can complete an end-to-end empirical data analytics project:\n\nDefine a focused and meaningful research question\nExplain why the question matters to a real stakeholder or audience\nCollect, clean, transform, and document data\nUse appropriate statistical, machine learning, or computational methods\nPresent empirical results clearly using tables and figures\nInterpret results honestly and avoid overstating conclusions\nCommunicate implications, limitations, and future directions\nPublish the final project on your personal GitHub website\n\n\n\n\n\n\n\nNote\n\n\n\nThe capstone paper is not just a longer version of your slides. The paper should provide enough detail that a reader can understand your question, data, empirical strategy, results, interpretation, and implications without attending your presentation."
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html#required-final-submission-materials",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html#required-final-submission-materials",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "📦 Required Final Submission Materials",
+    "text": "📦 Required Final Submission Materials\nYour final submission must include the following materials.\n\nQuarto document for the capstone write-up\n\nSubmit the .qmd file used to write your final capstone report.\nThe .qmd file should include your written report, figures, tables, references, and any code that is directly embedded in the report.\nYour references must include the data source(s) with links when applicable.\nFor online data sources, include the full URL and date/time accessed.\n\nR and/or Python script for the code used in the project\n\nSubmit the R and/or Python script(s) used for all project work, including data preparation, data cleaning, visualization, table creation, model estimation, and evaluation.\nThe code should be organized clearly enough that I can understand how your final results were produced.\nIf all R/Python code is already included in the .qmd file for the capstone write-up, you do not need to submit separate R and/or Python script files.\n\nData files\n\nSubmit the data files used for your final analysis.\nInclude cleaned data files whenever possible.\nIf your project uses multiple datasets, submit all files needed to reproduce your analysis.\nIf data files are too large to submit to Brightspace or email, share them with Byeong-Hak through SharePoint, Google Drive, OneDrive, or Dropbox.\nIf the data cannot be shared because of size, privacy, licensing, or access restrictions, include a short note explaining the source, access method, and reason the full data cannot be submitted.\n\nLink to the capstone project webpage\n\nSubmit a working link to the published capstone project webpage on your personal GitHub website.\nThe webpage should include the final written report and any relevant visuals, tables, dashboards, apps, or project links.\n\nOptional: A rendered Word document (.docx) generated from the Quarto Word template file posted on Brightspace\n\nThe Word file is not required if the HTML webpage is complete and working.\nStudents may submit a Word file if they prefer to provide an additional polished version of the paper.\n\n\n\n\n\n\n\n\nWarning\n\n\n\nA final report submitted only as a Word/PDF document is not sufficient. You must submit the Quarto write-up, project code when needed, data files, and a working GitHub webpage link."
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html#required-sectioning-and-organization",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html#required-sectioning-and-organization",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "🧩 Required Sectioning and Organization",
+    "text": "🧩 Required Sectioning and Organization\nYour capstone write-up and code files must be clearly organized using section headings. Clear sectioning makes your work easier to read, evaluate, and reproduce.\n\nQuarto Write-up\nUse Quarto/Markdown section headings to organize your paper. Major sections should use #, subsections should use ##, and smaller subsections should use ###.\nFor example, your capstone write-up may be organized as follows:\n# Introduction\n\n# Background and Related Literature\n\n# Data\n\n# Empirical Strategy / Methods\n\n# Results\n\n# Discussion and Implications\n\n# Conclusion\n\n# References\nYou may use smaller headings within each major section:\n# Data\n\n## Data Source\n\n## Unit of Observation\n\n## Key Variables\n\n## Data Cleaning\n\n## Summary Statistics\n\n\nR Script\nYour R script must also be divided into clear sections. In RStudio, you can create section headings using Ctrl/Command + Shift + R.\nExamples:\n# Load packages ------------------------------------------------------------\n\n# Import data --------------------------------------------------------------\n\n# Data cleaning ------------------------------------------------------------\n\n# Summary statistics -------------------------------------------------------\n\n# Data visualization -------------------------------------------------------\n\n# Model estimation ---------------------------------------------------------\n\n# Export tables and figures ------------------------------------------------\n\n\nPython Script\nYour Python script must also be divided into clear sections. In Spyder, you can create section headings using Command/Ctrl + 1, then Command/Ctrl + 2, then Command/Ctrl + 4.\nThis creates a section format like:\n# %%\n# =============================================================================\n# Section Title\n# =============================================================================\nExamples:\n# %%\n# =============================================================================\n# Load packages\n# =============================================================================\n\n# %%\n# =============================================================================\n# Import data\n# =============================================================================\n\n# %%\n# =============================================================================\n# Data cleaning\n# =============================================================================\n\n# %%\n# =============================================================================\n# Summary statistics\n# =============================================================================\n\n# %%\n# =============================================================================\n# Data visualization\n# =============================================================================\n\n# %%\n# =============================================================================\n# Model estimation\n# =============================================================================\nThe goal is that another person should be able to open your write-up or script and quickly understand where each major part of the project begins and ends."
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html#final-capstone-paper-structure-formatting-guidelines",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html#final-capstone-paper-structure-formatting-guidelines",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "📘 Final Capstone Paper — Structure & Formatting Guidelines",
+    "text": "📘 Final Capstone Paper — Structure & Formatting Guidelines\nRecommended total length: approximately 10–15 pages, excluding references, appendices, and large code blocks.\nThis length is a guideline rather than a strict rule. A strong paper is not judged by page count alone. It should be long enough to explain your question, data, empirical strategy, results, and implications clearly, but concise enough that every section adds value.\nYou are strongly encouraged to incorporate polished figures, tables, maps, dashboards, or diagrams from your presentation when they help clarify the story. However, every figure and table must be explained in the text. Do not insert visuals without interpretation."
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html#introduction-1.52-pages",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html#introduction-1.52-pages",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "1. Introduction (1.5–2 pages)",
+    "text": "1. Introduction (1.5–2 pages)\nThe introduction should motivate the project, state the research question, and preview the main empirical findings. In a typical empirical economics paper, the introduction gives the reader a complete overview of the paper before the technical details appear.\n\nMotivation and Context\n\nIntroduce the real-world issue, decision problem, or empirical puzzle.\nExplain why the issue matters in economic, business, policy, social, environmental, sports, or organizational terms.\nIdentify the stakeholder or audience that would care about your results.\n\nResearch Question\n\nState your primary research question clearly and early.\nMake sure the question is answerable using your data and empirical method.\nIf useful, list 2–4 related sub-questions.\n\nData and Method Preview\n\nBriefly describe the dataset, unit of observation, and sample.\nPreview the main empirical method, such as regression, classification, forecasting, clustering, text analysis, geospatial analysis, or another data analytics approach.\n\nMain Findings and Contribution\n\nBriefly summarize the most important results.\nExplain what your project contributes.\nThe contribution may be practical rather than academic: a new dataset, a local analysis, a prediction model, a visualization tool, a policy implication, or a stakeholder-focused recommendation.\n\n\nSuggested writing amount: 5–8 well-developed paragraphs. A reader should understand the entire purpose and direction of the paper from this section."
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html#background-and-related-literature-1.52-pages",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html#background-and-related-literature-1.52-pages",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "2. Background and Related Literature (1.5–2 pages)",
+    "text": "2. Background and Related Literature (1.5–2 pages)\nThis section should explain what is already known about the topic and how your project connects to prior work. It should not be a disconnected list of sources. Instead, synthesize the most relevant studies, reports, or credible background sources.\n\nTopic Background\n\nDefine important terms, institutions, measures, or outcomes.\nExplain the setting needed to understand your research question.\nProvide relevant historical, policy, industry, or market context.\n\nRelated Literature or Prior Evidence\n\nSummarize academic studies, government reports, industry reports, policy reports, or credible data journalism related to your topic.\nExplain the main findings from previous work.\nFocus on sources that directly inform your question, data, method, or interpretation.\n\nGap and Contribution\n\nExplain what remains unclear, underexplored, locally relevant, or empirically interesting.\nDescribe how your project contributes to understanding the topic.\n\n\nSuggested writing amount: 4–7 paragraphs. You may include a small table summarizing key studies, datasets, or institutional details if it helps organize the discussion."
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html#data-1.52.5-pages",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html#data-1.52.5-pages",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "3. Data (1.5–2.5 pages)",
+    "text": "3. Data (1.5–2.5 pages)\nThe data section should make your dataset understandable, credible, and transparent. A reader should know exactly what the data measure, where they came from, and what their limitations are.\n\nData Source(s)\n\nIdentify each dataset used.\nProvide links to original data sources when applicable.\nExplain who collected the data and for what purpose.\nInclude date/time accessed for online data sources.\n\nUnit of Observation\n\nClearly state what each row represents.\nExamples: one county, one customer, one transaction, one game, one player-season, one firm-year, one school, one product review, one day, or one neighborhood.\n\nSample and Scope\n\nDescribe the time period, geographic coverage, population, or sample restrictions.\nReport the number of observations and key variables.\nExplain any filtering decisions or exclusions.\n\nKey Variables\n\nIdentify the outcome variable or target variable.\nIdentify the main explanatory variables, predictors, features, controls, or grouping variables.\nExplain how important variables are measured or constructed.\n\nData Quality and Limitations\n\nDiscuss missing values, measurement error, small sample size, selection bias, class imbalance, limited external validity, or other data concerns.\nBe honest about what the data can and cannot support.\n\n\nExpected table: Include a data dictionary or variable summary table for the most important variables. A summary statistics table is also strongly recommended."
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html#empirical-strategy-methods-1.52.5-pages",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html#empirical-strategy-methods-1.52.5-pages",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "4. Empirical Strategy / Methods (1.5–2.5 pages)",
+    "text": "4. Empirical Strategy / Methods (1.5–2.5 pages)\nThis section should explain how you use the data to answer the research question. The goal is not only to name a method, but also to explain why it is appropriate.\n\nEmpirical Approach\n\nIdentify the main method or methods used.\nExamples include OLS regression, logistic regression, fixed effects, classification models, random forest, gradient boosting, clustering, topic modeling, time-series forecasting, causal inference designs, geospatial analysis, or descriptive dashboard-based analysis.\nExplain why the method fits your research question.\n\nModel Specification or Analytical Framework\n\nDefine the outcome variable and main predictors.\nExplain the model structure in words.\nInclude an equation if it helps clarify the empirical strategy.\n\n\nFor example, a two-way fixed effects regression can be used as an empirical strategy for inference when the goal is to estimate the relationship between a key explanatory variable and an outcome while accounting for unit-specific and time-specific factors:\n\\[\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\delta' Z_{it} + \\alpha_i + \\lambda_t + \\varepsilon_{it},\n\\]\nwhere \\(Y_{it}\\) is the outcome of interest for unit \\(i\\) at time \\(t\\), \\(X_{it}\\) is the main explanatory variable, \\(Z_{it}\\) represents control variables, \\(\\alpha_i\\) captures unit fixed effects, \\(\\lambda_t\\) captures time fixed effects, and \\(\\varepsilon_{it}\\) is the error term.\n\nPrediction, Classification, or Machine Learning Methods\n\nIf your project uses prediction or machine learning, describe the train/test split, cross-validation, tuning, and evaluation metrics.\nExamples of metrics include accuracy, precision, recall, F1 score, ROC-AUC, RMSE, MAE, \\(R^2\\), confusion matrix, or Brier score.\nExplain why the chosen metric is appropriate for your problem.\n\nInterpretation and Identification\n\nExplain how the results should be interpreted.\nBe clear about whether your analysis is descriptive, predictive, or causal.\nDo not make causal claims unless your empirical design supports them.\nIf the evidence is correlational, say so clearly.\n\n\nSuggested writing amount: This section should be detailed enough that another student could understand the logic of your analysis, even if they cannot reproduce every technical detail from the prose alone."
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html#results-23-pages",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html#results-23-pages",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "5. Results (2–3 pages)",
+    "text": "5. Results (2–3 pages)\nThis section should present the main empirical findings of the project. The strongest results should appear first, and every table or figure should be interpreted in the text.\n\nMain Empirical Findings\n\nPresent your most important findings clearly.\nUse tables and figures selectively.\nDo not include every model output if it does not help the story.\n\nInterpretation in Plain Language\n\nExplain what the results mean for your research question.\nTranslate statistical or machine learning output into practical meaning.\nDiscuss the direction, magnitude, and importance of key findings.\n\nDescriptive Evidence and Model Results\n\nInclude descriptive figures or tables if they help support the interpretation.\nInclude regression tables, model performance tables, coefficient plots, prediction plots, maps, feature importance plots, or other outputs as appropriate.\n\nRobustness, Sensitivity, or Model Comparison\n\nIf you tried alternative specifications, variables, models, or samples, summarize what changed and what remained consistent.\nIf possible, compare your main model to a simple baseline.\n\nConnection to the Research Question\n\nExplicitly return to the research question.\nState what your results answer clearly and what remains unanswered.\n\n\nExpected visuals/tables: Include your strongest result table(s) and figure(s). Students should not simply paste raw software output; tables and figures should be polished and readable."
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html#discussion-and-implications-11.5-pages",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html#discussion-and-implications-11.5-pages",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "6. Discussion and Implications (1–1.5 pages)",
+    "text": "6. Discussion and Implications (1–1.5 pages)\nThis section should explain the broader meaning of your findings. It should connect the empirical results to the real-world problem introduced earlier.\n\nInterpretation of Findings\n\nExplain why the results matter.\nDiscuss whether the findings match expectations or prior evidence.\nIdentify the most important insight from the analysis.\n\nEconomic, Business, Policy, or Social Implications\n\nDiscuss what your findings imply for the stakeholder or audience.\nDepending on your topic, discuss implications for policy, business strategy, risk management, equity, operations, marketing, sustainability, education, sports decision-making, or community planning.\n\nRecommendation or Decision Support\n\nProvide a clear recommendation, implication, or decision-support insight when appropriate.\nThe recommendation should follow directly from your evidence.\nAcknowledge uncertainty, implementation challenges, tradeoffs, or unintended consequences when relevant.\n\n\n\n\n\n\n\n\nTip\n\n\n\nA good recommendation is not just “more research is needed.” It should explain what a decision-maker can reasonably learn or do based on your evidence."
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html#conclusion-0.51-page",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html#conclusion-0.51-page",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "7. Conclusion (0.5–1 page)",
+    "text": "7. Conclusion (0.5–1 page)\nThe conclusion should close the paper by returning to the main message.\n\nRestate the research question and why it matters.\nSummarize the data and empirical method used.\nHighlight the main result or insight.\nState the final implication, recommendation, or takeaway.\nBriefly mention what future work could improve.\n\n\n\n\n\n\n\nNote\n\n\n\nThe conclusion should not introduce major new evidence. It should synthesize the project and leave the reader with a clear final message."
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html#references-no-page-limit",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html#references-no-page-limit",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "8. References (No page limit)",
+    "text": "8. References (No page limit)\nUse a consistent citation format throughout the paper.\nFor all online sources, include:\n\nAuthor or organization\nTitle of page, report, article, or dataset\nFull URL\nDate and time of access\n\nYour references must include the data source(s) used in the project. All sources cited in the text must appear in the references section. All sources listed in references should be cited somewhere in the report."
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html#appendix-optional",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html#appendix-optional",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "9. Appendix (Optional)",
+    "text": "9. Appendix (Optional)\nUse an appendix for material that supports the report but would interrupt the main narrative.\nPossible appendix items include:\n\nAdditional tables or figures\nDetailed model outputs\nExtra robustness checks\nSurvey questions or coding rules\nLarger data dictionary\nSupplementary maps or dashboards\nNotes on data collection, scraping, or API access\nAdditional details on data cleaning or variable construction\n\nDo not use the appendix as a place to hide important results. The main findings should appear in the main body of the report."
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html#suggested-page-allocation",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html#suggested-page-allocation",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "🧭 Suggested Page Allocation",
+    "text": "🧭 Suggested Page Allocation\n\n\n\nSection\nSuggested Length\n\n\n\n\nIntroduction\n1.5–2 pages\n\n\nBackground and Related Literature\n1.5–2 pages\n\n\nData\n1.5–2.5 pages\n\n\nEmpirical Strategy / Methods\n1.5–2.5 pages\n\n\nResults\n2–3 pages\n\n\nDiscussion and Implications\n1–1.5 pages\n\n\nConclusion\n0.5–1 page\n\n\nReferences\nNo page limit\n\n\nAppendix\nOptional"
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html#rubric-for-capstone-project",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html#rubric-for-capstone-project",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "🧾 Rubric for Capstone Project",
+    "text": "🧾 Rubric for Capstone Project\n\n\n\n\n\n\n\n\n\n\n\nAttribute\nVery Deficient (1)\nSomewhat Deficient (2)\nAcceptable (3)\nVery Good (4)\nOutstanding (5)\n\n\n\n\n1. Potential for success\nLittle or no potential for success\nTenuous potential for success\nAdequate potential for success\nHigh potential for success\nExcellent potential for success\n\n\n2. Quality of research question\nUnclear or unstated; entirely derivative; no meaningful contribution expected\nSomewhat unclear; slight originality; minor contribution expected\nClearly stated; moderately original; limited but plausible contribution expected\nVery clear; original and creative; at least one meaningful contribution expected\nExceptionally clear; highly original; multiple important contributions expected\n\n\n3. Quality of empirical analysis\nVery weak or incorrect empirical reasoning; little or no understanding; no empirical evidence provided\nRudimentary reasoning; shaky understanding; evidence minimal or unclear\nAdequate reasoning; solid understanding; some empirical evidence supports the story\nStrong reasoning; clear methods; credible evidence integrated well\nSophisticated reasoning; superior methods; compelling evidence validates analysis\n\n\n4. Quality of policy recommendation\nNone or unrelated/unsupported\nWeakly justified; limited link to analysis\nGenerally appropriate; basic justification\nStrong and well-supported; grounded in evidence\nInsightful and feasible; highly coherent with analysis\n\n\n5. Quality of presentation\nPoorly organized; weak visuals; unable to answer key questions\nSome disorganization; unclear slides; difficulty answering\nMostly organized; clear slides; adequate responses\nWell organized; strong visuals; confident responses\nExceptionally organized; outstanding visuals; excellent responses\n\n\n6. Quality of writing\nVery poorly structured; hard to understand; many errors\nSomewhat disorganized; confusing sections; many errors\nMostly organized; mostly clear; some errors\nWell organized; clear; few errors\nExtremely polished; no errors"
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html#final-submission-checklist",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html#final-submission-checklist",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "✅ Final Submission Checklist",
+    "text": "✅ Final Submission Checklist\nBefore submitting your final capstone materials, make sure you have completed the following:\n\nFinal report is written in a Quarto .qmd document\nData source(s) are cited in the references with links when applicable\nR and/or Python script files are submitted, unless all code is already included in the .qmd file\nCode covers all major project steps: data preparation, visualization, table creation, and model estimation or analysis\nData files are submitted, or large files are shared with Byeong-Hak through SharePoint, Google Drive, OneDrive, or Dropbox\nFinal report is published on your personal GitHub website\nWorking webpage link is submitted\nResearch question is clear and stated early\nData source, unit of analysis, sample, and key variables are clearly explained\nEmpirical strategy or method is appropriate and clearly explained\nDescriptive statistics and visual evidence are included\nMain results are presented in polished tables or figures\nResults are interpreted in plain language\nImplications or recommendations are supported by evidence\nLimitations are discussed honestly\nReferences are complete and consistently formatted\nFigures and tables are readable, labeled, and discussed in the text\nWriting is polished and professionally formatted"
+  },
+  {
+    "objectID": "danl-rw/danl-410-capstone-paper-guideline.html#closing-thought",
+    "href": "danl-rw/danl-410-capstone-paper-guideline.html#closing-thought",
+    "title": "📄🎓 DANL 410 Capstone Paper Guidelines",
+    "section": "🌟 Closing Thought",
+    "text": "🌟 Closing Thought\n\nA strong capstone paper does not need to solve every problem.\nIt should answer a focused question with credible data, careful analysis, and clear communication."
+  },
+  {
     "objectID": "listing-danl-410-hw-q.html",
     "href": "listing-danl-410-hw-q.html",
     "title": "DANL 410 - Homework Submission",
@@ -796,6 +929,13 @@
     "title": "Exploring Socioeconomic Factors Associated with Low Food Access Tracts in New York State",
     "section": "",
     "text": "Hi Cameron and Nada,\nThank you for your Research Kick-off Report. You have chosen a topic with real policy importance. Food access is closely tied to nutrition, transportation, neighborhood opportunity, and health, and New York State gives you meaningful variation between dense urban areas, suburbs, small cities, and rural counties. Starting with the USDA Food Access Research Atlas is appropriate, and a binary-response model is a sensible method if your outcome is whether a tract is classified as low access.\nThe proposal is clearly motivated and well organized. The main priorities for your capstone paper are to choose whether the primary goal is inference or prediction, define the USDA outcome variable with greater precision, and handle the urban and rural structure of the data more carefully. You should also tighten the model specification, be more explicit about what the USDA variables do and do not measure, and clarify whether your dataset is truly cross-sectional or a short tract-level panel created by combining multiple USDA releases.\n\n\nNext Steps\nYou are working toward both the presentation and the capstone paper. Focus on a clear empirical goal, a carefully defined tract-level model, and careful interpretation of what the data can and cannot tell us.\n\nChoose a primary goal: inference or prediction.\nYour current method section says logistic regression will be used for both “prediction” and “cause-and-effect.” Those are related but not identical tasks.\n\nIf your primary goal is inference, the paper should ask: which tract characteristics are associated with a higher probability of being low access, holding other tract characteristics constant? Then your emphasis should be on coefficient estimates, marginal effects, confidence intervals, and interpretation.\nIf your primary goal is prediction, the paper should ask: how accurately can tract characteristics classify whether a tract is low access? Then your emphasis should be on out-of-sample performance such as AUC, precision, recall, and the confusion matrix.\n\nGiven your research questions, I think inference is the stronger primary direction, with prediction as an optional secondary section. That framing matches your question about which socioeconomic factors are associated with low food access. If you do include a prediction section, keep the claims clearly predictive and avoid treating predictive accuracy as evidence of causality.\nBe more precise about the outcome variable.\nThe proposal currently defines low access as one-third of the population living beyond the distance threshold. The USDA definition used for LA1and10 is slightly more specific: a tract is flagged if at least 500 people or at least 33 percent of the population live more than 1 mile from the nearest supermarket in urban areas or more than 10 miles in rural areas. That detail matters, especially for smaller tracts.\nFor the capstone paper:\n\nState the exact outcome variable name and definition.\nMake clear that your unit of analysis is the census tract.\nDistinguish carefully between a low-access tract and a low-income, low-access tract. Those are not the same USDA concepts, and the variable choice changes the interpretation of your results.\n\nMatch the model to the structure of your data.\nThis point is very important. If you use only one USDA release, then the data are essentially cross-sectional, and a standard cross-sectional logistic regression is appropriate. But if you combine multiple USDA releases for the same census tracts, then you are working with a short tract-level panel and should use a model that reflects that structure.\nBecause your dependent variable is binary, I recommend the following:\n\nIf you have one cross section, use cross-sectional logistic regression.\nIf you have a tract-level panel across multiple years, use a correlated random effects logistic model rather than a simple pooled logit.\n\nA correlated random effects approach is attractive here because it allows you to model a binary outcome while also accounting for tract-specific unobserved heterogeneity that may be correlated with your regressors. It is also more practical than a fixed-effects logit in a short panel, since fixed-effects logit drops tracts with no within-tract change in the binary outcome.\nWrite out the model specification explicitly.\nIf you build a tract-level panel, your capstone paper should write the model clearly. A useful specification is:\n\\[\n\\Pr(\\text{LA1and10}_{it} = 1 \\mid \\mathbf{X}_{it}, \\bar{\\mathbf{X}}_i, c_i)\n=\n\\text{logit}^{-1}\n\\left(\n\\beta_0\n+ \\mathbf{X}_{it}'\\boldsymbol{\\beta}\n+ \\bar{\\mathbf{X}}_i'\\boldsymbol{\\delta}\n+ c_i\n\\right),\n\\]\nwhere \\(i\\) indexes census tracts, \\(t\\) indexes years, \\(\\mathbf{X}_{it}\\) contains time-varying tract characteristics, and \\(\\bar{\\mathbf{X}}_i\\) contains tract-level means of those time-varying regressors. Including these tract means is the key correlated-random-effects adjustment because it allows the tract-specific effect to be correlated with the observed covariates.\nIn words, this lets you separate:\n\nwithin-tract changes over time, and\nbetween-tract differences in average characteristics.\n\nThat distinction will make your interpretation much stronger.\nIf your data remain cross-sectional, then remove the time index and estimate an ordinary logistic regression instead.\nUse appropriate interpretation and evaluation tools for a binary model.\nBecause your outcome is binary:\n\nRMSE should not be the main performance metric for the model.\nFor inference, focus on marginal effects and their confidence intervals.\nFor prediction, use AUC, precision, recall, and the confusion matrix.\n\nOdds ratios are acceptable, but the capstone paper will be easier to read if you also translate the main results into predicted probabilities or average marginal effects. Also remember that this is tract-level analysis, so you should interpret results as differences across neighborhoods, not as claims about individual households.\nHandle the urban and rural issue more carefully.\nThis is one of the most important conceptual issues in your design. The LA1and10 outcome already uses different thresholds for urban and rural tracts. That means the Urban variable is partly built into the dependent variable itself. If you simply include Urban as an ordinary control in one pooled model, interpretation becomes awkward.\nBetter options:\n\nRun separate models for urban and rural tracts.\nOr estimate a pooled model with interaction terms and interpret cautiously.\n\nSeparate models may be the clearest choice for an undergraduate capstone paper because the mechanisms are likely different. In New York City, public transit and neighborhood density may matter most. In rural upstate counties, vehicle access and long travel distances may matter more.\nBe careful about which independent variables are mechanically related to the outcome.\nThis is especially important for vehicle variables. The Atlas includes some measures that combine vehicle access and store distance. Those should not be used as predictors if LA1and10 is the outcome, because they overlap mechanically with the definition of low access.\nFor the capstone paper:\n\nUse a pure vehicle availability measure, not a “low access and no vehicle” measure.\nUse race and ethnicity as shares of tract population rather than raw counts, since tract population sizes differ.\nIf you include multiple race-share variables, leave one group out as the reference category to avoid perfect collinearity.\nPoverty rate and median family income may be highly correlated, so check that early and decide whether both belong in the same model.\n\nCorrect and document the data-vintage issue more carefully.\nYour report says the dataset is limited to 2010 census data and 2019 food sources. That is partly right, but the current USDA Atlas is actually a mixed-vintage dataset:\n\nthe tract geography and some population allocation pieces come from the 2010 Census,\nincome and vehicle access measures come from the 2014-18 American Community Survey,\nrural and urban status uses the 2019 urban area definition,\nand store locations come from 2019 store directories.\n\nSome demographic counts in the Atlas still trace back to 2010 census tract counts. So the capstone paper should explicitly document the source year for each major variable rather than treating the whole dataset as one year. This also means your conclusions describe late-2010s food access patterns, not current conditions.\nAdd a spatial and descriptive section before the regression.\nYour paper will be much stronger if readers first see where low-access tracts are and how they differ descriptively from other tracts. Before the model, I recommend:\n\na New York map of census tracts colored by LA1and10,\na table comparing low-access and non-low-access tracts on poverty, income, no-vehicle share, and urban or rural status,\nand one simple figure showing low-access rates by county group or by urban versus rural tracts.\n\nThese descriptive pieces will make the later regression results much easier to interpret.\nThink about spatial dependence and clustered structure.\nNearby tracts are not truly independent. Tracts within the same county or metro area share infrastructure, transit systems, land use patterns, and retailer networks. At minimum, consider standard errors clustered by county. If you estimate a tract-level panel, you may also want county or regional controls to absorb broader area characteristics.\nIf prediction becomes a major part of the project, a purely random train/test split may overstate model performance because nearby tracts are similar. A county-based or metro-based validation split would be more convincing.\n\n\n\n\nReferences\n\nDraw on key background readings (recommended).\nFor your capstone paper and presentation, you may find it helpful to consult:\n\nUSDA ERS. Food Access Research Atlas: Documentation. (Essential for variable definitions, data sources, and tract classification rules.)\nRhone, A., Williams, R., & Dicken, C. (2022). Low-Income and Low-Foodstore-Access Census Tracts, 2015-19. USDA Economic Information Bulletin No. 236. (Most directly relevant to the current Atlas update.)\nVer Ploeg, M., et al. (2009). Access to Affordable and Nutritious Food: Measuring and Understanding Food Deserts and Their Consequences. USDA Economic Research Report No. 80.\nDutko, P., Ver Ploeg, M., & Farrigan, T. (2012). Characteristics and Influential Factors of Food Deserts. USDA Economic Research Report No. 140.\nWalker, R. E., Keane, C. R., & Burke, J. G. (2010). “Disparities and Access to Healthy Food in the United States: A Review of Food Deserts Literature.” Health & Place, 16(5), 876-884.\nSönmez, E., Lee, D., Gómez, M. I., & Fan, X. (2016). “Improving Food Bank Gleaning Operations: An Application in New York State”. American Journal of Agricultural Economics, 98(2), 549-563.\nPrendergast, C. (2017). “How Food Banks Use Markets to Feed the Poor” Journal of Economic Perspectives, 31(4), 145-162.\nPrendergast, C. (2022). “The Allocation of Food to Food Banks” Journal of Political Economy, 130(8), 1993-2017.\nSmith, V. & Goldstein, J. (2017). “Planet Money - Episode 665: The Free Food Market”. National Public Radio.\n\n\n\n\n\nQuestions to Think About as You Refine Your capstone paper\nYou do not need to answer all of these, but they may help you sharpen your analysis and policy narrative.\n1. Cross Section or Panel\n\nAre you using only one Atlas release, or will you combine multiple releases for the same census tracts?\nIf you combine releases, which variables truly vary over time and which are mostly fixed by construction?\n\n2. Urban and Rural Mechanisms\n\nWould it be cleaner to run separate urban and rural models, given that the USDA outcome itself uses different distance rules?\nAre the strongest predictors of low access the same in New York City as they are in rural western or northern New York?\n\n3. Variable Construction\n\nIs your vehicle variable a pure no-car measure, or is it already combined with distance to stores? If it is the latter, it overlaps too much with the outcome.\nWill you use race and ethnicity as shares, and how will you choose the omitted reference group?\n\n4. Interpretation\n\nIn a correlated random effects model, are your main results coming from changes within tracts over time, or from persistent differences across tracts?\nIf poverty rate is strongly associated with low food access, what mechanism do you have in mind: lower retailer incentives, transportation barriers, residential segregation, zoning, or something else?\n\n5. Policy Implications\n\nIf low vehicle access turns out to be the strongest predictor, does that point more toward transportation solutions than store-siting solutions?\nAre there high-income but low-access rural tracts in New York? Those would be interesting cases because they may require a very different policy response than low-income urban tracts.\n\n\nBest,\nByeong-Hak Choe\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "feedback/christopher-taratko-feedback-v2.html",
+    "href": "feedback/christopher-taratko-feedback-v2.html",
+    "title": "Housing Prices and Household Financial Behavior",
+    "section": "",
+    "text": "Dear Christopher,\nThank you for your updated work on this project. This is a solid and well-motivated research question. Housing prices plausibly shape household financial behavior in important ways, and your topic sits in a meaningful part of applied economics where household finance, housing markets, and macroeconomic conditions intersect. The question is accessible, policy relevant, and feasible for a capstone project. A panel design is also a sensible starting point.\nThe challenge is now whether the empirical design can separate a genuine effect of housing prices on household debt behavior from other forces that move both variables together. For your presentation and capstone paper, the most important priorities are to clarify the direction of causality, improve the model specification, and be very transparent about what your estimates can and cannot show.\nOverall, this can still become a strong capstone paper. The key is to frame the contribution carefully. Unless you can bring in stronger identifying variation, the project is best presented as an inference-based panel study that provides careful evidence on associations and mechanisms, rather than a paper that claims to prove a clean causal effect.\n\n\nNext Steps\nYou are working toward both the presentation and the capstone paper. Focus on clear causal reasoning, a carefully specified panel model, and honest interpretation of the evidence.\n\nAddress the reverse-causality problem directly.\nOne big challenge in your project is that housing prices and household debt can affect each other at the same time. This goes in both directions:\n\nWhen households take on more mortgage debt, housing demand can rise, which can push prices upward.\nWhen housing prices rise, households may need larger mortgages, which can raise debt ratios.\n\nThis means a regression of debt on housing prices is hard to interpret as one-directional. For the capstone paper:\n\nState clearly that the relationship may run in both directions.\nExplain why this makes causal interpretation difficult.\n\nBe explicit about omitted variables that move both prices and debt.\nMany state-level factors may influence both housing prices and household financial outcomes in the same period. These include:\n\nlocal income growth,\nlabor market conditions,\nlending standards and credit supply,\ndemographic change,\nstate housing and tax policy.\n\nEven with state fixed effects and year fixed effects, time-varying differences within states remain a concern. Your capstone paper should acknowledge this clearly and discuss which control variables you can include to reduce this problem.\nJustify the housing-price measure carefully.\nYour project will be stronger if you explain exactly how housing prices are measured and why that measure is appropriate. Housing price indices differ in coverage and construction.\n\nIf you use FHFA, explain that it has broad geographic coverage and is widely used for repeat-sales analysis.\nIf you use Case-Shiller, explain its strengths but also its more selective market coverage.\n\nThink carefully about aggregation and the unit of analysis.\nState-year data are workable, but they are also coarse. Large states contain very different housing markets, and state averages may hide important within-state differences.\n\nUrban and rural housing markets often move very differently.\nState-level debt ratios may change because the composition of borrowers changes, not only because behavior changes.\n\nIn the capstone paper, be upfront about what is lost by working at the state-year level. If county-year or metro-year level data are feasible, even for a smaller sample, discuss whether those could provide a sharper design.\nUse a thoughtful lag structure.\nHousing market changes are unlikely to affect debt ratios or delinquency immediately. Mortgage borrowing, refinancing, repayment stress, and delinquency often unfold over more than one year. For the capstone paper:\n\nMotivate the lag structure economically, not just statistically.\nConsider whether one-year, two-year, or multi-year lags make more sense for your outcome.\nExplain why your preferred lag aligns with the underlying mechanism you want to study.\n\nDo not let the 2008 crisis drive the entire story without saying so.\nIf your panel spans only about a dozen years, the Great Recession and housing crash may dominate the variation in both prices and debt outcomes. In that case, the regression may mostly be picking up that one common episode rather than a broader relationship. For the capstone paper:\n\nShow descriptive plots of housing prices and debt outcomes over time.\nConsider separate analysis for pre-crisis, crisis, and post-crisis periods if your sample allows.\nDiscuss whether your findings are general or mostly crisis-specific.\n\nSpecify the panel model clearly.\nA two-way fixed-effects model is the natural starting point here. You can present it as:\n\\[Y_{s,t} = \\beta_1 \\text{HousingPrice}_{s,t-k} + \\mathbf{X}_{s,t}'\\boldsymbol{\\gamma} + \\alpha_s + \\delta_t + \\varepsilon_{s,t}\\]\nwhere \\(s\\) indexes states, \\(t\\) indexes years, \\(\\alpha_s\\) are state fixed effects, \\(\\delta_t\\) are year fixed effects, and \\(\\mathbf{X}_{s,t}\\) is a vector of time-varying controls.\nThis model helps by:\n\ncontrolling for time-invariant state characteristics,\ncontrolling for nationwide shocks common to all states,\nfocusing on within-state changes over time.\n\nBut it does not by itself solve the two-way causality problem or all omitted-variable concerns. That limitation should be discussed directly.\nUse clustered standard errors at the state level.\nThis is essential because state-year observations are likely correlated within states over time. Without clustering, standard errors may look too small. If the panel is short, note that inference is still somewhat limited even with clustering.\nConsider useful extensions if time permits.\nYou do not need to do everything, but some extensions would add real value:\n\nState-specific time trends to absorb slow-moving divergence across states.\nSeparate outcomes for mortgage debt and unsecured debt.\nHeterogeneity analysis for high-price versus low-price states.\nPre- versus post-2008 comparisons.\n\nThese additions could make the paper much more informative even if the main results remain associational.\nThink about a stronger source of identifying variation.\nIf you want to push the paper closer to causality, one promising direction is to use variation in housing supply elasticity. The Saiz framework is especially relevant here because places with tighter geographic constraints may experience larger price changes for reasons less directly tied to short-run household borrowing behavior. Even if you do not implement a full instrumental-variables design, you should discuss this literature as a benchmark for stronger empirical strategies.\nAnchor the project in the core literature.\nYour capstone paper will be stronger if it is clearly situated in the household finance and housing literature. In particular, you should engage with:\n\nMian and Sufi on household debt and housing demand,\nGlaeser and Gyourko on housing supply,\nBhutta on mortgage debt dynamics.\n\nThese studies help define what counts as a convincing contribution in this area and will also help you describe your own paper more precisely.\n\n\n\n\nQuestions to Think About as You Refine Your capstone paper\nYou do not need to answer all of these now, but they may help you sharpen the project.\n1. What Is the Main Outcome?\n\nIs your primary outcome debt-to-income ratios, mortgage debt, or delinquency rates?\nThese variables capture different parts of household financial behavior. Your paper should identify one main outcome and explain why it is the most important for your question.\n\n2. What Is the Main Mechanism?\n\nAre rising housing prices increasing debt because households need larger mortgages?\nOr are rising prices relaxing borrowing constraints by increasing home equity?\nThese mechanisms point in different directions and may imply different model choices.\n\n3. How Will You Handle Timing?\n\nShould housing prices in year t affect debt outcomes in year t, year t+1, or later?\nWhat timing is most consistent with mortgage origination, refinancing, and eventual repayment stress?\n\n4. How Much of the Result Is Really the Great Recession?\n\nIf you drop the crisis years, do your estimates change substantially?\nIf so, your capstone paper should say clearly that the relationship may be concentrated in one unusual macroeconomic period.\n\n5. What Can You Claim?\n\nIf your design cannot fully separate changes in housing prices from other changes happening within states at the same time, how should you describe the result?\nA careful answer would be that the paper provides inference about association and mechanism, not a definitive causal estimate.\n\n\n\n\nRecommended Background Readings\nFor your capstone paper and presentation, you may find the following especially useful:\n\nMian, A., & Sufi, A. (2011). “House Prices, Home Equity-Based Borrowing, and the US Household Leverage Crisis.” American Economic Review, 101(5), 2132-2156. \nSaiz, A. (2010). “The Geographic Determinants of Housing Supply.” Quarterly Journal of Economics, 125(3), 1253-1296.\nGlaeser, E. L., & Gyourko, J. (2018). “The Economic Implications of Housing Supply.” Journal of Economic Perspectives, 32(1), 3-30.\nBhutta, N. (2015). “The Ins and Outs of Mortgage Debt during the Housing Boom and Bust.” FEDS Working Paper 2015-41, Board of Governors of the Federal Reserve System.\n\n\nBest,\nByeong-Hak Choe\n\n\n\n\n Back to top"
   },
   {
     "objectID": "danl-wk/wk-01.html",
@@ -978,19 +1118,5 @@
     "title": "Syllabus",
     "section": "Netiquette Policy",
     "text": "Netiquette Policy\n\nBefore contributing to a discussion board, verify if your question has already been asked and answered. Avoid repeating topics as you would in a real-life conversation.\n\nRemain focused on the topic. Refrain from posting unrelated links, comments, thoughts, or images.\n\nAvoid typing in all caps, as it may appear as if you’re shouting.\n\nSteer clear of writing anything that might be interpreted as angry or sarcastic, particularly as tone is hard to convey online.\n\nAlways use “Please” and “Thank you” when requesting assistance from peers or instructors.\n\nRespect differing viewpoints. If disagreeing, do so respectfully and acknowledge the merits of your classmates’ arguments.\n\nEnsure accuracy when responding to a peer’s query. If unsure, especially about deadlines, it’s better not to guess to avoid confusion.\n\nBe concise in your responses; lengthy replies to simple questions might not be read fully.\n\nIf multiple responses are received to your question, consider summarizing them for the benefit of the entire class.\n\nAvoid derogatory comments or insulting others’ intelligence. Disagree with ideas, not individuals.\n\nWhen referencing a previous discussion, quote only the essential lines to provide context without requiring others to search for the original post.\n\nPractice forgiveness. If a peer makes an error, do not dwell on it; everyone makes mistakes.\n\nBefore posting, run a spell and grammar check. This small effort can significantly impact how your message is perceived."
-  },
-  {
-    "objectID": "feedback/saya-kondo-feedback.html",
-    "href": "feedback/saya-kondo-feedback.html",
-    "title": "Do Sustainability Marketing Claims Reflect Reality? Evidence of Greenwashing in Corporate ESG Performance",
-    "section": "",
-    "text": "Dear Saya,\nThank you for your Research Kick-off Report. You have chosen a timely and important topic. The question of whether firms’ sustainability messaging actually matches their environmental performance is central to current debates about ESG investing, consumer trust, and corporate accountability. Your report identifies a clear research question, the stakeholder motivation is strong, and the firm-year structure is a sensible starting point for this kind of analysis. I also appreciate that you already recognize several real limitations, especially the difficulty of measuring communication quality with simple keyword counts and the fact that ESG scores are not perfectly consistent across providers.\nOverall, this project has strong potential. The main priorities for your presentation and final capstone paper are to define the greenwashing concept more precisely, strengthen the text-measurement strategy, expand the control variables beyond industry alone, and separate your inference goal from your prediction goal more clearly.\n\n\nNext Steps\nYou are working toward both the presentation and the final capstone project paper. Focus on careful variable construction, a well-specified regression for inference, and clear interpretation of what your results can and cannot say about causality.\n\nDefine greenwashing more precisely.\nRight now, the project asks whether firms that emphasize sustainability in their communications have better environmental performance. That is a good starting question, but it is not exactly the same as greenwashing. A firm can talk a lot about sustainability and still perform well. A firm can also talk very little and still perform poorly. For the final paper, clarify which of these you want to study:\n\nAlignment question: Do firms that talk more about sustainability also score better on environmental performance?\nMismatch question: Do some firms communicate much more sustainability language than their observed performance would justify?\n\nIf your deeper interest is greenwashing, you may want to construct a gap measure rather than relying only on a direct regression. For example, you could standardize both the marketing score and the environmental score, then define a firm as having a larger greenwashing gap when communication is high but environmental performance is low.\nImprove the sustainability marketing measure.\nA raw keyword count is probably too crude on its own. Firms with longer reports will naturally mention sustainability terms more often, even if sustainability is not especially central to the document. For the final paper, I recommend:\n\nNormalizing keyword counts by total document length, such as mentions per 1,000 or 10,000 words.\nSeparating broad ESG language from specific environmental claims. For example, words like “sustainable” and “responsible” are much broader than terms such as “carbon emissions,” “net zero,” “renewable energy,” or “scope 1 emissions.”\nManually reading a small validation sample of reports to check whether your dictionary is actually identifying meaningful claims rather than generic boilerplate language.\nConsidering a more focused outcome such as the share of sentences devoted to environmental claims rather than just total keyword frequency.\n\nExpand the control variable set.\nIndustry is important, but it is not enough by itself. Firms in energy, manufacturing, finance, and technology differ substantially in both environmental exposure and communication strategy. For the final paper, try to include at least several of the following controls if data are available:\n\nFirm size such as log assets, log sales, or market capitalization.\nProfitability such as return on assets or operating margin.\nLeverage or debt ratio.\nIndustry fixed effects because environmental scores differ structurally across sectors.\nYear fixed effects because ESG language and reporting norms have changed over time for all firms.\nReport length because longer reports mechanically create more chances for keyword matches.\n\nUse the panel structure if you truly have firm-year data.\nYour report says the unit of analysis will be firm-year observations. If that is feasible, the project becomes much stronger because you can compare firms to themselves over time rather than only comparing one firm to another. In that case, a firm fixed-effects model would be a strong choice:\n\\[\n\\text{EnvironmentalScore}_{i,t} = \\beta_1 \\text{MarketingScore}_{i,t} + \\mathbf{X}_{i,t}'\\boldsymbol{\\gamma} + \\alpha_i + \\delta_t + \\varepsilon_{i,t}\n\\]\nwhere \\(i\\) indexes firms, \\(t\\) indexes years, \\(\\alpha_i\\) captures time-invariant firm characteristics, and \\(\\delta_t\\) captures common year shocks such as changes in ESG disclosure norms or regulation.\nIf your data only contain one year per firm, then say so clearly and frame the analysis as a cross-sectional multiple regression instead.\nSeparate inference from prediction more clearly.\nYour current plan mixes several evaluation ideas that belong to different goals. If your main goal is inference, then the key outputs are coefficient estimates, confidence intervals, and careful interpretation. If your main goal is prediction, then train-test splits, cross-validation, and RMSE matter more. For your specific research question, I think inference is the more natural primary goal, because you are trying to understand whether communication and performance move together in a meaningful way. If you keep a predictive component, treat it as secondary.\nBe careful about causality and timing.\nEven if you find that firms with stronger sustainability communication also have higher environmental scores, that does not mean the communication caused the performance. It may be that firms with genuinely better environmental practices have more to say and therefore produce stronger sustainability messaging. To think more carefully about causality, consider:\n\nWhether the text score should be measured in year \\(t\\) and the ESG outcome in year \\(t+1\\).\nWhether lagged marketing communication predicts later environmental scores.\nWhether the more realistic interpretation is that communication reflects performance, rather than changes it.\n\nYou do not need to solve every causal issue, but your final paper should be explicit about what kind of claim your design can support.\nTreat overall ESG score as secondary to environmental score.\nSince your question is specifically about sustainability and environmental performance, the environmental score should be the primary outcome. The overall ESG score can be useful as a robustness check, but it combines environmental, social, and governance dimensions that may blur the main question. A company could have a high overall ESG score because of strong governance while still performing weakly on environmental outcomes.\nUse clustering only as a supporting extension.\nClustering could be useful, but it should not be the centerpiece of the capstone. A stronger core design would be:\n\ndescriptive statistics and visuals,\nregression analysis for inference,\noptional clustering as a way to illustrate groups such as high-marketing / high-performance, high-marketing / low-performance, low-marketing / high-performance, and low-marketing / low-performance.\n\nThat would make the clustering results easier to interpret and more closely tied to the main research question.\nClarify how the two datasets will be matched.\nMatching firm-year data is often harder than it looks. In the final paper, explain:\n\nWhich firm identifier you will use, such as ticker, company name, or CIK.\nHow you will handle name changes or mismatches across datasets.\nWhether the sustainability report and ESG score refer to the same reporting year.\nHow much data loss occurs after merging.\n\nInclude simple descriptive visuals in the presentation and final paper.\nA few clear visuals would immediately strengthen the project:\n\nA scatter plot of sustainability marketing score vs. environmental score with industry-colored points.\nA box plot of marketing score by industry to show which sectors use sustainability language most heavily.\nA four-quadrant plot showing high vs. low communication and high vs. low environmental performance, which is especially useful if you want to discuss greenwashing risk.\n\n\n\n\n\nReferences\n\nDraw on key background readings and policy sources.\nFor the final capstone paper and presentation, you may find it useful to consult and, where appropriate, cite the following:\n\nCoen, D., Herman, K., & Pegram, T. (2022). Are corporate climate efforts genuine? An empirical analysis of the climate ‘talk–walk’ hypothesis. Business Strategy and the Environment, 31(7), 3040-3059.\nWalker, K., & Wan, F (2012). The Harm of Symbolic Actions and Green-Washing: Corporate Actions and Communications on Environmental Performance and Their Financial Implications. Journal of Business Ethics, 109, 227-242.\nDelmas, M. A., & Burbano, V. C. (2011). The Drivers of Greenwashing. California Management Review, 54(1), 64-87.\nMarrucci, L., Iovino, R. and Iraldo, F. (2025). Environmental Sustainability Award Winners: Do They Communicate Their Environmental Performance Without Potential Greenwashing?. Corporate Social Responsiblity and Environmental Management, 32, 2783-2794.\nLyon, T. P., & Montgomery, A. W. (2015). The Means and End of Greenwash. Organization & Environment, 28(2), 223-249.\nZhang, K., Pan, Z., Janardhanan, M. et al. (2023). Relationship analysis between greenwashing and environmental performance. Environment, Development and Sustainability, 25, 7927-7957.\nBerg, F., Kölbel, J. F., & Rigobon, R. (2022). Aggregate Confusion: The Divergence of ESG Ratings. Review of Finance, 26(6), 1315-1344.\nFederal Trade Commission. Green Guides. This is especially useful for grounding the policy relevance of misleading environmental claims.\nU.S. Securities and Exchange Commission. The Enhancement and Standardization of Climate-Related Disclosures for Investors. This is helpful context for the broader disclosure environment facing public companies.\n\n\n\n\n\nQuestions to Think About as You Refine Your Capstone Project Paper\nYou do not need to answer all of these now, but they may help you sharpen your final design and interpretation.\n1. What exactly counts as greenwashing in your project?\n\nIs greenwashing simply a case where sustainability language is high and environmental performance is low?\nOr do you want to reserve that label for a more extreme mismatch, such as firms in the top quartile of communication but the bottom quartile of environmental performance?\nWould a gap measure or residual-based measure better match your concept than a simple regression coefficient?\n\n2. How strong is the text measure?\n\nIf a company issues a much longer sustainability report, does your method count that as stronger marketing even when the underlying message is similar?\nAre you measuring genuine environmental claims, or mostly generic corporate language?\nCould you validate the dictionary by hand on a sample of 20 to 30 reports?\n\n3. What is the main research goal: inference or prediction?\n\nIf the goal is inference, what coefficient is the main quantity of interest?\nIf the goal is prediction, what would count as good predictive performance, and why would prediction be the most useful outcome for stakeholders?\nDoes clustering add insight beyond what a regression and a few good visualizations already provide?\n\n4. How will you think about causality?\n\nIf you find a positive relationship, is the story that sustainability communication reflects real performance, or that firms with better performance choose to advertise it more?\nIf you find little or no relationship, does that suggest widespread greenwashing, noisy ESG measurement, or an overly simple text measure?\nWould using lagged communication or lagged outcomes help you think more clearly about timing?\n\n5. How should the results be presented to stakeholders?\n\nWhat would a regulator care about most: average alignment, extreme mismatch cases, or sector-specific patterns?\nWhat would an investor care about most: whether ESG language predicts actual environmental performance, or whether it fails to do so?\nHow would you explain your findings to a skeptical audience that already believes ESG scores and sustainability reports are both noisy?\n\n\nBest,\nByeong-Hak Choe\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "feedback/christopher-taratko-feedback-v2.html",
-    "href": "feedback/christopher-taratko-feedback-v2.html",
-    "title": "Housing Prices and Household Financial Behavior",
-    "section": "",
-    "text": "Dear Christopher,\nThank you for your updated work on this project. This is a solid and well-motivated research question. Housing prices plausibly shape household financial behavior in important ways, and your topic sits in a meaningful part of applied economics where household finance, housing markets, and macroeconomic conditions intersect. The question is accessible, policy relevant, and feasible for a capstone project. A panel design is also a sensible starting point.\nThe challenge is now whether the empirical design can separate a genuine effect of housing prices on household debt behavior from other forces that move both variables together. For your presentation and capstone paper, the most important priorities are to clarify the direction of causality, improve the model specification, and be very transparent about what your estimates can and cannot show.\nOverall, this can still become a strong capstone paper. The key is to frame the contribution carefully. Unless you can bring in stronger identifying variation, the project is best presented as an inference-based panel study that provides careful evidence on associations and mechanisms, rather than a paper that claims to prove a clean causal effect.\n\n\nNext Steps\nYou are working toward both the presentation and the capstone paper. Focus on clear causal reasoning, a carefully specified panel model, and honest interpretation of the evidence.\n\nAddress the reverse-causality problem directly.\nOne big challenge in your project is that housing prices and household debt can affect each other at the same time. This goes in both directions:\n\nWhen households take on more mortgage debt, housing demand can rise, which can push prices upward.\nWhen housing prices rise, households may need larger mortgages, which can raise debt ratios.\n\nThis means a regression of debt on housing prices is hard to interpret as one-directional. For the capstone paper:\n\nState clearly that the relationship may run in both directions.\nExplain why this makes causal interpretation difficult.\n\nBe explicit about omitted variables that move both prices and debt.\nMany state-level factors may influence both housing prices and household financial outcomes in the same period. These include:\n\nlocal income growth,\nlabor market conditions,\nlending standards and credit supply,\ndemographic change,\nstate housing and tax policy.\n\nEven with state fixed effects and year fixed effects, time-varying differences within states remain a concern. Your capstone paper should acknowledge this clearly and discuss which control variables you can include to reduce this problem.\nJustify the housing-price measure carefully.\nYour project will be stronger if you explain exactly how housing prices are measured and why that measure is appropriate. Housing price indices differ in coverage and construction.\n\nIf you use FHFA, explain that it has broad geographic coverage and is widely used for repeat-sales analysis.\nIf you use Case-Shiller, explain its strengths but also its more selective market coverage.\n\nThink carefully about aggregation and the unit of analysis.\nState-year data are workable, but they are also coarse. Large states contain very different housing markets, and state averages may hide important within-state differences.\n\nUrban and rural housing markets often move very differently.\nState-level debt ratios may change because the composition of borrowers changes, not only because behavior changes.\n\nIn the capstone paper, be upfront about what is lost by working at the state-year level. If county-year or metro-year level data are feasible, even for a smaller sample, discuss whether those could provide a sharper design.\nUse a thoughtful lag structure.\nHousing market changes are unlikely to affect debt ratios or delinquency immediately. Mortgage borrowing, refinancing, repayment stress, and delinquency often unfold over more than one year. For the capstone paper:\n\nMotivate the lag structure economically, not just statistically.\nConsider whether one-year, two-year, or multi-year lags make more sense for your outcome.\nExplain why your preferred lag aligns with the underlying mechanism you want to study.\n\nDo not let the 2008 crisis drive the entire story without saying so.\nIf your panel spans only about a dozen years, the Great Recession and housing crash may dominate the variation in both prices and debt outcomes. In that case, the regression may mostly be picking up that one common episode rather than a broader relationship. For the capstone paper:\n\nShow descriptive plots of housing prices and debt outcomes over time.\nConsider separate analysis for pre-crisis, crisis, and post-crisis periods if your sample allows.\nDiscuss whether your findings are general or mostly crisis-specific.\n\nSpecify the panel model clearly.\nA two-way fixed-effects model is the natural starting point here. You can present it as:\n\\[Y_{s,t} = \\beta_1 \\text{HousingPrice}_{s,t-k} + \\mathbf{X}_{s,t}'\\boldsymbol{\\gamma} + \\alpha_s + \\delta_t + \\varepsilon_{s,t}\\]\nwhere \\(s\\) indexes states, \\(t\\) indexes years, \\(\\alpha_s\\) are state fixed effects, \\(\\delta_t\\) are year fixed effects, and \\(\\mathbf{X}_{s,t}\\) is a vector of time-varying controls.\nThis model helps by:\n\ncontrolling for time-invariant state characteristics,\ncontrolling for nationwide shocks common to all states,\nfocusing on within-state changes over time.\n\nBut it does not by itself solve the two-way causality problem or all omitted-variable concerns. That limitation should be discussed directly.\nUse clustered standard errors at the state level.\nThis is essential because state-year observations are likely correlated within states over time. Without clustering, standard errors may look too small. If the panel is short, note that inference is still somewhat limited even with clustering.\nConsider useful extensions if time permits.\nYou do not need to do everything, but some extensions would add real value:\n\nState-specific time trends to absorb slow-moving divergence across states.\nSeparate outcomes for mortgage debt and unsecured debt.\nHeterogeneity analysis for high-price versus low-price states.\nPre- versus post-2008 comparisons.\n\nThese additions could make the paper much more informative even if the main results remain associational.\nThink about a stronger source of identifying variation.\nIf you want to push the paper closer to causality, one promising direction is to use variation in housing supply elasticity. The Saiz framework is especially relevant here because places with tighter geographic constraints may experience larger price changes for reasons less directly tied to short-run household borrowing behavior. Even if you do not implement a full instrumental-variables design, you should discuss this literature as a benchmark for stronger empirical strategies.\nAnchor the project in the core literature.\nYour capstone paper will be stronger if it is clearly situated in the household finance and housing literature. In particular, you should engage with:\n\nMian and Sufi on household debt and housing demand,\nGlaeser and Gyourko on housing supply,\nBhutta on mortgage debt dynamics.\n\nThese studies help define what counts as a convincing contribution in this area and will also help you describe your own paper more precisely.\n\n\n\n\nQuestions to Think About as You Refine Your capstone paper\nYou do not need to answer all of these now, but they may help you sharpen the project.\n1. What Is the Main Outcome?\n\nIs your primary outcome debt-to-income ratios, mortgage debt, or delinquency rates?\nThese variables capture different parts of household financial behavior. Your paper should identify one main outcome and explain why it is the most important for your question.\n\n2. What Is the Main Mechanism?\n\nAre rising housing prices increasing debt because households need larger mortgages?\nOr are rising prices relaxing borrowing constraints by increasing home equity?\nThese mechanisms point in different directions and may imply different model choices.\n\n3. How Will You Handle Timing?\n\nShould housing prices in year t affect debt outcomes in year t, year t+1, or later?\nWhat timing is most consistent with mortgage origination, refinancing, and eventual repayment stress?\n\n4. How Much of the Result Is Really the Great Recession?\n\nIf you drop the crisis years, do your estimates change substantially?\nIf so, your capstone paper should say clearly that the relationship may be concentrated in one unusual macroeconomic period.\n\n5. What Can You Claim?\n\nIf your design cannot fully separate changes in housing prices from other changes happening within states at the same time, how should you describe the result?\nA careful answer would be that the paper provides inference about association and mechanism, not a definitive causal estimate.\n\n\n\n\nRecommended Background Readings\nFor your capstone paper and presentation, you may find the following especially useful:\n\nMian, A., & Sufi, A. (2011). “House Prices, Home Equity-Based Borrowing, and the US Household Leverage Crisis.” American Economic Review, 101(5), 2132-2156. \nSaiz, A. (2010). “The Geographic Determinants of Housing Supply.” Quarterly Journal of Economics, 125(3), 1253-1296.\nGlaeser, E. L., & Gyourko, J. (2018). “The Economic Implications of Housing Supply.” Journal of Economic Perspectives, 32(1), 3-30.\nBhutta, N. (2015). “The Ins and Outs of Mortgage Debt during the Housing Boom and Bust.” FEDS Working Paper 2015-41, Board of Governors of the Federal Reserve System.\n\n\nBest,\nByeong-Hak Choe\n\n\n\n\n Back to top"
   }
 ]
