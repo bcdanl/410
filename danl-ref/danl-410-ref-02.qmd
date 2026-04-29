@@ -1,0 +1,272 @@
+---
+title: Reference 2
+subtitle: Quarto Website Basics
+date: 2026-01-26
+from: markdown+emoji
+---
+
+# Website Files (What Each File/Folder Does)
+
+::: {.columns}
+
+::: {.column width="50%"}
+<p align="center">
+  <img src="https://bcdanl.github.io/lec_figs/website-files-rstudio.png" style="width: 67%;">
+</p>
+:::
+
+::: {.column width="50%"}
+
+- **`_quarto.yml`** controls your website settings ✅  
+  - Structure (navbar, pages, blog listing, etc.)
+  - Theme + HTML options  
+  - If you edit `_quarto.yml`, run **`quarto render`** in the **Terminal** to rebuild the whole site.
+
+- **`index.qmd` → `index.html`** (your homepage) 🏠  
+  - This becomes the **front page** of your website.
+  - Do **not** create extra homepages like `index2.qmd`.
+
+- **`blog-listing.qmd`** sets up your blog page ✍️  
+  - It controls the page that lists all posts.
+
+- **`posts/`** contains your blog post folders 📂  
+  - Each post is stored in its own subfolder.
+
+- **`img/`** stores images (profile photo, icons, figures) 🖼️
+
+:::
+:::
+
+
+
+# File Naming Rules ✅
+
+- Every file in your website folder can be accessed by a URL.
+  - Example: `resume-example.pdf` becomes  
+    `https://USERNAME.github.io/resume-example.pdf`
+
+- **Never use spaces** in file names ❌  
+  - Bad: `danl 410 - ggplot.qmd`  
+  - Good: `danl-410-ggplot.qmd`
+
+- Use consistent naming for multiple files ✅  
+  - Example:
+    - `danl-410-cw-01.qmd`
+    - `danl-410-cw-02.qmd`
+    - `danl-410-cw-03.qmd`
+
+
+
+# Quarto Websites
+
+## The `_quarto.yml` File (Website Configuration)
+
+```yaml
+project:
+  type: website
+
+website:
+  title: "YOUR NAME"
+  navbar:
+    left:
+      - text: Project
+        href: project.qmd
+      - text: Blog
+        href: blog-listing.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: false
+```
+
+- `_quarto.yml` configures **your entire website**
+- ✅ **Indentation matters** in YAML (use 2 spaces consistently)
+
+
+
+## Opening the Website Project in RStudio
+
+- In RStudio, open your website project file: `USERNAME.github.io.Rproj`
+
+1. Click **Project: (None)** (top-right corner)
+2. Select **`USERNAME.github.io.Rproj`**
+
+✅ This ensures RStudio knows you are working inside your website folder.
+
+
+
+## Custom CSS (Optional)
+
+- **CSS** controls the visual design of a webpage:
+  - colors, fonts, spacing, layout, etc.
+
+Quick intuition:
+
+- **HTML** = structure of a house 🏠  
+- **CSS** = design (paint, wallpaper, carpet) 🎨  
+- **JavaScript** = interactive features (doors, lights, buttons) ⚡
+
+⚠️ We are not focusing on front-end development in this course.
+
+
+
+## Rendering (Building Your Site)
+
+- **Render button** *(Cmd/Ctrl + Shift + K)* renders **one file**
+- Use **Terminal** to rebuild the **entire website**:
+
+```bash
+quarto render
+```
+
+✅ Use `quarto render` especially when you change `_quarto.yml`.
+
+**Best practice**
+
+- Edit `_quarto.yml` and `.qmd` files **locally** (on your laptop)
+- Do **not** edit these files directly on the GitHub website
+
+
+
+## Appearance and Style
+
+### Theme
+- `theme` chooses a Bootswatch theme (visual style)
+  - Example themes: `cosmo`, `flatly`, `journal`, `yeti`, `darkly`, ...
+
+### Code Highlighting
+- `highlight-style` controls syntax coloring for code blocks
+  - Example styles: `atom-one`, `tango`, `espresso`, `zenburn`, ...
+
+
+
+## About Pages and Templates
+
+- Your `index.qmd` is usually your main **About Me** page 👤
+- Quarto “About page” options are documented here:  
+  - <https://quarto.org/docs/websites/website-about.html>
+
+Quarto also has built-in website templates:
+
+- `jolla`
+- `trestles`
+- `solana`
+- `marquee`
+- `broadside`
+
+
+
+## Icons and Emojis
+
+### Bootstrap Icons
+- <https://icons.getbootstrap.com>
+
+### Emoji Cheat Sheets
+- <https://github.com/ikatyang/emoji-cheat-sheet>  
+- <https://gist.github.com/rxaviers/7360908>  
+
+(In R: `emo::ji("smile")`)
+
+
+
+## Navigation Bar (Adding Pages)
+
+### Add a Page Link
+```yaml
+navbar:
+  left:
+    - text: Project
+      href: project.qmd
+    - text: Blog
+      href: blog-listing.qmd
+    - text: Homework
+      href: hw.qmd
+```
+
+✅ Add new pages by including them in `navbar`.
+
+### Add a Dropdown Menu
+```yaml
+navbar:
+  left:
+    - text: "Projects"
+      menu:
+        - project_1.qmd
+        - project_2.qmd
+```
+
+More details:
+
+- <https://quarto.org/docs/websites/website-navigation.html>
+
+
+
+## Colors (Hex Codes)
+
+- Find hex color codes here:
+  - <https://www.color-hex.com>
+
+
+
+# Blogging
+
+## Blog Rules ✅
+
+1. **One blog post = one folder** inside `posts/`
+2. Put everything for the post inside that folder:
+   - `.qmd` file
+   - images (`.png`, `.jpg`)
+   - any extra files
+3. When inserting images, use **relative paths**:
+   - example: `myplot.png` (not a full URL)
+
+
+
+# Practice Problems ✅
+
+1. Customize your homepage:
+   - Replace `YOUR NAME` in `_quarto.yml` and `index.qmd`
+   - Write a short bio in `index.qmd`
+   - Add your profile photo to `img/`
+   - Fix links (resume, LinkedIn, email, etc.)
+
+2. Add a navbar link for **R Basics**
+   - Link to your file (example: `danl-410-quarto-r.qmd`)
+
+3. Update your GitHub website using 3 git commands:
+   - `git add`
+   - `git commit`
+   - `git push`
+
+
+
+<br><br>
+
+## References
+- [Quarto - Creating a Website](https://quarto.org/docs/websites/)
+- [Quarto - HTML Basics](https://quarto.org/docs/output-formats/html-basics.html)
+- [Quarto - HTML Code Blocks](https://quarto.org/docs/output-formats/html-code.html)
+- [Quarto - HTML Theming](https://quarto.org/docs/output-formats/html-themes.html)
+- [Quarto - Creating a Blog](https://quarto.org/docs/websites/website-blog.html)
+
+
+
+
+
+# Discussion
+
+
+<font size = "5">Welcome to our Reference 2 Discussion Board! 👋 </font>
+
+
+This space is designed for you to engage with your classmates about the material covered in Reference 2.
+
+Whether you are looking to delve deeper into the content, share insights, or have questions about the content, this is the perfect place for you.
+
+If you have any specific questions for Byeong-Hak (**@bcdanl**) regarding the Reference 2 materials or need clarification on any points, don't hesitate to ask here. 
+
+All comments will be stored [here](https://github.com/bcdanl/410-spr-2026-discussion/discussions).
+
+Let's collaborate and learn from each other!

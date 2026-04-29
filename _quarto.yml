@@ -39,6 +39,8 @@ website:
         href: listing-danl-410-cw.qmd
       - text: 💻 Homework
         href: listing-danl-410-hw.qmd
+      - text: 📚 References
+        href: listing-danl-410-ref.qmd
         
       - section: 🗣️️ Project
         contents:
