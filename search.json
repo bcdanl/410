@@ -88,7 +88,7 @@
     "href": "index.html#lecture",
     "title": "DANL 410: Data Analytics Capstone, Spring 2026",
     "section": "🚀 Lecture",
-    "text": "🚀 Lecture\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nLecture 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\nLecture 4\n\n\nLaTeX Math Notation and Quarto Workflow for Capstone Papers\n\n\nMay 4, 2026\n\n\n\n\nLecture 4\n\n\nLaTeX Math Notation and Quarto Workflow for Capstone Papers\n\n\nMay 4, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "🚀 Lecture\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nLecture 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\nLecture 4\n\n\nLaTeX Math Notation and Quarto Workflow for Capstone Papers\n\n\nMay 4, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#classwork",
@@ -1306,7 +1306,7 @@
     "href": "listing-danl-410-lec.html",
     "title": "DANL 410 - Lecture",
     "section": "",
-    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nLecture 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\nLecture 4\n\n\nLaTeX Math Notation and Quarto Workflow for Capstone Papers\n\n\nMay 4, 2026\n\n\n\n\nLecture 4\n\n\nLaTeX Math Notation and Quarto Workflow for Capstone Papers\n\n\nMay 4, 2026\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nLecture 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\nLecture 4\n\n\nLaTeX Math Notation and Quarto Workflow for Capstone Papers\n\n\nMay 4, 2026\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "feedback/marcus-lewis-feedback.html",
@@ -1536,127 +1536,127 @@
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#why-use-latex-math-notation",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#why-use-latex-math-notation",
     "title": "Lecture 4",
-    "section": "2.1 Why use LaTeX math notation?",
-    "text": "2.1 Why use LaTeX math notation?\nIn empirical research papers, mathematical notation helps us describe models, variables, hypotheses, and results clearly.\nFor example, instead of writing:\n\nOutcome equals intercept plus beta times treatment plus error.\n\nWe can write:\n\\[\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_i\n\\]\nThis is shorter, cleaner, and more professional."
+    "section": "Why use LaTeX math notation?",
+    "text": "Why use LaTeX math notation?\nIn empirical research papers, mathematical notation helps us describe models, variables, hypotheses, and results clearly.\nFor example, instead of writing:\n\nOutcome equals intercept plus beta times treatment plus error.\n\nWe can write:\n\\[\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_{it}\n\\]\nThis is shorter, cleaner, and more professional."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#inline-math",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#inline-math",
     "title": "Lecture 4",
-    "section": "2.2 Inline math",
-    "text": "2.2 Inline math\nUse single dollar signs for math that appears inside a sentence.\nThe coefficient $\\beta_1$ measures the relationship between $X_{it}$ and $Y_{it}$.\nThis renders as:\nThe coefficient \\(\\beta_1\\) measures the relationship between \\(X_{it}\\) and \\(Y_{it}\\)."
+    "section": "Inline math",
+    "text": "Inline math\nUse single dollar signs for math that appears inside a sentence.\nThe coefficient $\\beta_1$ measures the relationship between $X_{it}$ and $Y_{it}$.\nThis renders as:\nThe coefficient \\(\\beta_1\\) measures the relationship between \\(X_{it}\\) and \\(Y_{it}\\)."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#display-math",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#display-math",
     "title": "Lecture 4",
-    "section": "2.3 Display math",
-    "text": "2.3 Display math\nUse double dollar signs for equations that should appear on their own line.\n$$\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_i\n$$\nThis renders as:\n\\[\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_i\n\\]"
+    "section": "Display math",
+    "text": "Display math\nUse double dollar signs for equations that should appear on their own line.\n$$\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_{it}\n$$\nThis renders as:\n\\[\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_{it}\n\\]"
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#greek-letters",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#greek-letters",
     "title": "Lecture 4",
-    "section": "2.4 Greek letters",
-    "text": "2.4 Greek letters\nMany statistical and econometric models use Greek letters.\n\n\n\nLaTeX code\nOutput\nMeaning\n\n\n\n\n\\alpha\n\\(\\alpha\\)\nalpha\n\n\n\\beta\n\\(\\beta\\)\nbeta\n\n\n\\gamma\n\\(\\gamma\\)\ngamma\n\n\n\\delta\n\\(\\delta\\)\ndelta\n\n\n\\varepsilon\n\\(\\varepsilon\\)\nerror term\n\n\n\\sigma\n\\(\\sigma\\)\nstandard deviation\n\n\n\\mu\n\\(\\mu\\)\nmean\n\n\n\nExample:\nThe error term is written as $\\varepsilon_i$."
+    "section": "Greek letters",
+    "text": "Greek letters\nMany statistical and econometric models use Greek letters.\n\n\n\nLaTeX code\nOutput\nMeaning\n\n\n\n\n\\alpha\n\\(\\alpha\\)\nalpha\n\n\n\\beta\n\\(\\beta\\)\nbeta\n\n\n\\gamma\n\\(\\gamma\\)\ngamma\n\n\n\\delta\n\\(\\delta\\)\ndelta\n\n\n\\varepsilon\n\\(\\varepsilon\\)\nerror term\n\n\n\\sigma\n\\(\\sigma\\)\nstandard deviation\n\n\n\\mu\n\\(\\mu\\)\nmean\n\n\n\nExample:\nThe error term is written as $\\varepsilon_i$."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#subscripts-and-superscripts",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#subscripts-and-superscripts",
     "title": "Lecture 4",
-    "section": "2.5 Subscripts and superscripts",
-    "text": "2.5 Subscripts and superscripts\nUse _ for subscripts and ^ for superscripts.\n$Y_{it}$\n\n$X_{it}$\n\n$R^2$\n\n$X_{it}^2$\nThese render as:\n\\(Y_{it}\\)\n\\(X_{it}\\)\n\\(R^2\\)\n\\(X_{it}^2\\)\nUse curly braces {} when the subscript or superscript has more than one character.\nCorrect:\n$X_{it}$\nLess clear:\n$X_{it}t$"
+    "section": "Subscripts and superscripts",
+    "text": "Subscripts and superscripts\nUse _ for subscripts and ^ for superscripts.\n$Y_{it}$\n\n$X_{it}$\n\n$R^2$\n\n$X_{it}^2$\nThese render as:\n\\(Y_{it}\\)\n\\(X_{it}\\)\n\\(R^2\\)\n\\(X_{it}^2\\)\nUse curly braces {} when the subscript or superscript has more than one character.\nCorrect:\n$X_{it}$\nLess clear:\n$X_{it}t$"
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#fractions",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#fractions",
     "title": "Lecture 4",
-    "section": "2.6 Fractions",
-    "text": "2.6 Fractions\nUse \\frac{numerator}{denominator}.\n$$\n\\bar{X} = \\frac{1}{n}\\sum_{i=1}^{n} X_{it}\n$$\nThis renders as:\n\\[\n\\bar{X} = \\frac{1}{n}\\sum_{i=1}^{n} X_{it}\n\\]"
+    "section": "Fractions",
+    "text": "Fractions\nUse \\frac{numerator}{denominator}.\n$$\n\\bar{X} = \\frac{1}{n}\\sum_{i=1}^{n} X_{it}\n$$\nThis renders as:\n\\[\n\\bar{X} = \\frac{1}{n}\\sum_{i=1}^{n} X_{it}\n\\]"
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#summation-notation",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#summation-notation",
     "title": "Lecture 4",
-    "section": "2.7 Summation notation",
-    "text": "2.7 Summation notation\nUse \\sum.\n$$\n\\sum_{i=1}^{n} X_{it}\n$$\nThis renders as:\n\\[\n\\sum_{i=1}^{n} X_{it}\n\\]\nExample: sample mean\n\\[\n\\bar{X} = \\frac{1}{n}\\sum_{i=1}^{n} X_{it}\n\\]"
+    "section": "Summation notation",
+    "text": "Summation notation\nUse \\sum.\n$$\n\\sum_{i=1}^{n} X_{it}\n$$\nThis renders as:\n\\[\n\\sum_{i=1}^{n} X_{it}\n\\]\nExample: sample mean\n\\[\n\\bar{X} = \\frac{1}{n}\\sum_{i=1}^{n} X_{it}\n\\]"
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#square-roots",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#square-roots",
     "title": "Lecture 4",
-    "section": "2.8 Square roots",
-    "text": "2.8 Square roots\nUse \\sqrt{}.\n$$\nRMSE = \\sqrt{\\frac{1}{n}\\sum_{i=1}^{n}(Y_{it} - \\hat{y}_i)^2}\n$$\nThis renders as:\n\\[\nRMSE = \\sqrt{\\frac{1}{n}\\sum_{i=1}^{n}(Y_{it} - \\hat{y}_i)^2}\n\\]"
+    "section": "Square roots",
+    "text": "Square roots\nUse \\sqrt{}.\n$$\nRMSE = \\sqrt{\\frac{1}{n}\\sum_{i=1}^{n}(Y_{it} - \\hat{Y}_{it})^2}\n$$\nThis renders as:\n\\[\nRMSE = \\sqrt{\\frac{1}{n}\\sum_{i=1}^{n}(Y_{it} - \\hat{Y}_{it})^2}\n\\]"
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#hats-bars-and-other-accents",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#hats-bars-and-other-accents",
     "title": "Lecture 4",
-    "section": "2.9 Hats, bars, and other accents",
-    "text": "2.9 Hats, bars, and other accents\n\n\n\nLaTeX code\nOutput\nCommon meaning\n\n\n\n\n\\hat{Y}\n\\(\\hat{Y}\\)\npredicted value\n\n\n\\bar{X}\n\\(\\bar{X}\\)\nsample mean\n\n\n\\tilde{X}\n\\(\\tilde{X}\\)\ntransformed variable\n\n\n\\widehat{\\beta}\n\\(\\widehat{\\beta}\\)\nestimated coefficient\n\n\n\nExample:\nThe fitted value is $\\hat{Y}_i$."
+    "section": "Hats, bars, and other accents",
+    "text": "Hats, bars, and other accents\n\n\n\nLaTeX code\nOutput\nCommon meaning\n\n\n\n\n\\bar{X}\n\\(\\bar{X}\\)\nsample mean\n\n\n\\widehat{Y}\n\\(\\widehat{Y}\\)\npredicted value\n\n\n\\widetilde{X}\n\\(\\widetilde{X}\\)\ntransformed variable\n\n\n\\widehat{\\beta}\n\\(\\widehat{\\beta}\\)\nestimated coefficient\n\n\n\nExample:\nThe fitted value is $\\hat{Y}_i$."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#parentheses-and-brackets",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#parentheses-and-brackets",
     "title": "Lecture 4",
-    "section": "2.10 Parentheses and brackets",
-    "text": "2.10 Parentheses and brackets\nCommon symbols:\n$(x)$\n\n$[x]$\n\n$\\{x\\}$\n\n$\\left( \\frac{x}{y} \\right)$\nThese render as:\n\\((x)\\)\n\\([x]\\)\n\\(\\{x\\}\\)\n\\(\\left( \\frac{x}{y} \\right)\\)\nThe commands \\left and \\right automatically adjust the size of parentheses."
+    "section": "Parentheses and brackets",
+    "text": "Parentheses and brackets\nCommon symbols:\n$(x)$\n\n$[x]$\n\n$\\{x\\}$\n\n$\\left( \\frac{x}{y} \\right)$\nThese render as:\n\\((x)\\)\n\\([x]\\)\n\\(\\{x\\}\\)\n\\(\\left( \\frac{x}{y} \\right)\\)\nThe commands \\left and \\right automatically adjust the size of parentheses."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#regression-equation-basic-linear-model",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#regression-equation-basic-linear-model",
     "title": "Lecture 4",
-    "section": "2.11 Regression equation: basic linear model",
-    "text": "2.11 Regression equation: basic linear model\nA simple regression model can be written as:\n\\[\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_i\n\\]\nwhere:\n\n\\(Y_{it}\\) is the outcome variable for observation \\(i\\).\n\\(X_{it}\\) is the explanatory variable.\n\\(\\beta_0\\) is the intercept.\n\\(\\beta_1\\) is the slope coefficient.\n\\(\\varepsilon_i\\) is the error term."
+    "section": "Regression equation: basic linear model",
+    "text": "Regression equation: basic linear model\nA simple regression model can be written as:\n\\[\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_{it}\n\\]\nwhere:\n\n\\(Y_{it}\\) is the outcome variable for observation \\(i\\).\n\\(X_{it}\\) is the explanatory variable.\n\\(\\beta_0\\) is the intercept.\n\\(\\beta_1\\) is the slope coefficient.\n\\(\\varepsilon_{it}\\) is the error term."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#regression-equation-multiple-regression",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#regression-equation-multiple-regression",
     "title": "Lecture 4",
-    "section": "2.12 Regression equation: multiple regression",
-    "text": "2.12 Regression equation: multiple regression\nA multiple regression model can be written as:\n\\[\nY_{it} = \\beta_0 + \\beta_1 X_{1i} + \\beta_2 X_{2i} + \\beta_3 X_{3i} + \\varepsilon_i\n\\]\nA more compact version is:\n\\[\nY_{it} = \\beta_0 + \\mathbf{X}_i'\\boldsymbol{\\beta} + \\varepsilon_i\n\\]\nwhere \\(\\mathbf{X}_i\\) is a vector of explanatory variables."
+    "section": "Regression equation: multiple regression",
+    "text": "Regression equation: multiple regression\nA multiple regression model can be written as:\n\\[\nY_{it} = \\beta_0 + \\beta_1 X_{1i} + \\beta_2 X_{2i} + \\beta_3 X_{3i} + \\varepsilon_{it}\n\\]\nA more compact version is:\n\\[\nY_{it} = \\beta_0 + \\mathbf{X}_{it}'\\boldsymbol{\\beta} + \\varepsilon_{it}\n\\]\nwhere \\(\\mathbf{X}_i\\) is a vector of explanatory variables."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#regression-equation-panel-data-model",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#regression-equation-panel-data-model",
     "title": "Lecture 4",
-    "section": "2.13 Regression equation: panel data model",
-    "text": "2.13 Regression equation: panel data model\nFor panel data, we often use two subscripts:\n\n\\(i\\) for unit, such as person, county, firm, or country.\n\\(t\\) for time, such as year, month, or day.\n\nExample:\n\\[\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\gamma' Z_{it} + \\alpha_i + \\lambda_t + \\varepsilon_{it}\n\\]\nwhere:\n\n\\(Y_{it}\\) is the outcome for unit \\(i\\) at time \\(t\\).\n\\(X_{it}\\) is the main explanatory variable.\n\\(Z_{it}\\) is a vector of control variables.\n\\(\\alpha_i\\) represents unit fixed effects.\n\\(\\lambda_t\\) represents time fixed effects.\n\\(\\varepsilon_{it}\\) is the error term."
+    "section": "Regression equation: panel data model",
+    "text": "Regression equation: panel data model\n\n\n\nFor panel data, we often use two subscripts:\n\n\\(i\\) for unit, such as person, county, firm, or country.\n\\(t\\) for time, such as year, month, or day.\n\n\n\n\nExample:\n\n\n\n\\[\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\gamma' Z_{it} + \\alpha_i + \\lambda_t + \\varepsilon_{it}\n\\]\n\n\n\nwhere:\n\n\\(Y_{it}\\) is the outcome for unit \\(i\\) at time \\(t\\).\n\\(X_{it}\\) is the main explanatory variable.\n\\(Z_{it}\\) is a vector of control variables.\n\\(\\alpha_i\\) & \\(\\lambda_t\\): unit fixed effects & time fixed effects respectively.\n\\(\\varepsilon_{it}\\) is the error term."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#log-models",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#log-models",
     "title": "Lecture 4",
-    "section": "2.14 Log models",
-    "text": "2.14 Log models\nA log-linear model:\n\\[\n\\log(Y_{it}) = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_i\n\\]\nA log-log model:\n\\[\n\\log(Y_{it}) = \\beta_0 + \\beta_1 \\log(X_{it}) + \\varepsilon_i\n\\]\nIn a log-log model, \\(\\beta_1\\) can often be interpreted as an elasticity:\n\nA 1% increase in \\(X\\) is associated with approximately a \\(\\beta_1\\)% change in \\(Y\\)."
+    "section": "Log models",
+    "text": "Log models\nA log-linear model:\n\\[\n\\log(Y_{it}) = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_{it}\n\\]\nA log-log model:\n\\[\n\\log(Y_{it}) = \\beta_0 + \\beta_1 \\log(X_{it}) + \\varepsilon_{it}\n\\]\nIn a log-log model, \\(\\beta_1\\) can often be interpreted as an elasticity:\n\nA 1% increase in \\(X\\) is associated with approximately a \\(\\beta_1\\)% change in \\(Y\\)."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#hypotheses",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#hypotheses",
     "title": "Lecture 4",
-    "section": "2.15 Hypotheses",
-    "text": "2.15 Hypotheses\nHypotheses can be written as:\n\\[\nH_0: \\beta_1 = 0\n\\]\n\\[\nH_A: \\beta_1 \\neq 0\n\\]\nOr, for a one-sided test:\n\\[\nH_A: \\beta_1 &gt; 0\n\\]"
+    "section": "Hypotheses",
+    "text": "Hypotheses\nHypotheses can be written as:\n\\[\nH_0: \\beta_1 = 0\n\\]\n\\[\nH_A: \\beta_1 \\neq 0\n\\]\nOr, for a one-sided test:\n\\[\nH_A: \\beta_1 &gt; 0\n\\]"
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#common-latex-mistakes",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#common-latex-mistakes",
     "title": "Lecture 4",
-    "section": "2.16 Common LaTeX mistakes",
-    "text": "2.16 Common LaTeX mistakes\n\n2.16.1 Mistake 1: Forgetting dollar signs\nIncorrect:\nThe coefficient beta_1 is positive.\nCorrect:\nThe coefficient $\\beta_1$ is positive.\n\n\n2.16.2 Mistake 2: Using plain text inside math mode\nLess ideal:\n$Y = beta0 + beta1 X$\nBetter:\n$Y = \\beta_0 + \\beta_1 X$\n\n\n2.16.3 Mistake 3: Missing curly braces\nLess clear:\n$X_{it}t$\nBetter:\n$X_{it}$"
+    "section": "Common LaTeX mistakes",
+    "text": "Common LaTeX mistakes\nMistake 1: Forgetting dollar signs\nIncorrect:\nThe coefficient beta_1 is positive.\nCorrect:\nThe coefficient $\\beta_1$ is positive."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#why-use-quarto-for-a-capstone-paper",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#why-use-quarto-for-a-capstone-paper",
     "title": "Lecture 4",
-    "section": "3.1 Why use Quarto for a capstone paper?",
-    "text": "3.1 Why use Quarto for a capstone paper?\nQuarto allows you to combine:\n\nwritten explanation,\ncode,\ntables,\nfigures,\nmathematical notation,\ncitations,\nand final output files,\n\nall in one reproducible document.\nA capstone paper should not only show results. It should also show a clear and reproducible workflow."
+    "section": "Why use Quarto for a capstone paper?",
+    "text": "Why use Quarto for a capstone paper?\n\n\n\nQuarto allows you to combine:\n\nwritten explanation,\ncode,\ntables,\nfigures,\nmathematical notation,\ncitations,\nand final output files,\n\n\n\n\nall in one reproducible document.\nA capstone paper should not only show results. It should also show a clear and reproducible workflow."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#recommended-project-structure",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#recommended-project-structure",
     "title": "Lecture 4",
-    "section": "3.2 Recommended project structure",
-    "text": "3.2 Recommended project structure\nA good capstone project folder may look like this:\ncapstone-project/\n│\n├── capstone-paper.qmd\n│\n├── code/\n│   ├── 01_data_cleaning.R\n│   ├── 02_analysis.R\n│   └── 03_modeling.R\n│\n├── output/\n│   ├── cleaned_data.csv\n│   ├── regression_table.html\n│   └── figures/\n│       ├── figure_1.png\n│       └── figure_2.png\n│\n└── website/\n    ├── index.qmd\n    └── _quarto.yml\nThis is only one possible structure. The most important idea is that your files should be organized intentionally."
+    "section": "Recommended project structure",
+    "text": "Recommended project structure\n\n\n\nFor this course, your personal GitHub website folder may contain a separate subdirectory for the capstone project.\n\n\n\n\n\nA good website folder may look like this:\nwebsite/\n├── index.qmd\n├── capstone-project/\n│   ├── index.qmd\n│   ├── capstone-paper.qmd\n│   ├── code/\n│   │   ├── 01_data_cleaning.R\n│   │   ├── 02_analysis.R\n│   │   └── 03_modeling.R\n│   └── output/\n│       ├── beta_estimates.csv\n│       └── figures/\n│           ├── figure_1.png\n│           └── figure_2.png\n└── data/\n    └── cleaned_data.csv\n\nIn this structure, capstone-project/ is a subdirectory of the website directory.\nThis is useful because your main website can contain many pages, and the capstone project can live inside its own folder."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#important-tip-data-files-can-be-outside-the-website-directory",
@@ -1683,15 +1683,15 @@
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#example-reading-data-from-an-online-url",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#example-reading-data-from-an-online-url",
     "title": "Lecture 4",
-    "section": "3.6 Example: reading data from an online URL",
-    "text": "3.6 Example: reading data from an online URL\nIf your data is public, you can also read it from a URL.\n\n# Example only\n# library(readr)\n# my_data &lt;- read_csv(\"https://example.com/my_data.csv\")\n\nThis can be useful when the data is publicly available and stable."
+    "section": "Example: reading data from an online URL",
+    "text": "Example: reading data from an online URL\nIf your data is public, you can also read it from a URL.\n\n# Example only\n# library(tidyverse)\n# my_data &lt;- read_csv(\"https://example.com/my_data.csv\")\n\nThis can be useful when the data is publicly available and stable."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#example-using-an-absolute-path-during-development",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#example-using-an-absolute-path-during-development",
     "title": "Lecture 4",
-    "section": "3.7 Example: using an absolute path during development",
-    "text": "3.7 Example: using an absolute path during development\nDuring early development, you may use an absolute path on your computer:\nmy_data &lt;- readr::read_csv(\"/Users/yourname/Documents/capstone-data/my_data.csv\")\nHowever, this is not ideal for final submission because this path only works on your own computer.\nA better final version is usually a relative path:\nmy_data &lt;- readr::read_csv(\"../data/my_data.csv\")\nOr a public/shareable URL:\nmy_data &lt;- readr::read_csv(\"https://example.com/my_data.csv\")"
+    "section": "Example: using an absolute path during development",
+    "text": "Example: using an absolute path during development\nDuring early development, you may use an absolute path on your computer:\nmy_data &lt;- readr::read_csv(\"/Users/yourname/Documents/capstone-data/my_data.csv\")\nHowever, this is not ideal for final submission because this path only works on your own computer.\nA better final version is usually a relative path:\nmy_data &lt;- readr::read_csv(\"../data/cleaned_data.csv\")\nOr a public/shareable URL:\nmy_data &lt;- readr::read_csv(\"https://USERNAME.github.io/data/my_data.csv\")"
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#working-directory-intuition",
@@ -1767,71 +1767,71 @@
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#example-methods-section",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#example-methods-section",
     "title": "Lecture 4",
-    "section": "4.1 Example methods section",
-    "text": "4.1 Example methods section\nHere is an example paragraph for a methods section:\n\nTo examine the relationship between neighborhood characteristics and housing prices, I estimate the following regression model:\n\n\\[\n\\log(Price_i) = \\beta_0 + \\beta_1 SchoolQualitY_{it} + \\beta_2 Size_i + \\beta_3 Age_i + \\varepsilon_i\n\\]\n\nThe dependent variable is the log of housing price. The main explanatory variable is school quality. The model also controls for house size and age. The coefficient \\(\\beta_1\\) measures the association between school quality and housing prices, holding the other included variables constant."
+    "section": "Example methods section",
+    "text": "Example methods section\nHere is an example paragraph for a methods section:\n\nTo examine the relationship between neighborhood characteristics and housing prices, I estimate the following regression model:\n\n\\[\n\\log(Price_i) = \\beta_0 + \\beta_1 SchoolQuality_i + \\beta_2 Size_i + \\beta_3 Age_i + \\varepsilon_{it}\n\\]\n\nThe dependent variable is the log of housing price. The main explanatory variable is school quality. The model also controls for house size and age. The coefficient \\(\\beta_1\\) measures the association between school quality and housing prices, holding the other included variables constant. One limitation of this model is that omitted variables (such as neighborhood amenities) may bias the estimated relationship."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#example-interpretation",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#example-interpretation",
     "title": "Lecture 4",
-    "section": "4.2 Example interpretation",
-    "text": "4.2 Example interpretation\nSuppose the estimated model is:\n\\[\n\\log(Price_i) = 2.1 + 0.04 SchoolQualitY_{it} + 0.002 Size_i - 0.01 Age_i\n\\]\nThen one possible interpretation is:\n\nHolding house size and age constant, a one-unit increase in school quality is associated with an approximately 4% increase in housing price."
+    "section": "Example interpretation",
+    "text": "Example interpretation\nSuppose the estimated model is:\n\\[\n\\log(Price_i) = 2.1 + 0.04 SchoolQuality_i + 0.002 Size_i - 0.01 Age_i\n\\]\nThen one possible interpretation is:\n\nHolding house size and age constant, a one-unit increase in school quality is associated with an approximately 4% increase in housing price."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#example-model-with-prediction",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#example-model-with-prediction",
     "title": "Lecture 4",
-    "section": "4.3 Example model with prediction",
-    "text": "4.3 Example model with prediction\nFor a predictive modeling project, you may write:\n\\[\n\\hat{Y}_i = f(X_{it})\n\\]\nwhere \\(f(\\cdot)\\) is a prediction function learned from the training data.\nFor example, in a random forest model:\n\\[\n\\hat{Y}_i = \\frac{1}{B}\\sum_{b=1}^{B} T_b(X_{it})\n\\]\nwhere \\(T_b(X_{it})\\) is the prediction from tree \\(b\\), and \\(B\\) is the number of trees."
+    "section": "Example model with prediction",
+    "text": "Example model with prediction\nFor a predictive modeling project, you may write:\n\\[\n\\hat{Y}_i = f(X_{it})\n\\]\nwhere \\(f(\\cdot)\\) is a prediction function learned from the training data.\nFor example, in a random forest model:\n\\[\n\\hat{Y}_i = \\frac{1}{B}\\sum_{b=1}^{B} T_b(X_{it})\n\\]\nwhere \\(T_b(X_{it})\\) is the prediction from tree \\(b\\), and \\(B\\) is the number of trees."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#tip-1-use-relative-paths-when-possible",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#tip-1-use-relative-paths-when-possible",
     "title": "Lecture 4",
-    "section": "5.1 Tip 1: Use relative paths when possible",
-    "text": "5.1 Tip 1: Use relative paths when possible\nGood:\nread_csv(\"../data/my_data.csv\")\nLess ideal for final submission:\nread_csv(\"/Users/yourname/Desktop/my_data.csv\")"
+    "section": "Tip 1: Use relative paths when possible",
+    "text": "Tip 1: Use relative paths when possible\nGood when data/ is a sibling folder of capstone-project/:\nread_csv(\"../data/cleaned_data.csv\")\nLess ideal for final submission:\nread_csv(\"/Users/yourname/Desktop/my_data.csv\")"
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#tip-2-do-not-upload-private-data-to-a-public-website",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#tip-2-do-not-upload-private-data-to-a-public-website",
     "title": "Lecture 4",
-    "section": "5.2 Tip 2: Do not upload private data to a public website",
-    "text": "5.2 Tip 2: Do not upload private data to a public website\nIf your data contains sensitive or private information, do not publish it on GitHub Pages.\nInstead, submit the data privately through Brightspace or share it through a secure cloud link."
+    "section": "Tip 2: Do not upload private data to a public website",
+    "text": "Tip 2: Do not upload private data to a public website\nIf your data contains sensitive or private information, do not publish it on GitHub Pages.\nInstead, submit the data privately through Brightspace or share it through a secure cloud link."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#tip-3-keep-file-names-simple",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#tip-3-keep-file-names-simple",
     "title": "Lecture 4",
-    "section": "5.3 Tip 3: Keep file names simple",
-    "text": "5.3 Tip 3: Keep file names simple\nGood file names:\ncapstone-paper.qmd\ncleaned_data.csv\nhousing_model_results.csv\nfigure_1_price_distribution.png\nAvoid file names like:\nfinal final real final paper!!!.qmd\nmy data (copy) version 7.csv"
+    "section": "Tip 3: Keep file names simple",
+    "text": "Tip 3: Keep file names simple\nGood file names:\ncapstone-paper.qmd\ncleaned_data.csv\nhousing_model_results.csv\nfigure_1_price_distribution.png\nAvoid file names like:\nfinal final real final paper!!!.qmd\nmy data (copy) version 7.csv"
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#tip-4-avoid-spaces-in-file-names",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#tip-4-avoid-spaces-in-file-names",
     "title": "Lecture 4",
-    "section": "5.4 Tip 4: Avoid spaces in file names",
-    "text": "5.4 Tip 4: Avoid spaces in file names\nThis is better:\ncleaned_data.csv\nThis can cause problems:\ncleaned data.csv"
+    "section": "Tip 4: Avoid spaces in file names",
+    "text": "Tip 4: Avoid spaces in file names\nThis is better:\ncleaned_data.csv\nThis can cause problems:\ncleaned data.csv"
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#tip-5-use-comments-in-code",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#tip-5-use-comments-in-code",
     "title": "Lecture 4",
-    "section": "5.5 Tip 5: Use comments in code",
-    "text": "5.5 Tip 5: Use comments in code\nGood comments explain the purpose of the code.\n# Load cleaned data for the final analysis\ndf &lt;- read_csv(\"../data/cleaned_data.csv\")\nAvoid comments that simply repeat the code.\n# Read csv\ndf &lt;- read_csv(\"../data/cleaned_data.csv\")"
+    "section": "Tip 5: Use comments in code",
+    "text": "Tip 5: Use comments in code\nGood comments explain the purpose of the code.\n# Load cleaned data for the final analysis\ndf &lt;- read_csv(\"../data/cleaned_data.csv\")\nAvoid comments that simply repeat the code.\n# Read csv\ndf &lt;- read_csv(\"../data/cleaned_data.csv\")"
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#tip-6-use-section-headings-clearly",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#tip-6-use-section-headings-clearly",
     "title": "Lecture 4",
-    "section": "5.6 Tip 6: Use section headings clearly",
-    "text": "5.6 Tip 6: Use section headings clearly\nUse one # for major sections:\n# Introduction\nUse two ## for subsections:\n## Data source\nUse three ### for smaller subsections:\n### Variable construction"
+    "section": "Tip 6: Use section headings clearly",
+    "text": "Tip 6: Use section headings clearly\nUse one # for major sections:\n# Introduction\nUse two ## for subsections:\n## Data source\nUse three ### for smaller subsections:\n### Variable construction"
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#practice-1-convert-text-to-math-notation",
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#practice-1-convert-text-to-math-notation",
     "title": "Lecture 4",
-    "section": "7.1 Practice 1: Convert text to math notation",
-    "text": "7.1 Practice 1: Convert text to math notation\nWrite your model equation in LaTeX math notation:"
+    "section": "Practice 1: Convert text to math notation",
+    "text": "Practice 1: Convert text to math notation\nWrite your model equation in LaTeX math notation:"
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#practice-2-fix-the-file-path",
@@ -2242,6 +2242,90 @@
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504-revised.html#practice-2-write-an-explanation-for-the-model-equation",
     "href": "danl-lec/danl-410-lec-04-2026-0504-revised.html#practice-2-write-an-explanation-for-the-model-equation",
+    "title": "Lecture 4",
+    "section": "Practice 2: Write an explanation for the model equation",
+    "text": "Practice 2: Write an explanation for the model equation\nWrite a paragraph for your model in the methods section\nFill in the following model using variables from your own capstone project:\n\\[\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_{it}\n\\]\nThen explain:\n\nWhat is \\(Y_{it}\\)?\nWhat is \\(X_{it}\\)?\nWhat does \\(\\beta_1\\) mean?\nWhat is one limitation of this model?"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#common-latex-mistakes-1",
+    "href": "danl-lec/danl-410-lec-04-2026-0504.html#common-latex-mistakes-1",
+    "title": "Lecture 4",
+    "section": "Common LaTeX mistakes",
+    "text": "Common LaTeX mistakes\nMistake 2: Using plain text inside math mode\nLess ideal:\n$Y = beta0 + beta1 X$\nBetter:\n$Y = \\beta_0 + \\beta_1 X$"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#common-latex-mistakes-2",
+    "href": "danl-lec/danl-410-lec-04-2026-0504.html#common-latex-mistakes-2",
+    "title": "Lecture 4",
+    "section": "Common LaTeX mistakes",
+    "text": "Common LaTeX mistakes\nMistake 3: Missing curly braces\nLess clear:\n$X_it$\nBetter:\n$X_{it}$"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#important-tip-data-files-can-be-outside-the-capstone-project-working-directory",
+    "href": "danl-lec/danl-410-lec-04-2026-0504.html#important-tip-data-files-can-be-outside-the-capstone-project-working-directory",
+    "title": "Lecture 4",
+    "section": "Important tip: data files can be outside the capstone project working directory",
+    "text": "Important tip: data files can be outside the capstone project working directory\nA common mistake is putting every file inside the capstone project folder.\nThat is not always necessary.\nFor example, suppose your capstone project page is here:\nwebsite/capstone-project/index.qmd\nYour data file can be outside the capstone-project/ folder but still inside the broader website folder:\nwebsite/data/cleaned_data.csv\nIn your Quarto file inside capstone-project/, you can read the data using a relative path:\ndata &lt;- readr::read_csv(\"../data/cleaned_data.csv\")\nThe .. means “go up one folder.”\nSo this path:\n../data/cleaned_data.csv\nmeans:\n\nStart inside website/capstone-project/.\nGo up to website/.\nGo into data/.\nRead cleaned_data.csv.\n\nThis is the key idea: the data file does not have to be inside the same folder as the .qmd file."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#why-keep-large-or-private-data-outside-the-public-website-directory",
+    "href": "danl-lec/danl-410-lec-04-2026-0504.html#why-keep-large-or-private-data-outside-the-public-website-directory",
+    "title": "Lecture 4",
+    "section": "Why keep large or private data outside the public website directory?",
+    "text": "Why keep large or private data outside the public website directory?\nThere are several reasons:\n\nLarge data files can make your website repository messy.\nSome data files should not be publicly posted.\nGitHub Pages is mainly for publishing webpages, not storing large raw datasets.\nKeeping data separate makes your project easier to organize.\nYou can submit or share data separately through Brightspace, Google Drive, OneDrive, SharePoint, or Dropbox.\n\nFor a public project website, it is often better to keep large or private data outside the public website repository and provide a separate data file or secure link in the final submission."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#example-reading-data-from-a-folder-outside-the-capstone-project-folder",
+    "href": "danl-lec/danl-410-lec-04-2026-0504.html#example-reading-data-from-a-folder-outside-the-capstone-project-folder",
+    "title": "Lecture 4",
+    "section": "Example: reading data from a folder outside the capstone project folder",
+    "text": "Example: reading data from a folder outside the capstone project folder\n\n# Example only\n# This code assumes the data file exists at ../data/cleaned_data.csv\n\n# library(tidyverse)\n# my_data &lt;- read_csv(\"../data/cleaned_data.csv\")"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#step-1-organize-the-data",
+    "href": "danl-lec/danl-410-lec-04-2026-0504.html#step-1-organize-the-data",
+    "title": "Lecture 4",
+    "section": "Step 1: Organize the data",
+    "text": "Step 1: Organize the data\nRecommended data workflow:\n\nStart with raw data.\nClean and transform the data.\nSave a cleaned version.\nUse the cleaned version for visualization and modeling.\n\nExample:\nraw data → cleaning script → cleaned data → figures/tables/models"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#step-2-write-the-paper-structure",
+    "href": "danl-lec/danl-410-lec-04-2026-0504.html#step-2-write-the-paper-structure",
+    "title": "Lecture 4",
+    "section": "Step 2: Write the paper structure",
+    "text": "Step 2: Write the paper structure\nA typical empirical capstone paper may include:\n1. Introduction\n2. Background and Related Literature\n3. Data\n4. Empirical Strategy / Methods\n5. Results\n6. Discussion and Implications\n7. Conclusion\n8. References\n9. Appendix"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#step-3-write-code-in-chunks",
+    "href": "danl-lec/danl-410-lec-04-2026-0504.html#step-3-write-code-in-chunks",
+    "title": "Lecture 4",
+    "section": "Step 3: Write code in chunks",
+    "text": "Step 3: Write code in chunks\nExample R code chunk:\n::: {.cell}\n\n:::"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#step-4-separate-final-results-from-scratch-work",
+    "href": "danl-lec/danl-410-lec-04-2026-0504.html#step-4-separate-final-results-from-scratch-work",
+    "title": "Lecture 4",
+    "section": "Step 4: Separate final results from scratch work",
+    "text": "Step 4: Separate final results from scratch work\nYour final capstone paper should include polished results.\nIt should not include every piece of trial-and-error code.\nFor example, do not include five failed versions of the same graph in the final paper. Keep only the final version and explain why it matters."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#step-5-render-frequently",
+    "href": "danl-lec/danl-410-lec-04-2026-0504.html#step-5-render-frequently",
+    "title": "Lecture 4",
+    "section": "Step 5: Render frequently",
+    "text": "Step 5: Render frequently\nDo not wait until the deadline to render your Quarto file.\nRender frequently while working.\nThis helps you catch problems early, such as:\n\nmissing packages,\nbroken file paths,\nsyntax errors,\nmissing images,\nincorrect YAML,\nor LaTeX math errors."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#step-6-check-both-the-website-and-the-submitted-files",
+    "href": "danl-lec/danl-410-lec-04-2026-0504.html#step-6-check-both-the-website-and-the-submitted-files",
+    "title": "Lecture 4",
+    "section": "Step 6: Check both the website and the submitted files",
+    "text": "Step 6: Check both the website and the submitted files\nBefore submitting, check:\n\nDoes the rendered HTML webpage open correctly?\nAre all figures visible?\nAre all tables visible?\nDoes the code run?\nAre file paths correct?\nDid you submit the .qmd file?\nDid you submit required data files or links?\nDid you include code files if your code is not fully embedded in the .qmd file?"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#practice-2-write-an-explanation-for-the-model-equation",
+    "href": "danl-lec/danl-410-lec-04-2026-0504.html#practice-2-write-an-explanation-for-the-model-equation",
     "title": "Lecture 4",
     "section": "Practice 2: Write an explanation for the model equation",
     "text": "Practice 2: Write an explanation for the model equation\nWrite a paragraph for your model in the methods section\nFill in the following model using variables from your own capstone project:\n\\[\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_{it}\n\\]\nThen explain:\n\nWhat is \\(Y_{it}\\)?\nWhat is \\(X_{it}\\)?\nWhat does \\(\\beta_1\\) mean?\nWhat is one limitation of this model?"
