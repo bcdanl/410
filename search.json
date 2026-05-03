@@ -2329,5 +2329,19 @@
     "title": "Lecture 4",
     "section": "Practice 2: Write an explanation for the model equation",
     "text": "Practice 2: Write an explanation for the model equation\nWrite a paragraph for your model in the methods section\nFill in the following model using variables from your own capstone project:\n\\[\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_{it}\n\\]\nThen explain:\n\nWhat is \\(Y_{it}\\)?\nWhat is \\(X_{it}\\)?\nWhat does \\(\\beta_1\\) mean?\nWhat is one limitation of this model?"
+  },
+  {
+    "objectID": "index.html#rocket-lecture",
+    "href": "index.html#rocket-lecture",
+    "title": "",
+    "section": ":rocket: Lecture",
+    "text": ":rocket: Lecture"
+  },
+  {
+    "objectID": "index.html#keyboard-classwork",
+    "href": "index.html#keyboard-classwork",
+    "title": "",
+    "section": ":keyboard: Classwork",
+    "text": ":keyboard: Classwork"
   }
 ]

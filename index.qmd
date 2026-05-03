@@ -37,16 +37,16 @@ listing:
     sort-ui: false
     filter-ui: false
     page-size: 36
-  - id: danl-410-hw
-    contents: "danl-hw/danl-410*.qmd"
-    type: table
-    fields: [title, subtitle, date]
-    sort: 
-      - "title"
-      - "date"
-    sort-ui: false
-    filter-ui: false
-    page-size: 36
+  # - id: danl-410-hw
+  #   contents: "danl-hw/danl-410*.qmd"
+  #   type: table
+  #   fields: [title, subtitle, date]
+  #   sort: 
+  #     - "title"
+  #     - "date"
+  #   sort-ui: false
+  #   filter-ui: false
+  #   page-size: 36
     
 format: 
   html:
@@ -101,9 +101,5 @@ format:
 :::{#danl-410-cw}
 :::
 
-<!-- ## :computer: Homework -->
-
-<!-- :::{#danl-410-hw} -->
-<!-- ::: -->
 
 
