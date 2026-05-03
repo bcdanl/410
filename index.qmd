@@ -101,9 +101,9 @@ format:
 :::{#danl-410-cw}
 :::
 
-## :computer: Homework
+<!-- ## :computer: Homework -->
 
-:::{#danl-410-hw}
-:::
+<!-- :::{#danl-410-hw} -->
+<!-- ::: -->
 
 
