@@ -1,0 +1,855 @@
+---
+title: Lecture 4
+subtitle: LaTeX Math Notation and Quarto Workflow for Capstone Papers
+author:
+  - name: Byeong-Hak Choe
+    email: bchoe@geneseo.edu
+    affiliations: SUNY Geneseo
+date: 2026-05-04
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    number-sections: true
+    code-fold: false
+    code-overflow: wrap
+execute:
+  echo: true
+  eval: false
+  warning: false
+  message: false
+---
+
+# Learning goals
+
+By the end of this lecture, students should be able to:
+
+1. Write common mathematical expressions using LaTeX notation in Quarto.
+2. Distinguish between inline math and display math.
+3. Write regression equations clearly in an empirical paper.
+4. Organize a capstone paper project using a reproducible Quarto workflow.
+5. Understand why data files do **not** always need to be inside the website working directory.
+
+# Part 1: LaTeX math notation in Quarto {background-color="#1c4982"}
+
+## Why use LaTeX math notation?
+
+In empirical research papers, mathematical notation helps us describe models, variables, hypotheses, and results clearly.
+
+For example, instead of writing:
+
+> Outcome equals intercept plus beta times treatment plus error.
+
+We can write:
+
+$$
+Y_{it} = \beta_0 + \beta_1 X_{it} + \varepsilon_i
+$$
+
+This is shorter, cleaner, and more professional.
+
+## Inline math
+
+Use single dollar signs for math that appears inside a sentence.
+
+```markdown
+The coefficient $\beta_1$ measures the relationship between $X_{it}$ and $Y_{it}$.
+```
+
+This renders as:
+
+The coefficient $\beta_1$ measures the relationship between $X_{it}$ and $Y_{it}$.
+
+## Display math
+
+Use double dollar signs for equations that should appear on their own line.
+
+```markdown
+$$
+Y_{it} = \beta_0 + \beta_1 X_{it} + \varepsilon_i
+$$
+```
+
+This renders as:
+
+$$
+Y_{it} = \beta_0 + \beta_1 X_{it} + \varepsilon_i
+$$
+
+## Greek letters
+
+Many statistical and econometric models use Greek letters.
+
+| LaTeX code | Output | Meaning |
+|---|---:|---|
+| `\alpha` | $\alpha$ | alpha |
+| `\beta` | $\beta$ | beta |
+| `\gamma` | $\gamma$ | gamma |
+| `\delta` | $\delta$ | delta |
+| `\varepsilon` | $\varepsilon$ | error term |
+| `\sigma` | $\sigma$ | standard deviation |
+| `\mu` | $\mu$ | mean |
+
+Example:
+
+```markdown
+The error term is written as $\varepsilon_i$.
+```
+
+## Subscripts and superscripts
+
+Use `_` for subscripts and `^` for superscripts.
+
+```markdown
+$Y_{it}$
+
+$X_{it}$
+
+$R^2$
+
+$X_{it}^2$
+```
+
+These render as:
+
+$Y_{it}$
+
+$X_{it}$
+
+$R^2$
+
+$X_{it}^2$
+
+Use curly braces `{}` when the subscript or superscript has more than one character.
+
+Correct:
+
+```markdown
+$X_{it}$
+```
+
+Less clear:
+
+```markdown
+$X_{it}t$
+```
+
+## Fractions
+
+Use `\frac{numerator}{denominator}`.
+
+```markdown
+$$
+\bar{X} = \frac{1}{n}\sum_{i=1}^{n} X_{it}
+$$
+```
+
+This renders as:
+
+$$
+\bar{X} = \frac{1}{n}\sum_{i=1}^{n} X_{it}
+$$
+
+## Summation notation
+
+Use `\sum`.
+
+```markdown
+$$
+\sum_{i=1}^{n} X_{it}
+$$
+```
+
+This renders as:
+
+$$
+\sum_{i=1}^{n} X_{it}
+$$
+
+Example: sample mean
+
+$$
+\bar{X} = \frac{1}{n}\sum_{i=1}^{n} X_{it}
+$$
+
+## Square roots
+
+Use `\sqrt{}`.
+
+```markdown
+$$
+RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(Y_{it} - \hat{y}_i)^2}
+$$
+```
+
+This renders as:
+
+$$
+RMSE = \sqrt{\frac{1}{n}\sum_{i=1}^{n}(Y_{it} - \hat{y}_i)^2}
+$$
+
+## Hats, bars, and other accents
+
+| LaTeX code | Output | Common meaning |
+|---|---:|---|
+| `\hat{Y}` | $\hat{Y}$ | predicted value |
+| `\bar{X}` | $\bar{X}$ | sample mean |
+| `\tilde{X}` | $\tilde{X}$ | transformed variable |
+| `\widehat{\beta}` | $\widehat{\beta}$ | estimated coefficient |
+
+Example:
+
+```markdown
+The fitted value is $\hat{Y}_i$.
+```
+
+## Parentheses and brackets
+
+Common symbols:
+
+```markdown
+$(x)$
+
+$[x]$
+
+$\{x\}$
+
+$\left( \frac{x}{y} \right)$
+```
+
+These render as:
+
+$(x)$
+
+$[x]$
+
+$\{x\}$
+
+$\left( \frac{x}{y} \right)$
+
+The commands `\left` and `\right` automatically adjust the size of parentheses.
+
+## Regression equation: basic linear model
+
+A simple regression model can be written as:
+
+$$
+Y_{it} = \beta_0 + \beta_1 X_{it} + \varepsilon_i
+$$
+
+where:
+
+- $Y_{it}$ is the outcome variable for observation $i$.
+- $X_{it}$ is the explanatory variable.
+- $\beta_0$ is the intercept.
+- $\beta_1$ is the slope coefficient.
+- $\varepsilon_i$ is the error term.
+
+## Regression equation: multiple regression
+
+A multiple regression model can be written as:
+
+$$
+Y_{it} = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \beta_3 X_{3i} + \varepsilon_i
+$$
+
+A more compact version is:
+
+$$
+Y_{it} = \beta_0 + \mathbf{X}_i'\boldsymbol{\beta} + \varepsilon_i
+$$
+
+where $\mathbf{X}_i$ is a vector of explanatory variables.
+
+## Regression equation: panel data model
+
+For panel data, we often use two subscripts:
+
+- $i$ for unit, such as person, county, firm, or country.
+- $t$ for time, such as year, month, or day.
+
+Example:
+
+$$
+Y_{it} = \beta_0 + \beta_1 X_{it} + \gamma' Z_{it} + \alpha_i + \lambda_t + \varepsilon_{it}
+$$
+
+where:
+
+- $Y_{it}$ is the outcome for unit $i$ at time $t$.
+- $X_{it}$ is the main explanatory variable.
+- $Z_{it}$ is a vector of control variables.
+- $\alpha_i$ represents unit fixed effects.
+- $\lambda_t$ represents time fixed effects.
+- $\varepsilon_{it}$ is the error term.
+
+## Log models
+
+A log-linear model:
+
+$$
+\log(Y_{it}) = \beta_0 + \beta_1 X_{it} + \varepsilon_i
+$$
+
+A log-log model:
+
+$$
+\log(Y_{it}) = \beta_0 + \beta_1 \log(X_{it}) + \varepsilon_i
+$$
+
+In a log-log model, $\beta_1$ can often be interpreted as an elasticity:
+
+> A 1% increase in $X$ is associated with approximately a $\beta_1$% change in $Y$.
+
+## Hypotheses
+
+Hypotheses can be written as:
+
+$$
+H_0: \beta_1 = 0
+$$
+
+$$
+H_A: \beta_1 \neq 0
+$$
+
+Or, for a one-sided test:
+
+$$
+H_A: \beta_1 > 0
+$$
+
+## Common LaTeX mistakes
+
+### Mistake 1: Forgetting dollar signs
+
+Incorrect:
+
+```markdown
+The coefficient beta_1 is positive.
+```
+
+Correct:
+
+```markdown
+The coefficient $\beta_1$ is positive.
+```
+
+### Mistake 2: Using plain text inside math mode
+
+Less ideal:
+
+```markdown
+$Y = beta0 + beta1 X$
+```
+
+Better:
+
+```markdown
+$Y = \beta_0 + \beta_1 X$
+```
+
+### Mistake 3: Missing curly braces
+
+Less clear:
+
+```markdown
+$X_{it}t$
+```
+
+Better:
+
+```markdown
+$X_{it}$
+```
+
+# Part 2: Quarto workflow for a capstone paper {background-color="#1c4982"}
+
+## Why use Quarto for a capstone paper?
+
+Quarto allows you to combine:
+
+- written explanation,
+- code,
+- tables,
+- figures,
+- mathematical notation,
+- citations,
+- and final output files,
+
+all in one reproducible document.
+
+A capstone paper should not only show results. It should also show a clear and reproducible workflow.
+
+## Recommended project structure
+
+A good capstone project folder may look like this:
+
+```text
+capstone-project/
+│
+├── capstone-paper.qmd
+│
+├── code/
+│   ├── 01_data_cleaning.R
+│   ├── 02_analysis.R
+│   └── 03_modeling.R
+│
+├── output/
+│   ├── cleaned_data.csv
+│   ├── regression_table.html
+│   └── figures/
+│       ├── figure_1.png
+│       └── figure_2.png
+│
+└── website/
+    ├── index.qmd
+    └── _quarto.yml
+```
+
+This is only one possible structure. The most important idea is that your files should be organized intentionally.
+
+## Important tip: data files can be outside the website directory
+
+A common mistake is putting every file inside the website folder.
+
+That is not always necessary.
+
+For example, suppose your website folder is:
+
+```text
+capstone-project/website/
+```
+
+Your data file can still be outside that folder:
+
+```text
+capstone-project/data/my_data.csv
+```
+
+In your Quarto file inside the website folder, you can read the data using a relative path:
+
+```r
+data <- readr::read_csv("../data/my_data.csv")
+```
+
+The `..` means “go up one folder.”
+
+So this path:
+
+```text
+../data/my_data.csv
+```
+
+means:
+
+1. Start inside `website/`.
+2. Go up to `capstone-project/`.
+3. Go into `data/`.
+4. Read `my_data.csv`.
+
+## Why keep large data outside the website directory?
+
+There are several reasons:
+
+1. Large data files can make your website repository messy.
+2. Some data files should not be publicly posted.
+3. GitHub Pages is mainly for publishing webpages, not storing large raw datasets.
+4. Keeping data separate makes your project easier to organize.
+5. You can submit or share data separately through Brightspace, Google Drive, OneDrive, SharePoint, or Dropbox.
+
+## Example: reading data from a folder outside the website
+
+```{r}
+# Example only
+# This code assumes the data file exists at ../data/my_data.csv
+
+# library(readr)
+# my_data <- read_csv("../data/my_data.csv")
+```
+
+## Example: reading data from an online URL
+
+If your data is public, you can also read it from a URL.
+
+```{r}
+# Example only
+# library(readr)
+# my_data <- read_csv("https://example.com/my_data.csv")
+```
+
+This can be useful when the data is publicly available and stable.
+
+## Example: using an absolute path during development
+
+During early development, you may use an absolute path on your computer:
+
+```r
+my_data <- readr::read_csv("/Users/yourname/Documents/capstone-data/my_data.csv")
+```
+
+However, this is not ideal for final submission because this path only works on your own computer.
+
+A better final version is usually a relative path:
+
+```r
+my_data <- readr::read_csv("../data/my_data.csv")
+```
+
+Or a public/shareable URL:
+
+```r
+my_data <- readr::read_csv("https://example.com/my_data.csv")
+```
+
+## Working directory intuition
+
+The working directory is the folder where R or Quarto looks for files by default.
+
+In Quarto, the working directory is usually the folder that contains the `.qmd` file being rendered.
+
+For example, if you render this file:
+
+```text
+capstone-project/website/index.qmd
+```
+
+then relative paths are interpreted from:
+
+```text
+capstone-project/website/
+```
+
+So:
+
+```r
+read_csv("data/my_data.csv")
+```
+
+looks for:
+
+```text
+capstone-project/website/data/my_data.csv
+```
+
+But:
+
+```r
+read_csv("../data/my_data.csv")
+```
+
+looks for:
+
+```text
+capstone-project/data/my_data.csv
+```
+
+## Recommended workflow for the capstone paper
+
+## Step 1: Start with a clear research question
+
+A weak research question:
+
+> I want to study housing prices.
+
+A stronger research question:
+
+> How do neighborhood characteristics predict housing prices in Monroe County?
+
+A still stronger version:
+
+> How does school district quality relate to housing prices in Monroe County after controlling for property characteristics?
+
+## Step 2: Organize the data
+
+Recommended data workflow:
+
+1. Start with raw data.
+2. Clean and transform the data.
+3. Save a cleaned version.
+4. Use the cleaned version for visualization and modeling.
+
+Example:
+
+```text
+raw data → cleaning script → cleaned data → figures/tables/models
+```
+
+## Step 3: Write the paper structure
+
+A typical empirical capstone paper may include:
+
+```text
+1. Introduction
+2. Background and Motivation
+3. Data
+4. Methods
+5. Results
+6. Discussion
+7. Conclusion
+8. References
+```
+
+## Step 4: Write code in chunks
+
+Example R code chunk:
+
+````markdown
+```{r}
+library(tidyverse)
+
+df <- read_csv("../data/my_data.csv")
+
+df |> 
+  summarise(
+    avg_y = mean(y, na.rm = TRUE),
+    avg_x = mean(x, na.rm = TRUE)
+  )
+```
+````
+
+## Step 5: Separate final results from scratch work
+
+Your final capstone paper should include polished results.
+
+It should not include every piece of trial-and-error code.
+
+For example, do not include five failed versions of the same graph in the final paper. Keep only the final version and explain why it matters.
+
+## Step 6: Render frequently
+
+Do not wait until the deadline to render your Quarto file.
+
+Render frequently while working.
+
+This helps you catch problems early, such as:
+
+- missing packages,
+- broken file paths,
+- syntax errors,
+- missing images,
+- incorrect YAML,
+- or LaTeX math errors.
+
+## Step 7: Check both the website and the submitted files
+
+Before submitting, check:
+
+1. Does the rendered HTML webpage open correctly?
+2. Are all figures visible?
+3. Are all tables visible?
+4. Does the code run?
+5. Are file paths correct?
+6. Did you submit the `.qmd` file?
+7. Did you submit required data files or links?
+8. Did you include code files if your code is not fully embedded in the `.qmd` file?
+
+# Part 3: Writing equations in the capstone paper {background-color="#1c4982"}
+
+## Example methods section
+
+Here is an example paragraph for a methods section:
+
+> To examine the relationship between neighborhood characteristics and housing prices, I estimate the following regression model:
+
+$$
+\log(Price_i) = \beta_0 + \beta_1 SchoolQualitY_{it} + \beta_2 Size_i + \beta_3 Age_i + \varepsilon_i
+$$
+
+> The dependent variable is the log of housing price. The main explanatory variable is school quality. The model also controls for house size and age. The coefficient $\beta_1$ measures the association between school quality and housing prices, holding the other included variables constant.
+
+## Example interpretation
+
+Suppose the estimated model is:
+
+$$
+\log(Price_i) = 2.1 + 0.04 SchoolQualitY_{it} + 0.002 Size_i - 0.01 Age_i
+$$
+
+Then one possible interpretation is:
+
+> Holding house size and age constant, a one-unit increase in school quality is associated with an approximately 4% increase in housing price.
+
+## Example model with prediction
+
+For a predictive modeling project, you may write:
+
+$$
+\hat{Y}_i = f(X_{it})
+$$
+
+where $f(\cdot)$ is a prediction function learned from the training data.
+
+For example, in a random forest model:
+
+$$
+\hat{Y}_i = \frac{1}{B}\sum_{b=1}^{B} T_b(X_{it})
+$$
+
+where $T_b(X_{it})$ is the prediction from tree $b$, and $B$ is the number of trees.
+
+# Part 4: Practical Quarto tips {background-color="#1c4982"}
+
+## Tip 1: Use relative paths when possible
+
+Good:
+
+```r
+read_csv("../data/my_data.csv")
+```
+
+Less ideal for final submission:
+
+```r
+read_csv("/Users/yourname/Desktop/my_data.csv")
+```
+
+## Tip 2: Do not upload private data to a public website
+
+If your data contains sensitive or private information, do not publish it on GitHub Pages.
+
+Instead, submit the data privately through Brightspace or share it through a secure cloud link.
+
+## Tip 3: Keep file names simple
+
+Good file names:
+
+```text
+capstone-paper.qmd
+cleaned_data.csv
+housing_model_results.csv
+figure_1_price_distribution.png
+```
+
+Avoid file names like:
+
+```text
+final final real final paper!!!.qmd
+my data (copy) version 7.csv
+```
+
+## Tip 4: Avoid spaces in file names
+
+This is better:
+
+```text
+cleaned_data.csv
+```
+
+This can cause problems:
+
+```text
+cleaned data.csv
+```
+
+## Tip 5: Use comments in code
+
+Good comments explain the purpose of the code.
+
+```r
+# Load cleaned data for the final analysis
+df <- read_csv("../data/cleaned_data.csv")
+```
+
+Avoid comments that simply repeat the code.
+
+```r
+# Read csv
+df <- read_csv("../data/cleaned_data.csv")
+```
+
+## Tip 6: Use section headings clearly
+
+Use one `#` for major sections:
+
+```markdown
+# Introduction
+```
+
+Use two `##` for subsections:
+
+```markdown
+## Data source
+```
+
+Use three `###` for smaller subsections:
+
+```markdown
+### Variable construction
+```
+
+# Part 5: Mini checklist for students
+
+Before submitting your capstone paper, ask:
+
+- Did I clearly state my research question?
+- Did I explain where my data came from?
+- Did I describe important variables?
+- Did I include meaningful tables and figures?
+- Did I explain my model or method?
+- Did I interpret the results in words?
+- Did I discuss limitations?
+- Did I include references?
+- Did I render the Quarto file successfully?
+- Did I submit the `.qmd` file, data files or links, and any separate code files?
+
+# In-class practice
+
+## Practice 1: Convert text to math notation
+
+Write your model equation in LaTeX math notation:
+
+
+## Practice 2: Fix the file path
+
+Suppose your project is organized like this:
+
+```text
+capstone-project/
+│
+├── data/
+│   └── cleaned_data.csv
+│
+└── website/
+    └── index.qmd
+```
+
+You are writing code inside `index.qmd`.
+
+What path should you use to read `cleaned_data.csv`?
+
+Answer:
+
+```r
+readr::read_csv("../data/cleaned_data.csv")
+```
+
+## Practice 3: Write a model for your own project
+
+Fill in the following model using variables from your own capstone project:
+
+$$
+Y_{it} = \beta_0 + \beta_1 X_{it} + \varepsilon_i
+$$
+
+Then explain:
+
+- What is $Y_{it}$?
+- What is $X_{it}$?
+- What does $\beta_1$ mean?
+- What is one limitation of this model?
+
+# Closing summary
+
+LaTeX math notation helps you write professional and precise research papers. Quarto helps you combine writing, code, figures, tables, and equations into one reproducible workflow.
+
+For your capstone paper, focus on clarity:
+
+- clear research question,
+- clear data description,
+- clear method,
+- clear results,
+- clear interpretation,
+- and clear file organization.
+
+A strong capstone paper is not just a collection of code and outputs. It is a complete research story supported by reproducible analysis.
