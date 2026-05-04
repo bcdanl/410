@@ -32,7 +32,7 @@ include-after-body: target-hover.html # effect.html
 
 ## Why use LaTeX math notation?
 
-In empirical research papers, mathematical notation helps us describe models, variables, hypotheses, and results clearly.
+In empirical research papers, mathematical notation helps us describe models, variables, and results clearly.
 
 For example, instead of writing:
 
@@ -307,23 +307,6 @@ In a log-log model, $\beta_1$ can often be interpreted as an elasticity:
 
 > A 1% increase in $X$ is associated with approximately a $\beta_1$% change in $Y$.
 
-## Hypotheses
-
-Hypotheses can be written as:
-
-$$
-H_0: \beta_1 = 0
-$$
-
-$$
-H_A: \beta_1 \neq 0
-$$
-
-Or, for a one-sided test:
-
-$$
-H_A: \beta_1 > 0
-$$
 
 ## Common LaTeX mistakes
 

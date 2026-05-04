@@ -1537,7 +1537,7 @@
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#why-use-latex-math-notation",
     "title": "Lecture 4",
     "section": "Why use LaTeX math notation?",
-    "text": "Why use LaTeX math notation?\nIn empirical research papers, mathematical notation helps us describe models, variables, hypotheses, and results clearly.\nFor example, instead of writing:\n\nOutcome equals intercept plus beta times treatment plus error.\n\nWe can write:\n\\[\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_{it}\n\\]\nThis is shorter, cleaner, and more professional."
+    "text": "Why use LaTeX math notation?\nIn empirical research papers, mathematical notation helps us describe models, variables, and results clearly.\nFor example, instead of writing:\n\nOutcome equals intercept plus beta times treatment plus error.\n\nWe can write:\n\\[\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_{it}\n\\]\nThis is shorter, cleaner, and more professional."
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#inline-math",
