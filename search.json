@@ -1551,7 +1551,7 @@
     "href": "danl-lec/danl-410-lec-04-2026-0504.html#display-math",
     "title": "Lecture 4",
     "section": "Display math",
-    "text": "Display math\nUse double dollar signs for equations that should appear on their own line.\n$$\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_{it}\n$$\nThis renders as:\n\\[\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_{it}\n\\]"
+    "text": "Display math\nUse double dollar signs for equations that should appear on their own line.\n$$\nY_{it} = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_{it}\n\n\\log(Y_{it}) = \\beta_0 + \\beta_1 X_{it} + \\varepsilon_{it}\n$$\nThis renders as:\n$$ \\[\\begin{align}\nY_{it} &= \\beta_0 + \\beta_1 X_{it} + \\varepsilon_{it}\\\\\n\n\\log(Y_{it}) &= \\beta_0 + \\beta_1 X_{it} + \\varepsilon_{it}\n\\end{align}\\] $$"
   },
   {
     "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#greek-letters",

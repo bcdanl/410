@@ -65,13 +65,19 @@ Use double dollar signs for equations that should appear on their own line.
 ```markdown
 $$
 Y_{it} = \beta_0 + \beta_1 X_{it} + \varepsilon_{it}
+
+\log(Y_{it}) = \beta_0 + \beta_1 X_{it} + \varepsilon_{it}
 $$
 ```
 
 This renders as:
 
 $$
-Y_{it} = \beta_0 + \beta_1 X_{it} + \varepsilon_{it}
+\begin{align}
+Y_{it} &= \beta_0 + \beta_1 X_{it} + \varepsilon_{it}\\
+
+\log(Y_{it}) &= \beta_0 + \beta_1 X_{it} + \varepsilon_{it}
+\end{align}
 $$
 
 ## Greek letters
