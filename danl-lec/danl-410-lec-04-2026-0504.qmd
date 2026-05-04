@@ -66,6 +66,8 @@ Use double dollar signs for equations that should appear on their own line.
 $$
 Y_{it} = \beta_0 + \beta_1 X_{it} + \varepsilon_{it}
 
+Y_{it} = \beta_0 + \beta_1 X_{it} + \beta_2 X_{it}\times Z_{i} + \varepsilon_{it}
+
 \log(Y_{it}) = \beta_0 + \beta_1 X_{it} + \varepsilon_{it}
 $$
 ```
@@ -75,6 +77,8 @@ This renders as:
 $$
 \begin{align}
 Y_{it} &= \beta_0 + \beta_1 X_{it} + \varepsilon_{it}\\
+
+Y_{it} &= \beta_0 + \beta_1 X_{it} + \beta_2 X_{it}\times Z_{i} + \varepsilon_{it}\\
 
 \log(Y_{it}) &= \beta_0 + \beta_1 X_{it} + \varepsilon_{it}
 \end{align}

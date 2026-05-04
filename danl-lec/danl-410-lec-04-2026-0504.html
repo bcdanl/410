@@ -443,11 +443,15 @@ Y_{it} = \beta_0 + \beta_1 X_{it} + \varepsilon_{it}
 <div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1"></a>$$</span>
 <span id="cb2-2"><a href="#cb2-2"></a>Y_{it} = \beta_0 + \beta_1 X_{it} + \varepsilon_{it}</span>
 <span id="cb2-3"><a href="#cb2-3"></a></span>
-<span id="cb2-4"><a href="#cb2-4"></a>\log(Y_{it}) = \beta_0 + \beta_1 X_{it} + \varepsilon_{it}</span>
-<span id="cb2-5"><a href="#cb2-5"></a>$$</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb2-4"><a href="#cb2-4"></a>Y_{it} = \beta_0 + \beta_1 X_{it} + \beta_2 X_{it}\times Z_{i} + \varepsilon_{it}</span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a>\log(Y_{it}) = \beta_0 + \beta_1 X_{it} + \varepsilon_{it}</span>
+<span id="cb2-7"><a href="#cb2-7"></a>$$</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>This renders as:</p>
 <p>$$ <span class="math display">\[\begin{align}
 Y_{it} &amp;= \beta_0 + \beta_1 X_{it} + \varepsilon_{it}\\
+
+Y_{it} &amp;= \beta_0 + \beta_1 X_{it} + \beta_2 X_{it}\times Z_{i} + \varepsilon_{it}\\
 
 \log(Y_{it}) &amp;= \beta_0 + \beta_1 X_{it} + \varepsilon_{it}
 \end{align}\]</span> $$</p>
