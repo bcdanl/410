@@ -1,0 +1,364 @@
+---
+title: Last Class
+subtitle: Capstone Progress Check, Course Reflection, and Wrap-Up
+author:
+  - name: Byeong-Hak Choe
+    email: bchoe@geneseo.edu
+    affiliations: SUNY Geneseo
+date: 2026-05-06
+format:
+  clean-revealjs:
+    self-contained: false
+    chalkboard: true
+    incremental: false
+    code-annotations: hover
+    scrollable: false
+execute: 
+  eval: false
+  echo: false
+callout-icon: false
+from: markdown+emoji
+include-after-body: target-hover.html
+---
+
+
+# ✅ Today's Goals {background-color="#1c4982"}
+
+## What we will do today
+
+::: incremental
+
+- 🔎 Check your **capstone project progress**
+- 🛠️ Identify remaining issues before final submission
+- 📑 Review final paper and website expectations
+- 🤖 Reflect on data analytics in the era of AI and agentic AI
+- 📝 Complete the Student Course Experience (SCE) survey
+- 🙌 Wrap up the semester
+
+:::
+
+
+# Part 1: Capstone Progress Check {background-color="#1c4982"}
+
+## Where is your project now?
+
+For each student, please briefly share your current progress.
+
+::: {.nonincremental}
+
+Suggested update format:
+
+1. **Project topic:** What is your capstone about?
+2. **Current status:** What have you completed so far?
+3. **Main result:** What is one key finding or tentative finding?
+4. **Remaining task:** What still needs to be completed?
+5. **Biggest challenge:** What issue are you currently facing?
+
+:::
+
+## Quick progress categories
+
+Which category best describes your current project?
+
+::: incremental
+
+- 🟢 **Mostly complete**: Writing, polishing, and checking submission materials
+- 🟡 **Almost there**: Results are mostly ready, but interpretation or formatting still needs work
+- 🟠 **Still developing**: Analysis is running, but results are not fully finalized
+- 🔴 **Need help soon**: Major issue with data, code, model, Quarto, or GitHub website
+
+:::
+
+## Common last-stage issues
+
+Near the end of a capstone project, common issues include:
+
+::: incremental
+
+- broken file paths in Quarto
+- figures or tables not rendering correctly
+- unclear interpretation of model results
+- too much code and not enough explanation
+- weak connection between research question and results
+- missing limitations or future work section
+- GitHub website not updating properly
+- final files not organized for submission
+
+:::
+
+
+# Part 2: Final Submission Checklist {background-color="#1c4982"}
+
+## Final capstone paper checklist
+
+Before submitting, check whether your paper clearly includes:
+
+::: incremental
+
+- **Introduction:** What question are you studying, and why does it matter?
+- **Background / motivation:** What context helps readers understand your project?
+- **Data:** Where did the data come from? What variables are used?
+- **Methods:** What statistical, econometric, or machine learning methods are used?
+- **Results:** What did you find?
+- **Discussion:** What do the results mean?
+- **Limitations:** What should readers be careful about?
+- **Conclusion:** What is the main takeaway?
+
+:::
+
+## Final technical checklist
+
+Please check:
+
+::: incremental
+
+- The rendered HTML webpage opens correctly.
+- All figures and tables appear correctly.
+- Your `.qmd` file is submitted.
+- Your code is included either inside the `.qmd` file or in separate script files.
+- Your data file or data source link is included.
+- File paths are relative when possible.
+- Your GitHub website link works.
+- The project is understandable to someone outside this class.
+
+:::
+
+## What makes a strong capstone project?
+
+A strong capstone project does not have to be perfect.
+
+It should show that you can:
+
+::: incremental
+
+- ask a meaningful question,
+- work with real data from a credible source,
+- make reasonable analytical decisions,
+- communicate results clearly,
+- explain limitations honestly,
+- and produce a reproducible project.
+
+:::
+
+
+# Part 3: Reflection on the Analytics Workflow {background-color="#1c4982"}
+
+## Real data work is messy
+
+In real-world data analytics, the hardest part is often not the final model.
+
+The hard parts are usually:
+
+::: incremental
+
+- finding usable data,
+- defining a good question,
+- cleaning messy data,
+- deciding what comparison is meaningful,
+- interpreting imperfect results,
+- and clearly communicating the limitations and implications of the results.
+:::
+
+## What would you improve with more time?
+
+Think about your own project.
+
+::: {.nonincremental}
+
+If you had one more month, what would you improve?
+
+:::
+
+::: incremental
+
+- Better data?
+- More observations?
+- A stronger research design?
+- A better model?
+- Better visualization?
+- More robustness checks?
+- A clearer webpage?
+- A more polished paper?
+
+:::
+
+## Portfolio mindset
+
+Your capstone project can become part of your professional portfolio.
+
+A good portfolio project should help you explain:
+
+::: incremental
+
+- what problem you studied,
+- what data you used,
+- what tools you applied,
+- what result you found,
+- what decisions you made,
+- and what you learned.
+
+:::
+
+
+# Part 4: Data Analytics in the Era of AI {background-color="#1c4982"}
+
+## Does data analytics still matter when AI can write code?
+
+Yes.
+
+AI can help with coding, debugging, visualization, writing, and brainstorming.
+
+But AI does not replace the need to understand the analytics workflow.
+
+## Why fundamentals still matter
+
+Even in the era of generative AI and agentic AI, you still need to understand:
+
+::: incremental
+
+- whether the data are appropriate for the question,
+- whether the model is reasonable,
+- whether the results make sense,
+- whether the interpretation is too strong,
+- whether the analysis is reproducible,
+- and whether the final conclusion is useful.
+
+:::
+
+## AI can assist, but you must judge
+
+AI may produce code, plots, summaries, or model suggestions.
+
+However, the analyst is still responsible for:
+
+::: incremental
+
+- checking data quality,
+- verifying code output,
+- choosing appropriate methods,
+- interpreting results carefully,
+- identifying limitations,
+- and communicating findings.
+
+:::
+
+## The human role in analytics
+
+The most valuable analysts are not just people who can run code.
+
+They are people who can combine:
+
+::: incremental
+
+- domain knowledge,
+- statistical reasoning,
+- technical skill,
+- communication,
+- curiosity,
+- and good judgment.
+
+:::
+
+
+
+# ✅ Course Reflection & Wrap-Up {background-color="#1c4982"}
+
+## 📘 What We Worked On This Semester
+
+::: incremental
+- 🧠 **Research Design and Analytical Thinking**
+  - Developing research questions, motivation, and empirical strategies
+  - Applying econometric and machine learning methods to real-world data
+
+- 🧹 **Data Collection, Cleaning, and Wrangling**
+  - Finding data sources, preparing variables, cleaning datasets, and organizing analysis-ready data
+
+- 🗣️ **Professional Communication and Presentation**
+  - Presenting research through the Midterm Presentation and GREAT Day Presentation
+
+- 📑 **Capstone Research Paper**
+  - Completing a full empirical research project from research question to data, analysis, interpretation, and final paper
+  
+:::
+
+## 🧭 What You Practiced as Data Analysts
+
+::: incremental
+
+- Turning a broad topic into a specific analytical question
+- Making practical decisions with imperfect data
+- Using statistical, econometric, or machine learning tools
+- Creating tables, figures, and written explanations
+- Presenting results to an audience
+- Building a reproducible project website
+
+:::
+
+## 💬 Reflection Questions
+
+Take a moment to think about these questions:
+
+::: incremental
+
+- What part of your capstone project are you most proud of?
+- What was the hardest part of the process?
+- What is one technical skill you improved?
+- What is one thing you would do differently next time?
+- How might this project help you in your future academic or career path?
+
+:::
+
+
+# 📝 Student Course Experience (SCE) Survey {background-color="#1c4982"}
+
+## Your Feedback Matters
+
+::: {.nonincremental}
+
+I have made every effort to create a meaningful and supportive learning experience in this course.
+
+Your feedback is extremely valuable and helps improve future versions of the course.
+
+I sincerely encourage you to complete the **Student Course Experience (SCE)** survey.
+
+:::
+
+<div style="display:block; margin:35px;"></div>
+
+## ✅ Please Take About 10 Minutes Now
+
+:::{.nonincremental}
+
+#### Direct SCE Link
+🔗 <https://go.geneseo.edu/scesurveys>
+
+<div style="display:block; margin:10px;"></div>
+
+#### Steps
+
+1. Log in to the **SCE Survey Portal**
+2. Click on **“Surveys”**
+3. Select **DANL 410: Data Analytics Capstone**
+4. Complete the evaluation survey
+
+:::
+
+
+:::: {style="text-align: center;"}
+
+# 🙌 Thank You
+
+::: {.nonincremental}
+
+Thank you for being part of **DANL 410** this semester.
+
+I really appreciate the effort you put into developing your own research ideas, working with real-world data, and completing independent analytics projects.
+
+I hope this course helped you become more confident in conducting empirical research from start to finish, including data collection, modeling, interpretation, and professional communication of results.
+
+Thank you again for your participation, feedback, and hard work throughout the semester. It has been a pleasure.
+
+— Byeong-Hak
+
+:::
+::::

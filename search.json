@@ -88,7 +88,7 @@
     "href": "index.html#lecture",
     "title": "DANL 410: Data Analytics Capstone, Spring 2026",
     "section": "🚀 Lecture",
-    "text": "🚀 Lecture\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nLecture 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\nLecture 4\n\n\nLaTeX Math Notation and Quarto Workflow for Capstone Papers\n\n\nMay 4, 2026\n\n\n\n\n\n\nNo matching items"
+    "text": "🚀 Lecture\n\n\n\n\n\n\nTitle\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nLecture 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\nLecture 4\n\n\nLaTeX Math Notation and Quarto Workflow for Capstone Papers\n\n\nMay 4, 2026\n\n\n\n\nLast Class\n\n\nCapstone Progress Check, Course Reflection, and Wrap-Up\n\n\nMay 6, 2026\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html#classwork",
@@ -1306,7 +1306,7 @@
     "href": "listing-danl-410-lec.html",
     "title": "DANL 410 - Lecture",
     "section": "",
-    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nLecture 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\nLecture 4\n\n\nLaTeX Math Notation and Quarto Workflow for Capstone Papers\n\n\nMay 4, 2026\n\n\n\n\n\n\nNo matching items\n\n Back to top"
+    "text": "Title\n\n\nSubtitle\n\n\nDate\n\n\n\n\n\n\nLecture 1\n\n\nSyllabus and Course Outline\n\n\nJanuary 21, 2026\n\n\n\n\nLecture 2\n\n\nOmitted Variable Bias; Bad Controls\n\n\nJanuary 26, 2026\n\n\n\n\nLecture 3\n\n\nPanel Data Models\n\n\nJanuary 28, 2026\n\n\n\n\nLecture 4\n\n\nLaTeX Math Notation and Quarto Workflow for Capstone Papers\n\n\nMay 4, 2026\n\n\n\n\nLast Class\n\n\nCapstone Progress Check, Course Reflection, and Wrap-Up\n\n\nMay 6, 2026\n\n\n\n\n\n\nNo matching items\n\n Back to top"
   },
   {
     "objectID": "feedback/marcus-lewis-feedback.html",
@@ -2343,5 +2343,180 @@
     "title": "",
     "section": ":keyboard: Classwork",
     "text": ":keyboard: Classwork"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#what-we-worked-on-this-semester",
+    "href": "danl-lec/danl-410-lec-04-2026-0504.html#what-we-worked-on-this-semester",
+    "title": "Lecture 4",
+    "section": "📘 What We Worked On This Semester",
+    "text": "📘 What We Worked On This Semester\n\n\n🧠 Research Design and Analytical Thinking\n\nDeveloping research questions, motivation, and empirical strategies\nApplying econometric and machine learning methods to real-world data\n\n🧹 Data Collection, Cleaning, and Wrangling\n\nFinding data sources, preparing variables, cleaning datasets, and organizing analysis-ready data\n\n🗣️ Professional Communication and Presentation\n\nPresenting research through the Midterm Presentation and GREAT Day Presentation\n\n📑 Capstone Research Paper\n\nCompleting a full empirical research project from research question to data, analysis, interpretation, and final paper"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#student-course-experience-sce-survey",
+    "href": "danl-lec/danl-410-lec-04-2026-0504.html#student-course-experience-sce-survey",
+    "title": "Lecture 4",
+    "section": "📝 Student Course Experience (SCE) Survey",
+    "text": "📝 Student Course Experience (SCE) Survey\nYour Feedback Matters\n\nI have made every effort to create a meaningful and supportive learning experience in this course.\nYour feedback is extremely valuable and helps improve future versions of the course.\nI sincerely encourage you to complete the Student Course Experience (SCE) survey."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-04-2026-0504.html#please-take-about-10-minutes-now",
+    "href": "danl-lec/danl-410-lec-04-2026-0504.html#please-take-about-10-minutes-now",
+    "title": "Lecture 4",
+    "section": "✅ Please Take About 10 Minutes Now",
+    "text": "✅ Please Take About 10 Minutes Now\n\nDirect SCE Link\n🔗 https://go.geneseo.edu/scesurveys\n\n\n\nSteps\n\nLog in to the SCE Survey Portal\nClick on “Surveys”\nSelect DANL 410: Data Analytics Capstone\nComplete the evaluation survey"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#what-we-will-do-today",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#what-we-will-do-today",
+    "title": "Last Class",
+    "section": "What we will do today",
+    "text": "What we will do today\n\n\n🔎 Check your capstone project progress\n🛠️ Identify remaining issues before final submission\n📑 Review final paper and website expectations\n🤖 Reflect on data analytics in the era of AI and agentic AI\n📝 Complete the Student Course Experience (SCE) survey\n🙌 Wrap up the semester"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#where-is-your-project-now",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#where-is-your-project-now",
+    "title": "Last Class",
+    "section": "Where is your project now?",
+    "text": "Where is your project now?\nFor each student, please briefly share your current progress.\n\nSuggested update format:\n\nProject topic: What is your capstone about?\nCurrent status: What have you completed so far?\nMain result: What is one key finding or tentative finding?\nRemaining task: What still needs to be completed?\nBiggest challenge: What issue are you currently facing?"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#quick-progress-categories",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#quick-progress-categories",
+    "title": "Last Class",
+    "section": "Quick progress categories",
+    "text": "Quick progress categories\nWhich category best describes your current project?\n\n\n🟢 Mostly complete: Writing, polishing, and checking submission materials\n🟡 Almost there: Results are mostly ready, but interpretation or formatting still needs work\n🟠 Still developing: Analysis is running, but results are not fully finalized\n🔴 Need help soon: Major issue with data, code, model, Quarto, or GitHub website"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#common-last-stage-issues",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#common-last-stage-issues",
+    "title": "Last Class",
+    "section": "Common last-stage issues",
+    "text": "Common last-stage issues\nNear the end of a capstone project, common issues include:\n\n\nbroken file paths in Quarto\nfigures or tables not rendering correctly\nunclear interpretation of model results\ntoo much code and not enough explanation\nweak connection between research question and results\nmissing limitations or future work section\nGitHub website not updating properly\nfinal files not organized for submission"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#final-capstone-paper-checklist",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#final-capstone-paper-checklist",
+    "title": "Last Class",
+    "section": "Final capstone paper checklist",
+    "text": "Final capstone paper checklist\nBefore submitting, check whether your paper clearly includes:\n\n\nIntroduction: What question are you studying, and why does it matter?\nBackground / motivation: What context helps readers understand your project?\nData: Where did the data come from? What variables are used?\nMethods: What statistical, econometric, or machine learning methods are used?\nResults: What did you find?\nDiscussion: What do the results mean?\nLimitations: What should readers be careful about?\nConclusion: What is the main takeaway?"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#final-technical-checklist",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#final-technical-checklist",
+    "title": "Last Class",
+    "section": "Final technical checklist",
+    "text": "Final technical checklist\nPlease check:\n\n\nThe rendered HTML webpage opens correctly.\nAll figures and tables appear correctly.\nYour .qmd file is submitted.\nYour code is included either inside the .qmd file or in separate script files.\nYour data file or data source link is included.\nFile paths are relative when possible.\nYour GitHub website link works.\nThe project is understandable to someone outside this class."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#what-makes-a-strong-capstone-project",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#what-makes-a-strong-capstone-project",
+    "title": "Last Class",
+    "section": "What makes a strong capstone project?",
+    "text": "What makes a strong capstone project?\nA strong capstone project does not have to be perfect.\nIt should show that you can:\n\n\nask a meaningful question,\nwork with real data from a credible source,\nmake reasonable analytical decisions,\ncommunicate results clearly,\nexplain limitations honestly,\nand produce a reproducible project."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#real-data-work-is-messy",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#real-data-work-is-messy",
+    "title": "Last Class",
+    "section": "Real data work is messy",
+    "text": "Real data work is messy\nIn real-world data analytics, the hardest part is often not the final model.\nThe hard parts are usually:\n\n\nfinding usable data,\ndefining a good question,\ncleaning messy data,\ndeciding what comparison is meaningful,\ninterpreting imperfect results,\nand clearly communicating the limitations and implications of the results."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#what-would-you-improve-with-more-time",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#what-would-you-improve-with-more-time",
+    "title": "Last Class",
+    "section": "What would you improve with more time?",
+    "text": "What would you improve with more time?\nThink about your own project.\n\nIf you had one more month, what would you improve?\n\n\n\nBetter data?\nMore observations?\nA stronger research design?\nA better model?\nBetter visualization?\nMore robustness checks?\nA clearer webpage?\nA more polished paper?"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#portfolio-mindset",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#portfolio-mindset",
+    "title": "Last Class",
+    "section": "Portfolio mindset",
+    "text": "Portfolio mindset\nYour capstone project can become part of your professional portfolio.\nA good portfolio project should help you explain:\n\n\nwhat problem you studied,\nwhat data you used,\nwhat tools you applied,\nwhat result you found,\nwhat decisions you made,\nand what you learned."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#does-data-analytics-still-matter-when-ai-can-write-code",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#does-data-analytics-still-matter-when-ai-can-write-code",
+    "title": "Last Class",
+    "section": "Does data analytics still matter when AI can write code?",
+    "text": "Does data analytics still matter when AI can write code?\nYes.\nAI can help with coding, debugging, visualization, writing, and brainstorming.\nBut AI does not replace the need to understand the analytics workflow."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#why-fundamentals-still-matter",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#why-fundamentals-still-matter",
+    "title": "Last Class",
+    "section": "Why fundamentals still matter",
+    "text": "Why fundamentals still matter\nEven in the era of generative AI and agentic AI, you still need to understand:\n\n\nwhether the data are appropriate for the question,\nwhether the model is reasonable,\nwhether the results make sense,\nwhether the interpretation is too strong,\nwhether the analysis is reproducible,\nand whether the final conclusion is useful."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#ai-can-assist-but-you-must-judge",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#ai-can-assist-but-you-must-judge",
+    "title": "Last Class",
+    "section": "AI can assist, but you must judge",
+    "text": "AI can assist, but you must judge\nAI may produce code, plots, summaries, or model suggestions.\nHowever, the analyst is still responsible for:\n\n\nchecking data quality,\nverifying code output,\nchoosing appropriate methods,\ninterpreting results carefully,\nidentifying limitations,\nand communicating findings."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#the-human-role-in-analytics",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#the-human-role-in-analytics",
+    "title": "Last Class",
+    "section": "The human role in analytics",
+    "text": "The human role in analytics\nThe most valuable analysts are not just people who can run code.\nThey are people who can combine:\n\n\ndomain knowledge,\nstatistical reasoning,\ntechnical skill,\ncommunication,\ncuriosity,\nand good judgment."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#use-this-time-productively",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#use-this-time-productively",
+    "title": "Last Class",
+    "section": "Use this time productively",
+    "text": "Use this time productively\nDuring the remaining class time, you may work on:\n\n\nfinalizing your capstone paper,\nimproving your interpretation section,\nfixing Quarto rendering issues,\nchecking your GitHub website,\npolishing figures and tables,\norganizing final submission files,\nor asking questions about modeling, writing, or coding."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#questions-you-can-ask-today",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#questions-you-can-ask-today",
+    "title": "Last Class",
+    "section": "Questions you can ask today",
+    "text": "Questions you can ask today\nExamples:\n\n\nDoes my research question sound clear?\nHow should I interpret this coefficient?\nIs this result too weak to discuss?\nHow should I explain limitations?\nWhy is my Quarto file not rendering?\nHow can I improve this figure?\nWhat should I say in the conclusion?"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#what-we-worked-on-this-semester",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#what-we-worked-on-this-semester",
+    "title": "Last Class",
+    "section": "📘 What We Worked On This Semester",
+    "text": "📘 What We Worked On This Semester\n\n\n🧠 Research Design and Analytical Thinking\n\nDeveloping research questions, motivation, and empirical strategies\nApplying econometric and machine learning methods to real-world data\n\n🧹 Data Collection, Cleaning, and Wrangling\n\nFinding data sources, preparing variables, cleaning datasets, and organizing analysis-ready data\n\n🗣️ Professional Communication and Presentation\n\nPresenting research through the Midterm Presentation and GREAT Day Presentation\n\n📑 Capstone Research Paper\n\nCompleting a full empirical research project from research question to data, analysis, interpretation, and final paper"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#what-you-practiced-as-data-analysts",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#what-you-practiced-as-data-analysts",
+    "title": "Last Class",
+    "section": "🧭 What You Practiced as Data Analysts",
+    "text": "🧭 What You Practiced as Data Analysts\n\n\nTurning a broad topic into a specific analytical question\nMaking practical decisions with imperfect data\nUsing statistical, econometric, or machine learning tools\nCreating tables, figures, and written explanations\nPresenting results to an audience\nBuilding a reproducible project website"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#reflection-questions",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#reflection-questions",
+    "title": "Last Class",
+    "section": "💬 Reflection Questions",
+    "text": "💬 Reflection Questions\nTake a moment to think about these questions:\n\n\nWhat part of your capstone project are you most proud of?\nWhat was the hardest part of the process?\nWhat is one technical skill you improved?\nWhat is one thing you would do differently next time?\nHow might this project help you in your future academic or career path?"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#your-feedback-matters",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#your-feedback-matters",
+    "title": "Last Class",
+    "section": "Your Feedback Matters",
+    "text": "Your Feedback Matters\n\nI have made every effort to create a meaningful and supportive learning experience in this course.\nYour feedback is extremely valuable and helps improve future versions of the course.\nI sincerely encourage you to complete the Student Course Experience (SCE) survey."
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#please-take-about-10-minutes-now",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#please-take-about-10-minutes-now",
+    "title": "Last Class",
+    "section": "✅ Please Take About 10 Minutes Now",
+    "text": "✅ Please Take About 10 Minutes Now\n\nDirect SCE Link\n🔗 https://go.geneseo.edu/scesurveys\n\n\n\nSteps\n\nLog in to the SCE Survey Portal\nClick on “Surveys”\nSelect DANL 410: Data Analytics Capstone\nComplete the evaluation survey"
+  },
+  {
+    "objectID": "danl-lec/danl-410-lec-05-2026-0506.html#thank-you-for-your-work-this-semester",
+    "href": "danl-lec/danl-410-lec-05-2026-0506.html#thank-you-for-your-work-this-semester",
+    "title": "Last Class",
+    "section": "Thank you for your work this semester",
+    "text": "Thank you for your work this semester\n\nThank you for being part of DANL 410 this semester.\nI really appreciate the effort you put into developing your own research ideas, working with real-world data, and completing independent analytics projects.\nI hope this course helped you become more confident in conducting empirical research from start to finish, including data collection, modeling, interpretation, and professional communication of results.\nThank you again for your participation, feedback, and hard work throughout the semester. It has been a pleasure.\n— Byeong-Hak"
   }
 ]

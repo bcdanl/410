@@ -779,4 +779,3 @@ Then explain:
 - What does $\beta_1$ mean?
 - What is one limitation of this model?
 
-
